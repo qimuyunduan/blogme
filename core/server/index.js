@@ -1,5 +1,4 @@
-// # Bootup
-// This file needs serious love & refactoring
+
 
 // Module dependencies
 var express     = require('express'),
@@ -25,6 +24,7 @@ var express     = require('express'),
     dbHash;
 
 function initDbHashAndFirstRun() {
+
     return api.settings.read({key: 'dbHash', context: {internal: true}}).then(function (response) {
         var hash = response.settings[0].value,
             initHash;
@@ -45,9 +45,9 @@ function initDbHashAndFirstRun() {
     });
 }
 
-// ## Initialise Ghost
+
 // Sets up the express server instances, runs init on a bunch of stuff, configures views, helpers, routes and more
-// Finally it returns an instance of GhostServer
+// Finally it returns an instance of Server
 function init(options) {
     // Get reference to an express app instance.
     var blogApp = express(),

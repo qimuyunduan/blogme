@@ -1,5 +1,3 @@
-// # Ghost Configuration
-// Setup your Ghost install for various [environments](http://support.ghost.org/config/#about-environments).
 
 // Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 
@@ -10,11 +8,19 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
-    production: {
+    production:    {
         url: 'http://my-ghost-blog.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                auth: {
+                    user: 'koonet6@gmail.com',
+                    pass: '10141010122'
+                }
+            }
+        },
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost.db')
             },
@@ -36,22 +42,20 @@ config = {
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
         // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+        mail: {
+            transport: 'SMTP',
+            options: {
+                auth: {
+                    user: 'koonet6@gmail.com',
+                    pass: '10141010122'
+                }
+            }
+        },
 
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost-dev.db')
             },
@@ -80,7 +84,7 @@ config = {
     testing: {
         url: 'http://127.0.0.1:2369',
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost-test.db')
             },
@@ -109,28 +113,7 @@ config = {
             connection: {
                 host     : '127.0.0.1',
                 user     : 'root',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '127.0.0.1',
-            port: '2369'
-        },
-        logging: false
-    },
-
-    // ### Testing pg
-    // Used by Travis - Automated testing run through GitHub
-    'testing-pg': {
-        url: 'http://127.0.0.1:2369',
-        database: {
-            client: 'pg',
-            connection: {
-                host     : '127.0.0.1',
-                user     : 'postgres',
-                password : '',
+                password : 'root',
                 database : 'ghost_testing',
                 charset  : 'utf8'
             }
@@ -141,6 +124,7 @@ config = {
         },
         logging: false
     }
+
 };
 
 module.exports = config;
