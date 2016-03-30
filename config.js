@@ -1,15 +1,13 @@
 
-// Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 
 var path = require('path'),
     config;
 
 config = {
     // ### Production
-    // When running Ghost in the wild, use the production environment.
-    // Configure your URL and mail settings here
+
     production:    {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://blogme.com',
         mail: {
             transport: 'SMTP',
             options: {
@@ -22,7 +20,11 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+				host:'127.0.0.1',
+				user:'root',
+				password:'root',
+				database:'dwz4j',
+				charset:'utf8'
             },
             debug: false
         },
@@ -56,9 +58,13 @@ config = {
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
             client: 'mysql',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
+			connection: {
+				host:'127.0.0.1',
+				user:'root',
+				password:'root',
+				database:'dwz4j',
+				charset:'utf8'
+			},
             debug: false
         },
         // #### Server
@@ -76,51 +82,23 @@ config = {
         }
     },
 
-    // **Developers only need to edit below here**
-
-    // ### Testing
-    // Used when developing Ghost to run tests and check the health of Ghost
-    // Uses a different port number
-    testing: {
-        url: 'http://127.0.0.1:2369',
-        database: {
-            client: 'mysql',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost-test.db')
-            },
-            pool: {
-                afterCreate: function (conn, done) {
-                    conn.run('PRAGMA synchronous=OFF;' +
-                    'PRAGMA journal_mode=MEMORY;' +
-                    'PRAGMA locking_mode=EXCLUSIVE;' +
-                    'BEGIN EXCLUSIVE; COMMIT;', done);
-                }
-            }
-        },
-        server: {
-            host: '127.0.0.1',
-            port: '2369'
-        },
-        logging: false
-    },
-
     // ### Testing MySQL
-    // Used by Travis - Automated testing run through GitHub
+
     'testing-mysql': {
-        url: 'http://127.0.0.1:2369',
+        url: 'http://127.0.0.1:3306',
         database: {
             client: 'mysql',
             connection: {
                 host     : '127.0.0.1',
                 user     : 'root',
                 password : 'root',
-                database : 'ghost_testing',
+                database : 'dwz4j',
                 charset  : 'utf8'
             }
         },
         server: {
             host: '127.0.0.1',
-            port: '2369'
+            port: '3306'
         },
         logging: false
     }
