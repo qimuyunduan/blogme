@@ -136,16 +136,6 @@ td, th{ padding: 0; }
 .icon-feed:before {
     content: "\f601";
 }
-.icon-twitter:before {
-    content: "\f602";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\f603";
-}
-.icon-facebook:before {
-    content: "\f604";
-}
 .icon-arrow-left:before {
     content: "\f605";
 }
@@ -516,17 +506,6 @@ body.nav-opened .site-wrapper {
     width: 80%;
 }
 
-.main-nav {
-    position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
-}
-
-.main-nav a {
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
-
 /* Navigation */
 body.nav-opened .nav-cover {
     position: fixed;
@@ -849,20 +828,6 @@ body.nav-opened .nav {
 .nav-opened .menu-button .word {
     opacity: 0;
     transition: all 0.3s ease;
-}
-
-/* Special styles when overlaid on an image*/
-.main-nav.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    border: none;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
-}
-.no-cover .main-nav.overlay {
-    background: none;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -1761,12 +1726,6 @@ body:not(.post-template) .post-title {
         min-height: 160px;
         padding: 10% 0;
     }
-
-    .main-nav {
-        padding: 5px;
-        margin-bottom: 2rem;
-    }
-
     .blog-logo {
         padding: 5px;
     }
@@ -1791,13 +1750,6 @@ body:not(.post-template) .post-title {
         background: none;
         border: transparent;
     }
-
-    .main-nav.overlay a:hover {
-        color: #fff;
-        border-color: transparent;
-        background: transparent;
-    }
-
     .no-cover .main-nav.overlay {
         background: none;
     }
