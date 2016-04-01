@@ -7,6 +7,7 @@ var frontend    = require('../controllers/frontend'),
     frontendRoutes;
 
 frontendRoutes = function frontendRoutes(middleware) {
+
     var router = express.Router(),
         subdir = config.paths.subdir,
         routeKeywords = config.routeKeywords,

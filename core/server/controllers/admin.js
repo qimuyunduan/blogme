@@ -11,7 +11,7 @@ adminControllers = {
     // Path: /ghost/
     // Method: GET
     index: function index(req, res) {
-        /*jslint unparam:true*/
+
 
         function renderIndex() {
             var configuration;

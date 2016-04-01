@@ -1,5 +1,4 @@
 
-
 // Module dependencies
 var express     = require('express'),
     hbs         = require('express-hbs'),
