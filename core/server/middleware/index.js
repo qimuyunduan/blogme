@@ -89,7 +89,7 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     App.use(themeHandler.configHbsForContext);
 
     // Admin only config
-    App.use('/ghost', express.static(config.paths.clientAssets, {maxAge: utils.ONE_YEAR_MS}));
+    App.use('/admin', express.static(config.paths.clientAssets, {maxAge: utils.ONE_YEAR_MS}));
 
     // Force SSL
     // NOTE: Importantly this is _after_ the check above for admin-theme static resources,
@@ -101,8 +101,8 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     // Theme only config
     App.use(staticTheme());
 
-    // Check if password protected blog
-    App.use(privateBlogging.checkIsPrivate); // check if the blog is protected
+    // Check if password protected app
+    App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     App.use(privateBlogging.filterPrivateRoutes);
 
     // Serve sitemap.xsl file
@@ -129,7 +129,7 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     App.use(passport.initialize());
 
     // ### Caching
-    // Blog frontend is cacheable
+
     App.use(cacheControl('public'));
     // Admin shouldn't be cached
     adminApp.use(cacheControl('private'));
@@ -146,7 +146,7 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     // Mount admin express app to /ghost and set up routes
     adminApp.use(redirectToSetup);
     adminApp.use(routes.admin());
-    App.use('/ghost', adminApp);
+    App.use('/admin', adminApp);
 
     // Set up Frontend routes
     App.use(routes.frontend(middleware));

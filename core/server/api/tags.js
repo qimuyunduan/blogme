@@ -6,7 +6,6 @@ var Promise      = require('bluebird'),
     errors       = require('../errors'),
     utils        = require('./utils'),
     pipeline     = require('../utils/pipeline'),
-    i18n         = require('../i18n'),
 
     docName      = 'tags',
     allowedIncludes = ['count.posts'],
@@ -81,7 +80,7 @@ tags = {
                 return {tags: [result.toJSON(options)]};
             }
 
-            return Promise.reject(new errors.NotFoundError(i18n.t('errors.api.tags.tagNotFound')));
+            return Promise.reject(new errors.NotFoundError('errors.api.tags.tagNotFound'));
         });
     },
 
@@ -155,7 +154,7 @@ tags = {
                 return {tags: [tag]};
             }
 
-            return Promise.reject(new errors.NotFoundError(i18n.t('errors.api.tags.tagNotFound')));
+            return Promise.reject(new errors.NotFoundError('errors.api.tags.tagNotFound'));
         });
     },
 

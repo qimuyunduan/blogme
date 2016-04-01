@@ -4,7 +4,6 @@ var _                  = require('lodash'),
     config             = require('../config'),
     errors             = require('../errors'),
     Promise            = require('bluebird'),
-    i18n               = require('../i18n'),
 
     configuration;
 
@@ -66,7 +65,7 @@ configuration = {
         if (_.has(data, options.key)) {
             return Promise.resolve({configuration: [formatConfigurationObject(data[options.key], options.key)]});
         } else {
-            return Promise.reject(new errors.NotFoundError(i18n.t('errors.api.configuration.invalidKey')));
+            return Promise.reject(new errors.NotFoundError('errors.api.configuration.invalidKey'));
         }
     }
 };

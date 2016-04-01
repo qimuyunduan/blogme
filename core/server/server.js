@@ -4,8 +4,7 @@ var Promise = require('bluebird'),
     chalk = require('chalk'),
     fs = require('fs'),
     errors = require('./errors'),
-    config = require('./config'),
-    i18n   = require('./i18n');
+    config = require('./config');
 
 /**
  * ## Server
@@ -13,6 +12,7 @@ var Promise = require('bluebird'),
  * @param {Object} rootApp - parent express instance
  */
 function Server(rootApp) {
+
 	// frontend app(for user)
     this.rootApp = rootApp;
     this.httpServer = null;
@@ -61,15 +61,15 @@ Server.prototype.start = function (externalApp) {
         self.httpServer.on('error', function (error) {
             if (error.errno === 'EADDRINUSE') {
                 errors.logError(
-                    i18n.t('errors.httpServer.addressInUse.error'),
-                    i18n.t('errors.httpServer.addressInUse.context', {port: config.server.port}),
-                    i18n.t('errors.httpServer.addressInUse.help')
+                    'errors.httpServer.addressInUse.error',
+                    'errors.httpServer.addressInUse.context',
+                    'errors.httpServer.addressInUse.help'
                 );
             } else {
                 errors.logError(
-                    i18n.t('errors.httpServer.otherError.error', {errorNumber: error.errno}),
-                    i18n.t('errors.httpServer.otherError.context'),
-                    i18n.t('errors.httpServer.otherError.help')
+                   'errors.httpServer.otherError.error',
+                    'errors.httpServer.otherError.context',
+                    'errors.httpServer.otherError.help'
                 );
             }
             process.exit(-1);
@@ -120,7 +120,7 @@ Server.prototype.restart = function () {
  * To be called after `stop`
  */
 Server.prototype.hammertime = function () {
-    console.log(chalk.green(i18n.t('notices.httpServer.cantTouchThis')));
+    console.log(chalk.green('notices.httpServer.cantTouchThis'));
 
     return Promise.resolve(this);
 };
@@ -168,31 +168,31 @@ Server.prototype.logStartMessages = function () {
     // Startup & Shutdown messages
     if (process.env.NODE_ENV === 'production') {
         console.log(
-            chalk.green(i18n.t('notices.httpServer.ghostIsRunningIn', {env: process.env.NODE_ENV})),
-            i18n.t('notices.httpServer.yourBlogIsAvailableOn', {url: config.url}),
-            chalk.gray(i18n.t('notices.httpServer.ctrlCToShutDown'))
+            chalk.green('notices.httpServer.ghostIsRunningIn'),
+            'notices.httpServer.yourBlogIsAvailableOn',
+            chalk.gray('notices.httpServer.ctrlCToShutDown')
         );
     } else {
         console.log(
-            chalk.green(i18n.t('notices.httpServer.ghostIsRunningIn', {env: process.env.NODE_ENV})),
-            i18n.t('notices.httpServer.listeningOn'),
+            chalk.green('notices.httpServer.ghostIsRunningIn'),
+           'notices.httpServer.listeningOn',
             config.getSocket() || config.server.host + ':' + config.server.port,
-            i18n.t('notices.httpServer.urlConfiguredAs', {url: config.url}),
-            chalk.gray(i18n.t('notices.httpServer.ctrlCToShutDown'))
+            'notices.httpServer.urlConfiguredAs',
+            chalk.gray('notices.httpServer.ctrlCToShutDown')
         );
     }
 
     function shutdown() {
-        console.log(chalk.red(i18n.t('notices.httpServer.ghostHasShutdown')));
+        console.log(chalk.red('notices.httpServer.ghostHasShutdown'));
         if (process.env.NODE_ENV === 'production') {
             console.log(
-                i18n.t('notices.httpServer.yourBlogIsNowOffline')
+                'notices.httpServer.yourBlogIsNowOffline'
             );
         } else {
             console.log(
-                i18n.t('notices.httpServer.ghostWasRunningFor'),
+                'notices.httpServer.ghostWasRunningFor',
                 Math.round(process.uptime()),
-                i18n.t('common.time.seconds')
+                'common.time.seconds'
             );
         }
         process.exit(0);
@@ -207,7 +207,7 @@ Server.prototype.logStartMessages = function () {
  * ### Log Shutdown Messages
  */
 Server.prototype.logShutdownMessages = function () {
-    console.log(chalk.red(i18n.t('notices.httpServer.ghostIsClosingConnections')));
+    console.log(chalk.red('notices.httpServer.IsClosingConnections'));
 };
 
 module.exports = Server;

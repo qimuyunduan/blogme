@@ -1,9 +1,9 @@
 // # Base Model
-// This is the model from which all other Ghost models extend. The model is based on Bookshelf.Model, and provides
+// This is the model from which all other App models extend. The model is based on Bookshelf.Model, and provides
 // several basic behaviours such as UUIDs, as well as a set of Data methods for accessing information from the database.
 //
-// The models are internal to Ghost, only the API and some internal functions such as migration and import/export
-// accesses the models directly. All other parts of Ghost, including the blog frontend, admin UI, and apps are only
+// The models are internal to App, only the API and some internal functions such as migration and import/export
+// accesses the models directly. All other parts of App, including the blog frontend, admin UI, and apps are only
 // allowed to access data via the API.
 var _          = require('lodash'),
     bookshelf  = require('bookshelf'),
@@ -19,41 +19,39 @@ var _          = require('lodash'),
     uuid       = require('node-uuid'),
     validation = require('../../data/validation'),
     plugins    = require('../plugins'),
-    i18n       = require('../../i18n'),
-
     ghostBookshelf,
     proto;
 
-// ### ghostBookshelf
-// Initializes a new Bookshelf instance called ghostBookshelf, for reference elsewhere in Ghost.
+// ### Bookshelf
+// Initializes a new Bookshelf instance called ghostBookshelf, for reference elsewhere in App.
 ghostBookshelf = bookshelf(db.knex);
 
 // Load the Bookshelf registry plugin, which helps us avoid circular dependencies
 ghostBookshelf.plugin('registry');
 
-// Load the Ghost access rules plugin, which handles passing permissions/context through the model layer
+// Load the App access rules plugin, which handles passing permissions/context through the model layer
 ghostBookshelf.plugin(plugins.accessRules);
 
-// Load the Ghost filter plugin, which handles applying a 'filter' to findPage requests
+// Load the App filter plugin, which handles applying a 'filter' to findPage requests
 ghostBookshelf.plugin(plugins.filter);
 
-// Load the Ghost include count plugin, which allows for the inclusion of cross-table counts
+// Load the App include count plugin, which allows for the inclusion of cross-table counts
 ghostBookshelf.plugin(plugins.includeCount);
 
-// Load the Ghost pagination plugin, which gives us the `fetchPage` method on Models
+// Load the App pagination plugin, which gives us the `fetchPage` method on Models
 ghostBookshelf.plugin(plugins.pagination);
 
 // Cache an instance of the base model prototype
 proto = ghostBookshelf.Model.prototype;
 
 // ## ghostBookshelf.Model
-// The Base Model which other Ghost objects will inherit from,
+// The Base Model which other App objects will inherit from,
 // including some convenience functions as static properties on the model.
 ghostBookshelf.Model = ghostBookshelf.Model.extend({
     // Bookshelf `hasTimestamps` - handles created_at and updated_at properties
     hasTimestamps: true,
 
-    // Ghost option handling - get permitted attributes from server/data/schema.js, where the DB schema is defined
+    // App option handling - get permitted attributes from server/data/schema.js, where the DB schema is defined
     permittedAttributes: function permittedAttributes() {
         return _.keys(schema.tables[this.tableName]);
     },
@@ -365,7 +363,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
         options = this.filterOptions(options, 'add');
         var model = this.forge(data);
         // We allow you to disable timestamps when importing posts so that the new posts `updated_at` value is the same
-        // as the import json blob. More details refer to https://github.com/TryGhost/Ghost/issues/1696
+        // as the import json blob. More details refer to https://github.com/TryApp/App/issues/1696
         if (options.importing) {
             model.hasTimestamps = false;
         }
@@ -500,5 +498,5 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
 
 });
 
-// Export ghostBookshelf for use elsewhere
+// Export Bookshelf for use elsewhere
 module.exports = ghostBookshelf;

@@ -3,7 +3,6 @@ var oauth2orize      = require('oauth2orize'),
     utils            = require('../utils'),
     errors           = require('../errors'),
     spamPrevention   = require('./spam-prevention'),
-    i18n             = require('../i18n'),
 
     oauthServer,
     oauth;
@@ -11,7 +10,7 @@ var oauth2orize      = require('oauth2orize'),
 function exchangeRefreshToken(client, refreshToken, scope, done) {
     models.Refreshtoken.findOne({token: refreshToken}).then(function then(model) {
         if (!model) {
-            return done(new errors.NoPermissionError(i18n.t('errors.middleware.oauth.invalidRefreshToken')), false);
+            return done(new errors.NoPermissionError('errors.middleware.oauth.invalidRefreshToken'), false);
         } else {
             var token = model.toJSON(),
                 accessToken = utils.uid(256),
@@ -32,7 +31,7 @@ function exchangeRefreshToken(client, refreshToken, scope, done) {
                     return done(error, false);
                 });
             } else {
-                done(new errors.UnauthorizedError(i18n.t('errors.middleware.oauth.refreshTokenExpired')), false);
+                done(new errors.UnauthorizedError('errors.middleware.oauth.refreshTokenExpired'), false);
             }
         }
     });
@@ -42,7 +41,7 @@ function exchangePassword(client, username, password, scope, done) {
     // Validate the client
     models.Client.findOne({slug: client.slug}).then(function then(client) {
         if (!client) {
-            return done(new errors.NoPermissionError(i18n.t('errors.middleware.oauth.invalidClient')), false);
+            return done(new errors.NoPermissionError('errors.middleware.oauth.invalidClient'), false);
         }
         // Validate the user
         return models.User.check({email: username, password: password}).then(function then(user) {

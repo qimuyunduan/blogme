@@ -6,7 +6,6 @@ var Promise         = require('bluebird'),
     errors          = require('../errors'),
     utils           = require('./utils'),
     pipeline        = require('../utils/pipeline'),
-    i18n            = require('../i18n'),
 
     docName         = 'posts',
     allowedIncludes = [
@@ -107,7 +106,7 @@ posts = {
                 return {posts: [result.toJSON(options)]};
             }
 
-            return Promise.reject(new errors.NotFoundError(i18n.t('errors.api.posts.postNotFound')));
+            return Promise.reject(new errors.NotFoundError('errors.api.posts.postNotFound'));
         });
     },
 
@@ -154,7 +153,7 @@ posts = {
                 return {posts: [post]};
             }
 
-            return Promise.reject(new errors.NotFoundError(i18n.t('errors.api.posts.postNotFound')));
+            return Promise.reject(new errors.NotFoundError('errors.api.posts.postNotFound'));
         });
     },
 

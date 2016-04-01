@@ -1,7 +1,6 @@
 var _      = require('lodash'),
     errors = require('../../errors'),
     gql    = require('ghost-gql'),
-    i18n   = require('../../i18n'),
     filter,
     filterUtils;
 
@@ -27,8 +26,8 @@ filterUtils = {
         } catch (error) {
             errors.logAndThrowError(
                 new errors.ValidationError(error.message, 'filter'),
-                i18n.t('errors.models.plugins.filter.errorParsing'),
-                i18n.t('errors.models.plugins.filter.forInformationRead', {url: 'http://api.ghost.org/docs/filter'})
+                'errors.models.plugins.filter.errorParsing',
+                'errors.models.plugins.filter.forInformationRead'
             );
         }
 
@@ -109,6 +108,7 @@ filter = function filter(Bookshelf) {
 
                 // We need to add a group by to counter the double left outer join
                 // TODO improve on the group by handling
+
                 options.groups = options.groups || [];
                 options.groups.push('posts.id');
             }

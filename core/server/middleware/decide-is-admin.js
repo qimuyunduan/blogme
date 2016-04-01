@@ -10,7 +10,7 @@ var decideIsAdmin;
 
 decideIsAdmin = function decideIsAdmin(req, res, next) {
     /*jslint unparam:true*/
-    res.isAdmin = req.url.lastIndexOf('/ghost/', 0) === 0;
+    res.isAdmin = req.url.lastIndexOf('/admin/', 0) === 0;
     next();
 };
 

@@ -5,7 +5,6 @@ var _           = require('lodash'),
     errors      = require('../errors'),
     config      = require('../config'),
     labs        = require('../utils/labs'),
-    i18n        = require('../i18n'),
 
     auth;
 
@@ -85,11 +84,11 @@ auth = {
 
         if (!req.body.client_id || !req.body.client_secret) {
             errors.logError(
-                i18n.t('errors.middleware.auth.clientAuthenticaionFailed'),
-                i18n.t('errors.middleware.auth.clientCredentialsNotProvided'),
-                i18n.t('errors.middleware.auth.forInformationRead', {url: 'http://api.ghost.org/docs/client-authentication'})
+                'errors.middleware.auth.clientAuthenticaionFailed',
+                'errors.middleware.auth.clientCredentialsNotProvided',
+                'errors.middleware.auth.forInformationRead'
             );
-            return errors.handleAPIError(new errors.UnauthorizedError(i18n.t('errors.middleware.auth.accessDenied')), req, res, next);
+            return errors.handleAPIError(new errors.UnauthorizedError('errors.middleware.auth.accessDenied'), req, res, next);
         }
 
         return passport.authenticate(['oauth2-client-password'], {session: false, failWithError: false},
@@ -110,11 +109,11 @@ auth = {
 
                 if (!client || client.type !== 'ua') {
                     errors.logError(
-                        i18n.t('errors.middleware.auth.clientAuthenticaionFailed'),
-                        i18n.t('errors.middleware.auth.clientCredentialsNotValid'),
-                        i18n.t('errors.middleware.auth.forInformationRead', {url: 'http://api.ghost.org/docs/client-authentication'})
+                        'errors.middleware.auth.clientAuthenticaionFailed',
+                        'errors.middleware.auth.clientCredentialsNotValid',
+                        'errors.middleware.auth.forInformationRead'
                     );
-                    return errors.handleAPIError(new errors.UnauthorizedError(i18n.t('errors.middleware.auth.accessDenied')), req, res, next);
+                    return errors.handleAPIError(new errors.UnauthorizedError('errors.middleware.auth.accessDenied'), req, res, next);
                 }
 
                 if (!origin && client && client.type === 'ua') {
@@ -128,10 +127,10 @@ auth = {
                     req.client = client;
                     return next(null, client);
                 } else {
-                    error = new errors.UnauthorizedError(i18n.t('errors.middleware.auth.accessDeniedFromUrl', {origin: origin}));
+                    error = new errors.UnauthorizedError('errors.middleware.auth.accessDeniedFromUrl');
                     errors.logError(error,
-                        i18n.t('errors.middleware.auth.attemptedToAccessAdmin'),
-                        i18n.t('errors.middleware.auth.forInformationRead', {url: 'http://support.ghost.org/config/#url'})
+                        'errors.middleware.auth.attemptedToAccessAdmin',
+                        'errors.middleware.auth.forInformationRead'
                     );
                     return errors.handleAPIError(error, req, res, next);
                 }
@@ -152,12 +151,12 @@ auth = {
                     req.user = user;
                     return next(null, user, info);
                 } else if (isBearerAutorizationHeader(req)) {
-                    return errors.handleAPIError(new errors.UnauthorizedError(i18n.t('errors.middleware.auth.accessDenied')), req, res, next);
+                    return errors.handleAPIError(new errors.UnauthorizedError('errors.middleware.auth.accessDenied'), req, res, next);
                 } else if (req.client) {
                     return next();
                 }
 
-                return errors.handleAPIError(new errors.UnauthorizedError(i18n.t('errors.middleware.auth.accessDenied')), req, res, next);
+                return errors.handleAPIError(new errors.UnauthorizedError('errors.middleware.auth.accessDenied'), req, res, next);
             }
         )(req, res, next);
     },
@@ -168,7 +167,7 @@ auth = {
         if (req.user) {
             return next();
         } else {
-            return errors.handleAPIError(new errors.NoPermissionError(i18n.t('errors.middleware.auth.pleaseSignIn')), req, res, next);
+            return errors.handleAPIError(new errors.NoPermissionError('errors.middleware.auth.pleaseSignIn'), req, res, next);
         }
     },
 
@@ -180,7 +179,7 @@ auth = {
             if (req.user) {
                 return next();
             } else {
-                return errors.handleAPIError(new errors.NoPermissionError(i18n.t('errors.middleware.auth.pleaseSignIn')), req, res, next);
+                return errors.handleAPIError(new errors.NoPermissionError('errors.middleware.auth.pleaseSignIn'), req, res, next);
             }
         }
     }

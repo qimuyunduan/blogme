@@ -15,7 +15,6 @@ var _             = require('lodash').runInContext(),
     htmlToText    = require('html-to-text'),
     readFile      = Promise.promisify(fs.readFile),
     docName       = 'mail',
-    i18n          = require('../i18n'),
     mode          = process.env.NODE_ENV,
     testing       = mode !== 'production' && mode !== 'development',
     mailer,
@@ -37,9 +36,9 @@ function sendMail(object) {
             notifications.add({notifications: [{
                 type: 'warn',
                 message: [
-                    i18n.t('warnings.index.unableToSendEmail'),
-                    i18n.t('common.seeLinkForInstructions',
-                    {link: '<a href=\'http://support.ghost.org/mail\' target=\'_blank\'>http://support.ghost.org/mail</a>'})
+                    'warnings.index.unableToSendEmail',
+					 'common.seeLinkForInstructions'
+
                 ].join(' ')
             }]}, {context: {internal: true}});
         }
@@ -129,7 +128,7 @@ mail = {
                     mail: [{
                         message: {
                             to: result.get('email'),
-                            subject: i18n.t('common.api.mail.testGhostEmail'),
+                            subject: 'common.api.mail.testGhostEmail',
                             html: content.html,
                             text: content.text
                         }

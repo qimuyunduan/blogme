@@ -1,9 +1,9 @@
-var ghostBookshelf = require('./base'),
+var Bookshelf = require('./base'),
 
     Permission,
     Permissions;
 
-Permission = ghostBookshelf.Model.extend({
+Permission = Bookshelf.Model.extend({
 
     tableName: 'permissions',
 
@@ -20,11 +20,11 @@ Permission = ghostBookshelf.Model.extend({
     }
 });
 
-Permissions = ghostBookshelf.Collection.extend({
+Permissions = Bookshelf.Collection.extend({
     model: Permission
 });
 
 module.exports = {
-    Permission: ghostBookshelf.model('Permission', Permission),
-    Permissions: ghostBookshelf.collection('Permissions', Permissions)
+    Permission: Bookshelf.model('Permission', Permission),
+    Permissions: Bookshelf.collection('Permissions', Permissions)
 };

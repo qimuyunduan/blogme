@@ -28,11 +28,10 @@ var crypto   = require('crypto'),
     Promise  = require('bluebird'),
     _        = require('lodash'),
     url      = require('url'),
-
     api      = require('./api'),
     config   = require('./config'),
     errors   = require('./errors'),
-    i18n     = require('./i18n'),
+
     internal = {context: {internal: true}},
     allowedCheckEnvironments = ['development', 'production'],
     checkEndpoint = 'updates.ghost.org',
@@ -46,8 +45,8 @@ function updateCheckError(error) {
 
     errors.logError(
         error,
-        i18n.t('errors.update-check.checkingForUpdatesFailed.error'),
-        i18n.t('errors.update-check.checkingForUpdatesFailed.help', {url: 'http://support.ghost.org'})
+        'errors.update-check.checkingForUpdatesFailed.error',
+        'errors.update-check.checkingForUpdatesFailed.help'
     );
 }
 
@@ -126,7 +125,7 @@ function updateCheckRequest() {
                         resData = JSON.parse(resData);
                         resolve(resData);
                     } catch (e) {
-                        reject(i18n.t('errors.update-check.unableToDecodeUpdateResponse.error'));
+                        reject('errors.update-check.unableToDecodeUpdateResponse.error');
                     }
                 });
             });

@@ -2,7 +2,6 @@ var BusBoy  = require('busboy'),
     fs      = require('fs-extra'),
     path    = require('path'),
     os      = require('os'),
-    i18n    = require('../i18n'),
     crypto  = require('crypto');
 
 // ### ghostBusboy
@@ -50,21 +49,21 @@ function ghostBusBoy(req, res, next) {
         });
 
         file.on('error', function onError(error) {
-            console.log('Error', i18n.t('errors.middleware.ghostbusboy.fileUploadingError'), error);
+            console.log('Error', 'errors.middleware.ghostbusboy.fileUploadingError', error);
         });
 
         stream = fs.createWriteStream(filePath);
 
         stream.on('error', function onError(error) {
-            console.log('Error', i18n.t('errors.middleware.ghostbusboy.fileUploadingError'), error);
+            console.log('Error', 'errors.middleware.ghostbusboy.fileUploadingError', error);
         });
 
         file.pipe(stream);
     });
 
     busboy.on('error', function onError(error) {
-        console.log('Error', i18n.t('errors.middleware.ghostbusboy.somethingWentWrong'), error);
-        res.status(500).send({code: 500, message: i18n.t('errors.middleware.ghostbusboy.couldNotParseUpload')});
+        console.log('Error', 'errors.middleware.ghostbusboy.somethingWentWrong', error);
+        res.status(500).send({code: 500, message: 'errors.middleware.ghostbusboy.couldNotParseUpload'});
     });
 
     busboy.on('field', function onField(fieldname, val) {

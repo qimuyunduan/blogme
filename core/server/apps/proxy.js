@@ -2,7 +2,6 @@ var _           = require('lodash'),
     api         = require('../api'),
     helpers     = require('../helpers'),
     filters     = require('../filters'),
-    i18n        = require('../i18n'),
     generateProxyFunctions;
 
 generateProxyFunctions = function (name, permissions) {
@@ -24,7 +23,7 @@ generateProxyFunctions = function (name, permissions) {
             var permValue = getPermissionToMethod(perm, method);
 
             if (!permValue) {
-                throw new Error(i18n.t('errors.apps.accessResourceWithoutPermission.error', {name:name, perm: perm, method: method}));
+                throw new Error('errors.apps.accessResourceWithoutPermission.error');
             }
 
             return wrappedFunc.apply(context, args);
@@ -85,11 +84,11 @@ generateProxyFunctions = function (name, permissions) {
 
 function AppProxy(options) {
     if (!options.name) {
-        throw new Error(i18n.t('errors.apps.mustProvideAppName.error'));
+        throw new Error('errors.apps.mustProvideAppName.error');
     }
 
     if (!options.permissions) {
-        throw new Error(i18n.t('errors.apps.mustProvideAppPermissions.error'));
+        throw new Error('errors.apps.mustProvideAppPermissions.error');
     }
 
     _.extend(this, generateProxyFunctions(options.name, options.permissions));

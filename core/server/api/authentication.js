@@ -7,7 +7,6 @@ var _                = require('lodash'),
     Promise          = require('bluebird'),
     errors           = require('../errors'),
     config           = require('../config'),
-    i18n             = require('../i18n'),
     authentication;
 
 function setupTasks(object) {
@@ -39,7 +38,7 @@ function setupTasks(object) {
         // Handles the additional values set by the setup screen.
         if (!_.isEmpty(setupUser.blogTitle)) {
             userSettings.push({key: 'title', value: setupUser.blogTitle});
-            userSettings.push({key: 'description', value: i18n.t('common.api.authentication.sampleBlogDescription')});
+            userSettings.push({key: 'description', value: 'common.api.authentication.sampleBlogDescription'});
         }
 
         setupUser = user.toJSON(internal);
@@ -70,7 +69,7 @@ authentication = {
             var setup = result.setup[0].status;
 
             if (!setup) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.setupMustBeCompleted')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.setupMustBeCompleted'));
             }
 
             return utils.checkObject(object, 'passwordreset');
@@ -78,7 +77,7 @@ authentication = {
             if (checkedPasswordReset.passwordreset[0].email) {
                 email = checkedPasswordReset.passwordreset[0].email;
             } else {
-                return Promise.reject(new errors.BadRequestError(i18n.t('errors.api.authentication.noEmailProvided')));
+                return Promise.reject(new errors.BadRequestError('errors.api.authentication.noEmailProvided'));
             }
 
             return settings.read({context: {internal: true}, key: 'dbHash'})
@@ -95,7 +94,7 @@ authentication = {
                     mail: [{
                         message: {
                             to: email,
-                            subject: i18n.t('common.api.authentication.mail.resetPassword'),
+                            subject: 'common.api.authentication.mail.resetPassword',
                             html: emailContent.html,
                             text: emailContent.text
                         },
@@ -104,7 +103,7 @@ authentication = {
                 };
                 return mail.send(payload, {context: {internal: true}});
             }).then(function () {
-                return Promise.resolve({passwordreset: [{message: i18n.t('common.api.authentication.mail.checkEmailForInstructions')}]});
+                return Promise.resolve({passwordreset: [{message: 'common.api.authentication.mail.checkEmailForInstructions'}]});
             }).catch(function (error) {
                 return Promise.reject(error);
             });
@@ -126,7 +125,7 @@ authentication = {
             var setup = result.setup[0].status;
 
             if (!setup) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.setupMustBeCompleted')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.setupMustBeCompleted'));
             }
 
             return utils.checkObject(object, 'passwordreset');
@@ -144,7 +143,7 @@ authentication = {
                     dbHash: dbHash
                 });
             }).then(function () {
-                return Promise.resolve({passwordreset: [{message: i18n.t('common.api.authentication.mail.passwordChanged')}]});
+                return Promise.resolve({passwordreset: [{message: 'common.api.authentication.mail.passwordChanged'}]});
             }).catch(function (error) {
                 return Promise.reject(new errors.UnauthorizedError(error.message));
             });
@@ -167,7 +166,7 @@ authentication = {
             var setup = result.setup[0].status;
 
             if (!setup) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.setupMustBeCompleted')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.setupMustBeCompleted'));
             }
 
             return utils.checkObject(object, 'invitation');
@@ -190,7 +189,7 @@ authentication = {
                 // Setting the slug to '' has the model regenerate the slug from the user's name
                 return dataProvider.User.edit({name: name, email: email, slug: ''}, {id: user.id});
             }).then(function () {
-                return Promise.resolve({invitation: [{message: i18n.t('common.api.authentication.mail.invitationAccepted')}]});
+                return Promise.resolve({invitation: [{message: 'common.api.authentication.mail.invitationAccepted'}]});
             }).catch(function (error) {
                 return Promise.reject(new errors.UnauthorizedError(error.message));
             });
@@ -208,7 +207,7 @@ authentication = {
             var setup = result.setup[0].status;
 
             if (!setup) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.setupMustBeCompleted')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.setupMustBeCompleted'));
             }
 
             if (options.email) {
@@ -220,7 +219,7 @@ authentication = {
                     }
                 });
             } else {
-                return Promise.reject(new errors.BadRequestError(i18n.t('errors.api.authentication.invalidEmailReceived')));
+                return Promise.reject(new errors.BadRequestError('errors.api.authentication.invalidEmailReceived'));
             }
         });
     },
@@ -244,7 +243,7 @@ authentication = {
             var setup = result.setup[0].status;
 
             if (setup) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.setupAlreadyCompleted')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.setupAlreadyCompleted'));
             }
 
             return setupTasks(object);
@@ -259,7 +258,7 @@ authentication = {
         }).then(function (emailContent) {
             var message = {
                     to: setupUser.email,
-                    subject: i18n.t('common.api.authentication.mail.yourNewGhostBlog'),
+                    subject: 'common.api.authentication.mail.yourNewGhostBlog',
                     html: emailContent.html,
                     text: emailContent.text
                 },
@@ -273,8 +272,8 @@ authentication = {
             mail.send(payload, {context: {internal: true}}).catch(function (error) {
                 errors.logError(
                     error.message,
-                    i18n.t('errors.api.authentication.unableToSendWelcomeEmail', {url: 'http://support.ghost.org/mail/'}),
-                    i18n.t('errors.api.authentication.checkEmailConfigInstructions')
+                    'errors.api.authentication.unableToSendWelcomeEmail',
+                    'errors.api.authentication.checkEmailConfigInstructions'
                 );
             });
         }).then(function () {
@@ -284,14 +283,14 @@ authentication = {
 
     updateSetup: function updateSetup(object, options) {
         if (!options.context || !options.context.user) {
-            return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.notLoggedIn')));
+            return Promise.reject(new errors.NoPermissionError('errors.api.authentication.notLoggedIn'));
         }
 
         return dataProvider.User.findOne({role: 'Owner', status: 'all'}).then(function (result) {
             var user = result.toJSON();
 
             if (user.id !== options.context.user) {
-                return Promise.reject(new errors.NoPermissionError(i18n.t('errors.api.authentication.notTheBlogOwner')));
+                return Promise.reject(new errors.NoPermissionError('errors.api.authentication.notTheBlogOwner'));
             }
 
             return setupTasks(object);
@@ -308,14 +307,14 @@ authentication = {
         } else if (object.token_type_hint && object.token_type_hint === 'refresh_token') {
             token = dataProvider.Refreshtoken;
         } else {
-            return errors.BadRequestError(i18n.t('errors.api.authentication.invalidTokenTypeHint'));
+            return errors.BadRequestError('errors.api.authentication.invalidTokenTypeHint');
         }
 
         return token.destroyByToken({token: object.token}).then(function () {
             return Promise.resolve({token: object.token});
         }, function () {
-            // On error we still want a 200. See https://tools.ietf.org/html/rfc7009#page-5
-            return Promise.resolve({token: object.token, error: i18n.t('errors.api.authentication.invalidTokenProvided')});
+
+            return Promise.resolve({token: object.token, error: 'errors.api.authentication.invalidTokenProvided'});
         });
     }
 };

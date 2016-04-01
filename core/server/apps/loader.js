@@ -7,7 +7,6 @@ var path = require('path'),
     AppSandbox = require('./sandbox'),
     AppDependencies = require('./dependencies'),
     AppPermissions = require('./permissions'),
-    i18n = require('../i18n'),
     loader;
 
 // Get the full path to an app by name
@@ -67,7 +66,7 @@ loader = {
 
                 return perms.read().catch(function (err) {
                     // Provide a helpful error about which app
-                    return Promise.reject(new Error(i18n.t('errors.apps.permissionsErrorLoadingApp.error', {name: name, message: err.message})));
+                    return Promise.reject(new Error('errors.apps.permissionsErrorLoadingApp.error'));
                 });
             })
             .then(function (appPerms) {
@@ -77,7 +76,7 @@ loader = {
 
                 // Check for an install() method on the app.
                 if (!_.isFunction(app.install)) {
-                    return Promise.reject(new Error(i18n.t('errors.apps.noInstallMethodLoadingApp.error', {name: name})));
+                    return Promise.reject(new Error('errors.apps.noInstallMethodLoadingApp.error'));
                 }
 
                 // Run the app.install() method
@@ -98,7 +97,7 @@ loader = {
 
             // Check for an activate() method on the app.
             if (!_.isFunction(app.activate)) {
-                return Promise.reject(new Error(i18n.t('errors.apps.noActivateMethodLoadingApp.error', {name: name})));
+                return Promise.reject(new Error('errors.apps.noActivateMethodLoadingApp.error'));
             }
 
             // Wrapping the activate() with a when because it's possible

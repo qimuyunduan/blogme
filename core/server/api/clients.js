@@ -1,4 +1,4 @@
-// # Client API
+       // # Client API
 // RESTful API for the Client resource
 var Promise      = require('bluebird'),
     _            = require('lodash'),
@@ -6,7 +6,6 @@ var Promise      = require('bluebird'),
     errors       = require('../errors'),
     utils        = require('./utils'),
     pipeline     = require('../utils/pipeline'),
-    i18n         = require('../i18n'),
 
     docName      = 'clients',
     clients;
@@ -53,7 +52,7 @@ clients = {
                 return {clients: [result.toJSON(options)]};
             }
 
-            return Promise.reject(new errors.NotFoundError(i18n.t('common.api.clients.clientNotFound')));
+            return Promise.reject(new errors.NotFoundError('common.api.clients.clientNotFound'));
         });
     }
 };

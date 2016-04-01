@@ -10,7 +10,6 @@ var _              = require('lodash'),
     events         = require('../events'),
     config         = require('../config'),
     baseUtils      = require('./base/utils'),
-    i18n           = require('../i18n'),
     Post,
     Posts;
 
@@ -117,7 +116,7 @@ Post = ghostBookshelf.Model.extend({
 
         // disabling sanitization until we can implement a better version
         // this.set('title', this.sanitize('title').trim());
-        title = this.get('title') || i18n.t('errors.models.post.untitled');
+        title = this.get('title') || 'errors.models.post.untitled';
         this.set('title', title.trim());
 
         // ### Business logic for published_at and published_by
@@ -256,11 +255,11 @@ Post = ghostBookshelf.Model.extend({
             }).catch(function failure(error) {
                 errors.logError(
                     error,
-                    i18n.t('errors.models.post.tagUpdates.error'),
-                    i18n.t('errors.models.post.tagUpdates.help')
+                    'errors.models.post.tagUpdates.error',
+                    'errors.models.post.tagUpdates.help'
                 );
                 return Promise.reject(new errors.InternalServerError(
-                    i18n.t('errors.models.post.tagUpdates.error') + ' ' + i18n.t('errors.models.post.tagUpdates.help') + error
+                    'errors.models.post.tagUpdates.error' + ' ' + 'errors.models.post.tagUpdates.help' + error
                 ));
             });
         }
@@ -556,7 +555,7 @@ Post = ghostBookshelf.Model.extend({
                 return Promise.reject(new errors.InternalServerError(error.message || error));
             });
         }
-        return Promise.reject(new errors.NotFoundError(i18n.t('errors.models.post.noUserFound')));
+        return Promise.reject(new errors.NotFoundError('errors.models.post.noUserFound'));
     },
 
     permissible: function permissible(postModelOrId, action, context, loadedPermissions, hasUserPermission, hasAppPermission) {
@@ -587,7 +586,7 @@ Post = ghostBookshelf.Model.extend({
             return Promise.resolve();
         }
 
-        return Promise.reject(new errors.NoPermissionError(i18n.t('errors.models.post.notEnoughPermission')));
+        return Promise.reject(new errors.NoPermissionError('errors.models.post.notEnoughPermission'));
     }
 });
 
