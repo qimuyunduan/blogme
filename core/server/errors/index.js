@@ -1,5 +1,4 @@
-// # Errors
-/*jslint regexp: true */
+
 var _                          = require('lodash'),
     chalk                      = require('chalk'),
     path                       = require('path'),
@@ -21,11 +20,11 @@ var _                          = require('lodash'),
     config,
     errors,
 
-    // Paths for views
     userErrorTemplateExists   = false;
 
 // Shim right now to deal with circular dependencies.
 // @TODO(hswolff): remove circular dependency and lazy require.
+
 function getConfigModule() {
     if (!config) {
         config = require('../config');
@@ -201,10 +200,6 @@ errors = {
     },
 
     /**
-     * ### Format HTTP Errors
-     * Converts the error response from the API into a format which can be returned over HTTP
-     *
-     * @private
      * @param {Array} error
      * @return {{errors: Array, statusCode: number}}
      */

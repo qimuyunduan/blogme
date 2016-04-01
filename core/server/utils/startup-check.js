@@ -4,7 +4,7 @@ var packages = require('../../../package.json'),
     fs = require('fs'),
     mode = process.env.NODE_ENV === undefined ? 'development' : process.env.NODE_ENV,
     appRoot = path.resolve(__dirname, '../../../'),
-    configFilePath = process.env.GHOST_CONFIG || path.join(appRoot, 'config.js'),
+    configFilePath = path.join(appRoot, 'config.js'),
     checks,
     exitCodes = {
         NODE_VERSION_UNSUPPORTED: 231,
@@ -23,7 +23,7 @@ checks = {
         this.packages();
         this.contentPath();
         this.mail();
-        this.sqlite();
+        this.mysql();
         this.builtFilesExist();
     },
 
@@ -36,10 +36,6 @@ checks = {
             !semver.satisfies(process.versions.node, packages.engines.node) &&
             !semver.satisfies(process.versions.node, packages.engines.iojs)) {
             console.error('\x1B[31mERROR: Unsupported version of Node');
-            console.error('\x1B[31mGhost needs Node version ' + packages.engines.node +
-                          ' you are using version ' + process.versions.node + '\033[0m\n');
-            console.error('\x1B[32mPlease see http://support.ghost.org/supported-node-versions/ for more information\033[0m');
-
             process.exit(exitCodes.NODE_VERSION_UNSUPPORTED);
         }
     },
@@ -63,7 +59,7 @@ checks = {
         if (!config) {
             console.error('\x1B[31mERROR: Cannot find the configuration for the current NODE_ENV: ' +
                             process.env.NODE_ENV + '\033[0m\n');
-            console.error('\x1B[32mEnsure your config.js has a section for the current NODE_ENV value' +
+            console.error('\x1B[32mEnsure the config.js has a section for the current NODE_ENV value' +
                             ' and is formatted properly.\033[0m');
 
             process.exit(exitCodes.NODE_ENV_CONFIG_MISSING);
@@ -92,9 +88,9 @@ checks = {
 
         errors = errors.join('\n  ');
 
-        console.error('\x1B[31mERROR: Ghost is unable to start due to missing dependencies:\033[0m\n  ' + errors);
+        console.error('\x1B[31mERROR: unable to start due to missing dependencies:\033[0m\n  ' + errors);
         console.error('\x1B[32m\nPlease run `npm install --production` and try starting Ghost again.');
-        console.error('\x1B[32mHelp and documentation can be found at http://support.ghost.org.\033[0m\n');
+
 
         process.exit(exitCodes.DEPENDENCIES_MISSING);
     },
@@ -110,9 +106,8 @@ checks = {
             contentPath,
             contentSubPaths = ['apps', 'data', 'images', 'themes'],
             fd,
-            errorHeader = '\x1B[31mERROR: Unable to access Ghost\'s content path:\033[0m',
-            errorHelp = '\x1B[32mCheck that the content path exists and file system permissions are correct.' +
-                '\nHelp and documentation can be found at http://support.ghost.org.\033[0m';
+            errorHeader = '\x1B[31mERROR: Unable to access app content path:\033[0m',
+            errorHelp = '\x1B[32mCheck that the content path exists and file system permissions are correct.' ;
 
         // Get the content path to test.  If it's defined in config.js use that, if not use the default
         try {
@@ -166,52 +161,28 @@ checks = {
         }
     },
 
-    // Make sure sqlite3 database is available for read/write
-    sqlite: function checkSqlite() {
+    // Make sure mysql database is available for read/write
+    mysql: function checkMysql() {
         if (mode !== 'production' && mode !== 'development') {
             return;
         }
 
         var configFile,
-            config,
-            appRoot = path.resolve(__dirname, '../../../'),
-            dbPath,
-            fd;
+            config;
 
         try {
             configFile = require(configFilePath);
             config = configFile[mode];
 
-            // Abort check if database type is not sqlite3
-            if (config && config.database && config.database.client !== 'sqlite3') {
+            // Abort check if database type is not mysql
+            if (config && config.database && config.database.client !== 'mysql') {
                 return;
             }
 
-            if (config && config.database && config.database.connection) {
-                dbPath = config.database.connection.filename;
-            }
         } catch (e) {
-            // If config.js doesn't exist, use the default path
-            dbPath = path.join(appRoot, 'content', 'data', mode === 'production' ? 'ghost.db' : 'ghost-dev.db');
+			console.log(e)
         }
 
-        // Check for read/write access on sqlite db file
-        try {
-            fd = fs.openSync(dbPath, 'r+');
-            fs.closeSync(fd);
-        } catch (e) {
-            // Database file not existing is not an error as sqlite will create it.
-            if (e.code === 'ENOENT') {
-                return;
-            }
-
-            console.error('\x1B[31mERROR: Unable to open sqlite3 database file for read/write\033[0m');
-            console.error('  ' + e.message);
-            console.error('\n\x1B[32mCheck that the sqlite3 database file permissions allow read and write access.');
-            console.error('Help and documentation can be found at http://support.ghost.org.\033[0m');
-
-            process.exit(exitCodes.SQLITE_DB_NOT_WRITABLE);
-        }
     },
 
     mail: function checkMail() {
@@ -226,8 +197,8 @@ checks = {
         }
 
         if (!config.mail || !config.mail.transport) {
-            console.error('\x1B[31mWARNING: Ghost is attempting to use a direct method to send email. \nIt is recommended that you explicitly configure an email service.\033[0m');
-            console.error('\x1B[32mHelp and documentation can be found at http://support.ghost.org/mail.\033[0m\n');
+            console.error('\x1B[31mWARNING: App attempting to use a direct method to send email. \nIt is recommended that you explicitly configure an email service.\033[0m');
+
         }
     },
 
@@ -262,8 +233,6 @@ checks = {
                 fs.statSync(fileName);
             } catch (e) {
                 console.error('\x1B[31mERROR: Javascript files have not been built.\033[0m');
-                console.error('\n\x1B[32mPlease read the getting started instructions at:');
-                console.error('https://github.com/TryGhost/Ghost#getting-started\033[0m');
                 process.exit(exitCodes.BUILT_FILES_DO_NOT_EXIST);
             }
         }

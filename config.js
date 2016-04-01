@@ -38,12 +38,12 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        // Change this to your Ghost blog's published URL.
+        // Change this to your App published URL.
         url: 'http://localhost:2368',
 
         // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
+
+
         mail: {
             transport: 'SMTP',
             options: {
@@ -55,7 +55,7 @@ config = {
         },
 
         // #### Database
-        // Ghost supports sqlite3 (default), MySQL & PostgreSQL
+        // App supports MySQL
         database: {
             client: 'mysql',
 			connection: {

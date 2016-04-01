@@ -15,7 +15,7 @@ errors = require('./core/server/errors');
 // Create our parent express app instance.
 parentApp = express();
 
-// Call Ghost to get an instance of GhostServer
+//  get an instance of AppServer
 blogme().then(function (ghostServer) {
     // Mount our  instance on our desired subdirectory path if it exists.
     parentApp.use(ghostServer.config.paths.subdir, ghostServer.rootApp);

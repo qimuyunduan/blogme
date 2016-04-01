@@ -1,4 +1,4 @@
-// # Ghost Server
+// #  Server
 // Handles the creation of an HTTP Server for Ghost
 var Promise = require('bluebird'),
     chalk = require('chalk'),
@@ -8,7 +8,7 @@ var Promise = require('bluebird'),
     i18n   = require('./i18n');
 
 /**
- * ## GhostServer
+ * ## Server
  * @constructor
  * @param {Object} rootApp - parent express instance
  */
