@@ -12,7 +12,7 @@ var packages = require('../../../package.json'),
         DEPENDENCIES_MISSING: 233,
         CONTENT_PATH_NOT_ACCESSIBLE: 234,
         CONTENT_PATH_NOT_WRITABLE: 235,
-        SQLITE_DB_NOT_WRITABLE: 236,
+        MYSQL_DB_NOT_WRITABLE: 236,
         BUILT_FILES_DO_NOT_EXIST: 237
     };
 
@@ -180,7 +180,8 @@ checks = {
             }
 
         } catch (e) {
-			console.log(e)
+			console.error('mysql is not set correctly');
+			process.exit(exitCodes.MYSQL_DB_NOT_WRITABLE);
         }
 
     },

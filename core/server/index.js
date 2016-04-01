@@ -5,7 +5,6 @@ var express     = require('express'),
     compress    = require('compression'),
     uuid        = require('node-uuid'),
     Promise     = require('bluebird'),
-    i18n        = require('./i18n'),
     api         = require('./api'),
     config      = require('./config'),
     errors      = require('./errors'),
@@ -17,14 +16,16 @@ var express     = require('express'),
     apps        = require('./apps'),
     sitemap     = require('./data/xml/sitemap'),
     xmlrpc      = require('./data/xml/xmlrpc'),
-    GhostServer = require('./ghost-server'),
+    server = require('./server'),
     validateThemes = require('./utils/validate-themes'),
 
     dbHash;
 
 function initDbHashAndFirstRun() {
 
-    return api.settings.read({key: 'dbHash', context: {internal: true}}).then(function (response) {
+    return api.settings.read({key: 'dbHash', context: {internal: true}})
+		.then(function (response) {
+
         var hash = response.settings[0].value,
             initHash;
 
@@ -49,16 +50,13 @@ function initDbHashAndFirstRun() {
 // Finally it returns an instance of Server
 function init(options) {
     // Get reference to an express app instance.
-    var blogApp = express(),
+    var app = express(),
         adminApp = express();
 
     // ### Initialisation
     // The server and its dependencies require a populated config
     // It returns a promise that is resolved when the application
-    // has finished starting up.
 
-    // Initialize Internationalization
-    i18n.init();
 
     // Load our config.js file from the local file system.
     return config.load(options.config).then(function () {
@@ -100,27 +98,27 @@ function init(options) {
 
         // enabled gzip compression by default
         if (config.server.compress !== false) {
-            blogApp.use(compress());
+            app.use(compress());
         }
 
         // ## View engine
         // set the view engine
-        blogApp.set('view engine', 'hbs');
+        app.set('view engine', 'hbs');
 
         // Create a hbs instance for admin and init view engine
         adminApp.set('view engine', 'hbs');
-        adminApp.engine('hbs', adminHbs.express3({}));
+        adminApp.engine('hbs', adminHbs.express4({}));
 
         // Load helpers
         helpers.loadCoreHelpers(adminHbs);
 
-        // ## Middleware and Routing
-        middleware(blogApp, adminApp);
+        // Middleware and Routing
+        middleware(app, adminApp);
 
         // Log all theme errors and warnings
         validateThemes(config.paths.themePath)
             .catch(function (result) {
-                // TODO: change `result` to something better
+
                 result.errors.forEach(function (err) {
                     errors.logError(err.message, err.context, err.help);
                 });
@@ -130,7 +128,7 @@ function init(options) {
                 });
             });
 
-        return new GhostServer(blogApp);
+        return new server(app);
     });
 }
 

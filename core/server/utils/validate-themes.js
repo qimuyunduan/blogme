@@ -4,8 +4,7 @@
 
 var readThemes = require('./read-themes'),
     Promise = require('bluebird'),
-    _ = require('lodash'),
-    i18n = require('../i18n');
+    _ = require('lodash');
 
 /**
  * Validate themes:
@@ -28,9 +27,9 @@ function validateThemes(dir) {
 
                 if (!hasPackageJson) {
                     warning = {
-                        message: i18n.t('errors.utils.validatethemes.themeWithNoPackage.message'),
-                        context: i18n.t('errors.utils.validatethemes.themeWithNoPackage.context', {name: name}),
-                        help: i18n.t('errors.utils.validatethemes.themeWithNoPackage.help', {url: 'http://docs.ghost.org/themes/'})
+                        message: 'errors.utils.validatethemes.themeWithNoPackage.message',
+                        context: 'errors.utils.validatethemes.themeWithNoPackage.context',
+                        help: 'errors.utils.validatethemes.themeWithNoPackage.help'
                     };
 
                     result.warnings.push(warning);
@@ -40,9 +39,9 @@ function validateThemes(dir) {
                 // but JSON.parse failed (invalid json syntax)
                 if (hasPackageJson && theme['package.json'] === null) {
                     warning = {
-                        message: i18n.t('errors.utils.validatethemes.malformedPackage.message'),
-                        context: i18n.t('errors.utils.validatethemes.malformedPackage.context', {name: name}),
-                        help: i18n.t('errors.utils.validatethemes.malformedPackage.help', {url: 'http://docs.ghost.org/themes/'})
+                        message: 'errors.utils.validatethemes.malformedPackage.message',
+                        context: 'errors.utils.validatethemes.malformedPackage.context',
+                        help: 'errors.utils.validatethemes.malformedPackage.help'
                     };
 
                     result.warnings.push(warning);

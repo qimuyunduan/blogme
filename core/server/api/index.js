@@ -1,8 +1,6 @@
-// # Ghost Data API
-// Provides access from anywhere to the Ghost data layer.
-//
-// Ghost's JSON API is integral to the workings of Ghost, regardless of whether you want to access data internally,
-// from a theme, an app, or from an external app, you'll use the Ghost JSON API to do so.
+// # App Data API
+// Provides access from anywhere to the  data layer.
+
 
 var _              = require('lodash'),
     config         = require('../config'),
@@ -244,14 +242,6 @@ module.exports = {
 
 /**
  * ## API Methods
- *
- * Most API methods follow the BREAD pattern, although not all BREAD methods are available for all resources.
- * Most API methods have a similar signature, they either take just `options`, or both `object` and `options`.
- * For RESTful resources `object` is always a model object of the correct type in the form `name: [{object}]`
- * `options` is an object with several named properties, the possibilities are listed for each method.
- *
- * Read / Edit / Destroy routes expect some sort of identifier (id / slug / key) for which object they are handling
- *
  * All API methods take a context object as one of the options:
  *
  * @typedef context

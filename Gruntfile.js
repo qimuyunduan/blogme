@@ -58,7 +58,7 @@ var _              = require('lodash'),
                     }
                 },
                 express: {
-                    files:  ['core/ghost-server.js', 'core/server/**/*.js'],
+                    files:  ['core/server.js', 'core/server/**/*.js'],
                     tasks:  ['express:dev'],
                     options: {
                         spawn: false
@@ -430,7 +430,7 @@ var _              = require('lodash'),
                         sourceMap: false
                     },
                     files: {
-                        'core/shared/ghost-url.min.js': 'core/shared/ghost-url.js'
+                        'core/shared/ghost-url.min.js': 'core/shared/url.js'
                     }
                 }
             }

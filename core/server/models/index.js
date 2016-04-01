@@ -40,9 +40,6 @@ function init() {
     return Promise.resolve();
 }
 
-/**
- * TODO: move to some other place
- */
 
 // ### deleteAllContent
 // Delete all content from the database (posts, tags, tags_posts)

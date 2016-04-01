@@ -61,7 +61,7 @@ function finaliseStructuredData(metaData) {
 
 function getAjaxHelper(clientId, clientSecret) {
     return '<script type="text/javascript" src="' +
-        assetHelper('shared/ghost-url.js', {hash: {minifyInProduction: true}}) + '"></script>\n' +
+        assetHelper('shared/url.js', {hash: {minifyInProduction: true}}) + '"></script>\n' +
         '<script type="text/javascript">\n' +
         'ghost.init({\n' +
         '\tclientId: "' + clientId + '",\n' +

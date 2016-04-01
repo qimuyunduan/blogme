@@ -1,5 +1,5 @@
 // #  Server
-// Handles the creation of an HTTP Server for Ghost
+
 var Promise = require('bluebird'),
     chalk = require('chalk'),
     fs = require('fs'),
@@ -12,7 +12,8 @@ var Promise = require('bluebird'),
  * @constructor
  * @param {Object} rootApp - parent express instance
  */
-function GhostServer(rootApp) {
+function Server(rootApp) {
+	// frontend app(for user)
     this.rootApp = rootApp;
     this.httpServer = null;
     this.connections = {};
@@ -32,7 +33,7 @@ function GhostServer(rootApp) {
  * @param  {Object} externalApp - Optional express app instance.
  * @return {Promise} Resolves once Ghost has started
  */
-GhostServer.prototype.start = function (externalApp) {
+Server.prototype.start = function (externalApp) {
     var self = this,
         rootApp = externalApp ? externalApp : self.rootApp;
 
@@ -87,7 +88,7 @@ GhostServer.prototype.start = function (externalApp) {
  * the promise will be fulfilled immediately
  * @returns {Promise} Resolves once Ghost has stopped
  */
-GhostServer.prototype.stop = function () {
+Server.prototype.stop = function () {
     var self = this;
 
     return new Promise(function (resolve) {
@@ -110,7 +111,7 @@ GhostServer.prototype.stop = function () {
  * Restarts the ghost application
  * @returns {Promise} Resolves once Ghost has restarted
  */
-GhostServer.prototype.restart = function () {
+Server.prototype.restart = function () {
     return this.stop().then(this.start.bind(this));
 };
 
@@ -118,7 +119,7 @@ GhostServer.prototype.restart = function () {
  * ### Hammertime
  * To be called after `stop`
  */
-GhostServer.prototype.hammertime = function () {
+Server.prototype.hammertime = function () {
     console.log(chalk.green(i18n.t('notices.httpServer.cantTouchThis')));
 
     return Promise.resolve(this);
@@ -130,7 +131,7 @@ GhostServer.prototype.hammertime = function () {
  * ### Connection
  * @param {Object} socket
  */
-GhostServer.prototype.connection = function (socket) {
+Server.prototype.connection = function (socket) {
     var self = this;
 
     self.connectionId += 1;
@@ -148,7 +149,7 @@ GhostServer.prototype.connection = function (socket) {
  * Most browsers keep a persistent connection open to the server, which prevents the close callback of
  * httpServer from returning. We need to destroy all connections manually.
  */
-GhostServer.prototype.closeConnections = function () {
+Server.prototype.closeConnections = function () {
     var self = this;
 
     Object.keys(self.connections).forEach(function (socketId) {
@@ -163,7 +164,7 @@ GhostServer.prototype.closeConnections = function () {
 /**
  * ### Log Start Messages
  */
-GhostServer.prototype.logStartMessages = function () {
+Server.prototype.logStartMessages = function () {
     // Startup & Shutdown messages
     if (process.env.NODE_ENV === 'production') {
         console.log(
@@ -205,8 +206,8 @@ GhostServer.prototype.logStartMessages = function () {
 /**
  * ### Log Shutdown Messages
  */
-GhostServer.prototype.logShutdownMessages = function () {
+Server.prototype.logShutdownMessages = function () {
     console.log(chalk.red(i18n.t('notices.httpServer.ghostIsClosingConnections')));
 };
 
-module.exports = GhostServer;
+module.exports = Server;

@@ -27,7 +27,7 @@
             "defaultValue": ""
         },
         "defaultLang": {
-            "defaultValue": "en_US",
+            "defaultValue": "zh-CN",
             "validations": {
                 "isNull": false
             }

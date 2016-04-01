@@ -4,7 +4,6 @@ var _           = require('lodash'),
     errors      = require('../errors'),
     api         = require('../api'),
     loader      = require('./loader'),
-    i18n        = require('../i18n'),
     // Holds the available apps
     availableApps = {};
 

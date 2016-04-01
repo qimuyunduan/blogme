@@ -14,10 +14,9 @@ var path          = require('path'),
     errors        = require('../errors'),
     configUrl     = require('./url'),
     packageInfo   = require('../../../package.json'),
-    i18n          = require('../i18n'),
     appRoot       = path.resolve(__dirname, '../../../'),
     corePath      = path.resolve(appRoot, 'core/'),
-    testingEnvs   = ['testing', 'testing-mysql', 'testing-pg'],
+    testingEnvs   = ['testing-mysql'],
     defaultConfig = {};
 
 function ConfigManager(config) {
@@ -267,9 +266,9 @@ ConfigManager.prototype.writeFile = function () {
                 error;
 
             if (!templateExists) {
-                error = new Error(i18n.t('errors.config.couldNotLocateConfigFile.error'));
+                error = new Error('errors......config.couldNotLocateConfigFile.error');
                 error.context = appRoot;
-                error.help = i18n.t('errors.config.couldNotLocateConfigFile.help');
+                error.help = 'errors......config.couldNotLocateConfigFile.help';
 
                 return reject(error);
             }
@@ -278,9 +277,8 @@ ConfigManager.prototype.writeFile = function () {
             read = fs.createReadStream(configExamplePath);
             read.on('error', function (err) {
                 errors.logError(
-                    new Error(i18n.t('errors.config.couldNotOpenForReading.error', {file: 'config.example.js'})),
-                    appRoot,
-                    i18n.t('errors.config.couldNotOpenForReading.help'));
+                    new Error('errors......config.couldNotOpenForReading.error',
+                    appRoot, 'errors......config.couldNotOpenForReading.help'));
 
                 reject(err);
             });
@@ -288,9 +286,9 @@ ConfigManager.prototype.writeFile = function () {
             write = fs.createWriteStream(configPath);
             write.on('error', function (err) {
                 errors.logError(
-                    new Error(i18n.t('errors.config.couldNotOpenForWriting.error', {file: 'config.js'})),
+                    new Error('errors......config.couldNotOpenForWriting.error'),
                     appRoot,
-                    i18n.t('errors.config.couldNotOpenForWriting.help'));
+                    'errors......config.couldNotOpenForWriting.help');
 
                 reject(err);
             });
@@ -332,32 +330,32 @@ ConfigManager.prototype.validate = function () {
     // Check that our url is valid
     if (!validator.isURL(config.url, {protocols: ['http', 'https'], require_protocol: true})) {
         errors.logError(
-            new Error(i18n.t('errors.config.invalidUrlInConfig.description'),
+            new Error('errors......config.invalidUrlInConfig.description'),
             config.url,
-            i18n.t('errors.config.invalidUrlInConfig.help')));
+            'errors......config.invalidUrlInConfig.help');
 
-        return Promise.reject(new Error(i18n.t('errors.config.invalidUrlInConfig.error')));
+        return Promise.reject(new Error('errors......config.invalidUrlInConfig.error'));
     }
 
     parsedUrl = url.parse(config.url || 'invalid', false, true);
 
     if (/\/ghost(\/|$)/.test(parsedUrl.pathname)) {
         errors.logError(
-            new Error(i18n.t('errors.config.urlCannotContainGhostSubdir.description'),
+            new Error('errors......config.urlCannotContainGhostSubdir.description'),
             config.url,
-            i18n.t('errors.config.urlCannotContainGhostSubdir.help')));
+            'errors......config.urlCannotContainGhostSubdir.help');
 
-        return Promise.reject(new Error(i18n.t('errors.config.urlCannotContainGhostSubdir.error')));
+        return Promise.reject(new Error('errors......config.urlCannotContainGhostSubdir.error'));
     }
 
     // Check that we have database values
     if (!config.database || !config.database.client) {
         errors.logError(
-            new Error(i18n.t('errors.config.dbConfigInvalid.description')),
+            new Error('errors......config.dbConfigInvalid.description'),
             JSON.stringify(config.database),
-            i18n.t('errors.config.dbConfigInvalid.help'));
+            'errors......config.dbConfigInvalid.help');
 
-        return Promise.reject(new Error(i18n.t('errors.config.dbConfigInvalid.error')));
+        return Promise.reject(new Error('errors......config.dbConfigInvalid.error'));
     }
 
     hasHostAndPort = config.server && !!config.server.host && !!config.server.port;
@@ -366,11 +364,11 @@ ConfigManager.prototype.validate = function () {
     // Check for valid server host and port values
     if (!config.server || !(hasHostAndPort || hasSocket)) {
         errors.logError(
-            new Error(i18n.t('errors.config.invalidServerValues.description')),
+            new Error('errors......config.invalidServerValues.description'),
             JSON.stringify(config.server),
-            i18n.t('errors.config.invalidServerValues.help'));
+            'errors......config.invalidServerValues.help');
 
-        return Promise.reject(new Error(i18n.t('errors.config.invalidServerValues.error')));
+        return Promise.reject(new Error('errors......config.invalidServerValues.error'));
     }
 
     return Promise.resolve(config);
@@ -416,9 +414,9 @@ ConfigManager.prototype.displayDeprecated = function (item, properties, address)
         if (properties.length) {
             return self.displayDeprecated(item[property], properties, address);
         }
-        errorText = i18n.t('errors.config.deprecatedProperty.error', {property: chalk.bold(address.join('.'))});
-        explanationText =  i18n.t('errors.config.deprecatedProperty.explanation');
-        helpText = i18n.t('errors.config.deprecatedProperty.help', {url: 'http://support.ghost.org/config'});
+        errorText = 'errors......config.deprecatedProperty.error';
+        explanationText =  'errors......config.deprecatedProperty.explanation';
+        helpText = 'errors......config.deprecatedProperty.help';
         errors.logWarn(errorText, explanationText, helpText);
     }
 };

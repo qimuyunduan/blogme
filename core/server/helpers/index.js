@@ -2,7 +2,6 @@ var hbs             = require('express-hbs'),
     Promise         = require('bluebird'),
     errors          = require('../errors'),
     utils           = require('./utils'),
-    i18n            = require('../i18n'),
     coreHelpers     = {},
     registerHelpers;
 
@@ -45,7 +44,7 @@ coreHelpers.helperMissing = function (arg) {
     if (arguments.length === 2) {
         return undefined;
     }
-    errors.logError(i18n.t('warnings.helpers.index.missingHelper', {arg: arg}));
+    errors.logError('warnings.helpers.index.missingHelper');
 };
 
 // Register an async handlebars helper for a given handlebars instance
