@@ -1,6 +1,5 @@
 var _       = require('lodash'),
     Promise = require('bluebird'),
-    i18n    = require('../../i18n'),
     db      = require('../db'),
     schema  = require('./schema'),
     clients = require('./clients');
@@ -85,7 +84,7 @@ function getTables() {
         return clients[client].getTables();
     }
 
-    return Promise.reject(i18n.t('notices.data.utils.index.noSupportForDatabase', {client: client}));
+    return Promise.reject('notices.data.utils.index.noSupportForDatabase');
 }
 
 function getIndexes(table) {
@@ -95,7 +94,7 @@ function getIndexes(table) {
         return clients[client].getIndexes(table);
     }
 
-    return Promise.reject(i18n.t('notices.data.utils.index.noSupportForDatabase', {client: client}));
+    return Promise.reject('notices.data.utils.index.noSupportForDatabase');
 }
 
 function getColumns(table) {
@@ -105,7 +104,7 @@ function getColumns(table) {
         return clients[client].getColumns(table);
     }
 
-    return Promise.reject(i18n.t('notices.data.utils.index.noSupportForDatabase', {client: client}));
+    return Promise.reject('notices.data.utils.index.noSupportForDatabase');
 }
 
 function checkTables() {

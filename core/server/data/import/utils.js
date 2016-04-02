@@ -3,7 +3,6 @@ var Promise     = require('bluebird'),
     models      = require('../../models'),
     errors      = require('../../errors'),
     globalUtils = require('../../utils'),
-    i18n        = require('../../i18n'),
 
     internal    = {context: {internal: true}},
     utils,
@@ -79,7 +78,7 @@ utils = {
                 userMap[userToMap] = existingUsers[owner.email].realId;
             } else {
                 throw new errors.DataImportError(
-                    i18n.t('errors.data.import.utils.dataLinkedToUnknownUser', {userToMap: userToMap}), 'user.id', userToMap
+                    'errors.data.import.utils.dataLinkedToUnknownUser', 'user.id', userToMap
                 );
             }
         });

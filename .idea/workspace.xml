@@ -2,28 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/i18n.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/ghost-server.js" afterPath="$PROJECT_DIR$/core/server/server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/shared/ghost-url.js" afterPath="$PROJECT_DIR$/core/shared/url.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/shared/ghost-url.min.js" afterPath="$PROJECT_DIR$/core/shared/url.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/api/index.js" afterPath="$PROJECT_DIR$/core/server/api/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/api/settings.js" afterPath="$PROJECT_DIR$/core/server/api/settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/apps/index.js" afterPath="$PROJECT_DIR$/core/server/apps/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/config/index.js" afterPath="$PROJECT_DIR$/core/server/config/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/migration/index.js" afterPath="$PROJECT_DIR$/core/server/data/migration/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/schema/default-settings.json" afterPath="$PROJECT_DIR$/core/server/data/schema/default-settings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/xml/xmlrpc.js" afterPath="$PROJECT_DIR$/core/server/data/xml/xmlrpc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/helpers/ghost_head.js" afterPath="$PROJECT_DIR$/core/server/helpers/ghost_head.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/helpers/index.js" afterPath="$PROJECT_DIR$/core/server/helpers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/index.js" afterPath="$PROJECT_DIR$/core/server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/middleware/index.js" afterPath="$PROJECT_DIR$/core/server/middleware/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/models/index.js" afterPath="$PROJECT_DIR$/core/server/models/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/permissions/index.js" afterPath="$PROJECT_DIR$/core/server/permissions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/utils/startup-check.js" afterPath="$PROJECT_DIR$/core/server/utils/startup-check.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/utils/validate-themes.js" afterPath="$PROJECT_DIR$/core/server/utils/validate-themes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/export/index.js" afterPath="$PROJECT_DIR$/core/server/data/export/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/import/data-importer.js" afterPath="$PROJECT_DIR$/core/server/data/import/data-importer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/import/index.js" afterPath="$PROJECT_DIR$/core/server/data/import/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/import/utils.js" afterPath="$PROJECT_DIR$/core/server/data/import/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/importer/handlers/json.js" afterPath="$PROJECT_DIR$/core/server/data/importer/handlers/json.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/importer/index.js" afterPath="$PROJECT_DIR$/core/server/data/importer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/migration/builder.js" afterPath="$PROJECT_DIR$/core/server/data/migration/builder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/index.js" afterPath="$PROJECT_DIR$/core/server/data/migration/fixtures/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js" afterPath="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/schema/commands.js" afterPath="$PROJECT_DIR$/core/server/data/schema/commands.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/schema/versioning.js" afterPath="$PROJECT_DIR$/core/server/data/schema/versioning.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/validation/index.js" afterPath="$PROJECT_DIR$/core/server/data/validation/index.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,30 +34,7 @@
     <favorites_list name="blogme" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31518325">
-              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-              <folding>
-                <element signature="e#1460#1910#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,44 +53,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/routes/frontend.js" />
-        <option value="$PROJECT_DIR$/core/shared/sitemap.xsl" />
-        <option value="$PROJECT_DIR$/../weiyi/后台/holiday0822_最新代码/holiday/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/content/themes/casper/assets/js/jquery.1.12.js" />
-        <option value="$PROJECT_DIR$/content/themes/package.json" />
-        <option value="$PROJECT_DIR$/content/themes/casper/partials/navigation.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper/post.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper/default.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper/index.hbs" />
-        <option value="$PROJECT_DIR$/content/themes/casper/assets/css/screen.css" />
-        <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
-        <option value="$PROJECT_DIR$/core/server/views/default.hbs" />
-        <option value="$PROJECT_DIR$/core/server/views/user-error.hbs" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/schema.js" />
-        <option value="$PROJECT_DIR$/npm-shrinkwrap.json" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/core/server/errors/index.js" />
-        <option value="$PROJECT_DIR$/core/server/ghost-server.js" />
-        <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/startup-check.js" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/core/server/i18n.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/theme-handler.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/private-blogging.js" />
+        <option value="$PROJECT_DIR$/core/server/update-check.js" />
         <option value="$PROJECT_DIR$/core/server/server.js" />
-        <option value="$PROJECT_DIR$/core/server/api/index.js" />
-        <option value="$PROJECT_DIR$/core/server/api/settings.js" />
-        <option value="$PROJECT_DIR$/core/server/permissions/index.js" />
-        <option value="$PROJECT_DIR$/core/server/config/index.js" />
-        <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/core/server/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/migration/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/default-settings.json" />
-        <option value="$PROJECT_DIR$/core/server/apps/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/xml/xmlrpc.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/validate-themes.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/index.js" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
+        <option value="$PROJECT_DIR$/core/server/utils/parse-package-json.js" />
+        <option value="$PROJECT_DIR$/core/server/models/base/token.js" />
+        <option value="$PROJECT_DIR$/core/server/models/base/index.js" />
+        <option value="$PROJECT_DIR$/core/server/models/plugins/filter.js" />
+        <option value="$PROJECT_DIR$/core/server/models/user.js" />
+        <option value="$PROJECT_DIR$/core/server/models/settings.js" />
+        <option value="$PROJECT_DIR$/core/server/models/client-trusted-domain.js" />
+        <option value="$PROJECT_DIR$/core/server/models/permission.js" />
+        <option value="$PROJECT_DIR$/core/server/models/post.js" />
+        <option value="$PROJECT_DIR$/core/server/models/role.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/oauth.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/spam-prevention.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/auth.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/decide-is-admin.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/ghost-busboy.js" />
+        <option value="$PROJECT_DIR$/core/server/mail/index.js" />
+        <option value="$PROJECT_DIR$/core/server/mail/templates/invite-user.html" />
+        <option value="$PROJECT_DIR$/core/server/errors/index.js" />
+        <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
+        <option value="$PROJECT_DIR$/core/server/apps/sandbox.js" />
+        <option value="$PROJECT_DIR$/core/server/apps/proxy.js" />
+        <option value="$PROJECT_DIR$/core/server/apps/loader.js" />
+        <option value="$PROJECT_DIR$/core/server/api/authentication.js" />
+        <option value="$PROJECT_DIR$/core/server/api/clients.js" />
+        <option value="$PROJECT_DIR$/core/server/api/configuration.js" />
+        <option value="$PROJECT_DIR$/core/server/api/db.js" />
+        <option value="$PROJECT_DIR$/core/server/api/mail.js" />
+        <option value="$PROJECT_DIR$/core/server/api/notifications.js" />
+        <option value="$PROJECT_DIR$/core/server/api/posts.js" />
+        <option value="$PROJECT_DIR$/core/server/api/slugs.js" />
+        <option value="$PROJECT_DIR$/core/server/api/tags.js" />
+        <option value="$PROJECT_DIR$/core/server/api/themes.js" />
+        <option value="$PROJECT_DIR$/core/server/api/upload.js" />
+        <option value="$PROJECT_DIR$/core/server/api/users.js" />
+        <option value="$PROJECT_DIR$/core/server/api/utils.js" />
+        <option value="$PROJECT_DIR$/core/server/data/export/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/import/utils.js" />
+        <option value="$PROJECT_DIR$/core/server/data/import/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/import/data-importer.js" />
+        <option value="$PROJECT_DIR$/core/server/data/importer/handlers/json.js" />
+        <option value="$PROJECT_DIR$/core/server/data/importer/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/validation/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/schema/commands.js" />
+        <option value="$PROJECT_DIR$/core/server/data/schema/versioning.js" />
+        <option value="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/migration/fixtures/index.js" />
+        <option value="$PROJECT_DIR$/core/server/data/migration/builder.js" />
       </list>
     </option>
   </component>
@@ -161,7 +142,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,7 +206,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="built" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -246,6 +296,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,7 +446,19 @@
       <option name="project" value="LOCAL" />
       <updated>1459492521023</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="deleting some files">
+      <created>1459515048770</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1459515048770</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deleting some files">
+      <created>1459521007524</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1459521007524</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -411,23 +474,23 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2009901" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2381423" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -451,396 +514,279 @@
     <MESSAGE value="ADD  FRONT pages" />
     <MESSAGE value="delete some files" />
     <MESSAGE value="deleting pg,sqlite database support" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleting pg,sqlite database support" />
+    <MESSAGE value="deleting some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleting some files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/built/assets/vendor.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/authentication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6318759">
+          <caret line="316" column="112" selection-start-line="316" selection-start-column="112" selection-end-line="316" selection-end-column="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/ghost-logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/404-ghost@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/404-ghost.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/users.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/user-image.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/user-cover.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/touch-icon-iphone.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/touch-icon-ipad.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/small.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/medium.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/invite-placeholder.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/install-welcome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/update-check.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/clients.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0902777">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="1.493653">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/filters.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/configuration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.57686883">
+          <caret line="67" column="96" selection-start-line="67" selection-start-column="96" selection-end-line="67" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/apps/loader.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/apps/proxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#277#3087#0" expanded="false" />
-            <element signature="n#!!block;n#AppProxy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/apps/sandbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/storage/local-file-store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8221574">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!block;n#getConfigModule#0" expanded="false" />
-            <element signature="n#!!block;n#isValidErrorStatus#0" expanded="false" />
-            <element signature="n#!!block;n#getStatusCode#0" expanded="false" />
-            <element signature="e#2064#2187#0" expanded="false" />
-            <element signature="e#2221#2424#0" expanded="false" />
-            <element signature="e#2569#2612#0" expanded="false" />
-            <element signature="e#2655#2892#0" expanded="false" />
-            <element signature="e#2939#3558#0" expanded="false" />
-            <element signature="e#3605#5309#0" expanded="false" />
-            <element signature="e#5363#5502#0" expanded="false" />
-            <element signature="e#5557#5653#0" expanded="false" />
-            <element signature="e#5709#5813#0" expanded="false" />
-            <element signature="e#5894#6149#0" expanded="false" />
-            <element signature="e#6156#6248#0" expanded="false" />
-            <element signature="e#6304#7014#0" expanded="false" />
-            <element signature="e#7077#7823#0" expanded="false" />
-            <element signature="e#7889#8160#0" expanded="false" />
-            <element signature="e#8227#11763#0" expanded="false" />
-            <element signature="e#11806#12202#0" expanded="false" />
-            <element signature="e#12250#13392#0" expanded="false" />
-            <element signature="e#13511#13828#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/storage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/permissions/effective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07637475">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9674134">
-          <caret line="212" column="17" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
-          <folding>
-            <element signature="e#913#2585#0" expanded="false" />
-            <element signature="e#2846#3234#0" expanded="false" />
-            <element signature="e#3389#3444#0" expanded="false" />
-            <element signature="e#3544#3656#0" expanded="false" />
-            <element signature="e#3795#4032#0" expanded="false" />
-            <element signature="e#4294#4503#0" expanded="false" />
-            <element signature="e#4588#6113#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1527495">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28004074">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding>
-            <element signature="e#96#673#0" expanded="false" />
-            <element signature="e#730#1926#0" expanded="false" />
-            <element signature="e#1976#2409#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/startup-check.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0437882">
-          <caret line="164" column="33" selection-start-line="164" selection-start-column="33" selection-end-line="164" selection-end-column="33" />
-          <folding>
-            <element signature="e#952#1438#0" expanded="false" />
-            <element signature="e#1483#2367#0" expanded="false" />
-            <element signature="e#2473#3179#0" expanded="false" />
-            <element signature="e#3266#5591#0" expanded="false" />
-            <element signature="e#5687#6247#0" expanded="false" />
-            <element signature="e#6281#6779#0" expanded="false" />
-            <element signature="e#6830#8049#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/npm-shrinkwrap.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8456376">
-          <caret line="2108" column="10" selection-start-line="2108" selection-start-column="10" selection-end-line="2108" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!block;n#bcryptjs#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#bluebird#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#body-parser#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#bookshelf#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#busboy#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#bytes#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#chalk#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#cheerio#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#commander#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#compression#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#connect-slashes#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#content-type#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#cookie-session#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#downsize#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#express#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#express-hbs#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#extract-zip#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#fs-extra#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#ghost-gql#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#glob#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#html-to-text#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#http-errors#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#iconv-lite#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#inherits#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#ini#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#intl#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#intl-messageformat#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#jsonpath#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#knex#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#lodash#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mime-types#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#minimatch#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#minimist#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mkdirp#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#moment#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#morgan#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mysql#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#node-uuid#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#nodemailer#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#nopt#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#oauth2orize#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#on-finished#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#on-headers#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-http-bearer#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-oauth2-client-password#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-strategy#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#path-match#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#request#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#semver#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#statuses#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#tough-cookie#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#type-is#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#unidecode#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#unpipe#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#utils-merge#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#validator#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#xml#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6469833">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#726#1203#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/permissions.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0067115">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/migration/fixtures/fixtures.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/schema/default-settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3154362">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/schema/clients/mysql.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-1.2566996">
+          <caret line="75" column="51" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16559692">
-          <caret line="232" column="8" selection-start-line="232" selection-start-column="8" selection-end-line="232" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1700#3036#0" expanded="false" />
-            <element signature="e#3415#4244#0" expanded="false" />
-            <element signature="e#4890#5023#0" expanded="false" />
-            <element signature="e#5088#6106#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/permissions/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/mail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0970745">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!block;n#parseContext#0" expanded="false" />
-            <element signature="n#!!block;n#applyStatusRules#0" expanded="false" />
-            <element signature="n#!!block;n#applyPublicRules#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-4.7827926">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/apps/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/api/notifications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1662234">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="6.45275">
+          <caret line="183" column="116" selection-start-line="183" selection-start-column="116" selection-end-line="183" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.631876">
+          <caret line="155" column="90" selection-start-line="155" selection-start-column="90" selection-end-line="155" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/slugs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47108603">
+          <caret line="73" column="108" selection-start-line="73" selection-start-column="108" selection-end-line="73" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/tags.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6925247">
+          <caret line="156" column="88" selection-start-line="156" selection-start-column="88" selection-end-line="156" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/themes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.022566997">
+          <caret line="168" column="106" selection-start-line="168" selection-start-column="106" selection-end-line="168" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5923913">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2214386">
+          <caret line="472" column="99" selection-start-line="472" selection-start-column="99" selection-end-line="472" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.9789915">
+          <caret line="285" column="107" selection-start-line="285" selection-start-column="107" selection-end-line="285" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/roles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16869096">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/db/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/db/connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/export/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5448179">
+          <caret line="55" column="80" selection-start-line="55" selection-start-column="80" selection-end-line="55" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/import/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8011205">
+          <caret line="80" column="70" selection-start-line="80" selection-start-column="70" selection-end-line="80" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/import/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.057423">
+          <caret line="38" column="64" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/import/data-importer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8557423">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/handlers/markdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/handlers/json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.070028014">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/handlers/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20242915">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/importers/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/importers/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033738192">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/importer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3767507">
+          <caret line="257" column="66" selection-start-line="257" selection-start-column="66" selection-end-line="257" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/xmlrpc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/user-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/tag-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/post-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/page-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3106546">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/index-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/xml/sitemap/base-generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.067476384">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -848,129 +794,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/xml/xmlrpc.js">
+    <entry file="file://$PROJECT_DIR$/core/server/data/validation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3271277">
-          <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
-          <folding />
+        <state vertical-scroll-proportion="0.2647059">
+          <caret line="159" column="9" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/clients/mysql.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1771502">
-          <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!block;n#initDbHashAndFirstRun#0" expanded="false" />
-            <element signature="e#928#1464#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/validate-themes.js">
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/clients/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4295213">
-          <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/checks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6928191">
-          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/commands.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0154061625">
+          <caret line="106" column="73" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/schema/versioning.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4355742">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2212884">
+          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/apps/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/migration/fixtures/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2997199">
+          <caret line="173" column="51" selection-start-line="173" selection-start-column="51" selection-end-line="173" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/migration/builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.6610644">
+          <caret line="76" column="76" selection-start-line="76" selection-start-column="76" selection-end-line="76" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/data/migration/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1356383">
-          <caret line="193" column="69" selection-start-line="193" selection-start-column="69" selection-end-line="193" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7599486">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="n#!!block;n#ConfigManager#0" expanded="false" />
-            <element signature="e#1476#2129#0" expanded="false" />
-            <element signature="e#2184#2710#0" expanded="false" />
-            <element signature="e#2873#8110#0" expanded="false" />
-            <element signature="e#8243#8271#0" expanded="false" />
-            <element signature="e#8331#9111#0" expanded="false" />
-            <element signature="e#9278#10785#0" expanded="false" />
-            <element signature="e#11011#11069#0" expanded="false" />
-            <element signature="e#11290#13357#0" expanded="false" />
-            <element signature="e#13575#13752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22340426">
-          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-          <folding>
-            <element signature="e#900#2049#0" expanded="false" />
-            <element signature="e#2952#3208#0" expanded="false" />
-            <element signature="e#3846#4707#0" expanded="false" />
-            <element signature="e#7347#8512#0" expanded="false" />
-            <element signature="e#9878#11405#0" expanded="false" />
-            <element signature="e#11725#13185#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/serve-shared-file.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6046213">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/ghosticon.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31518325">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <element signature="e#1460#1910#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

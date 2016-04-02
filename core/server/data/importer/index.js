@@ -14,7 +14,6 @@ var _            = require('lodash'),
     MarkdownHandler = require('./handlers/markdown'),
     ImageImporter   = require('./importers/image'),
     DataImporter    = require('./importers/data'),
-    i18n            = require('../../i18n'),
 
     // Glob levels
     ROOT_ONLY = 0,
@@ -108,8 +107,8 @@ _.extend(ImportManager.prototype, {
             _.each(filesToDelete, function (fileToDelete) {
                 fs.remove(fileToDelete, function (err) {
                     if (err) {
-                        errors.logError(err, i18n.t('errors.data.importer.index.couldNotCleanUpFile.error'),
-                                        i18n.t('errors.data.importer.index.couldNotCleanUpFile.context'));
+                        errors.logError(err, 'errors.data.importer.index.couldNotCleanUpFile.error',
+                                        'errors.data.importer.index.couldNotCleanUpFile.context');
                     }
                 });
             });
@@ -149,7 +148,7 @@ _.extend(ImportManager.prototype, {
         // This is a temporary extra message for the old format roon export which doesn't work with Ghost
         if (oldRoonMatches.length > 0) {
             throw new errors.UnsupportedMediaTypeError(
-                i18n.t('errors.data.importer.index.unsupportedRoonExport')
+                'errors.data.importer.index.unsupportedRoonExport'
             );
         }
 
@@ -160,11 +159,11 @@ _.extend(ImportManager.prototype, {
 
         if (extMatchesAll.length < 1) {
             throw new errors.UnsupportedMediaTypeError(
-                i18n.t('errors.data.importer.index.noContentToImport'));
+                'errors.data.importer.index.noContentToImport');
         }
 
         throw new errors.UnsupportedMediaTypeError(
-            i18n.t('errors.data.importer.index.invalidZipStructure'));
+            'errors.data.importer.index.invalidZipStructure');
     },
     /**
      * Use the extract module to extract the given zip file to a temp directory & return the temp directory path
@@ -211,7 +210,7 @@ _.extend(ImportManager.prototype, {
             this.getExtensionGlob(this.getExtensions(), ALL_DIRS), {cwd: directory}
         );
         if (extMatchesAll.length < 1 || extMatchesAll[0].split('/') < 1) {
-            throw new errors.ValidationError(i18n.t('errors.data.importer.index.invalidZipFileBaseDirectory'));
+            throw new errors.ValidationError('errors.data.importer.index.invalidZipFileBaseDirectory');
         }
         return extMatchesAll[0].split('/')[0];
     },
@@ -239,7 +238,7 @@ _.extend(ImportManager.prototype, {
                 if (importData.hasOwnProperty(handler.type)) {
                     // This limitation is here to reduce the complexity of the importer for now
                     return Promise.reject(new errors.UnsupportedMediaTypeError(
-                        i18n.t('errors.data.importer.index.zipContainsMultipleDataFormats')
+                        'errors.data.importer.index.zipContainsMultipleDataFormats'
                     ));
                 }
 
@@ -256,7 +255,7 @@ _.extend(ImportManager.prototype, {
 
             if (ops.length === 0) {
                 return Promise.reject(new errors.UnsupportedMediaTypeError(
-                    i18n.t('errors.data.importer.index.noContentToImport')
+                    'errors.data.importer.index.noContentToImport'
                 ));
             }
 

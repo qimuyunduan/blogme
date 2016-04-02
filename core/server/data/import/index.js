@@ -5,7 +5,6 @@ var Promise         = require('bluebird'),
     uuid            = require('node-uuid'),
     importer        = require('./data-importer'),
     tables          = require('../schema').tables,
-    i18n            = require('../../i18n'),
     validate,
     handleErrors,
     checkDuplicateAttributes,
@@ -37,7 +36,7 @@ cleanError = function cleanError(error) {
             value = error.raw.detail;
             offendingProperty = error.model;
         }
-        message = i18n.t('errors.data.import.index.duplicateEntryFound', {value: value, offendingProperty: offendingProperty});
+        message = 'errors.data.import.index.duplicateEntryFound';
     }
 
     offendingProperty = offendingProperty || error.model;
