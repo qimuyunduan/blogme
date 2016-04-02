@@ -970,11 +970,11 @@ img {
   font-family: "ghosticons";
   font-weight: normal;
   font-style: normal;
-  src: url("fonts/ghosticons.eot");
-  src: url("fonts/ghosticons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/ghosticons.woff") format("woff"),
-    url("fonts/ghosticons.ttf") format("truetype"),
-    url("fonts/ghosticons.svg#ghosticons") format("svg");
+  src: url("fonts/icons.eot");
+  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/icons.woff") format("woff"),
+    url("fonts/icons.ttf") format("truetype"),
+    url("fonts/icons.svg#ghosticons") format("svg");
 }
 
 [data-icon]:before {

@@ -6,14 +6,14 @@ var _              = require('lodash'),
     errors         = require('../errors'),
     Showdown       = require('showdown-ghost'),
     converter      = new Showdown.converter({extensions: ['ghostgfm', 'footnotes', 'highlight']}),
-    ghostBookshelf = require('./base'),
+    bookshelf = require('./base'),
     events         = require('../events'),
     config         = require('../config'),
     baseUtils      = require('./base/utils'),
     Post,
     Posts;
 
-Post = ghostBookshelf.Model.extend({
+Post = bookshelf.Model.extend({
 
     tableName: 'posts',
 
@@ -35,7 +35,7 @@ Post = ghostBookshelf.Model.extend({
     initialize: function initialize() {
         var self = this;
 
-        ghostBookshelf.Model.prototype.initialize.apply(this, arguments);
+        bookshelf.Model.prototype.initialize.apply(this, arguments);
 
         this.on('saved', function onSaved(model, response, options) {
             return self.updateTags(model, response, options);
@@ -110,7 +110,7 @@ Post = ghostBookshelf.Model.extend({
             self.myTags.push(item);
         });
 
-        ghostBookshelf.Model.prototype.saving.call(this, model, attr, options);
+        bookshelf.Model.prototype.saving.call(this, model, attr, options);
 
         this.set('html', converter.makeHtml(this.get('markdown')));
 
@@ -140,7 +140,7 @@ Post = ghostBookshelf.Model.extend({
 
         if (this.hasChanged('slug') || !this.get('slug')) {
             // Pass the new slug through the generator to strip illegal characters, detect duplicates
-            return ghostBookshelf.Model.generateSlug(Post, this.get('slug') || this.get('title'),
+            return bookshelf.Model.generateSlug(Post, this.get('slug') || this.get('title'),
                     {status: 'all', transacting: options.transacting, importing: options.importing})
                 .then(function then(slug) {
                     self.set({slug: slug});
@@ -156,7 +156,7 @@ Post = ghostBookshelf.Model.extend({
             this.set('author_id', this.contextUser(options));
         }
 
-        ghostBookshelf.Model.prototype.creating.call(this, model, attr, options);
+        bookshelf.Model.prototype.creating.call(this, model, attr, options);
     },
 
     /**
@@ -165,11 +165,11 @@ Post = ghostBookshelf.Model.extend({
      * @param {Object} savedModel
      * @param {Object} response
      * @param {Object} options
-     * @return {Promise(ghostBookshelf.Models.Post)} Updated Post model
+     * @return {Promise(bookshelf.Models.Post)} Updated Post model
      */
     updateTags: function updateTags(savedModel, response, options) {
         var newTags = this.myTags,
-            TagModel = ghostBookshelf.model('Tag');
+            TagModel = bookshelf.model('Tag');
 
         options = options || {};
 
@@ -246,7 +246,7 @@ Post = ghostBookshelf.Model.extend({
         if (options.transacting) {
             return doTagUpdates(options);
         } else {
-            return ghostBookshelf.transaction(function (t) {
+            return bookshelf.transaction(function (t) {
                 options.transacting = t;
 
                 return doTagUpdates(options);
@@ -293,7 +293,7 @@ Post = ghostBookshelf.Model.extend({
     toJSON: function toJSON(options) {
         options = options || {};
 
-        var attrs = ghostBookshelf.Model.prototype.toJSON.call(this, options);
+        var attrs = bookshelf.Model.prototype.toJSON.call(this, options);
 
         if (!options.columns || (options.columns && options.columns.indexOf('author') > -1)) {
             attrs.author = attrs.author || attrs.author_id;
@@ -367,7 +367,7 @@ Post = ghostBookshelf.Model.extend({
     * @return {Array} Keys allowed in the `options` hash of the model's method.
     */
     permittedOptions: function permittedOptions(methodName) {
-        var options = ghostBookshelf.Model.permittedOptions(),
+        var options = bookshelf.Model.permittedOptions(),
 
             // whitelists for the `options` hash argument on methods, by method name.
             // these are the only options that can be passed to Bookshelf / Knex.
@@ -405,8 +405,8 @@ Post = ghostBookshelf.Model.extend({
 
     /**
      * ### Find One
-     * @extends ghostBookshelf.Model.findOne to handle post status
-     * **See:** [ghostBookshelf.Model.findOne](base.js.html#Find%20One)
+     * @extends bookshelf.Model.findOne to handle post status
+     * **See:** [bookshelf.Model.findOne](base.js.html#Find%20One)
      */
     findOne: function findOne(data, options) {
         options = options || {};
@@ -442,7 +442,7 @@ Post = ghostBookshelf.Model.extend({
             'next', 'next.author', 'next.tags', 'previous', 'previous.author', 'previous.tags')
         );
 
-        return ghostBookshelf.Model.findOne.call(this, data, options).then(function then(post) {
+        return bookshelf.Model.findOne.call(this, data, options).then(function then(post) {
             if ((withNext || withPrev) && post && !post.page) {
                 var publishedAt = post.get('published_at'),
                     prev,
@@ -486,14 +486,14 @@ Post = ghostBookshelf.Model.extend({
 
     /**
      * ### Edit
-     * @extends ghostBookshelf.Model.edit to handle returning the full object and manage _updatedAttributes
-     * **See:** [ghostBookshelf.Model.edit](base.js.html#edit)
+     * @extends bookshelf.Model.edit to handle returning the full object and manage _updatedAttributes
+     * **See:** [bookshelf.Model.edit](base.js.html#edit)
      */
     edit: function edit(data, options) {
         var self = this;
         options = options || {};
 
-        return ghostBookshelf.Model.edit.call(this, data, options).then(function then(post) {
+        return bookshelf.Model.edit.call(this, data, options).then(function then(post) {
             return self.findOne({status: 'all', id: options.id}, options)
                 .then(function then(found) {
                     if (found) {
@@ -507,22 +507,22 @@ Post = ghostBookshelf.Model.extend({
 
     /**
      * ### Add
-     * @extends ghostBookshelf.Model.add to handle returning the full object
-     * **See:** [ghostBookshelf.Model.add](base.js.html#add)
+     * @extends bookshelf.Model.add to handle returning the full object
+     * **See:** [bookshelf.Model.add](base.js.html#add)
      */
     add: function add(data, options) {
         var self = this;
         options = options || {};
 
-        return ghostBookshelf.Model.add.call(this, data, options).then(function then(post) {
+        return bookshelf.Model.add.call(this, data, options).then(function then(post) {
             return self.findOne({status: 'all', id: post.id}, options);
         });
     },
 
     /**
      * ### Destroy
-     * @extends ghostBookshelf.Model.destroy to clean up tag relations
-     * **See:** [ghostBookshelf.Model.destroy](base.js.html#destroy)
+     * @extends bookshelf.Model.destroy to clean up tag relations
+     * **See:** [bookshelf.Model.destroy](base.js.html#destroy)
      */
     destroy: function destroy(options) {
         var id = options.id;
@@ -590,11 +590,11 @@ Post = ghostBookshelf.Model.extend({
     }
 });
 
-Posts = ghostBookshelf.Collection.extend({
+Posts = bookshelf.Collection.extend({
     model: Post
 });
 
 module.exports = {
-    Post: ghostBookshelf.model('Post', Post),
-    Posts: ghostBookshelf.collection('Posts', Posts)
+    Post: bookshelf.model('Post', Post),
+    Posts: bookshelf.collection('Posts', Posts)
 };

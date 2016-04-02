@@ -105,7 +105,7 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     App.use(privateBlogging.filterPrivateRoutes);
 
-    // Serve sitemap.xsl file
+    // Serve sitemap.html file
     App.use(serveSharedFile('sitemap.xsl', 'text/xsl', utils.ONE_DAY_S));
 
     // Serve robots.txt if not found in theme

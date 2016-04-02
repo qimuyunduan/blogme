@@ -2,7 +2,6 @@ var express = require('express'),
     _       = require('lodash'),
     config  = require('../../config'),
     errors  = require('../../errors'),
-    rss     = require('../../data/xml/rss'),
     utils   = require('../../utils'),
 
     channelConfig = require('./channel-config'),
@@ -33,27 +32,6 @@ function handlePageParam(req, res, next, page) {
         return next();
     }
 }
-
-rssRouter = function rssRouter(channelConfig) {
-    function rssConfigMiddleware(req, res, next) {
-        req.channelConfig.isRSS = true;
-        next();
-    }
-
-    // @TODO move this to an RSS module
-    var router = express.Router({mergeParams: true}),
-        stack = [channelConfig, rssConfigMiddleware, rss],
-        baseRoute = '/rss/';
-
-    router.get(baseRoute, stack);
-    router.get(baseRoute + ':page/', stack);
-    router.get('/feed/', function redirectToRSS(req, res) {
-        return utils.redirect301(res, config.paths.subdir + req.baseUrl + baseRoute);
-    });
-    router.param('page', handlePageParam);
-
-    return router;
-};
 
 channelRouter = function router() {
     function channelConfigMiddleware(channel) {

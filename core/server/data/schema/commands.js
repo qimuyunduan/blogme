@@ -1,7 +1,7 @@
 var _       = require('lodash'),
     Promise = require('bluebird'),
     db      = require('../db'),
-    schema  = require('./schema'),
+    //schema  = require('./schema'),
     clients = require('./clients');
 
 function addTableColumn(tablename, table, columnname) {
