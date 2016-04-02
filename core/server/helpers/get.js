@@ -8,7 +8,6 @@ var _               = require('lodash'),
     api             = require('../api'),
     jsonpath        = require('jsonpath'),
     labs            = require('../utils/labs'),
-    i18n            = require('../i18n'),
     resources,
     pathAliases,
     get;
@@ -100,13 +99,13 @@ get = function get(context, options) {
         apiMethod;
 
     if (!options.fn) {
-        data.error = i18n.t('warnings.helpers.get.mustBeCalledAsBlock');
+        data.error = 'warnings.helpers.get.mustBeCalledAsBlock';
         errors.logWarn(data.error);
         return Promise.resolve();
     }
 
     if (!_.contains(resources, context)) {
-        data.error = i18n.t('warnings.helpers.get.invalidResource');
+        data.error = 'warnings.helpers.get.invalidResource';
         errors.logWarn(data.error);
         return Promise.resolve(options.inverse(self, {data: data}));
     }
@@ -146,9 +145,9 @@ get = function get(context, options) {
 module.exports = function getWithLabs(context, options) {
     var self = this,
         errorMessages = [
-            i18n.t('warnings.helpers.get.helperNotAvailable'),
-            i18n.t('warnings.helpers.get.apiMustBeEnabled'),
-            i18n.t('warnings.helpers.get.seeLink', {url: 'http://support.ghost.org/public-api-beta'})
+            'warnings.helpers.get.helperNotAvailable',
+            'warnings.helpers.get.apiMustBeEnabled',
+            'warnings.helpers.get.seeLink'
         ];
 
     if (labs.isSet('publicAPI') === true) {

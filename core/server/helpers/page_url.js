@@ -11,7 +11,6 @@
 
 var config          = require('../config'),
     errors          = require('../errors'),
-    i18n            = require('../i18n'),
     page_url,
     pageUrl;
 
@@ -45,7 +44,7 @@ page_url = function (context, block) {
 // context. This helper is deprecated and will be removed in future versions.
 //
 pageUrl = function (context, block) {
-    errors.logWarn(i18n.t('warnings.helpers.page_url.isDeprecated'));
+    errors.logWarn('warnings.helpers.page_url.isDeprecated');
 
     /*jshint unused:false*/
     var self = this;
