@@ -3,7 +3,7 @@
 
 /* jshint ignore:end */
 
-define('ghost/adapters/application', ['exports', 'ghost/adapters/embedded-relation-adapter'], function (exports, _ghostAdaptersEmbeddedRelationAdapter) {
+define('ghost/adapters/application', ['exports', 'app.js/adapters/embedded-relation-adapter'], function (exports, _ghostAdaptersEmbeddedRelationAdapter) {
     exports['default'] = _ghostAdaptersEmbeddedRelationAdapter['default'].extend({
 
         shouldBackgroundReloadRecord: function shouldBackgroundReloadRecord() {
@@ -12,7 +12,7 @@ define('ghost/adapters/application', ['exports', 'ghost/adapters/embedded-relati
 
     });
 });
-define('ghost/adapters/base', ['exports', 'ember', 'ember-data/adapters/rest', 'ghost/utils/ghost-paths', 'ember-simple-auth/mixins/data-adapter-mixin'], function (exports, _ember, _emberDataAdaptersRest, _ghostUtilsGhostPaths, _emberSimpleAuthMixinsDataAdapterMixin) {
+define('ghost/adapters/base', ['exports', 'ember', 'ember-data/adapters/rest', 'app.js/utils/ghost-paths', 'ember-simple-auth/mixins/data-adapter-mixin'], function (exports, _ember, _emberDataAdaptersRest, _ghostUtilsGhostPaths, _emberSimpleAuthMixinsDataAdapterMixin) {
     var service = _ember['default'].inject.service;
     exports['default'] = _emberDataAdaptersRest['default'].extend(_emberSimpleAuthMixinsDataAdapterMixin['default'], {
         authorizer: 'authorizer:oauth2',
@@ -74,7 +74,7 @@ define('ghost/adapters/base', ['exports', 'ember', 'ember-data/adapters/rest', '
         }
     });
 });
-define('ghost/adapters/embedded-relation-adapter', ['exports', 'ember', 'ghost/adapters/base'], function (exports, _ember, _ghostAdaptersBase) {
+define('ghost/adapters/embedded-relation-adapter', ['exports', 'ember', 'app.js/adapters/base'], function (exports, _ember, _ghostAdaptersBase) {
     function _typeof(obj) { return obj && obj.constructor === Symbol ? 'symbol' : typeof obj; }
 
     var get = _ember['default'].get;
@@ -207,7 +207,7 @@ define('ghost/adapters/embedded-relation-adapter', ['exports', 'ember', 'ghost/a
         }
     });
 });
-define('ghost/adapters/setting', ['exports', 'ghost/adapters/application'], function (exports, _ghostAdaptersApplication) {
+define('ghost/adapters/setting', ['exports', 'app.js/adapters/application'], function (exports, _ghostAdaptersApplication) {
     exports['default'] = _ghostAdaptersApplication['default'].extend({
         updateRecord: function updateRecord(store, type, record) {
             var data = {};
@@ -226,10 +226,10 @@ define('ghost/adapters/setting', ['exports', 'ghost/adapters/application'], func
         }
     });
 });
-define('ghost/adapters/tag', ['exports', 'ghost/adapters/application', 'ghost/mixins/slug-url'], function (exports, _ghostAdaptersApplication, _ghostMixinsSlugUrl) {
+define('ghost/adapters/tag', ['exports', 'app.js/adapters/application', 'app.js/mixins/slug-url'], function (exports, _ghostAdaptersApplication, _ghostMixinsSlugUrl) {
   exports['default'] = _ghostAdaptersApplication['default'].extend(_ghostMixinsSlugUrl['default']);
 });
-define('ghost/adapters/user', ['exports', 'ghost/adapters/application', 'ghost/mixins/slug-url'], function (exports, _ghostAdaptersApplication, _ghostMixinsSlugUrl) {
+define('ghost/adapters/user', ['exports', 'app.js/adapters/application', 'app.js/mixins/slug-url'], function (exports, _ghostAdaptersApplication, _ghostMixinsSlugUrl) {
     exports['default'] = _ghostAdaptersApplication['default'].extend(_ghostMixinsSlugUrl['default'], {
         find: function find(store, type, id) {
             return this.findQuery(store, type, { id: id, status: 'all' });
@@ -251,7 +251,7 @@ define('ghost/adapters/user', ['exports', 'ghost/adapters/application', 'ghost/m
         }
     });
 });
-define('ghost/app', ['exports', 'ember', 'ember-resolver', 'ember/load-initializers', 'ghost/utils/link-component', 'ghost/utils/text-field', 'ghost/config/environment'], function (exports, _ember, _emberResolver, _emberLoadInitializers, _ghostUtilsLinkComponent, _ghostUtilsTextField, _ghostConfigEnvironment) {
+define('ghost/app', ['exports', 'ember', 'ember-resolver', 'ember/load-initializers', 'app.js/utils/link-component', 'app.js/utils/text-field', 'app.js/config/environment'], function (exports, _ember, _emberResolver, _emberLoadInitializers, _ghostUtilsLinkComponent, _ghostUtilsTextField, _ghostConfigEnvironment) {
     var Application = _ember['default'].Application;
 
     _ember['default'].MODEL_FACTORY_INJECTIONS = true;
@@ -266,7 +266,7 @@ define('ghost/app', ['exports', 'ember', 'ember-resolver', 'ember/load-initializ
 
     exports['default'] = App;
 });
-define('ghost/assets/lib/uploader', ['exports', 'ember', 'ghost/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
+define('ghost/assets/lib/uploader', ['exports', 'ember', 'app.js/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
     var $ = _ember['default'].$;
 
     var Ghost = (0, _ghostUtilsGhostPaths['default'])();
@@ -557,7 +557,7 @@ define('ghost/authenticators/oauth2', ['exports', 'ember', 'ember-simple-auth/au
 define('ghost/authorizers/oauth2', ['exports', 'ember-simple-auth/authorizers/oauth2-bearer'], function (exports, _emberSimpleAuthAuthorizersOauth2Bearer) {
   exports['default'] = _emberSimpleAuthAuthorizersOauth2Bearer['default'];
 });
-define('ghost/components/app-version', ['exports', 'ember-cli-app-version/components/app-version', 'ghost/config/environment'], function (exports, _emberCliAppVersionComponentsAppVersion, _ghostConfigEnvironment) {
+define('ghost/components/app-version', ['exports', 'ember-cli-app-version/components/app-version', 'app.js/config/environment'], function (exports, _emberCliAppVersionComponentsAppVersion, _ghostConfigEnvironment) {
 
   var name = _ghostConfigEnvironment['default'].APP.name;
   var version = _ghostConfigEnvironment['default'].APP.version;
@@ -781,7 +781,7 @@ define('ghost/components/gh-content-view-container', ['exports', 'ember'], funct
         previewIsHidden: computed.reads('mediaQueries.maxWidth900')
     });
 });
-define('ghost/components/gh-datetime-input', ['exports', 'ember', 'ghost/mixins/text-input', 'ghost/utils/bound-one-way', 'ghost/utils/date-formatting'], function (exports, _ember, _ghostMixinsTextInput, _ghostUtilsBoundOneWay, _ghostUtilsDateFormatting) {
+define('ghost/components/gh-datetime-input', ['exports', 'ember', 'app.js/mixins/text-input', 'app.js/utils/bound-one-way', 'app.js/utils/date-formatting'], function (exports, _ember, _ghostMixinsTextInput, _ghostUtilsBoundOneWay, _ghostUtilsDateFormatting) {
     var Component = _ember['default'].Component;
     exports['default'] = Component.extend(_ghostMixinsTextInput['default'], {
         tagName: 'span',
@@ -809,7 +809,7 @@ define('ghost/components/gh-datetime-input', ['exports', 'ember', 'ghost/mixins/
         }
     });
 });
-define('ghost/components/gh-dropdown-button', ['exports', 'ember', 'ghost/mixins/dropdown-mixin'], function (exports, _ember, _ghostMixinsDropdownMixin) {
+define('ghost/components/gh-dropdown-button', ['exports', 'ember', 'app.js/mixins/dropdown-mixin'], function (exports, _ember, _ghostMixinsDropdownMixin) {
     var Component = _ember['default'].Component;
     var service = _ember['default'].inject.service;
     exports['default'] = Component.extend(_ghostMixinsDropdownMixin['default'], {
@@ -829,7 +829,7 @@ define('ghost/components/gh-dropdown-button', ['exports', 'ember', 'ghost/mixins
         }
     });
 });
-define('ghost/components/gh-dropdown', ['exports', 'ember', 'ghost/mixins/dropdown-mixin'], function (exports, _ember, _ghostMixinsDropdownMixin) {
+define('ghost/components/gh-dropdown', ['exports', 'ember', 'app.js/mixins/dropdown-mixin'], function (exports, _ember, _ghostMixinsDropdownMixin) {
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
@@ -926,7 +926,7 @@ define('ghost/components/gh-dropdown', ['exports', 'ember', 'ghost/mixins/dropdo
         }
     });
 });
-define('ghost/components/gh-ed-editor', ['exports', 'ember', 'ghost/mixins/ed-editor-api', 'ghost/mixins/ed-editor-shortcuts', 'ghost/mixins/ed-editor-scroll'], function (exports, _ember, _ghostMixinsEdEditorApi, _ghostMixinsEdEditorShortcuts, _ghostMixinsEdEditorScroll) {
+define('ghost/components/gh-ed-editor', ['exports', 'ember', 'app.js/mixins/ed-editor-api', 'app.js/mixins/ed-editor-shortcuts', 'app.js/mixins/ed-editor-scroll'], function (exports, _ember, _ghostMixinsEdEditorApi, _ghostMixinsEdEditorShortcuts, _ghostMixinsEdEditorScroll) {
     var TextArea = _ember['default'].TextArea;
     var run = _ember['default'].run;
     exports['default'] = TextArea.extend(_ghostMixinsEdEditorApi['default'], _ghostMixinsEdEditorShortcuts['default'], _ghostMixinsEdEditorScroll['default'], {
@@ -974,7 +974,7 @@ define('ghost/components/gh-ed-editor', ['exports', 'ember', 'ghost/mixins/ed-ed
         }
     });
 });
-define('ghost/components/gh-ed-preview', ['exports', 'ember', 'ghost/assets/lib/uploader'], function (exports, _ember, _ghostAssetsLibUploader) {
+define('ghost/components/gh-ed-preview', ['exports', 'ember', 'app.js/assets/lib/uploader'], function (exports, _ember, _ghostAssetsLibUploader) {
     var $ = _ember['default'].$;
     var Component = _ember['default'].Component;
     var service = _ember['default'].inject.service;
@@ -1085,7 +1085,7 @@ define('ghost/components/gh-editor-save-button', ['exports', 'ember'], function 
         }
     });
 });
-define('ghost/components/gh-editor', ['exports', 'ember', 'ghost/mixins/shortcuts', 'ghost/utils/ed-image-manager', 'ghost/utils/editor-shortcuts'], function (exports, _ember, _ghostMixinsShortcuts, _ghostUtilsEdImageManager, _ghostUtilsEditorShortcuts) {
+define('ghost/components/gh-editor', ['exports', 'ember', 'app.js/mixins/shortcuts', 'app.js/utils/ed-image-manager', 'app.js/utils/editor-shortcuts'], function (exports, _ember, _ghostMixinsShortcuts, _ghostUtilsEdImageManager, _ghostUtilsEditorShortcuts) {
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
     var run = _ember['default'].run;
@@ -1330,7 +1330,7 @@ define('ghost/components/gh-file-upload', ['exports', 'ember'], function (export
         }
     });
 });
-define('ghost/components/gh-form-group', ['exports', 'ghost/components/gh-validation-status-container'], function (exports, _ghostComponentsGhValidationStatusContainer) {
+define('ghost/components/gh-form-group', ['exports', 'app.js/components/gh-validation-status-container'], function (exports, _ghostComponentsGhValidationStatusContainer) {
     exports['default'] = _ghostComponentsGhValidationStatusContainer['default'].extend({
         classNames: 'form-group'
     });
@@ -1415,7 +1415,7 @@ define('ghost/components/gh-fullscreen-modal', ['exports', 'ember', 'liquid-teth
 
     exports['default'] = FullScreenModalComponent;
 });
-define('ghost/components/gh-infinite-scroll', ['exports', 'ember', 'ghost/mixins/infinite-scroll'], function (exports, _ember, _ghostMixinsInfiniteScroll) {
+define('ghost/components/gh-infinite-scroll', ['exports', 'ember', 'app.js/mixins/infinite-scroll'], function (exports, _ember, _ghostMixinsInfiniteScroll) {
     var Component = _ember['default'].Component;
     exports['default'] = Component.extend(_ghostMixinsInfiniteScroll['default'], {
         actions: {
@@ -1425,7 +1425,7 @@ define('ghost/components/gh-infinite-scroll', ['exports', 'ember', 'ghost/mixins
         }
     });
 });
-define('ghost/components/gh-input', ['exports', 'ember', 'ghost/mixins/text-input'], function (exports, _ember, _ghostMixinsTextInput) {
+define('ghost/components/gh-input', ['exports', 'ember', 'app.js/mixins/text-input'], function (exports, _ember, _ghostMixinsTextInput) {
     var TextField = _ember['default'].TextField;
     exports['default'] = TextField.extend(_ghostMixinsTextInput['default'], {
         classNames: 'gh-input'
@@ -1709,7 +1709,7 @@ define('ghost/components/gh-navitem-url-input', ['exports', 'ember'], function (
         }
     });
 });
-define('ghost/components/gh-navitem', ['exports', 'ember', 'ghost/mixins/validation-state', 'ember-sortable/mixins/sortable-item'], function (exports, _ember, _ghostMixinsValidationState, _emberSortableMixinsSortableItem) {
+define('ghost/components/gh-navitem', ['exports', 'ember', 'app.js/mixins/validation-state', 'ember-sortable/mixins/sortable-item'], function (exports, _ember, _ghostMixinsValidationState, _emberSortableMixinsSortableItem) {
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
     var run = _ember['default'].run;
@@ -1833,7 +1833,7 @@ define('ghost/components/gh-notifications', ['exports', 'ember'], function (expo
         messages: alias('notifications.notifications')
     });
 });
-define('ghost/components/gh-popover-button', ['exports', 'ember', 'ghost/components/gh-dropdown-button'], function (exports, _ember, _ghostComponentsGhDropdownButton) {
+define('ghost/components/gh-popover-button', ['exports', 'ember', 'app.js/components/gh-dropdown-button'], function (exports, _ember, _ghostComponentsGhDropdownButton) {
     var service = _ember['default'].inject.service;
 
     function K() {
@@ -1856,14 +1856,14 @@ define('ghost/components/gh-popover-button', ['exports', 'ember', 'ghost/compone
         }
     });
 });
-define('ghost/components/gh-popover', ['exports', 'ember', 'ghost/components/gh-dropdown'], function (exports, _ember, _ghostComponentsGhDropdown) {
+define('ghost/components/gh-popover', ['exports', 'ember', 'app.js/components/gh-dropdown'], function (exports, _ember, _ghostComponentsGhDropdown) {
     var service = _ember['default'].inject.service;
     exports['default'] = _ghostComponentsGhDropdown['default'].extend({
         classNames: 'ghost-popover',
         dropdown: service()
     });
 });
-define('ghost/components/gh-posts-list-item', ['exports', 'ember', 'ghost/mixins/active-link-wrapper'], function (exports, _ember, _ghostMixinsActiveLinkWrapper) {
+define('ghost/components/gh-posts-list-item', ['exports', 'ember', 'app.js/mixins/active-link-wrapper'], function (exports, _ember, _ghostMixinsActiveLinkWrapper) {
     var $ = _ember['default'].$;
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
@@ -2686,7 +2686,7 @@ define('ghost/components/gh-tabs-manager', ['exports', 'ember'], function (expor
         }
     });
 });
-define('ghost/components/gh-tag-settings-form', ['exports', 'ember', 'ghost/utils/bound-one-way'], function (exports, _ember, _ghostUtilsBoundOneWay) {
+define('ghost/components/gh-tag-settings-form', ['exports', 'ember', 'app.js/utils/bound-one-way'], function (exports, _ember, _ghostUtilsBoundOneWay) {
     var Component = _ember['default'].Component;
     var Handlebars = _ember['default'].Handlebars;
     var computed = _ember['default'].computed;
@@ -2884,7 +2884,7 @@ define('ghost/components/gh-tags-management-container', ['exports', 'ember'], fu
         })
     });
 });
-define('ghost/components/gh-textarea', ['exports', 'ember', 'ghost/mixins/text-input'], function (exports, _ember, _ghostMixinsTextInput) {
+define('ghost/components/gh-textarea', ['exports', 'ember', 'app.js/mixins/text-input'], function (exports, _ember, _ghostMixinsTextInput) {
     var TextArea = _ember['default'].TextArea;
     exports['default'] = TextArea.extend(_ghostMixinsTextInput['default'], {
         classNames: 'gh-input'
@@ -2931,7 +2931,7 @@ define('ghost/components/gh-trim-focus-input', ['exports', 'ember'], function (e
     });
 });
 /*global device*/
-define('ghost/components/gh-uploader', ['exports', 'ember', 'ghost/assets/lib/uploader'], function (exports, _ember, _ghostAssetsLibUploader) {
+define('ghost/components/gh-uploader', ['exports', 'ember', 'app.js/assets/lib/uploader'], function (exports, _ember, _ghostAssetsLibUploader) {
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
     var get = _ember['default'].get;
@@ -3148,7 +3148,7 @@ define('ghost/components/gh-user-invited', ['exports', 'ember'], function (expor
         }
     });
 });
-define('ghost/components/gh-validation-status-container', ['exports', 'ember', 'ghost/mixins/validation-state'], function (exports, _ember, _ghostMixinsValidationState) {
+define('ghost/components/gh-validation-status-container', ['exports', 'ember', 'app.js/mixins/validation-state'], function (exports, _ember, _ghostMixinsValidationState) {
     var Component = _ember['default'].Component;
     var computed = _ember['default'].computed;
 
@@ -3249,7 +3249,7 @@ define('ghost/components/liquid-child', ['exports', 'ember'], function (exports,
 
   });
 });
-define("ghost/components/liquid-container", ["exports", "ember", "liquid-fire/growable", "ghost/components/liquid-measured"], function (exports, _ember, _liquidFireGrowable, _ghostComponentsLiquidMeasured) {
+define("ghost/components/liquid-container", ["exports", "ember", "liquid-fire/growable", "app.js/components/liquid-measured"], function (exports, _ember, _liquidFireGrowable, _ghostComponentsLiquidMeasured) {
   exports["default"] = _ember["default"].Component.extend(_liquidFireGrowable["default"], {
     classNames: ['liquid-container'],
 
@@ -3574,7 +3574,7 @@ define('ghost/components/liquid-tether', ['exports', 'liquid-tether/components/l
     }
   });
 });
-define('ghost/components/liquid-unless', ['exports', 'ghost/components/liquid-if'], function (exports, _ghostComponentsLiquidIf) {
+define('ghost/components/liquid-unless', ['exports', 'app.js/components/liquid-if'], function (exports, _ghostComponentsLiquidIf) {
   exports['default'] = _ghostComponentsLiquidIf['default'].extend({
     helperName: 'liquid-unless',
     layoutName: 'components/liquid-if',
@@ -3874,14 +3874,14 @@ define('ghost/components/modals/base', ['exports', 'ember'], function (exports, 
     });
 });
 /* global key */
-define('ghost/components/modals/copy-html', ['exports', 'ember', 'ghost/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
+define('ghost/components/modals/copy-html', ['exports', 'ember', 'app.js/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
     var computed = _ember['default'].computed;
     var alias = computed.alias;
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
         generatedHtml: alias('model')
     });
 });
-define('ghost/components/modals/delete-all', ['exports', 'ember', 'ghost/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
+define('ghost/components/modals/delete-all', ['exports', 'ember', 'app.js/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
     var service = _ember['default'].inject.service;
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
 
@@ -3928,7 +3928,7 @@ define('ghost/components/modals/delete-all', ['exports', 'ember', 'ghost/compone
         }
     });
 });
-define('ghost/components/modals/delete-post', ['exports', 'ember', 'ghost/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
+define('ghost/components/modals/delete-post', ['exports', 'ember', 'app.js/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
     var alias = computed.alias;
@@ -3980,7 +3980,7 @@ define('ghost/components/modals/delete-post', ['exports', 'ember', 'ghost/compon
         }
     });
 });
-define('ghost/components/modals/delete-tag', ['exports', 'ember', 'ghost/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
+define('ghost/components/modals/delete-tag', ['exports', 'ember', 'app.js/components/modals/base'], function (exports, _ember, _ghostComponentsModalsBase) {
     var computed = _ember['default'].computed;
     var alias = computed.alias;
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
@@ -4006,7 +4006,7 @@ define('ghost/components/modals/delete-tag', ['exports', 'ember', 'ghost/compone
         }
     });
 });
-define('ghost/components/modals/delete-user', ['exports', 'ghost/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
+define('ghost/components/modals/delete-user', ['exports', 'app.js/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
 
         submitting: false,
@@ -4026,7 +4026,7 @@ define('ghost/components/modals/delete-user', ['exports', 'ghost/components/moda
         }
     });
 });
-define('ghost/components/modals/invite-new-user', ['exports', 'ember', 'ghost/components/modals/base', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostComponentsModalsBase, _ghostMixinsValidationEngine) {
+define('ghost/components/modals/invite-new-user', ['exports', 'ember', 'app.js/components/modals/base', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostComponentsModalsBase, _ghostMixinsValidationEngine) {
     var Promise = _ember['default'].RSVP.Promise;
     var service = _ember['default'].inject.service;
     var run = _ember['default'].run;
@@ -4154,7 +4154,7 @@ define('ghost/components/modals/invite-new-user', ['exports', 'ember', 'ghost/co
         }
     });
 });
-define('ghost/components/modals/leave-editor', ['exports', 'ghost/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
+define('ghost/components/modals/leave-editor', ['exports', 'app.js/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
         actions: {
             confirm: function confirm() {
@@ -4167,10 +4167,10 @@ define('ghost/components/modals/leave-editor', ['exports', 'ghost/components/mod
         }
     });
 });
-define('ghost/components/modals/markdown-help', ['exports', 'ghost/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
+define('ghost/components/modals/markdown-help', ['exports', 'app.js/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
   exports['default'] = _ghostComponentsModalsBase['default'].extend({});
 });
-define('ghost/components/modals/re-authenticate', ['exports', 'ember', 'ghost/components/modals/base', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostComponentsModalsBase, _ghostMixinsValidationEngine) {
+define('ghost/components/modals/re-authenticate', ['exports', 'ember', 'app.js/components/modals/base', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostComponentsModalsBase, _ghostMixinsValidationEngine) {
     var $ = _ember['default'].$;
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
@@ -4237,7 +4237,7 @@ define('ghost/components/modals/re-authenticate', ['exports', 'ember', 'ghost/co
         }
     });
 });
-define('ghost/components/modals/transfer-owner', ['exports', 'ghost/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
+define('ghost/components/modals/transfer-owner', ['exports', 'app.js/components/modals/base'], function (exports, _ghostComponentsModalsBase) {
     exports['default'] = _ghostComponentsModalsBase['default'].extend({
         user: null,
         submitting: false,
@@ -4255,7 +4255,7 @@ define('ghost/components/modals/transfer-owner', ['exports', 'ghost/components/m
         }
     });
 });
-define('ghost/components/modals/upload-image', ['exports', 'ember', 'ghost/components/modals/base', 'ghost/assets/lib/uploader', 'ghost/utils/caja-sanitizers'], function (exports, _ember, _ghostComponentsModalsBase, _ghostAssetsLibUploader, _ghostUtilsCajaSanitizers) {
+define('ghost/components/modals/upload-image', ['exports', 'ember', 'app.js/components/modals/base', 'app.js/assets/lib/uploader', 'app.js/utils/caja-sanitizers'], function (exports, _ember, _ghostComponentsModalsBase, _ghostAssetsLibUploader, _ghostUtilsCajaSanitizers) {
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
     var isEmpty = _ember['default'].isEmpty;
@@ -4417,7 +4417,7 @@ define('ghost/controllers/application', ['exports', 'ember'], function (exports,
 define('ghost/controllers/array', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller;
 });
-define('ghost/controllers/editor/edit', ['exports', 'ember', 'ghost/mixins/editor-base-controller'], function (exports, _ember, _ghostMixinsEditorBaseController) {
+define('ghost/controllers/editor/edit', ['exports', 'ember', 'app.js/mixins/editor-base-controller'], function (exports, _ember, _ghostMixinsEditorBaseController) {
     var Controller = _ember['default'].Controller;
     exports['default'] = Controller.extend(_ghostMixinsEditorBaseController['default'], {
         showDeletePostModal: false,
@@ -4429,7 +4429,7 @@ define('ghost/controllers/editor/edit', ['exports', 'ember', 'ghost/mixins/edito
         }
     });
 });
-define('ghost/controllers/editor/new', ['exports', 'ember', 'ghost/mixins/editor-base-controller'], function (exports, _ember, _ghostMixinsEditorBaseController) {
+define('ghost/controllers/editor/new', ['exports', 'ember', 'app.js/mixins/editor-base-controller'], function (exports, _ember, _ghostMixinsEditorBaseController) {
     var Controller = _ember['default'].Controller;
 
     function K() {
@@ -4516,7 +4516,7 @@ define('ghost/controllers/feature', ['exports', 'ember'], function (exports, _em
 define('ghost/controllers/object', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller;
 });
-define('ghost/controllers/post-settings-menu', ['exports', 'ember', 'ghost/utils/date-formatting', 'ghost/mixins/settings-menu-controller', 'ghost/utils/bound-one-way', 'ghost/utils/isNumber'], function (exports, _ember, _ghostUtilsDateFormatting, _ghostMixinsSettingsMenuController, _ghostUtilsBoundOneWay, _ghostUtilsIsNumber) {
+define('ghost/controllers/post-settings-menu', ['exports', 'ember', 'app.js/utils/date-formatting', 'app.js/mixins/settings-menu-controller', 'app.js/utils/bound-one-way', 'app.js/utils/isNumber'], function (exports, _ember, _ghostUtilsDateFormatting, _ghostMixinsSettingsMenuController, _ghostUtilsBoundOneWay, _ghostUtilsIsNumber) {
     var $ = _ember['default'].$;
     var ArrayProxy = _ember['default'].ArrayProxy;
     var Controller = _ember['default'].Controller;
@@ -5117,7 +5117,7 @@ define('ghost/controllers/posts', ['exports', 'ember'], function (exports, _embe
         }
     });
 });
-define('ghost/controllers/reset', ['exports', 'ember', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
+define('ghost/controllers/reset', ['exports', 'ember', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
     var Controller = _ember['default'].Controller;
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
@@ -5190,7 +5190,7 @@ define('ghost/controllers/reset', ['exports', 'ember', 'ghost/mixins/validation-
         }
     });
 });
-define('ghost/controllers/settings/code-injection', ['exports', 'ember', 'ghost/mixins/settings-save'], function (exports, _ember, _ghostMixinsSettingsSave) {
+define('ghost/controllers/settings/code-injection', ['exports', 'ember', 'app.js/mixins/settings-save'], function (exports, _ember, _ghostMixinsSettingsSave) {
     var Controller = _ember['default'].Controller;
     var service = _ember['default'].inject.service;
     exports['default'] = Controller.extend(_ghostMixinsSettingsSave['default'], {
@@ -5205,7 +5205,7 @@ define('ghost/controllers/settings/code-injection', ['exports', 'ember', 'ghost/
         }
     });
 });
-define('ghost/controllers/settings/general', ['exports', 'ember', 'ghost/mixins/settings-save', 'ghost/utils/random-password'], function (exports, _ember, _ghostMixinsSettingsSave, _ghostUtilsRandomPassword) {
+define('ghost/controllers/settings/general', ['exports', 'ember', 'app.js/mixins/settings-save', 'app.js/utils/random-password'], function (exports, _ember, _ghostMixinsSettingsSave, _ghostUtilsRandomPassword) {
     var Controller = _ember['default'].Controller;
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
@@ -5409,7 +5409,7 @@ define('ghost/controllers/settings/labs', ['exports', 'ember'], function (export
         }
     });
 });
-define('ghost/controllers/settings/navigation', ['exports', 'ember', 'ember-data', 'ghost/mixins/settings-save', 'ghost/mixins/validation-engine'], function (exports, _ember, _emberData, _ghostMixinsSettingsSave, _ghostMixinsValidationEngine) {
+define('ghost/controllers/settings/navigation', ['exports', 'ember', 'ember-data', 'app.js/mixins/settings-save', 'app.js/mixins/validation-engine'], function (exports, _ember, _emberData, _ghostMixinsSettingsSave, _ghostMixinsValidationEngine) {
     var Controller = _ember['default'].Controller;
     var RSVP = _ember['default'].RSVP;
     var computed = _ember['default'].computed;
@@ -5935,7 +5935,7 @@ define('ghost/controllers/setup/three', ['exports', 'ember', 'ember-data'], func
         }
     });
 });
-define('ghost/controllers/setup/two', ['exports', 'ember', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
+define('ghost/controllers/setup/two', ['exports', 'ember', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
     var Controller = _ember['default'].Controller;
     var Promise = _ember['default'].RSVP.Promise;
     var _Ember$inject = _ember['default'].inject;
@@ -6110,7 +6110,7 @@ define('ghost/controllers/setup', ['exports', 'ember'], function (exports, _embe
         })
     });
 });
-define('ghost/controllers/signin', ['exports', 'ember', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
+define('ghost/controllers/signin', ['exports', 'ember', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
     var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
 
     var $ = _ember['default'].$;
@@ -6232,7 +6232,7 @@ define('ghost/controllers/signin', ['exports', 'ember', 'ghost/mixins/validation
         }
     });
 });
-define('ghost/controllers/signup', ['exports', 'ember', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
+define('ghost/controllers/signup', ['exports', 'ember', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostMixinsValidationEngine) {
     var Controller = _ember['default'].Controller;
     var Promise = _ember['default'].RSVP.Promise;
     var service = _ember['default'].inject.service;
@@ -6358,7 +6358,7 @@ define('ghost/controllers/team/index', ['exports', 'ember'], function (exports, 
         }
     });
 });
-define('ghost/controllers/team/user', ['exports', 'ember', 'ghost/utils/isNumber', 'ghost/utils/bound-one-way', 'ghost/mixins/validation-engine'], function (exports, _ember, _ghostUtilsIsNumber, _ghostUtilsBoundOneWay, _ghostMixinsValidationEngine) {
+define('ghost/controllers/team/user', ['exports', 'ember', 'app.js/utils/isNumber', 'app.js/utils/bound-one-way', 'app.js/mixins/validation-engine'], function (exports, _ember, _ghostUtilsIsNumber, _ghostUtilsBoundOneWay, _ghostMixinsValidationEngine) {
     var Controller = _ember['default'].Controller;
     var RSVP = _ember['default'].RSVP;
     var computed = _ember['default'].computed;
@@ -6711,7 +6711,7 @@ define('ghost/helpers/gh-count-down-characters', ['exports', 'ember'], function 
         return _ember['default'].String.htmlSafe(el.outerHTML);
     });
 });
-define('ghost/helpers/gh-count-words', ['exports', 'ember', 'ghost/utils/word-count'], function (exports, _ember, _ghostUtilsWordCount) {
+define('ghost/helpers/gh-count-words', ['exports', 'ember', 'app.js/utils/word-count'], function (exports, _ember, _ghostUtilsWordCount) {
     var Helper = _ember['default'].Helper;
     exports['default'] = Helper.helper(function (params) {
         if (!params || !params.length) {
@@ -6729,7 +6729,7 @@ define('ghost/helpers/gh-count-words', ['exports', 'ember', 'ghost/utils/word-co
         return count + (count === 1 ? ' word' : ' words');
     });
 });
-define('ghost/helpers/gh-format-html', ['exports', 'ember', 'ghost/utils/caja-sanitizers'], function (exports, _ember, _ghostUtilsCajaSanitizers) {
+define('ghost/helpers/gh-format-html', ['exports', 'ember', 'app.js/utils/caja-sanitizers'], function (exports, _ember, _ghostUtilsCajaSanitizers) {
     var Helper = _ember['default'].Helper;
     exports['default'] = Helper.helper(function (params) {
         if (!params || !params.length) {
@@ -6751,7 +6751,7 @@ define('ghost/helpers/gh-format-html', ['exports', 'ember', 'ghost/utils/caja-sa
     });
 });
 /* global html_sanitize*/
-define('ghost/helpers/gh-format-markdown', ['exports', 'ember', 'ghost/utils/caja-sanitizers'], function (exports, _ember, _ghostUtilsCajaSanitizers) {
+define('ghost/helpers/gh-format-markdown', ['exports', 'ember', 'app.js/utils/caja-sanitizers'], function (exports, _ember, _ghostUtilsCajaSanitizers) {
     var Helper = _ember['default'].Helper;
 
     var showdown = new Showdown.converter({ extensions: ['ghostimagepreview', 'ghostgfm', 'footnotes', 'highlight'] });
@@ -6799,7 +6799,7 @@ define('ghost/helpers/gh-format-timeago', ['exports', 'ember'], function (export
         // https://github.com/manuelmitasch/ghost-admin-ember-demo/commit/fba3ab0a59238290c85d4fa0d7c6ed1be2a8a82e#commitcomment-5396524
     });
 });
-define('ghost/helpers/gh-path', ['exports', 'ember', 'ghost/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
+define('ghost/helpers/gh-path', ['exports', 'ember', 'app.js/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
     var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
 
     // Handlebars Helper {{gh-path}}
@@ -6921,7 +6921,7 @@ define('ghost/helpers/route-action', ['exports', 'ember-route-action-helper/help
 define('ghost/helpers/singularize', ['exports', 'ember-inflector/lib/helpers/singularize'], function (exports, _emberInflectorLibHelpersSingularize) {
   exports['default'] = _emberInflectorLibHelpersSingularize['default'];
 });
-define('ghost/initializers/app-version', ['exports', 'ember-cli-app-version/initializer-factory', 'ghost/config/environment'], function (exports, _emberCliAppVersionInitializerFactory, _ghostConfigEnvironment) {
+define('ghost/initializers/app-version', ['exports', 'ember-cli-app-version/initializer-factory', 'app.js/config/environment'], function (exports, _emberCliAppVersionInitializerFactory, _ghostConfigEnvironment) {
   exports['default'] = {
     name: 'App Version',
     initialize: (0, _emberCliAppVersionInitializerFactory['default'])(_ghostConfigEnvironment['default'].APP.name, _ghostConfigEnvironment['default'].APP.version)
@@ -6968,7 +6968,7 @@ define('ghost/initializers/ember-cli-fastclick', ['exports', 'ember'], function 
 
   exports['default'] = EmberCliFastclickInitializer;
 });
-define('ghost/initializers/ember-cli-mirage', ['exports', 'ember-cli-mirage/utils/read-modules', 'ghost/config/environment', 'ghost/mirage/config', 'ember-cli-mirage/server'], function (exports, _emberCliMirageUtilsReadModules, _ghostConfigEnvironment, _ghostMirageConfig, _emberCliMirageServer) {
+define('ghost/initializers/ember-cli-mirage', ['exports', 'ember-cli-mirage/utils/read-modules', 'app.js/config/environment', 'app.js/mirage/config', 'ember-cli-mirage/server'], function (exports, _emberCliMirageUtilsReadModules, _ghostConfigEnvironment, _ghostMirageConfig, _emberCliMirageServer) {
   exports['default'] = {
     name: 'ember-cli-mirage',
     initialize: function initialize(application) {
@@ -7045,7 +7045,7 @@ define('ghost/initializers/ember-data', ['exports', 'ember-data/setup-container'
     initialize: _emberDataSetupContainer['default']
   };
 });
-define('ghost/initializers/ember-simple-auth', ['exports', 'ghost/config/environment', 'ghost/utils/ghost-paths', 'ember-simple-auth/configuration', 'ember-simple-auth/initializers/setup-session', 'ember-simple-auth/initializers/setup-session-service'], function (exports, _ghostConfigEnvironment, _ghostUtilsGhostPaths, _emberSimpleAuthConfiguration, _emberSimpleAuthInitializersSetupSession, _emberSimpleAuthInitializersSetupSessionService) {
+define('ghost/initializers/ember-simple-auth', ['exports', 'app.js/config/environment', 'app.js/utils/ghost-paths', 'ember-simple-auth/configuration', 'ember-simple-auth/initializers/setup-session', 'ember-simple-auth/initializers/setup-session-service'], function (exports, _ghostConfigEnvironment, _ghostUtilsGhostPaths, _emberSimpleAuthConfiguration, _emberSimpleAuthInitializersSetupSession, _emberSimpleAuthInitializersSetupSessionService) {
     exports['default'] = {
         name: 'ember-simple-auth',
         initialize: function initialize(registry) {
@@ -7058,7 +7058,7 @@ define('ghost/initializers/ember-simple-auth', ['exports', 'ghost/config/environ
         }
     };
 });
-define('ghost/initializers/export-application-global', ['exports', 'ember', 'ghost/config/environment'], function (exports, _ember, _ghostConfigEnvironment) {
+define('ghost/initializers/export-application-global', ['exports', 'ember', 'app.js/config/environment'], function (exports, _ember, _ghostConfigEnvironment) {
   exports.initialize = initialize;
 
   function initialize() {
@@ -8425,7 +8425,7 @@ define('ghost/mixins/ed-editor-scroll', ['exports', 'ember'], function (exports,
         }
     });
 });
-define('ghost/mixins/ed-editor-shortcuts', ['exports', 'ember', 'ghost/utils/titleize'], function (exports, _ember, _ghostUtilsTitleize) {
+define('ghost/mixins/ed-editor-shortcuts', ['exports', 'ember', 'app.js/utils/titleize'], function (exports, _ember, _ghostUtilsTitleize) {
     var Mixin = _ember['default'].Mixin;
 
     // Used for simple, noncomputational replace-and-go! shortcuts.
@@ -8597,7 +8597,7 @@ define('ghost/mixins/ed-editor-shortcuts', ['exports', 'ember', 'ghost/utils/tit
     });
 });
 /* global moment, Showdown */
-define('ghost/mixins/editor-base-controller', ['exports', 'ember', 'ghost/models/post', 'ghost/utils/bound-one-way'], function (exports, _ember, _ghostModelsPost, _ghostUtilsBoundOneWay) {
+define('ghost/mixins/editor-base-controller', ['exports', 'ember', 'app.js/models/post', 'app.js/utils/bound-one-way'], function (exports, _ember, _ghostModelsPost, _ghostUtilsBoundOneWay) {
     var Mixin = _ember['default'].Mixin;
     var resolve = _ember['default'].RSVP.resolve;
     var computed = _ember['default'].computed;
@@ -8996,7 +8996,7 @@ define('ghost/mixins/editor-base-controller', ['exports', 'ember', 'ghost/models
         }
     });
 });
-define('ghost/mixins/editor-base-route', ['exports', 'ember', 'ghost/mixins/shortcuts-route', 'ghost/mixins/style-body', 'ghost/utils/ctrl-or-cmd'], function (exports, _ember, _ghostMixinsShortcutsRoute, _ghostMixinsStyleBody, _ghostUtilsCtrlOrCmd) {
+define('ghost/mixins/editor-base-route', ['exports', 'ember', 'app.js/mixins/shortcuts-route', 'app.js/mixins/style-body', 'app.js/utils/ctrl-or-cmd'], function (exports, _ember, _ghostMixinsShortcutsRoute, _ghostMixinsStyleBody, _ghostUtilsCtrlOrCmd) {
     var Mixin = _ember['default'].Mixin;
     var RSVP = _ember['default'].RSVP;
     var run = _ember['default'].run;
@@ -9169,7 +9169,7 @@ define('ghost/mixins/infinite-scroll', ['exports', 'ember'], function (exports, 
         }
     });
 });
-define('ghost/mixins/pagination-route', ['exports', 'ember', 'ghost/utils/ajax'], function (exports, _ember, _ghostUtilsAjax) {
+define('ghost/mixins/pagination-route', ['exports', 'ember', 'app.js/utils/ajax'], function (exports, _ember, _ghostUtilsAjax) {
     var Mixin = _ember['default'].Mixin;
     var service = _ember['default'].inject.service;
 
@@ -9315,7 +9315,7 @@ define('ghost/mixins/settings-save', ['exports', 'ember'], function (exports, _e
         }
     });
 });
-define('ghost/mixins/shortcuts-route', ['exports', 'ember', 'ghost/mixins/shortcuts'], function (exports, _ember, _ghostMixinsShortcuts) {
+define('ghost/mixins/shortcuts-route', ['exports', 'ember', 'app.js/mixins/shortcuts'], function (exports, _ember, _ghostMixinsShortcuts) {
     var Mixin = _ember['default'].Mixin;
 
     /**
@@ -9518,7 +9518,7 @@ define('ghost/mixins/text-input', ['exports', 'ember'], function (exports, _embe
         }
     });
 });
-define('ghost/mixins/validation-engine', ['exports', 'ember', 'ember-data', 'ember-data/model', 'ghost/utils/ajax', 'ghost/utils/validator-extensions', 'ghost/validators/post', 'ghost/validators/setup', 'ghost/validators/signup', 'ghost/validators/signin', 'ghost/validators/setting', 'ghost/validators/reset', 'ghost/validators/user', 'ghost/validators/tag-settings', 'ghost/validators/nav-item', 'ghost/validators/invite-user'], function (exports, _ember, _emberData, _emberDataModel, _ghostUtilsAjax, _ghostUtilsValidatorExtensions, _ghostValidatorsPost, _ghostValidatorsSetup, _ghostValidatorsSignup, _ghostValidatorsSignin, _ghostValidatorsSetting, _ghostValidatorsReset, _ghostValidatorsUser, _ghostValidatorsTagSettings, _ghostValidatorsNavItem, _ghostValidatorsInviteUser) {
+define('ghost/mixins/validation-engine', ['exports', 'ember', 'ember-data', 'ember-data/model', 'app.js/utils/ajax', 'app.js/utils/validator-extensions', 'app.js/validators/post', 'app.js/validators/setup', 'app.js/validators/signup', 'app.js/validators/signin', 'app.js/validators/setting', 'app.js/validators/reset', 'app.js/validators/user', 'app.js/validators/tag-settings', 'app.js/validators/nav-item', 'app.js/validators/invite-user'], function (exports, _ember, _emberData, _emberDataModel, _ghostUtilsAjax, _ghostUtilsValidatorExtensions, _ghostValidatorsPost, _ghostValidatorsSetup, _ghostValidatorsSignup, _ghostValidatorsSignin, _ghostValidatorsSetting, _ghostValidatorsReset, _ghostValidatorsUser, _ghostValidatorsTagSettings, _ghostValidatorsNavItem, _ghostValidatorsInviteUser) {
     function _instanceof(left, right) { if (right != null && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
 
     var Mixin = _ember['default'].Mixin;
@@ -9706,7 +9706,7 @@ define('ghost/models/notification', ['exports', 'ember-data/model', 'ember-data/
         message: (0, _emberDataAttr['default'])('string')
     });
 });
-define('ghost/models/post', ['exports', 'ember', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships', 'ghost/mixins/validation-engine'], function (exports, _ember, _emberDataModel, _emberDataAttr, _emberDataRelationships, _ghostMixinsValidationEngine) {
+define('ghost/models/post', ['exports', 'ember', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships', 'app.js/mixins/validation-engine'], function (exports, _ember, _emberDataModel, _emberDataAttr, _emberDataRelationships, _ghostMixinsValidationEngine) {
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
     var equal = computed.equal;
@@ -9803,7 +9803,7 @@ define('ghost/models/role', ['exports', 'ember', 'ember-data/model', 'ember-data
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/models/setting', ['exports', 'ember-data/model', 'ember-data/attr', 'ghost/mixins/validation-engine'], function (exports, _emberDataModel, _emberDataAttr, _ghostMixinsValidationEngine) {
+define('ghost/models/setting', ['exports', 'ember-data/model', 'ember-data/attr', 'app.js/mixins/validation-engine'], function (exports, _emberDataModel, _emberDataAttr, _ghostMixinsValidationEngine) {
     exports['default'] = _emberDataModel['default'].extend(_ghostMixinsValidationEngine['default'], {
         validationType: 'setting',
 
@@ -9826,7 +9826,7 @@ define('ghost/models/setting', ['exports', 'ember-data/model', 'ember-data/attr'
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/models/tag', ['exports', 'ember-data/model', 'ember-data/attr', 'ghost/mixins/validation-engine'], function (exports, _emberDataModel, _emberDataAttr, _ghostMixinsValidationEngine) {
+define('ghost/models/tag', ['exports', 'ember-data/model', 'ember-data/attr', 'app.js/mixins/validation-engine'], function (exports, _emberDataModel, _emberDataAttr, _ghostMixinsValidationEngine) {
     exports['default'] = _emberDataModel['default'].extend(_ghostMixinsValidationEngine['default'], {
         validationType: 'tag',
 
@@ -9847,7 +9847,7 @@ define('ghost/models/tag', ['exports', 'ember-data/model', 'ember-data/attr', 'g
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/models/user', ['exports', 'ember', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships', 'ghost/mixins/validation-engine'], function (exports, _ember, _emberDataModel, _emberDataAttr, _emberDataRelationships, _ghostMixinsValidationEngine) {
+define('ghost/models/user', ['exports', 'ember', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships', 'app.js/mixins/validation-engine'], function (exports, _ember, _emberDataModel, _emberDataAttr, _emberDataRelationships, _ghostMixinsValidationEngine) {
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
     var equal = computed.equal;
@@ -9960,7 +9960,7 @@ define('ghost/models/user', ['exports', 'ember', 'ember-data/model', 'ember-data
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/router', ['exports', 'ember', 'ghost/utils/ghost-paths', 'ghost/utils/document-title', 'ghost/config/environment'], function (exports, _ember, _ghostUtilsGhostPaths, _ghostUtilsDocumentTitle, _ghostConfigEnvironment) {
+define('ghost/router', ['exports', 'ember', 'app.js/utils/ghost-paths', 'app.js/utils/document-title', 'app.js/config/environment'], function (exports, _ember, _ghostUtilsGhostPaths, _ghostUtilsDocumentTitle, _ghostConfigEnvironment) {
     var service = _ember['default'].inject.service;
     var on = _ember['default'].on;
 
@@ -10017,7 +10017,7 @@ define('ghost/router', ['exports', 'ember', 'ghost/utils/ghost-paths', 'ghost/ut
 
     exports['default'] = Router;
 });
-define('ghost/routes/about', ['exports', 'ember', 'ghost/routes/authenticated', 'ghost/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsStyleBody) {
+define('ghost/routes/about', ['exports', 'ember', 'app.js/routes/authenticated', 'app.js/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsStyleBody) {
     var service = _ember['default'].inject.service;
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], {
         titleToken: 'About',
@@ -10053,7 +10053,7 @@ define('ghost/routes/about', ['exports', 'ember', 'ghost/routes/authenticated', 
         }
     });
 });
-define('ghost/routes/application', ['exports', 'ember', 'ember-simple-auth/configuration', 'ember-simple-auth/mixins/application-route-mixin', 'ghost/mixins/shortcuts-route', 'ghost/utils/ctrl-or-cmd', 'ghost/utils/window-proxy'], function (exports, _ember, _emberSimpleAuthConfiguration, _emberSimpleAuthMixinsApplicationRouteMixin, _ghostMixinsShortcutsRoute, _ghostUtilsCtrlOrCmd, _ghostUtilsWindowProxy) {
+define('ghost/routes/application', ['exports', 'ember', 'ember-simple-auth/configuration', 'ember-simple-auth/mixins/application-route-mixin', 'app.js/mixins/shortcuts-route', 'app.js/utils/ctrl-or-cmd', 'app.js/utils/window-proxy'], function (exports, _ember, _emberSimpleAuthConfiguration, _emberSimpleAuthMixinsApplicationRouteMixin, _ghostMixinsShortcutsRoute, _ghostUtilsCtrlOrCmd, _ghostUtilsWindowProxy) {
     var Route = _ember['default'].Route;
     var service = _ember['default'].inject.service;
     var run = _ember['default'].run;
@@ -10170,7 +10170,7 @@ define('ghost/routes/authenticated', ['exports', 'ember', 'ember-simple-auth/mix
   var Route = _ember['default'].Route;
   exports['default'] = Route.extend(_emberSimpleAuthMixinsAuthenticatedRouteMixin['default']);
 });
-define('ghost/routes/editor/edit', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/editor-base-route', 'ghost/mixins/404-handler', 'ghost/utils/isNumber', 'ghost/utils/isFinite'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsEditorBaseRoute, _ghostMixins404Handler, _ghostUtilsIsNumber, _ghostUtilsIsFinite) {
+define('ghost/routes/editor/edit', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/editor-base-route', 'app.js/mixins/404-handler', 'app.js/utils/isNumber', 'app.js/utils/isFinite'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsEditorBaseRoute, _ghostMixins404Handler, _ghostUtilsIsNumber, _ghostUtilsIsFinite) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsEditorBaseRoute['default'], _ghostMixins404Handler['default'], {
         titleToken: 'Editor',
 
@@ -10244,7 +10244,7 @@ define('ghost/routes/editor/index', ['exports', 'ember'], function (exports, _em
         }
     });
 });
-define('ghost/routes/editor/new', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/editor-base-route'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsEditorBaseRoute) {
+define('ghost/routes/editor/new', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/editor-base-route'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsEditorBaseRoute) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsEditorBaseRoute['default'], {
         titleToken: 'Editor',
 
@@ -10347,7 +10347,7 @@ define('ghost/routes/mobile-index-route', ['exports', 'ember'], function (export
         }
     });
 });
-define('ghost/routes/posts/index', ['exports', 'ember', 'ember-simple-auth/mixins/authenticated-route-mixin', 'ghost/routes/mobile-index-route'], function (exports, _ember, _emberSimpleAuthMixinsAuthenticatedRouteMixin, _ghostRoutesMobileIndexRoute) {
+define('ghost/routes/posts/index', ['exports', 'ember', 'ember-simple-auth/mixins/authenticated-route-mixin', 'app.js/routes/mobile-index-route'], function (exports, _ember, _emberSimpleAuthMixinsAuthenticatedRouteMixin, _ghostRoutesMobileIndexRoute) {
     var computed = _ember['default'].computed;
     var service = _ember['default'].inject.service;
     var reads = computed.reads;
@@ -10401,7 +10401,7 @@ define('ghost/routes/posts/index', ['exports', 'ember', 'ember-simple-auth/mixin
         }
     });
 });
-define('ghost/routes/posts/post', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/shortcuts-route', 'ghost/mixins/404-handler', 'ghost/utils/isNumber', 'ghost/utils/isFinite'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsShortcutsRoute, _ghostMixins404Handler, _ghostUtilsIsNumber, _ghostUtilsIsFinite) {
+define('ghost/routes/posts/post', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/shortcuts-route', 'app.js/mixins/404-handler', 'app.js/utils/isNumber', 'app.js/utils/isFinite'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsShortcutsRoute, _ghostMixins404Handler, _ghostUtilsIsNumber, _ghostUtilsIsFinite) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsShortcutsRoute['default'], _ghostMixins404Handler['default'], {
         model: function model(params) {
             var _this = this;
@@ -10478,7 +10478,7 @@ define('ghost/routes/posts/post', ['exports', 'ghost/routes/authenticated', 'gho
         }
     });
 });
-define('ghost/routes/posts', ['exports', 'ember', 'ghost/routes/authenticated', 'ghost/mixins/shortcuts-route', 'ghost/mixins/pagination-route'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsShortcutsRoute, _ghostMixinsPaginationRoute) {
+define('ghost/routes/posts', ['exports', 'ember', 'app.js/routes/authenticated', 'app.js/mixins/shortcuts-route', 'app.js/mixins/pagination-route'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsShortcutsRoute, _ghostMixinsPaginationRoute) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsShortcutsRoute['default'], _ghostMixinsPaginationRoute['default'], {
         titleToken: 'Content',
 
@@ -10576,7 +10576,7 @@ define('ghost/routes/posts', ['exports', 'ember', 'ghost/routes/authenticated', 
         }
     });
 });
-define('ghost/routes/reset', ['exports', 'ember', 'ember-simple-auth/configuration', 'ghost/mixins/style-body'], function (exports, _ember, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
+define('ghost/routes/reset', ['exports', 'ember', 'ember-simple-auth/configuration', 'app.js/mixins/style-body'], function (exports, _ember, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
     var Route = _ember['default'].Route;
     var service = _ember['default'].inject.service;
     exports['default'] = Route.extend(_ghostMixinsStyleBody['default'], {
@@ -10604,7 +10604,7 @@ define('ghost/routes/reset', ['exports', 'ember', 'ember-simple-auth/configurati
         }
     });
 });
-define('ghost/routes/settings/code-injection', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
+define('ghost/routes/settings/code-injection', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], {
         titleToken: 'Settings - Code Injection',
         classNames: ['settings-view-code'],
@@ -10627,7 +10627,7 @@ define('ghost/routes/settings/code-injection', ['exports', 'ghost/routes/authent
         }
     });
 });
-define('ghost/routes/settings/general', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
+define('ghost/routes/settings/general', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], {
         titleToken: 'Settings - General',
 
@@ -10651,7 +10651,7 @@ define('ghost/routes/settings/general', ['exports', 'ghost/routes/authenticated'
         }
     });
 });
-define('ghost/routes/settings/labs', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/style-body', 'ghost/mixins/current-user-settings'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsStyleBody, _ghostMixinsCurrentUserSettings) {
+define('ghost/routes/settings/labs', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/style-body', 'app.js/mixins/current-user-settings'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsStyleBody, _ghostMixinsCurrentUserSettings) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], {
         titleToken: 'Settings - Labs',
 
@@ -10669,7 +10669,7 @@ define('ghost/routes/settings/labs', ['exports', 'ghost/routes/authenticated', '
         }
     });
 });
-define('ghost/routes/settings/navigation', ['exports', 'ember', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
+define('ghost/routes/settings/navigation', ['exports', 'ember', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody) {
     var $ = _ember['default'].$;
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], {
         titleToken: 'Settings - Navigation',
@@ -10710,7 +10710,7 @@ define('ghost/routes/settings/navigation', ['exports', 'ember', 'ghost/routes/au
         }
     });
 });
-define('ghost/routes/settings/tags/index', ['exports', 'ember', 'ghost/routes/authenticated'], function (exports, _ember, _ghostRoutesAuthenticated) {
+define('ghost/routes/settings/tags/index', ['exports', 'ember', 'app.js/routes/authenticated'], function (exports, _ember, _ghostRoutesAuthenticated) {
     var service = _ember['default'].inject.service;
     exports['default'] = _ghostRoutesAuthenticated['default'].extend({
         mediaQueries: service(),
@@ -10726,7 +10726,7 @@ define('ghost/routes/settings/tags/index', ['exports', 'ember', 'ghost/routes/au
         }
     });
 });
-define('ghost/routes/settings/tags/new', ['exports', 'ghost/routes/authenticated'], function (exports, _ghostRoutesAuthenticated) {
+define('ghost/routes/settings/tags/new', ['exports', 'app.js/routes/authenticated'], function (exports, _ghostRoutesAuthenticated) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend({
 
         controllerName: 'settings.tags.tag',
@@ -10747,7 +10747,7 @@ define('ghost/routes/settings/tags/new', ['exports', 'ghost/routes/authenticated
 
     });
 });
-define('ghost/routes/settings/tags/tag', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/404-handler'], function (exports, _ghostRoutesAuthenticated, _ghostMixins404Handler) {
+define('ghost/routes/settings/tags/tag', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/404-handler'], function (exports, _ghostRoutesAuthenticated, _ghostMixins404Handler) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixins404Handler['default'], {
 
         model: function model(params) {
@@ -10766,7 +10766,7 @@ define('ghost/routes/settings/tags/tag', ['exports', 'ghost/routes/authenticated
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/routes/settings/tags', ['exports', 'ember', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/shortcuts-route', 'ghost/mixins/pagination-route'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsShortcutsRoute, _ghostMixinsPaginationRoute) {
+define('ghost/routes/settings/tags', ['exports', 'ember', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/shortcuts-route', 'app.js/mixins/pagination-route'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsShortcutsRoute, _ghostMixinsPaginationRoute) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsCurrentUserSettings['default'], _ghostMixinsPaginationRoute['default'], _ghostMixinsShortcutsRoute['default'], {
         titleToken: 'Settings - Tags',
 
@@ -10950,7 +10950,7 @@ define('ghost/routes/setup/three', ['exports', 'ember'], function (exports, _emb
         }
     });
 });
-define('ghost/routes/setup', ['exports', 'ember', 'ember-simple-auth/configuration', 'ghost/mixins/style-body'], function (exports, _ember, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
+define('ghost/routes/setup', ['exports', 'ember', 'ember-simple-auth/configuration', 'app.js/mixins/style-body'], function (exports, _ember, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
     var Route = _ember['default'].Route;
     var service = _ember['default'].inject.service;
     exports['default'] = Route.extend(_ghostMixinsStyleBody['default'], {
@@ -10992,7 +10992,7 @@ define('ghost/routes/setup', ['exports', 'ember', 'ember-simple-auth/configurati
         }
     });
 });
-define('ghost/routes/signin', ['exports', 'ember', 'ghost/mixins/style-body', 'ember-simple-auth/configuration', 'ember-data'], function (exports, _ember, _ghostMixinsStyleBody, _emberSimpleAuthConfiguration, _emberData) {
+define('ghost/routes/signin', ['exports', 'ember', 'app.js/mixins/style-body', 'ember-simple-auth/configuration', 'ember-data'], function (exports, _ember, _ghostMixinsStyleBody, _emberSimpleAuthConfiguration, _emberData) {
     var Route = _ember['default'].Route;
     var service = _ember['default'].inject.service;
     var Errors = _emberData['default'].Errors;
@@ -11031,7 +11031,7 @@ define('ghost/routes/signin', ['exports', 'ember', 'ghost/mixins/style-body', 'e
         }
     });
 });
-define('ghost/routes/signout', ['exports', 'ember', 'ghost/routes/authenticated', 'ghost/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsStyleBody) {
+define('ghost/routes/signout', ['exports', 'ember', 'app.js/routes/authenticated', 'app.js/mixins/style-body'], function (exports, _ember, _ghostRoutesAuthenticated, _ghostMixinsStyleBody) {
     var canInvoke = _ember['default'].canInvoke;
     var service = _ember['default'].inject.service;
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], {
@@ -11051,7 +11051,7 @@ define('ghost/routes/signout', ['exports', 'ember', 'ghost/routes/authenticated'
         }
     });
 });
-define('ghost/routes/signup', ['exports', 'ember', 'ember-data', 'ember-simple-auth/configuration', 'ghost/mixins/style-body'], function (exports, _ember, _emberData, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
+define('ghost/routes/signup', ['exports', 'ember', 'ember-data', 'ember-simple-auth/configuration', 'app.js/mixins/style-body'], function (exports, _ember, _emberData, _emberSimpleAuthConfiguration, _ghostMixinsStyleBody) {
     var Route = _ember['default'].Route;
     var Promise = _ember['default'].RSVP.Promise;
     var service = _ember['default'].inject.service;
@@ -11124,7 +11124,7 @@ define('ghost/routes/signup', ['exports', 'ember', 'ember-data', 'ember-simple-a
         }
     });
 });
-define('ghost/routes/team/index', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/pagination-route', 'ghost/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsPaginationRoute, _ghostMixinsStyleBody) {
+define('ghost/routes/team/index', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/pagination-route', 'app.js/mixins/style-body'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsPaginationRoute, _ghostMixinsStyleBody) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], _ghostMixinsPaginationRoute['default'], {
         titleToken: 'Team',
 
@@ -11155,7 +11155,7 @@ define('ghost/routes/team/index', ['exports', 'ghost/routes/authenticated', 'gho
         }
     });
 });
-define('ghost/routes/team/user', ['exports', 'ghost/routes/authenticated', 'ghost/mixins/current-user-settings', 'ghost/mixins/style-body', 'ghost/mixins/404-handler'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody, _ghostMixins404Handler) {
+define('ghost/routes/team/user', ['exports', 'app.js/routes/authenticated', 'app.js/mixins/current-user-settings', 'app.js/mixins/style-body', 'app.js/mixins/404-handler'], function (exports, _ghostRoutesAuthenticated, _ghostMixinsCurrentUserSettings, _ghostMixinsStyleBody, _ghostMixins404Handler) {
     exports['default'] = _ghostRoutesAuthenticated['default'].extend(_ghostMixinsStyleBody['default'], _ghostMixinsCurrentUserSettings['default'], _ghostMixins404Handler['default'], {
         titleToken: 'Team - User',
 
@@ -11235,7 +11235,7 @@ define('ghost/serializers/application', ['exports', 'ember', 'ember-data/seriali
         }
     });
 });
-define('ghost/serializers/post', ['exports', 'ember', 'ember-data', 'ghost/serializers/application'], function (exports, _ember, _emberData, _ghostSerializersApplication) {
+define('ghost/serializers/post', ['exports', 'ember', 'ember-data', 'app.js/serializers/application'], function (exports, _ember, _emberData, _ghostSerializersApplication) {
     var EmbeddedRecordsMixin = _emberData['default'].EmbeddedRecordsMixin;
     exports['default'] = _ghostSerializersApplication['default'].extend(EmbeddedRecordsMixin, {
         // settings for the EmbeddedRecordsMixin.
@@ -11289,7 +11289,7 @@ define('ghost/serializers/post', ['exports', 'ember', 'ember-data', 'ghost/seria
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/serializers/setting', ['exports', 'ember', 'ghost/serializers/application'], function (exports, _ember, _ghostSerializersApplication) {
+define('ghost/serializers/setting', ['exports', 'ember', 'app.js/serializers/application'], function (exports, _ember, _ghostSerializersApplication) {
     exports['default'] = _ghostSerializersApplication['default'].extend({
         serializeIntoHash: function serializeIntoHash(hash, type, record, options) {
             // Settings API does not want ids
@@ -11334,7 +11334,7 @@ define('ghost/serializers/setting', ['exports', 'ember', 'ghost/serializers/appl
         }
     });
 });
-define('ghost/serializers/tag', ['exports', 'ember', 'ghost/serializers/application'], function (exports, _ember, _ghostSerializersApplication) {
+define('ghost/serializers/tag', ['exports', 'ember', 'app.js/serializers/application'], function (exports, _ember, _ghostSerializersApplication) {
     exports['default'] = _ghostSerializersApplication['default'].extend({
         serializeIntoHash: function serializeIntoHash(hash, type, record, options) {
             options = options || {};
@@ -11353,7 +11353,7 @@ define('ghost/serializers/tag', ['exports', 'ember', 'ghost/serializers/applicat
     });
 });
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
-define('ghost/serializers/user', ['exports', 'ember', 'ember-data', 'ghost/serializers/application'], function (exports, _ember, _emberData, _ghostSerializersApplication) {
+define('ghost/serializers/user', ['exports', 'ember', 'ember-data', 'app.js/serializers/application'], function (exports, _ember, _emberData, _ghostSerializersApplication) {
     var EmbeddedRecordsMixin = _emberData['default'].EmbeddedRecordsMixin;
     exports['default'] = _ghostSerializersApplication['default'].extend(EmbeddedRecordsMixin, {
         attrs: {
@@ -11467,7 +11467,7 @@ define('ghost/services/config', ['exports', 'ember'], function (exports, _ember)
         })
     });
 });
-define('ghost/services/dropdown', ['exports', 'ember', 'ghost/mixins/body-event-listener'], function (exports, _ember, _ghostMixinsBodyEventListener) {
+define('ghost/services/dropdown', ['exports', 'ember', 'app.js/mixins/body-event-listener'], function (exports, _ember, _ghostMixinsBodyEventListener) {
     var Service = _ember['default'].Service;
     var Evented = _ember['default'].Evented;
     exports['default'] = Service.extend(Evented, _ghostMixinsBodyEventListener['default'], {
@@ -11587,7 +11587,7 @@ define('ghost/services/feature', ['exports', 'ember'], function (exports, _ember
         }
     });
 });
-define('ghost/services/ghost-paths', ['exports', 'ember', 'ghost/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
+define('ghost/services/ghost-paths', ['exports', 'ember', 'app.js/utils/ghost-paths'], function (exports, _ember, _ghostUtilsGhostPaths) {
     var Service = _ember['default'].Service;
     var _ProxyMixin = _ember['default']._ProxyMixin;
     exports['default'] = Service.extend(_ProxyMixin, {
@@ -11905,7 +11905,7 @@ define('ghost/services/slug-generator', ['exports', 'ember'], function (exports,
         }
     });
 });
-define('ghost/session-stores/application', ['exports', 'ember-simple-auth/session-stores/adaptive', 'ghost/utils/ghost-paths'], function (exports, _emberSimpleAuthSessionStoresAdaptive, _ghostUtilsGhostPaths) {
+define('ghost/session-stores/application', ['exports', 'ember-simple-auth/session-stores/adaptive', 'app.js/utils/ghost-paths'], function (exports, _emberSimpleAuthSessionStoresAdaptive, _ghostUtilsGhostPaths) {
 
     var paths = (0, _ghostUtilsGhostPaths['default'])();
     var keyName = 'ghost' + (paths.subdir.indexOf('/') === 0 ? '-' + paths.subdir.substr(1) : '') + ':session';
@@ -13026,7 +13026,7 @@ define("ghost/templates/about", ["exports"], function (exports) {
         morphs[8] = dom.createMorphAt(dom.childAt(element1, [7]), 1, 1);
         return morphs;
       },
-      statements: [["block", "gh-view-title", [], ["openMobileMenu", "openMobileMenu"], 0, null, ["loc", [null, [3, 8], [3, 100]]]], ["attribute", "src", ["concat", [["subexpr", "gh-path", ["admin", "/img/ghost-logo.png"], [], ["loc", [null, [7, 38], [7, 79]]]]]]], ["inline", "gh-notifications", [], ["location", "about-upgrade", "notify", "updateNotificationChange"], ["loc", [null, [9, 12], [9, 91]]]], ["content", "model.version", ["loc", [null, [14, 73], [14, 90]]]], ["content", "model.environment", ["loc", [null, [15, 49], [15, 70]]]], ["content", "model.database", ["loc", [null, [16, 80], [16, 98]]]], ["block", "if", [["get", "model.mail", ["loc", [null, [17, 48], [17, 58]]]]], [], 1, 2, ["loc", [null, [17, 42], [17, 95]]]], ["inline", "partial", ["contributors"], [], ["loc", [null, [29, 16], [29, 42]]]], ["content", "copyrightYear", ["loc", [null, [39, 29], [39, 46]]]]],
+      statements: [["block", "gh-view-title", [], ["openMobileMenu", "openMobileMenu"], 0, null, ["loc", [null, [3, 8], [3, 100]]]], ["attribute", "src", ["concat", [["subexpr", "gh-path", ["admin", "/img/logo.png"], [], ["loc", [null, [7, 38], [7, 79]]]]]]], ["inline", "gh-notifications", [], ["location", "about-upgrade", "notify", "updateNotificationChange"], ["loc", [null, [9, 12], [9, 91]]]], ["content", "model.version", ["loc", [null, [14, 73], [14, 90]]]], ["content", "model.environment", ["loc", [null, [15, 49], [15, 70]]]], ["content", "model.database", ["loc", [null, [16, 80], [16, 98]]]], ["block", "if", [["get", "model.mail", ["loc", [null, [17, 48], [17, 58]]]]], [], 1, 2, ["loc", [null, [17, 42], [17, 95]]]], ["inline", "partial", ["contributors"], [], ["loc", [null, [29, 16], [29, 42]]]], ["content", "copyrightYear", ["loc", [null, [39, 29], [39, 46]]]]],
       locals: [],
       templates: [child0, child1, child2]
     };
@@ -22666,7 +22666,7 @@ define("ghost/templates/error", ["exports"], function (exports) {
         morphs[4] = dom.createMorphAt(element2, 3, 3);
         return morphs;
       },
-      statements: [["attribute", "src", ["concat", [["subexpr", "gh-path", ["admin", "/img/404-ghost@2x.png"], [], ["loc", [null, [4, 43], [4, 86]]]]]]], ["attribute", "srcset", ["concat", [["subexpr", "gh-path", ["admin", "/img/404-ghost.png"], [], ["loc", [null, [4, 96], [4, 136]]]], " 1x, ", ["subexpr", "gh-path", ["admin", "/img/404-ghost@2x.png"], [], ["loc", [null, [4, 141], [4, 184]]]], " 2x"]]], ["content", "code", ["loc", [null, [6, 40], [6, 48]]]], ["content", "message", ["loc", [null, [7, 47], [7, 58]]]], ["block", "if", [["get", "stack", ["loc", [null, [12, 10], [12, 15]]]]], [], 0, null, ["loc", [null, [12, 4], [26, 11]]]]],
+      statements: [["attribute", "src", ["concat", [["subexpr", "gh-path", ["admin", "/img/404@2x.png"], [], ["loc", [null, [4, 43], [4, 86]]]]]]], ["attribute", "srcset", ["concat", [["subexpr", "gh-path", ["admin", "/img/404.png"], [], ["loc", [null, [4, 96], [4, 136]]]], " 1x, ", ["subexpr", "gh-path", ["admin", "/img/404@2x.png"], [], ["loc", [null, [4, 141], [4, 184]]]], " 2x"]]], ["content", "code", ["loc", [null, [6, 40], [6, 48]]]], ["content", "message", ["loc", [null, [7, 47], [7, 58]]]], ["block", "if", [["get", "stack", ["loc", [null, [12, 10], [12, 15]]]]], [], 0, null, ["loc", [null, [12, 4], [26, 11]]]]],
       locals: [],
       templates: [child0]
     };
@@ -31491,28 +31491,28 @@ define('ghost/transitions/fade-direction', ['exports', 'liquid-fire'], function 
     }
   }
 });
-define("ghost/transitions/fade-down", ["exports", "ghost/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
+define("ghost/transitions/fade-down", ["exports", "app.js/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
   exports["default"] = function () {
     var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
     return _ghostTransitionsFadeDirection["default"].call(this, 'y', -1, opts, opts.offset);
   };
 });
-define("ghost/transitions/fade-left", ["exports", "ghost/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
+define("ghost/transitions/fade-left", ["exports", "app.js/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
   exports["default"] = function () {
     var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
     return _ghostTransitionsFadeDirection["default"].call(this, 'x', -1, opts, opts.offset);
   };
 });
-define("ghost/transitions/fade-right", ["exports", "ghost/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
+define("ghost/transitions/fade-right", ["exports", "app.js/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
   exports["default"] = function () {
     var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
     return _ghostTransitionsFadeDirection["default"].call(this, 'x', 1, opts, opts.offset);
   };
 });
-define("ghost/transitions/fade-up", ["exports", "ghost/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
+define("ghost/transitions/fade-up", ["exports", "app.js/transitions/fade-direction"], function (exports, _ghostTransitionsFadeDirection) {
   exports["default"] = function () {
     var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
@@ -31724,7 +31724,7 @@ define("ghost/transitions/scroll-then", ["exports", "ember", "liquid-fire/is-bro
     }
   };
 });
-define('ghost/transitions/tether', ['exports', 'ghost/transitions/explode'], function (exports, _ghostTransitionsExplode) {
+define('ghost/transitions/tether', ['exports', 'app.js/transitions/explode'], function (exports, _ghostTransitionsExplode) {
   exports['default'] = tether;
 
   function tether(tetherUse, overlayUse) {
@@ -31744,22 +31744,22 @@ define('ghost/transitions/tether', ['exports', 'ghost/transitions/explode'], fun
     return _ghostTransitionsExplode['default'].apply(this, transitions);
   }
 });
-define("ghost/transitions/to-down", ["exports", "ghost/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
+define("ghost/transitions/to-down", ["exports", "app.js/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
   exports["default"] = function (opts) {
     return _ghostTransitionsMoveOver["default"].call(this, 'y', 1, opts);
   };
 });
-define("ghost/transitions/to-left", ["exports", "ghost/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
+define("ghost/transitions/to-left", ["exports", "app.js/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
   exports["default"] = function (opts) {
     return _ghostTransitionsMoveOver["default"].call(this, 'x', -1, opts);
   };
 });
-define("ghost/transitions/to-right", ["exports", "ghost/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
+define("ghost/transitions/to-right", ["exports", "app.js/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
   exports["default"] = function (opts) {
     return _ghostTransitionsMoveOver["default"].call(this, 'x', 1, opts);
   };
 });
-define("ghost/transitions/to-up", ["exports", "ghost/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
+define("ghost/transitions/to-up", ["exports", "app.js/transitions/move-over"], function (exports, _ghostTransitionsMoveOver) {
   exports["default"] = function (opts) {
     return _ghostTransitionsMoveOver["default"].call(this, 'y', -1, opts);
   };
@@ -32060,7 +32060,7 @@ define('ghost/utils/ed-image-manager', ['exports'], function (exports) {
         getSrcRange: getSrcRange
     };
 });
-define('ghost/utils/editor-shortcuts', ['exports', 'ghost/utils/ctrl-or-cmd'], function (exports, _ghostUtilsCtrlOrCmd) {
+define('ghost/utils/editor-shortcuts', ['exports', 'app.js/utils/ctrl-or-cmd'], function (exports, _ghostUtilsCtrlOrCmd) {
 
   var shortcuts = {};
 
@@ -32312,7 +32312,7 @@ define('ghost/validators/base', ['exports', 'ember'], function (exports, _ember)
         }
     });
 });
-define('ghost/validators/invite-user', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/invite-user', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['email'],
 
@@ -32329,7 +32329,7 @@ define('ghost/validators/invite-user', ['exports', 'ghost/validators/base'], fun
         }
     });
 });
-define('ghost/validators/nav-item', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/nav-item', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['label', 'url'],
 
@@ -32365,7 +32365,7 @@ define('ghost/validators/nav-item', ['exports', 'ghost/validators/base'], functi
         }
     });
 });
-define('ghost/validators/new-user', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/new-user', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].extend({
         properties: ['name', 'email', 'password'],
 
@@ -32400,7 +32400,7 @@ define('ghost/validators/new-user', ['exports', 'ghost/validators/base'], functi
         }
     });
 });
-define('ghost/validators/post', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/post', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['title', 'metaTitle', 'metaDescription'],
 
@@ -32437,7 +32437,7 @@ define('ghost/validators/post', ['exports', 'ghost/validators/base'], function (
         }
     });
 });
-define('ghost/validators/reset', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/reset', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['newPassword'],
 
@@ -32458,7 +32458,7 @@ define('ghost/validators/reset', ['exports', 'ghost/validators/base'], function 
         }
     });
 });
-define('ghost/validators/setting', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/setting', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['title', 'description', 'password', 'postsPerPage'],
         title: function title(model) {
@@ -32505,7 +32505,7 @@ define('ghost/validators/setting', ['exports', 'ghost/validators/base'], functio
         }
     });
 });
-define('ghost/validators/setup', ['exports', 'ghost/validators/new-user'], function (exports, _ghostValidatorsNewUser) {
+define('ghost/validators/setup', ['exports', 'app.js/validators/new-user'], function (exports, _ghostValidatorsNewUser) {
     exports['default'] = _ghostValidatorsNewUser['default'].create({
         properties: ['name', 'email', 'password', 'blogTitle'],
 
@@ -32519,7 +32519,7 @@ define('ghost/validators/setup', ['exports', 'ghost/validators/new-user'], funct
         }
     });
 });
-define('ghost/validators/signin', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/signin', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['identification', 'signin', 'forgotPassword'],
         invalidMessage: 'Email address is not valid',
@@ -32567,10 +32567,10 @@ define('ghost/validators/signin', ['exports', 'ghost/validators/base'], function
         }
     });
 });
-define('ghost/validators/signup', ['exports', 'ghost/validators/new-user'], function (exports, _ghostValidatorsNewUser) {
+define('ghost/validators/signup', ['exports', 'app.js/validators/new-user'], function (exports, _ghostValidatorsNewUser) {
   exports['default'] = _ghostValidatorsNewUser['default'].create();
 });
-define('ghost/validators/tag-settings', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/tag-settings', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['name', 'slug', 'description', 'metaTitle', 'metaDescription'],
 
@@ -32626,7 +32626,7 @@ define('ghost/validators/tag-settings', ['exports', 'ghost/validators/base'], fu
         }
     });
 });
-define('ghost/validators/user', ['exports', 'ghost/validators/base'], function (exports, _ghostValidatorsBase) {
+define('ghost/validators/user', ['exports', 'app.js/validators/base'], function (exports, _ghostValidatorsBase) {
     exports['default'] = _ghostValidatorsBase['default'].create({
         properties: ['name', 'bio', 'email', 'location', 'website', 'roles'],
 
