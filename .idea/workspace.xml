@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/dependencies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/permissions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/proxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/apps/sandbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/export/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/import/data-importer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/import/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/import/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/handlers/image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/handlers/json.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/handlers/markdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/importers/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/importers/image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/importer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/asset_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/author_image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/author_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/canonical_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/cover_image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/description.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/excerpt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/keywords.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/modified_date.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/next_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/og_type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/previous_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/published_date.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/schema.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/structured_data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/title.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/meta/url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/builder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/fixtures.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/permissions.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/migration/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/base-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/handler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/index-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/manager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/page-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/post-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/tag-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/user-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/sitemap/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/data/xml/xmlrpc.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/ghost.css" afterPath="$PROJECT_DIR$/core/built/assets/app.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/ghost.js" afterPath="$PROJECT_DIR$/core/built/assets/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/ghost.min.css" afterPath="$PROJECT_DIR$/core/built/assets/app.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/ghost.min.js" afterPath="$PROJECT_DIR$/core/built/assets/app.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/404-ghost.png" afterPath="$PROJECT_DIR$/core/built/assets/img/404.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/404-ghost@2x.png" afterPath="$PROJECT_DIR$/core/built/assets/img/404@2x.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/ghost-logo.png" afterPath="$PROJECT_DIR$/core/built/assets/img/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/ghosticon.jpg" afterPath="$PROJECT_DIR$/core/built/assets/img/icon.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/data/db/connection.js" afterPath="$PROJECT_DIR$/core/server/data/db/connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -274,7 +213,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -779,6 +717,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -965,7 +904,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459578665667</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="delete some modules">
+      <created>1459646081557</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1459646081557</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -981,23 +926,23 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2381423" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1024,7 +969,8 @@
     <MESSAGE value="deleting support i18n" />
     <MESSAGE value="deleting some files" />
     <MESSAGE value="npm -shrinkwrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="npm -shrinkwrap" />
+    <MESSAGE value="delete some modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete some modules" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1039,6 +985,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/server/errors/bad-request-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/errors/data-import-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/errors/request-too-large-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/helpers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1260,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1565585">
           <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,54 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6346968">
           <caret line="316" column="18" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#bcryptjs#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#bluebird#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#body-parser#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#bookshelf#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#busboy#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#chalk#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#cheerio#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#compression#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#connect-slashes#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#content-type#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#cookie-session#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#downsize#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#express#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#express-hbs#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#extract-zip#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#fs-extra#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#ghost-gql#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#glob#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#html-to-text#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#http-errors#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#inherits#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#jsonpath#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#knex#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#lodash#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mime-types#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#minimatch#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mocha#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#moment#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#morgan#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mysql#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#node-uuid#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#nodemailer#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#on-finished#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#on-headers#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-http-bearer#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-oauth2-client-password#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#passport-strategy#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#path-match#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#request#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#statuses#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#through#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#type-is#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#unpipe#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#utils-merge#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#validator#0;n#!!block;n#dependencies#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,9 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,11 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30282637">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#175#592#0" expanded="false" />
-            <element signature="e#604#1317#0" expanded="false" />
-            <element signature="e#1350#1582#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1368,7 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.2597578">
           <caret line="932" column="9" selection-start-line="932" selection-start-column="9" selection-end-line="932" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,9 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.615074">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1416,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43741587">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
