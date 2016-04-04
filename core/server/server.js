@@ -11,10 +11,10 @@ var Promise = require('bluebird'),
  * @constructor
  * @param {Object} rootApp - parent express instance
  */
-function Server(rootApp) {
+function Server(app) {
 
 	// frontend app(for user)
-    this.rootApp = rootApp;
+    this.app = app;
     this.httpServer = null;
     this.connections = {};
     this.connectionId = 0;
@@ -23,21 +23,14 @@ function Server(rootApp) {
     this.config = config;
 }
 
-/**
- * ## Public API methods
- *
- * ### Start
- * Starts the ghost server listening on the configured port.
- * Alternatively you can pass in your own express instance and let Ghost
- * start listening for you.
- * @param  {Object} externalApp - Optional express app instance.
- * @return {Promise} Resolves once Ghost has started
- */
+
 Server.prototype.start = function (externalApp) {
+
     var self = this,
-        rootApp = externalApp ? externalApp : self.rootApp;
+        rootApp = externalApp ? externalApp : self.app;
 
     return new Promise(function (resolve) {
+
         var socketConfig = config.getSocket();
 
         if (socketConfig) {
@@ -67,7 +60,7 @@ Server.prototype.start = function (externalApp) {
                 );
             } else {
                 errors.logError(
-                   'errors.httpServer.otherError.error',
+                    'errors.httpServer.otherError.error',
                     'errors.httpServer.otherError.context',
                     'errors.httpServer.otherError.help'
                 );
@@ -82,12 +75,7 @@ Server.prototype.start = function (externalApp) {
     });
 };
 
-/**
- * ### Stop
- * Returns a promise that will be fulfilled when the server stops. If the server has not been started,
- * the promise will be fulfilled immediately
- * @returns {Promise} Resolves once Ghost has stopped
- */
+
 Server.prototype.stop = function () {
     var self = this;
 
@@ -106,47 +94,25 @@ Server.prototype.stop = function () {
     });
 };
 
-/**
- * ### Restart
- * Restarts the ghost application
- * @returns {Promise} Resolves once Ghost has restarted
- */
 Server.prototype.restart = function () {
     return this.stop().then(this.start.bind(this));
 };
 
-/**
- * ### Hammertime
- * To be called after `stop`
- */
-Server.prototype.hammertime = function () {
-    console.log(chalk.green('notices.httpServer.cantTouchThis'));
-
-    return Promise.resolve(this);
-};
-
-/**
- * ## Private (internal) methods
- *
- * ### Connection
- * @param {Object} socket
- */
 Server.prototype.connection = function (socket) {
     var self = this;
 
     self.connectionId += 1;
-    socket._ghostId = self.connectionId;
+    socket._APPId = self.connectionId;
 
     socket.on('close', function () {
-        delete self.connections[this._ghostId];
+        delete self.connections[this._APPId];
     });
 
-    self.connections[socket._ghostId] = socket;
+    self.connections[socket._APPId] = socket;
 };
 
 /**
  * ### Close Connections
- * Most browsers keep a persistent connection open to the server, which prevents the close callback of
  * httpServer from returning. We need to destroy all connections manually.
  */
 Server.prototype.closeConnections = function () {
@@ -168,13 +134,12 @@ Server.prototype.logStartMessages = function () {
     // Startup & Shutdown messages
     if (process.env.NODE_ENV === 'production') {
         console.log(
-            chalk.green('notices.httpServer.ghostIsRunningIn'),
-            'notices.httpServer.yourBlogIsAvailableOn',
+            chalk.green('notices.httpServer.APPIsRunningIn'),
             chalk.gray('notices.httpServer.ctrlCToShutDown')
         );
     } else {
         console.log(
-            chalk.green('notices.httpServer.ghostIsRunningIn'),
+            chalk.green('notices.httpServer.APPIsRunningIn'),
            'notices.httpServer.listeningOn',
             config.getSocket() || config.server.host + ':' + config.server.port,
             'notices.httpServer.urlConfiguredAs',
@@ -183,21 +148,21 @@ Server.prototype.logStartMessages = function () {
     }
 
     function shutdown() {
-        console.log(chalk.red('notices.httpServer.ghostHasShutdown'));
+        console.log(chalk.red('notices.httpServer.APPHasShutdown'));
         if (process.env.NODE_ENV === 'production') {
             console.log(
-                'notices.httpServer.yourBlogIsNowOffline'
+                'notices.httpServer.yourAPPIsNowOffline'
             );
         } else {
             console.log(
-                'notices.httpServer.ghostWasRunningFor',
+                'notices.httpServer.APPWasRunningFor',
                 Math.round(process.uptime()),
                 'common.time.seconds'
             );
         }
         process.exit(0);
     }
-    // ensure that Ghost exits correctly on Ctrl+C and SIGTERM
+    // ensure that App exits correctly on Ctrl+C and SIGTERM
     process.
         removeAllListeners('SIGINT').on('SIGINT', shutdown).
         removeAllListeners('SIGTERM').on('SIGTERM', shutdown);

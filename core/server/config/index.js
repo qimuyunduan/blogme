@@ -7,32 +7,18 @@ var path          = require('path'),
     fs            = require('fs'),
     url           = require('url'),
     _             = require('lodash'),
-
     validator     = require('validator'),
     readDirectory = require('../utils/read-directory'),
     readThemes    = require('../utils/read-themes'),
     errors        = require('../errors'),
-    configUrl     = require('./url'),
     packageInfo   = require('../../../package.json'),
     appRoot       = path.resolve(__dirname, '../../../'),
     corePath      = path.resolve(appRoot, 'core/'),
-    testingEnvs   = ['testing-mysql'],
     defaultConfig = {};
 
 function ConfigManager(config) {
-    /**
-     * Our internal true representation of our current config object.
-     * @private
-     * @type {Object}
-     */
-    this._config = {};
 
-    // Allow other modules to be externally accessible.
-    this.urlJoin = configUrl.urlJoin;
-    this.urlFor = configUrl.urlFor;
-    this.urlPathForPost = configUrl.urlPathForPost;
-    this.apiUrl = configUrl.apiUrl;
-    this.getBaseUrl = configUrl.getBaseUrl;
+    this._config = {};
 
     // If we're given an initial config object then we can set it.
     if (config && _.isObject(config)) {
@@ -230,7 +216,7 @@ ConfigManager.prototype.get = function () {
 ConfigManager.prototype.load = function (configFilePath) {
     var self = this;
 
-    self._config.paths.config = process.env.GHOST_CONFIG || configFilePath || self._config.paths.config;
+    self._config.paths.config = configFilePath || self._config.paths.config;
 
     /* Check for config file and copy from config.example.js
         if one doesn't exist. After that, start the server. */
@@ -391,38 +377,6 @@ ConfigManager.prototype.isPrivacyDisabled = function (privacyFlag) {
     return this.privacy[privacyFlag] === false;
 };
 
-/**
- * Check if any of the currently set config items are deprecated, and issues a warning.
- */
-ConfigManager.prototype.checkDeprecated = function () {
-    var self = this;
-    _.each(this.deprecatedItems, function (property) {
-        self.displayDeprecated(self._config, property.split('.'), []);
-    });
-};
 
-ConfigManager.prototype.displayDeprecated = function (item, properties, address) {
-    var self = this,
-        property = properties.shift(),
-        errorText,
-        explanationText,
-        helpText;
-
-    address.push(property);
-
-    if (item.hasOwnProperty(property)) {
-        if (properties.length) {
-            return self.displayDeprecated(item[property], properties, address);
-        }
-        errorText = 'errors......config.deprecatedProperty.error';
-        explanationText =  'errors......config.deprecatedProperty.explanation';
-        helpText = 'errors......config.deprecatedProperty.help';
-        errors.logWarn(errorText, explanationText, helpText);
-    }
-};
-
-if (testingEnvs.indexOf(process.env.NODE_ENV) > -1) {
-    defaultConfig  = require('../../../config.example')[process.env.NODE_ENV];
-}
 
 module.exports = new ConfigManager(defaultConfig);

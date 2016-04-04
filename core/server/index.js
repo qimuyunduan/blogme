@@ -1,4 +1,3 @@
-
 // Module dependencies
 var express     = require('express'),
     hbs         = require('express-hbs'),
@@ -7,18 +6,11 @@ var express     = require('express'),
     Promise     = require('bluebird'),
     api         = require('./api'),
     config      = require('./config'),
-    errors      = require('./errors'),
     helpers     = require('./helpers'),
     middleware  = require('./middleware'),
-    migrations  = require('./data/migration'),
     models      = require('./models'),
     permissions = require('./permissions'),
-    apps        = require('./apps'),
-    sitemap     = require('./data/xml/sitemap'),
-    xmlrpc      = require('./data/xml/xmlrpc'),
-    server = require('./server'),
-    validateThemes = require('./utils/validate-themes'),
-
+    server      = require('./server'),
     dbHash;
 
 function initDbHashAndFirstRun() {
@@ -37,7 +29,6 @@ function initDbHashAndFirstRun() {
                 .then(function (response) {
                     dbHash = response.settings[0].value;
                     return dbHash;
-                    // Use `then` here to do 'first run' actions
                 });
         }
 
@@ -53,8 +44,6 @@ function init(options) {
     var app = express(),
         adminApp = express();
 
-    // ### Initialisation
-    // The server and its dependencies require a populated config
     // It returns a promise that is resolved when the application
 
 
@@ -64,9 +53,6 @@ function init(options) {
     }).then(function () {
         // Initialise the models
         return models.init();
-    }).then(function () {
-        // Initialize migrations
-        return migrations.init();
     }).then(function () {
         // Populate any missing default settings
         return models.Settings.populateDefaults();
@@ -80,22 +66,11 @@ function init(options) {
     }).then(function () {
         return Promise.join(
             // Check for or initialise a dbHash.
-            initDbHashAndFirstRun(),
-            // Initialize apps
-            apps.init(),
-            // Initialize sitemaps
-            sitemap.init(),
-            // Initialize xmrpc ping
-            xmlrpc.init()
+            initDbHashAndFirstRun()
         );
     }).then(function () {
+
         var adminHbs = hbs.create();
-
-        // ##Configuration
-
-        // return the correct mime type for woff files
-        express.static.mime.define({'application/font-woff': ['woff']});
-
         // enabled gzip compression by default
         if (config.server.compress !== false) {
             app.use(compress());
@@ -114,19 +89,6 @@ function init(options) {
 
         // Middleware and Routing
         middleware(app, adminApp);
-
-        // Log all theme errors and warnings
-        validateThemes(config.paths.themePath)
-            .catch(function (result) {
-
-                result.errors.forEach(function (err) {
-                    errors.logError(err.message, err.context, err.help);
-                });
-
-                result.warnings.forEach(function (warn) {
-                    errors.logWarn(warn.message, warn.context, warn.help);
-                });
-            });
 
         return new server(app);
     });

@@ -1,43 +1,27 @@
 var packages = require('../../../package.json'),
-    path = require('path'),
-    crypto = require('crypto'),
-    fs = require('fs'),
-    mode = process.env.NODE_ENV === undefined ? 'development' : process.env.NODE_ENV,
-    appRoot = path.resolve(__dirname, '../../../'),
+    path     = require('path'),
+    crypto   = require('crypto'),
+    fs       = require('fs'),
+    mode     = process.env.NODE_ENV === undefined ? 'development' : process.env.NODE_ENV,
+    appRoot  = path.resolve(__dirname, '../../../'),
     configFilePath = path.join(appRoot, 'config.js'),
     checks,
-    exitCodes = {
-        NODE_VERSION_UNSUPPORTED: 231,
+    exitCodes      = {
         NODE_ENV_CONFIG_MISSING: 232,
         DEPENDENCIES_MISSING: 233,
         CONTENT_PATH_NOT_ACCESSIBLE: 234,
         CONTENT_PATH_NOT_WRITABLE: 235,
-        MYSQL_DB_NOT_WRITABLE: 236,
-        BUILT_FILES_DO_NOT_EXIST: 237
+        MYSQL_DB_NOT_WRITABLE: 236
     };
 
 checks = {
     check: function check() {
-        this.nodeVersion();
         this.nodeEnv();
         this.packages();
         this.contentPath();
         this.mail();
         this.mysql();
         this.builtFilesExist();
-    },
-
-    // Make sure the node version is supported
-    nodeVersion: function checkNodeVersion() {
-        // Tell users if their node version is not supported, and exit
-        var semver = require('semver');
-
-        if (process.env.GHOST_NODE_VERSION_CHECK !== 'false' &&
-            !semver.satisfies(process.versions.node, packages.engines.node) &&
-            !semver.satisfies(process.versions.node, packages.engines.iojs)) {
-            console.error('\x1B[31mERROR: Unsupported version of Node');
-            process.exit(exitCodes.NODE_VERSION_UNSUPPORTED);
-        }
     },
 
     nodeEnv: function checkNodeEnvState() {
@@ -89,7 +73,7 @@ checks = {
         errors = errors.join('\n  ');
 
         console.error('\x1B[31mERROR: unable to start due to missing dependencies:\033[0m\n  ' + errors);
-        console.error('\x1B[32m\nPlease run `npm install --production` and try starting Ghost again.');
+        console.error('\x1B[32m\nPlease run `npm install --production` and try starting APP again.');
 
 
         process.exit(exitCodes.DEPENDENCIES_MISSING);
@@ -104,7 +88,7 @@ checks = {
         var configFile,
             config,
             contentPath,
-            contentSubPaths = ['apps', 'data', 'images', 'themes'],
+            contentSubPaths = [ 'data', 'images'],
             fd,
             errorHeader = '\x1B[31mERROR: Unable to access app content path:\033[0m',
             errorHelp = '\x1B[32mCheck that the content path exists and file system permissions are correct.' ;
@@ -201,46 +185,6 @@ checks = {
             console.error('\x1B[31mWARNING: App attempting to use a direct method to send email. \nIt is recommended that you explicitly configure an email service.\033[0m');
 
         }
-    },
-
-    builtFilesExist: function builtFilesExist() {
-        var configFile,
-            config,
-            location,
-            fileNames = ['ghost.js', 'vendor.js', 'ghost.css', 'vendor.css'];
-
-        try {
-            configFile = require(configFilePath);
-            config = configFile[mode];
-
-            if (config.paths && config.paths.clientAssets) {
-                location = config.paths.clientAssets;
-            } else {
-                location = path.join(appRoot, '/core/built/assets/');
-            }
-        } catch (e) {
-            location = path.join(appRoot, '/core/built/assets/');
-        }
-
-        if (process.env.NODE_ENV === 'production') {
-            // Production uses `.min` files
-            fileNames = fileNames.map(function (file) {
-                return file.replace('.', '.min.');
-            });
-        }
-
-        function checkExist(fileName) {
-            try {
-                fs.statSync(fileName);
-            } catch (e) {
-                console.error('\x1B[31mERROR: Javascript files have not been built.\033[0m');
-                process.exit(exitCodes.BUILT_FILES_DO_NOT_EXIST);
-            }
-        }
-
-        fileNames.forEach(function (fileName) {
-            checkExist(location + fileName);
-        });
     }
 };
 

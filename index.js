@@ -1,6 +1,6 @@
 
 var express,
-    blogme,
+	appInit,
     parentApp,
     errors;
 
@@ -9,14 +9,14 @@ require('./core/server/utils/startup-check').check();
 
 // Proceed with startup
 express = require('express');
-blogme = require('./core'); //加载./core/index.js
-errors = require('./core/server/errors');
+appInit = require('./core'); //加载./core/index.js
+errors  = require('./core/server/errors');
 
 // Create our parent express app instance.
 parentApp = express();
 
 //  get an instance of AppServer
-blogme().then(function (server) {
+appInit().then(function (server) {
     // Mount our  instance on our desired subdirectory path if it exists.
     parentApp.use(server.config.paths.subdir, server.rootApp);
 
