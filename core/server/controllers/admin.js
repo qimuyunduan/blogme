@@ -1,7 +1,6 @@
 var _             = require('lodash'),
     api           = require('../api'),
     errors        = require('../errors'),
-    updateCheck   = require('../update-check'),
     config        = require('../config'),
     adminControllers;
 

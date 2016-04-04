@@ -49,8 +49,6 @@ function init(options) {
 
     // Load our config.js file from the local file system.
     return config.load(options.config).then(function () {
-        return config.checkDeprecated();
-    }).then(function () {
         // Initialise the models
         return models.init();
     }).then(function () {
