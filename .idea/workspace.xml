@@ -2,7 +2,692 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/img/favicon.ico" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/changepwd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/g.bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/g.dot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/g.line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/g.pie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/g.raphael.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/raphael-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/raphael.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/barchart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/hbarchart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/linechart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/linechart2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/linechart3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/chart/test/piechart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/baidu_map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/combox/city_all.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/combox/city_bj.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/combox/city_sh.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/common/ajaxDone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/common/ajaxDone.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/common/ajaxTimeout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/common/dwz-team.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/db_attachmentBrightBack.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/db_attachmentLookup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/db_lookupSuggest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/db_select.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/db_widget.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/dwzOrgLookup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/dwzOrgLookup2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/treeBringBack.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/database/treeLookup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/ajaxDone1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/ajaxDone2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/ajaxDone3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/dialog1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/dialog2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/layout1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/layout2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/list1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/list2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/pagination/list3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/sortDrag/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/sortDrag/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo/sortDrag/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_page1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_page2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_page4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_page5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_page6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/demo_upload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/dwz.frag.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/index_menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.alertMsg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.barDrag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.checkbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.combox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.contextmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.cssTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.database.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.dialogDrag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.drag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.effects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.history.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.navTab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.pagination.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.panel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.print.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.regional.zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.resize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.scrollCenter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.sortDrag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.stable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.switchEnv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.taskBar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.tree.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.util.date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.util.number.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/dwz.validate.method.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery-1.11.3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery-1.11.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery-2.1.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery-2.1.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery.bgiframe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery.easing.1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery.validate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/jquery.validate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/js/speedup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/login_dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/newPage1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/newPage2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/newPage3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/sidebar_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/sidebar_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/tabsPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/test_print.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/accordion/accordion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/account_info_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/alert/alertpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/alert/alertpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/button/button_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/button/imgX.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/button/imgX.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/dialog/dialogpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/dialog/dialogpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/form/input_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/form/input_bt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/grid/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/grid/resizeCol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/grid/tableth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/layout/taskbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/layout/taskbar_control.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/layout/taskbar_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/layout/toggleSidebar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/listLine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/menu/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/order_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/order_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/pageHeader_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/panel/panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/panel/panel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/preview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/progressBar/progressBar_l.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/progressBar/progressBar_m.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/progressBar/progressBar_s.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/search-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/search-bt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_c_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_c_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_c_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_f_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_f_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_f_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_h_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_h_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/shadow/shadow_h_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tabs/tabscontrol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tabs/tabspage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tabs/tabspage_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tabs/tabspanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tree/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/images/tree/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/azure/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/css/core.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/css/ieHack.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/css/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/accordion/accordion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/account_info_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/alert/alertpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/alert/alertpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/button_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/imgX.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/toleft.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/toleftone.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/toright.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/button/torightone.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/dialog/dialogpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/dialog/dialogpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/form/input_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/form/input_bt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/grid/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/grid/resizeCol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/grid/tableth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/layout/taskbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/layout/taskbar_control.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/layout/taskbar_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/layout/toggleSidebar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/listLine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_content_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_list.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_sub.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/login_title.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/menu/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/order_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/order_up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/pageHeader_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/panel/panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/panel/panel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/progressBar/progressBar_l.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/progressBar/progressBar_m.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/progressBar/progressBar_s.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/search-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/search-bt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_c_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_c_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_c_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_f_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_f_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_f_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_h_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_h_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/shadow/shadow_h_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tabs/tabscontrol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tabs/tabspage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tabs/tabspage_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tabs/tabspanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/themeButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tree/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/images/tree/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/default/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/accordion/accordion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/account_info_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/alert/alertpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/alert/alertpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/button/button_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/button/imgX.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/dialog/dialogpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/dialog/dialogpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/form/input_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/form/input_bt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/grid/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/grid/resizeCol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/grid/tableth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/layout/toggleSidebar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/listLine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/pageHeader_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/panel/panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/panel/panel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/tabs/tabscontrol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/tabs/tabspage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/tabs/tabspage_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/tabs/tabspanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/images/tree/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/green/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/accordion/accordion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/account_info_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/alert/alertpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/alert/alertpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/button/button_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/button/imgX.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/dialog/dialogpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/dialog/dialogpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/form/input_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/form/input_bt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/grid/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/grid/resizeCol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/grid/tableth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/layout/taskbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/layout/taskbar_control.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/layout/taskbar_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/layout/toggleSidebar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/login_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/login_content_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/login_header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/login_list.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/menu/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/pageHeader_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/panel/panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/panel/panel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/progressBar/progressBar_l.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/progressBar/progressBar_m.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/progressBar/progressBar_s.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_c_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_c_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_c_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_f_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_f_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_f_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_h_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_h_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/shadow/shadow_h_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tabs/tabscontrol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tabs/tabspage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tabs/tabspage_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tabs/tabspanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tree/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/images/tree/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/purple/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/accordion/accordion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/account_info_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/alert/alertpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/alert/alertpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/button/button_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/button/imgX.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/dialog/dialogpanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/dialog/dialogpanel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/form/input_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/form/input_bt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/grid/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/grid/resizeCol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/grid/tableth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/header_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/layout/taskbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/layout/taskbar_control.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/layout/taskbar_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/layout/toggleSidebar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/listLine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/menu/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/pageHeader_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/panel/panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/panel/panel_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/progressBar/progressBar_l.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/progressBar/progressBar_m.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/progressBar/progressBar_s.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_c_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_c_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_c_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_f_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_f_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_f_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_h_c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_h_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/shadow/shadow_h_r.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tabs/tabscontrol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tabs/tabspage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tabs/tabspage_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tabs/tabspanel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tree/check.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/images/tree/tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/themes/silver/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/css/uploadify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/img/add.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/img/cancel.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/img/delete.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/img/upload.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/img/uploadify-cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/scripts/jquery.uploadify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/scripts/jquery.uploadify.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/uploadify/scripts/uploadify.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/validate_remote.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_alert.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_combox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_datepicker.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_editor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_panel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_removeSelected.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_textInput.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_uploadify.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/w_validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/window_open.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor-1.2.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/angry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/awkward.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/bye.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/config.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/crazy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/curse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/cute.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/despise.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/doubt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/envy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/fastcry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/knock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/laugh.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/mad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/ohmy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/panic.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/proud.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/quiet.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/sad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/shutup.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/shy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/sleep.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/struggle.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/titter.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/tongue.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/wail.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/default/wronged.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/alien.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/angel.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/angry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/bandit.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/biglaugh.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/blink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/blush.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/config.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/depres.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/devil.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/glare.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/heart.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/joyful.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/laugh.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/magician.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/ninja.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/pinch.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/police.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/sad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/sick.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/sideways.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/sleep.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/surprised.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/tongue.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/unsure.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/w00t.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/whistling.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/wondering.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/ipb/wub.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/17.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/18.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/19.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/20.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/21.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/22.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/23.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/24.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/25.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/26.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/27.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/28.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/29.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/30.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/31.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/32.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/33.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/34.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/35.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/36.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/37.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/38.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/39.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/40.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/7.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/8.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/msn/9.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/angry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/bad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/blush.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/brokenheart.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/bye.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/coffee.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/config.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/curse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/cute.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/devil.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/envy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/gift.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/good.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/laugh.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/love.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/music.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/question.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/rose.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/sad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/shocked.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/shout.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/sick.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/sleepy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/soccer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/sweat.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/tired.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/tongue.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/victory.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_emot/pidgin/wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_lang/zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/html2markdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/htmldomparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/add.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/bg1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/bg2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/btnbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/btnbgr.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/clear.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/img/start.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/multiupload.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/multiupload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/multiupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/showdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_plugins/ubb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-address.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-div.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-h6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-p.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/tag-pre.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/waiting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/wmp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/img/wordimg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/default/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-address.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-div.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-h6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-p.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/tag-pre.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/waiting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/wmp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/img/wordimg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/nostyle/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/buttonbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-address.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-div.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-h6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-p.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/tag-pre.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/waiting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/wmp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/img/wordimg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007blue/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/buttonbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-address.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-div.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-h6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-p.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/tag-pre.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/waiting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/wmp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/img/wordimg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/o2007silver/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/buttonbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/flash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/progressbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-address.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-div.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-h6.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-p.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/tag-pre.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/titlebg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/waiting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/wmp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/img/wordimg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/apps/xheditor/xheditor_skin/vista/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/css/screen.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/fonts/casper-icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/fonts/casper-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/fonts/casper-icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/fonts/casper-icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/js/jquery.1.12.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/assets/js/jquery.fitvids.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/author.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/default.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/index.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/page.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/partials/loop.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/partials/navigation.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/post.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/themes/casper/tag.hbs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/built/assets/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/built/assets/app.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/built/assets/vendor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/built/assets/vendor.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/shared/favicon.ico" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/app.css" afterPath="$PROJECT_DIR$/core/assets/app.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/app.min.css" afterPath="$PROJECT_DIR$/core/assets/app.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/core/assets/fonts/icons.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/core/assets/fonts/icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/core/assets/fonts/icons.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/core/assets/fonts/icons.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/404.png" afterPath="$PROJECT_DIR$/core/assets/img/404.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/404@2x.png" afterPath="$PROJECT_DIR$/core/assets/img/404@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/icon.jpg" afterPath="$PROJECT_DIR$/core/assets/img/icon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/install-welcome.png" afterPath="$PROJECT_DIR$/core/assets/img/install-welcome.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/invite-placeholder.png" afterPath="$PROJECT_DIR$/core/assets/img/invite-placeholder.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/large.png" afterPath="$PROJECT_DIR$/core/assets/img/large.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/loadingcat.gif" afterPath="$PROJECT_DIR$/core/assets/img/loadingcat.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/logo.png" afterPath="$PROJECT_DIR$/core/assets/img/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/medium.png" afterPath="$PROJECT_DIR$/core/assets/img/medium.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/small.png" afterPath="$PROJECT_DIR$/core/assets/img/small.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/touch-icon-ipad.png" afterPath="$PROJECT_DIR$/core/assets/img/touch-icon-ipad.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/touch-icon-iphone.png" afterPath="$PROJECT_DIR$/core/assets/img/touch-icon-iphone.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/user-cover.png" afterPath="$PROJECT_DIR$/core/assets/img/user-cover.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/user-image.png" afterPath="$PROJECT_DIR$/core/assets/img/user-image.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/img/users.png" afterPath="$PROJECT_DIR$/core/assets/img/users.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/vendor.css" afterPath="$PROJECT_DIR$/core/assets/vendor.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/built/assets/vendor.min.css" afterPath="$PROJECT_DIR$/core/assets/vendor.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/shared/robots.txt" afterPath="$PROJECT_DIR$/core/shared/robots.txt" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,85 +708,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="url.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/config/url.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/config/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="logo.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/built/assets/img/logo.png">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/logo.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadingcat.gif" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/built/assets/img/loadingcat.gif">
+      <file leaf-file-name="large.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/large.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bad-request-error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/errors/bad-request-error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="loadingcat.gif" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/loadingcat.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data-import-error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/errors/data-import-error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="request-too-large-error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/errors/request-too-large-error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="small.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/small.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/users.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404@2x.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/404@2x.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="medium.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/medium.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/404.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/assets/img/icon.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -124,7 +797,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/mail/index.js" />
         <option value="$PROJECT_DIR$/core/server/mail/templates/invite-user.html" />
         <option value="$PROJECT_DIR$/core/server/errors/index.js" />
         <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
@@ -175,6 +847,7 @@
         <option value="$PROJECT_DIR$/npm-shrinkwrap.json" />
         <option value="$PROJECT_DIR$/core/server/events/index.js" />
         <option value="$PROJECT_DIR$/core/server/data/db/connection.js" />
+        <option value="$PROJECT_DIR$/core/shared/robots.txt" />
       </list>
     </option>
   </component>
@@ -184,8 +857,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="74" />
+    <option name="y" value="23" />
+    <option name="width" value="1846" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -213,6 +888,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,24 +935,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -292,382 +950,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="permissions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schema" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="built" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -686,10 +968,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="built" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -717,7 +995,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -729,11 +1006,12 @@
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvmsource/versions/node/v4.2.1/bin/node" />
     <property name="SearchEverywhereHistoryKey" value="mian-nav&#9;null&#9;null&#10;MENU&#9;null&#9;null" />
     <property name="javascript.nodejs.core.library.configured.version" value="4.2.1" />
-    <property name="FullScreen" value="true" />
     <property name="js-jscs-package" value="$PROJECT_DIR$/node_modules/jscs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/assets/img" />
+      <recent name="$PROJECT_DIR$/core" />
       <recent name="$PROJECT_DIR$/content/themes/casper" />
     </key>
   </component>
@@ -910,7 +1188,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459646081557</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="delete some modules">
+      <created>1459646230213</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1459646230213</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -923,27 +1207,46 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="74" y="23" width="1846" height="1057" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19342466" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2381423" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2381423" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -985,149 +1288,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/errors/bad-request-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/data-import-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/request-too-large-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/is.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12464986">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/input_password.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/meta_title.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43557423">
-          <caret line="34" column="87" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/meta_description.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/pagination.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19467787">
-          <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/plural.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3347339">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/page_url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.62963">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/post_class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/prev_next.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3347339">
-          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/tags.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/title.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/helpers/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1197,13 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.589613">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/data/schema/commands.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.3350306">
@@ -1211,7 +1365,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/fonts/icons.svg">
+    <entry file="file://$PROJECT_DIR$/core/assets/fonts/icons.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9689609">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1253,18 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30282637">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/config/url.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1278,7 +1420,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1287,36 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.2597578">
           <caret line="932" column="9" selection-start-line="932" selection-start-column="9" selection-end-line="932" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/bad-request-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/data-import-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/errors/request-too-large-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,20 +1453,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/errors/data-import-error.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/errors/request-too-large-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/shared/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025406504">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/logo.png">
+    <entry file="file://$PROJECT_DIR$/core/shared/private-robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/shared/url.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5249.2646">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/errors/bad-request-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12703252">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/vendor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078947365">
+          <caret line="407" column="11" selection-start-line="407" selection-start-column="11" selection-end-line="407" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/vendor.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/user-error.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/default.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7352941">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo/database/db_attachmentBrightBack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3343983">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding>
+            <element signature="e#175#592#0" expanded="false" />
+            <element signature="e#604#1317#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/storage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/404.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/built/assets/img/loadingcat.gif">
+    <entry file="file://$PROJECT_DIR$/core/assets/img/icon.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/large.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/small.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/users.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/404@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/medium.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/user-cover.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/loadingcat.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/assets/img/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
