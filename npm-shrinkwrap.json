@@ -915,11 +915,6 @@
         }
       }
     },
-    "ghost-gql": {
-      "version": "0.0.3",
-      "from": "ghost-gql@0.0.3",
-      "resolved": "https://registry.npmjs.org/ghost-gql/-/ghost-gql-0.0.3.tgz"
-    },
     "glob": {
       "version": "5.0.15",
       "from": "glob@5.0.15",
