@@ -140,7 +140,6 @@ checks = {
             console.error(errorHeader);
             console.error('  ' + e.message);
             console.error('\n' + errorHelp);
-
             process.exit(exitCodes.CONTENT_PATH_NOT_WRITABLE);
         }
     },
@@ -178,7 +177,7 @@ checks = {
             configFile = require(configFilePath);
             config = configFile[mode];
         } catch (e) {
-            configFilePath = path.join(appRoot, 'config.example.js');
+            configFilePath = path.join(appRoot, 'config.js');
         }
 
         if (!config.mail || !config.mail.transport) {

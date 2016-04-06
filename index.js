@@ -17,8 +17,6 @@ parentApp = express();
 
 //  get an instance of AppServer
 appInit().then(function (server) {
-    // Mount our  instance on our desired subdirectory path if it exists.
-    parentApp.use(server.config.paths.subdir, server.rootApp);
 
     //  starting our server instance.
     server.start(parentApp);

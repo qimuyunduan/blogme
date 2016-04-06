@@ -9,7 +9,6 @@ var bodyParser      = require('body-parser'),
     storage         = require('../storage'),
     passport        = require('passport'),
     utils           = require('../utils'),
-    sitemapHandler  = require('../data/xml/sitemap/handler'),
     authStrategies   = require('./auth-strategies'),
     busboy           = require('./ghost-busboy'),
     auth             = require('./auth'),
@@ -24,7 +23,6 @@ var bodyParser      = require('body-parser'),
     staticTheme      = require('./static-theme'),
     themeHandler     = require('./theme-handler'),
     uncapitalise     = require('./uncapitalise'),
-
     ClientPasswordStrategy  = require('passport-oauth2-client-password').Strategy,
     BearerStrategy          = require('passport-http-bearer').Strategy,
 
@@ -74,9 +72,6 @@ setupMiddleware = function setupMiddleware(App, adminApp) {
     // Favicon
     App.use(serveSharedFile('favicon.ico', 'image/x-icon', utils.ONE_DAY_S));
 
-    // Ghost-Url
-    App.use(serveSharedFile('shared/url.js', 'application/javascript', utils.ONE_HOUR_S));
-    App.use(serveSharedFile('shared/url.min.js', 'application/javascript', utils.ONE_HOUR_S));
 
     // Static assets
     App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_HOUR_MS}));

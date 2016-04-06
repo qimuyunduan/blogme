@@ -13,29 +13,6 @@ var express     = require('express'),
     server      = require('./server'),
     dbHash;
 
-function initDbHashAndFirstRun() {
-
-    return api.settings.read({key: 'dbHash', context: {internal: true}})
-		.then(function (response) {
-
-        var hash = response.settings[0].value,
-            initHash;
-
-        dbHash = hash;
-
-        if (dbHash === null) {
-            initHash = uuid.v4();
-            return api.settings.edit({settings: [{key: 'dbHash', value: initHash}]}, {context: {internal: true}})
-                .then(function (response) {
-                    dbHash = response.settings[0].value;
-                    return dbHash;
-                });
-        }
-
-        return dbHash;
-    });
-}
-
 
 // Sets up the express server instances, runs init on a bunch of stuff, configures views, helpers, routes and more
 // Finally it returns an instance of Server
@@ -58,14 +35,7 @@ function init(options) {
         // Initialize the settings cache
         return api.init();
     }).then(function () {
-        // Initialize the permissions actions and objects
-        // NOTE: Must be done before initDbHashAndFirstRun calls
         return permissions.init();
-    }).then(function () {
-        return Promise.join(
-            // Check for or initialise a dbHash.
-            initDbHashAndFirstRun()
-        );
     }).then(function () {
 
         var adminHbs = hbs.create();
