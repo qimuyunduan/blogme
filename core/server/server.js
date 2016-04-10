@@ -16,9 +16,9 @@ function Server(rootApp) {
 }
 
 
-Server.prototype.start = function (externalApp) {
+Server.prototype.start = function () {
 	var self    = this,
-		rootApp = externalApp ? externalApp : self.rootApp;
+		rootApp = self.rootApp;
 
 	return new Promise(function (resolve) {
 		//TODO 添加监听端口

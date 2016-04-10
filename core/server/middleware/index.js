@@ -1,14 +1,14 @@
-var bodyParser      = require('body-parser'),
-    config          = require('../config'),
-    errors          = require('../errors'),
-    express         = require('express'),
-    logger          = require('morgan'),
-    path            = require('path'),
-    routes          = require('../routes'),
-    slashes         = require('connect-slashes'),
-    storage         = require('../storage'),
-    passport        = require('passport'),
-    utils           = require('../utils'),
+var bodyParser       = require('body-parser'),
+    config           = require('../config'),
+    errors           = require('../errors'),
+    express          = require('express'),
+    logger           = require('morgan'),
+    path             = require('path'),
+    routes           = require('../routes'),
+    slashes          = require('connect-slashes'),
+    storage          = require('../storage'),
+    passport         = require('passport'),
+    utils            = require('../utils'),
     authStrategies   = require('./auth-strategies'),
     busboy           = require('./ghost-busboy'),
     auth             = require('./auth'),
@@ -45,7 +45,7 @@ middleware = {
     }
 };
 
-setupMiddleware  = function setupMiddleware(App, adminApp) {
+setupMiddleware  = function setupMiddleware(App) {
     var logging  = config.logging,
         corePath = config.paths.corePath;
 
@@ -90,7 +90,6 @@ setupMiddleware  = function setupMiddleware(App, adminApp) {
     //       which do not need HTTPS. In fact, if HTTPS is forced on them, then 404 page might
     //       not display properly when HTTPS is not available!
     App.use(checkSSL);
-    adminApp.set('views', config.paths.adminViews);
 
     // Theme only config
     App.use(staticTheme());
@@ -99,11 +98,6 @@ setupMiddleware  = function setupMiddleware(App, adminApp) {
     App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     App.use(privateBlogging.filterPrivateRoutes);
 
-    // Serve sitemap.html file
-    App.use(serveSharedFile('sitemap.xsl', 'text/xsl', utils.ONE_DAY_S));
-
-    // Serve robots.txt if not found in theme
-    App.use(serveSharedFile('robots.txt', 'text/plain', utils.ONE_HOUR_S));
 
     // site map
     sitemapHandler(App);
@@ -125,9 +119,7 @@ setupMiddleware  = function setupMiddleware(App, adminApp) {
     // ### Caching
 
     App.use(cacheControl('public'));
-    // Admin shouldn't be cached
-    adminApp.use(cacheControl('private'));
-    // API shouldn't be cached
+
     App.use(routes.apiBaseUri, cacheControl('private'));
 
     // local data
@@ -136,11 +128,6 @@ setupMiddleware  = function setupMiddleware(App, adminApp) {
     // ### Routing
     // Set up API routes
     App.use(routes.apiBaseUri, routes.api(middleware));
-
-    // Mount admin express app to /ghost and set up routes
-    adminApp.use(redirectToSetup);
-    adminApp.use(routes.admin());
-    App.use('/admin', adminApp);
 
     // Set up Frontend routes
     App.use(routes.frontend(middleware));

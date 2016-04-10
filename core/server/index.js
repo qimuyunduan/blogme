@@ -17,8 +17,8 @@ var express     = require('express'),
 // Finally it returns an instance of Server
 function init(options) {
     // Get reference to an express app instance.
-    var app = express(),
-        adminApp = express();
+    var app = express();
+
 
     // It returns a promise that is resolved when the application
     // Load our config.js file from the local file system.
@@ -35,7 +35,7 @@ function init(options) {
         return permissions.init();
     }).then(function () {
 
-        var adminHbs = hbs.create();
+        var Hbs = hbs.create();
         // enabled gzip compression by default
         if (config.server.compress !== false) {
             app.use(compress());
@@ -44,16 +44,13 @@ function init(options) {
         // ## View engine
         // set the view engine
         app.set('view engine', 'hbs');
-
-        // Create a hbs instance for admin and init view engine
-        adminApp.set('view engine', 'hbs');
-        adminApp.engine('hbs', adminHbs.express4({}));
+        app.engine('hbs', Hbs.express4({}));
 
         // Load helpers
-        helpers.loadCoreHelpers(adminHbs);
+        helpers.loadCoreHelpers(Hbs);
 
         // Middleware and Routing
-        middleware(app, adminApp);
+        middleware(app, app);
 
         return new Server(app);
     });
