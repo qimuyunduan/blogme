@@ -6,7 +6,6 @@ var bodyParser       = require('body-parser'),
     path             = require('path'),
     routes           = require('../routes'),
     slashes          = require('connect-slashes'),
-    storage          = require('../storage'),
     passport         = require('passport'),
     utils            = require('../utils'),
     authStrategies   = require('./auth-strategies'),
@@ -74,7 +73,6 @@ setupMiddleware  = function setupMiddleware(App) {
 
     // Static assets
     App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_HOUR_MS}));
-    App.use('/content/images', storage.getStorage().serve());
     App.use('/public', express.static(path.join(corePath, '/built/public'), {maxAge: utils.ONE_YEAR_MS}));
 
     // First determine whether we're serving admin or theme content

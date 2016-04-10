@@ -37,10 +37,7 @@ function init(options) {
 
         var Hbs = hbs.create();
         // enabled gzip compression by default
-        if (config.server.compress !== false) {
-            app.use(compress());
-        }
-
+		app.use(compress());
         // ## View engine
         // set the view engine
         app.set('view engine', 'hbs');
@@ -50,7 +47,7 @@ function init(options) {
         helpers.loadCoreHelpers(Hbs);
 
         // Middleware and Routing
-        middleware(app, app);
+        middleware(app);
 
         return new Server(app);
     });

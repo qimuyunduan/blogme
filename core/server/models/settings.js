@@ -1,5 +1,5 @@
 var Settings,
-    ghostBookshelf = require('./base'),
+    bookshelf = require('./base'),
     uuid           = require('node-uuid'),
     _              = require('lodash'),
     errors         = require('../errors'),
@@ -39,7 +39,7 @@ function getDefaultSettings() {
 
 // Each setting is saved as a separate row in the database,
 // but the overlying API treats them as a single key:value mapping
-Settings = ghostBookshelf.Model.extend({
+Settings = bookshelf.Model.extend({
 
     tableName: 'settings',
 
@@ -55,7 +55,7 @@ Settings = ghostBookshelf.Model.extend({
     },
 
     initialize: function initialize() {
-        ghostBookshelf.Model.prototype.initialize.apply(this, arguments);
+        bookshelf.Model.prototype.initialize.apply(this, arguments);
 
         this.on('created', function (model) {
             model.emitChange('added');
@@ -95,7 +95,7 @@ Settings = ghostBookshelf.Model.extend({
         //    this.set('value', this.sanitize('value'));
         // }
 
-        return ghostBookshelf.Model.prototype.saving.apply(this, arguments);
+        return bookshelf.Model.prototype.saving.apply(this, arguments);
     }
 
 }, {
@@ -104,7 +104,7 @@ Settings = ghostBookshelf.Model.extend({
         if (!_.isObject(options)) {
             options = {key: options};
         }
-        return Promise.resolve(ghostBookshelf.Model.findOne.call(this, options));
+        return Promise.resolve(bookshelf.Model.findOne.call(this, options));
     },
 
     edit: function (data, options) {
@@ -184,5 +184,5 @@ Settings = ghostBookshelf.Model.extend({
 });
 
 module.exports = {
-    Settings: ghostBookshelf.model('Settings', Settings)
+    Settings: bookshelf.model('Settings', Settings)
 };

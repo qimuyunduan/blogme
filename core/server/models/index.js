@@ -40,25 +40,6 @@ function init() {
     return Promise.resolve();
 }
 
-
-// ### deleteAllContent
-// Delete all content from the database (posts, tags, tags_posts)
-exports.deleteAllContent = function deleteAllContent() {
-    var self = this;
-
-    return self.Post.findAll().then(function then(posts) {
-        return Promise.all(_.map(posts.toJSON(), function mapper(post) {
-            return self.Post.destroy({id: post.id});
-        }));
-    }).then(function () {
-        return self.Tag.findAll().then(function then(tags) {
-            return Promise.all(_.map(tags.toJSON(), function mapper(tag) {
-                return self.Tag.destroy({id: tag.id});
-            }));
-        });
-    });
-};
-
 /**
  * Expose `init`
  */

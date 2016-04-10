@@ -21,10 +21,11 @@ Server.prototype.start = function () {
 		rootApp = self.rootApp;
 
 	return new Promise(function (resolve) {
-		//TODO 添加监听端口
+
+		var configEnv = process.env.NODE_ENV;
 		self.httpServer = rootApp.listen(
-				config.server.port,
-				config.server.host
+			config.readFile(configEnv).server.port,
+			config.readFile(configEnv).server.host
 		);
 		self.httpServer.on('error', function (error) {
 			if (error.errno === 'EADDRINUSE') {
