@@ -10,8 +10,7 @@ var express     = require('express'),
     middleware  = require('./middleware'),
     models      = require('./models'),
     permissions = require('./permissions'),
-    server      = require('./server'),
-    dbHash;
+    server      = require('./server');
 
 
 // Sets up the express server instances, runs init on a bunch of stuff, configures views, helpers, routes and more
@@ -22,8 +21,6 @@ function init(options) {
         adminApp = express();
 
     // It returns a promise that is resolved when the application
-
-
     // Load our config.js file from the local file system.
     return config.load(options.config).then(function () {
         // Initialise the models
@@ -58,7 +55,7 @@ function init(options) {
         // Middleware and Routing
         middleware(app, adminApp);
 
-        return new server(app);
+        return new Server(app);
     });
 }
 

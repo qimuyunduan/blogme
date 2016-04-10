@@ -13,7 +13,6 @@ var bodyParser      = require('body-parser'),
     busboy           = require('./ghost-busboy'),
     auth             = require('./auth'),
     cacheControl     = require('./cache-control'),
-    checkSSL         = require('./check-ssl'),
     decideIsAdmin    = require('./decide-is-admin'),
     oauth            = require('./oauth'),
     privateBlogging  = require('./private-blogging'),
@@ -46,8 +45,8 @@ middleware = {
     }
 };
 
-setupMiddleware = function setupMiddleware(App, adminApp) {
-    var logging = config.logging,
+setupMiddleware  = function setupMiddleware(App, adminApp) {
+    var logging  = config.logging,
         corePath = config.paths.corePath;
 
     passport.use(new ClientPasswordStrategy(authStrategies.clientPasswordStrategy));
