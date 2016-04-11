@@ -4,7 +4,6 @@ var Settings,
     _              = require('lodash'),
     errors         = require('../errors'),
     Promise        = require('bluebird'),
-    validation     = require('../data/validation'),
     events         = require('../events'),
     internal       = {context: {internal: true}},
 

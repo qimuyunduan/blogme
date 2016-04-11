@@ -1,10 +1,9 @@
 var Promise         = require('bluebird'),
-    ghostBookshelf  = require('./index'),
+    appBookshelf    = require('./index'),
     errors          = require('../../errors'),
-
     Basetoken;
 
-Basetoken = ghostBookshelf.Model.extend({
+Basetoken = appBookshelf.Model.extend({
 
     user: function user() {
         return this.belongsTo('User');
@@ -31,7 +30,7 @@ Basetoken = ghostBookshelf.Model.extend({
 }, {
     destroyAllExpired:  function destroyAllExpired(options) {
         options = this.filterOptions(options, 'destroyAll');
-        return ghostBookshelf.Collection.forge([], {model: this})
+        return appBookshelf.Collection.forge([], {model: this})
             .query('where', 'expires', '<', Date.now())
             .fetch(options)
             .then(function then(collection) {
@@ -48,7 +47,7 @@ Basetoken = ghostBookshelf.Model.extend({
         options = this.filterOptions(options, 'destroyByUser');
 
         if (userId) {
-            return ghostBookshelf.Collection.forge([], {model: this})
+            return appBookshelf.Collection.forge([], {model: this})
                 .query('where', 'user_id', '=', userId)
                 .fetch(options)
                 .then(function then(collection) {
@@ -69,7 +68,7 @@ Basetoken = ghostBookshelf.Model.extend({
         options = this.filterOptions(options, 'destroyByUser');
 
         if (token) {
-            return ghostBookshelf.Collection.forge([], {model: this})
+            return appBookshelf.Collection.forge([], {model: this})
                 .query('where', 'token', '=', token)
                 .fetch(options)
                 .then(function then(collection) {

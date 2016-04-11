@@ -3,7 +3,6 @@ var _                   = require('lodash'),
     Promise             = require('bluebird'),
     errors              = require('../errors'),
     Models              = require('../models'),
-    effectivePerms      = require('./effective'),
     init,
     refresh,
     canThis,
@@ -19,7 +18,7 @@ function hasActionsMap() {
     });
 }
 
-function 	parseContext(context) {
+function parseContext(context) {
     // Parse what's passed to canThis.beginCheck for standard user and app scopes
     var parsed = {
             internal: false,
@@ -78,14 +77,6 @@ function applyStatusRules(docName, method, opts) {
     return opts.status;
 }
 
-/**
- * API Public Permission Rules
- * This method enforces the rules for public requests
- * @param {String} docName
- * @param {String} method (read || browse)
- * @param {Object} options
- * @returns {Object} options
- */
 function applyPublicRules(docName, method, options) {
     try {
         // If this is a public context

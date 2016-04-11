@@ -8,46 +8,39 @@
 var _          = require('lodash'),
     bookshelf  = require('bookshelf'),
     config     = require('../../config'),
-    db         = require('../../data/db'),
     errors     = require('../../errors'),
-    filters    = require('../../filters'),
     moment     = require('moment'),
     Promise    = require('bluebird'),
     sanitizer  = require('validator').sanitize,
-    schema     = require('../../data/schema'),
     utils      = require('../../utils'),
     uuid       = require('node-uuid'),
-    validation = require('../../data/validation'),
     plugins    = require('../plugins'),
-    ghostBookshelf,
+    appBookshelf,
     proto;
 
 // ### Bookshelf
-// Initializes a new Bookshelf instance called ghostBookshelf, for reference elsewhere in App.
-ghostBookshelf = bookshelf(db.knex);
+// Initializes a new Bookshelf instance called appBookshelf, for reference elsewhere in App.
+appBookshelf = bookshelf(db.knex);
 
 // Load the Bookshelf registry plugin, which helps us avoid circular dependencies
-ghostBookshelf.plugin('registry');
+appBookshelf.plugin('registry');
 
 // Load the App access rules plugin, which handles passing permissions/context through the model layer
-ghostBookshelf.plugin(plugins.accessRules);
+appBookshelf.plugin(plugins.accessRules);
 
 // Load the App filter plugin, which handles applying a 'filter' to findPage requests
-ghostBookshelf.plugin(plugins.filter);
+appBookshelf.plugin(plugins.filter);
 
 // Load the App include count plugin, which allows for the inclusion of cross-table counts
-ghostBookshelf.plugin(plugins.includeCount);
-
-// Load the App pagination plugin, which gives us the `fetchPage` method on Models
-ghostBookshelf.plugin(plugins.pagination);
+appBookshelf.plugin(plugins.includeCount);
 
 // Cache an instance of the base model prototype
-proto = ghostBookshelf.Model.prototype;
+proto = appBookshelf.Model.prototype;
 
-// ## ghostBookshelf.Model
+// ## appBookshelf.Model
 // The Base Model which other App objects will inherit from,
 // including some convenience functions as static properties on the model.
-ghostBookshelf.Model = ghostBookshelf.Model.extend({
+appBookshelf.Model = appBookshelf.Model.extend({
     // Bookshelf `hasTimestamps` - handles created_at and updated_at properties
     hasTimestamps: true,
 
@@ -238,7 +231,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
      * ### Find All
      * Naive find all fetches all the data for a particular model
      * @param {Object} options (optional)
-     * @return {Promise(ghostBookshelf.Collection)} Collection of all Models
+     * @return {Promise(appBookshelf.Collection)} Collection of all Models
      */
     findAll: function findAll(options) {
         options = this.filterOptions(options, 'findAll');
@@ -253,26 +246,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
         });
     },
 
-    /**
-     * ### Find Page
-     * Find results by page - returns an object containing the
-     * information about the request (page, limit), along with the
-     * info needed for pagination (pages, total).
-     *
-     * **response:**
-     *
-     *     {
-     *         posts: [
-     *         {...}, ...
-     *     ],
-     *     page: __,
-     *     limit: __,
-     *     pages: __,
-     *     total: __
-     *     }
-     *
-     * @param {Object} options
-     */
+
     findPage: function findPage(options) {
         options = options || {};
 
@@ -323,7 +297,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
      * Naive find one where data determines what to match on
      * @param {Object} data
      * @param {Object} options (optional)
-     * @return {Promise(ghostBookshelf.Model)} Single Model
+     * @return {Promise(appBookshelf.Model)} Single Model
      */
     findOne: function findOne(data, options) {
         data = this.filterData(data);
@@ -337,7 +311,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
      * Naive edit
      * @param {Object} data
      * @param {Object} options (optional)
-     * @return {Promise(ghostBookshelf.Model)} Edited Model
+     * @return {Promise(appBookshelf.Model)} Edited Model
      */
     edit: function edit(data, options) {
         var id = options.id;
@@ -356,7 +330,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
      * Naive add
      * @param {Object} data
      * @param {Object} options (optional)
-     * @return {Promise(ghostBookshelf.Model)} Newly Added Model
+     * @return {Promise(appBookshelf.Model)} Newly Added Model
      */
     add: function add(data, options) {
         data = this.filterData(data);
@@ -374,7 +348,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
      * ### Destroy
      * Naive destroy
      * @param {Object} options (optional)
-     * @return {Promise(ghostBookshelf.Model)} Empty Model
+     * @return {Promise(appBookshelf.Model)} Empty Model
      */
     destroy: function destroy(options) {
         var id = options.id;
@@ -389,7 +363,7 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
     /**
     * ### Generate Slug
      * Create a string to act as the permalink for an object.
-     * @param {ghostBookshelf.Model} Model Model type to generate a slug for
+     * @param {appBookshelf.Model} Model Model type to generate a slug for
      * @param {String} base The string for which to generate a slug, usually a title or name
      * @param {Object} options Options to pass to findOne
      * @return {Promise(String)} Resolves to a unique slug string
@@ -499,4 +473,4 @@ ghostBookshelf.Model = ghostBookshelf.Model.extend({
 });
 
 // Export Bookshelf for use elsewhere
-module.exports = ghostBookshelf;
+module.exports = appBookshelf;
