@@ -5,10 +5,10 @@
 /*global require, module */
 
 var _           = require('lodash'),
-    api         = require('../../api'),
+    api         = require('../api/index'),
     path        = require('path'),
-    config      = require('../../config'),
-    errors      = require('../../errors'),
+    config      = require('../config/index'),
+    errors      = require('../errors/index'),
     filters     = require('../../filters'),
     Promise     = require('bluebird'),
     templates   = require('./templates'),

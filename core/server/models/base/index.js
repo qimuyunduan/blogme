@@ -3,7 +3,6 @@
 // several basic behaviours such as UUIDs, as well as a set of Data methods for accessing information from the database.
 //
 // The models are internal to App, only the API and some internal functions such as migration and import/export
-// accesses the models directly. All other parts of App, including the blog frontend, admin UI, and apps are only
 // allowed to access data via the API.
 var _          = require('lodash'),
     bookshelf  = require('bookshelf'),
@@ -11,31 +10,21 @@ var _          = require('lodash'),
     errors     = require('../../errors'),
     moment     = require('moment'),
     Promise    = require('bluebird'),
-    sanitizer  = require('validator').sanitize,
     utils      = require('../../utils'),
     uuid       = require('node-uuid'),
-    plugins    = require('../plugins'),
+	nodeEnv    = process.env.NODE_ENV,
+	dbEnv,
     appBookshelf,
     proto;
 
 // ### Bookshelf
 // Initializes a new Bookshelf instance called appBookshelf, for reference elsewhere in App.
-appBookshelf = bookshelf(db.knex);
+dbEnv = config.readFile(nodeEnv).database;
+var knex = require('knex')(dbEnv);
+appBookshelf = bookshelf(knex);
 
 // Load the Bookshelf registry plugin, which helps us avoid circular dependencies
 appBookshelf.plugin('registry');
-
-// Load the App access rules plugin, which handles passing permissions/context through the model layer
-appBookshelf.plugin(plugins.accessRules);
-
-// Load the App filter plugin, which handles applying a 'filter' to findPage requests
-appBookshelf.plugin(plugins.filter);
-
-// Load the App include count plugin, which allows for the inclusion of cross-table counts
-appBookshelf.plugin(plugins.includeCount);
-
-// Cache an instance of the base model prototype
-proto = appBookshelf.Model.prototype;
 
 // ## appBookshelf.Model
 // The Base Model which other App objects will inherit from,
@@ -43,11 +32,6 @@ proto = appBookshelf.Model.prototype;
 appBookshelf.Model = appBookshelf.Model.extend({
     // Bookshelf `hasTimestamps` - handles created_at and updated_at properties
     hasTimestamps: true,
-
-    // App option handling - get permitted attributes from server/data/schema.js, where the DB schema is defined
-    permittedAttributes: function permittedAttributes() {
-        return _.keys(schema.tables[this.tableName]);
-    },
 
     // Bookshelf `defaults` - default values setup on every model creation
     defaults: function defaults() {
@@ -172,10 +156,6 @@ appBookshelf.Model = appBookshelf.Model.extend({
 
         // @TODO upgrade bookshelf & knex and use serialize & toJSON to do this in a neater way (see #6103)
         return proto.finalize.call(this, attrs);
-    },
-
-    sanitize: function sanitize(attr) {
-        return sanitizer(this.get(attr)).xss();
     },
 
     // Get attributes that have been updated (values before a .save() call)

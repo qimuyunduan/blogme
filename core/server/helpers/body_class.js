@@ -9,7 +9,7 @@
 var hbs             = require('express-hbs'),
     _               = require('lodash'),
     // @TODO Fix this
-    template        = require('../controllers/frontend/templates'),
+    template        = require('../controllers/templates'),
     body_class;
 
 body_class = function (options) {

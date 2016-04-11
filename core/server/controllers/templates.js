@@ -3,7 +3,7 @@
 // Figure out which template should be used to render a request
 // based on the templates which are allowed, and what is available in the theme
 var _      = require('lodash'),
-    config = require('../../config');
+    config = require('../config/index');
 
 function getActiveThemePaths(activeTheme) {
     return config.paths.availableThemes[activeTheme];
