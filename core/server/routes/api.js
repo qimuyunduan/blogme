@@ -5,13 +5,13 @@ var express     = require('express'),
 
 apiRoutes = function apiRoutes(middleware) {
     var router = express.Router(),
-        // Authentication for public endpoints
+
         authenticatePublic = [
             middleware.api.authenticateClient,
             middleware.api.authenticateUser,
             middleware.api.requiresAuthorizedUserPublicAPI
         ],
-        // Require user for private endpoints
+
         authenticatePrivate = [
             middleware.api.authenticateClient,
             middleware.api.authenticateUser,
@@ -21,9 +21,6 @@ apiRoutes = function apiRoutes(middleware) {
     // alias delete with del
     router.del = router.delete;
 
-    // ## Configuration
-    router.get('/configuration', authenticatePrivate, api.http(api.configuration.browse));
-    router.get('/configuration/:key', authenticatePrivate, api.http(api.configuration.read));
 
     // ## Posts
     router.get('/posts', authenticatePublic, api.http(api.posts.browse));

@@ -8,12 +8,9 @@ var bodyParser       = require('body-parser'),
     slashes          = require('connect-slashes'),
     passport         = require('passport'),
     utils            = require('../utils'),
-    authStrategies   = require('./auth-strategies'),
-    busboy           = require('./ghost-busboy'),
-    auth             = require('./auth'),
+    busboy           = require('./busboy'),
     cacheControl     = require('./cache-control'),
     decideIsAdmin    = require('./decide-is-admin'),
-    oauth            = require('./oauth'),
     privateBlogging  = require('./private-blogging'),
     redirectToSetup  = require('./redirect-to-setup'),
     serveSharedFile  = require('./serve-shared-file'),
@@ -21,9 +18,6 @@ var bodyParser       = require('body-parser'),
     staticTheme      = require('./static-theme'),
     themeHandler     = require('./theme-handler'),
     uncapitalise     = require('./uncapitalise'),
-    ClientPasswordStrategy  = require('passport-oauth2-client-password').Strategy,
-    BearerStrategy          = require('passport-http-bearer').Strategy,
-
     middleware,
     setupMiddleware;
 
@@ -34,7 +28,6 @@ middleware = {
     cacheControl: cacheControl,
     spamPrevention: spamPrevention,
     privateBlogging: privateBlogging,
-    oauth: oauth,
     api: {
         authenticateClient: auth.authenticateClient,
         authenticateUser: auth.authenticateUser,
@@ -45,14 +38,9 @@ middleware = {
 };
 
 setupMiddleware  = function setupMiddleware(App) {
+
     var logging  = config.logging,
         corePath = config.paths.corePath;
-
-    passport.use(new ClientPasswordStrategy(authStrategies.clientPasswordStrategy));
-    passport.use(new BearerStrategy(authStrategies.bearerStrategy));
-
-    // Initialize OAuth middleware
-    oauth.init();
 
     // Make sure 'req.secure' is valid for proxied requests
     // (X-Forwarded-Proto header will be checked, if present)
@@ -97,8 +85,6 @@ setupMiddleware  = function setupMiddleware(App) {
     App.use(privateBlogging.filterPrivateRoutes);
 
 
-    // site map
-    sitemapHandler(App);
 
     // Add in all trailing slashes
     App.use(slashes(true, {
@@ -111,8 +97,6 @@ setupMiddleware  = function setupMiddleware(App) {
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));
     App.use(bodyParser.urlencoded({extended: true, limit: '1mb'}));
-
-    App.use(passport.initialize());
 
     // ### Caching
 

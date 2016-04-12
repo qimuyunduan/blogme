@@ -1,6 +1,3 @@
-/**
- * Main controller for Ghost frontend
- */
 
 /*global require, module */
 
@@ -9,15 +6,12 @@ var _           = require('lodash'),
     path        = require('path'),
     config      = require('../config/index'),
     errors      = require('../errors/index'),
-    filters     = require('../../filters'),
     Promise     = require('bluebird'),
     templates   = require('./templates'),
     routeMatch  = require('path-match')(),
-    handleError = require('./error'),
-    formatResponse = require('./format-response'),
-    setResponseContext = require('./context'),
-    setRequestIsSecure = require('./secure'),
-
+    handleError         = require('./error'),
+    formatResponse      = require('./format-response'),
+    setRequestIsSecure  = require('./secure'),
     frontendControllers,
     staticPostPermalink = routeMatch('/:slug/:edit?');
 
@@ -28,6 +22,7 @@ var _           = require('lodash'),
 * Returns a function that takes the post to be rendered.
 */
 function renderPost(req, res) {
+
     return function renderPost(post) {
         var view = templates.single(req.app.get('activeTheme'), post),
             response = formatResponse.single(post);

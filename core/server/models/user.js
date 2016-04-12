@@ -3,7 +3,7 @@ var _              = require('lodash'),
     errors         = require('../errors'),
     utils          = require('../utils'),
     bcrypt         = require('bcryptjs'),
-    appBookshelf = require('./base'),
+    appBookshelf   = require('./base'),
     crypto         = require('crypto'),
     validator      = require('validator'),
     events         = require('../events'),
@@ -27,39 +27,19 @@ function generatePasswordHash(password) {
     });
 }
 
+
 User = appBookshelf.Model.extend({
 
     tableName: 'users',
 
-    saving: function saving(newPage, attr, options) {
+    saving: function saving() {
 
         var self = this;
 
-        appBookshelf.Model.prototype.saving.apply(this, arguments);
-
-        if (this.hasChanged('slug') || !this.get('slug')) {
-            // Generating a slug requires a db call to look for conflicting slugs
-            return appBookshelf.Model.generateSlug(User, this.get('slug') || this.get('name'),
-                {status: 'all', transacting: options.transacting, shortSlug: !this.get('slug')})
-                .then(function then(slug) {
-                    self.set({slug: slug});
-                });
-        }
     },
 
     validate: function validate() {
-        var opts = arguments[1],
-            userData;
 
-        if (opts && _.has(opts, 'validate') && opts.validate === false) {
-            return;
-        }
-
-        // use the base toJSON since this model's overridden toJSON
-        // removes fields and we want everything to run through the validator.
-        userData = appBookshelf.Model.prototype.toJSON.call(this);
-
-        return validation.validateSchema(this.tableName, userData);
     },
 
     toJSON: function toJSON(options) {
@@ -235,9 +215,6 @@ User = appBookshelf.Model.extend({
         });
     },
 
-    permissible: function permissible() {
-    },
-
     // Finds the user by email, and checks the password
     check: function check(object) {
         var self = this,
@@ -355,8 +332,7 @@ User = appBookshelf.Model.extend({
     },
 
     validateToken: function validateToken(token, dbHash) {
-        /*jslint bitwise:true*/
-        // TODO: Is there a chance the use of ascii here will cause problems if oldPassword has weird characters?
+
         var tokenText = new Buffer(token, 'base64').toString('ascii'),
             parts,
             expires,
@@ -376,13 +352,10 @@ User = appBookshelf.Model.extend({
             return Promise.reject(new errors.BadRequestError('errors.models.user.invalidTokenExpiration'));
         }
 
-        // Check if token is expired to prevent replay attacks
         if (expires < Date.now()) {
             return Promise.reject(new errors.ValidationError('errors.models.user.expiredToken'));
         }
 
-        // to prevent brute force attempts to reset the password the combination of email+expires is only allowed for
-        // 10 attempts
         if (tokenSecurity[email + '+' + expires] && tokenSecurity[email + '+' + expires].count >= 10) {
             return Promise.reject(new errors.NoPermissionError('errors.models.user.tokenLocked'));
         }
@@ -405,7 +378,6 @@ User = appBookshelf.Model.extend({
                 return email;
             }
 
-            // increase the count for email+expires for each failed attempt
             tokenSecurity[email + '+' + expires] = {
                 count: tokenSecurity[email + '+' + expires] ? tokenSecurity[email + '+' + expires].count + 1 : 1
             };
@@ -450,10 +422,7 @@ User = appBookshelf.Model.extend({
 
     getByEmail: function getByEmail(email, options) {
         options = options || {};
-        // We fetch all users and process them in JS as there is no easy way to make this query across all DBs
-        // Although they all support `lower()`, sqlite can't case transform unicode characters
-        // This is somewhat mute, as validator.isEmail() also doesn't support unicode, but this is much easier / more
-        // likely to be fixed in the near future.
+
         options.require = true;
 
         return Users.forge(options).fetch(options).then(function then(users) {

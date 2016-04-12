@@ -2,7 +2,6 @@
 // Usage: uncapitalise(req, res, next)
 // After:
 // Before:
-// App: Admin|Blog|API
 //
 // Detect upper case in req.path.
 
