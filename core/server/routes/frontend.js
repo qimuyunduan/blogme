@@ -9,8 +9,6 @@ var frontend    = require('../controllers/frontend'),
 frontendRoutes = function frontendRoutes(middleware) {
 
     var router = express.Router(),
-        subdir = config.paths.subdir,
-        routeKeywords = config.routeKeywords,
         privateRouter = express.Router();
 
     // ### Admin routes
@@ -20,12 +18,6 @@ frontendRoutes = function frontendRoutes(middleware) {
     router.get(/^\/signup\/$/, function redirectToSignup(req, res) {
         utils.redirect301(res, subdir + '/ghost/signup/');
     });
-
-    // redirect to /ghost and let that do the authentication to prevent redirects to /ghost//admin etc.
-    router.get(/^\/((ghost-admin|admin|wp-admin|dashboard|signin|login)\/?)$/, function redirectToAdmin(req, res) {
-        utils.redirect301(res, subdir + '/ghost/');
-    });
-
     // password-protected frontend route
     privateRouter.route('/')
         .get(

@@ -1,4 +1,4 @@
-var _             = require('lodash'),
+ var _             = require('lodash'),
     api           = require('../api'),
     errors        = require('../errors'),
     config        = require('../config'),

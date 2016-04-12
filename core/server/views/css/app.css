@@ -5006,7 +5006,7 @@ body > .ember-view:not(.liquid-target-container) {
 }
 
 .gh-flow-invite textarea {
-  background: url(img/invite-placeholder.png) 8px 10px no-repeat;
+  background: url(../img/invite-placeholder.png) 8px 10px no-repeat;
   background-size: 202px 48px;
   box-shadow: none;
   /* Remove some default styling for Firefox (required attribute) */

@@ -2,31 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/accesstoken.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/app-field.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/app-setting.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/base/token.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/client-trusted-domain.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/client.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/permission.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/plugins/access-rules.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/plugins/filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/plugins/include-count.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/plugins/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/post.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/refreshtoken.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/role.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/settings.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/error.js" afterPath="$PROJECT_DIR$/core/server/controllers/error.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/fetch-data.js" afterPath="$PROJECT_DIR$/core/server/controllers/fetch-data.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/format-response.js" afterPath="$PROJECT_DIR$/core/server/controllers/format-response.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/secure.js" afterPath="$PROJECT_DIR$/core/server/controllers/secure.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/controllers/frontend/templates.js" afterPath="$PROJECT_DIR$/core/server/controllers/templates.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/tag.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/app.css" afterPath="$PROJECT_DIR$/core/server/views/css/app.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/app.min.css" afterPath="$PROJECT_DIR$/core/server/views/css/app.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/404.png" afterPath="$PROJECT_DIR$/core/server/views/img/404.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/404@2x.png" afterPath="$PROJECT_DIR$/core/server/views/img/404@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/favicon.ico" afterPath="$PROJECT_DIR$/core/server/views/img/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/icon.jpg" afterPath="$PROJECT_DIR$/core/server/views/img/icon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/install-welcome.png" afterPath="$PROJECT_DIR$/core/server/views/img/install-welcome.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/invite-placeholder.png" afterPath="$PROJECT_DIR$/core/server/views/img/invite-placeholder.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/large.png" afterPath="$PROJECT_DIR$/core/server/views/img/large.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/loadingcat.gif" afterPath="$PROJECT_DIR$/core/server/views/img/loadingcat.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/logo.png" afterPath="$PROJECT_DIR$/core/server/views/img/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/medium.png" afterPath="$PROJECT_DIR$/core/server/views/img/medium.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/small.png" afterPath="$PROJECT_DIR$/core/server/views/img/small.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/touch-icon-ipad.png" afterPath="$PROJECT_DIR$/core/server/views/img/touch-icon-ipad.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/touch-icon-iphone.png" afterPath="$PROJECT_DIR$/core/server/views/img/touch-icon-iphone.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/user-cover.png" afterPath="$PROJECT_DIR$/core/server/views/img/user-cover.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/user-image.png" afterPath="$PROJECT_DIR$/core/server/views/img/user-image.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/img/users.png" afterPath="$PROJECT_DIR$/core/server/views/img/users.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/vendor.css" afterPath="$PROJECT_DIR$/core/server/views/css/vendor.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/assets/vendor.min.css" afterPath="$PROJECT_DIR$/core/server/views/css/vendor.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/helpers/tpl/navigation.hbs" afterPath="$PROJECT_DIR$/core/server/views/tpl/navigation.hbs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/helpers/tpl/pagination.hbs" afterPath="$PROJECT_DIR$/core/server/views/tpl/pagination.hbs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/default.hbs" afterPath="$PROJECT_DIR$/core/server/views/tpl/default.hbs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/user-error.hbs" afterPath="$PROJECT_DIR$/core/server/views/tpl/user-error.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/helpers/body_class.js" afterPath="$PROJECT_DIR$/core/server/helpers/body_class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/admin.js" afterPath="$PROJECT_DIR$/core/server/controllers/admin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/models/base/index.js" afterPath="$PROJECT_DIR$/core/server/models/base/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/models/user.js" afterPath="$PROJECT_DIR$/core/server/models/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/frontend.js" afterPath="$PROJECT_DIR$/core/server/routes/frontend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/index.js" afterPath="$PROJECT_DIR$/core/server/routes/index.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,55 +52,51 @@
     <favorites_list name="blogme" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/models/base/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding>
-                <element signature="e#1553#1616#0" expanded="false" />
-                <element signature="e#1742#2284#0" expanded="false" />
-                <element signature="e#2321#2401#0" expanded="false" />
-                <element signature="e#2459#2578#0" expanded="false" />
-                <element signature="e#2632#2971#0" expanded="false" />
-                <element signature="e#3090#3539#0" expanded="false" />
-                <element signature="e#3622#3947#0" expanded="false" />
-                <element signature="e#4041#4441#0" expanded="false" />
-                <element signature="e#4531#4575#0" expanded="false" />
-                <element signature="e#4661#4720#0" expanded="false" />
-                <element signature="e#4760#5801#0" expanded="false" />
-                <element signature="e#5932#5985#0" expanded="false" />
-                <element signature="e#6070#6124#0" expanded="false" />
-                <element signature="e#6468#6576#0" expanded="false" />
-                <element signature="e#6942#7113#0" expanded="false" />
-                <element signature="e#7561#7732#0" expanded="false" />
-                <element signature="e#8025#8462#0" expanded="false" />
-                <element signature="e#8507#10267#0" expanded="false" />
-                <element signature="e#9401#9426#0" expanded="false" />
-                <element signature="e#10540#10781#0" expanded="false" />
-                <element signature="e#11001#11314#0" expanded="false" />
-                <element signature="e#11535#12018#0" expanded="false" />
-                <element signature="e#12215#12538#0" expanded="false" />
-                <element signature="e#12996#15600#0" expanded="false" />
-                <element signature="e#15651#16480#0" expanded="false" />
-              </folding>
-            </state>
+    <leaf>
+      <file leaf-file-name="small.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/small.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="users.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/users.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fetch-data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/fetch-data.js">
+      <file leaf-file-name="404@2x.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/404@2x.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="medium.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/medium.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadingcat.gif" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/img/loadingcat.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -103,8 +105,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="format-response.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/format-response.js">
+      <file leaf-file-name="app.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/css/app.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -113,8 +115,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
+      <file leaf-file-name="vendor.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -123,21 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="secure.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/secure.js">
+      <file leaf-file-name="vendor.min.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templates.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/templates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07637475">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,13 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/data/importer/handlers/json.js" />
-        <option value="$PROJECT_DIR$/core/server/data/importer/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/validation/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/versioning.js" />
-        <option value="$PROJECT_DIR$/core/server/data/migration/fixtures/permissions/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/migration/fixtures/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/migration/builder.js" />
         <option value="$PROJECT_DIR$/core/server/helpers/foreach.js" />
         <option value="$PROJECT_DIR$/core/server/helpers/get.js" />
         <option value="$PROJECT_DIR$/core/server/helpers/has.js" />
@@ -194,7 +179,6 @@
         <option value="$PROJECT_DIR$/core/index.js" />
         <option value="$PROJECT_DIR$/config.example.js" />
         <option value="$PROJECT_DIR$/core/server/config/url.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
         <option value="$PROJECT_DIR$/core/server/views/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/npm-shrinkwrap.json" />
@@ -211,8 +195,16 @@
         <option value="$PROJECT_DIR$/core/server/permissions/index.js" />
         <option value="$PROJECT_DIR$/core/server/models/base/token.js" />
         <option value="$PROJECT_DIR$/core/server/models/plugins/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/base/index.js" />
         <option value="$PROJECT_DIR$/core/server/controllers/templates.js" />
+        <option value="$PROJECT_DIR$/core/server/routes/index.js" />
+        <option value="$PROJECT_DIR$/core/server/routes/frontend.js" />
+        <option value="$PROJECT_DIR$/core/server/models/tag.js" />
+        <option value="$PROJECT_DIR$/core/server/models/base/index.js" />
+        <option value="$PROJECT_DIR$/core/server/models/user.js" />
+        <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
+        <option value="$PROJECT_DIR$/core/server/views/chart/test/barchart.html" />
+        <option value="$PROJECT_DIR$/core/server/views/chart/test/linechart.html" />
+        <option value="$PROJECT_DIR$/core/server/views/chart/test/piechart.html" />
       </list>
     </option>
   </component>
@@ -294,160 +286,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="permissions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -470,11 +308,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/server/views/css" />
+      <recent name="$PROJECT_DIR$/core/server/views" />
+      <recent name="$PROJECT_DIR$/core/server/views/tpl" />
       <recent name="$PROJECT_DIR$/core/server/controllers" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/core/server/utils" />
-      <recent name="$PROJECT_DIR$/core/assets/img" />
-      <recent name="$PROJECT_DIR$/core" />
     </key>
   </component>
   <component name="RunManager">
@@ -722,7 +560,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460340690407</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="change controllers&#10;">
+      <created>1460350991427</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1460350991427</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -740,7 +584,6 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -749,6 +592,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -804,7 +648,8 @@
     <MESSAGE value="reconstruct website" />
     <MESSAGE value="add gulp support&#10;" />
     <MESSAGE value="change models&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="change models&#10;" />
+    <MESSAGE value="change controllers&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="change controllers&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,240 +659,15 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="60" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/read-directory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/configuration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/parse-package-json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/tpl/navigation.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/tpl/pagination.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/sortDrag/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/baidu_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/startup-check.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.737903">
-          <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/data/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5031686">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.397713">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/ghost-0.7.8/core/server/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.6709023">
-          <caret line="211" column="16" selection-start-line="211" selection-start-column="7" selection-end-line="211" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gitignore_global">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0882353">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6873727">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="e#1797#1849#0" expanded="false" />
-            <element signature="e#2618#3554#0" expanded="false" />
-            <element signature="e#3645#3719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9371728">
-          <caret line="74" column="100" selection-start-line="74" selection-start-column="100" selection-end-line="74" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66191447">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/tag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5672098">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#716#1759#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10183299">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22912423">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,80 +696,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/permissions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8401222">
-          <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!block;n#parseContext#0" expanded="false" />
-            <element signature="n#!!block;n#applyStatusRules#0" expanded="false" />
-            <element signature="n#!!block;n#applyPublicRules#0" expanded="false" />
-            <element signature="e#2827#6651#0" expanded="false" />
-            <element signature="e#6710#8500#0" expanded="false" />
-            <element signature="e#8645#9701#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1527495">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/base/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding>
-            <element signature="e#1553#1616#0" expanded="false" />
-            <element signature="e#1742#2284#0" expanded="false" />
-            <element signature="e#2321#2401#0" expanded="false" />
-            <element signature="e#2459#2578#0" expanded="false" />
-            <element signature="e#2632#2971#0" expanded="false" />
-            <element signature="e#3090#3539#0" expanded="false" />
-            <element signature="e#3622#3947#0" expanded="false" />
-            <element signature="e#4041#4441#0" expanded="false" />
-            <element signature="e#4531#4575#0" expanded="false" />
-            <element signature="e#4661#4720#0" expanded="false" />
-            <element signature="e#4760#5801#0" expanded="false" />
-            <element signature="e#5932#5985#0" expanded="false" />
-            <element signature="e#6070#6124#0" expanded="false" />
-            <element signature="e#6468#6576#0" expanded="false" />
-            <element signature="e#6942#7113#0" expanded="false" />
-            <element signature="e#7561#7732#0" expanded="false" />
-            <element signature="e#8025#8462#0" expanded="false" />
-            <element signature="e#8507#10267#0" expanded="false" />
-            <element signature="e#9401#9426#0" expanded="false" />
-            <element signature="e#10540#10781#0" expanded="false" />
-            <element signature="e#11001#11314#0" expanded="false" />
-            <element signature="e#11535#12018#0" expanded="false" />
-            <element signature="e#12215#12538#0" expanded="false" />
-            <element signature="e#12996#15600#0" expanded="false" />
-            <element signature="e#15651#16480#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/controllers/fetch-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1158,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,7 +721,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/controllers/templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4837067">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/controllers/secure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12729125">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10183299">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4837067">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/dwz.frag.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1178,10 +771,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/templates.js">
+    <entry file="file://$PROJECT_DIR$/core/server/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07637475">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.9308943">
+          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/base/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13617887">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#1290#1578#0" expanded="false" />
+            <element signature="e#1784#2221#0" expanded="false" />
+            <element signature="e#2265#4025#0" expanded="false" />
+            <element signature="e#3159#3184#0" expanded="false" />
+            <element signature="e#4073#4252#0" expanded="false" />
+            <element signature="e#4294#4607#0" expanded="false" />
+            <element signature="e#4647#5130#0" expanded="false" />
+            <element signature="e#5172#5495#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6351626">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!block;n#validatePasswordLength#0" expanded="false" />
+            <element signature="n#!!block;n#generatePasswordHash#0" expanded="false" />
+            <element signature="e#1013#1568#0" expanded="false" />
+            <element signature="e#1605#2056#0" expanded="false" />
+            <element signature="e#2096#2464#0" expanded="false" />
+            <element signature="e#2504#2825#0" expanded="false" />
+            <element signature="e#2873#4459#0" expanded="false" />
+            <element signature="e#4501#6029#0" expanded="false" />
+            <element signature="e#6069#8365#0" expanded="false" />
+            <element signature="e#8408#8415#0" expanded="false" />
+            <element signature="e#8508#11642#0" expanded="false" />
+            <element signature="e#11706#13148#0" expanded="false" />
+            <element signature="e#13227#13987#0" expanded="false" />
+            <element signature="e#14047#16317#0" expanded="false" />
+            <element signature="e#16371#17718#0" expanded="false" />
+            <element signature="e#17773#18561#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/data/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15243903">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050813008">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/controllers/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/helpers/author.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/permissions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0416666">
+          <caret line="255" column="29" selection-start-line="255" selection-start-column="29" selection-end-line="255" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#parseContext#0" expanded="false" />
+            <element signature="n#!!block;n#applyStatusRules#0" expanded="false" />
+            <element signature="n#!!block;n#applyPublicRules#0" expanded="false" />
+            <element signature="e#2827#6651#0" expanded="false" />
+            <element signature="e#6710#8500#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/pagination.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/navigation.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/utils/parse-package-json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/utils/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/controllers/error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22865854">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/uploadify/img/cancel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/user-error.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/default.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/barchart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/linechart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/piechart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1432927">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/404.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/icon.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/large.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/small.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/users.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/404@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/medium.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/img/loadingcat.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
