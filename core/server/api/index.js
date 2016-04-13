@@ -1,25 +1,14 @@
 // # App Data API
-// Provides access from anywhere to the  data layer.
-
-
 var _              = require('lodash'),
     config         = require('../config'),
-    // Include Endpoints
     configuration  = require('./configuration'),
     db             = require('./db'),
     mail           = require('./mail'),
-    notifications  = require('./notifications'),
     posts          = require('./posts'),
-    roles          = require('./roles'),
     settings       = require('./settings'),
-    tags           = require('./tags'),
     clients        = require('./clients'),
-    themes         = require('./themes'),
-    users          = require('./users'),
-    slugs          = require('./slugs'),
     authentication = require('./authentication'),
     uploads        = require('./upload'),
-    dataExport     = require('../data/export'),
 
     http,
     addHeaders,

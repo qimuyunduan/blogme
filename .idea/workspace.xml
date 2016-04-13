@@ -2,17 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/middleware/auth-strategies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/middleware/auth.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/middleware/oauth.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/middleware/ghost-busboy.js" afterPath="$PROJECT_DIR$/core/server/middleware/busboy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/accesstokens.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/addmoney-record-detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/app-fields.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/app-settings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/app-version.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/apps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/bind-family.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/bug-list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/business-group.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/business-man.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/business-shop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/cache-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/city-advise.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/city-info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/client-trusted-domains.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/clients.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/con-file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/con-folder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/console-compensation-info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/console-msg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/consume-detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/consume-info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/deletemoney-record-detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/dict-city.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/dict-drugtypes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/dict-insured-company.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/dict-province.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/file-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/inf-news.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/insured-company.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/insured-file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/insured-unit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/insured-user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/inv-category.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/inv-product.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/log-info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/menu-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/messageinfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/mobilecity.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/month-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/new-role.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/organization-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/parameter-type.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/params.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/permissions-apps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/permissions-roles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/permissions-users.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/permissions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/posts-tags.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/posts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/push-user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/refreshtokens.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/rep-user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/role-menu-right.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/role-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/roles-users.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/roles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/set-preference.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/settings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sub-company.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-log.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-permission.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-role.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-user-role.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/sys-user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/system-sequence-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/tags.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/update-user-logger.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/uploadfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/user-menu-right.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/user-role-right.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/user-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/users.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/web-website.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/webpage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/year-t.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/models/yijian-list.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/models/user.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/middleware/index.js" afterPath="$PROJECT_DIR$/core/server/middleware/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/middleware/uncapitalise.js" afterPath="$PROJECT_DIR$/core/server/middleware/uncapitalise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/models/user.js" afterPath="$PROJECT_DIR$/core/server/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/frontend.js" afterPath="$PROJECT_DIR$/core/server/routes/frontend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/api/index.js" afterPath="$PROJECT_DIR$/core/server/api/index.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,57 +121,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/helpers/is.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/navigation.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/page_url.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/pagination.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/plural.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/template.js" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/commands.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/frontend/channels.js" />
-        <option value="$PROJECT_DIR$/node_modules/knex/lib/util/parse-connection.js" />
-        <option value="$PROJECT_DIR$/core/server/models/post.js" />
-        <option value="$PROJECT_DIR$/core/shared/sitemap.xsl" />
-        <option value="$PROJECT_DIR$/core/server/events/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/db/connection.js" />
-        <option value="$PROJECT_DIR$/core/shared/robots.txt" />
-        <option value="$PROJECT_DIR$/content/images/readme.md" />
-        <option value="$PROJECT_DIR$/content/data/readme.md" />
-        <option value="$PROJECT_DIR$/nodeFuncTest.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/nodeFuncTest.js" />
-        <option value="$PROJECT_DIR$/core/index.js" />
-        <option value="$PROJECT_DIR$/config.example.js" />
-        <option value="$PROJECT_DIR$/core/server/config/url.js" />
-        <option value="$PROJECT_DIR$/core/server/views/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/npm-shrinkwrap.json" />
-        <option value="$PROJECT_DIR$/core/server/data/schema/clients/index.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/startup-check.js" />
-        <option value="$PROJECT_DIR$/core/server/config/index.js" />
-        <option value="$PROJECT_DIR$/core/server/data/index.js" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/core/server/server.js" />
-        <option value="$PROJECT_DIR$/core/server/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/index.js" />
+        <option value="$PROJECT_DIR$/core/server/models/file-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/inf-news.js" />
+        <option value="$PROJECT_DIR$/core/server/models/insured-company.js" />
+        <option value="$PROJECT_DIR$/core/server/models/insured-file.js" />
+        <option value="$PROJECT_DIR$/core/server/models/insured-unit.js" />
+        <option value="$PROJECT_DIR$/core/server/models/insured-user.js" />
+        <option value="$PROJECT_DIR$/core/server/models/inv-category.js" />
+        <option value="$PROJECT_DIR$/core/server/models/inv-product.js" />
+        <option value="$PROJECT_DIR$/core/server/models/log-info.js" />
+        <option value="$PROJECT_DIR$/core/server/models/menu-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/messageinfo.js" />
+        <option value="$PROJECT_DIR$/core/server/models/mobilecity.js" />
+        <option value="$PROJECT_DIR$/core/server/models/month-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/new-role.js" />
+        <option value="$PROJECT_DIR$/core/server/models/organization-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/parameter-type.js" />
+        <option value="$PROJECT_DIR$/core/server/models/params.js" />
+        <option value="$PROJECT_DIR$/core/server/models/permissions.js" />
+        <option value="$PROJECT_DIR$/core/server/models/permissions-apps.js" />
+        <option value="$PROJECT_DIR$/core/server/models/permissions-roles.js" />
+        <option value="$PROJECT_DIR$/core/server/models/permissions-users.js" />
+        <option value="$PROJECT_DIR$/core/server/models/posts.js" />
+        <option value="$PROJECT_DIR$/core/server/models/posts-tags.js" />
+        <option value="$PROJECT_DIR$/core/server/models/push-user.js" />
+        <option value="$PROJECT_DIR$/core/server/models/refreshtokens.js" />
+        <option value="$PROJECT_DIR$/core/server/models/rep-user.js" />
+        <option value="$PROJECT_DIR$/core/server/models/role-menu-right.js" />
+        <option value="$PROJECT_DIR$/core/server/models/role-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/roles.js" />
+        <option value="$PROJECT_DIR$/core/server/models/roles-users.js" />
+        <option value="$PROJECT_DIR$/core/server/models/set-preference.js" />
         <option value="$PROJECT_DIR$/core/server/models/settings.js" />
-        <option value="$PROJECT_DIR$/core/server/permissions/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/base/token.js" />
-        <option value="$PROJECT_DIR$/core/server/models/plugins/index.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/templates.js" />
-        <option value="$PROJECT_DIR$/core/server/routes/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/tag.js" />
-        <option value="$PROJECT_DIR$/core/server/models/base/index.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/admin.js" />
-        <option value="$PROJECT_DIR$/core/server/views/chart/test/barchart.html" />
-        <option value="$PROJECT_DIR$/core/server/views/chart/test/linechart.html" />
-        <option value="$PROJECT_DIR$/core/server/views/chart/test/piechart.html" />
-        <option value="$PROJECT_DIR$/core/server/models/user.js" />
-        <option value="$PROJECT_DIR$/core/server/routes/frontend.js" />
-        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
-        <option value="$PROJECT_DIR$/core/server/middleware/uncapitalise.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sub-company.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-log.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-permission.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-resource.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-role.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-user.js" />
+        <option value="$PROJECT_DIR$/core/server/models/sys-user-role.js" />
+        <option value="$PROJECT_DIR$/core/server/models/system-sequence-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/tags.js" />
+        <option value="$PROJECT_DIR$/core/server/models/update-user-logger.js" />
+        <option value="$PROJECT_DIR$/core/server/models/uploadfile.js" />
+        <option value="$PROJECT_DIR$/core/server/models/user-menu-right.js" />
+        <option value="$PROJECT_DIR$/core/server/models/user-role-right.js" />
+        <option value="$PROJECT_DIR$/core/server/models/user-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/users.js" />
+        <option value="$PROJECT_DIR$/core/server/models/web-website.js" />
+        <option value="$PROJECT_DIR$/core/server/models/webpage.js" />
+        <option value="$PROJECT_DIR$/core/server/models/year-t.js" />
+        <option value="$PROJECT_DIR$/core/server/models/yijian-list.js" />
       </list>
     </option>
   </component>
@@ -139,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,6 +238,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,56 +309,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,7 +597,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460447772022</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="change site structure">
+      <created>1460471779834</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1460471779834</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -571,21 +621,21 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1858873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19306931" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -652,410 +702,360 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/file-t.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08553971">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#730#1926#0" expanded="false" />
-            <element signature="e#951#1159#0" expanded="false" />
-            <element signature="e#1235#1424#0" expanded="false" />
-            <element signature="e#1850#1920#0" expanded="false" />
-            <element signature="e#1976#2409#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/inf-news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/fetch-data.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/insured-company.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/format-response.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/insured-file.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/templates.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/insured-unit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4837067">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/secure.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/insured-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/dwz.frag.xml">
+    <entry file="file://$PROJECT_DIR$/core/server/models/inv-category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/config/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/inv-product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9308943">
-          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/data/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/log-info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15243903">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/menu-t.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.050813008">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/admin.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/messageinfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.25406504">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/helpers/author.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/mobilecity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/permissions/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/month-t.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0416666">
-          <caret line="255" column="29" selection-start-line="255" selection-start-column="29" selection-end-line="255" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!block;n#parseContext#0" expanded="false" />
-            <element signature="n#!!block;n#applyStatusRules#0" expanded="false" />
-            <element signature="n#!!block;n#applyPublicRules#0" expanded="false" />
-            <element signature="e#2827#6651#0" expanded="false" />
-            <element signature="e#6710#8500#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/pagination.hbs">
+    <entry file="file://$PROJECT_DIR$/core/server/models/new-role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/navigation.hbs">
+    <entry file="file://$PROJECT_DIR$/core/server/models/organization-t.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/parse-package-json.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/parameter-type.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/params.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/permissions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/error.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/permissions-apps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22865854">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/uploadify/img/cancel.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/user-error.hbs">
+    <entry file="file://$PROJECT_DIR$/core/server/models/permissions-roles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/tpl/default.hbs">
+    <entry file="file://$PROJECT_DIR$/core/server/models/permissions-users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/barchart.html">
+    <entry file="file://$PROJECT_DIR$/core/server/models/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/linechart.html">
+    <entry file="file://$PROJECT_DIR$/core/server/models/posts-tags.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/piechart.html">
+    <entry file="file://$PROJECT_DIR$/core/server/models/push-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/shared/url.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/refreshtokens.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/rep-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1432927">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/404.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/icon.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/large.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/small.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/users.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/404@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/medium.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/img/loadingcat.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.css">
+    <entry file="file://$PROJECT_DIR$/core/server/models/role-menu-right.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.min.css">
+    <entry file="file://$PROJECT_DIR$/core/server/models/role-t.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.css">
+    <entry file="file://$PROJECT_DIR$/core/server/models/roles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/vendor.min.css">
+    <entry file="file://$PROJECT_DIR$/core/server/models/roles-users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/user.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/set-preference.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025458248">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding>
-            <element signature="e#994#1028#0" expanded="false" />
-            <element signature="e#1065#1073#0" expanded="false" />
-            <element signature="e#1113#1481#0" expanded="false" />
-            <element signature="e#1521#1842#0" expanded="false" />
-            <element signature="e#1890#3476#0" expanded="false" />
-            <element signature="e#3518#5046#0" expanded="false" />
-            <element signature="e#5086#7382#0" expanded="false" />
-            <element signature="e#7475#10609#0" expanded="false" />
-            <element signature="e#10673#12115#0" expanded="false" />
-            <element signature="e#12194#12954#0" expanded="false" />
-            <element signature="e#13014#14859#0" expanded="false" />
-            <element signature="e#14913#16260#0" expanded="false" />
-            <element signature="e#16315#16730#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/base/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1364562">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding>
-            <element signature="e#1290#1578#0" expanded="false" />
-            <element signature="e#1784#2221#0" expanded="false" />
-            <element signature="e#2265#4025#0" expanded="false" />
-            <element signature="e#3159#3184#0" expanded="false" />
-            <element signature="e#4073#4252#0" expanded="false" />
-            <element signature="e#4294#4607#0" expanded="false" />
-            <element signature="e#4647#5130#0" expanded="false" />
-            <element signature="e#5172#5495#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/admin.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sub-company.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07637475">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.25406504">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-log.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12729125">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/frontend.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-permission.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38187373">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#333#385#0" expanded="false" />
-            <element signature="e#455#506#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="1.6260163">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-resource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.305499">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.305499">
-          <caret line="141" column="25" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/uncapitalise.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07637475">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/models/sys-user-role.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083769634">
-          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
-          <folding />
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/system-sequence-t.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/tags.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/update-user-logger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/uploadfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/user-menu-right.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/user-role-right.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/user-t.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/web-website.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/webpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/year-t.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/models/yijian-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.949187">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
         </state>
       </provider>
     </entry>
