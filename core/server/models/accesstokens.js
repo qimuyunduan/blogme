@@ -14,11 +14,14 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
 
- = appBookshelf.Model.extend({
+	accesstoken,
+	accesstokens;
 
-	tableName: '  ',
+accesstoken = appBookshelf.Model.extend({
+
+	tableName: 'accesstokens',
 
 	saving: function saving() {
 
@@ -152,11 +155,11 @@ var _              = require('lodash'),
 
 });
 
- = appBookshelf.Collection.extend({
-	model:
+accesstokens = appBookshelf.Collection.extend({
+	model:accesstoken
 });
 
 module.exports = {
-	: appBookshelf.model('', ),
-	: appBookshelf.collection('', )
+	accesstoken: appBookshelf.model('accesstoken',accesstoken ),
+	accesstokens: appBookshelf.collection('accesstokens',accesstokens)
 };

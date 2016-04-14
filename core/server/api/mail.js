@@ -8,7 +8,6 @@ var _             = require('lodash').runInContext(),
     GhostMail     = require('../mail'),
     Models        = require('../models'),
     utils         = require('./utils'),
-    notifications = require('./notifications'),
     path          = require('path'),
     fs            = require('fs'),
     templatesDir  = path.resolve(__dirname, '..', 'mail', 'templates'),
@@ -47,13 +46,6 @@ function sendMail(object) {
     });
 }
 
-/**
- * ## Mail API Methods
- *
- * **See:** [API Methods](index.js.html#api%20methods)
- * @typedef Mail
- * @param mail
- */
 mail = {
     /**
      * ### Send
@@ -65,11 +57,6 @@ mail = {
      */
     send: function (object, options) {
         var tasks;
-
-        /**
-         * ### Format Response
-         * @returns {Mail} mail
-         */
 
         function formatResponse(data) {
             delete object.mail[0].options;
@@ -156,14 +143,6 @@ mail = {
         return pipeline(tasks);
     },
 
-    /**
-     *
-     * @param {Object} options {
-     *              data: JSON object representing the data that will go into the email
-     *              template: which email template to load (files are stored in /core/server/mail/templates/)
-     *          }
-     * @returns {*}
-     */
     generateContent: function (options) {
         var defaults,
             data;

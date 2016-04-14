@@ -10,8 +10,7 @@ var _                = require('lodash'),
     authentication;
 
 function setupTasks(object) {
-    var setupUser,
-        internal = {context: {internal: true}};
+    var setupUser;
 
     return utils.checkObject(object, 'setup').then(function (checkedSetupData) {
         setupUser = {
@@ -34,8 +33,6 @@ function setupTasks(object) {
         }
     }).then(function (user) {
         var userSettings = [];
-
-        // Handles the additional values set by the setup screen.
         if (!_.isEmpty(setupUser.blogTitle)) {
             userSettings.push({key: 'title', value: setupUser.blogTitle});
             userSettings.push({key: 'description', value: 'common.api.authentication.sampleBlogDescription'});
@@ -48,11 +45,7 @@ function setupTasks(object) {
     });
 }
 
-/**
- * ## Authentication API Methods
- *
- * **See:** [API Methods](index.js.html#api%20methods)
- */
+
 authentication = {
 
     /**

@@ -2,7 +2,6 @@
 var _              = require('lodash'),
     config         = require('../config'),
     configuration  = require('./configuration'),
-    db             = require('./db'),
     mail           = require('./mail'),
     posts          = require('./posts'),
     settings       = require('./settings'),
@@ -17,28 +16,12 @@ var _              = require('lodash'),
     contentDispositionHeader,
     init;
 
-/**
- * ### Init
- * Initialise the API - populate the settings cache
- * @return {Promise(Settings)} Resolves to Settings Collection
- */
+
 init = function init() {
     return settings.updateSettingsCache();
 };
 
-/**
- * ### Cache Invalidation Header
- * Calculate the header string for the X-Cache-Invalidate: header.
- * The resulting string instructs any cache in front of the blog that request has occurred which invalidates any cached
- * versions of the listed URIs.
- *
- * `/*` is used to mean the entire cache is invalid
- *
- * @private
- * @param {Express.request} req Original HTTP Request
- * @param {Object} result API method result
- * @return {String} Resolves to header string
- */
+
 cacheInvalidationHeader = function cacheInvalidationHeader(req, result) {
     var parsedUrl = req._parsedUrl.pathname.replace(/^\/|\/$/g, '').split('/'),
         method = req.method,
@@ -214,28 +197,14 @@ module.exports = {
     http: http,
     // API Endpoints
     configuration: configuration,
-    db: db,
     mail: mail,
-    notifications: notifications,
     posts: posts,
     roles: roles,
     settings: settings,
     tags: tags,
     clients: clients,
-    themes: themes,
-    users: users,
-    slugs: slugs,
     authentication: authentication,
     uploads: uploads
 };
 
-/**
- * ## API Methods
- * All API methods take a context object as one of the options:
- *
- * @typedef context
- * Context provides information for determining permissions. Usually a user, but sometimes an app, or the internal flag
- * @param {Number} user (optional)
- * @param {String} app (optional)
- * @param {Boolean} internal (optional)
- */
+

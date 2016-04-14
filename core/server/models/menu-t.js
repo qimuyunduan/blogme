@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	menu,
+	menus;
 
-= appBookshelf.Model.extend({
+menu = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' menu_t ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+menus = appBookshelf.Collection.extend({
+	model:menu
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	menu: appBookshelf.model('menu', menu),
+	menus: appBookshelf.collection('menus', menus)
+};

@@ -13,8 +13,8 @@ var _              = require('lodash'),
     bcryptCompare  = Promise.promisify(bcrypt.compare),
 
     tokenSecurity  = {},
-    User,
-    Users;
+    ido_user,
+    ido_users;
 
 function validatePasswordLength(password) {
     return validator.isLength(password, 8);
@@ -29,9 +29,9 @@ function generatePasswordHash(password) {
 }
 
 
-User = appBookshelf.Model.extend({
+ido_user = appBookshelf.Model.extend({
 
-    tableName: 'users',
+    tableName: 'ido_user',
 
     saving: function saving() {
 
@@ -437,11 +437,11 @@ User = appBookshelf.Model.extend({
     }
 });
 
-Users = appBookshelf.Collection.extend({
-    model: User
+ido_users = appBookshelf.Collection.extend({
+    model: ido_user
 });
 
 module.exports = {
-    User: appBookshelf.model('User', User),
-    Users: appBookshelf.collection('Users', Users)
+	ido_user: appBookshelf.model('ido_user', ido_user),
+	ido_users: appBookshelf.collection('ido_users', ido_users)
 };

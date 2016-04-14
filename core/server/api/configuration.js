@@ -15,7 +15,7 @@ function labsFlag(key) {
 }
 
 function getValidKeys() {
-    var validKeys = {
+    var validKey = {
             fileStorage: {value: (config.fileStorage !== false), type: 'bool'},
             publicAPI: labsFlag('publicAPI'),
             apps: {value: (config.apps === true), type: 'bool'},
@@ -28,7 +28,7 @@ function getValidKeys() {
             routeKeywords: {value: JSON.stringify(config.routeKeywords), type: 'json'}
         };
 
-    return validKeys;
+    return validKey;
 }
 
 function formatConfigurationObject(val, key) {
@@ -39,26 +39,14 @@ function formatConfigurationObject(val, key) {
     };
 }
 
-/**
- * ## Configuration API Methods
- *
- * **See:** [API Methods](index.js.html#api%20methods)
- */
 configuration = {
 
-    /**
-     * ### Browse
-     * Fetch all configuration keys
-     * @returns {Promise(Configurations)}
-     */
+
     browse: function browse() {
         return Promise.resolve({configuration: _.map(getValidKeys(), formatConfigurationObject)});
     },
 
-    /**
-     * ### Read
-     *
-     */
+
     read: function read(options) {
         var data = getValidKeys();
 

@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	dict_drug,
+	dict_drugs;
 
-= appBookshelf.Model.extend({
+dict_drug = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' dict_drug ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+dict_drugs = appBookshelf.Collection.extend({
+	model:dict_drug
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	dict_drug: appBookshelf.model('dict_drug', dict_drug),
+	dict_drugs: appBookshelf.collection('dict_drugs', dict_drugs)
+};

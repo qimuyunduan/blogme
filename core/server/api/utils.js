@@ -5,17 +5,11 @@ var Promise = require('bluebird'),
     path    = require('path'),
     errors  = require('../errors'),
     permissions = require('../permissions'),
-    validation  = require('../data/validation'),
 
     utils;
 
 utils = {
-    // ## Default Options
-    // Various default options for different types of endpoints
 
-    // ### Auto Default Options
-    // Handled / Added automatically by the validate function
-    // globalDefaultOptions - valid for every api endpoint
     globalDefaultOptions: ['context', 'include'],
     // dataDefaultOptions - valid for all endpoints which take object as well as options
     dataDefaultOptions: ['data'],
@@ -146,24 +140,12 @@ utils = {
         options.context = permissions.parseContext(options.context);
         return options.context.public;
     },
-    /**
-     * ## Apply Public Permissions
-     * Update the options object so that the rules reflect what is permitted to be retrieved from a public request
-     * @param {String} docName
-     * @param {String} method (read || browse)
-     * @param {Object} options
-     * @returns {Object} options
-     */
+
     applyPublicPermissions: function applyPublicPermissions(docName, method, options) {
         return permissions.applyPublicRules(docName, method, options);
     },
 
-    /**
-     * ## Handle Public Permissions
-     * @param {String} docName
-     * @param {String} method (read || browse)
-     * @returns {Function}
-     */
+
     handlePublicPermissions: function handlePublicPermissions(docName, method) {
         var singular = docName.replace(/s$/, '');
 
@@ -189,21 +171,9 @@ utils = {
         };
     },
 
-    /**
-     * ## Handle Permissions
-     * @param {String} docName
-     * @param {String} method (browse || read || edit || add || destroy)
-     * @returns {Function}
-     */
     handlePermissions: function handlePermissions(docName, method) {
         var singular = docName.replace(/s$/, '');
 
-        /**
-         * ### Handle Permissions
-         * We need to be an authorised user to perform this action
-         * @param {Object} options
-         * @returns {Object} options
-         */
         return function doHandlePermissions(options) {
             var permsPromise = permissions.canThis(options.context)[method][singular](options.id);
 
@@ -239,11 +209,6 @@ utils = {
         return this.trimAndLowerCase(fields);
     },
 
-    /**
-     * ## Convert Options
-     * @param {Array} allowedIncludes
-     * @returns {Function} doConversion
-     */
     convertOptions: function convertOptions(allowedIncludes) {
         /**
          * Convert our options from API-style to Model-style
@@ -261,14 +226,7 @@ utils = {
             return options;
         };
     },
-    /**
-     * ### Check Object
-     * Check an object passed to the API is in the correct format
-     *
-     * @param {Object} object
-     * @param {String} docName
-     * @returns {Promise(Object)} resolves to the original object if it checks out
-     */
+
     checkObject: function (object, docName, editId) {
         if (_.isEmpty(object) || _.isEmpty(object[docName]) || _.isEmpty(object[docName][0])) {
             return errors.logAndRejectError(new errors.BadRequestError('errors.api.utils.noRootKeyProvided'));

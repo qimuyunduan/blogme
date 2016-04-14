@@ -1,17 +1,11 @@
 var config  = require('../config'),
     Promise = require('bluebird'),
     fs      = require('fs-extra'),
-    storage = require('../storage'),
     errors  = require('../errors'),
     utils   = require('./utils'),
 
     upload;
 
-/**
- * ## Upload API Methods
- *
- * **See:** [API Methods](index.js.html#api%20methods)
- */
 upload = {
 
     /**
@@ -22,8 +16,7 @@ upload = {
      * @returns {Promise} Success
      */
     add: function (options) {
-        var store = storage.getStorage(),
-            filepath;
+        var filepath;
 
         // Check if a file was provided
         if (!utils.checkFileExists(options, 'uploadimage')) {

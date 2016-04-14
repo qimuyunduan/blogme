@@ -10,28 +10,15 @@ var Promise      = require('bluebird'),
     docName      = 'clients',
     clients;
 
-/**
- * ### Clients API Methods
- *
- * **See:** [API Methods](index.js.html#api%20methods)
- */
+
 clients = {
 
-    /**
-     * ## Read
-     * @param {{id}} options
-     * @return {Promise<Client>} Client
-     */
+
     read: function read(options) {
         var attrs = ['id', 'slug'],
             tasks;
 
-        /**
-         * ### Model Query
-         * Make the call to the Model layer
-         * @param {Object} options
-         * @returns {Object} options
-         */
+
         function doQuery(options) {
             // only User Agent (type = `ua`) clients are available at the moment.
             options.data = _.extend(options.data, {type: 'ua'});
@@ -41,8 +28,7 @@ clients = {
         // Push all of our tasks into a `tasks` array in the correct order
         tasks = [
             utils.validate(docName, {attrs: attrs}),
-            // TODO: add permissions
-            // utils.handlePublicPermissions(docName, 'read'),
+
             doQuery
         ];
 

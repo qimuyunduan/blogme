@@ -14,11 +14,14 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
 
-= appBookshelf.Model.extend({
+	addmoney_record,
+	addmoney_records;
 
-	tableName: '  ',
+addmoney_record = appBookshelf.Model.extend({
+
+	tableName: 'addmoney_record_detail',
 
 	saving: function saving() {
 
@@ -152,10 +155,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+addmoney_records= appBookshelf.Collection.extend({
+	model:addmoney_record
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	addmoney_record: appBookshelf.model('addmoney_record', addmoney_record),
+	addmoney_records: appBookshelf.collection('addmoney_records', addmoney_records)
+};

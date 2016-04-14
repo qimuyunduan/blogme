@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	post,
+	posts;
 
-= appBookshelf.Model.extend({
+post = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' posts',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+posts = appBookshelf.Collection.extend({
+	model:post
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	post: appBookshelf.model('post', post),
+	posts: appBookshelf.collection('posts', posts)
+};

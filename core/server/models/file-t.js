@@ -13,11 +13,13 @@
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	file,
+	files;
 
-= appBookshelf.Model.extend({
+file = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' file_t ',
 
 	saving: function saving() {
 
@@ -151,10 +153,11 @@
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+files = appBookshelf.Collection.extend({
+	model:file
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	file: appBookshelf.model('file', file),
+	files: appBookshelf.collection('files', files)
+};
