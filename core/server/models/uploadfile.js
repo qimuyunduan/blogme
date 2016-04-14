@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	uploadfile,
+	uploadfiles;
 
-= appBookshelf.Model.extend({
+uploadfile = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' uploadfile ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+uploadfiles = appBookshelf.Collection.extend({
+	model:uploadfile
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	uploadfile: appBookshelf.model('uploadfile', uploadfile),
+	uploadfiles: appBookshelf.collection('uploadfiles', uploadfiles)
+};

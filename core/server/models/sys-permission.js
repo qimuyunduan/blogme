@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	sys_permission,
+	sys_permissions;
 
-= appBookshelf.Model.extend({
+sys_permission = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' sys_permission ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+sys_permissions = appBookshelf.Collection.extend({
+	model:sys_permission
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	sys_permission: appBookshelf.model('sys_permission', sys_permission),
+	sys_permissions: appBookshelf.collection('sys_permissions', sys_permissions)
+};

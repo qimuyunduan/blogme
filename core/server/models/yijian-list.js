@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	yijianList,
+	yijianLists;
 
-= appBookshelf.Model.extend({
+yijianList = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' yijian_list ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+yijianLists = appBookshelf.Collection.extend({
+	model:yijianList
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	yijianList: appBookshelf.model('yijianList', yijianList),
+	yijianLists: appBookshelf.collection('yijianLists', yijianLists)
+};

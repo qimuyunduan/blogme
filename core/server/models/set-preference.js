@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	set_preference,
+	set_preferences;
 
-= appBookshelf.Model.extend({
+set_preference = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' set_preference ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+set_preferences = appBookshelf.Collection.extend({
+	model:set_preference
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	set_preference: appBookshelf.model('set_preference', set_preference),
+	set_preferences: appBookshelf.collection('set_preferences', set_preferences)
+};

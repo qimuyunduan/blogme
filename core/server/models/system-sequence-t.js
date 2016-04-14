@@ -14,11 +14,13 @@ var _              = require('lodash'),
 	utils          = require('../utils'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
-	validator      = require('validator');
+	validator      = require('validator'),
+	system_sequence,
+	system_sequences;
 
-= appBookshelf.Model.extend({
+system_sequence = appBookshelf.Model.extend({
 
-	tableName: '  ',
+	tableName: ' system_sequence_t ',
 
 	saving: function saving() {
 
@@ -152,10 +154,11 @@ var _              = require('lodash'),
 
 });
 
-= appBookshelf.Collection.extend({
-	model:
+system_sequences = appBookshelf.Collection.extend({
+	model:system_sequence
 });
 
 module.exports = {
-: appBookshelf.model('', ),
-: appBookshelf.collection('', )
+	system_sequence: appBookshelf.model('system_sequence', system_sequence),
+	system_sequences: appBookshelf.collection('system_sequences', system_sequences)
+};
