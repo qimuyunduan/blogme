@@ -41,17 +41,17 @@ ConfigManager.prototype.set = function (config) {
 			contentPath:      contentPath,
 			imagesPath:       path.resolve(contentPath, 'images'),
 			imagesRelPath:    'content/images',
-
 			adminViews:       path.join(corePath, '/server/views/'),
-			helperTemplates:  path.join(corePath, '/server/helpers/tpl/'),
+			helperTemplates:  path.join(corePath, '/server/helpers/tpl/')
 
-			clientAssets:     path.join(corePath, '/assets/')
 		},
 		uploads: {
 			// Used by the upload API to limit uploads to images
 			extensions: ['.jpg', '.jpeg', '.gif', '.png', '.svg', '.svgz'],
 			contentTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml']
-		}
+		},
+		logging:true
+
 	});
 
 	_.extend(this, this._config);

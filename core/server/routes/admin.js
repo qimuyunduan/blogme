@@ -6,7 +6,7 @@ var admin       = require('../controllers/admin'),
 adminRoutes = function () {
     var router = express.Router();
 
-    router.get('*', admin.index);
+    router.get('/admin', admin.index);
 
     return router;
 };

@@ -10,13 +10,12 @@ var bodyParser       = require('body-parser'),
     utils            = require('../utils'),
     busboy           = require('./busboy'),
     cacheControl     = require('./cache-control'),
-    decideIsAdmin    = require('./decide-is-admin'),
+    decideIsAdmin    = require('./is-admin'),
     privateBlogging  = require('./private-blogging'),
     redirectToSetup  = require('./redirect-to-setup'),
     serveSharedFile  = require('./serve-shared-file'),
     spamPrevention   = require('./spam-prevention'),
     staticTheme      = require('./static-theme'),
-    themeHandler     = require('./theme-handler'),
     uncapitalise     = require('./uncapitalise'),
     middleware,
     setupMiddleware;
@@ -27,14 +26,7 @@ middleware = {
     busboy: busboy,
     cacheControl: cacheControl,
     spamPrevention: spamPrevention,
-    privateBlogging: privateBlogging,
-    api: {
-        authenticateClient: auth.authenticateClient,
-        authenticateUser: auth.authenticateUser,
-        requiresAuthorizedUser: auth.requiresAuthorizedUser,
-        requiresAuthorizedUserPublicAPI: auth.requiresAuthorizedUserPublicAPI,
-        errorHandler: errors.handleAPIError
-    }
+    privateBlogging: privateBlogging
 };
 
 setupMiddleware  = function setupMiddleware(App) {
@@ -61,21 +53,10 @@ setupMiddleware  = function setupMiddleware(App) {
 
     // Static assets
     App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_HOUR_MS}));
-    App.use('/public', express.static(path.join(corePath, '/built/public'), {maxAge: utils.ONE_YEAR_MS}));
+    App.use('/public', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_MS}));
 
-    // First determine whether we're serving admin or theme content
+    // First determine whether we're serving admin
     App.use(decideIsAdmin);
-    App.use(themeHandler.updateActiveTheme);
-    App.use(themeHandler.configHbsForContext);
-
-    // Admin only config
-    App.use('/admin', express.static(config.paths.clientAssets, {maxAge: utils.ONE_YEAR_MS}));
-
-    // Force SSL
-    // NOTE: Importantly this is _after_ the check above for admin-theme static resources,
-    //       which do not need HTTPS. In fact, if HTTPS is forced on them, then 404 page might
-    //       not display properly when HTTPS is not available!
-    App.use(checkSSL);
 
     // Theme only config
     App.use(staticTheme());
@@ -104,15 +85,13 @@ setupMiddleware  = function setupMiddleware(App) {
 
     App.use(routes.apiBaseUri, cacheControl('private'));
 
-    // local data
-    App.use(themeHandler.ghostLocals);
 
     // ### Routing
     // Set up API routes
-    App.use(routes.apiBaseUri, routes.api(middleware));
+    App.use(routes.apiBaseUri, routes.api());
 
     // Set up Frontend routes
-    App.use(routes.frontend(middleware));
+    App.use(routes.frontend());
 
     // ### Error handling
     // 404 Handler

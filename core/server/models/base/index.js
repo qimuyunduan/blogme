@@ -31,21 +31,11 @@ appBookshelf.plugin('registry');
 appBookshelf.Model = appBookshelf.Model.extend({
 
     // Fix problems with dates
-    fixDates: function fixDates(attrs) {
+    fixDate: function fixDate(attr) {
         var self = this;
 
-        _.forEach(attrs, function (value, key) {
-            if (value !== null) {
-                // convert dateTime value into a native javascript Date object
-                attrs[key] = moment(value);
-            }
-        });
 
-        return attrs;
-    },
-
-    format: function format(attrs) {
-        return this.fixDates(attrs);
+        return attr;
     },
 
     toJSON: function toJSON(attrs) {
