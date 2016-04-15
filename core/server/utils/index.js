@@ -1,17 +1,9 @@
-var unidecode  = require('unidecode'),
-    _          = require('lodash'),
+var _          = require('lodash'),
 
     utils,
     getRandomInt;
 
-/**
- * Return a random int, used by `utils.uid()`
- *
- * @param {Number} min
- * @param {Number} max
- * @return {Number}
- * @api private
- */
+
 getRandomInt = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -54,12 +46,6 @@ utils = {
     safeString: function (string, options) {
         options = options || {};
 
-        // Handle the £ symbol separately, since it needs to be removed before the unicode conversion.
-        string = string.replace(/£/g, '-');
-
-        // Remove non ascii characters
-        string = unidecode(string);
-
         // Replace URL reserved chars: `@:/?#[]!$&()*+,;=` as well as `\%<>|^~£"{}` and \`
         string = string.replace(/(\s|\.|@|:|\/|\?|#|\[|\]|!|\$|&|\(|\)|\*|\+|,|;|=|\\|%|<|>|\||\^|~|"|\{|\}|`|–|—)/g, '-')
             // Remove apostrophes
@@ -96,7 +82,7 @@ utils = {
         return base64String;
     },
     redirect301: function redirect301(res, path) {
-        /*jslint unparam:true*/
+
         res.set({'Cache-Control': 'public, max-age=' + utils.ONE_YEAR_S});
         res.redirect(301, path);
     }

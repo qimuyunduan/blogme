@@ -21,7 +21,6 @@ checks = {
         this.contentPath();
         this.mail();
         this.mysql();
-        this.builtFilesExist();
     },
 
     nodeEnv: function checkNodeEnvState() {

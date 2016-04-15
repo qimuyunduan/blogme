@@ -9,36 +9,25 @@ if (!utils.isProduction) {
     hbs.handlebars.logger.level = 0;
 }
 
-coreHelpers.asset  = require('./asset');
+
 coreHelpers.author  = require('./author');
 coreHelpers.body_class  = require('./body_class');
 coreHelpers.content  = require('./content');
 coreHelpers.date  = require('./date');
 coreHelpers.encode  = require('./encode');
-coreHelpers.excerpt  = require('./excerpt');
+
 coreHelpers.foreach = require('./foreach');
-coreHelpers.get = require('./get');
-coreHelpers.ghost_foot = require('./ghost_foot');
-coreHelpers.ghost_head = require('./ghost_head');
+coreHelpers.ghost_foot = require('./app_foot');
+coreHelpers.ghost_head = require('./app_head');
 coreHelpers.image = require('./image');
 coreHelpers.is = require('./is');
 coreHelpers.has = require('./has');
-coreHelpers.meta_description = require('./meta_description');
-coreHelpers.meta_title = require('./meta_title');
-coreHelpers.navigation = require('./navigation');
-coreHelpers.pagination = require('./pagination');
-coreHelpers.plural = require('./plural');
-coreHelpers.post_class = require('./post_class');
-coreHelpers.prev_post = require('./prev_next');
-coreHelpers.next_post = require('./prev_next');
-coreHelpers.tags = require('./tags');
+
 coreHelpers.title = require('./title');
-coreHelpers.url = require('./url');
+
 
 // Specialist helpers for certain templates
 coreHelpers.input_password = require('./input_password');
-coreHelpers.page_url = require('./page_url');
-coreHelpers.pageUrl = require('./page_url').deprecated;
 
 coreHelpers.helperMissing = function (arg) {
     if (arguments.length === 2) {

@@ -199,9 +199,7 @@ module.exports = {
     configuration: configuration,
     mail: mail,
     posts: posts,
-    roles: roles,
     settings: settings,
-    tags: tags,
     clients: clients,
     authentication: authentication,
     uploads: uploads

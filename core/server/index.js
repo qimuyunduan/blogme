@@ -10,7 +10,7 @@ var express     = require('express'),
     middleware  = require('./middleware'),
     models      = require('./models'),
     permissions = require('./permissions'),
-    server      = require('./server');
+    Server      = require('./app_server');
 
 
 // Sets up the express server instances, runs init on a bunch of stuff, configures views, helpers, routes and more
@@ -19,18 +19,18 @@ function init(options) {
     // Get reference to an express app instance.
     var app = express();
 
-
     // It returns a promise that is resolved when the application
     // Load our config.js file from the local file system.
-    return config.load(options.config).then(function () {
-        // Initialise the models
-        return models.init();
-    }).then(function () {
-        // Initialize the settings cache
-        return api.init();
-    }).then(function () {
-        return permissions.init();
-    }).then(function () {
+
+    //return config.load(options.config).then(function () {
+    //    // Initialise the models
+    //    return models.init();
+    //}).then(function () {
+    //    // Initialize the settings cache
+    //    return api.init();
+    //}).then(function () {
+    //    return permissions.init();
+    //}).then(function () {
 
         var Hbs = hbs.create();
         // enabled gzip compression by default
@@ -40,14 +40,14 @@ function init(options) {
         app.set('view engine', 'hbs');
         app.engine('hbs', Hbs.express4({}));
 
-        // Load helpers
-        helpers.loadCoreHelpers(Hbs);
-
-        // Middleware and Routing
-        middleware(app);
+        //// Load helpers
+        //helpers.loadCoreHelpers(Hbs);
+		//
+        //// Middleware and Routing
+        //middleware(app);
 
         return new Server(app);
-    });
+    //});
 }
 
 module.exports = init;

@@ -6,16 +6,13 @@
 // We use the name ghost_head to match the helper for consistency:
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 
-var getMetaData = require('../data/meta'),
-    hbs = require('express-hbs'),
+var hbs = require('express-hbs'),
     escapeExpression = hbs.handlebars.Utils.escapeExpression,
     SafeString = hbs.handlebars.SafeString,
     _ = require('lodash'),
-    filters = require('../filters'),
-    assetHelper = require('./asset'),
     config = require('../config'),
     Promise = require('bluebird'),
-    labs = require('../utils/labs'),
+
     api = require('../api');
 
 function getClient() {

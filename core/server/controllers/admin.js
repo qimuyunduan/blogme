@@ -6,7 +6,7 @@
 
 adminControllers = {
     // Route: index
-    // Path: /ghost/
+    // Path: /admin/
     // Method: GET
     index: function index(req, res) {
 

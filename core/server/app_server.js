@@ -5,27 +5,29 @@ var Promise = require('bluebird'),
 	config  = require('./config');
 
 
-function Server(rootApp) {
-	this.rootApp = rootApp;
+function Server(app) {
+	this.app = app;
 	this.httpServer = null;
 	this.connections = {};
 	this.connectionId = 0;
-
+	this.env = process.env.NODE_ENV;
+	this.host = config.readFile(this.env).server.host;
+	this.port = config.readFile(this.env).server.port;
 	// Expose config module for use externally.
 	this.config = config;
+	console.log("return a server ...");
 }
 
 
 Server.prototype.start = function () {
 	var self    = this,
-		rootApp = self.rootApp;
+		app = self.app;
 
 	return new Promise(function (resolve) {
 
-		var configEnv = process.env.NODE_ENV;
-		self.httpServer = rootApp.listen(
-			config.readFile(configEnv).server.port,
-			config.readFile(configEnv).server.host
+		self.httpServer = app.listen(
+			self.port,
+			self.host
 		);
 		self.httpServer.on('error', function (error) {
 			if (error.errno === 'EADDRINUSE') {
@@ -124,8 +126,7 @@ Server.prototype.logStartMessages = function () {
 	} else {
 		console.log(
 			chalk.green('notices.httpServer.appIsRunningIn'),
-			'notices.httpServer.listeningOn',
-			config.getSocket() || config.server.host + ':' + config.server.port,
+			this.host + ':' + this.port,
 			chalk.gray('notices.httpServer.ctrlCToShutDown')
 		);
 	}

@@ -12,8 +12,10 @@ var path          = require('path'),
 
 function ConfigManager(config) {
 	this._config = {};
+
 	if (config && _.isObject(config)) {
 		this.set(config);
+
 	}
 }
 
@@ -32,6 +34,7 @@ ConfigManager.prototype.set = function (config) {
 	// Allow contentPath to be over-written by passed in config object
 	// Otherwise default to default content path location
 	contentPath = this._config.paths.contentPath || path.resolve(appRoot, 'content');
+
 
 	_.merge(this._config, {
 		paths: {
@@ -54,7 +57,8 @@ ConfigManager.prototype.set = function (config) {
 
 	});
 
-	_.extend(this, this._config);
+	_.assign(this, this._config);
+
 };
 
 /**
@@ -81,3 +85,5 @@ ConfigManager.prototype.readFile = function (envVal) {
 
 
 module.exports = new ConfigManager(defaultConfig);//调用构造函数
+
+
