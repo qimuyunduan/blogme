@@ -26,9 +26,6 @@ function init(options) {
         // Initialise the models
         return models.init();
     }).then(function () {
-        // Populate any missing default settings
-        return models.Settings.populateDefaults();
-    }).then(function () {
         // Initialize the settings cache
         return api.init();
     }).then(function () {

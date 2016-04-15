@@ -4,7 +4,7 @@ var config      = require('../config'),
 
     frontendRoutes;
 
-frontendRoutes = function frontendRoutes(middleware) {
+frontendRoutes = function frontendRoutes() {
 
     var router = express.Router();
 
@@ -16,7 +16,6 @@ frontendRoutes = function frontendRoutes(middleware) {
         utils.redirect301(res, '/signup/');
     });
 
-    router.get('/:uuid', frontend.preview);
 
     return router;
 };

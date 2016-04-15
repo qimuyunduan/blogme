@@ -4,6 +4,7 @@ var express     = require('express'),
     apiRoutes;
 
 apiRoutes = function apiRoutes(middleware) {
+
     var router = express.Router(),
 
         authenticatePublic = [
@@ -23,13 +24,13 @@ apiRoutes = function apiRoutes(middleware) {
 
 
     // ## Posts
-    router.get('/posts', authenticatePublic, api.http(api.posts.browse));
+    router.get('/posts',      authenticatePublic,    api.http(api.posts.browse));
 
-    router.post('/posts', authenticatePrivate, api.http(api.posts.add));
-    router.get('/posts/:id', authenticatePublic, api.http(api.posts.read));
+    router.post('/posts',     authenticatePrivate,   api.http(api.posts.add));
+    router.get('/posts/:id',  authenticatePublic,    api.http(api.posts.read));
     router.get('/posts/slug/:slug', authenticatePublic, api.http(api.posts.read));
-    router.put('/posts/:id', authenticatePrivate, api.http(api.posts.edit));
-    router.del('/posts/:id', authenticatePrivate, api.http(api.posts.destroy));
+    router.put('/posts/:id',  authenticatePrivate,   api.http(api.posts.edit));
+    router.del('/posts/:id',  authenticatePrivate,   api.http(api.posts.destroy));
 
     // ## Settings
     router.get('/settings', authenticatePrivate, api.http(api.settings.browse));
