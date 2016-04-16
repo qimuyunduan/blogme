@@ -121,13 +121,13 @@ Server.prototype.logStartMessages = function () {
 	if (process.env.NODE_ENV === 'production') {
 		console.log(
 			chalk.green('notices.httpServer.appIsRunningIn'),
-			chalk.gray('notices.httpServer.ctrlCToShutDown')
+			chalk.gray('notices.......press ctrl+C ToShutDown')
 		);
 	} else {
 		console.log(
 			chalk.green('notices.httpServer.appIsRunningIn'),
-			this.host + ':' + this.port,
-			chalk.gray('notices.httpServer.ctrlCToShutDown')
+			this.host + ':' + this.port,"\n",
+			chalk.gray('notices.....press ctrl+C ToShutDown')
 		);
 	}
 
@@ -135,13 +135,13 @@ Server.prototype.logStartMessages = function () {
 		console.log(chalk.red('notices.httpServer.appHasShutdown'));
 		if (process.env.NODE_ENV === 'production') {
 			console.log(
-				'notices.httpServer.yourAppIsNowOffline'
+				'notices......yourAppIsNowOffline'
 			);
 		} else {
 			console.log(
 				'notices.httpServer.appWasRunningFor',
 				Math.round(process.uptime()),
-				'common.time.seconds'
+				'seconds'
 			);
 		}
 		process.exit(0);

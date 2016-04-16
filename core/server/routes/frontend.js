@@ -1,5 +1,4 @@
-var config      = require('../config'),
-    express     = require('express'),
+var express     = require('express'),
     utils       = require('../utils'),
 
     frontendRoutes;
@@ -8,7 +7,7 @@ frontendRoutes = function frontendRoutes() {
 
     var router = express.Router();
 
-    // ### Admin routes
+
     router.get(/^\/(logout|signout)\/$/, function redirectToSignout(req, res) {
         utils.redirect301(res, '/signout/');
     });

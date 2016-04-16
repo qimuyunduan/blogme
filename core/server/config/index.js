@@ -69,10 +69,6 @@ ConfigManager.prototype.get = function () {
 	return this._config;
 };
 
-ConfigManager.prototype.load = function () {
-
-	return new Promise(function (resolve, reject) {});
-};
 
 /**
  * Read config.js file from file system using node's require

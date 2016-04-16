@@ -22,7 +22,7 @@ function init(options) {
     // It returns a promise that is resolved when the application
     // Load our config.js file from the local file system.
 
-    //return config.load(options.config).then(function () {
+    return Promise.resolve().then(function () {
     //    // Initialise the models
     //    return models.init();
     //}).then(function () {
@@ -31,7 +31,7 @@ function init(options) {
     //}).then(function () {
     //    return permissions.init();
     //}).then(function () {
-
+		console.log("prepare to starting....");
         var Hbs = hbs.create();
         // enabled gzip compression by default
 		app.use(compress());
@@ -44,10 +44,10 @@ function init(options) {
         //helpers.loadCoreHelpers(Hbs);
 		//
         //// Middleware and Routing
-        //middleware(app);
+        middleware(app);
 
         return new Server(app);
     //});
+    });
 }
-
 module.exports = init;

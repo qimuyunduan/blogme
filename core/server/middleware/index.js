@@ -56,14 +56,14 @@ setupMiddleware  = function setupMiddleware(App) {
     App.use('/public', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_MS}));
 
     // First determine whether we're serving admin
-    App.use(decideIsAdmin);
-
-    // Theme only config
-    App.use(staticTheme());
-
-    // Check if password protected app
-    App.use(privateBlogging.checkIsPrivate); // check if the app is protected
-    App.use(privateBlogging.filterPrivateRoutes);
+    //App.use(decideIsAdmin);
+	//
+    //// Theme only config
+    //App.use(staticTheme());
+	//
+    //// Check if password protected app
+    //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
+    //App.use(privateBlogging.filterPrivateRoutes);
 
 
 
@@ -73,7 +73,7 @@ setupMiddleware  = function setupMiddleware(App) {
             'Cache-Control': 'public, max-age=' + utils.ONE_YEAR_S
         }
     }));
-    App.use(uncapitalise);
+    //App.use(uncapitalise);
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));
@@ -81,9 +81,9 @@ setupMiddleware  = function setupMiddleware(App) {
 
     // ### Caching
 
-    App.use(cacheControl('public'));
-
-    App.use(routes.apiBaseUri, cacheControl('private'));
+    //App.use(cacheControl('public'));
+	//
+    //App.use(routes.apiBaseUri, cacheControl('private'));
 
 
     // ### Routing

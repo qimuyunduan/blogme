@@ -4,7 +4,7 @@ var appInit,
 // Make sure dependencies are installed and file system permissions are correct.
 require('./core/server/utils/startup-check').check();
 console.log("start check completed...");
-// Proceed with startup
+
 appInit = require('./core');
 errors  = require('./core/server/errors');
 
