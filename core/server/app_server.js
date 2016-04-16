@@ -15,7 +15,6 @@ function Server(app) {
 	this.port = config.readFile(this.env).server.port;
 	// Expose config module for use externally.
 	this.config = config;
-	console.log("return a server ...");
 }
 
 

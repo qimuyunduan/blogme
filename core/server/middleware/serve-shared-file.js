@@ -12,7 +12,7 @@ function serveSharedFile(file, type, maxAge) {
         blogRegex = /(\{\{blog-url\}\})/g,
         apiRegex = /(\{\{api-url\}\})/g;
 
-    filePath = file.match(/^shared/) ? path.join(corePath, file) : path.join(corePath, 'shared', file);
+    filePath = path.join(corePath, 'server/views/img/', file);
 
     return function serveSharedFile(req, res, next) {
         if (req.path === '/' + file) {

@@ -12,7 +12,6 @@ var bodyParser       = require('body-parser'),
     cacheControl     = require('./cache-control'),
     decideIsAdmin    = require('./is-admin'),
     privateBlogging  = require('./private-blogging'),
-    redirectToSetup  = require('./redirect-to-setup'),
     serveSharedFile  = require('./serve-shared-file'),
     spamPrevention   = require('./spam-prevention'),
     staticTheme      = require('./static-theme'),
@@ -52,18 +51,24 @@ setupMiddleware  = function setupMiddleware(App) {
 
 
     // Static assets
-    App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_HOUR_MS}));
-    App.use('/public', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_MS}));
+    App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_YEAR_S}));
+    App.use('/', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_MS}));
+	App.use('/js',express.static(path.join(corePath,'/server/views/js'),{maxAge:utils.ONE_DAY_S}));
+	App.use('/themes',express.static(path.join(corePath,'/server/views/themes'),{maxAge:utils.ONE_YEAR_MS}));
+	App.use('/chart',express.static(path.join(corePath,'/server/views/chart'),{maxAge:utils.ONE_DAY_S}));
+	App.use('/img',express.static(path.join(corePath,'/server/views/img'),{maxAge:utils.ONE_DAY_S}));
+	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify'),{maxAge:utils.ONE_DAY_S}));
+	App.use('/xheditor',express.static(path.join(corePath,'/server/views/xheditor'),{maxAge:utils.ONE_DAY_S}));
 
-    // First determine whether we're serving admin
-    //App.use(decideIsAdmin);
-	//
-    //// Theme only config
-    //App.use(staticTheme());
-	//
-    //// Check if password protected app
-    //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
-    //App.use(privateBlogging.filterPrivateRoutes);
+     //First determine whether we're serving admin
+    App.use(decideIsAdmin);
+
+    // Theme only config
+    App.use(staticTheme());
+
+    // Check if password protected app
+    App.use(privateBlogging.checkIsPrivate); // check if the app is protected
+    App.use(privateBlogging.filterPrivateRoutes);
 
 
 
@@ -73,7 +78,7 @@ setupMiddleware  = function setupMiddleware(App) {
             'Cache-Control': 'public, max-age=' + utils.ONE_YEAR_S
         }
     }));
-    //App.use(uncapitalise);
+    App.use(uncapitalise);
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));
@@ -81,9 +86,9 @@ setupMiddleware  = function setupMiddleware(App) {
 
     // ### Caching
 
-    //App.use(cacheControl('public'));
-	//
-    //App.use(routes.apiBaseUri, cacheControl('private'));
+    App.use(cacheControl('public'));
+
+    App.use(routes.apiBaseUri, cacheControl('private'));
 
 
     // ### Routing

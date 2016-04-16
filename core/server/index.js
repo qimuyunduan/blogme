@@ -31,7 +31,6 @@ function init(options) {
     //}).then(function () {
     //    return permissions.init();
     //}).then(function () {
-		console.log("prepare to starting....");
         var Hbs = hbs.create();
         // enabled gzip compression by default
 		app.use(compress());

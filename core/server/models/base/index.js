@@ -12,6 +12,7 @@ var _          = require('lodash'),
     Promise    = require('bluebird'),
     utils      = require('../../utils'),
     uuid       = require('node-uuid'),
+	Response   = require('./response'),
 	nodeEnv    = process.env.NODE_ENV,
 	dbEnv,
     appBookshelf;
@@ -38,81 +39,100 @@ appBookshelf.Model = appBookshelf.Model.extend({
         return attr;
     },
 
-    toJSON: function toJSON(attrs) {
+    toJSON: function toJSON() {
 
     }
 
 }, {
     // class Utility Functions
 
-    findAll: function findAll(options) {
-        options = this.filterOptions(options, 'findAll');
-        options.withRelated = _.union(options.withRelated, options.include);
-        return this.forge().fetchAll(options).then(function then(result) {
-            if (options.include) {
-                _.each(result.models, function each(item) {
-                    item.include = options.include;
-                });
-            }
-            return result;
+	modelConstants:{
+		"totalCount":-1,
+		"pageLimit":50,   // per page contains 50 records
+		"pageCounts":-1
+	},
+
+    findAll: function findAll() {
+		var self = this;
+        return self.forge().fetchAll().then(function then(collection) {
+			self.modelConstants.totalCount = collection.count;
+			self.modelConstants.pageCounts = self.countPage(self.modelConstants.totalCount,self.modelConstants.pageLimit);
+            return collection;
         });
     },
+	countPage:function countPage(totalPage,pageLimit){
 
-    findPage: function findPage(options) {
-        options = options || {};
+		if (pageLimit>0&&totalPage>=0){
 
-        var self = this,
-            itemCollection = this.forge(null, {context: options.context}),
-            tableName      = _.result(this.prototype, 'tableName');
+			if (totalPage%pageLimit == 0){
+				return totalPage/pageLimit;
+			}
+			else {
+				return parseInt(totalPage/pageLimit)+1;
+			}
+		}
+	},
+    findPage: function findPage(numPage,messageData) {
+		var self  = this;
+		var data  = self.findAll();
+		var message = messageData===undefined ? "":messageData;
+		var currentPage = 1;
+		var pages = self.modelConstants.pageCounts;
+		var response = new Response();
+		var pageNum = 0;
 
-        // Set this to true or pass ?debug=true as an API option to get output
-        itemCollection.debug = options.debug && process.env.NODE_ENV !== 'production';
+		if (data.count < self.modelConstants.pageLimit) {
 
-        // Filter options so that only permitted ones remain
-        options = this.filterOptions(options, 'findPage');
+			return response.responseData(currentPage,pages,data,message);
+		}
+		else {
+			if(numPage >=1&&numPage<=pages){
+				pageNum = numPage-1;
+			}
+			data = _.chunk(data,self.modelConstants.pageLimit)[pageNum];
+			return response.responseData(currentPage,pages,data,message);
 
-        // This applies default properties like 'staticPages' and 'status'
-        // And then converts them to 'where' options... this behaviour is effectively deprecated in favour
-        // of using filter - it's only be being kept here so that we can transition cleanly.
-        this.processOptions(options);
+		}
 
-        // Add Filter behaviour
-        itemCollection.applyFilters(options);
-
-        // Handle related objects
-        // TODO: this should just be done for all methods @ the API level
-        options.withRelated = _.union(options.withRelated, options.include);
-
-        // Ensure only valid fields/columns are added to query
-        if (options.columns) {
-            options.columns = _.intersection(options.columns, this.prototype.permittedAttributes());
-        }
-
-        if (options.order) {
-            options.order = self.parseOrderOption(options.order, options.include);
-        } else {
-            options.order = self.orderDefaultOptions();
-        }
-
-        return itemCollection.fetchPage(options).then(function formatResponse(response) {
-            var data = {};
-            data[tableName] = response.collection.toJSON(options);
-            data.meta = {pagination: response.pagination};
-
-            return data;
-        });
     },
+
+	findPrePage:function findPrePage(currentPage){
+		var self = this;
+		if (currentPage<=1){
+			var message = "已经是第一页了...";
+			return self.findPage(1,message);
+		}
+		else{
+
+			return self.findPage(currentPage-1)
+		}
+	},
+	findNextPage:function findNextPage(currentPage,pageLimit){
+		var self = this;
+		if (currentPage>=self.modelConstants.totalCount){
+			var message = "已经是最后一页了...";
+			return self.findPage(self.modelConstants.pageCounts,message);
+		}
+		else{
+
+			return self.findPage(currentPage+1)
+		}
+
+	},
+	findNumPage:function findNumPage(numPage){
+		if (numPage>=1&&numPage<=this.modelConstants.pageCounts){
+			return this.findPage(numPage);
+		}
+	},
+
 
     findOne: function findOne(data, options) {
-        data = this.filterData(data);
-        options = this.filterOptions(options, 'findOne');
+
         return this.forge(data, {include: options.include}).fetch(options);
     },
 
     edit: function edit(data, options) {
         var id = options.id;
-        data = this.filterData(data);
-        options = this.filterOptions(options, 'edit');
 
         return this.forge({id: id}).fetch(options).then(function then(object) {
             if (object) {
@@ -122,8 +142,7 @@ appBookshelf.Model = appBookshelf.Model.extend({
     },
 
     add: function add(data, options) {
-        data = this.filterData(data);
-        options = this.filterOptions(options, 'add');
+
         var model = this.forge(data);
         // We allow you to disable timestamps when importing posts so that the new posts `updated_at` value is the same
         // as the import json blob. More details refer to https://github.com/TryApp/App/issues/1696
@@ -135,7 +154,6 @@ appBookshelf.Model = appBookshelf.Model.extend({
 
     destroy: function destroy(options) {
         var id = options.id;
-        options = this.filterOptions(options, 'destroy');
 
         // Fetch the object before destroying it, so that the changed data is available to events
         return this.forge({id: id}).fetch(options).then(function then(obj) {
