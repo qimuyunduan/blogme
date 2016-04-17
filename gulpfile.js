@@ -37,7 +37,7 @@ gulp.task('clean',function() {
     del('./public/stylesheets/style-*.css','./public/js/*-*.js');
 });
 gulp.task('publish-html', function () {
-    return gulp.src(['./public/**/*.json', './public/index.html'])
+    return gulp.src(['./public/**/*.json', './public/authorized.html'])
         .pipe(revCollector())
         .pipe(gulp.dest('./public/'));
 });
@@ -51,7 +51,7 @@ gulp.task('publish', function (callback) {
 gulp.task('browserSync', function() {
     browserSync.init({
         proxy: "localhost:8000",
-        files: "./public/index.html,./public/**/style.css",
+        files: "./public/authorized.html,./public/**/style.css",
         browser:"chrome"
 
     });

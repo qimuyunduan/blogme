@@ -4,12 +4,14 @@ var express     = require('express'),
     compress    = require('compression'),
     uuid        = require('node-uuid'),
     Promise     = require('bluebird'),
+	path        = require('path'),
     api         = require('./api'),
     config      = require('./config'),
     helpers     = require('./helpers'),
     middleware  = require('./middleware'),
     models      = require('./models'),
     permissions = require('./permissions'),
+
     Server      = require('./app_server');
 
 
@@ -34,11 +36,13 @@ function init(options) {
         var Hbs = hbs.create();
         // enabled gzip compression by default
 		app.use(compress());
-        // ## View engine
-        // set the view engine
-        app.set('view engine', 'hbs');
-        app.engine('hbs', Hbs.express4({}));
 
+
+		// set view path
+		app.set('views',path.join(__dirname,'/views/hbs'));
+		// set the view engine
+		app.set('view engine', 'hbs');
+		app.engine('hbs', Hbs.express4({}));
         //// Load helpers
         //helpers.loadCoreHelpers(Hbs);
 		//

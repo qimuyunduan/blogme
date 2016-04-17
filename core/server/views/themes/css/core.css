@@ -104,7 +104,7 @@ a:hover {text-decoration:underline;}
 .tabsPage .tabsPageContent { display:block; overflow:hidden; border-style:solid; border-width:0 1px 1px 1px; position:relative;}
 
 /* Alert */
-/*.alert { overflow:hidden; position:absolute; z-index:101; width:300px; top:0}*/
+/*.alert { overflow:hidden; position:absolute; z-index.hbs:101; width:300px; top:0}*/
 .alert { overflow:hidden; z-index:1011; display:block; width:300px; margin-left:-150px; position:absolute; top:0; left:50%;}
 .alert .alertContent { display:block; overflow:hidden; padding:5px 5px 1px 5px; border-style:solid; border-width:0 1px;}
 .alert .alertInner { display:block; padding:0 9px 9px 9px; text-align:left; border-style:solid; border-width:1px;}

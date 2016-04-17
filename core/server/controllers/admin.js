@@ -5,7 +5,7 @@
     adminControllers;
 
 adminControllers = {
-    // Route: index
+    // Route: index.hbs
     // Path: /admin/
     // Method: GET
     index: function index(req, res) {

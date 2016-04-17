@@ -352,7 +352,7 @@ var DWZ = {
 			return d >= 0 && this.lastIndexOf(pattern) === d;
 		},
 		replaceSuffix:function(index){
-			return this.replace(/\[[0-9]+\]/,'['+index+']').replace('#index#',index);
+			return this.replace(/\[[0-9]+\]/,'['+index+']').replace('#index.hbs#',index);
 		},
 		trans:function(){
 			return this.replace(/&lt;/g, '<').replace(/&gt;/g,'>').replace(/&quot;/g, '"');

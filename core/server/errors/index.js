@@ -21,8 +21,7 @@ var _                          = require('lodash'),
 
     userErrorTemplateExists   = false;
 
-// Shim right now to deal with circular dependencies.
-// @TODO(hswolff): remove circular dependency and lazy require.
+
 
 function getConfigModule() {
     if (!config) {
@@ -59,9 +58,6 @@ function getStatusCode(error) {
  * Basic error handling helpers
  */
 errors = {
-    updateActiveTheme: function (activeTheme) {
-        userErrorTemplateExists = getConfigModule().paths.availableThemes[activeTheme].hasOwnProperty('error.hbs');
-    },
 
     throwError: function (err) {
         if (!err) {
@@ -140,8 +136,7 @@ errors = {
             context = 'errors.errors.databaseIsReadOnly';
             help = 'errors.errors.checkDatabase';
         }
-        // TODO: Logging framework hookup
-        // Eventually we'll have better logging which will know about envs
+
         if ((process.env.NODE_ENV === 'development' ||
             process.env.NODE_ENV === 'staging' ||
             process.env.NODE_ENV === 'production')) {
@@ -168,7 +163,7 @@ errors = {
 
     logErrorAndExit: function (err, context, help) {
         this.logError(err, context, help);
-        // Exit with 0 to prevent npm errors as we have our own
+
         process.exit(0);
     },
 
@@ -185,7 +180,7 @@ errors = {
     },
 
     logErrorWithRedirect: function (msg, context, help, redirectTo, req, res) {
-        /*jshint unused:false*/
+
         var self = this;
 
         return function () {
@@ -212,7 +207,7 @@ errors = {
         _.each(error, function each(errorItem) {
             var errorContent = {};
 
-            // TODO: add logic to set the correct status code
+
             statusCode = getStatusCode(errorItem);
 
             errorContent.message = _.isString(errorItem) ? errorItem :
@@ -260,16 +255,15 @@ errors = {
     },
 
     renderErrorPage: function (statusCode, err, req, res, next) {
-        /*jshint unused:false*/
+
         var self = this,
-            defaultErrorTemplatePath = path.resolve(getConfigModule().paths.adminViews, 'user-error.hbs');
+            defaultErrorTemplatePath = path.resolve(getConfigModule().paths.hbsViews, 'user-error.hbs');
 
         function parseStack(stack) {
             if (!_.isString(stack)) {
                 return stack;
             }
 
-            // TODO: split out line numbers
             var stackRegex = /\s*at\s*(\w+)?\s*\(([^\)]+)\)\s*/i;
 
             return (
@@ -391,7 +385,7 @@ errors = {
 
 // Ensure our 'this' context for methods and preserve method arity by
 // using Function#bind for expressjs
-_.each([
+_.forEach([
     'logWarn',
     'logInfo',
     'rejectError',

@@ -15,7 +15,8 @@ apiRoutes = function apiRoutes() {
 
 
     router.get("/",function(req,res){
-		res.sendFile(path.join(__dirname, '../views', 'index.html'));
+		console.log("render index.hbs.hbs....");
+		res.render('index');
 	});
     //// ## Posts
     //router.get('/posts',          api.http(api.posts.browse));
