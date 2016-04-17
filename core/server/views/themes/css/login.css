@@ -12,7 +12,7 @@ table, caption, tbody, tfoot, thead, tr, th, td { padding:0; margin:0; font-size
 ul, ol { list-style:none;}
 img { border:0;}
 
-body { margin:0; text-align:center; background:#FFF url(../default/images/login_bg.png) repeat-x top;}
+body { margin-top:2em; text-align:center; background:#FFF;}
 
 #login { display:block; width:950px; margin:0 auto; text-align:left;}
 #login_header { display:block; padding-top:40px; height:80px;}
@@ -47,4 +47,4 @@ body { margin:0; text-align:center; background:#FFF url(../default/images/login_
 .login_inner { display:block; width:560px; padding:30px 20px 0 20px;}
 .login_inner p { margin:10px 0; line-height:150%; font-size:14px; color:#666;}
 
-#login_footer { clear:both; display:block; margin-bottom:20px; padding:10px; border-top:solid 1px #e2e5e8; color:#666; text-align:center;}
+#login_footer { clear:both;display:block; margin-bottom:20px; padding:10px; border-top:solid 1px #e2e5e8; color:#666; text-align:center;}

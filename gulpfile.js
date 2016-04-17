@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var shrink = require('gulp-minify-css');
 var watch = require('gulp-watch');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 //var webpack = require('gulp-webpack');
 //var config = require('./webpack.config');
 var rev = require('gulp-rev');////- 对文件名加MD5后缀
@@ -26,15 +26,15 @@ gulp.task('publish-js', function () {
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('publish-css', function () {
-    return gulp.src(['./public/stylesheets/style.css'])
+    return gulp.src(['./core/server/views/css/app.css'])
         .pipe(shrink())
         .pipe(rev())
-        .pipe(gulp.dest('./public/stylesheets/'))
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('./public/stylesheets'));
+        .pipe(gulp.dest('./core/server/views/css/'))
+        .pipe(rev.manifest())//加上MD5后缀
+        .pipe(gulp.dest('../core/server/views/css'));
 });
 gulp.task('clean',function() {
-    del('./public/stylesheets/style-*.css','./public/js/*-*.js');
+    del('./core/server/views/css/style-*.css','./public/js/*-*.js');
 });
 gulp.task('publish-html', function () {
     return gulp.src(['./public/**/*.json', './public/authorized.html'])
@@ -50,8 +50,8 @@ gulp.task('publish', function (callback) {
 });
 gulp.task('browserSync', function() {
     browserSync.init({
-        proxy: "localhost:8000",
-        files: "./public/authorized.html,./public/**/style.css",
+        proxy: "localhost:2368",//2368  网站的端口
+        files: "./core/server/views/*.html,./core/server/views/css/*.css",
         browser:"chrome"
 
     });

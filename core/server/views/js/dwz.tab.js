@@ -6,7 +6,7 @@
 	$.fn.extend({
 
 		/**
-		 * options: reverse[true, false], eventType[click, hover], currentIndex[default index.hbs 0]
+		 * options: reverse[true, false], eventType[click, hover], currentIndex[default about.hbs 0]
 		 * 			stTab[tabs selector], stTabPanel[tab panel selector]
 		 * 			ajaxClass[ajax load], closeClass[close tab]
 		 */ 

@@ -44,7 +44,8 @@
     "passport-oauth2-client-password": "0.1.2",
     "path-match": "1.2.3",
     "mysql":"2.1.1",
-    "validator": "4.5.0"
+    "validator": "4.5.0",
+    "method-override":"2.3.5"
   },
   "optionalDependencies": {
 

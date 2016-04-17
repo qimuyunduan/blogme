@@ -14,9 +14,9 @@ apiRoutes = function apiRoutes() {
 
 
 
-    router.get("/",function(req,res){
-		console.log("render index.hbs.hbs....");
-		res.render('index');
+    router.get("/about",function(req,res){
+		console.log("about.hbs...");
+		res.render('about');
 	});
     //// ## Posts
     //router.get('/posts',          api.http(api.posts.browse));

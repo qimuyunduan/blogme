@@ -13,9 +13,9 @@ function getActiveThemePaths(activeTheme) {
  * ## Get Channel Template Hierarchy
  *
  * Fetch the ordered list of templates that can be used to render this request.
- * 'index.hbs' is the default / fallback
- * For channels with slugs: [:channelName-:slug, :channelName, index.hbs]
- * For channels without slugs: [:channelName, index.hbs]
+ * 'about.hbs' is the default / fallback
+ * For channels with slugs: [:channelName-:slug, :channelName, about.hbs]
+ * For channels without slugs: [:channelName, about.hbs]
  * Channels can also have a front page template which is used if this is the first page of the channel, e.g. 'home.hbs'
  *
  * @param {Object} channelOpts
