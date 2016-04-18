@@ -37,19 +37,16 @@
     "lodash": "3.10.1",
     "moment": "2.11.2",
     "morgan": "1.6.1",
+    "mysql": "2.1.1",
     "node-uuid": "1.4.7",
     "nodemailer": "0.7.1",
     "passport": "0.3.2",
     "passport-http-bearer": "1.0.1",
     "passport-oauth2-client-password": "0.1.2",
     "path-match": "1.2.3",
-    "mysql":"2.1.1",
-    "validator": "4.5.0",
-    "method-override":"2.3.5"
+    "validator": "4.5.0"
   },
-  "optionalDependencies": {
-
-  },
+  "optionalDependencies": {},
   "devDependencies": {
     "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
@@ -72,9 +69,14 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "mocha": "2.4.5"
-
   },
   "greenkeeper": {
-    "ignore": [ "bluebird", "glob", "lodash", "nodemailer", "validator"]
+    "ignore": [
+      "bluebird",
+      "glob",
+      "lodash",
+      "nodemailer",
+      "validator"
+    ]
   }
 }

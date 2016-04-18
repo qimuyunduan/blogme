@@ -67,54 +67,9 @@ ido_user = appBookshelf.Model.extend({
         return appBookshelf.Model.prototype.format.call(this, options);
     },
 
-    findOne: function findOne(data, options) {
-        var query,
-            status,
-            optInc,
-            lookupRole = data.role;
-
-        delete data.role;
-
-        data = _.defaults(data || {}, {
-            status: 'active'
-        });
-
-        status = data.status;
-        delete data.status;
-
-        options = options || {};
-        optInc = options.include;
-        options.withRelated = _.union(options.withRelated, options.include);
-        data = this.filterData(data);
-
-        // Support finding by role
-        if (lookupRole) {
-            options.withRelated = _.union(options.withRelated, ['roles']);
-            options.include = _.union(options.include, ['roles']);
-
-            query = this.forge(data, {include: options.include});
-
-            query.query('join', 'roles_users', 'users.id', '=', 'roles_users.id');
-            query.query('join', 'roles', 'roles_users.role_id', '=', 'roles.id');
-            query.query('where', 'roles.name', '=', lookupRole);
-        } else {
-            // We pass include to forge so that toJSON has access
-            query = this.forge(data, {include: options.include});
-        }
-
-        if (status === 'active') {
-            query.query('whereIn', 'status', activeStates);
-        } else if (status === 'invited') {
-            query.query('whereIn', 'status', invitedStates);
-        } else if (status !== 'all') {
-            query.query('where', {status: options.status});
-        }
-
-        options = this.filterOptions(options, 'findOne');
-        delete options.include;
-        options.include = optInc;
-
-        return query.fetch(options);
+    findOne: function findOne( data,options) {
+			console.log("search user from ido_user...");
+			appBookshelf.Model.findOne(data,options);
     },
 
     edit: function edit(data, options) {
@@ -442,6 +397,6 @@ ido_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	ido_user: appBookshelf.model('ido_user', ido_user),
-	ido_users: appBookshelf.collection('ido_users', ido_users)
+	ido_user: ido_user,
+	ido_users:ido_users
 };

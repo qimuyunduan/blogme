@@ -2,6 +2,8 @@
 var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
+	controller  = require('../controllers'),
+	user        = require('../models/ido-user'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -14,17 +16,40 @@ apiRoutes = function apiRoutes() {
 
 
 
-    router.get("/about",function(req,res){
+    router.get("/authorized",function(req,res){
 
-		console.log("about.hbs...");
+		//console.log("render about.hbs...");
+		//res.send({"username":"qimu","pw":"101410"});
+		console.log(req.body);
+		res.send("ok got it!  get "+req.body);
+		//res.render('about');
+	});
+	router.put("/authorized",function(req,res){
+		console.log("render authorized.hbs...");
+		//console.log(req.params);
+		//res.send(controller.getUser());
+		//res.render('authorized');
+		 user.ido_users.forge({id:50}).fetch().then(function(userData){
+			if (!userData) {
 
-		res.render('about');
+				return res.json(userData);
+			}
+			else {
+				return userData.toJSON();
+			}
+		})
 	});
 	router.post("/authorized",function(req,res){
-
+		console.log("render authorized.hbs...");
 		console.log(req.body);
-
-		res.render('authorized');
+		res.send("ok got it!  post "+req.body);
+		//res.render('authorized');
+	});
+	router.delete("/authorized",function(req,res){
+		console.log("render authorized.hbs...");
+		console.log(req.body);
+		res.send("ok got it! delete"+req.body);
+		//res.render('authorized');
 	});
     //// ## Posts
     //router.get('/posts',          api.http(api.posts.browse));
