@@ -24,22 +24,23 @@
 		</div>
 		<div id="login_content">
 			<div class="loginForm">
-				<form action="authorized.html">
+				<form action="authorized.html" method="post">
 					<p>
-						<label>用户名：</label>
-						<input type="text" name="username" size="20" class="login_input" />
+						<label for = username>用户名：</label>
+						<input type="text" name="username" size="20" class="login_input" id = 'username'/>
 					</p>
 					<p>
-						<label>密码：</label>
-						<input type="password" name="password" size="20" class="login_input" />
+						<label for="pw">密码：</label>
+						<input type="password" name="password" size="20" class="login_input" id = 'pw'/>
 					</p>
 					<p>
-						<label>验证码：</label>
-						<input class="code" type="text" size="5" />
+						<label for="code">验证码：</label>
+						<input class="code" type="text" size="5" id ='code'/>
 						<span><img src="themes/default/images/header_bg.png" alt="" width="75" height="24" /></span>
 					</p>
 					<div class="login_bar">
-						<input class="sub" type="submit" value=" " />
+                        <!--<input type="hidden" name="method" value="put" class="sub" onclick=""/>-->
+                        <input type="submit" class="sub">
 					</div>
 				</form>
 			</div>
@@ -51,7 +52,6 @@
 					<li><a href="#">为什么登录失败？</a></li>
 				</ul>
 				<div class="login_inner">
-
 					<p>在 百宝箱 里您可以查星座，订机票，看小说，学做菜…</p>
                     <p>在 百宝箱 里您可以查星座，订机票，看小说，学做菜…</p>
 				</div>

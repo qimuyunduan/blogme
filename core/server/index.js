@@ -39,7 +39,7 @@ function init(options) {
 
 
 		// set view path
-		app.set('views',path.join(__dirname,'/views/hbs'));
+		app.set('views',path.join(__dirname,'/views'));
 		// set the view engine
 		app.set('view engine', 'hbs');
 		app.engine('hbs', Hbs.express4({}));

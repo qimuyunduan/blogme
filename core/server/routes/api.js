@@ -15,8 +15,16 @@ apiRoutes = function apiRoutes() {
 
 
     router.get("/about",function(req,res){
+
 		console.log("about.hbs...");
+
 		res.render('about');
+	});
+	router.post("/authorized",function(req,res){
+
+		console.log(req.body);
+
+		res.render('authorized');
 	});
     //// ## Posts
     //router.get('/posts',          api.http(api.posts.browse));
