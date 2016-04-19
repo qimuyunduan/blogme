@@ -21,11 +21,11 @@ var _          = require('lodash'),
 
 dbEnv = config.readFile(nodeEnv).database;
 console.log(dbEnv);
-var knex = require('knex')(dbEnv);
-bookshelf = require('bookshelf')(knex);
-
-// Load the bookshelf registry plugin, which helps us avoid circular dependencies
-bookshelf.plugin('registry');
+//var knex = require('knex')(dbEnv);
+//bookshelf = require('bookshelf')(knex);
+//
+//// Load the bookshelf registry plugin, which helps us avoid circular dependencies
+//bookshelf.plugin('registry');
 
 // ## bookshelf.Model
 // The Base Model which other App objects will inherit from,
@@ -164,4 +164,18 @@ bookshelf.plugin('registry');
 //});
 
 // Export bookshelf for use elsewhere
-module.exports = bookshelf;
+//module.exports = bookshelf;
+module.exports = function () {
+
+	if (bookshelf) {
+		return bookshelf;
+	}
+
+	var knex = require('knex')(dbEnv);
+
+	bookshelf = require('bookshelf')(knex);
+
+	bookshelf.plugin('registry');
+
+	return bookshelf;
+};

@@ -1,9 +1,10 @@
 // # API routes
+'use strict';
 var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
 	controller  = require('../controllers'),
-	user        = require('../models/ido-user'),
+	User_model        = require('../models/ido-user'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -15,7 +16,9 @@ apiRoutes = function apiRoutes() {
     router.del = router.delete;
 
 
-
+	router.get("/about",function(req,res){
+		res.render("about");
+	});
     router.get("/authorized",function(req,res){
 
 		//console.log("render about.hbs...");
@@ -29,21 +32,23 @@ apiRoutes = function apiRoutes() {
 		//console.log(req.params);
 		//res.send(controller.getUser());
 		//res.render('authorized');
-		 user.ido_users.forge({id:50}).fetch().then(function(userData){
+		 User_model.User.forge().fetchAll().then(function(userData){
 			if (!userData) {
-
-				return res.json(userData);
+				console.log(JSON.stringify(userData));
+				return res.json(JSON.stringify(userData));
 			}
 			else {
-				return userData.toJSON();
+				console.log(JSON.stringify(userData));
+				return res.json(JSON.stringify(userData));
 			}
-		})
+		});
 	});
 	router.post("/authorized",function(req,res){
 		console.log("render authorized.hbs...");
-		console.log(req.body);
-		res.send("ok got it!  post "+req.body);
+
+		//res.send("ok got it!  post "+req.body);
 		//res.render('authorized');
+		res.json('{"data":"biibbbi"}');
 	});
 	router.delete("/authorized",function(req,res){
 		console.log("render authorized.hbs...");
