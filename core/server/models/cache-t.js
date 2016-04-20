@@ -159,6 +159,10 @@ caches = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	cache: appBookshelf.model('cache', cache),
-	caches: appBookshelf.collection('caches', caches)
+	model: function(){
+		return cache;
+	},
+	collection:function(){
+		return caches;
+	}
 };

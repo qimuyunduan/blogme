@@ -159,6 +159,10 @@ uploadfiles = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	uploadfile: appBookshelf.model('uploadfile', uploadfile),
-	uploadfiles: appBookshelf.collection('uploadfiles', uploadfiles)
+	model: function(){
+		return uploadfile;
+	},
+	collection:function(){
+		return uploadfiles;
+	}
 };

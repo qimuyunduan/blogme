@@ -159,6 +159,10 @@ logs = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	log: appBookshelf.model('log', log),
-	logs: appBookshelf.collection('logs', logs)
+	model: function(){
+		return log;
+	},
+	collection:function(){
+		return logs;
+	}
 };

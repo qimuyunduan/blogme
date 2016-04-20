@@ -159,6 +159,10 @@ insured_uuits= appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	insured_uuit: appBookshelf.model('insured_uuit', insured_uuit),
-	insured_uuits: appBookshelf.collection('insured_uuits', insured_uuits)
+	model: function(){
+		return insured_uuit;
+	},
+	collection:function(){
+		return insured_uuits;
+	}
 };

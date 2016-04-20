@@ -159,6 +159,10 @@ deletemoney_records = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	deletemoney_record: appBookshelf.model('deletemoney_record', deletemoney_record),
-	deletemoney_records: appBookshelf.collection('deletemoney_records', deletemoney_records)
+	model: function(){
+		return deletemoney_record;
+	},
+	collection:function(){
+		return deletemoney_records;
+	}
 };

@@ -159,6 +159,10 @@ con_files = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	con_file: appBookshelf.model('con_file',con_file ),
-	con_files: appBookshelf.collection('con_files',con_files )
+	model: function(){
+		return con_file;
+	},
+	collection:function(){
+		return con_files;
+	}
 };

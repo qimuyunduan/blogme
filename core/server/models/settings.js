@@ -159,6 +159,10 @@ settings = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	setting: appBookshelf.model('setting', setting),
-	settings: appBookshelf.collection('settings', settings)
+	model: function(){
+		return setting;
+	},
+	collection:function(){
+		return settings;
+	}
 };

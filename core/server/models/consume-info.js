@@ -159,6 +159,10 @@ consume_infos = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	consume_info: appBookshelf.model('consume_info', consume_info),
-	consume_infos: appBookshelf.collection('consume_infos', consume_infos)
+	model: function(){
+		return consume_info;
+	},
+	collection:function(){
+		return consume_infos;
+	}
 };

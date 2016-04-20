@@ -159,6 +159,10 @@ insured_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	insured_user: appBookshelf.model('insured_user', insured_user),
-	insured_users: appBookshelf.collection('insured_users', insured_users)
+	model: function(){
+		return insured_user;
+	},
+	collection:function(){
+		return insured_users;
+	}
 };

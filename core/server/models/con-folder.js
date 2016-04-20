@@ -159,6 +159,10 @@ con_folders = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	con_folder: appBookshelf.model('con_folder', con_folder),
-	con_folders: appBookshelf.collection('con_folders', con_folders)
+	model: function(){
+		return con_folder;
+	},
+	collection:function(){
+		return con_folders;
+	}
 };

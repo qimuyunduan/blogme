@@ -159,6 +159,10 @@ update_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	update_user: appBookshelf.model('update_user', update_user),
-	update_users: appBookshelf.collection('update_users', update_users)
+	model: function(){
+		return update_user;
+	},
+	collection:function(){
+		return update_users;
+	}
 };

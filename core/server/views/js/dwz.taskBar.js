@@ -42,7 +42,7 @@
 			$.extend(this._op, options);
 			this._taskBar = $("#" + this._op.id);
 			if (this._taskBar.size() == 0) {
-				this._taskBar = $(DWZ.frag["taskbar"]).appendTo($("#layout"));
+				this._taskBar = $(DWZ.frag["taskbar"]).appendTo($("#layouts"));
 				
 				this._taskBar.find(".taskbarLeft").hoverClass("taskbarLeftHover");
 				this._taskBar.find(".taskbarRight").hoverClass("taskbarRightHover");

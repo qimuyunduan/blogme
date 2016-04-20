@@ -17,16 +17,13 @@ apiRoutes = function apiRoutes() {
 
 
 	router.get("/about",function(req,res){
-		res.render("about");
-	});
-	router.get("/test.hbs",function(req,res){
 		var data = {
-			name:"xiaoLi",
-			age:34,
-			sex:"male"
-		};
-		res.render("view page",data);
+			htmlCode:'<li><a href="#">下载驱动程序</a></li>',
+			title:"风险管理平台"
+					};
+		res.render("about",data);
 	});
+
     router.get("/authorized",function(req,res){
 
 		//console.log("render about.hbs...");

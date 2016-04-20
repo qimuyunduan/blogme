@@ -159,6 +159,10 @@ web_sites = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	web_site: appBookshelf.model('web_site', web_site),
-	web_sites: appBookshelf.collection('web_sites', web_sites)
+	model: function(){
+		return web_site;
+	},
+	collection:function(){
+		return web_sites;
+	}
 };

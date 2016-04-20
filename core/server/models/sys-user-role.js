@@ -159,6 +159,10 @@ sys_roles= appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	sys_role: appBookshelf.model('sys_role', sys_role),
-	sys_roles: appBookshelf.collection('sys_roles', sys_roles)
+	model: function(){
+		return sys_role;
+	},
+	collection:function(){
+		return sys_roles;
+	}
 };

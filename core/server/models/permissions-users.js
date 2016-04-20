@@ -159,6 +159,10 @@ permission_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	permission_user: appBookshelf.model('permission_user', permission_user),
-	permission_users: appBookshelf.collection('permission_users', permission_users)
+	model: function(){
+		return permission_user;
+	},
+	collection:function(){
+		return permission_users;
+	}
 };

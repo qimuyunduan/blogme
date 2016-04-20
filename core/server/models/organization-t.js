@@ -159,6 +159,10 @@ organizations = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	organization: appBookshelf.model('organization', organization),
-	organizations: appBookshelf.collection('organizations', organizations)
+	model: function(){
+		return organization;
+	},
+	collection:function(){
+		return organizations;
+	}
 };

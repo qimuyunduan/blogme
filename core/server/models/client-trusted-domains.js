@@ -159,6 +159,10 @@ client_domains = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	client_domain: appBookshelf.model('client_domain', client_domain),
-	client_domains: appBookshelf.collection('client_domains', client_domains)
+	model: function(){
+		return client_domain;
+	},
+	collection:function(){
+		return client_domains;
+	}
 };

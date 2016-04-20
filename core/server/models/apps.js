@@ -158,6 +158,10 @@ apps = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	app: appBookshelf.model('app', app),
-	apps: appBookshelf.collection('apps', apps)
+	model: function(){
+		return app;
+	},
+	collection:function(){
+		return apps;
+	}
 };

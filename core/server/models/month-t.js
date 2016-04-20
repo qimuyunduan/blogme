@@ -159,6 +159,10 @@ months = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	month: appBookshelf.model('month', month),
-	months: appBookshelf.collection('months', months)
+	model: function(){
+		return month;
+	},
+	collection:function(){
+		return months;
+	}
 };

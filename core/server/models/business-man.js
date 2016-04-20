@@ -159,6 +159,10 @@ business_men = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	business_man: appBookshelf.model('business_man', business_man),
-	business_men: appBookshelf.collection('business_men', business_men)
+	model: function(){
+		return business_man;
+	},
+	collection:function(){
+		return business_men;
+	}
 };

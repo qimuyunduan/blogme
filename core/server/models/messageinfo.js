@@ -159,6 +159,10 @@ messages = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	message: appBookshelf.model('message', message),
-	messages: appBookshelf.collection('messages', messages)
+	model: function(){
+		return message;
+	},
+	collection:function(){
+		return messages;
+	}
 };

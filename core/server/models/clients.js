@@ -159,6 +159,10 @@ clients = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	client: appBookshelf.model('client', client),
-	clients: appBookshelf.collection('clients', clients)
+	model: function(){
+		return client;
+	},
+	collection:function(){
+		return clients;
+	}
 };

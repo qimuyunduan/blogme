@@ -159,6 +159,10 @@ business_shops = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-business_shop: appBookshelf.model('business_shop',business_shop),
-business_shops:appBookshelf.collection('business_shops',business_shops)
+	model: function(){
+		return business_shop;
+	},
+	collection:function(){
+		return business_shops;
+	}
 };

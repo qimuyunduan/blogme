@@ -159,6 +159,10 @@ info_newss = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	info_news: appBookshelf.model('info_news', info_news),
-	info_newss: appBookshelf.collection('info_newss', info_newss)
+	model: function(){
+		return info_news;
+	},
+	collection:function(){
+		return info_newss;
+	}
 };

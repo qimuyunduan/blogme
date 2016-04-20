@@ -159,6 +159,10 @@ app_fields = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	app_field: appBookshelf.model('app_field', app_field),
-	app_fields: appBookshelf.collection('app_fields', app_fields)
+	model: function(){
+		return app_field;
+	},
+	collection:function(){
+		return app_fields;
+	}
 };

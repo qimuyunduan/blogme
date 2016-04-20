@@ -159,6 +159,10 @@ bug_lists = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	bug_list: appBookshelf.model('bug_list', bug_list),
-	bug_lists: appBookshelf.collection('bug_lists', bug_lists)
+	model: function(){
+		return bug_list;
+	},
+	collection:function(){
+		return bug_lists;
+	}
 };

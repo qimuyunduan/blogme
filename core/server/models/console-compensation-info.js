@@ -159,6 +159,10 @@ console_infos = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	console_info: appBookshelf.model('console_info', console_info),
-	console_infos: appBookshelf.collection('console_infos', console_infos)
+	model: function(){
+		return console_info;
+	},
+	collection:function(){
+		return console_infos;
+	}
 };

@@ -159,6 +159,10 @@ sys_permissions = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	sys_permission: appBookshelf.model('sys_permission', sys_permission),
-	sys_permissions: appBookshelf.collection('sys_permissions', sys_permissions)
+	model: function(){
+		return sys_permission;
+	},
+	collection:function(){
+		return sys_permissions;
+	}
 };

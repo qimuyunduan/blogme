@@ -159,6 +159,10 @@ user_roles = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	user_role: appBookshelf.model('user_role', user_role),
-	user_roles: appBookshelf.collection('user_roles', user_roles)
+	model: function(){
+		return user_role;
+	},
+	collection:function(){
+		return user_roles;
+	}
 };

@@ -159,6 +159,10 @@ mobilecitys = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	mobilecity: appBookshelf.model('mobilecity', mobilecity),
-	mobilecitys: appBookshelf.collection('mobilecitys', mobilecitys)
+	model: function(){
+		return mobilecity;
+	},
+	collection:function(){
+		return mobilecitys;
+	}
 };

@@ -159,6 +159,10 @@ menus = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	menu: appBookshelf.model('menu', menu),
-	menus: appBookshelf.collection('menus', menus)
+	model: function(){
+		return menu;
+	},
+	collection:function(){
+		return menus;
+	}
 };

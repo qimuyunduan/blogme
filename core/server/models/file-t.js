@@ -158,6 +158,10 @@ files = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	file: appBookshelf.model('file', file),
-	files: appBookshelf.collection('files', files)
+	model: function(){
+		return file;
+	},
+	collection:function(){
+		return files;
+	}
 };

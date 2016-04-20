@@ -159,6 +159,10 @@ dict_provinces = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	dict_province: appBookshelf.model('dict_province', dict_province),
-	dict_provinces: appBookshelf.collection('dict_provinces', dict_provinces)
+	model: function(){
+		return dict_province;
+	},
+	collection:function(){
+		return dict_provinces;
+	}
 };

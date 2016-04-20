@@ -159,6 +159,10 @@ role_menus = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	role_menu: appBookshelf.model('role_menu', role_menu),
-	role_menus: appBookshelf.collection('role_menus', role_menus)
+	model: function(){
+		return role_menu;
+	},
+	collection:function(){
+		return role_menus;
+	}
 };

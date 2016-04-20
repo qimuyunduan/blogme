@@ -159,6 +159,10 @@ sys_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	sys_user: appBookshelf.model('sys_user', sys_user),
-	sys_users: appBookshelf.collection('sys_users', sys_users)
+	model: function(){
+		return sys_user;
+	},
+	collection:function(){
+		return sys_users;
+	}
 };

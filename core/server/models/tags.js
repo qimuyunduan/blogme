@@ -159,6 +159,10 @@ tags = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	tag: appBookshelf.model('tag', tag),
-	tags: appBookshelf.collection('tags', tags)
+	model: function(){
+		return tag;
+	},
+	collection:function(){
+		return tags;
+	}
 };

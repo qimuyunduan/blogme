@@ -159,6 +159,10 @@ insured_companies = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	insured_company: appBookshelf.model('insured_company', insured_company),
-	insured_companies: appBookshelf.collection('insured_companies', insured_companies)
+	model: function(){
+		return insured_company;
+	},
+	collection:function(){
+		return insured_companies;
+	}
 };

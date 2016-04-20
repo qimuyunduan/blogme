@@ -159,6 +159,10 @@ users_t = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-user_t: appBookshelf.model('user_t',user_t ),
-users_t: appBookshelf.collection('users_t',users_t )
+	model: function(){
+		return user_t;
+	},
+	collection:function(){
+		return users_t;
+	}
 };

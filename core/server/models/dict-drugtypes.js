@@ -150,7 +150,7 @@ dict_drug = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,6 +159,10 @@ dict_drugs = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	dict_drug: appBookshelf.model('dict_drug', dict_drug),
-	dict_drugs: appBookshelf.collection('dict_drugs', dict_drugs)
+	model: function(){
+		return dict_drug;
+	},
+	collection:function(){
+		return dict_drugs;
+	}
 };

@@ -42,7 +42,9 @@ function init(options) {
 		app.set('views',path.join(__dirname,'/views/hbs/'));
 		// set the view engine
 		app.set('view engine', 'hbs');
-		app.engine('hbs', Hbs.express4({}));
+		app.engine('hbs', Hbs.express4({
+			partialsDir: path.join(__dirname,'/views/hbs/partials')
+		}));
         //// Load helpers
         //helpers.loadCoreHelpers(Hbs);
 		//

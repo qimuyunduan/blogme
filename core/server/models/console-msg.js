@@ -159,6 +159,10 @@ console_msgs = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	console_msg: appBookshelf.model('console_msg', console_msg),
-	console_msgs: appBookshelf.collection('console_msgs', console_msgs)
+	model: function(){
+		return console_msg;
+	},
+	collection:function(){
+		return console_msgs;
+	}
 };

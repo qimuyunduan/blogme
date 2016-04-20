@@ -159,6 +159,10 @@ yijianLists = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	yijianList: appBookshelf.model('yijianList', yijianList),
-	yijianLists: appBookshelf.collection('yijianLists', yijianLists)
+	model: function(){
+		return yijianList;
+	},
+	collection:function(){
+		return yijianLists;
+	}
 };
