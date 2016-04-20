@@ -30,15 +30,18 @@
         $.ajax({
             url:"authorized",
             type: "POST",
-            data: "name=John&location=Boston",
-            dataType:"json",
-            success: function(msg){
-
-                alert($.parseJSON(msg));
-            },
-            error:function(){
-                alert("connection error....");
-            }
+            //data: "name=John&location=Boston",
+            dataType:"json"
+//            success: function(msg){
+//                //alert(msg);
+//                //TODO:试用jquery $.parseJSON() 解析
+//                //alert( $.parseJSON(msg.ih.age));//不起作用
+//                var data = JSON.parse(msg);
+//                alert(data.ih.age);
+//            },
+//            error:function(){
+//                alert("connection error....");
+//            }
 
         });
     }
@@ -51,7 +54,7 @@
         <div class="login_headerContent">
             <div class="navList">
                 <ul>
-                    <li><a href="#">设为首页</a></li>
+                    <li><a href="#">设为首页{{name}}</a></li>
                 </ul>
             </div>
             <h2 class="login_title"><img src="../themes/default/images/login_title.png" /></h2>

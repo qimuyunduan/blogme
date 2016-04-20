@@ -19,6 +19,14 @@ apiRoutes = function apiRoutes() {
 	router.get("/about",function(req,res){
 		res.render("about");
 	});
+	router.get("/test.hbs",function(req,res){
+		var data = {
+			name:"xiaoLi",
+			age:34,
+			sex:"male"
+		};
+		res.render("view page",data);
+	});
     router.get("/authorized",function(req,res){
 
 		//console.log("render about.hbs...");
@@ -34,8 +42,8 @@ apiRoutes = function apiRoutes() {
 		//res.render('authorized');
 		 User_model.User.forge().fetchAll().then(function(userData){
 			if (!userData) {
-				console.log(JSON.stringify(userData));
-				return res.json(JSON.stringify(userData));
+				console.log(JSON.stringify({data:userData}));
+				return res.json(JSON.stringify({data:userData}));
 			}
 			else {
 				console.log(JSON.stringify(userData));
@@ -48,7 +56,25 @@ apiRoutes = function apiRoutes() {
 
 		//res.send("ok got it!  post "+req.body);
 		//res.render('authorized');
-		res.json('{"data":"biibbbi"}');
+		//json string
+		var gather = {
+			id : 1314,
+			name : "pom",
+			ih : {
+				age : 20,
+				sex : 'man',
+				marry : false,
+				identity : 622421,
+				habit : ['篮球','台球','乒乓球','游戏',true]
+			},
+			family : ['妈妈','爸爸','弟弟'],
+			likeGames : ['PCgame','Netgame']
+
+		};
+		if (JSON.stringify(gather) == '{"id":1314,"name":"pom","likeGames":["PCgame","Netgame"]}'){
+			console.log("equal.....");// equal
+		}
+		res.json(JSON.stringify(gather));
 	});
 	router.delete("/authorized",function(req,res){
 		console.log("render authorized.hbs...");
