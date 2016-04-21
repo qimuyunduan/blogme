@@ -8,13 +8,11 @@ var _           = require('lodash'),
     errors      = require('../errors/index'),
     Promise     = require('bluebird'),
     templates   = require('./templates'),
-    routeMatch  = require('path-match')(),
     handleError         = require('./error'),
     formatResponse      = require('./format-response'),
     setRequestIsSecure  = require('./secure'),
 	userModel               = require('../models/ido-user'),
-    frontendControllers,
-    staticPostPermalink = routeMatch('/:slug/:edit?');
+    frontendControllers;
 
 /*
 * Sets the response context around a post and renders it

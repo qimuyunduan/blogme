@@ -16,17 +16,18 @@ apiRoutes = function apiRoutes() {
     router.del = router.delete;
 
 
-	router.get("/about",function(req,res){
+	router.get("/indexd",function(req,res){
 		var data = {
-			htmlCode:'<li><a href="#">下载驱动程序</a></li>',
 			title:"风险管理平台"
 					};
-		res.render("about",data);
+		res.render("indexd",data);
 	});
-
+	router.get("/demo_page1",function(req,res){
+		res.render("demo_page1");
+	});
     router.get("/authorized",function(req,res){
 
-		//console.log("render index.hbs...");
+		//console.log("render indexd.hbs...");
 		//res.send({"username":"qimu","pw":"101410"});
 		console.log(req.body);
 		res.send("ok got it!  get "+req.body);

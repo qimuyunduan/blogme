@@ -3,7 +3,7 @@
 
 <div class="pageContent">
 	
-	<form method="post" action="../demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+	<form method="post" action="demo/common/ajaxDone" class="pageForm required-validate" onsubmit="return validateCallback(this)">
 		<div class="pageFormContent nowrap" layoutH="97">
 
 			<dl>
@@ -129,14 +129,14 @@
 			<dl>
 				<dt>remote：</dt>
 				<dd>
-					<input type="text" name="remote" remote="validate_remote.html"/>
+					<input type="text" name="remote" remote="validate_remote"/>
 					<span class="info">唯一性验证input添加属性：remote="xxxUrl"</span>
 				</dd>
 			</dl>
 			<dl>
 				<dt>customvalid+remote：</dt>
 				<dd>
-					<input type="text" name="remote2" remote="validate_remote.html" customvalid="customvalidXxx(element)"/>
+					<input type="text" name="remote2" remote="validate_remote" customvalid="customvalidXxx(element)"/>
 					<span class="info">customvalid="customvalidXxx(element)" | remote="xxxUrl"</span>
 				</dd>
 			</dl>

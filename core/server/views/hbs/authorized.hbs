@@ -70,8 +70,8 @@
     <script type="text/javascript">
         $(function(){
             DWZ.init("dwz.frag.xml", {
-                loginUrl:"login_dialog.html", loginTitle:"登录",	// 弹出登录对话框
-//		loginUrl:"about.hbs.html",	// 跳到登录页面
+                loginUrl:"login_dialog", loginTitle:"登录",	// 弹出登录对话框
+//		loginUrl:"about.hbs",	// 跳到登录页面
                 statusCode:{ok:200, error:300, timeout:301}, //【可选】
                 pageInfo:{pageNum:"pageNum", numPerPage:"numPerPage", orderField:"orderField", orderDirection:"orderDirection"}, //【可选】
                 keys: {statusCode:"statusCode", message:"message"}, //【可选】
@@ -96,17 +96,17 @@
             <ul class="nav">
                 <li id="switchEnvBox"><a href="javascript:">（<span>北京</span>）切换城市</a>
                     <ul>
-                        <li><a href="../sidebar_1.html">北京</a></li>
-                        <li><a href="../sidebar_2.html">上海</a></li>
-                        <li><a href="../sidebar_2.html">南京</a></li>
-                        <li><a href="../sidebar_2.html">深圳</a></li>
-                        <li><a href="../sidebar_2.html">广州</a></li>
-                        <li><a href="../sidebar_2.html">天津</a></li>
-                        <li><a href="../sidebar_2.html">杭州</a></li>
+                        <li><a href="sidebar_1">北京</a></li>
+                        <li><a href="sidebar_2">上海</a></li>
+                        <li><a href="sidebar_2">南京</a></li>
+                        <li><a href="sidebar_2">深圳</a></li>
+                        <li><a href="sidebar_2">广州</a></li>
+                        <li><a href="sidebar_2">天津</a></li>
+                        <li><a href="sidebar_2">杭州</a></li>
                     </ul>
                 </li>
-                <li><a href="../changepwd.html" target="dialog" width="600">设置</a></li>
-                <li><a href="../index.html">退出</a></li>
+                <li><a href="changepwd" target="dialog" width="600">设置</a></li>
+                <li><a href="index">退出</a></li>
             </ul>
             <ul class="themeList" id="themeList">
                 <li theme="default"><div class="selected">蓝色</div></li>
@@ -135,68 +135,68 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree treeFolder">
-                        <li><a href="../tabsPage.html" target="navTab">主框架面板</a>
+                        <li><a href="tabsPage" target="navTab">主框架面板</a>
                             <ul>
-                                <li><a href="../main.html" target="navTab" rel="main">我的主页</a></li>
+                                <li><a href="main" target="navTab" rel="main">我的主页</a></li>
                                 <li><a href="http://www.baidu.com" target="navTab" rel="page1">页面一(外部链接)</a></li>
-                                <li><a href="../demo/baidu_map.html" target="navTab" rel="external" external="true" title="需要设置external属性为true">地图(external="true")</a></li>
-                                <li><a href="../demo_page1.html" target="navTab" rel="page1" fresh="false">替换页面一</a></li>
-                                <li><a href="../demo_page2.html" target="navTab" rel="page2">页面二</a></li>
-                                <li><a href="../demo_page4.html" target="navTab" rel="page3" title="页面三（自定义标签名）">页面三</a></li>
-                                <li><a href="../demo_page4.html" target="navTab" rel="page4" fresh="false">测试页面(fresh="false")</a></li>
-                                <li><a href="../w_editor.html" target="navTab">表单提交会话超时</a></li>
-                                <li><a href="../demo/common/ajaxTimeout.html" target="navTab">navTab会话超时</a></li>
-                                <li><a href="../demo/common/ajaxTimeout.html" target="dialog">dialog会话超时</a></li>
-                                <li><a href="../index_menu.html" target="_blank">横向导航条</a></li>
+                                <li><a href="demo/baidu_map" target="navTab" rel="external" external="true" title="需要设置external属性为true">地图(external="true")</a></li>
+                                <li><a href="demo_page1" target="navTab" rel="page1" fresh="false">替换页面一</a></li>
+                                <li><a href="demo_page2" target="navTab" rel="page2">页面二</a></li>
+                                <li><a href="demo_page4" target="navTab" rel="page3" title="页面三（自定义标签名）">页面三</a></li>
+                                <li><a href="demo_page4" target="navTab" rel="page4" fresh="false">测试页面(fresh="false")</a></li>
+                                <li><a href="w_editor" target="navTab">表单提交会话超时</a></li>
+                                <li><a href="demo/common/ajaxTimeout" target="navTab">navTab会话超时</a></li>
+                                <li><a href="demo/common/ajaxTimeout" target="dialog">dialog会话超时</a></li>
+                                <li><a href="index_menu" target="_blank">横向导航条</a></li>
                             </ul>
                         </li>
 
                         <li><a>常用组件</a>
                             <ul>
-                                <li><a href="w_panel.html" target="navTab" rel="w_panel">面板</a></li>
-                                <li><a href="w_tabs.html" target="navTab" rel="w_tabs">选项卡面板</a></li>
-                                <li><a href="w_dialog.html" target="navTab" rel="w_dialog">弹出窗口</a></li>
-                                <li><a href="w_alert.html" target="navTab" rel="w_alert">提示窗口</a></li>
-                                <li><a href="w_list.html" target="navTab" rel="w_list">CSS表格容器</a></li>
-                                <li><a href="demo_page1.html" target="navTab" rel="w_table">表格容器</a></li>
-                                <li><a href="w_removeSelected.html" target="navTab" rel="w_table">表格数据库排序+批量删除</a></li>
-                                <li><a href="w_tree.html" target="navTab" rel="w_tree">树形菜单</a></li>
-                                <li><a href="w_accordion.html" target="navTab" rel="w_accordion">滑动菜单</a></li>
-                                <li><a href="w_editor.html" target="navTab" rel="w_editor">编辑器</a></li>
-                                <li><a href="w_datepicker.html" target="navTab" rel="w_datepicker">日期控件</a></li>
-                                <li><a href="../demo/database/db_widget.html" target="navTab" rel="db">suggest+lookup+主从结构</a></li>
-                                <li><a href="../demo/database/treeBringBack.html" target="navTab" rel="db">tree查找带回</a></li>
-                                <li><a href="../demo/sortDrag/1.html" target="navTab" rel="sortDrag">单个sortDrag示例</a></li>
-                                <li><a href="../demo/sortDrag/2.html" target="navTab" rel="sortDrag">多个sortDrag示例</a></li>
-                                <li><a href="../demo/sortDrag/form.html" target="navTab" rel="sortDrag">可拖动表单示例</a></li>
+                                <li><a href="w_panel" target="navTab" rel="w_panel">面板</a></li>
+                                <li><a href="w_tabs" target="navTab" rel="w_tabs">选项卡面板</a></li>
+                                <li><a href="w_dialog" target="navTab" rel="w_dialog">弹出窗口</a></li>
+                                <li><a href="w_alert" target="navTab" rel="w_alert">提示窗口</a></li>
+                                <li><a href="w_list" target="navTab" rel="w_list">CSS表格容器</a></li>
+                                <li><a href="demo_page1" target="navTab" rel="w_table">表格容器</a></li>
+                                <li><a href="w_removeSelected" target="navTab" rel="w_table">表格数据库排序+批量删除</a></li>
+                                <li><a href="w_tree" target="navTab" rel="w_tree">树形菜单</a></li>
+                                <li><a href="w_accordion" target="navTab" rel="w_accordion">滑动菜单</a></li>
+                                <li><a href="w_editor" target="navTab" rel="w_editor">编辑器</a></li>
+                                <li><a href="w_datepicker" target="navTab" rel="w_datepicker">日期控件</a></li>
+                                <li><a href="demo/database/db_widget" target="navTab" rel="db">suggest+lookup+主从结构</a></li>
+                                <li><a href="demo/database/treeBringBack" target="navTab" rel="db">tree查找带回</a></li>
+                                <li><a href="demo/sortDrag/1" target="navTab" rel="sortDrag">单个sortDrag示例</a></li>
+                                <li><a href="demo/sortDrag/2" target="navTab" rel="sortDrag">多个sortDrag示例</a></li>
+                                <li><a href="demo/sortDrag/form" target="navTab" rel="sortDrag">可拖动表单示例</a></li>
                             </ul>
                         </li>
 
                         <li><a>表单组件</a>
                             <ul>
-                                <li><a href="w_validation.html" target="navTab" rel="w_validation">表单验证</a></li>
-                                <li><a href="w_button.html" target="navTab" rel="w_button">按钮</a></li>
-                                <li><a href="w_textInput.html" target="navTab" rel="w_textInput">文本框/文本域</a></li>
-                                <li><a href="w_combox.html" target="navTab" rel="w_combox">下拉菜单</a></li>
-                                <li><a href="w_checkbox.html" target="navTab" rel="w_checkbox">多选框/单选框</a></li>
-                                <li><a href="demo_upload.html" target="navTab" rel="demo_upload">iframeCallback表单提交</a></li>
-                                <li><a href="w_uploadify.html" target="navTab" rel="w_uploadify">uploadify多文件上传</a></li>
+                                <li><a href="w_validation" target="navTab" rel="w_validation">表单验证</a></li>
+                                <li><a href="w_button" target="navTab" rel="w_button">按钮</a></li>
+                                <li><a href="w_textInput" target="navTab" rel="w_textInput">文本框/文本域</a></li>
+                                <li><a href="w_combox" target="navTab" rel="w_combox">下拉菜单</a></li>
+                                <li><a href="w_checkbox" target="navTab" rel="w_checkbox">多选框/单选框</a></li>
+                                <li><a href="demo_upload" target="navTab" rel="demo_upload">iframeCallback表单提交</a></li>
+                                <li><a href="w_uploadify" target="navTab" rel="w_uploadify">uploadify多文件上传</a></li>
                             </ul>
                         </li>
                         <li><a>组合应用</a>
                             <ul>
-                                <li><a href="../demo/pagination/layout1.html" target="navTab" rel="pagination1">局部刷新分页1</a></li>
-                                <li><a href="../demo/pagination/layout2.html" target="navTab" rel="pagination2">局部刷新分页2</a></li>
+                                <li><a href="demo/pagination/layout1" target="navTab" rel="pagination1">局部刷新分页1</a></li>
+                                <li><a href="demo/pagination/layout2" target="navTab" rel="pagination2">局部刷新分页2</a></li>
                             </ul>
                         </li>
                         <li><a>图表</a>
                             <ul>
-                                <li><a href="../chart/test/barchart.html" target="navTab" rel="chart">柱状图(垂直)</a></li>
-                                <li><a href="../chart/test/hbarchart.html" target="navTab" rel="chart">柱状图(水平)</a></li>
-                                <li><a href="../chart/test/linechart.html" target="navTab" rel="chart">折线图</a></li>
-                                <li><a href="../chart/test/linechart2.html" target="navTab" rel="chart">曲线图</a></li>
-                                <li><a href="../chart/test/linechart3.html" target="navTab" rel="chart">曲线图(自定义X坐标)</a></li>
-                                <li><a href="../chart/test/piechart.html" target="navTab" rel="chart">饼图</a></li>
+                                <li><a href="../chart/test/barchart" target="navTab" rel="chart">柱状图(垂直)</a></li>
+                                <li><a href="../chart/test/hbarchart" target="navTab" rel="chart">柱状图(水平)</a></li>
+                                <li><a href="../chart/test/linechart" target="navTab" rel="chart">折线图</a></li>
+                                <li><a href="../chart/test/linechart2" target="navTab" rel="chart">曲线图</a></li>
+                                <li><a href="../chart/test/linechart3" target="navTab" rel="chart">曲线图(自定义X坐标)</a></li>
+                                <li><a href="../chart/test/piechart" target="navTab" rel="chart">饼图</a></li>
                             </ul>
                         </li>
                         <li><a href="dwz.frag.xml" target="navTab" external="true">dwz.frag.xml</a></li>
@@ -207,10 +207,10 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree treeFolder treeCheck">
-                        <li><a href="demo_page1.html" target="navTab" rel="demo_page1">查询我的客户</a></li>
-                        <li><a href="demo_page1.html" target="navTab" rel="demo_page2">表单查询页面</a></li>
-                        <li><a href="demo_page4.html" target="navTab" rel="demo_page4">表单录入页面</a></li>
-                        <li><a href="demo_page5.html" target="navTab" rel="demo_page5">有文本输入的表单</a></li>
+                        <li><a href="demo_page1" target="navTab" rel="demo_page1">查询我的客户</a></li>
+                        <li><a href="demo_page1" target="navTab" rel="demo_page2">表单查询页面</a></li>
+                        <li><a href="demo_page4" target="navTab" rel="demo_page4">表单录入页面</a></li>
+                        <li><a href="demo_page5" target="navTab" rel="demo_page5">有文本输入的表单</a></li>
                         <li><a href="javascript:;">有提示的表单输入页面</a>
                             <ul>
                                 <li><a href="javascript:;">页面一</a></li>
@@ -234,8 +234,8 @@
                 </div>
                 <div class="accordionContent">
                     <ul class="tree">
-                        <li><a href="newPage1.html" target="dialog" rel="dlg_page">列表</a></li>
-                        <li><a href="newPage1.html" target="dialog" rel="dlg_page2">列表</a></li>
+                        <li><a href="newPage1" target="dialog" rel="dlg_page">列表</a></li>
+                        <li><a href="newPage1" target="dialog" rel="dlg_page2">列表</a></li>
                     </ul>
                 </div>
             </div>
@@ -283,13 +283,13 @@
 
                         <a class="buttonActive" href="https://git.oschina.net/dwzteam/" target="_blank"><span>DWZ开源系列源码（oschina）</span></a>
                         <a class="button" href="https://github.com/dwzteam/" target="_blank"><span>DWZ开源系列源码（github）</span></a>
-                        <a class="button" href="donation.html" target="dialog" height="380"><span style="color: red">捐赠我们</span></a>
+                        <a class="button" href="donation" target="dialog" height="380"><span style="color: red">捐赠我们</span></a>
 
                         <div class="divider"></div>
                         <h2>常见问题及解决:</h2>
 <pre style="margin:5px;line-height:1.4em">
 Error loading XML document: dwz.frag.xml
-直接用IE打开index.html弹出一个对话框：Error loading XML document: dwz.frag.xml
+直接用IE打开index弹出一个对话框：Error loading XML document: dwz.frag.xml
 原因：没有加载成功dwz.frag.xml。IE ajax laod本地文件有限制, 是ie安全级别的问题, 不是框架的问题。
 解决方法：部署到apache 等 Web容器下。
 

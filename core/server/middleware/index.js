@@ -5,8 +5,6 @@ var bodyParser       = require('body-parser'),
     logger           = require('morgan'),
     path             = require('path'),
     routes           = require('../routes'),
-    slashes          = require('connect-slashes'),
-    passport         = require('passport'),
     utils            = require('../utils'),
     busboy           = require('./busboy'),
     cacheControl     = require('./cache-control'),
@@ -56,7 +54,6 @@ setupMiddleware  = function setupMiddleware(App) {
     App.use('/', express.static(path.join(corePath, '/server/views')));
 	App.use('/js',express.static(path.join(corePath,'/server/views/js')));
 	App.use('/themes',express.static(path.join(corePath,'/server/views/themes')));
-	App.use('/chart',express.static(path.join(corePath,'/server/views/chart')));
 	App.use('/img',express.static(path.join(corePath,'/server/views/img')));
 	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify')));
 	App.use('/xheditor',express.static(path.join(corePath,'/server/views/xheditor')));

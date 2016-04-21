@@ -315,7 +315,7 @@
 						var suffix = $this.attr("suffix");
 						if (suffix) {$this.attr('suffix', suffix.replaceSuffix(i));}
 						
-						if (val && val.indexOf("#index.hbs#") >= 0) $this.val(val.replace('#index.hbs#',i+1));
+						if (val && val.indexOf("#indexd.hbs#") >= 0) $this.val(val.replace('#indexd.hbs#',i+1));
 					});
 				});
 			}
@@ -323,7 +323,7 @@
 			function tdHtml(field){
 				var html = '', suffix = '';
 				
-				if (field.name.endsWith("[#index.hbs#]")) suffix = "[#index.hbs#]";
+				if (field.name.endsWith("[#indexd.hbs#]")) suffix = "[#indexd.hbs#]";
 				else if (field.name.endsWith("[]")) suffix = "[]";
 				
 				var suffixFrag = suffix ? ' suffix="' + suffix + '" ' : '';

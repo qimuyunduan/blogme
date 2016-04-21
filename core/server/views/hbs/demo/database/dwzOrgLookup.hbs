@@ -1,5 +1,5 @@
 
-<form id="pagerForm" action="demo/database/dwzOrgLookup.html">
+<form id="pagerForm" action="../demo/database/dwzOrgLookup">
 	<input type="hidden" name="pageNum" value="1" />
 	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
 	<input type="hidden" name="orderField" value="${param.orderField}" />
@@ -7,7 +7,7 @@
 </form>
 
 <div class="pageHeader">
-	<form rel="pagerForm" method="post" action="demo/database/dwzOrgLookup.html" onsubmit="return dwzSearch(this, 'dialog');">
+	<form rel="pagerForm" method="post" action="../demo/database/dwzOrgLookup" onsubmit="return dwzSearch(this, 'dialog');">
 	<div class="searchBar">
 		<ul class="searchContent">
 			<li>
