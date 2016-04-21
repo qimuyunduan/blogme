@@ -15,26 +15,20 @@ var Promise = require('bluebird'),
 exports = module.exports;
 
 models = [
-    'accesstoken',
-    'app-field',
-    'app-setting',
-    'app',
-    'client-trusted-domain',
-    'client',
-    'permission',
-    'post',
-    'refreshtoken',
-    'role',
-    'settings',
-    'tag',
-    'user'
+    'accesstokens',
+    'addmoney-record-detail',
+    'app-fields',
+    'app-settings',
+    'app-version',
+    'apps'
 ];
 
 function init() {
     exports.Base = require('./base');
 
     models.forEach(function (name) {
-        _.extend(exports, require('./' + name));
+		
+        _.extend(exports, require('./'+name));
     });
 
     return Promise.resolve();
@@ -44,4 +38,5 @@ function init() {
  * Expose `init`
  */
 
-exports.init = init;
+//exports.init = init;
+init();

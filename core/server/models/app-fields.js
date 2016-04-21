@@ -159,6 +159,7 @@ app_fields = appBookshelf.Collection.extend({
 });
 
 module.exports = {
+
 	model: function(){
 		return app_field;
 	},

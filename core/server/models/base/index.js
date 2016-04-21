@@ -1,11 +1,6 @@
 // # Base Model
-// This is the model from which all other App models extend. The model is based on bookshelf.Model, and provides
-// several basic behaviours such as UUIDs, as well as a set of Data methods for accessing information from the database.
-//
-// The models are internal to App, only the API and some internal functions such as migration and import/export
-// allowed to access data via the API.
+
 var _          = require('lodash'),
-    bookshelf  = require('bookshelf'),
     config     = require('../../config'),
     errors     = require('../../errors'),
     moment     = require('moment'),
@@ -15,22 +10,22 @@ var _          = require('lodash'),
 	Response   = require('./response'),
 	nodeEnv    = process.env.NODE_ENV || 'development',
 	dbEnv,
-    appBookshelf;
+    bookshelf;
 
 
 
 dbEnv = config.readFile(nodeEnv).database;
 console.log(dbEnv);
 var knex = require('knex')(dbEnv);
-appBookshelf = require('bookshelf')(knex);
+bookshelf = require('bookshelf')(knex);
 
 // Load the bookshelf registry plugin, which helps us avoid circular dependencies
-appBookshelf.plugin('registry');
+bookshelf.plugin('registry');
 
 // bookshelf.Model
 // The Base Model which other App objects will inherit from,
 // including some convenience functions as static properties on the model.
-appBookshelf.Model = bookshelf.Model.extend({
+bookshelf.Model = bookshelf.Model.extend({
 
     // Fix problems with dates
     fixDate: function fixDate(attr) {
