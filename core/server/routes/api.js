@@ -26,7 +26,7 @@ apiRoutes = function apiRoutes() {
 
     router.get("/authorized",function(req,res){
 
-		//console.log("render about.hbs...");
+		//console.log("render index.hbs...");
 		//res.send({"username":"qimu","pw":"101410"});
 		console.log(req.body);
 		res.send("ok got it!  get "+req.body);

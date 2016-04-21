@@ -72,14 +72,6 @@ setupMiddleware  = function setupMiddleware(App) {
     //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     //App.use(privateBlogging.filterPrivateRoutes);
 
-
-
-    // Add in all trailing slashes
-    App.use(slashes(true, {
-        headers: {
-            'Cache-Control': 'public, max-age=' + utils.ONE_YEAR_S
-        }
-    }));
     //App.use(uncapitalise);
 
     // Body parsing

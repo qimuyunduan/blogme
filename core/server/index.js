@@ -1,4 +1,4 @@
-// Module dependencies
+ // Module dependencies
 var express     = require('express'),
     hbs         = require('express-hbs'),
     compress    = require('compression'),

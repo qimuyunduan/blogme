@@ -30,7 +30,7 @@ $.fn.extend({
 		});
 	},
 	/**
-	 * deprecated, use accordion("activate", about.hbs) instead
+	 * deprecated, use accordion("activate", index.hbs) instead
 	 * @param {Object} index
 	 */
 	activate: function(index) {

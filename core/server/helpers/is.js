@@ -1,5 +1,5 @@
 // # Is Helper
-// Usage: `{{#is "paged"}}`, `{{#is "about.hbs, paged"}}`
+// Usage: `{{#is "paged"}}`, `{{#is "index.hbs, paged"}}`
 // Checks whether we're in a given context.
 var _               = require('lodash'),
     errors          = require('../errors'),

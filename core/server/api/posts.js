@@ -17,7 +17,7 @@ var Promise         = require('bluebird'),
 /**
  * ### Posts API Methods
  *
- * **See:** [API Methods](about.hbs.js.html#api%20methods)
+ * **See:** [API Methods](index.hbs.js.html#api%20methods)
  */
 
 posts = {

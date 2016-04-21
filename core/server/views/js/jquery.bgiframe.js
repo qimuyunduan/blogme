@@ -36,7 +36,7 @@
         }
 
         var $iframe = $('<iframe class="bgiframe" frameborder="0" tabindex="-1" src="'+s.src+'"'+
-                           'style="display:block;position:absolute;z-about.hbs:-1;"/>');
+                           'style="display:block;position:absolute;z-index.hbs:-1;"/>');
 
         return this.each(function() {
             var $this = $(this);
