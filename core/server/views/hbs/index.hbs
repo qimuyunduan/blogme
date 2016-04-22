@@ -10,23 +10,24 @@
 <body>
 <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script>
+
     function login() {
 
         $.ajax({
             url:"authorized",
-            type: "POST",
+            type: "PUT",
             //data: "name=John&location=Boston",
-            dataType:"json"
-//            success: function(msg){
-//                //alert(msg);
-//                //TODO:试用jquery $.parseJSON() 解析
-//                //alert( $.parseJSON(msg.ih.age));//不起作用
-//                var data = JSON.parse(msg);
-//                alert(data.ih.age);
-//            },
-//            error:function(){
-//                alert("connection error....");
-//            }
+            dataType:"json",
+            success: function(msg){
+                //alert(msg);
+                //TODO:试用jquery $.parseJSON() 解析
+                //alert( $.parseJSON(msg.ih.age));//不起作用
+                var data = JSON.parse(msg);
+                alert(data.ih.age);
+            },
+            error:function(){
+                alert("connection error....");
+            }
 
         });
     }

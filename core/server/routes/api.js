@@ -5,6 +5,7 @@ var express     = require('express'),
 	path        = require('path'),
 	controller  = require('../controllers'),
 	models      = require('../models'),
+	user     = require('../models/ido-user'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -35,11 +36,18 @@ apiRoutes = function apiRoutes() {
 	});
 	router.put("/authorized",function(req,res){
 		console.log("render authorized.hbs...");
-		//console.log(req.params);
-		//res.send(controller.getUser());
-		//res.render('authorized');
-		 models.idouser.model()
-			 .forge().fetchAll().then(function(userData){
+		//console.log(models);
+		//models.idoUser.model().forge({id:50}).fetch().then(function(userData){
+		//	if (!userData) {
+		//		console.log(JSON.stringify({data:userData}));
+		//		return res.json(JSON.stringify({data:userData}));
+		//	}
+		//	else {
+		//		console.log(JSON.stringify(userData));
+		//		return res.json(JSON.stringify(userData));
+		//	}
+		//});
+		user.idoUser.model().forge({id:50}).fetch().then(function(userData){
 			if (!userData) {
 				console.log(JSON.stringify({data:userData}));
 				return res.json(JSON.stringify({data:userData}));

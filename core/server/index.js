@@ -25,9 +25,9 @@ function init(options) {
     // Load our config.js file from the local file system.
 
     return Promise.resolve().then(function () {
-    //    // Initialise the models
-    //    return models.init();
-    //}).then(function () {
+        // Initialise the models
+        return models.init();
+    }).then(function () {
     //    // Initialize the settings cache
     //    return api.init();
     //}).then(function () {
