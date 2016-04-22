@@ -159,10 +159,13 @@ newroles = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return newrole;
-	},
-	collection:function(){
-		return newroles;
+	newRole:{
+		model: function(){
+			return newrole;
+		},
+		collection:function(){
+			return newroles;
+		}
 	}
+
 };

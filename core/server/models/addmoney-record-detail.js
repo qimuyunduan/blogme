@@ -160,10 +160,13 @@ addmoney_records= appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return addmoney_record;
-	},
-	collection:function(){
-		return addmoney_records;
+	addmoney:{
+		model: function(){
+			return addmoney_record;
+		},
+		collection:function(){
+			return addmoney_records;
+		}
 	}
+
 };

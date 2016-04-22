@@ -159,10 +159,13 @@ posts = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return post;
-	},
-	collection:function(){
-		return posts;
+	post:{
+		model: function(){
+			return post;
+		},
+		collection:function(){
+			return posts;
+		}
 	}
+
 };

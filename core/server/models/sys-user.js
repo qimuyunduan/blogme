@@ -150,7 +150,7 @@ sys_user = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ sys_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return sys_user;
-	},
-	collection:function(){
-		return sys_users;
+	sysUser:{
+		model: function(){
+			return sys_user;
+		},
+		collection:function(){
+			return sys_users;
+		}
 	}
+
 };

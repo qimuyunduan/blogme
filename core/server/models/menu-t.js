@@ -150,7 +150,7 @@ menu = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ menus = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return menu;
-	},
-	collection:function(){
-		return menus;
+	menuT:{
+		model: function(){
+			return menu;
+		},
+		collection:function(){
+			return menus;
+		}
 	}
+
 };

@@ -159,10 +159,13 @@ dict_citys = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return dict_city;
-	},
-	collection:function(){
-		return dict_citys;
+	dictCity:{
+		model: function(){
+			return dict_city;
+		},
+		collection:function(){
+			return dict_citys;
+		}
 	}
+
 };

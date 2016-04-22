@@ -159,10 +159,13 @@ sys_logs = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return sys_log;
-	},
-	collection:function(){
-		return sys_logs;
+	sysLog:{
+		model: function(){
+			return sys_log;
+		},
+		collection:function(){
+			return sys_logs;
+		}
 	}
+
 };

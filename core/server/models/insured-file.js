@@ -159,10 +159,13 @@ insured_files = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return insured_file;
-	},
-	collection:function(){
-		return insured_files;
+	insuredFile:{
+		model: function(){
+			return insured_file;
+		},
+		collection:function(){
+			return insured_files;
+		}
 	}
+
 };

@@ -159,10 +159,13 @@ users= appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return user;
-	},
-	collection:function(){
-		return users;
+	user:{
+		model: function(){
+			return user;
+		},
+		collection:function(){
+			return users;
+		}
 	}
+
 };

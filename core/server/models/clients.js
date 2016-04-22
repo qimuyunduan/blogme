@@ -150,7 +150,7 @@ client = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ clients = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return client;
-	},
-	collection:function(){
-		return clients;
+	client:{
+		model: function(){
+			return client;
+		},
+		collection:function(){
+			return clients;
+		}
 	}
+
 };

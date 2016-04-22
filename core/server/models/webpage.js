@@ -159,10 +159,13 @@ webpages = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return webpage;
-	},
-	collection:function(){
-		return webpages;
+	webPage:{
+		model: function(){
+			return webpage;
+		},
+		collection:function(){
+			return webpages;
+		}
 	}
+
 };

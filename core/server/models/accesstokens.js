@@ -160,12 +160,13 @@ accesstokens = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-
+	accesstoken:{
 		model: function () {
 			return accesstoken;
 		},
 		collection: function () {
 			return accesstokens;
 		}
+	}
 
 };

@@ -159,10 +159,13 @@ app_versions = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return app_version;
-	},
-	collection:function(){
-		return app_versions;
+	appVersion:{
+		model: function(){
+			return app_version;
+		},
+		collection:function(){
+			return app_versions;
+		}
 	}
+
 };

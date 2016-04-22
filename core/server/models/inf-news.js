@@ -150,7 +150,7 @@ info_news = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ info_newss = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return info_news;
-	},
-	collection:function(){
-		return info_newss;
+	infoNews:{
+		model: function(){
+			return info_news;
+		},
+		collection:function(){
+			return info_newss;
+		}
 	}
+
 };

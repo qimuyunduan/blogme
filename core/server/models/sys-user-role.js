@@ -15,10 +15,10 @@ var _              = require('lodash'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
 	validator      = require('validator'),
-	sys_role,
-	sys_roles;
+	sys_user_role,
+	sys_user_roles;
 
-sys_role = appBookshelf.Model.extend({
+sys_user_role = appBookshelf.Model.extend({
 
 	tableName: ' sys_user_role ',
 
@@ -150,19 +150,22 @@ sys_role = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
-sys_roles= appBookshelf.Collection.extend({
-	model:sys_role
+sys_user_roles = appBookshelf.Collection.extend({
+	model:sys_user_role
 });
 
 module.exports = {
-	model: function(){
-		return sys_role;
-	},
-	collection:function(){
-		return sys_roles;
+	sysUserRole:{
+		model: function(){
+			return sys_user_role;
+		},
+		collection:function(){
+			return sys_user_roles;
+		}
 	}
+
 };

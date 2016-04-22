@@ -159,10 +159,13 @@ roles_t = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return role_t;
-	},
-	collection:function(){
-		return roles_t;
+	roleT:{
+		model: function(){
+			return role_t;
+		},
+		collection:function(){
+			return roles_t;
+		}
 	}
+
 };

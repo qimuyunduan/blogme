@@ -159,10 +159,13 @@ sub_companies = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return sub_company;
-	},
-	collection:function(){
-		return sub_companies;
+	subCompany:{
+		model: function(){
+			return sub_company;
+		},
+		collection:function(){
+			return sub_companies;
+		}
 	}
+
 };

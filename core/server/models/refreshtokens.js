@@ -159,10 +159,13 @@ refreshtokens = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return refreshtoken;
-	},
-	collection:function(){
-		return refreshtokens;
+	refreshToken:{
+		model: function(){
+			return refreshtoken;
+		},
+		collection:function(){
+			return refreshtokens;
+		}
 	}
+
 };

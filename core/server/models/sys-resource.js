@@ -159,10 +159,13 @@ sys_resources = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return sys_resource;
-	},
-	collection:function(){
-		return sys_resources;
+	sysResource:{
+		model: function(){
+			return sys_resource;
+		},
+		collection:function(){
+			return sys_resources;
+		}
 	}
 };
+

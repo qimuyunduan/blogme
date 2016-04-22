@@ -159,10 +159,13 @@ city_advises = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return city_advise;
-	},
-	collection:function(){
-		return city_advises;
+	cityAdvise:{
+		model: function(){
+			return city_advise;
+		},
+		collection:function(){
+			return city_advises;
+		}
 	}
+
 };

@@ -158,10 +158,14 @@ apps = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return app;
-	},
-	collection:function(){
-		return apps;
+
+	app:{
+		model: function(){
+			return app;
+		},
+		collection:function(){
+			return apps;
+		}
 	}
+
 };

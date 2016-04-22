@@ -159,10 +159,13 @@ permissions = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return permission;
-	},
-	collection:function(){
-		return permissions;
+	permission:{
+		model: function(){
+			return permission;
+		},
+		collection:function(){
+			return permissions;
+		}
 	}
+
 };

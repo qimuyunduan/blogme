@@ -159,10 +159,13 @@ bind_families = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return bind_family;
-	},
-	collection:function(){
-		return bind_families;
+	bindFamily:{
+		model: function(){
+			return bind_family;
+		},
+		collection:function(){
+			return bind_families;
+		}
 	}
+
 };

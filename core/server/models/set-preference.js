@@ -159,10 +159,13 @@ set_preferences = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return set_preference;
-	},
-	collection:function(){
-		return set_preferences;
+	setPreference:{
+		model: function(){
+			return set_preference;
+		},
+		collection:function(){
+			return set_preferences;
+		}
 	}
+
 };

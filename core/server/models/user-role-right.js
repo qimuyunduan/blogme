@@ -150,7 +150,7 @@ user_role = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ user_roles = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return user_role;
-	},
-	collection:function(){
-		return user_roles;
+	userRole:{
+		model: function(){
+			return user_role;
+		},
+		collection:function(){
+			return user_roles;
+		}
 	}
+
 };

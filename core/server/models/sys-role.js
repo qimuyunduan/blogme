@@ -150,7 +150,7 @@ sys_role = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ sys_roles = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return sys_role;
-	},
-	collection:function(){
-		return sys_roles;
+	sysRole:{
+		model: function(){
+			return sys_role;
+		},
+		collection:function(){
+			return sys_roles;
+		}
 	}
+
 };

@@ -159,10 +159,13 @@ mobilecitys = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return mobilecity;
-	},
-	collection:function(){
-		return mobilecitys;
+	mobileCity:{
+		model: function(){
+			return mobilecity;
+		},
+		collection:function(){
+			return mobilecitys;
+		}
 	}
+
 };

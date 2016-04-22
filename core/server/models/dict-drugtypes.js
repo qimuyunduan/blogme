@@ -159,10 +159,13 @@ dict_drugs = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return dict_drug;
-	},
-	collection:function(){
-		return dict_drugs;
+	dictDrugType:{
+		model: function(){
+			return dict_drug;
+		},
+		collection:function(){
+			return dict_drugs;
+		}
 	}
+
 };

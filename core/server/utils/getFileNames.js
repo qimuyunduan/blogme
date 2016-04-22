@@ -8,25 +8,40 @@
  * @version
  *
  */
-var _       = require('lodash'),
-	fs      = require('fs');
-function getFileNames(dir,deleteFiles){
+var _ = require('lodash'),
+	fs = require('fs');
+
+
+//get the name of files under dir
+
+
+function getFileNames(dir, deleteFiles) {
+
 	var fileNames = [];
-	fs.stat(dir,function(stats){
-		if(stats.isDirectory(dir)){
-			fs.readdir(dir,function(files){
-				fileNames = files;
-				if (!deleteFiles){
-					return fileNames;
-				}
-			})
+	fs.stat(dir, function (err, stats) {
+		if (!err) {
+			if (stats.isDirectory(dir)) {
+				fs.readdir(dir,function(err,files){
+					if(!err){
+						fileNames = files;
+						if (!_.isEmpty(deleteFiles)) {
+							//delete deleteFiles from  fileNames
+							fileNames = _.remove(files, function (fileName) {
+
+								return (_.indexOf(deleteFiles, fileName) >= 0);
+
+							});
+						}
+						console.log(fileNames);
+						return fileNames;
+					}
+				});
+			}
 		}
 	});
-	//delete deleteFiles from  fileNames
-	_.remove(fileNames, function (fileName) {
 
-		return (_.indexOf(deleteFiles,fileName)>=0)
-
-	});
 }
-module.exports = getFileNames();
+module.exports = getFileNames;
+
+
+

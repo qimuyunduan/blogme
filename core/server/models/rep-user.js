@@ -159,10 +159,13 @@ rep_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return rep_user;
-	},
-	collection:function(){
-		return rep_users;
+	repUser:{
+		model: function(){
+			return rep_user;
+		},
+		collection:function(){
+			return rep_users;
+		}
 	}
+
 };

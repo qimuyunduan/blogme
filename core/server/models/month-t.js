@@ -159,10 +159,13 @@ months = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return month;
-	},
-	collection:function(){
-		return months;
+	monthT:{
+		model: function(){
+			return month;
+		},
+		collection:function(){
+			return months;
+		}
 	}
+
 };

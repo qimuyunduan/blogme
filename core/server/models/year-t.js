@@ -159,10 +159,13 @@ years = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return year;
-	},
-	collection:function(){
-		return years;
+	yearT:{
+		model: function(){
+			return year;
+		},
+		collection:function(){
+			return years;
+		}
 	}
+
 };

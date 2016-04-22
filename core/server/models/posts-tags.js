@@ -160,10 +160,13 @@ post_tags = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return post_tag;
-	},
-	collection:function(){
-		return post_tags;
+	postTag:{
+		model: function(){
+			return post_tag;
+		},
+		collection:function(){
+			return post_tags;
+		}
 	}
+
 };

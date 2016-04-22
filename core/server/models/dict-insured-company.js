@@ -159,10 +159,13 @@ dict_companies = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return dict_company;
-	},
-	collection:function(){
-		return dict_companies;
+	dictInsuredCompany:{
+		model: function(){
+			return dict_company;
+		},
+		collection:function(){
+			return dict_companies;
+		}
 	}
+
 };

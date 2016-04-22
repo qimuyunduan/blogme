@@ -4,7 +4,7 @@ var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
 	controller  = require('../controllers'),
-	User_model        = require('../models/ido-user'),
+	models      = require('../models'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -38,7 +38,8 @@ apiRoutes = function apiRoutes() {
 		//console.log(req.params);
 		//res.send(controller.getUser());
 		//res.render('authorized');
-		 User_model.User.forge().fetchAll().then(function(userData){
+		 models.idouser.model()
+			 .forge().fetchAll().then(function(userData){
 			if (!userData) {
 				console.log(JSON.stringify({data:userData}));
 				return res.json(JSON.stringify({data:userData}));

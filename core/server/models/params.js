@@ -159,10 +159,13 @@ params = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return param;
-	},
-	collection:function(){
-		return params;
+	param:{
+		model: function(){
+			return param;
+		},
+		collection:function(){
+			return params;
+		}
 	}
+
 };

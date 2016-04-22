@@ -159,10 +159,13 @@ user_menus = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return user_menu;
-	},
-	collection:function(){
-		return user_menus;
+	userMenu:{
+		model: function(){
+			return user_menu;
+		},
+		collection:function(){
+			return user_menus;
+		}
 	}
+
 };

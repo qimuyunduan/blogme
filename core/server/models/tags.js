@@ -150,7 +150,7 @@ tag = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ tags = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return tag;
-	},
-	collection:function(){
-		return tags;
+	tag:{
+		model: function(){
+			return tag;
+		},
+		collection:function(){
+			return tags;
+		}
 	}
+
 };

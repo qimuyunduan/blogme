@@ -159,10 +159,13 @@ push_users = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return push_user;
-	},
-	collection:function(){
-		return push_users;
+	pushUser: {
+		model: function () {
+			return push_user;
+		},
+		collection: function () {
+			return push_users;
+		}
 	}
 };
+

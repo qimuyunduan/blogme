@@ -159,10 +159,13 @@ inv_categories = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return inv_category;
-	},
-	collection:function(){
-		return inv_categories;
+	invCategory:{
+		model: function(){
+			return inv_category;
+		},
+		collection:function(){
+			return inv_categories;
+		}
 	}
+
 };

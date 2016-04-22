@@ -150,7 +150,7 @@ organization = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
@@ -159,10 +159,13 @@ organizations = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return organization;
-	},
-	collection:function(){
-		return organizations;
+	organization:{
+		model: function(){
+			return organization;
+		},
+		collection:function(){
+			return organizations;
+		}
 	}
+
 };

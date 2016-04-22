@@ -397,10 +397,13 @@ ido_users = bookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return ido_user;
-	},
-	collection:function(){
-		return ido_users;
+	idoUser:{
+		model: function(){
+			return ido_user;
+		},
+		collection:function(){
+			return ido_users;
+		}
 	}
+
 };

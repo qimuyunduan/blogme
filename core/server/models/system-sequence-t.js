@@ -159,10 +159,13 @@ system_sequences = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return system_sequence;
-	},
-	collection:function(){
-		return system_sequences;
+	systemSequence:{
+		model: function(){
+			return system_sequence;
+		},
+		collection:function(){
+			return system_sequences;
+		}
 	}
+
 };

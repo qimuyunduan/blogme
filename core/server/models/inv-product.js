@@ -159,10 +159,14 @@ inv_products = appBookshelf.Collection.extend({
 });
 
 module.exports = {
-	model: function(){
-		return inv_product;
-	},
-	collection:function(){
-		return inv_products;
+
+	nvProduct:{
+		model: function(){
+			return inv_product;
+		},
+		collection:function(){
+			return inv_products;
+		}
 	}
+
 };
