@@ -45,7 +45,8 @@ ConfigManager.prototype.set = function (config) {
 			imagesPath:       path.resolve(contentPath, 'images'),
 			imagesRelPath:    'content/images',
 			hbsViews:       path.join(corePath, '/server/views/hbs/'),
-			helperTemplates:  path.join(corePath, '/server/helpers/tpl/')
+			helpers:  path.join(corePath, '/server/helpers/'),
+			models:  path.resolve(corePath,'/server/models/')
 
 		},
 		uploads: {
@@ -65,18 +66,11 @@ ConfigManager.prototype.set = function (config) {
  * Allows you to read the config object.
  * @return {Object} The config object.
  */
-ConfigManager.prototype.get = function () {
+ConfigManager.prototype.get = function (key) {
+	if(key){
+		return this._config[key];
+	}
 	return this._config;
-};
-
-
-/**
- * Read config.js file from file system using node's require
- * @param  {String} envVal Which environment we're in.
- * @return {Object}        The config object.
- */
-ConfigManager.prototype.readFile = function (envVal) {
-	return this._config[envVal];
 };
 
 

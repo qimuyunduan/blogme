@@ -14,7 +14,7 @@ var _          = require('lodash'),
 
 
 
-dbEnv = config.readFile(nodeEnv).database;
+dbEnv = config.get(nodeEnv).database;
 console.log(dbEnv);
 var knex = require('knex')(dbEnv);
 bookshelf = require('bookshelf')(knex);

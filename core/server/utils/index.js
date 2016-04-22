@@ -1,5 +1,5 @@
-var _          = require('lodash'),
-
+var _            = require('lodash'),
+	getFileNames = require('./getFileNames'),
     utils,
     getRandomInt;
 
@@ -20,6 +20,9 @@ utils = {
     ONE_WEEK_MS:    604800000,
     ONE_MONTH_MS:  2628000000,
     ONE_YEAR_MS:  31536000000,
+
+	//utils functions
+	getFileNames:getFileNames,
 
     /**
      * Return a unique identifier with the given `len`.
@@ -86,6 +89,8 @@ utils = {
         res.set({'Cache-Control': 'public, max-age=' + utils.ONE_YEAR_S});
         res.redirect(301, path);
     }
+
+
 };
 
 module.exports = utils;

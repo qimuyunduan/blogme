@@ -16,11 +16,11 @@ apiRoutes = function apiRoutes() {
     router.del = router.delete;
 
 
-	router.get("/indexd",function(req,res){
+	router.get("/index",function(req,res){
 		var data = {
 			title:"风险管理平台"
-					};
-		res.render("indexd",data);
+		};
+		res.render("index",data);
 	});
 	router.get("/demo_page1",function(req,res){
 		res.render("demo_page1");

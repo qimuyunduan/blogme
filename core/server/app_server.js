@@ -11,8 +11,8 @@ function Server(app) {
 	this.connections = {};
 	this.connectionId = 0;
 	this.env = process.env.NODE_ENV;
-	this.host = config.readFile(this.env).server.host;
-	this.port = config.readFile(this.env).server.port;
+	this.host = config.get(this.env).server.host;
+	this.port = config.get(this.env).server.port;
 	// Expose config module for use externally.
 	this.config = config;
 }
