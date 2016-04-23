@@ -10,22 +10,22 @@ var _          = require('lodash'),
 	Response   = require('./response'),
 	nodeEnv    = process.env.NODE_ENV || 'development',
 	dbEnv,
-    bookshelf;
+    Bookshelf;
 
 
 
 dbEnv = config.get(nodeEnv).database;
-console.log(dbEnv);
-var knex = require('knex')(dbEnv);
-bookshelf = require('bookshelf')(knex);
+
+var knex  = require('knex')(dbEnv);
+Bookshelf = require('bookshelf')(knex);
 
 // Load the bookshelf registry plugin, which helps us avoid circular dependencies
-bookshelf.plugin('registry');
+Bookshelf.plugin('registry');
 
 // bookshelf.Model
 // The Base Model which other App objects will inherit from,
 // including some convenience functions as static properties on the model.
-bookshelf.Model = bookshelf.Model.extend({
+Bookshelf.Model = Bookshelf.Model.extend({
 
     // Fix problems with dates
     fixDate: function fixDate(attr) {
@@ -159,5 +159,5 @@ bookshelf.Model = bookshelf.Model.extend({
 });
 
 
-module.exports = bookshelf;
+module.exports = Bookshelf;
 

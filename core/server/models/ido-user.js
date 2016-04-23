@@ -407,4 +407,3 @@ module.exports = {
 	}
 
 };
-//console.log(typeof ido_user.forge);

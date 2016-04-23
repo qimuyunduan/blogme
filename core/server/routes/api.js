@@ -4,8 +4,8 @@ var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
 	controller  = require('../controllers'),
-	models      = require('../models'),
-	user     = require('../models/ido-user'),
+	//models      = require('../models'),
+	User     = require('../models/ido-user'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -47,10 +47,12 @@ apiRoutes = function apiRoutes() {
 		//		return res.json(JSON.stringify(userData));
 		//	}
 		//});
-		user.idoUser.model().forge({id:50}).fetch().then(function(userData){
+		//console.log(models);
+		User.idoUser.model().forge({id:50}).fetch().then(function(userData){
 			if (!userData) {
-				console.log(JSON.stringify({data:userData}));
-				return res.json(JSON.stringify({data:userData}));
+				console.log(userData);
+				//console.log(JSON.stringify({data:userData}));
+				//return res.json(JSON.stringify({data:userData}));
 			}
 			else {
 				console.log(JSON.stringify(userData));
