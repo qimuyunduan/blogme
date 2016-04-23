@@ -18,7 +18,7 @@
             dataType:"json",
             success: function(msg){
 
-                alert($.parseJSON(msg));
+                alert(JSON.parse(msg));
             },
             error:function(){
                 alert("connection error....");

@@ -4,61 +4,64 @@
 
 var _       = require('lodash'),
 	Promise = require('bluebird'),
-	//fs      = Promise.promisifyAll(require("fs"));
-	fs      = require('fs'),
-	models  = {};
+	fs      = Promise.promisifyAll(require("fs"));
+	//fs      = require('fs'),
+	//models  = {};
 //utils   = require('../utils'),
 
 
 exports = module.exports;
 // get fileNames under models directory ,set models
 
-function exportModels() {
-
-	var deleteFiles = ['index.js', 'base'];
-	var fileNames = fs.readdirSync(__dirname);
-
-	if (!_.isEmpty(deleteFiles)) {
-		//delete deleteFiles from  fileNames
-		_.remove(fileNames, function (fileName) {
-
-			return _.indexOf(deleteFiles, fileName) >= 0;
-
-		});
-	}
-	for (var i = 0; i < fileNames.length; i++) {
-		if (_.endsWith(fileNames[i], '.js')) {
-			fileNames[i] = fileNames[i].toLowerCase().slice(0, -3);
-			models = _.assign(models, require('./' + fileNames[i]));
-
-		}
-	}
-}
-
-// get fileNames under models directory ,set models
-//function exportModels(dir) {
+//function exportModels() {
 //
 //	var deleteFiles = ['index.js', 'base'];
-//	fs.readdirAsync(dir).then(function (files) {
+//	var fileNames = fs.readdirSync(__dirname);
 //
-//		if (!_.isEmpty(deleteFiles)) {
-//			//delete deleteFiles from  fileNames
-//			_.remove(files, function (fileName) {
+//	if (!_.isEmpty(deleteFiles)) {
+//		//delete deleteFiles from  fileNames
+//		_.remove(fileNames, function (fileName) {
 //
-//				return _.indexOf(deleteFiles, fileName) >= 0;
+//			return _.indexOf(deleteFiles, fileName) >= 0;
 //
-//			});
+//		});
+//	}
+//	for (var i = 0; i < fileNames.length; i++) {
+//		if (_.endsWith(fileNames[i], '.js')) {
+//			fileNames[i] = fileNames[i].toLowerCase().slice(0, -3);
+//			models = _.assign(models, require('./' + fileNames[i]));
+//
 //		}
-//		for (var i = 0; i < files.length; i++) {
-//			if (_.endsWith(files[i], '.js')) {
-//				files[i] = files[i].toLowerCase().slice(0, -3);
-//				_.assign(exports, require('./' + files[i]));
-//			}
-//		}
-//	}).catch(function() {
-//		console.log("读取文件失败....");
-//	});
+//	}
 //}
+
+// get fileNames under models directory ,set models
+function exportModels(dir) {
+
+	var deleteFiles = ['index.js', 'base'];
+	fs.readdirAsync(dir).then(function (files) {
+
+		if (!_.isEmpty(deleteFiles)) {
+			//delete deleteFiles from  fileNames
+			_.remove(files, function (fileName) {
+
+				return _.indexOf(deleteFiles, fileName) >= 0;
+
+			});
+		}
+		for (var i = 0; i < files.length; i++) {
+			if (_.endsWith(files[i], '.js')) {
+				files[i] = files[i].toLowerCase().slice(0, -3);
+				_.assign(exports, require('./' + files[i]));
+			}
+		}
+		exports.idoUser.model().forge({id:50}).fetch().then(function(data){
+			console.log(data);
+		});
+	}).catch(function() {
+		console.log("读取文件失败....");
+	});
+}
 
 function init() {
 
@@ -73,8 +76,5 @@ function init() {
  */
 
 exports.init = init;
-exports.model = models;
-
-//exports.idoUser.model().forge({id:50}).fetch().then(function(data){
-//	console.log(data);
-//});
+init();
+console.log(exports);

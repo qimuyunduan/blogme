@@ -1,11 +1,11 @@
 // # API routes
-'use strict';
+
 var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
 	controller  = require('../controllers'),
-	//models      = require('../models'),
-	User     = require('../models/ido-user'),
+	//models    = require('../models'),
+	models        = require('../models/ido-user'),
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -48,16 +48,9 @@ apiRoutes = function apiRoutes() {
 		//	}
 		//});
 		//console.log(models);
-		User.idoUser.model().forge({id:50}).fetch().then(function(userData){
-			if (!userData) {
-				console.log(userData);
-				//console.log(JSON.stringify({data:userData}));
-				//return res.json(JSON.stringify({data:userData}));
-			}
-			else {
-				console.log(JSON.stringify(userData));
-				return res.json(JSON.stringify(userData));
-			}
+		models.idoUser.model().forge({id:50}).fetch().then(function(data){
+			console.log(data);
+			res.json(JSON.stringify(data));
 		});
 	});
 	router.post("/authorized",function(req,res){
@@ -171,4 +164,6 @@ apiRoutes = function apiRoutes() {
     return router;
 };
 
+
+//非base model 可以携带自已的函数
 module.exports = apiRoutes;
