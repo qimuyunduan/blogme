@@ -2,118 +2,23 @@
  * Dependencies
  */
 
-var _             = require('lodash'),
-	accesstokens  = require('./accesstokens'),
-	addMoney      = require('addMoney'),
-	appField      = require(''),
-	appSetting    = require(''),
-	appVersion    = require(''),
-	apps          = require(''),
-	bindFamily    = require(''),
-	bugList       = require(''),
-	businessGroup = require(''),
-	businessMan   = require(''),
-	businessShop  = require(''),
-	cacheT        = require(''),
-	cityAdvise    = require(''),
-	cityInfo      = require(''),
-	clientDomain  = require(''),
-	client        = require(''),
-	conFile       = require(''),
-	conFolder     = require(''),
-	consoleInfo   = require(''),
-	consoleMsg    = require(''),
-	consumeDetail = require(''),
-	consumeInfo   = require(''),
-	deleteMoney   = require(''),
-	dictCity      = require(''),
-	dictDrugType  = require(''),
-	dictCompany   = require(''),
-	dictProvince  = require(''),
-	fileT         = require(''),
-	idoUser       = require(''),
-	infoNews      = require(''),
-	insuredCompany= require(''),
-	insuredFile   = require(''),
-	insuredUnit   = require(''),
-	insuredUser   = require(''),
-	invCategory   = require(''),
-	invProduct    = require(''),
-	logInfo       = require(''),
-	menuT         = require(''),
-	messageInfo   = require(''),
-	mobileCity    = require(''),
-	monthT        = require(''),
-	newRole       = require(''),
-	organization  = require(''),
-	parameterType = require(''),
-	params        = require(''),
-	permissions   = require(''),
-	permissionApp = require(''),
-	permissionRole= require(''),
-	permissionUser= require(''),
-	posts         = require(''),
-	postTag       = require(''),
+var _             = require('lodash');
 
-	pushUser      = require(''),
-	refreshToken  = require(''),
-	repUser       = require(''),
-	roleMenu      = require(''),
-	roleT         = require(''),
-	roles          = require(''),
-	roleUser      = require(''),
-	setPreference = require(''),
-	settings       = require(''),
-	subCompany    = require(''),
-	sysLog        = require(''),
-	sysPermission = require(''),
-	sysResource   = require(''),
-	sysRole       = require(''),
-	sysUser       = require(''),
-	sysUserRole   = require(''),
-	sysSequence   = require(''),
-	tags           = require(''),
-	updateUserLog = require(''),
-	uploadFile    = require(''),
-	userMenu      = require(''),
-	userRole      = require(''),
-	userT         = require(''),
-	user          = require(''),
-	webSite       = require(''),
-	wenPage       = require(''),
-	year          = require(''),
-	yiAnList      = require(''),
 
-	models;
+var files = ['accesstokens','addMoney','appFields','appSetting','appVersion','apps','bindFamily',
+	'bugList','businessGroup','businessMan','businessShop','cacheT','cityAdvise','cityInfo','clientDomain',
+	'client','conFile','conFolder','consoleInfo','consoleMsg','consumeDetail','consumeInfo','deleteMoney',
+	'dictCity','dictDrugType','dictCompany','dictProvince','fileT','idoUser','infoNews','insuredCompany',
+	'insuredFile','insuredUser','invCategory','invProduct','logInfo','menuT','messageInfo','mobileCity',
+	'mobileCity','monthT','newRole','organization','parameterType','params','permissions','permissionApp',
+	'permissionRole','permissionUser','posts','postTag','pushUser', 'refreshToken','repUser','roleMenu',
+	'roleT','roles','roleUser','setPreference','settings','subCompany','sysLog','sysPermission','sysResource',
+	'sysRole','sysUser','sysUserRole','sysSequence','tags','updateUserLog','uploadFile','userMenu','userRole',
+	'users','userT','webSite','webPage','year','yiAnList'];
+
 
 
 //exports = module.exports;
-
-// get fileNames under models directory ,set models
-
-//function init() {
-//
-//	var deleteFiles = ['index.js', 'base'];
-//	var fileNames = fs.readdirSync(__dirname);
-//	if (!_.isEmpty(deleteFiles)) {
-//		//delete deleteFiles from  fileNames
-//		_.remove(fileNames, function (fileName) {
-//
-//			return _.indexOf(deleteFiles, fileName) >= 0;
-//
-//		});
-//	}
-//	for (var i = 0; i < fileNames.length; i++) {
-//		if (_.endsWith(fileNames[i], '.js')) {
-//			fileNames[i] = fileNames[i].toLowerCase().slice(0, -3);
-//			_.assign(Models, require('./' + fileNames[i]));
-//
-//		}
-//	}
-//	console.log(Models);
-//	return Models;
-//}
-
 // get fileNames under models directory ,set models
 //function init() {
 //
@@ -147,9 +52,20 @@ var _             = require('lodash'),
 //
 //}
 
+
+function setModels(fileNames) {
+	var  models = {};
+	if(_.isArray(fileNames)){
+
+		for(var i=0;i<fileNames.length;i++){
+
+			_.assign(models,require('./'+fileNames[i]));
+		}
+	}
+	return models;
+}
 /**
- * Expose `init`
+ * Expose `models`
  */
 
-module.exports = models;
-init();
+module.exports = setModels(files);

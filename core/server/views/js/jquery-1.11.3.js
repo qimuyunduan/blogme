@@ -1649,7 +1649,7 @@ Expr = Sizzle.selectors = {
 				// advance to the next closing parenthesis
 				(excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
 
-				// excess is a negative indexd.hbs
+				// excess is a negative index
 				match[0] = match[0].slice( 0, excess );
 				match[2] = unquoted.slice( 0, excess );
 			}
@@ -1744,7 +1744,7 @@ Expr = Sizzle.selectors = {
 
 						// non-xml :nth-child(...) stores cache data on `parent`
 						if ( forward && useCache ) {
-							// Seek `elem` from a previously-cached indexd.hbs
+							// Seek `elem` from a previously-cached index
 							outerCache = parent[ expando ] || (parent[ expando ] = {});
 							cache = outerCache[ type ] || [];
 							nodeIndex = cache[0] === dirruns && cache[1];
@@ -1763,7 +1763,7 @@ Expr = Sizzle.selectors = {
 								}
 							}
 
-						// Use previously-cached element indexd.hbs if available
+						// Use previously-cached element index if available
 						} else if ( useCache && (cache = (elem[ expando ] || (elem[ expando ] = {}))[ type ]) && cache[0] === dirruns ) {
 							diff = cache[1];
 
@@ -1774,7 +1774,7 @@ Expr = Sizzle.selectors = {
 								(diff = nodeIndex = 0) || start.pop()) ) {
 
 								if ( ( ofType ? node.nodeName.toLowerCase() === name : node.nodeType === 1 ) && ++diff ) {
-									// Cache the indexd.hbs of each encountered element
+									// Cache the index of each encountered element
 									if ( useCache ) {
 										(node[ expando ] || (node[ expando ] = {}))[ type ] = [ dirruns, diff ];
 									}
@@ -2443,7 +2443,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 						}
 					}
 
-					// Discard indexd.hbs placeholder values to get only actual matches
+					// Discard index placeholder values to get only actual matches
 					setMatched = condense( setMatched );
 				}
 
@@ -2968,12 +2968,12 @@ jQuery.fn.extend({
 	// the matched set of elements
 	index: function( elem ) {
 
-		// No argument, return indexd.hbs in parent
+		// No argument, return index in parent
 		if ( !elem ) {
 			return ( this[0] && this[0].parentNode ) ? this.first().prevAll().length : -1;
 		}
 
-		// indexd.hbs in selector
+		// index in selector
 		if ( typeof elem === "string" ) {
 			return jQuery.inArray( this[0], jQuery( elem ) );
 		}
@@ -3603,12 +3603,12 @@ jQuery(function() {
 		// Support: IE<8
 		// Check if natively block-level elements act like inline-block
 		// elements when setting their display to 'inline' and giving
-		// them layouts
+		// them layout
 		div.style.cssText = "display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1";
 
 		support.inlineBlockNeedsLayout = val = div.offsetWidth === 3;
 		if ( val ) {
-			// Prevent IE 6 from affecting layouts for positioned elements #11048
+			// Prevent IE 6 from affecting layout for positioned elements #11048
 			// Prevent IE from shrinking the body in IE 7 mode #12869
 			// Support: IE<8
 			body.style.zoom = 1;
@@ -6114,7 +6114,7 @@ function defaultDisplay( nodeName ) {
 		body.appendChild( container ).appendChild( div );
 
 		// Support: IE6
-		// Check if elements with layouts shrink-wrap their children
+		// Check if elements with layout shrink-wrap their children
 		if ( typeof div.style.zoom !== strundefined ) {
 			// Reset CSS: box-sizing; display; margin; border
 			div.style.cssText =
@@ -6814,7 +6814,7 @@ if ( !support.opacity ) {
 				opacity = jQuery.isNumeric( value ) ? "alpha(opacity=" + value * 100 + ")" : "",
 				filter = currentStyle && currentStyle.filter || style.filter || "";
 
-			// IE has trouble with opacity if it does not have layouts
+			// IE has trouble with opacity if it does not have layout
 			// Force it by setting the zoom level
 			style.zoom = 1;
 
@@ -7192,7 +7192,7 @@ function defaultPrefilter( elem, props, opts ) {
 		if ( checkDisplay === "inline" && jQuery.css( elem, "float" ) === "none" ) {
 
 			// inline-level elements accept inline-block;
-			// block-level elements need to be inline with layouts
+			// block-level elements need to be inline with layout
 			if ( !support.inlineBlockNeedsLayout || defaultDisplay( elem.nodeName ) === "inline" ) {
 				style.display = "inline-block";
 			} else {
@@ -7304,7 +7304,7 @@ function propFilter( props, specialEasing ) {
 			delete props[ name ];
 
 			// not quite $.extend, this wont overwrite keys already present.
-			// also - reusing 'indexd.hbs' from above because we have the correct "name"
+			// also - reusing 'index' from above because we have the correct "name"
 			for ( index in value ) {
 				if ( !( index in props ) ) {
 					props[ index ] = value[ index ];
@@ -9481,7 +9481,7 @@ function buildParams( prefix, obj, traditional, add ) {
 				add( prefix, v );
 
 			} else {
-				// Item is non-scalar (array or object), encode its numeric indexd.hbs.
+				// Item is non-scalar (array or object), encode its numeric index.
 				buildParams( prefix + "[" + ( typeof v === "object" ? i : "" ) + "]", v, traditional, add );
 			}
 		});

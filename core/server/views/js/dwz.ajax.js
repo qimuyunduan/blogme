@@ -1,5 +1,5 @@
 /**
- * @author ZhangHuihua@msn.com
+ * @author 张慧华 z@j-ui.com
  * 
  */
 
@@ -48,18 +48,18 @@ function iframeCallback(form, callback){
 	if(!$form.valid()) {return false;}
 
 	if ($iframe.size() == 0) {
-		$iframe = $("<iframe id='callbackframe' name='callbackframe' src='about:blank' style='display:none'></iframe>").appendTo("body");
+		$iframe = $('<iframe id="callbackframe" name="callbackframe" src="about:blank" style="display:none"></iframe>').appendTo('body');
 	}
 	if(!form.ajax) {
 		$form.append('<input type="hidden" name="ajax" value="1" />');
 	}
-	form.target = "callbackframe";
+	form.target = 'callbackframe';
 
 	$form.find(':focus').blur();
 
 	_iframeResponse($iframe[0], callback || DWZ.ajaxDone);
 }
-function _iframeResponse(iframe, callback){
+function _iframeResponse(iframe, callback, dataType){
 	var $iframe = $(iframe), $document = $(document);
 	
 	$document.trigger("ajaxStart");
@@ -87,8 +87,12 @@ function _iframeResponse(iframe, callback){
 			response = doc.XMLDocument;
 		} else if (doc.body){
 			try{
-				response = $iframe.contents().find("body").text();
-				response = jQuery.parseJSON(response);
+				if (dataType == 'html') {
+					response = $iframe.contents().find("body").html();
+				} else {
+					response = $iframe.contents().find("body").text();
+					response = jQuery.parseJSON(response);
+				}
 			} catch (e){ // response is html document or plain text
 				response = doc.body.innerHTML;
 			}
@@ -405,3 +409,37 @@ $.fn.extend({
 	}
 });
 
+/**
+ * The W3C XMLHttpRequest specification dictates that the charset is always UTF-8; specifying another charset will not force the browser to change the encoding.
+ * iframe模拟ajax load, 解决GBK页面ajax load乱码问题
+ *
+ * @param url
+ * @param callback
+ */
+$.iframeLoad = function(url, callback) {
+
+	var $form = $('<form method="post" action="'+url+'" target="callbackframe" style="display: none"><button type="submit">submit</button></form>').appendTo('body'),
+		$iframe = $("#callbackframe");
+
+	if ($iframe.size() == 0) {
+		$iframe = $('<iframe id="callbackframe" name="callbackframe" src="about:blank" style="display:none"></iframe>').appendTo('body');
+	}
+
+	_iframeResponse($iframe[0], function(response) {
+		$form.remove();
+		if (callback) callback.call($iframe, response);
+	}, 'html');
+
+	$form.submit();
+};
+
+$.fn.iframeLoad = function(url, callback) {
+	return this.each(function(){
+		var $box = $(this);
+
+		$.iframeLoad(url, function(response){
+			$box.html(response).initUI();
+			if (callback) callback.call($box, response);
+		});
+	});
+};

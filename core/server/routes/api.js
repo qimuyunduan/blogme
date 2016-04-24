@@ -4,8 +4,8 @@ var express     = require('express'),
     api         = require('../api'),
 	path        = require('path'),
 	controller  = require('../controllers'),
-	//models    = require('../models'),
-	models        = require('../models/ido-user'),
+	models      = require('../models'),
+
     apiRoutes;
 
 apiRoutes = function apiRoutes() {
@@ -17,48 +17,54 @@ apiRoutes = function apiRoutes() {
     router.del = router.delete;
 
 
-	router.get("/index",function(req,res){
+	router.get("/",function(req,res){
 		var data = {
 			title:"风险管理平台"
 		};
 		res.render("index",data);
 	});
+	router.get("/index",function(req,res){
+		var data = {
+			title:"风险管理平台"
+		};
+		res.render("index",data);
+	});//  写路由时要注意把.html包含在内
+	router.get("/index.html",function(req,res){
+		var data = {
+			title:"风险管理平台"
+		};
+		res.render("index",data);
+	});
+
 	router.get("/demo_page1",function(req,res){
 		res.render("demo_page1");
 	});
     router.get("/authorized",function(req,res){
 
-		//console.log("render indexd.hbs...");
-		//res.send({"username":"qimu","pw":"101410"});
 		console.log(req.body);
-		res.send("ok got it!  get "+req.body);
-		//res.render('about');
+		res.render("authorized");
+
+
 	});
 	router.put("/authorized",function(req,res){
-		console.log("render authorized.hbs...");
-		//console.log(models);
-		//models.idoUser.model().forge({id:50}).fetch().then(function(userData){
-		//	if (!userData) {
-		//		console.log(JSON.stringify({data:userData}));
-		//		return res.json(JSON.stringify({data:userData}));
-		//	}
-		//	else {
-		//		console.log(JSON.stringify(userData));
-		//		return res.json(JSON.stringify(userData));
-		//	}
-		//});
-		//console.log(models);
-		models.idoUser.model().forge({id:50}).fetch().then(function(data){
-			console.log(data);
-			res.json(JSON.stringify(data));
+
+
+		models.idoUser.model().forge({id:50}).fetch().then(function(userData){
+			if (!userData) {
+				console.log(JSON.stringify({data:userData}));
+				return res.json(JSON.stringify({data:userData}));
+			}
+			else {
+				console.log(JSON.stringify(userData));
+				return res.json(JSON.stringify(userData));
+			}
 		});
+
+
 	});
 	router.post("/authorized",function(req,res){
 		console.log("render authorized.hbs...");
 
-		//res.send("ok got it!  post "+req.body);
-		//res.render('authorized');
-		//json string
 		var gather = {
 			id : 1314,
 			name : "pom",
@@ -73,9 +79,7 @@ apiRoutes = function apiRoutes() {
 			likeGames : ['PCgame','Netgame']
 
 		};
-		if (JSON.stringify(gather) == '{"id":1314,"name":"pom","likeGames":["PCgame","Netgame"]}'){
-			console.log("equal.....");// equal
-		}
+
 		res.json(JSON.stringify(gather));
 	});
 	router.delete("/authorized",function(req,res){
@@ -84,6 +88,8 @@ apiRoutes = function apiRoutes() {
 		res.send("ok got it! delete"+req.body);
 		//res.render('authorized');
 	});
+
+
     //// ## Posts
     //router.get('/posts',          api.http(api.posts.browse));
 	//

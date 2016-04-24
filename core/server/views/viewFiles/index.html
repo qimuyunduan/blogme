@@ -2,6 +2,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh-CN"><![endif]-->
 <!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="zh-CN"><!--<![endif]-->
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     {{> head}}
     <link href="../themes/css/login.css" rel="stylesheet" type="text/css" />
 
@@ -10,7 +11,6 @@
 <body>
 <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script>
-
     function login() {
 
         $.ajax({
@@ -19,11 +19,8 @@
             //data: "name=John&location=Boston",
             dataType:"json",
             success: function(msg){
-                //alert(msg);
-                //TODO:试用jquery $.parseJSON() 解析
-                //alert( $.parseJSON(msg.ih.age));//不起作用
                 alert(typeof msg);
-                var data = JSON.parse(msg);
+                var data = $.parseJSON(msg);
                 alert(typeof data);
                 alert(data.user_id);
             },
@@ -77,13 +74,10 @@
                 <li><a href="#">下载驱动程序</a></li>
                 <li><a href="#">如何安装密钥驱动程序？</a></li>
                 <li><a href="#">忘记密码怎么办？</a></li>
-                <li><a href="demo_page1">为什么登录失败？</a></li>
+                <li><a href="#">为什么登录失败？</a></li>
             </ul>
         </div>
     </div>
-    <!--<div id="login_footer">-->
-        <!--Copyright &copy; 2009 www.dwzjs.com Inc. All Rights Reserved.-->
-    <!--</div>-->
 
     {{> footer}}
 </div>

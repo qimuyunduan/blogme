@@ -1,12 +1,12 @@
 /**
- * @author ZhangHuihua@msn.com
+ * @author 张慧华 z@j-ui.com
  * 
  */
 (function($){
 	$.fn.extend({
 
 		/**
-		 * options: reverse[true, false], eventType[click, hover], currentIndex[default indexd.hbs 0]
+		 * options: reverse[true, false], eventType[click, hover], currentIndex[default index 0]
 		 * 			stTab[tabs selector], stTabPanel[tab panel selector]
 		 * 			ajaxClass[ajax load], closeClass[close tab]
 		 */ 

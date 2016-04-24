@@ -1,5 +1,5 @@
 /**
- * @author ZhangHuihua@msn.com
+ * @author 张慧华 z@j-ui.com
  * 
  */
 
@@ -121,7 +121,7 @@ var DWZ = {
 
 	init:function(pageFrag, options){
 		var op = $.extend({
-				loginUrl:"login.html", loginTitle:null, callback:null, debug:false, 
+				loginUrl:"index.html", loginTitle:null, callback:null, debug:false,
 				statusCode:{}, keys:{}
 			}, options);
 		this._set.loginUrl = op.loginUrl;
@@ -352,7 +352,7 @@ var DWZ = {
 			return d >= 0 && this.lastIndexOf(pattern) === d;
 		},
 		replaceSuffix:function(index){
-			return this.replace(/\[[0-9]+\]/,'['+index+']').replace('#indexd.hbs#',index);
+			return this.replace(/\[[0-9]+\]/,'['+index+']').replace('#index#',index);
 		},
 		trans:function(){
 			return this.replace(/&lt;/g, '<').replace(/&gt;/g,'>').replace(/&quot;/g, '"');

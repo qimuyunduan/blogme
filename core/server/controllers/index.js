@@ -11,7 +11,7 @@ var _           = require('lodash'),
     handleError         = require('./error'),
     formatResponse      = require('./format-response'),
     setRequestIsSecure  = require('./secure'),
-	userModel               = require('../models/ido-user'),
+	Models              = require('../models'),
     frontendControllers;
 
 /*
@@ -20,6 +20,7 @@ var _           = require('lodash'),
 * and single post methods.
 * Returns a function that takes the post to be rendered.
 */
+
 //function renderPost(req, res) {
 //
 //    return function renderPost(post) {

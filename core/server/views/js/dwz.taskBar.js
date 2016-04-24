@@ -42,7 +42,7 @@
 			$.extend(this._op, options);
 			this._taskBar = $("#" + this._op.id);
 			if (this._taskBar.size() == 0) {
-				this._taskBar = $(DWZ.frag["taskbar"]).appendTo($("#layouts"));
+				this._taskBar = $(DWZ.frag["taskbar"]).appendTo($("#layout"));
 				
 				this._taskBar.find(".taskbarLeft").hoverClass("taskbarLeftHover");
 				this._taskBar.find(".taskbarRight").hoverClass("taskbarRightHover");
@@ -216,6 +216,9 @@
 		 */
 		closeDialog: function(obj){
 			var task = (typeof obj == 'string')? $("#"+obj, this._taskList):obj;
+
+			if (task.size() == 0) return; // fix bug for minable=false
+
 			task.remove();
 			if(this._getTasks().size() == 0){
 				this.hide();
