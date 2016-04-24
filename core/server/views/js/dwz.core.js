@@ -121,8 +121,12 @@ var DWZ = {
 
 	init:function(pageFrag, options){
 		var op = $.extend({
-				loginUrl:"index.html", loginTitle:null, callback:null, debug:false,
-				statusCode:{}, keys:{}
+			loginUrl:"index.html",
+			loginTitle:null,
+			callback:null,
+			debug:false,
+			statusCode:{},
+			keys:{}
 			}, options);
 		this._set.loginUrl = op.loginUrl;
 		this._set.loginTitle = op.loginTitle;
@@ -139,6 +143,7 @@ var DWZ = {
 			timeout: 50000,
 			cache: false,
 			error: function(xhr){
+
 				alert('Error loading XML document: ' + pageFrag + "\nHttp status: " + xhr.status + " " + xhr.statusText);
 			}, 
 			success: function(xml){

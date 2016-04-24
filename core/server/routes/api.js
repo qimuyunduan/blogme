@@ -46,6 +46,13 @@ apiRoutes = function apiRoutes() {
 
 
 	});
+	router.get("/authorized.html",function(req,res){
+
+		console.log(req.body);
+		res.render("authorized");
+
+
+	});
 	router.put("/authorized",function(req,res){
 
 

@@ -2,614 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/partials/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/partials/head.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/partials/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/partials/head.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/changepwd.html" afterPath="$PROJECT_DIR$/core/server/views/changepwd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_page1.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_page2.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_page4.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page4.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_page5.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page5.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_page6.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page6.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/demo_upload.html" afterPath="$PROJECT_DIR$/core/server/views/demo_upload.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/donation.html" afterPath="$PROJECT_DIR$/core/server/views/donation.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/dwz.frag.xml" afterPath="$PROJECT_DIR$/core/server/views/dwz.frag.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/index.html" afterPath="$PROJECT_DIR$/core/server/views/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/index_menu.html" afterPath="$PROJECT_DIR$/core/server/views/index_menu.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/login_dialog.html" afterPath="$PROJECT_DIR$/core/server/views/login_dialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/main.html" afterPath="$PROJECT_DIR$/core/server/views/main.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/newPage1.html" afterPath="$PROJECT_DIR$/core/server/views/newPage1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/newPage2.html" afterPath="$PROJECT_DIR$/core/server/views/newPage2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/newPage3.html" afterPath="$PROJECT_DIR$/core/server/views/newPage3.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/sidebar_1.html" afterPath="$PROJECT_DIR$/core/server/views/sidebar_1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/sidebar_2.html" afterPath="$PROJECT_DIR$/core/server/views/sidebar_2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/tabsPage.html" afterPath="$PROJECT_DIR$/core/server/views/tabsPage.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/test_print.html" afterPath="$PROJECT_DIR$/core/server/views/test_print.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/validate_remote.html" afterPath="$PROJECT_DIR$/core/server/views/validate_remote.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_accordion.html" afterPath="$PROJECT_DIR$/core/server/views/w_accordion.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_alert.html" afterPath="$PROJECT_DIR$/core/server/views/w_alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_button.html" afterPath="$PROJECT_DIR$/core/server/views/w_button.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_checkbox.html" afterPath="$PROJECT_DIR$/core/server/views/w_checkbox.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_combox.html" afterPath="$PROJECT_DIR$/core/server/views/w_combox.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_datepicker.html" afterPath="$PROJECT_DIR$/core/server/views/w_datepicker.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_dialog.html" afterPath="$PROJECT_DIR$/core/server/views/w_dialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_editor.html" afterPath="$PROJECT_DIR$/core/server/views/w_editor.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_list.html" afterPath="$PROJECT_DIR$/core/server/views/w_list.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_panel.html" afterPath="$PROJECT_DIR$/core/server/views/w_panel.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_removeSelected.html" afterPath="$PROJECT_DIR$/core/server/views/w_removeSelected.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_tabs.html" afterPath="$PROJECT_DIR$/core/server/views/w_tabs.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_textInput.html" afterPath="$PROJECT_DIR$/core/server/views/w_textInput.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_tree.html" afterPath="$PROJECT_DIR$/core/server/views/w_tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_uploadify.html" afterPath="$PROJECT_DIR$/core/server/views/w_uploadify.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/w_validation.html" afterPath="$PROJECT_DIR$/core/server/views/w_validation.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/viewFiles/window_open.html" afterPath="$PROJECT_DIR$/core/server/views/window_open.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/accordion/accordion.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/accordion/accordion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/account_info_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/account_info_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/button_s.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/button_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bt.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/grid.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/grid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/resizeCol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/resizeCol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/tableth.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/tableth.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_control.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_control.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/toggleSidebar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/toggleSidebar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/listLine.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/listLine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/menu/menu.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/menu/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_down.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_up.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/pageHeader_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/pageHeader_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/preview.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/preview.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_l.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_l.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_m.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_m.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_s.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_s.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bg.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bt.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bt.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabscontrol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabscontrol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/check.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/check.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/folder.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/tree.png" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/accordion/accordion.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/accordion/accordion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/account_info_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/account_info_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/alert/alertpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/alert/alertpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/alert/alertpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/alert/alertpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/button_s.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/button_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/imgX.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/imgX.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toleft.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toleft.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toleftone.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toleftone.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toright.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/toright.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/button/torightone.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/button/torightone.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/dialog/dialogpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/dialog/dialogpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/dialog/dialogpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/dialog/dialogpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/form/input_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/form/input_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/form/input_bt.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/form/input_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/grid.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/grid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/resizeCol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/resizeCol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/tableth.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/grid/tableth.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar_control.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar_control.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/taskbar_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/toggleSidebar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/layout/toggleSidebar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/listLine.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/listLine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_banner.jpg" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_banner.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_content_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_content_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_list.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_list.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_logo.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_logo.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_sub.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_sub.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/login_title.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/login_title.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/logo.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/menu/menu.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/menu/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/order_down.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/order_down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/order_up.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/order_up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/pageHeader_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/pageHeader_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/panel/panel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/panel/panel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/panel/panel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/panel/panel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_l.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_l.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_m.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_m.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_s.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/progressBar/progressBar_s.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/search-bg.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/search-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/search-bt.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/search-bt.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_c_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_f_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/shadow/shadow_h_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabscontrol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabscontrol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspage.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspage_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspage_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tabs/tabspanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/themeButton.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/themeButton.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/check.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/check.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/folder.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/tree.png" afterPath="$PROJECT_DIR$/core/server/views/themes/default/images/tree/tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/accordion/accordion.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/accordion/accordion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/account_info_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/account_info_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/button/button_s.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/button/button_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/button/imgX.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/button/imgX.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bt.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/grid.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/grid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/resizeCol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/resizeCol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/tableth.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/tableth.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/layout/toggleSidebar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/layout/toggleSidebar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/listLine.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/listLine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/logo.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/pageHeader_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/pageHeader_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabscontrol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabscontrol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tree/tree.png" afterPath="$PROJECT_DIR$/core/server/views/themes/green/images/tree/tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/accordion/accordion.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/accordion/accordion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/account_info_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/account_info_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/button_s.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/button_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/imgX.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/imgX.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bt.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/grid.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/grid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/resizeCol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/resizeCol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/tableth.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/tableth.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_control.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_control.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/toggleSidebar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/toggleSidebar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_content_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_content_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_list.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_list.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/menu/menu.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/menu/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/pageHeader_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/pageHeader_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_l.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_l.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_m.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_m.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_s.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_s.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabscontrol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabscontrol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/check.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/check.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/folder.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/tree.png" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/accordion/accordion.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/accordion/accordion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/account_info_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/account_info_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/button_s.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/button_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/imgX.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/imgX.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bt.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/grid.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/grid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/resizeCol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/resizeCol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/tableth.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/tableth.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/header_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_control.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_control.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/toggleSidebar.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/toggleSidebar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/listLine.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/listLine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/menu/menu.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/menu/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/pageHeader_bg.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/pageHeader_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_l.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_l.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_m.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_m.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_s.gif" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_s.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_c.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_l.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_l.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_r.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabscontrol.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabscontrol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage_icon.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspanel.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspanel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/check.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/check.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/folder.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/folder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/tree.png" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/img/add.jpg" afterPath="$PROJECT_DIR$/core/server/views/uploadify/img/add.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/img/cancel.jpg" afterPath="$PROJECT_DIR$/core/server/views/uploadify/img/cancel.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/img/delete.jpg" afterPath="$PROJECT_DIR$/core/server/views/uploadify/img/delete.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/img/upload.jpg" afterPath="$PROJECT_DIR$/core/server/views/uploadify/img/upload.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/img/uploadify-cancel.png" afterPath="$PROJECT_DIR$/core/server/views/uploadify/img/uploadify-cancel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/scripts/uploadify.swf" afterPath="$PROJECT_DIR$/core/server/views/uploadify/scripts/uploadify.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/angry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/angry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/awkward.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/awkward.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/bye.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/bye.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/crazy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/crazy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/cry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/cry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/curse.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/curse.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/cute.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/cute.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/despise.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/despise.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/doubt.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/doubt.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/envy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/envy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/fastcry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/fastcry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/knock.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/knock.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/laugh.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/laugh.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/mad.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/mad.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/ohmy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/ohmy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/panic.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/panic.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/proud.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/proud.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/quiet.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/quiet.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/sad.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/sad.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/shutup.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/shutup.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/shy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/shy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/sleep.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/sleep.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/smile.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/struggle.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/struggle.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/titter.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/titter.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/tongue.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/tongue.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/wail.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/wail.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/wronged.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/wronged.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/alien.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/alien.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/angel.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/angel.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/angry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/angry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/bandit.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/bandit.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/biglaugh.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/biglaugh.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/blink.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/blink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/blush.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/blush.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/cool.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/cool.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/cry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/cry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/depres.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/depres.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/devil.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/devil.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/glare.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/glare.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/heart.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/heart.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/joyful.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/joyful.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/kiss.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/kiss.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/laugh.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/laugh.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/magician.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/magician.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/ninja.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/ninja.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/pinch.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/pinch.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/police.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/police.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sad.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sad.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sick.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sick.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sideways.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sideways.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sleep.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/sleep.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/smile.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/surprised.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/surprised.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/tongue.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/tongue.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/unsure.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/unsure.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/w00t.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/w00t.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/whistling.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/whistling.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/wondering.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/wondering.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/wub.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/wub.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/10.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/10.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/11.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/11.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/12.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/12.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/13.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/13.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/14.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/14.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/15.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/15.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/16.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/16.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/17.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/17.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/18.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/18.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/19.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/19.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/20.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/20.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/21.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/21.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/22.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/22.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/23.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/23.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/24.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/24.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/25.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/25.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/26.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/26.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/27.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/27.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/28.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/28.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/29.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/29.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/30.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/30.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/31.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/31.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/32.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/32.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/33.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/33.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/34.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/34.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/35.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/35.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/36.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/36.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/37.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/37.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/38.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/38.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/39.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/39.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/40.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/40.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/7.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/7.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/8.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/8.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/9.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/msn/9.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/angry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/angry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/bad.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/bad.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/blush.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/blush.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/brokenheart.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/brokenheart.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/bye.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/bye.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/coffee.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/coffee.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cool.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cool.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cry.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/curse.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/curse.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cute.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/cute.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/devil.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/devil.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/envy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/envy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/gift.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/gift.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/good.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/good.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/kiss.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/kiss.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/laugh.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/laugh.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/love.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/love.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/music.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/music.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/question.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/question.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/rose.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/rose.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sad.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sad.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/shocked.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/shocked.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/shout.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/shout.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sick.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sick.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sleepy.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sleepy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/smile.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/soccer.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/soccer.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sweat.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/sweat.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/tired.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/tired.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/tongue.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/tongue.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/victory.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/victory.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/wink.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/wink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/add.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/add.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/bg1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/bg1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/bg2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/bg2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/btnbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/btnbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/btnbgr.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/btnbgr.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/clear.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/clear.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/start.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/img/start.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.swf" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/blank.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/blank.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/anchor.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/close.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/close.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/flash.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/flash.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/icons.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/loading.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/progress.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/progress.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-address.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-div.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-div.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-h6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-p.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-p.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-pre.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/tag-pre.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/waiting.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/waiting.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/wmp.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/wmp.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/wordimg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/img/wordimg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/anchor.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/close.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/close.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/flash.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/flash.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/icons.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/loading.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/progress.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/progress.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-address.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-div.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-div.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-h6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-p.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-p.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-pre.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/tag-pre.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/waiting.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/waiting.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/wmp.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/wmp.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/wordimg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/img/wordimg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/anchor.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/buttonbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/buttonbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/close.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/close.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/flash.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/flash.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/icons.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/loading.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/progress.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/progress.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-address.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-div.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-div.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-h6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-p.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-p.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-pre.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/tag-pre.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/waiting.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/waiting.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/wmp.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/wmp.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/wordimg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/img/wordimg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/anchor.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/buttonbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/buttonbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/close.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/close.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/flash.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/flash.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/icons.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/loading.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/progress.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/progress.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-address.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-div.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-div.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-h6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-p.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-p.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-pre.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/tag-pre.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/waiting.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/waiting.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/wmp.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/wmp.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/wordimg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/img/wordimg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/anchor.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/buttonbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/buttonbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/close.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/close.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/flash.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/flash.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/icons.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/loading.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/progress.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/progress.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/progressbg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/progressbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-address.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-div.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-div.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h1.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h2.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h3.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h4.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h5.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h6.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-h6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-p.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-p.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-pre.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/tag-pre.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/titlebg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/titlebg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/waiting.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/waiting.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/wmp.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/wmp.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/wordimg.gif" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/img/wordimg.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/dwz.frag.xml" afterPath="$PROJECT_DIR$/core/server/views/static/dwz.frag.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/index.js" afterPath="$PROJECT_DIR$/core/server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/g.bar.js" afterPath="$PROJECT_DIR$/core/server/views/chart/g.bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/g.dot.js" afterPath="$PROJECT_DIR$/core/server/views/chart/g.dot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/g.line.js" afterPath="$PROJECT_DIR$/core/server/views/chart/g.line.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/g.pie.js" afterPath="$PROJECT_DIR$/core/server/views/chart/g.pie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/g.raphael.js" afterPath="$PROJECT_DIR$/core/server/views/chart/g.raphael.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/raphael-min.js" afterPath="$PROJECT_DIR$/core/server/views/chart/raphael-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/chart/raphael.js" afterPath="$PROJECT_DIR$/core/server/views/chart/raphael.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.accordion.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.accordion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.ajax.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.alertMsg.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.alertMsg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.barDrag.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.barDrag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.checkbox.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.checkbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.combox.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.combox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.contextmenu.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.contextmenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/middleware/index.js" afterPath="$PROJECT_DIR$/core/server/middleware/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/index.html" afterPath="$PROJECT_DIR$/core/server/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/index_menu.html" afterPath="$PROJECT_DIR$/core/server/views/index_menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.core.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.cssTable.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.cssTable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.database.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.datepicker.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.datepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.dialog.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.dialogDrag.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.dialogDrag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.drag.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.drag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.effects.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.history.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.min.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.navTab.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.navTab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.pagination.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.pagination.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.panel.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.panel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.print.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.print.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.regional.zh.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.regional.zh.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.resize.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.resize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.scrollCenter.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.scrollCenter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.sortDrag.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.sortDrag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.stable.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.stable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.switchEnv.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.switchEnv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.tab.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.taskBar.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.taskBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.theme.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.theme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.tree.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.tree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.ui.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.util.date.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.util.date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.util.number.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.util.number.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.validate.method.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.validate.method.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-1.11.3.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery-1.11.3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-1.11.3.min.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery-1.11.3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-2.1.4.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery-2.1.4.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-2.1.4.min.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery-2.1.4.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.bgiframe.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery.bgiframe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery.cookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery.easing.1.3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.validate.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery.validate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/core/server/views/js/jquery.validate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/speedup.js" afterPath="$PROJECT_DIR$/core/server/views/js/speedup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/style.css" afterPath="$PROJECT_DIR$/core/server/views/themes/azure/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/css/core.css" afterPath="$PROJECT_DIR$/core/server/views/themes/css/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/css/ieHack.css" afterPath="$PROJECT_DIR$/core/server/views/themes/css/ieHack.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/css/login.css" afterPath="$PROJECT_DIR$/core/server/views/themes/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/css/print.css" afterPath="$PROJECT_DIR$/core/server/views/themes/css/print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/default/style.css" afterPath="$PROJECT_DIR$/core/server/views/themes/default/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/green/style.css" afterPath="$PROJECT_DIR$/core/server/views/themes/green/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/style.css" afterPath="$PROJECT_DIR$/core/server/views/themes/purple/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/style.css" afterPath="$PROJECT_DIR$/core/server/views/themes/silver/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/css/uploadify.css" afterPath="$PROJECT_DIR$/core/server/views/uploadify/css/uploadify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/scripts/jquery.uploadify.js" afterPath="$PROJECT_DIR$/core/server/views/uploadify/scripts/jquery.uploadify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/uploadify/scripts/jquery.uploadify.min.js" afterPath="$PROJECT_DIR$/core/server/views/uploadify/scripts/jquery.uploadify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor-1.2.2.min.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor-1.2.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/config.txt" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/default/config.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/config.txt" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/ipb/config.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/config.txt" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_emot/pidgin/config.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/en.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/zh-cn.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/zh-cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/zh-tw.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_lang/zh-tw.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/html2markdown.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/html2markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/htmldomparser.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/htmldomparser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.html" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/multiupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/multiupload/swfupload/swfupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/showdown.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/showdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/ubb.js" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_plugins/ubb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/iframe.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/iframe.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/ui.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/default/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/iframe.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/iframe.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/ui.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/nostyle/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/iframe.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/iframe.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/ui.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007blue/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/iframe.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/iframe.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/ui.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/o2007silver/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/iframe.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/iframe.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/ui.css" afterPath="$PROJECT_DIR$/core/server/views/xheditor/xheditor_skin/vista/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -629,7 +30,40 @@
     <favorites_list name="blogme" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="authorized.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.2058823">
+              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="barchart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/barchart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6764708">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="raphael.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/chart/raphael.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -650,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/models/role-menu-right.js" />
         <option value="$PROJECT_DIR$/core/server/models/role-t.js" />
         <option value="$PROJECT_DIR$/core/server/models/roles.js" />
         <option value="$PROJECT_DIR$/core/server/models/roles-users.js" />
@@ -691,16 +124,17 @@
         <option value="$PROJECT_DIR$/core/server/views/hbs/authorized.hbs" />
         <option value="$PROJECT_DIR$/core/server/views/js/dwz.min.js" />
         <option value="$PROJECT_DIR$/core/server/views/viewFiles/authorized.hbs" />
-        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/core/server/views/viewFiles/index_menu.html" />
         <option value="$PROJECT_DIR$/core/server/views/viewFiles/index.html" />
-        <option value="$PROJECT_DIR$/core/server/views/js/dwz.core.js" />
         <option value="$PROJECT_DIR$/core/server/views/viewFiles/authorized.html" />
-        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
         <option value="$PROJECT_DIR$/core/server/index.js" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
         <option value="$PROJECT_DIR$/core/server/views/index.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
+        <option value="$PROJECT_DIR$/core/server/views/js/dwz.core.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
+        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
+        <option value="$PROJECT_DIR$/core/server/views/chart/test/barchart.html" />
       </list>
     </option>
   </component>
@@ -832,7 +266,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -898,29 +358,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="errors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -944,15 +382,15 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/server/views/static" />
       <recent name="$PROJECT_DIR$/core/server/views" />
       <recent name="$PROJECT_DIR$/core/server/views/js" />
       <recent name="$PROJECT_DIR$/core/server/views/viewFiles" />
       <recent name="$PROJECT_DIR$/core/server/views/hbs" />
-      <recent name="$PROJECT_DIR$/core/server/views/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -1031,12 +469,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00013" summary="deleting support i18n">
-      <created>1459559694823</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1459559694823</updated>
     </task>
     <task id="LOCAL-00014" summary="deleting some files">
       <created>1459578517867</created>
@@ -1326,7 +758,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461463730597</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="change views">
+      <created>1461463835178</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1461463835178</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1347,18 +785,18 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23663366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23663366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1432,13 +870,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/bookshelf/bookshelf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bookshelf/lib/bookshelf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6040268">
@@ -1471,6 +902,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6487215">
           <caret line="173" column="7" selection-start-line="173" selection-start-column="7" selection-end-line="173" selection-end-column="7" />
+          <folding>
+            <element signature="e#994#1028#0" expanded="false" />
+            <element signature="e#1065#1073#0" expanded="false" />
+            <element signature="e#1113#1478#0" expanded="false" />
+            <element signature="e#1518#1836#0" expanded="false" />
+            <element signature="e#1884#1981#0" expanded="false" />
+            <element signature="e#2023#3545#0" expanded="false" />
+            <element signature="e#3585#5875#0" expanded="false" />
+            <element signature="e#5968#9102#0" expanded="false" />
+            <element signature="e#9166#10608#0" expanded="false" />
+            <element signature="e#10687#11447#0" expanded="false" />
+            <element signature="e#11507#13352#0" expanded="false" />
+            <element signature="e#13406#14753#0" expanded="false" />
+            <element signature="e#14808#15223#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1478,6 +924,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1628532">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,6 +961,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,6 +969,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5740479">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,6 +977,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,6 +985,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1542,6 +993,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1565,6 +1017,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,6 +1033,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1603,6 +1057,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1610,6 +1065,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1625,6 +1081,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1648,6 +1105,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1655,23 +1113,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66352624">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/js/dwz.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09690444">
-          <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
-          <folding>
-            <marker date="1461463062000" expanded="true" signature="7096:7125" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1682,10 +1124,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/changepwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/donation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5962315">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/static/dwz.frag.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2440057">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4468372">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/errors/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.590848">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92193806">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/js/dwz.core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.8184357">
+          <caret line="138" column="19" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="19" />
+          <folding>
+            <marker date="1461466826000" expanded="true" signature="7107:7136" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/js/dwz.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9017496">
-          <caret line="1555" column="17" selection-start-line="1555" selection-start-column="17" selection-end-line="1555" selection-end-column="17" />
+        <state vertical-scroll-proportion="-143.02933">
+          <caret line="1564" column="20" selection-start-line="1564" selection-start-column="15" selection-end-line="1564" selection-end-column="20" />
           <folding>
             <marker date="1461462823000" expanded="true" signature="7101:7130" placeholder="..." />
             <marker date="1461462823000" expanded="true" signature="37016:37029" placeholder="..." />
@@ -1703,107 +1259,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/changepwd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/donation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/dwz.frag.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5172764">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        <state vertical-scroll-proportion="1.8462623">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5934959">
-          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.39434725">
+          <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.394737">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state vertical-scroll-proportion="-2.2058823">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/index.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/chart/test/barchart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18421052">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state vertical-scroll-proportion="-4.6764708">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/chart/raphael.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
