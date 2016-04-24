@@ -20,7 +20,7 @@ var _              = require('lodash'),
 
 user = appBookshelf.Model.extend({
 
-	tableName: ' users ',
+	tableName: ' user_t1 ',
 
 	saving: function saving() {
 

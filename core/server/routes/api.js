@@ -6,9 +6,9 @@ var express     = require('express'),
 	controller  = require('../controllers'),
 	models      = require('../models'),
 
-    apiRoutes;
+    routes;
 
-apiRoutes = function apiRoutes() {
+routes = function apiRoutes() {
 
     var router = express.Router();
 		
@@ -179,4 +179,4 @@ apiRoutes = function apiRoutes() {
 
 
 //非base model 可以携带自已的函数
-module.exports = apiRoutes;
+module.exports = routes;
