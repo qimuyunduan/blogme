@@ -35,11 +35,11 @@ function init(options) {
 
 
 		// set view path
-		app.set('views',path.join(__dirname,'/views/viewFiles'));
+		app.set('views',path.join(__dirname,'/views'));
 		// set the view engine
 		app.set('view engine', 'html');
 		app.engine('html', Hbs.express4({
-			partialsDir: path.join(__dirname,'/views/viewFiles/partials')
+			partialsDir: path.join(__dirname,'/views/partials')
 		}));
         //// Load helpers
         //helpers.loadCoreHelpers(Hbs);
