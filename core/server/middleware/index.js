@@ -57,7 +57,7 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/img',express.static(path.join(corePath,'/server/views/img')));
 	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify')));
 	App.use('/xheditor',express.static(path.join(corePath,'/server/views/xheditor')));
-	App.use('/common', express.static(path.join(corePath, '/server/views/viewFiles/static')));
+	App.use('/common', express.static(path.join(corePath, '/server/views/static')));
 	App.use('/shared', express.static(path.join(corePath, '/shared')));
 	//
     // //First determine whether we're serving admin
