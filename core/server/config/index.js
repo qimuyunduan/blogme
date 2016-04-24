@@ -44,10 +44,9 @@ ConfigManager.prototype.set = function (config) {
 			contentPath:      contentPath,
 			imagesPath:       path.resolve(contentPath, 'images'),
 			imagesRelPath:    'content/images',
-			hbsViews:       path.join(corePath, '/server/views/hbs/'),
+			hbsViews:       path.join(corePath, '/server/views/'),
 			helpers:  path.join(corePath, '/server/helpers/'),
 			models:  path.resolve(corePath,'/server/models/')
-
 		},
 		uploads: {
 			// Used by the upload API to limit uploads to images
