@@ -34,12 +34,19 @@ routes = function apiRoutes() {
 		};
 		res.render("index",data);
 	});//  写路由时要注意把.html包含在内
-	router.get("/index.html",function(req,res){
+	router.post("/index.html",function(req,res){
 		var data = {
 			title:"风险管理平台"
 		};
+		console.log(req.body);
 		res.render("index",data);
 	});
+	router.get("/zencoding",function(req,res){
+
+		res.render("zencoding");
+	});
+
+
 
 	router.get("/demo_page1",function(req,res){
 		res.render("demo_page1");

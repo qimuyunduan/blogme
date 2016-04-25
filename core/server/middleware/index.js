@@ -49,7 +49,7 @@ setupMiddleware  = function setupMiddleware(App) {
 
 
     // Static assets
-    // App.use('/shared', express.static(path.join(corePath, '/shared'), {maxAge: utils.ONE_YEAR_S}));
+	App.use('/', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_S}));
 	App.use('/js',express.static(path.join(corePath,'/server/views/js')));
 	App.use('/themes',express.static(path.join(corePath,'/server/views/themes')));
 	App.use('/img',express.static(path.join(corePath,'/server/views/img')));
@@ -57,6 +57,7 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/xheditor',express.static(path.join(corePath,'/server/views/xheditor')));
 	App.use('/chart',express.static(path.join(corePath,'/server/views/chart')));
 	App.use('/common', express.static(path.join(corePath, '/server/views/static')));
+	App.use('/demo', express.static(path.join(corePath, '/server/views/demo')));
 	App.use('/shared', express.static(path.join(corePath, '/shared')));
 	//
     // //First determine whether we're serving admin

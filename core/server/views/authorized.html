@@ -138,13 +138,13 @@
     </div>
 
     <div id="leftside">
-        <div id="sidebar_s">
-            <div class="collapse">
-                <div class="toggleCollapse">
-                    <div></div>
-                </div>
-            </div>
-        </div>
+        <!--<div id="sidebar_s">-->
+            <!--<div class="collapse">-->
+                <!--<div class="toggleCollapse">-->
+                    <!--<div></div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div id="sidebar">
             <div class="toggleCollapse">
                 <h2>主菜单</h2>
@@ -152,6 +152,7 @@
             </div>
 
             <div class="accordion" fillSpace="sidebar">
+
                 <div class="accordionHeader">
                     <h2><span>Folder</span>界面组件</h2>
                 </div>
@@ -171,8 +172,10 @@
                                 </li>
                                 <li><a href="w_editor.html" target="navTab">表单提交会话超时</a></li>
                                 <li><a href="demo/common/ajaxTimeout.html" target="navTab">navTab会话超时</a></li>
-                                <li><a href="demo/common/ajaxTimeout.html" target="dialog">dialog会话超时</a></li>
-                                <li><a href="index_menu.html" target="_blank">横向导航条</a></li>
+                                <li><a href="index.html" target="dialog" title="feegege">dialog会话超时</a></li>
+                                <li><a href="index_menu.html" target="ajax">横向导航条</a></li>
+                                <li><a href="#" onclick="$.pdialog.closeCurrent()" > 关闭当前窗口 </a></li>
+                                <li></li>
                             </ul>
                         </li>
 
@@ -230,6 +233,7 @@
                                 <li><a href="chart/test/piechart.html" target="navTab" rel="chart">饼图</a></li>
                             </ul>
                         </li>
+
                         <li><a href="static/dwz.frag.xml" target="navTab" external="true">dwz.frag.xml</a></li>
                     </ul>
                 </div>
@@ -271,22 +275,30 @@
                         <li><a href="newPage1.html" target="dialog" rel="dlg_page2">列表</a></li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </div>
     <div id="container">
         <div id="navTab" class="tabsPage">
+
             <div class="tabsPageHeader">
                 <div class="tabsPageHeaderContent"><!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
                     <ul class="navTab-tab">
-                        <li tabid="main" class="main"><a href="javascript:;"><span><span
-                                class="home_icon">我的主页</span></span></a></li>
+                        <li tabid="main" class="main">
+                            <a href="javascript:;">
+                            <span>
+                                <span class="home_icon">我的主页</span>
+                            </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
                 <div class="tabsRight">right</div><!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
                 <div class="tabsMore">more</div>
             </div>
+
             <ul class="tabsMoreList">
                 <li><a href="javascript:;">我的主页</a></li>
             </ul>
@@ -307,41 +319,40 @@
                         <!--<p>DWZ官方微博:<a href="http://weibo.com/dwzui" target="_blank">http://weibo.com/dwzui</a></p>-->
                     <!--</div>-->
                     <!--<div class="pageFormContent" layoutH="80" style="margin-right:230px">-->
-
-
                         <h2>DWZ系列开源项目:</h2>
-                        <div class="unit"><a href="https://git.oschina.net/dwzteam/dwz_jui" target="_blank">dwz富客户端框架 -
-                            jUI</a></div>
-                        <div class="unit"><a href="https://git.oschina.net/dwzteam/dwz_group" target="_blank">DWZ框架 +
-                            ThinkPHP 实现小组工作日志系统</a></div>
-                        <div class="unit"><a href="https://code.csdn.net/dwzteam/dwz_ssh2" target="_blank">dwz4j企业级Java
-                            Web快速开发框架(Hibernate+Spring+Struts2) + jUI整合应用</a></div>
-                        <div class="unit"><a href="https://code.csdn.net/dwzteam/dwz_springmvc" target="_blank">dwz4j企业级Java
-                            Web快速开发框架(Mybatis + SpringMVC) + jUI整合应用</a></div>
-                        <div class="unit"><a href="https://code.csdn.net/dwzteam/dwz_thinkphp" target="_blank">ThinkPHP
-                            + jUI整合应用</a></div>
-                        <div class="unit"><a href="https://code.csdn.net/dwzteam/dwz_zendframework" target="_blank">Zend
-                            Framework + jUI整合应用</a></div>
-                        <div class="unit"><a href="http://www.yiiframework.com/extension/dwzinterface/" target="_blank">YII
-                            + jUI整合应用</a></div>
-
+                        <div class="unit">
+                            <a href="https://git.oschina.net/dwzteam/dwz_jui" target="_blank">dwz富客户端框架 -jUI</a>
+                        </div>
+                        <div class="unit">
+                            <a href="https://git.oschina.net/dwzteam/dwz_group" target="_blank">DWZ框架 +ThinkPHP 实现小组工作日志系统</a>
+                        </div>
+                        <div class="unit">
+                            <a href="https://code.csdn.net/dwzteam/dwz_ssh2" target="_blank">dwz4j企业级JavaWeb快速开发框架(Hibernate+Spring+Struts2) + jUI整合应用</a>
+                        </div>
+                        <div class="unit">
+                            <a href="https://code.csdn.net/dwzteam/dwz_springmvc" target="_blank">dwz4j企业级JavaWeb快速开发框架(Mybatis + SpringMVC) + jUI整合应用</a>
+                        </div>
+                        <div class="unit">
+                            <a href="https://code.csdn.net/dwzteam/dwz_thinkphp" target="_blank">ThinkPHP+ jUI整合应用</a>
+                        </div>
+                        <div class="unit">
+                            <a href="https://code.csdn.net/dwzteam/dwz_zendframework" target="_blank">ZendFramework + jUI整合应用</a>
+                        </div>
+                        <div class="unit">
+                            <a href="http://www.yiiframework.com/extension/dwzinterface/" target="_blank">YII+ jUI整合应用</a>
+                        </div>
                         <a class="buttonActive" href="https://git.oschina.net/dwzteam/" target="_blank"><span>DWZ开源系列源码（oschina）</span></a>
-                        <a class="button" href="https://github.com/dwzteam/"
-                           target="_blank"><span>DWZ开源系列源码（github）</span></a>
+                        <a class="button" href="https://github.com/dwzteam/" target="_blank"><span>DWZ开源系列源码（github）</span></a>
                         <a class="button" href="donation.html" target="dialog" height="400"><span style="color: red">捐赠 & DWZ学习视频</span></a>
-
                         <div class="divider"></div>
-
-                        <a class="button" href="http://code.csdn.net/groups/2155"
-                           target="_blank"><span>DWZ讨论组</span></a>
+                        <a class="button" href="http://code.csdn.net/groups/2155" target="_blank"><span>DWZ讨论组</span></a>
                     </div>
 
                 </div>
 
             </div>
         </div>
-
-</div>
+    </div>
 
 {{>footer}}
 </body>
