@@ -109,7 +109,7 @@ a:hover {text-decoration:underline;}
 .alert .alertContent { display:block; overflow:hidden; padding:5px 5px 1px 5px; border-style:solid; border-width:0 1px;}
 .alert .alertInner { display:block; padding:0 9px 9px 9px; text-align:left; border-style:solid; border-width:1px;}
 .alert .alertInner .msg { margin:10px; max-height: 200px; overflow: auto; line-height: 1.3em}
-.alert h1 { display:block; overflow:hidden; height:30px; margin-bottom:10px; padding:0 0 0 25px; line-height:30px; border-style:solid; border-width:0 0 1px 0; line-height:30px;}
+.alert h1 { display:block; overflow:hidden; height:30px; margin-bottom:10px; padding:0 0 0 25px; line-height:30px; border-style:solid; border-width:0 0 1px 0;}
 .alert .error h1 { background-position:2px -42px;}
 .alert .info h1,
 .alert .warn h1 { background-position:2px 8px;}
@@ -252,7 +252,7 @@ a:hover {text-decoration:underline;}
 .panelBar .toolBar li.line { display:block; overflow:hidden; width:12px; padding:0; text-indent:-1000px; background-position:5px -200px;}
 
 .panelBar .pages { float:left; overflow:hidden; height:21px; padding:2px 5px;}
-.panelBar .pages span { float:left; line-height:21px;}
+.panelBar .pages label span { float:left; line-height:21px;}
 .panelBar .pages select { float:left; margin:0 3px; font-size:12px;}
 
 .pagination { float:right; padding-left:7px; background-position:0 -199px;}
@@ -316,7 +316,7 @@ table.list {border-collapse:collapse; border:solid 1px #ededed;}
 table.list thead tr {background:url("../themes/default/images/grid/tableth.png") repeat-x scroll 0 0 #F0EFF0;}
 table.list th {padding:1px 2px; line-height:21px; border-right: solid 1px #D0D0D0; border-bottom:solid 1px #D0D0D0; font-weight:bolder; }
 table.list td {padding:1px 2px; line-height:21px; border-right:solid 1px #ededed;}
-table.list th.asc, .grid .gridHeader th.asc{background-position: 100% 0; background:url(../themes/default/images/order_up.gif) no-repeat right; cursor:pointer;}
+table.list th.asc, .grid .gridHeader th.asc{background-position: 100% 0; background-image:url(../themes/default/images/order_up.gif); background-repeat:no-repeat ; cursor:pointer;}
 table.list th.desc, .grid .gridHeader th.desc{background-position: 100% 0; background:url(../themes/default/images/order_down.gif) no-repeat right; cursor:pointer;}
 table.list tbody {background-color:#fff;}
 table.list .right {text-align:right;}
@@ -360,7 +360,8 @@ table.nowrap tbody tr {border-bottom:solid 1px #ededed;}
 #taskbar .taskbarRightDisabled { background-position:0 -250px; cursor:default;}
 
 /* ProgressBar */
-.progressBar { display:block; width:148px; height:28px; position:fixed; top:50%; left:50%; margin-left:-74px; margin-top:-14px; padding:10px 10px 10px 50px; text-align:left; line-height:27px; font-weight:bold; position:absolute; z-index:2001;}
+/*position:absolute;*/
+.progressBar { display:block; width:148px; height:28px; position:fixed; top:50%; left:50%; margin-left:-74px; margin-top:-14px; padding:10px 10px 10px 50px; text-align:left; line-height:27px; font-weight:bold;  z-index:2001;}
 .background { display:block; width:100%; height:100%; opacity:0.4; filter:alpha(opacity=40); background:#FFF; position:absolute; top:0; left:0; z-index:2000;}
 .alertBackground { display:none; width:100%; height:100%; opacity:0.4; filter:alpha(opacity=40); background:#FFF; position:absolute; top:0; left:0; z-index:1010;}
 .dialogBackground { display:none; width:100%; height:100%; opacity:0.4; filter:alpha(opacity=40); background:#FFF; position:absolute; top:0; left:0; z-index:900;}
@@ -437,20 +438,6 @@ body { overflow:hidden;}
 #header .nav ul li { margin-top:10px; height:21px;}
 #header .nav ul li a { color:#000;}
 #header .nav .selected ul {display:block;}
-
-/*#header .themeList { position:absolute; top:30px; right:10px;}*/
-/*#header .themeList li { float:left; padding:0 3px;}*/
-/*#header .themeList li div { display:block; overflow:hidden; width:13px; height:11px; text-indent:-100px; cursor:pointer;}*/
-/*#header .themeList li.default div { background-position:0 0;}*/
-/*#header .themeList li.default .selected { background-position:0 -20px;}*/
-/*#header .themeList li.green div { background-position:-20px 0;}*/
-/*#header .themeList li.green .selected { background-position:-20px -20px;}*/
-/*#header .themeList li.purple div { background-position:-60px 0;}*/
-/*#header .themeList li.purple .selected { background-position:-60px -20px;}*/
-/*#header .themeList li.silver div { background-position:-80px 0;}*/
-/*#header .themeList li.silver .selected { background-position:-80px -20px;}*/
-/*#header .themeList li.azure div { background-position:-100px 0;}*/
-/*#header .themeList li.azure .selected { background-position:-100px -20px;}*/
 
 .toggleCollapse { display:block; overflow:hidden; height:26px; border-style:solid; border-width:1px 1px 0 1px; background-repeat:repeat-x;}
 .toggleCollapse h2 { float:left; padding-left:8px; line-height:26px;}
@@ -550,7 +537,7 @@ h3.contentTitle{margin-bottom:5px; line-height:25px; font-size:13px; border-bott
 #contextmenuShadow{display:none; position:absolute; opacity:0.2; filter:alpha(opacity=20); background-color:#000; z-index:499; }
 
 /* calendar */
-#calendar{margin:0; width:208px; z-index:1001; position:absolute; display:block; border:1px solid #B3E4EB; display:none;}
+#calendar {margin:0; width:208px; z-index:1001; position:absolute; display:block; border:1px solid #B3E4EB; display:none;}
 #calendar *{margin:0; padding:0; font-size:12px; line-height:18px}
 #calendar .main{margin:auto; padding:2px; text-align:center; background:#ffffff; zoom:1; position:relative;}
 #calendar .head{background:#EDF8FF; border:1px solid #BEE9F0}
@@ -586,7 +573,8 @@ h3.contentTitle{margin-bottom:5px; line-height:25px; font-size:13px; border-bott
 #suggest li.selected{border:1px solid #0a246a; background-color:#b6bdd2}
 
 /* button */
-a.btnAdd, a.btnDel, a.btnView, a.btnEdit, a.btnSelect, a.btnInfo, a.btnAssign, a.btnLook, a.btnAttach{background:url(../themes/default/images/button/imgX.gif) no-repeat; display:block; width:22px; height:20px; text-indent:-1000px; overflow:hidden; float:left; margin-right: 3px}
+a.btnAdd, a.btnDel, a.btnView, a.btnEdit, a.btnSelect, a.btnInfo, a.btnAssign, a.btnLook, a.btnAttach
+{background:url(../themes/default/images/button/imgX.gif) no-repeat; display:block; width:22px; height:20px; text-indent:-1000px; overflow:hidden; float:left; margin-right: 3px}
 a.btnAdd{background-position:0 0}
 a.btnDel{background-position: -23px 0}
 a.btnInfo{background-position: -46px 0}

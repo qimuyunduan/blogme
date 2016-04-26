@@ -41,9 +41,9 @@ routes = function apiRoutes() {
 		console.log(req.body);
 		res.render("index",data);
 	});
-	router.get("/zencoding",function(req,res){
+	router.get("/authorized_copy",function(req,res){
 
-		res.render("zencoding");
+		res.render("authorized_copy");
 	});
 
 

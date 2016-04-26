@@ -1,4 +1,4 @@
-     @charset "utf-8";
+@charset "utf-8";
 
 /* Icon */
 .tabsHeader li.main a span span, #taskbar li .taskbutton span { background:url(../themes/default/images/icon.png) no-repeat;}

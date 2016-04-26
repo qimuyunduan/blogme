@@ -30,6 +30,7 @@
 				</td>
 			</tr>
 		</table>
+
 		<div class="subBar">
 			<ul>
 				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></li>
@@ -39,6 +40,7 @@
 	</div>
 	</form>
 </div>
+
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
@@ -968,8 +970,8 @@
 
 	<div class="panelBar">
 		<div class="pages">
-			<span>显示</span>
-			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+            <label for="showNumberPerPage"><span>显示</span></label>
+			<select id ="showNumberPerPage" class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
 				<option value="20">20</option>
 				<option value="50">50</option>
 				<option value="100">100</option>
