@@ -14,7 +14,7 @@
 .panel .grid { border-color:#b8d0d6;}
 
 /* Tabs */
-.tabs, .tabsHeader, .tabsHeaderContent,
+.tabs,.tabsHeader, .tabsHeaderContent,
 .tabs .tabsHeader ul, .tabs .tabsHeader li, .tabs .tabsHeader li a, .tabs .tabsHeader li span,
 .tabs .tabsFooter, .tabs .tabsFooterContent { background:url(./images/tabs/tabspanel.png) no-repeat;}
 

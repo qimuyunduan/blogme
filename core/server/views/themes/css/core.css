@@ -418,7 +418,7 @@ label.alt {display:block; overflow:hidden; position:absolute;line-height:20px}
 #layout { text-align:left;}
 body { overflow:hidden;}
 #layout { display:block; height:100%; position:relative;}
-#header { display:block; overflow:hidden; height:50px; z-index:30}
+#header { display:block; overflow:hidden; height:30px; z-index:30}
 #leftside { position:absolute; top:55px; left:0; z-index:20;}
 #sidebar { width:200px; position:absolute; top:0; left:5px; z-index:20; overflow:hidden;}
 #sidebar_s { display:none; width:24px; position:absolute; top:0; left:0; z-index:21;}
@@ -427,7 +427,7 @@ body { overflow:hidden;}
 #splitBarProxy { display:none; overflow:hidden; width:3px; border-style:solid; border-width:1px; cursor:col-resize; position:absolute; top:55px; left:205px; z-index:20;}
 #footer {position:absolute; bottom:0; left:0; text-align:center; width:100%; height:21px; padding:0 5px;z-index:-1}
 
-#header .headerNav { height:50px; background-repeat:no-repeat; background-position:100% -50px;}
+#header .headerNav { height:30px; background-repeat:no-repeat; background-position:100% -50px;}
 #header .logo { float:left; width:250px; height:50px; text-indent:-1000px;}
 
 #header .nav { display:block; height:21px; position:absolute; top:8px; right:0; z-index:31;}
@@ -438,21 +438,19 @@ body { overflow:hidden;}
 #header .nav ul li a { color:#000;}
 #header .nav .selected ul {display:block;}
 
-#header .themeList { position:absolute; top:30px; right:10px;}
-#header .themeList li { float:left; padding:0 3px;}
-#header .themeList li div { display:block; overflow:hidden; width:13px; height:11px; text-indent:-100px; cursor:pointer;}
-#header .themeList li.default div { background-position:0 0;}
-#header .themeList li.default .selected { background-position:0 -20px;}
-#header .themeList li.green div { background-position:-20px 0;}
-#header .themeList li.green .selected { background-position:-20px -20px;}
-#header .themeList li.red div { background-position:-40px 0;}
-#header .themeList li.red .selected { background-position:-40px -20px;}
-#header .themeList li.purple div { background-position:-60px 0;}
-#header .themeList li.purple .selected { background-position:-60px -20px;}
-#header .themeList li.silver div { background-position:-80px 0;}
-#header .themeList li.silver .selected { background-position:-80px -20px;}
-#header .themeList li.azure div { background-position:-100px 0;}
-#header .themeList li.azure .selected { background-position:-100px -20px;}
+/*#header .themeList { position:absolute; top:30px; right:10px;}*/
+/*#header .themeList li { float:left; padding:0 3px;}*/
+/*#header .themeList li div { display:block; overflow:hidden; width:13px; height:11px; text-indent:-100px; cursor:pointer;}*/
+/*#header .themeList li.default div { background-position:0 0;}*/
+/*#header .themeList li.default .selected { background-position:0 -20px;}*/
+/*#header .themeList li.green div { background-position:-20px 0;}*/
+/*#header .themeList li.green .selected { background-position:-20px -20px;}*/
+/*#header .themeList li.purple div { background-position:-60px 0;}*/
+/*#header .themeList li.purple .selected { background-position:-60px -20px;}*/
+/*#header .themeList li.silver div { background-position:-80px 0;}*/
+/*#header .themeList li.silver .selected { background-position:-80px -20px;}*/
+/*#header .themeList li.azure div { background-position:-100px 0;}*/
+/*#header .themeList li.azure .selected { background-position:-100px -20px;}*/
 
 .toggleCollapse { display:block; overflow:hidden; height:26px; border-style:solid; border-width:1px 1px 0 1px; background-repeat:repeat-x;}
 .toggleCollapse h2 { float:left; padding-left:8px; line-height:26px;}
