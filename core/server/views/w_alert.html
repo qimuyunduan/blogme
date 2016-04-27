@@ -31,16 +31,17 @@ function testConfirmMsg(url, data){
 			</div>
 			
 			<div>
-				<textarea name="textarea" cols="100" rows="15">
-<script type="text/javascript">
-function testConfirmMsg(url, data){
-	alertMsg.confirm("您修改的资料未保存，请选择保存或取消！", {
-		okCall: function(){
+
+                <textarea name="textarea" cols="100" rows="15">
+            <script type="text/javascript">
+            function testConfirmMsg(url, data){
+                alertMsg.confirm("您修改的资料未保存，请选择保存或取消！", {
+		        okCall: function(){
 			$.post(url, data, DWZ.ajaxDone, "json");
-		}
-	});
-}
-</script>
+		    }
+	        });
+            }
+            </script>
 
 <a class="button" href="javascript:;" onclick="testConfirmMsg('demo/common/ajaxDone.html')"><span>确认（是/否）</span></a><br /><br />
 <a class="button" href="javascript:;" onclick="alertMsg.error('您提交的数据有误，请检查后重新提交！')"><span>错误提示</span></a><br /><br />
@@ -50,6 +51,7 @@ function testConfirmMsg(url, data){
 				</textarea>
 			</div>
 		</div>
+
 		<div class="tabsFooter">
 			<div class="tabsFooterContent"></div>
 		</div>
