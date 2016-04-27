@@ -152,7 +152,6 @@ body, #splitBar { background:#e5edef;}
 #header .logo { background:url(../themes/default/images/logo.png) no-repeat;}
 #header .nav li { float:left; margin-left:-1px; padding:0 8px; line-height:11px; background:url(../themes/default/images/listLine.png) no-repeat;}
 #header .nav li a { color:#b9ccda;}
-#header .themeList li div { background:url(../themes/default/images/themeButton.png) no-repeat;}
 .toggleCollapse, .toggleCollapse div { background:url(../themes/default/images/layout/toggleSidebar.png) no-repeat;}
 .toggleCollapse { border-style:solid; border-width:1px 1px 0 1px; border-color:#b8d0d6; background-color:#e7eff0;}
 .toggleCollapse h2 { color:#183152;}
@@ -173,13 +172,6 @@ body, #splitBar { background:#e5edef;}
 
 /* Homepage */
 .sidebarContent { display:block; overflow:auto; height:500px; border:solid 1px #86B4EC; background:#FFF;}
-.accountInfo { display:block; overflow:hidden; height:60px; padding:0 10px; background:url(../themes/default/images/account_info_bg.png) repeat-x}
-.accountInfo p { padding:8px 0 0 0; line-height:19px;}
-.accountInfo p span { font-size:14px; font-weight:bold;}
-.accountInfo .right { float:right; padding-right:10px; text-align:right;}
-.accountInfo .alertInfo { float:right; width:300px; height:60px; padding-left:10px; border-left:solid 1px #accdf4;}
-.accountInfo .alertInfo h2 { padding:8px 0; line-height:17px;}
-.accountInfo .alertInfo a { padding:6px 0 0 0; line-height:21px;}
 
 
 /* Pages */

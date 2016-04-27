@@ -253,7 +253,7 @@ a:hover {text-decoration:underline;}
 .panelBar .toolBar li.line { display:block; overflow:hidden; width:12px; padding:0; text-indent:-1000px; background-position:5px -200px;}
 
 .panelBar .pages { float:left; overflow:hidden; height:21px; padding:2px 5px;}
-.panelBar .pages label span { float:left; line-height:21px;}
+.panelBar .pages span { float:left; line-height:21px;}
 .panelBar .pages select { float:left; margin:0 3px; font-size:12px;}
 
 .pagination { float:right; padding-left:7px; background-position:0 -199px;}
@@ -421,10 +421,10 @@ label.alt {display:block; overflow:hidden; position:absolute;line-height:20px}
 body { overflow:hidden;}
 #layout { display:block; height:100%; position:relative;}
 #header { display:block; overflow:hidden; height:30px; z-index:30}
-#leftside { position:absolute; top:55px; left:0; z-index:20;}
+#leftside { position:absolute; top:45px; left:0; z-index:20;}
 #sidebar { width:200px; position:absolute; top:0; left:5px; z-index:20; overflow:hidden;}
 #sidebar_s { display:none; width:24px; position:absolute; top:0; left:0; z-index:21;}
-#container { position:absolute; top:55px; left:210px;}
+#container { position:absolute; top:45px; left:210px;}
 #splitBar { display:block; overflow:hidden; width:5px; cursor:col-resize; position:absolute; top:55px; left:205px; z-index:20;}
 #splitBarProxy { display:none; overflow:hidden; width:3px; border-style:solid; border-width:1px; cursor:col-resize; position:absolute; top:55px; left:205px; z-index:20;}
 #footer {position:absolute; bottom:0; left:0; text-align:center; width:100%; height:21px; padding:0 5px;z-index:-1}
@@ -467,7 +467,9 @@ body { overflow:hidden;}
 .searchBar {}
 .searchBar ul.searchContent { display:block; overflow:hidden; height:25px;}
 .searchBar ul.searchContent li { float:left; display:block; overflow:hidden; width:300px; height:21px; padding:2px 0;}
+.searchBar select { padding-left:-5px}
 .searchBar label { float:left; width:80px; padding:0 5px; line-height:23px;}
+
 .searchBar .searchContent td{padding-right:20px; white-space:nowrap; height:25px}
 .searchBar .subBar { height:25px;}
 .searchBar .subBar ul { float:right;}
@@ -599,6 +601,8 @@ a.btnAttach{background-position: -183px 0}
 .viewInfo dl.nowrap dd {width: auto;}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
-
+.pageContent .tree { margin: 5px;float:left; display:block; overflow:auto; width:240px; line-height:21px; background:#64aabc}
+.pageContent .unitBox{margin-left: 260px;background-color: #0b97c4;
+    position: relative;}
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}

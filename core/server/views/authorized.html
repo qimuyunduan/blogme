@@ -69,39 +69,7 @@
         <div class="headerNav">
             <!--页眉logo图片-->
             <!--<a class="logo" href="http://j-ui.com">标志</a>-->
-
             <ul class="nav">
-                <!--<li >-->
-                    <!--&lt;!&ndash;<div class="themeList" id="themeList"></div>&ndash;&gt;-->
-                    <!--<ul class="themeList" id="themeList">-->
-                        <!--<li theme="default">-->
-                            <!--<div class="selected">蓝色</div>-->
-                        <!--</li>-->
-                        <!--<li theme="green">-->
-                            <!--<div>绿色</div>-->
-                        <!--</li>-->
-                        <!--<li theme="purple">-->
-                            <!--<div>紫色</div>-->
-                        <!--</li>-->
-                        <!--<li theme="silver">-->
-                            <!--<div>银色</div>-->
-                        <!--</li>-->
-                        <!--<li theme="azure">-->
-                            <!--<div>天蓝</div>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li id="switchEnvBox"><a href="javascript:">（<span>北京</span>）切换城市</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="sidebar_1.html">北京</a></li>-->
-                        <!--<li><a href="sidebar_2.html">上海</a></li>-->
-                        <!--<li><a href="sidebar_2.html">南京</a></li>-->
-                        <!--<li><a href="sidebar_2.html">深圳</a></li>-->
-                        <!--<li><a href="sidebar_2.html">广州</a></li>-->
-                        <!--<li><a href="sidebar_2.html">天津</a></li>-->
-                        <!--<li><a href="sidebar_2.html">杭州</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
                 <li><a href="" target="dialog" width="600">我的资料</a></li>
                 <li><a href="changepwd.html" target="dialog" width="600">修改密码</a></li>
                 <li><a href="index.html">退出</a></li>
@@ -135,7 +103,7 @@
                     <ul class="tree treeFolder">
                         <li><a>业务基础维护</a>
                             <ul>
-                                <li><a href="" target="navTab" rel="" >投保单位</a></li>
+                                <li><a href="bbm_assureUnit.html" target="navTab" rel="" >投保单位</a></li>
 
 
                                 <li><a href="" target="navTab" rel="" >商家集团</a></li>
@@ -167,7 +135,7 @@
                         <li><a>对账管理</a>
                             <ul>
                                 <li><a href="" target="navTab" rel="">今日账单</a></li>
-                                <li><a href="" target="navTab" rel="">本月账单</a></li>
+                                <li><a href="bm_currentMonth.html" target="navTab" rel="">本月账单</a></li>
                                 <li><a href="" target="navTab" rel="">历史账单</a></li>
                                 <li><a href="" target="navTab" rel="">垫付记录</a></li>
                             </ul>
@@ -226,7 +194,7 @@
         <div id="navTab" class="tabsPage">
 
             <div class="tabsPageHeader">
-                <div class="tabsPageHeaderContent"><!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
+                <div class="tabsPageHeaderContent ">
                     <ul class="navTab-tab">
                         <li tabid="main" class="main">
                             <a href="javascript:;">
@@ -237,8 +205,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
-                <div class="tabsRight">right</div><!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
+                <!--<div class="tabsLeft">left</div>&lt;!&ndash; 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" &ndash;&gt;-->
+                <!--<div class="tabsRight">right</div>&lt;!&ndash; 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" &ndash;&gt;-->
                 <div class="tabsMore">more</div>
             </div>
 
@@ -247,104 +215,14 @@
             </ul>
             <div class="navTab-panel tabsPageContent layoutBox">
                 <div class="page unitBox">
-                    <label><input type="checkbox" name="c1" value="1" />  1</label>
-                    <label><input type="checkbox" name="c1" value="2" />  2</label>
-                    <label><input type="checkbox" name="c1" value="3" />  3</label>
-                    <input  type="checkbox" class="checkboxCtrl" group="c1" />
-                    <button type="button" class="checkboxCtrl"  group="c1" selectType="invert"> 烦人 </button>
 
-                    <h2>DWZ系列开源项目:</h2>
-                        <div class="unit">
-                            <a href="https://git.oschina.net/dwzteam/dwz_jui" target="_blank">dwz富客户端框架 -jUI</a>
-                        </div>
-                        <div class="unit">
-                            <a href="https://git.oschina.net/dwzteam/dwz_group" target="_blank">DWZ框架 +ThinkPHP 实现小组工作日志系统</a>
-                        </div>
-                        <div class="unit">
-                            <a href="https://code.csdn.net/dwzteam/dwz_ssh2" target="_blank">dwz4j企业级JavaWeb快速开发框架(Hibernate+Spring+Struts2) + jUI整合应用</a>
-                        </div>
-                        <div class="unit">
-                            <a href="https://code.csdn.net/dwzteam/dwz_springmvc" target="_blank">dwz4j企业级JavaWeb快速开发框架(Mybatis + SpringMVC) + jUI整合应用</a>
-                        </div>
-                        <div class="unit">
-                            <a href="https://code.csdn.net/dwzteam/dwz_thinkphp" target="_blank">ThinkPHP+ jUI整合应用</a>
-                        </div>
-                        <div class="unit">
-                            <a href="https://code.csdn.net/dwzteam/dwz_zendframework" target="_blank">ZendFramework + jUI整合应用</a>
-                        </div>
-                        <div class="unit">
-                            <a href="http://www.yiiframework.com/extension/dwzinterface/" target="_blank">YII+ jUI整合应用</a>
-                        </div>
-                        <a class="buttonActive" href="https://git.oschina.net/dwzteam/" target="_blank"><span>DWZ开源系列源码（oschina）</span></a>
-                        <a class="button" href="https://github.com/dwzteam/" target="_blank"><span>DWZ开源系列源码（github）</span></a>
-                        <a class="button" href="donation.html" target="dialog" height="400"><span style="color: red">捐赠 & DWZ学习视频</span></a>
-                        <div class="divider"></div>
-
-                        <div layoutH="20">
-                        <table class=" list" width="98%" style="margin-left: auto ;margin-right:auto" >
-                            <thead>
-                            <tr>
-                                <th colspan="2">资料信息</th>
-                                <th colspan="2">客户信息</th>
-                                <th colspan="3">基本信息</th>
-                            </tr>
-                            <tr>
-                                <th width="80">客户号</th>
-                                <th width="100">客户名称</th>
-                                <th width="100">客户划分</th>
-                                <th width="100">证件号码</th>
-                                <th width="100">信用等级</th>
-                                <th width="100">企业性质</th>
-                                <th width="100">建档日期</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>iso127309</td>
-                                <td>建档日期</td>
-                                <td> 政府单位   </td>
-                                <td>0-0001027766351528</td>
-                                <td> 四等级  </td>
-                                <td>政府单位 </td>
-                                <td>2009-05-21</td>
-                            </tr>
-                            <tr>
-                                <td>iso127309</td>
-                                <td>建档日期</td>
-                                <td> 政府单位   </td>
-                                <td>0-0001027766351528</td>
-                                <td> 四等级  </td>
-                                <td>政府单位 </td>
-                                <td>2009-05-21</td>
-                            </tr>
-                            <tr>
-                                <td>iso127309</td>
-                                <td>建档日期</td>
-                                <td> 政府单位   </td>
-                                <td>0-0001027766351528</td>
-                                <td> 四等级  </td>
-                                <td>政府单位 </td>
-                                <td>2009-05-21</td>
-                            </tr>
-                            <tr>
-                                <td>iso127309</td>
-                                <td>建档日期</td>
-                                <td> 政府单位   </td>
-                                <td>0-0001027766351528</td>
-                                <td> 四等级  </td>
-                                <td>政府单位 </td>
-                                <td>2009-05-21</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        </div>
                 </div>
 
             </div>
         </div>
     </div>
-</div>
 
+</div>
 {{>footer}}
 </body>
 </html>
