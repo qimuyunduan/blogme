@@ -13,12 +13,12 @@
 			<p>
 				<label>部门名称：</label>
 				<input type="hidden" name="orgLookup.id" value="${orgLookup.id}"/>
-				<input type="text" class="required" name="orgLookup.orgName" value="" suggestFields="orgNum,orgName" suggestUrl="demo/database/db_lookupSuggest.html" lookupGroup="orgLookup" />
-				<a class="btnLook" href="demo/database/dwzOrgLookup.html" lookupGroup="orgLookup">查找带回</a>		
+				<input type="text" class="required" name="orgLookup.orgName" size="30" value="" suggestFields="orgNum,orgName" suggestUrl="demo/database/db_lookupSuggest.html" lookupGroup="orgLookup" />
+				<a class="btnLook" href="demo/database/dwzOrgLookup.html" lookupGroup="orgLookup" ></a>
 			</p>
 			<p>
 				<label>部门编号：</label>
-				<input type="text" readonly="readonly" value="" name="dwz_orgLookup.orgNum" class="textInput">
+				<input type="text" readonly="readonly" value="" size = "30" name="dwz_orgLookup.orgNum" class="textInput">
 			</p>
 			<p>
 				<label>识 别 码：</label>
@@ -27,7 +27,7 @@
 			<p>
 				<label>客户类型：</label>
 				<select name="type" class="required combox">
-					<option value="">请选择</option>
+					<option value="">请选择vefege</option>
 					<option value="个人">个人</option>
 					<option value="公司" selected>公司</option>
 				</select>
@@ -38,7 +38,8 @@
 			</p>
 			<p>
 				<label>执照签发日期：</label>
-				<input type="text" name="startDate" class="date" size="30" /><a class="inputDateButton" href="javascript:;">选择</a>
+				<input type="text" name="startDate" class="date" size="30" />
+                <a class="inputDateButton" href="javascript:;"></a>
 			</p>
 			<p>
 				<label>执照到期日期：</label>
@@ -126,8 +127,8 @@
 		</div>
 		<div class="formBar">
 			<ul>
-				<!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
-				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>
+				<!--<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>-->
 				<li>
 					<div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
 				</li>

@@ -170,6 +170,7 @@ body, #splitBar { background:#e5edef;}
 #navMenu li a, #navMenu li span { color:#FFF; }
 #navMenu li.selected span { color:#000; }
 
+
 /* Homepage */
 .sidebarContent { display:block; overflow:auto; height:500px; border:solid 1px #86B4EC; background:#FFF;}
 .accountInfo { display:block; overflow:hidden; height:60px; padding:0 10px; background:url(../themes/default/images/account_info_bg.png) repeat-x}
@@ -179,6 +180,7 @@ body, #splitBar { background:#e5edef;}
 .accountInfo .alertInfo { float:right; width:300px; height:60px; padding-left:10px; border-left:solid 1px #accdf4;}
 .accountInfo .alertInfo h2 { padding:8px 0; line-height:17px;}
 .accountInfo .alertInfo a { padding:6px 0 0 0; line-height:21px;}
+
 
 /* Pages */
 .pageForm .inputInfo { color:#999;}

@@ -2,186 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/css/app.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/index_menu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/accordion/accordion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/account_info_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/alert/alertpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/button_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/button/imgX.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/dialog/dialogpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/form/input_bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/resizeCol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/grid/tableth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/header_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_control.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/taskbar_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/layout/toggleSidebar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/listLine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/menu/menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/order_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/pageHeader_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/panel/panel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_l.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_m.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/progressBar/progressBar_s.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/search-bt.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_c_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_f_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/shadow/shadow_h_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabscontrol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspage_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tabs/tabspanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/images/tree/tree.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/azure/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/accordion/accordion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/account_info_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/alert/alertpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/button/button_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/button/imgX.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/dialog/dialogpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/form/input_bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/resizeCol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/grid/tableth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/header_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/layout/toggleSidebar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/listLine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/pageHeader_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/panel/panel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabscontrol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspage_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tabs/tabspanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/images/tree/tree.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/green/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/accordion/accordion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/account_info_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/alert/alertpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/button_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/button/imgX.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/dialog/dialogpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/form/input_bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/resizeCol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/grid/tableth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/header_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_control.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/taskbar_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/layout/toggleSidebar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_content_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_header_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/login_list.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/menu/menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/pageHeader_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/panel/panel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_l.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_m.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/progressBar/progressBar_s.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_c_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_f_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/shadow/shadow_h_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabscontrol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspage_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tabs/tabspanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/images/tree/tree.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/purple/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/accordion/accordion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/account_info_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/alert/alertpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/button_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/button/imgX.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/dialog/dialogpanel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/form/input_bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/resizeCol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/grid/tableth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/header_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_control.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/taskbar_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/layout/toggleSidebar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/listLine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/menu/menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/pageHeader_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/panel/panel_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_l.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_m.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/progressBar/progressBar_s.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_c_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_f_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_l.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/shadow/shadow_h_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabscontrol.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspage_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tabs/tabspanel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/images/tree/tree.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/themes/silver/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo/baidu_map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_page2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/newPage1.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/w_tabs.html" afterPath="$PROJECT_DIR$/core/server/views/tabpanel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/changepwd.html" afterPath="$PROJECT_DIR$/core/server/views/changepwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/css/core.css" afterPath="$PROJECT_DIR$/core/server/views/css/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/css/login.css" afterPath="$PROJECT_DIR$/core/server/views/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/css/style.css" afterPath="$PROJECT_DIR$/core/server/views/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/demo/common/ajaxTimeout.html" afterPath="$PROJECT_DIR$/core/server/views/demo/common/ajaxTimeout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/demo_page1.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/index.html" afterPath="$PROJECT_DIR$/core/server/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/main.html" afterPath="$PROJECT_DIR$/core/server/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/partials/footer.html" afterPath="$PROJECT_DIR$/core/server/views/partials/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_checkbox.html" afterPath="$PROJECT_DIR$/core/server/views/w_checkbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_validation.html" afterPath="$PROJECT_DIR$/core/server/views/w_validation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/demo_page4.html" afterPath="$PROJECT_DIR$/core/server/views/demo_page4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_accordion.html" afterPath="$PROJECT_DIR$/core/server/views/w_accordion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_editor.html" afterPath="$PROJECT_DIR$/core/server/views/w_editor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_panel.html" afterPath="$PROJECT_DIR$/core/server/views/w_panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/w_tree.html" afterPath="$PROJECT_DIR$/core/server/views/w_tree.html" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -205,18 +40,50 @@
       <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.9411764">
-              <caret line="439" column="42" selection-start-line="439" selection-start-column="42" selection-end-line="439" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/views/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.537975">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="111" column="23" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tabsPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/tabsPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo_page6.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/demo_page6.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="w_dialog.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/w_dialog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42105263">
+              <caret line="16" column="119" selection-start-line="16" selection-start-column="101" selection-end-line="16" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -243,13 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/models/yijian-list.js" />
-        <option value="$PROJECT_DIR$/core/server/models/test.js" />
-        <option value="$PROJECT_DIR$/core/server/routes/test.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/core/server/views/testindex.html" />
-        <option value="$PROJECT_DIR$/core/server/data/test.js" />
-        <option value="$PROJECT_DIR$/core/server/models/ido-user.js" />
         <option value="$PROJECT_DIR$/nodeFuncTest.js" />
         <option value="$PROJECT_DIR$/core/server/models/idoUser.js" />
         <option value="$PROJECT_DIR$/core/server/views/hbs/index.hbs" />
@@ -282,18 +142,25 @@
         <option value="$PROJECT_DIR$/core/server/views/themes/default/style.css" />
         <option value="$PROJECT_DIR$/core/server/views/themes/css/core.css" />
         <option value="$PROJECT_DIR$/core/server/views/test_print.html" />
-        <option value="$PROJECT_DIR$/core/server/views/main.html" />
         <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
         <option value="$PROJECT_DIR$/core/server/views/css/login.css" />
         <option value="$PROJECT_DIR$/core/server/views/partials/footer.html" />
-        <option value="$PROJECT_DIR$/core/server/views/css/style.css" />
         <option value="$PROJECT_DIR$/core/server/routes/api.js" />
         <option value="$PROJECT_DIR$/core/server/views/changepwd.html" />
         <option value="$PROJECT_DIR$/core/server/views/index.html" />
-        <option value="$PROJECT_DIR$/core/server/views/demo_page1.html" />
         <option value="$PROJECT_DIR$/core/server/views/w_validation.html" />
         <option value="$PROJECT_DIR$/core/server/views/w_checkbox.html" />
         <option value="$PROJECT_DIR$/core/server/views/css/core.css" />
+        <option value="$PROJECT_DIR$/core/server/views/css/style.css" />
+        <option value="$PROJECT_DIR$/core/server/views/tabsPage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/main.html" />
+        <option value="$PROJECT_DIR$/core/server/views/demo_page1.html" />
+        <option value="$PROJECT_DIR$/core/server/views/demo_page4.html" />
+        <option value="$PROJECT_DIR$/core/server/views/w_editor.html" />
+        <option value="$PROJECT_DIR$/core/server/views/authorized_copy.html" />
+        <option value="$PROJECT_DIR$/core/server/views/demo/common/ajaxTimeout.html" />
+        <option value="$PROJECT_DIR$/core/server/views/w_panel.html" />
+        <option value="$PROJECT_DIR$/core/server/views/tabpanel.html" />
       </list>
     </option>
   </component>
@@ -331,7 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -404,259 +271,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="permissions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="errors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -772,12 +389,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00022" summary="reconstruct website">
-      <created>1459865040694</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1459865040694</updated>
     </task>
     <task id="LOCAL-00023" summary="reconstruct website">
       <created>1459941776286</created>
@@ -1067,7 +678,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461649827551</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="change views">
+      <created>1461660536897</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1461660536897</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1085,22 +702,41 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1943128" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20990099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20990099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1943128" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1149,12 +785,12 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="86" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/authorized_copy.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/w_dialog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1166,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="26.117647">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="9.205882">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.7352943">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="65.82353">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,23 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/baidu_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5647744">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1091703">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.036390103">
           <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14556041">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,7 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.617647">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,11 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.312769">
           <caret line="282" column="33" selection-start-line="282" selection-start-column="33" selection-end-line="282" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,15 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/changepwd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21156558">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,10 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.617647">
           <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,7 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.8192935">
           <caret line="150" column="114" selection-start-line="150" selection-start-column="67" selection-end-line="150" selection-end-column="114" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9891304">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,10 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5867419">
           <caret line="80" column="12" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="12" />
-          <folding>
-            <element signature="n#form#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ul#0;n#div#2;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1351,25 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.647058">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="n#table#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,26 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_panel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,15 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="47.058823">
           <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/tabsPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,7 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4705882">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,15 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/newPage1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,7 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,7 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.147059">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,7 +992,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/w_accordion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/validate_remote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.89135">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/changepwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47468355">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.693038">
+          <caret line="979" column="38" selection-start-line="979" selection-start-column="38" selection-end-line="979" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo/common/ajaxTimeout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07911392">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/authorized_copy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79113925">
+          <caret line="179" column="102" selection-start-line="179" selection-start-column="102" selection-end-line="179" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.4018986">
+          <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/w_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.342827">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo/common/ajaxDone.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo/common/ajaxDone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="23" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/w_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15822785">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/w_panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10548523">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/newPage2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tabsPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/tabpanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26687765">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1480,87 +1141,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_page2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026371308">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/w_dialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_accordion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15822785">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/validate_remote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.9411764">
-          <caret line="439" column="42" selection-start-line="439" selection-start-column="42" selection-end-line="439" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.89135">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.537975">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42105263">
+          <caret line="16" column="119" selection-start-line="16" selection-start-column="101" selection-end-line="16" selection-end-column="119" />
           <folding />
         </state>
       </provider>

@@ -28,6 +28,7 @@ img { border:none;}
 a { color:#000; text-decoration:none;}
 a:hover {text-decoration:underline;}
 
+
 /* Panel */
 .panel { display:block; background-position:0 100%; background-repeat:repeat-x;}
 .panel .panelHeader { display:block; height:28px; padding-left:5px; background-position:0 0;}
@@ -584,9 +585,9 @@ a.btnEdit{background-position: -138px 0}
 a.btnSelect{background-position: -92px 0}
 a.btnLook{background-position: -161px 0}
 a.btnAttach{background-position: -183px 0}
-.center a.btnAdd, .center a.btnDel, .center a.btnView, .center a.btnEdit, .center a.btnSelect, .center a.btnInfo, 
+.center a.btnAdd, .center a.btnDel, .center a.btnView, .center a.btnEdit, .center a.btnSelect, .center a.btnInfo,
 .center a.btnAssign, .center a.btnLook, .center a.btnAttach {display:inline-block;float:none}
-.right a.btnAdd, .right a.btnDel, .right a.btnView, .right a.btnEdit, .right a.btnSelect, .right a.btnInfo, 
+.right a.btnAdd, .right a.btnDel, .right a.btnView, .right a.btnEdit, .right a.btnSelect, .right a.btnInfo,
 .right a.btnAssign, .right a.btnLook, .right a.btnAttach {display:inline-block;float:none;text-indent:1000px}
 
 .viewInfo {padding: 10px 5px}
