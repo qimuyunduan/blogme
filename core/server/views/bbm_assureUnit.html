@@ -1,35 +1,87 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a href="" class="add" target="dialog" refresh="false" maxable="true"><span>添加</span></a></li>
+            <li><a href="bbm_addInsureCompany.html" class="add" target="dialog" refresh="false" maxable="true" minable="false"><span>添加</span></a></li>
             <li><a href="" class="edit" title="" target="dialog" warn="请先选择一个"><span>删除</span></a></li>
-            <li><a href="" class="delete" title="确定要删除这些记录吗?" target=""><span>修改</span></a></li>
+            <li><a href="" class="delete" title="确定要删除这些记录吗?" target="ajaxToDo"><span>修改</span></a></li>
         </ul>
     </div>
+
     <div>
-        <div style="width: 250px">
-            <div class="accordion">
-                <!--<div class="accordionHeader"><h2><span>Folder</span>投保单位</h2></div>-->
-                <div class="accordionContent">
-                    <ul class="tree treeFolder" >
-                        <li><a href="javascript:;">投保单位</a>
-                            <ul>
-                                <li><a href="bbm_shjs.html"  target="ajax" rel="assureUnit"> 上海建设银行</a></li>
-                                <li><a href="javascript:;">北京建设银行</a>
-                                    <ul>
-                                        <li><a href=""  target="ajax" rel="assureUnit">昌平区建设银行支行</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href=""  target="ajax" rel="assureUnit">德邦物流总部</a></li>
-                                <li><a href=""  target="ajax" rel="assureUnit">德邦</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="assureUnit" class="unitBox"></div>
+        <ul class="tree treeFolder">
+            <li><a href="javascript:;">投保单位</a>
+                <ul>
+                    <li><a href="bbm_shjs.html" target="ajax" rel="assureUnit"> 上海建设银行</a></li>
+                    <li><a href="javascript:;">北京建设银行</a>
+                        <ul>
+                            <li><a href="" target="ajax" rel="assureUnit">昌平区建设银行支行</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" target="ajax" rel="assureUnit">德邦物流总部</a></li>
+                    <li><a href="" target="ajax" rel="assureUnit">德邦</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
+
+    <!--<div class="accordion" >-->
+
+        <!--&lt;!&ndash;<div class="accordionHeader">&ndash;&gt;-->
+            <!--&lt;!&ndash;<h2><span>Folder</span>业务系统</h2>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="accordionContent">-->
+            <!--<ul class="tree treeFolder">-->
+                <!--<li><a>业务基础维护</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="bbm_assureUnit.html" target="navTab" rel="" >投保单位</a></li>-->
+
+
+                        <!--<li><a href="" target="navTab" rel="" >商家集团</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >商家信息维护</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >爱都新用户</a></li>-->
+
+                        <!--<li><a href="" target="navTab" rel="" >保险公司业务字典</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >商铺管理</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >保险公司</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >保单信息维护</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >投保用户</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="" >药品类别业务字典</a></li>-->
+
+                        <!--<li><a href="" target="navTab" rel="" >分公司维护</a></li>-->
+
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a>业务操作</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="" target="navTab" rel="">保单充值</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">商家签约</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">家庭用户</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">医疗消费</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">订单管理</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">理赔单管理</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a>对账管理</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="" target="navTab" rel="">今日账单</a></li>-->
+                        <!--<li><a href="bm_currentMonth.html" target="navTab" rel="">本月账单</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">历史账单</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">垫付记录</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a>移动端维护</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="" target="navTab" rel="">手机端商铺配置</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">城市广告</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">客户端版本管理</a></li>-->
+                        <!--<li><a href="" target="navTab" rel="">意见反馈</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <div id="assureUnit" class="unitBox"></div>
+
 </div>

@@ -13,25 +13,28 @@
     <form action="" rel= "pagerForm" onsubmit="return navTabSearch(this)" method="post">
 
             <div class="searchBar">
-                <ul class="searchContent">
-                    <li>
-                        <span><label for="cardNumber">卡号</label></span>
-                        <input type="text" size = 30 name = "cardNumber" id="cardNumber" alt="请输入卡号">
-                    </li>
-                    <li>
-                        <span><label for="orderNumber">订单号</label></span>
-                        <input type="text" size="30" name="orderNumber" id="orderNumber" >
-                    </li>
 
-                    <li>
-                        <span><label for="shopNumber">商铺</label></span>
-                        <select class="combox" name="shopID" id="shopNumber">
-                            <option value="">请选择</option>
-                            <option value="shop23">商铺</option>
-                        </select>
-                    </li>
+                <table class="searchContent">
+                    <tr>
+                        <td>
+                            <span><label for="cardNumber">卡号</label></span>
+                            <input type="text" size = 30 name = "cardNumber" id="cardNumber" alt="请输入卡号">
+                        </td>
+                        <td>
+                            <span><label for="orderNumber">订单号</label></span>
+                            <input type="text" size="30" name="orderNumber" id="orderNumber" >
+                        </td>
+                        <td>
+                            <span><label for="shopNumber">商铺</label></span>
+                            <select class="combox" name="shopID" id="shopNumber">
+                                <option value="">请选择</option>
+                                <option value="shop23">商铺</option>
+                            </select>
+                        </td>
+                    </tr>
 
-                </ul>
+                </table>
+
                 <div class="subBar">
                     <ul>
                         <li><a class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a></li>
@@ -49,10 +52,10 @@
         </div>
 
     </div>
-    <table class="list" width="100%" layoutH="150">
+    <table class="list" width="100%" rel="ID" layoutH="150">
         <thead>
         <tr>
-            <th><input class="checkboxCtrl" type="checkbox" group="colOne"/></th>
+            <th><input class="checkboxCtrl" type="checkbox" group="checkCtrl"/></th>
             <th>商家流水号</th>
             <th>投保用户名</th>
             <th>商铺名称</th>
@@ -72,7 +75,7 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select name="showLimit" id="showLimit" class="combox" onchange="navTabPageBreak({numPerPage:this.value})">
+            <select name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')" class="combox">
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="150">150</option>
@@ -89,6 +92,6 @@
         <div class="pages">
             <span>现金:{{consumeByCash}}元</span>
         </div>
-        <div class="pagination" targetType="navTab" totalCount="150" numPerPage="50" pageNumShown="3" currentPage="1"></div>
+        <div class="pagination" rel="ID" targetType="navTab" totalCount="150" numPerPage="50" pageNumShown="3" currentPage="1"></div>
     </div>
 </div>

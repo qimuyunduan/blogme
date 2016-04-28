@@ -601,7 +601,9 @@ a.btnAttach{background-position: -183px 0}
 .viewInfo dl.nowrap dd {width: auto;}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
-.pageContent .tree { margin: 5px;float:left; display:block; overflow:auto; width:240px; line-height:21px; background:#64aabc}
-.pageContent .unitBox{left: 250px;top:32px;position: absolute;border:1px solid #0a246a;}
+
+.pageContent .tree {float:left; height:100%;display:block;overflow:auto; width:220px;line-height:21px;border-right: solid 1px #CCCCCC}
+.pageContent .unitBox{left: 230px;top:27px;position: absolute;width:80%;height:100%;float: right}
+
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}
