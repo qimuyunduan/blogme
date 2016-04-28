@@ -8,16 +8,12 @@
             <table class="searchContent">
                 <tr>
                     <td>
-                        <span><label for="userNumber">用户号</label></span>
-                        <input type="text" size="30" name="assureNumber" id="userNumber">
+                        <span><label for="insureCompanyName">保险公司名称</label></span>
+                        <input type="text" size="30" name="insureCompanyName" id="insureCompanyName">
                     </td>
                     <td>
-                        <span><label for="assureUnit">所属投保单位</label></span>
-                        <input type="text" size="30" name="assureUnit" id="assureUnit">
-                    </td>
-                    <td>
-                        <span><label for="insureCompany">保险公司</label></span>
-                        <input type="text" size="30" name="insureComany" id="insureCompany">
+                        <span><label for="insureCompanyNumber">保险公司编号</label></span>
+                        <input type="text" size="30" name="insureCompanyNumber" id="insureCompanyNumber">
                     </td>
                     <td>
                         <span><label for="state">状态</label></span>
@@ -33,7 +29,10 @@
             <div class="subBar">
                 <ul>
                     <li>
-                        <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                        <div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+                    </li>
+                    <li>
+                        <div class="button"><div class="buttonContent"><button type="submit">高级检索</button></div></div>
                     </li>
                 </ul>
             </div>
@@ -44,15 +43,15 @@
 <div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" href="bbm_addInsureUser.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
+            <li><a class="add" href="bbm_addInsureCompany.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
             <li><a href="" class="delete" target="ajaxToDo"><span>删除</span></a></li>
             <li><a href="" class="edit" target="dialog" minable="false" maxable="true"><span>修改</span></a></li>
             <li><a href="" class="add" target="ajaxToDo"><span>开通业务</span></a></li>
-            <li><a href="bbm_freezeUser.html" class="add" target="dialog" minable="false" maxable="true"><span>冻结</span></a></li>
+            <li><a href="" class="add" target="dialog" minable="false" maxable="true"><span>冻结</span></a></li>
             <li><a href="" class="add" target="dialog"><span>注销</span></a></li>
-            <li><a href="bbm_updateRecord.html" class="add" target="dialog" minable="false" maxable="true"><span>变更记录</span></a></li>
+            <li><a href="" class="add" target="dialog" minable="false" maxable="true"><span>用户管理</span></a></li>
+            <li><a href="" class="add" target="dialog" maxable="true"><span>附件管理</span></a></li>
             <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
-            <li><a href="bbm_importRecords.html" class="icon" target="dialog"minable="true" maxable="true"><span>导入</span></a></li>
 
         </ul>
     </div>
@@ -62,15 +61,13 @@
             <!--ToDo:宽度改写成百分比 以充满余下空间-->
 
             <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
-            <th width="100">用户号</th>
-            <th width="100">姓名</th>
-            <th width="100">性别</th>
-            <th width="200">证件号</th>
-            <th width="100">手机号</th>
-            <th width="100">所属投保单</th>
-            <th width="200">保险公司</th>
+            <th width="100">保险公司名称</th>
+            <th width="100">保险公司编号</th>
+            <th width="100">简称</th>
+            <th width="200">电话</th>
+            <th width="100">联系人名称</th>
+            <th width="100">所属保险公司</th>
             <th width="100">状态</th>
-            <th width="100">余额</th>
         </tr>
         </thead>
         <tbody>
@@ -83,8 +80,6 @@
             <td>张三</td>
             <td>2011-9-6</td>
             <td>xxx</td>
-            <td>1</td>
-            <td>1</td>
         </tr>
         </tbody>
     </table>
