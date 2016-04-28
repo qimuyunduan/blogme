@@ -602,7 +602,6 @@ a.btnAttach{background-position: -183px 0}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
 .pageContent .tree { margin: 5px;float:left; display:block; overflow:auto; width:240px; line-height:21px; background:#64aabc}
-.pageContent .unitBox{margin-left: 260px;background-color: #0b97c4;
-    position: relative;}
+.pageContent .unitBox{left: 250px;top:32px;position: absolute;border:1px solid #0a246a;}
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}
