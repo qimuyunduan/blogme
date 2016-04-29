@@ -3,36 +3,44 @@
         <div class="pageFormContent" layoutH="58">
 
             <div class="unit">
-                <label for="groupID">集团编号:</label>
-                <input type="text"  id="groupID" name="groupID" class="required">
+                <label for="shoperID">商家:</label>
+                <select class="combox"  id="shoperID" name="shoperID" >
+                    <option value="22">22</option>
+                    <option value="12">12</option>
+                </select>
             </div>
             <div class="unit">
-                <label for="groupName">集团名称:</label>
-                <input type="text" id="groupName" size="30" name="groupName" class="required">
+                <label for="shopName">商铺名称:</label>
+                <input type="text" id="shopName" size="30" name="shopName" class="required">
             </div>
             <div class="unit">
-                <label for="email">邮箱:</label>
-                <input type="text" size="30" name="email" id="email">
+                <label for="shopID">商铺编号:</label>
+                <input type="text" size="30" name="shopID" id="shopID" class="required">
             </div>
             <div class="unit">
-                <label for="contactName">联系人名称:</label>
-                <input type="text" size="30" name="contactName" id="contactName">
-            </div>
-            <div class="unit">
-                <label for="phone">联系电话:</label>
-                <input type="text" id="phone" name="phone" size="30" class="number" >
-            </div>
-            <div class="unit">
-                <label for="cellphone">联系人手机:</label>
-                <input type="text" size="30" class="number" minlength="11" maxlength="11" id="cellphone" >
-            </div>
-            <div class="unit">
-                <label for="state">状态:</label>
+                <label for="state">商铺状态:</label>
                 <select name="state" id="state" class="combox">
                     <option value="0">请选择</option>
                     <option value="1" selected>正常</option>
                     <option value="2">失效</option>
                 </select>
+            </div>
+            <div class="unit">
+                <label for="contactName">联系人名称:</label>
+                <input type="text" size="30" name="contactName" id="contactName" class="required">
+            </div>
+
+            <div class="unit">
+                <label for="cellphone">联系人手机:</label>
+                <input type="text" size="30" class="number required" minlength="11" maxlength="11" id="cellphone" >
+            </div>
+            <div class="unit">
+                <label for="email">联系电话:</label>
+                <input type="email" id="email" name="email" size="30" class="required">
+            </div>
+            <div class="unit">
+                <label for="address">地址:</label>
+                <input type="text" class="required" size="30" name="address" id="address">
             </div>
         </div>
         <div class="formBar">

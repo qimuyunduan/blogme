@@ -8,19 +8,27 @@
             <table class="searchContent">
                 <tr>
                     <td>
-                        <span><label for="groupID">集团编号</label></span>
-                        <input type="text" size="30" name="groupID" id="groupID">
+                        <span><label for="orderID">投保单号</label></span>
+                        <input type="text" size="30" name="orderID" id="orderID">
                     </td>
                     <td>
-                        <span><label for="groupName">集团名称</label></span>
-                        <input type="text" size="30" name="groupName" id="groupName">
+                        <span><label for="orderName">投保名称</label></span>
+                        <input type="text" size="30" name="orderName" id="orderName">
+                    </td>
+                    <td>
+                        <span><label for="orderUnit">投保单位</label></span>
+                        <input type="text" name="orderUnit" size="30" id="orderUnit">
+                    </td>
+                    <td>
+                        <span><label for="insureCompany">保险公司</label></span>
+                        <input type="text" name="insureCompany" id="insureCompany" size="30">
                     </td>
                     <td>
                         <span><label for="state">状态</label></span>
                         <select name="state" id="state" class="combox">
                             <option value="0" selected>全部选择</option>
-                            <option value="1">状态1</option>
-                            <option value="2">状态2</option>
+                            <option value="1">一等</option>
+                            <option value="2">二等</option>
                         </select>
                     </td>
                 </tr>
@@ -40,12 +48,18 @@
 <div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" href="bbm_addShopGroup.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
-            <li><a href="" class="delete" target="dialog" minable="false" maxable="true"><span>冻结</span></a></li>
+            <li><a class="add" href="bbm_addInsureOrder.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
+            <li><a href="" class="delete" target="dialog" minable="false" maxable="true"><span>删除</span></a></li>
             <li><a href="" class="edit" target="dialog"><span>修改</span></a></li>
-            <li><a href="bbm_shopUserManage.html" class="add" target="dialog" minable="false" maxable="true"title="商家集团用户管理"><span>用户管理</span></a></li>
-            <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
-            <li><a href="" class="delete" target="dialog"minable="true" maxable="true"><span>解冻</span></a></li>
+            <li><a href="" class="edit" target="dialog" minable="false" maxable="true"><span>开通确认</span></a></li>
+
+
+            <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出投保单</span></a></li>
+            <li><a href="" class="add" target="dialog" title="确定要导出这些记录吗?"><span>导出投保单用户</span></a></li>
+
+            <li><a href="bbm_importRecords.html" class="icon" target="dialog" ><span>导入</span></a></li>
+            <li><a href="bbm_shopUserManage.html" class="add" target="dialog" minable="false" maxable="true" title="商铺用户管理"><span>附件管理</span></a></li>
+
 
         </ul>
     </div>
@@ -55,13 +69,16 @@
             <!--ToDo:宽度改写成百分比 以充满余下空间-->
 
             <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
-            <th width="100">集团编号</th>
-            <th width="100">集团名称</th>
-            <th width="100">邮箱</th>
-            <th width="200">联系人名称</th>
-            <th width="100">联系电话</th>
-            <th width="100">联系人手机</th>
-            <th width="100">状态</th>
+            <th width="100">投保单号</th>
+            <th width="100">保单名称</th>
+            <th width="200">投保单位</th>
+            <th width="100">保险公司</th>
+            <th width="100">联系人</th>
+            <th>联系电话</th>
+            <th>联系人手机</th>
+            <th width="100">投保日期</th>
+            <th>到期日期</th>
+            <th>状态</th>
         </tr>
         </thead>
         <tbody>
@@ -70,9 +87,12 @@
             <td>1</td>
             <td>bj0001</td>
             <td>xxx诊所</td>
-            <td>xxx</td>
+            <td><xx></xx>x</td>
             <td>张三</td>
             <td>2011-9-6</td>
+            <td>xxx</td>
+            <td>xxx</td>
+            <td>xxx</td>
             <td>xxx</td>
 
         </tr>

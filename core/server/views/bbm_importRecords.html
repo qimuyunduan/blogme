@@ -1,19 +1,22 @@
 <div class="pageContent">
-    <div layoutH="60" class="pageFormContent">
-        <div class="unit">
-            <label for="downloadModel">模板下载:</label>
-            <input type="button" name="downloadModel" id="downloadModel" value="点击下载">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone)">
+        <div layoutH="60" class="pageFormContent">
+            <div class="unit">
+                <label for="downloadModel">模板下载:</label>
+                <input type="button" name="downloadModel" id="downloadModel" value="点击下载">
+            </div>
+            <div class="unit">
+                <label for="uploadData">上传文件:</label>
+                <input type="file" id="uploadData" name="uploadData" class="required">
+            </div>
         </div>
-        <div class="unit">
-            <label for="uploadData">上传文件:</label>
-            <input type="file" id="uploadData" name="uploadData" class="required">
-        </div>
-    </div>
-    <div class="formBar">
-        <ul>
-            <li><div class="buttonActive"><div class="buttonContent"><button type="submit">确定</button></div></div></li>
-            <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
-        </ul>
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">确定</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
 
-    </div>
+        </div>
+    </form>
+
 </div>
