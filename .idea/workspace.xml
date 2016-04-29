@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_logoutUser.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/server/views/bbm_updateRecord.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_queryChangeRecord.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_addShop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_addUserManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_deleteShop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_editShop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_freezeShop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_uploadFile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_userManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,86 +36,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bbm_assureUnit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
+      <file leaf-file-name="bbm_uploadFile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_uploadFile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+            <state vertical-scroll-proportion="-4.4117646">
+              <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_logoutUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutUser.html">
+      <file leaf-file-name="bbm_importRecords.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_importRecords.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="85" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.27510315">
+              <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_freezeCompany.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html">
+      <file leaf-file-name="bbm_shopGroup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopGroup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state vertical-scroll-proportion="-13.294118">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_logoutCompany.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html">
+      <file leaf-file-name="bbm_deleteShop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_deleteShop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2058823">
-              <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_userManage.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_userManage.html">
+      <file leaf-file-name="bbm_shopUserManage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2433936">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="n#table#0;n#div#1;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bbm_freezeUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeUser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_insureUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
+      <file leaf-file-name="bbm_editShop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_editShop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_addInsureUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureUser.html">
+      <file leaf-file-name="bbm_freezeShop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeShop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-              <folding>
-                <element signature="n#div#1;n#form#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bbm_addShop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4117646">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,11 +119,21 @@
       <file leaf-file-name="authorized.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+            <state vertical-scroll-proportion="-2.2058823">
+              <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
               <folding>
                 <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bbm_insureUser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6764708">
+              <caret line="90" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,16 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/controllers/Q.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/core/server/helpers/body_class.js" />
-        <option value="$PROJECT_DIR$/core/server/views/zencoding.html" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
-        <option value="$PROJECT_DIR$/core/server/views/themes/default/style.css" />
-        <option value="$PROJECT_DIR$/core/server/views/themes/css/core.css" />
-        <option value="$PROJECT_DIR$/core/server/views/test_print.html" />
-        <option value="$PROJECT_DIR$/core/server/views/css/login.css" />
-        <option value="$PROJECT_DIR$/core/server/views/partials/footer.html" />
         <option value="$PROJECT_DIR$/core/server/routes/api.js" />
         <option value="$PROJECT_DIR$/core/server/views/w_validation.html" />
         <option value="$PROJECT_DIR$/core/server/views/w_checkbox.html" />
@@ -189,15 +191,25 @@
         <option value="$PROJECT_DIR$/core/server/views/changepwd.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_freezeUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_updateRecord.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
-        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_addInsureCompany.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_logoutInsureUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_addShopGroup.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_addUserManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_freezeShop.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_editShop.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_deleteShop.html" />
+        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_addShop.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_uploadFile.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
       </list>
     </option>
   </component>
@@ -304,118 +316,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pagination" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blogme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -538,12 +438,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00029" summary="change controllers&#10;">
-      <created>1460350991427</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1460350991427</updated>
     </task>
     <task id="LOCAL-00030" summary="change site structure">
       <created>1460447772021</created>
@@ -833,7 +727,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461852783244</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="change views">
+      <created>1461894091795</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1461894091795</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -851,13 +751,13 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16692996" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22826087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21881188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -939,69 +839,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/database/db_attachmentLookup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3065395">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/combox/city_all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/combox/city_sh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/sortDrag/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17029972">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/sortDrag/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6566757">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo/sortDrag/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_combox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10217984">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_checkbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034059945">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/demo_upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4427793">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/w_uploadify.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.53269756">
@@ -1201,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_importRecords.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27894002">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureCompany.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.069735005">
@@ -1219,26 +1049,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34867504">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
-          <folding>
-            <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,9 +1060,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12831241">
+          <caret line="17" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27894002">
+          <caret line="16" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_userManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50906557">
+          <caret line="33" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="6" />
+          <folding>
+            <element signature="n#table#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
           <folding />
         </state>
@@ -1259,7 +1106,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.7352941">
           <caret line="14" column="85" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
           <folding />
         </state>
@@ -1267,50 +1114,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureCompany.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6750349">
-          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.74616456">
+          <caret line="52" column="110" selection-start-line="52" selection-start-column="110" selection-end-line="52" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.235294">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="6" />
+        <state vertical-scroll-proportion="-2.264706">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_editShop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeShop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_deleteShop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addUserManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0632737">
+          <caret line="60" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
+        <state vertical-scroll-proportion="-6.6764708">
+          <caret line="90" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopGroup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state vertical-scroll-proportion="-13.294118">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2058823">
-          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_userManage.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2433936">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.2058823">
+          <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
           <folding>
-            <element signature="n#table#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_uploadFile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_importRecords.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27510315">
+          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
