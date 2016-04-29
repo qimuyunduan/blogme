@@ -1,0 +1,37 @@
+<div class="pageContent">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="companyName">保险公司名称:</label>
+                <input type="text" size="30" class="required" id="companyName" name="companyName" >
+            </div>
+            <div class="unit">
+                <label for="updateState">更新状态:</label>
+                <input type="text" size="30" name="updateState"  value="注销" id="updateState" class="required readonly">
+            </div>
+            <div class="unit">
+                <label for="cause">操作原因:</label>
+                <textarea  name="cause" id="cause" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
