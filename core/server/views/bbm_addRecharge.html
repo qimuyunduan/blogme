@@ -1,0 +1,51 @@
+<div class="pageContent">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="insureUserCardNumber">投保用户卡号:</label>
+                <input type="text" size="30" class="required" id="insureUserCardNumber" name="insureUserCardNumber" >
+            </div>
+            <div class="unit">
+                <label for="rechargeType">充值字段:</label>
+                <select name="rechargeType" id="rechargeType" class="combox">
+                    <option value="0">否</option>
+                    <option value="1" selected>充剩余余额</option>
+                </select>
+
+            </div>
+            <div class="unit">
+                <label for="money">充值金额:</label>
+                <input type="text" class="required number" size="30" name="money" id="money"> 
+            </div>
+            <div class="unit">
+                <label for="orderNumber">投保单号:</label>
+                <input type="text" class="required number" id="orderNumber" name="orderNumber" size="30">
+            </div>
+            <div class="unit">
+                <label for="rechargeTime">充值时间:</label>
+                <input type="text" class="required date" name="rechargeTime" id="rechargeTime" size="30">
+                <a class="inputDateButton" href="javascript:;">选择</a>
+            </div>
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
