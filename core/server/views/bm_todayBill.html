@@ -1,0 +1,102 @@
+<div class="pageHeader" style="border:1px #B8D0D6 solid">
+    <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
+        <input type="hidden" name="pageNum" value="1" />
+        <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+        <input type="hidden" name="orderField" value="${param.orderField}" />
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}" />
+        <div class="searchBar">
+            <table class="searchContent">
+                <tr>
+                    <td>
+                        <span><label for="cardNumber">卡号</label></span>
+                        <input type="text" size="30" name="cardNumber" id="cardNumber">
+                    </td>
+                    <td>
+                        <span><label for="orderNumber">消费流水号</label></span>
+                        <input type="text" size="30" name="orderNumber" id="orderNumber">
+                    </td>
+                    <td>
+                        <span><label for="shop">所属商铺</label></span>
+                        <select name="shop" id="shop" class="combox">
+                            <option value="0">请选择</option>
+                            <option value="1">商铺1</option>
+                            <option value="2">商铺2</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+            </table>
+            <div class="subBar">
+                <ul>
+                    <li>
+                        <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
+        </ul>
+    </div>
+    <table class="list"  layoutH="160" rel="ID" width="100%">
+        <thead>
+        <tr>
+            <!--ToDo:宽度改写成百分比 以充满余下空间-->
+
+            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="100">消费流水号</th>
+            <th width="100">投保用户号</th>
+            <th width="100">投保用户</th>
+            <th width="200">商铺名称</th>
+            <th width="100">支付状态</th>
+            <th>消费金额</th>
+            <th>刷卡消费</th>
+            <th>现金支付</th>
+            <th>消费时间</th>
+            <th>消费家属</th>
+            <th>操作员</th>
+            <th>打印</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox" group="checkCtrl"></td>
+            <td>1</td>
+            <td>bj0001</td>
+            <td>xxx诊所</td>
+            <td>xxx</td>
+            <td>张三</td>
+            <td>2011-9-6</td>
+            <td>bj0001</td>
+            <td>xxx诊所</td>
+            <td>xxx</td>
+            <td>张三</td>
+            <td>张三</td>
+            <td><a href="" type="button" target="dialog">打印</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="panelBar">
+        <div class="pages">
+            <span>显示</span>
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+                <option value="200">200</option>
+            </select>
+            <span>条，共${totalCount}条</span>
+        </div>
+        <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
+    </div>
+
+
+</div>
