@@ -1,0 +1,126 @@
+<div class="pageHeader" style="border:1px #B8D0D6 solid">
+    <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
+        <input type="hidden" name="pageNum" value="1" />
+        <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+        <input type="hidden" name="orderField" value="${param.orderField}" />
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}" />
+        <div class="searchBar">
+            <table class="searchContent">
+                <tr>
+                    <td>
+                        <span><label for="roleName">角色名称</label></span>
+                        <input type="text" size="30" name="roleName" id="roleName">
+                    </td>
+
+                </tr>
+
+            </table>
+            <div class="subBar">
+                <ul>
+                    <li>
+                        <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a href="ps_addRole.html" class="add"  target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
+            <li><a href="" class="delete" target="dialog"  title="你确定删除这些记录?"><span>删除</span></a></li>
+            <li><a href="" class="edit"target="dialog" minable="false" maxable="true"><span>修改</span></a></li>
+
+        </ul>
+    </div>
+    <table class="list"  layoutH="160" rel="ID" width="100%">
+        <thead>
+        <tr>
+            <!--ToDo:宽度改写成百分比 以充满余下空间-->
+
+            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th>角色描述</th>
+            <th>角色名称</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--<div class="tree checked" width="35%" style="float: right;">-->
+        <!--<div class="accordionHeader">-->
+            <!--<h2><span>Folder</span>业务系统</h2>-->
+        <!--</div>-->
+        <!--<div class="accordionContent">-->
+            <!--<ul class="tree treeFolder">-->
+                <!--<li><a>业务基础维护</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="bbm_assureUnit.html" target="navTab" rel="" >投保单位</a></li>-->
+                        <!--<li><a href="bbm_shopGroup.html" target="navTab" rel="" >商家集团</a></li>-->
+                        <!--<li><a href="bbm_sysUser.html" target="navTab" rel="" >系统用户</a></li>-->
+                        <!--<li><a href="bbm_insureCompanyDic.html" target="navTab" rel="" >保险公司业务字典</a></li>-->
+                        <!--<li><a href="bbm_shoperManage.html" target="navTab" rel="" >商家管理</a></li>-->
+                        <!--<li><a href="bbm_shopManage.html" target="navTab" rel="" >商铺管理</a></li>-->
+                        <!--<li><a href="bbm_insureCompany.html" target="navTab" rel="" >保险公司</a></li>-->
+                        <!--<li><a href="bbm_orderMaintain.html" target="navTab" rel="" >保单信息维护</a></li>-->
+                        <!--<li><a href="bbm_insureUser.html" target="navTab" rel="" >投保用户</a></li>-->
+                        <!--<li><a href="bbm_drugCategory.html" target="navTab" rel="" >药品类别</a></li>-->
+                        <!--<li><a href="bbm_subCompany.html" target="navTab" rel="" >分公司维护</a></li>-->
+
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a>业务操作</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="bc_recharge.html" target="navTab" rel="">保单充值</a></li>-->
+                        <!--<li><a href="bc_signContract.html" target="navTab" rel="">商家签约</a></li>-->
+                        <!--<li><a href="bc_homeUser.html" target="navTab" rel="">家庭用户</a></li>-->
+                        <!--<li><a href="bc_yiliaofare.html" target="navTab" rel="">医疗消费</a></li>-->
+                        <!--<li><a href="bc_orderManage.html" target="navTab" rel="">订单管理</a></li>-->
+                        <!--<li><a href="bc_specialOrder.html" target="navTab" rel="">理赔单管理</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a>对账管理</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="bm_todayBill.html" target="navTab" rel="">今日账单</a></li>-->
+                        <!--<li><a href="bm_currentMonth.html" target="navTab" rel="">本月账单</a></li>-->
+                        <!--<li><a href="bm_historyBill.html" target="navTab" rel="">历史账单</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a>移动端维护</a>-->
+                    <!--<ul>-->
+                        <!--<li><a href="mm_shopConfig.html" target="navTab" rel="">手机端商铺配置</a></li>-->
+                        <!--<li><a href="mm_cityAD.html" target="navTab" rel="">城市广告</a></li>-->
+                        <!--<li><a href="mm_versionManage.html" target="navTab" rel="">客户端版本管理</a></li>-->
+                        <!--<li><a href="mm_maintain.html" target="navTab" rel="">意见反馈</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+        <!--<div class="accordionHeader">-->
+            <!--<h2><span>Folder</span>系统维护</h2>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="panelBar">
+        <div class="pages">
+            <span>显示</span>
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+                <option value="200">200</option>
+            </select>
+            <span>条，共${totalCount}条</span>
+        </div>
+        <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
+    </div>
+
+
+</div>

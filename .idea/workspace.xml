@@ -2,11 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/mm_addVersion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/mm_shopConfig.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/pm_addParam.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/pm_addParams.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/pm_cacheList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/pm_paramList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/pm_paramManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_addMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_addRole.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_addUserClass.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_menuManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_roleManage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_page1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_page4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_page5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_page6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/demo_upload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/newPage2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/newPage3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/sidebar_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/sidebar_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/tabpanel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/tabsPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/test_print.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/validate_remote.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_alert.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_combox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_datepicker.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_editor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_panel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_removeSelected.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_textInput.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_uploadify.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/w_validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/window_open.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
     </list>
@@ -29,57 +64,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="authorized.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="authorized.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.617647">
-              <caret line="141" column="66" selection-start-line="141" selection-start-column="66" selection-end-line="141" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.4141274">
+              <caret line="168" column="62" selection-start-line="168" selection-start-column="62" selection-end-line="168" selection-end-column="62" />
               <folding>
-                <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mm_addVersion.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/views/mm_addVersion.html">
+      <file leaf-file-name="pm_cacheList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/pm_cacheList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3504155">
-              <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
+            <state vertical-scroll-proportion="-0.7352941">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mm_cityAD.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
+      <file leaf-file-name="ps_addMenu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/ps_addMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.058823">
-              <caret line="30" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.8529413">
+              <caret line="46" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mm_addCityAD.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/mm_addCityAD.html">
+      <file leaf-file-name="ps_roleManage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/ps_roleManage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.764706">
-              <caret line="118" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="146" selection-end-column="6" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#select#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#select#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-5.7941175">
+              <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mm_versionManage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
+      <file leaf-file-name="ps_userAuthorize.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/ps_userAuthorize.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.264706">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state vertical-scroll-proportion="1.5588236">
+              <caret line="50" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ps_addUserClass.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/ps_addUserClass.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0882353">
+              <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pm_paramList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="8.088235">
+              <caret line="34" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pm_addParams.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParams.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="5.147059">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -106,17 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_addUserManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_freezeShop.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_editShop.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_deleteShop.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_uploadFile.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_addShoper.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_addShoperUserManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_addShop.html" />
@@ -155,8 +205,19 @@
         <option value="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_addVersion.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_menuManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_addMenu.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_addRole.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_roleManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_addUserClass.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_addParams.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm——paramManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_paramManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_addParam.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_cacheList.html" />
+        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
       </list>
     </option>
   </component>
@@ -385,12 +446,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add models">
-      <created>1460683041048</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1460683041048</updated>
     </task>
     <task id="LOCAL-00037" summary="add views">
       <created>1460698461572</created>
@@ -680,7 +735,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461983555705</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="change views">
+      <created>1461986928080</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1461986928081</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -786,76 +847,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShoper.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.44429162">
-          <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_importRecords.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034387894">
-          <caret line="1" column="124" selection-start-line="1" selection-start-column="124" selection-end-line="1" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShoperUserManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.558824">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureCompany.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034387894">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shoperManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.24071527">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShopGroup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41540578">
-          <caret line="45" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5502063">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.30674">
-          <caret line="38" column="85" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShopGroupManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2506812">
-          <caret line="44" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureOrder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31880108">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3964578">
@@ -930,14 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1731302">
           <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13956834">
-          <caret line="484" column="25" selection-start-line="484" selection-start-column="21" selection-end-line="484" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,14 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/w_datepicker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48476455">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -1126,24 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.058823">
-          <caret line="30" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.617647">
-          <caret line="141" column="66" selection-start-line="141" selection-start-column="66" selection-end-line="141" selection-end-column="66" />
-          <folding>
-            <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.264706">
@@ -1154,8 +1111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/mm_addCityAD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.764706">
-          <caret line="118" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="146" selection-end-column="6" />
+        <state vertical-scroll-proportion="-3.6764705">
+          <caret line="97" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="146" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
@@ -1164,11 +1121,125 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_menuManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.59279776">
+          <caret line="41" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3323741">
+          <caret line="211" column="14" selection-start-line="211" selection-start-column="9" selection-end-line="211" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.088235">
+          <caret line="56" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/mm_addVersion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3504155">
-          <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
+        <state vertical-scroll-proportion="-2.1176472">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addRole.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0882353">
+          <caret line="11" column="90" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.147059">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8529413">
+          <caret line="46" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_roleManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7941175">
+          <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_userAuthorize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5588236">
+          <caret line="50" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addUserClass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0882353">
+          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.088235">
+          <caret line="34" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27700832">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10387812">
+          <caret line="17" column="94" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_cacheList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4141274">
+          <caret line="168" column="62" selection-start-line="168" selection-start-column="62" selection-end-line="168" selection-end-column="62" />
+          <folding>
+            <element signature="n#ul#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,66 @@
+<div class="pageContent">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="menuName">菜单名称:</label>
+                <input type="text" class="required" size="30" name="menuName" id="menuName">
+            </div>
+            <div class="unit">
+                <label for="upperMenu">上级菜单:</label>
+                <input type="text" name="upperMenu" size="30" id="upperMenu">
+            </div>
+            <div class="unit">
+                <label for="order">排序号:</label>
+                <input type="text" size="30" name="order" id="order">
+            </div>
+            <div class="unit">
+                <label for="link">链接:</label>
+                <input type="text" class="required url" size="30" name="link" id="link">
+            </div>
+            <div class="unit">
+                <label for="menuLevel">菜单级别:</label>
+                <select name="menuLevel" id="menuLevel" class="combox">
+                    <option value="0">全部选择</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+
+
+            <div class="unit">
+                <label for="orderNumber">菜单编码:</label>
+                <input type="text" class="required" size="30" name="orderNumber" id="orderNumber">
+
+            </div>
+            <div class="unit">
+                <label for="isDelete">是否删除:</label>
+                <select name="isDelete" id="isDelete" class="combox">
+                    <option value="0" selected>否</option>
+                    <option value="1">是</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

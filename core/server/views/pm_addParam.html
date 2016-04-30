@@ -1,0 +1,50 @@
+<div class="pageContent">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="paramType">参数类型:</label>
+                <select name="paramType" id="paramType" class="combox">
+                    <option value="0">年度</option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="paramDescription">参数描述:</label>
+                <input type="text" name="paramDescription" size="30" id="paramDescription">
+            </div>
+            <div class="unit">
+                <label for="paramValue">参数值:</label>
+                <input type="text" size="30" name="paramValue" id="paramValue" class="required">
+            </div>
+            <div class="unit">
+                <label for="customValue">用户自定义值:</label>
+                <input type="text" size="30" name="customValue" id="customValue">
+            </div>
+
+            <div class="unit">
+                <label for="orderNumber">排序号:</label>
+                <input type="text" class="required" size="30" name="orderNumber" id="orderNumber">
+
+            </div>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
