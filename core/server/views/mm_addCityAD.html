@@ -1,0 +1,147 @@
+<div class="pageContent">
+    <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="province">城市:</label>
+
+                <select name="province" id="province" class="combox" ref="city">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+
+                <select name="city" id="city" class="combox" ref="">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select name="area" id="area" class="combox">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <div class="unit">
+                <label for="isValid">是否有效:</label>
+                <select name="isValid" id="isValid" class="combox">
+                    <option value="0">否</option>
+                    <option value="1" selected>是</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="title">广告标题:</label>
+                <input type="text" class="required" size="40" name="title" id="title">
+            </div>
+            <div class="unit">
+                <label for="subTitle">广告小标题:</label>
+                <input type="text" name="subTitle" size="40" id="subTitle">
+            </div>
+            <div class="unit">
+                <label for="ADContent">广告内容:</label>
+                <textarea name="ADContent" id="ADContent" cols="40" rows="5"></textarea>
+            </div>
+            <div class="unit">
+                <label for="adClass">广告类型:</label>
+                <select name="adCalss" id="adClass" class="combox">
+                    <option value="0">横向广告</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="showOrder">广告显示顺序:</label>
+                <select name="showOrder" id="showOrder" class="combox">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="picture">图片:</label>
+                <input type="file" class="required" size="30" name="picture" id="picture">
+
+            </div>
+            <div class="unit">
+                <label for="createBy">创建人:</label>
+                <input type="text" class="required" size="40" name="createBy" id="createBy">
+
+            </div>
+            <div class="unit">
+                <label for="createTime">创建时间:</label>
+                <input type="text" class="required" size="40" name="createTime" id="createTime">
+            </div>
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
