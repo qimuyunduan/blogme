@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader">
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -25,7 +25,7 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
 
@@ -34,20 +34,18 @@
             <li><a class="icon" target="dwzExport" targetType="navTab" title="确定要导出这些记录吗?"><span>导出</span></a></li>
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID" width="100%">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
-
-            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
-            <th>用户</th>
-            <th>时间</th>
-            <th>操作类型</th>
-            <th>ip地址</th>
-            <th>操作地址</th>
-            <th>修改前</th>
-            <th>修改后</th>
-            <th>备注</th>
+            <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="100">用户</th>
+            <th width="100">时间</th>
+            <th width="50">操作类型</th>
+            <th width="150">ip地址</th>
+            <th width="150">操作地址</th>
+            <th width="150">修改前</th>
+            <th width="150">修改后</th>
+            <th width="150">备注</th>
         </tr>
         </thead>
         <tbody>
