@@ -605,8 +605,7 @@ a.btnAttach{background-position: -183px 0}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
 
-.pageContent .tree {float:left; height:100%;display:block;overflow:auto; width:220px;line-height:21px;border-right: solid 1px #CCCCCC}
-.pageContent .unitBox{left: 230px;top:27px;position: absolute;width:80%;height:100%;float: right}
 
+.pageContent .leftTree{float:left; display:block; overflow:auto; width:240px;  line-height:21px; background:#fff}
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}

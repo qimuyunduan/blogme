@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader">
     <form id="pagerForm" onsubmit="return divSearch(this, 'jbsxBox');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -29,16 +29,16 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="" target="dialog" ><span>用户管理</span></a></li>
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <th><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">编号</th>
             <th width="200">投保单位</th>
             <th width="100">联系人</th>
@@ -51,7 +51,7 @@
         </thead>
         <tbody>
         <tr>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" name="checkCtrl"></td>
             <td>1</td>
             <td>bj0001</td>
             <td>xxx诊所</td>
