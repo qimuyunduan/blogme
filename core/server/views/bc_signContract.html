@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader">
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -37,26 +37,24 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent" >
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="bc_addAssociateShoper.html" target="dialog" minable="false" maxable="true"><span>新增关联商家</span></a></li>
 
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
-
-            <th width="50"></th>
+            <th width="20"></th>
             <th width="100">集团编号</th>
-            <th width="100">集团名称</th>
-            <th width="100">邮箱</th>
-            <th width="200">联系人名称</th>
+            <th width="150">集团名称</th>
+            <th width="150">邮箱</th>
+            <th width="100">联系人名称</th>
             <th width="100">联系电话</th>
             <th width="100">联系人手机</th>
-            <th width="100">状态</th>
+            <th width="50">状态</th>
         </tr>
         </thead>
         <tbody>
@@ -87,46 +85,46 @@
         <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
     </div>
 </div>
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
-    <div class="panelBar">
-        <ul class="toolBar">
-            <li><a class="add" href="bc_cancelAssociateShoper.html" target="dialog" minable="false" maxable="true"><span>解除绑定</span></a></li>
-        </ul>
-    </div>
-    <table class="list"  layoutH="160" rel="ID">
-        <thead>
-        <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
 
-            <th width="50"><input type="checkbox" name="" value=""></th>
-            <th width="100">商家编号</th>
-            <th width="100">商家名称</th>
-            <th width="200">联系人名称</th>
-            <th width="100">联系人手机</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><input type="checkbox" name="" value="false"></td>
-            <td>xxx</td>
-            <td>张三</td>
-            <td>2011-9-6</td>
-            <td>xxx</td>
-        </tr>
-        </tbody>
-    </table>
 
-    <div class="panelBar">
-        <div class="pages">
-            <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
-                <option value="50">50</option>
-                <option value="100">100</option>
-                <option value="150">150</option>
-                <option value="200">200</option>
-            </select>
-            <span>条，共${totalCount}条</span>
-        </div>
-        <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
-    </div>
-</div>
+<!--<div class="pageContent">-->
+    <!--<div class="panelBar">-->
+        <!--<ul class="toolBar">-->
+            <!--<li><a class="add" href="bc_cancelAssociateShoper.html" target="dialog" minable="false" maxable="true"><span>解除绑定</span></a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<table class="list"  layoutH="116" rel="ID">-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th width="50"><input type="checkbox" name="" value=""></th>-->
+            <!--<th width="100">商家编号</th>-->
+            <!--<th width="100">商家名称</th>-->
+            <!--<th width="200">联系人名称</th>-->
+            <!--<th width="100">联系人手机</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td><input type="checkbox" name="" value="false"></td>-->
+            <!--<td>xxx</td>-->
+            <!--<td>张三</td>-->
+            <!--<td>2011-9-6</td>-->
+            <!--<td>xxx</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+
+    <!--<div class="panelBar">-->
+        <!--<div class="pages">-->
+            <!--<span>显示</span>-->
+            <!--<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">-->
+                <!--<option value="50">50</option>-->
+                <!--<option value="100">100</option>-->
+                <!--<option value="150">150</option>-->
+                <!--<option value="200">200</option>-->
+            <!--</select>-->
+            <!--<span>条，共${totalCount}条</span>-->
+        <!--</div>-->
+        <!--<div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>-->
+    <!--</div>-->
+<!--</div>-->

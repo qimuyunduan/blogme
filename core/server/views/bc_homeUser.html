@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader">
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -29,7 +29,7 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="bc_addHomeUser.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
@@ -40,12 +40,10 @@
 
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
-
-            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">主用户号</th>
             <th width="100">绑定人</th>
             <th width="100">关系</th>

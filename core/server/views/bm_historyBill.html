@@ -1,4 +1,4 @@
-<form id="pagerForm" method="post" action="demo_page1.html">
+<form id="pagerForm" method="post" action="">
     <input type="hidden" name="status" value="${param.status}">
     <input type="hidden" name="keywords" value="${param.keywords}" />
     <input type="hidden" name="pageNum" value="1" />
@@ -30,18 +30,20 @@
                                 <option value="shop23">商铺</option>
                             </select>
                         </td>
+
+                    </tr>
+                    <tr>
                         <td>
                             <span><label for="startDate">起始日期</label></span>
-                            <input type="text" size="30" name="startDate" id="startDate" class="date">
+                            <input type="text" size="15" name="startDate" id="startDate" class="date">
                             <a class="inputDateButton" href="javascript:;">选择</a>
                         </td>
                         <td>
                             <span><label for="endDate">结束日期</label></span>
-                            <input type="text" size="30" name="endDate" id="endDate" class="date" >
+                            <input type="text" size="15" name="endDate" id="endDate" class="date" >
                             <a class="inputDateButton" href="javascript:;">选择</a>
                         </td>
                     </tr>
-
                 </table>
             </div>
 
@@ -63,22 +65,22 @@
         </div>
 
     </div>
-    <table class="list" width="100%" rel="ID" layoutH="150">
+    <table class="list" width="100%" rel="ID" layoutH="162">
         <thead>
         <tr>
-            <th><input class="checkboxCtrl" type="checkbox" group="checkCtrl"/></th>
-            <th>消费流水号</th>
-            <th>投保用户名</th>
-            <th>投保用户</th>
-            <th>商铺名称</th>
-            <th>支付状态</th>
-            <th>消费金额</th>
-            <th>刷卡金额</th>
-            <th>现金支付</th>
-            <th>消费时间</th>
-            <th>消费家属</th>
-            <th>操作员</th>
-            <th>打印</th>
+            <th width="20"><input class="checkboxCtrl" type="checkbox" group="checkCtrl"/></th>
+            <th width="100">消费流水号</th>
+            <th width="100">投保用户名</th>
+            <th width="100">投保用户</th>
+            <th width="200">商铺名称</th>
+            <th width="50">支付状态</th>
+            <th width="50">消费金额</th>
+            <th width="50">刷卡金额</th>
+            <th width="100">现金支付</th>
+            <th width="100">消费时间</th>
+            <th width="100">消费家属</th>
+            <th width="100">操作员</th>
+            <th width="50">打印</th>
         </tr>
         </thead>
         <tbody>
