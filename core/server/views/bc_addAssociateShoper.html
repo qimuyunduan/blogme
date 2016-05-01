@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader" >
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -9,12 +9,12 @@
                 <tr>
                     <td>
                         <span><label for="shoperID">商家编号</label></span>
-                        <input type="text" size="30" name="shoperID" id="shoperID">
+                        <input type="text" size="20" name="shoperID" id="shoperID">
                     </td>
 
                     <td>
                         <span><label for="shoperName">商家名称</label></span>
-                        <input type="text" size="30" name="shoperName" id="shoperName">
+                        <input type="text" size="25" name="shoperName" id="shoperName">
                     </td>
                 </tr>
 
@@ -30,27 +30,26 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent" >
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href=""><span>确定</span></a></li>
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
 
-            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">商家编号</th>
-            <th width="100">商家名称</th>
-            <th>联系人名称</th>
-            <th>联系人手机</th>
+            <th width="200">商家名称</th>
+            <th width="100">联系人名称</th>
+            <th width="100">联系人手机</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" name="checkCtrl"></td>
             <td>1</td>
             <td>bj0001</td>
             <td>1</td>

@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader" >
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -62,7 +62,7 @@
     </form>
 </div>
 <div class="divider"></div>
-<div class="pageContent" style="padding:5px">
+<div class="pageContent" >
 
     <div class="tabs">
         <div class="tabsHeader">
@@ -80,18 +80,18 @@
                         <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
                     </ul>
                 </div>
-                <table class="list" rel="" layoutH="50">
+                <table class="list" rel="" layoutH="50" width="100%">
                     <thead>
                     <tr>
-                        <th><input type="checkbox" class="checkboxCtrl" group="checkCtrl"></th>
-                        <th>商家流水号</th>
-                        <th>卡号</th>
-                        <th>商家名称</th>
-                        <th>状态</th>
-                        <th>刷卡金额</th>
-                        <th>现金支付</th>
-                        <th>消费时间</th>
-                        <th>操作员</th>
+                        <th width="20"><input type="checkbox" class="checkboxCtrl" group="checkCtrl"></th>
+                        <th width="100">商家流水号</th>
+                        <th width="150">卡号</th>
+                        <th width="150">商家名称</th>
+                        <th width="50">状态</th>
+                        <th width="100">刷卡金额</th>
+                        <th width="100">现金支付</th>
+                        <th width="150">消费时间</th>
+                        <th width="100">操作员</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -111,13 +111,13 @@
             </div>
 
             <div>
-                <table class="list" rel="" layoutH="50">
+                <table class="list" rel="" layoutH="50" width="100%">
                     <thead>
                     <tr>
-                        <th>审批时间</th>
-                        <th>审批人</th>
-                        <th>审批意见</th>
-                        <th>当前步骤</th>
+                        <th width="150">审批时间</th>
+                        <th width="100">审批人</th>
+                        <th width="100">审批意见</th>
+                        <th width="100">当前步骤</th>
                     </tr>
                     </thead>
                     <tbody>
