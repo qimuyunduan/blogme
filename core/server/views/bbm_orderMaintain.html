@@ -1,4 +1,4 @@
-<div class="pageHeader" style="border:1px #B8D0D6 solid">
+<div class="pageHeader">
     <form id="pagerForm" onsubmit="return divSearch(this, 'insureUser');" action="" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
@@ -9,22 +9,22 @@
                 <tr>
                     <td>
                         <span><label for="orderID">投保单号</label></span>
-                        <input type="text" size="30" name="orderID" id="orderID">
+                        <input type="text" size="20" name="orderID" id="orderID">
                     </td>
                     <td>
                         <span><label for="orderName">投保名称</label></span>
-                        <input type="text" size="30" name="orderName" id="orderName">
+                        <input type="text" size="20" name="orderName" id="orderName">
                     </td>
                     <td>
                         <span><label for="orderUnit">投保单位</label></span>
-                        <input type="text" name="orderUnit" size="30" id="orderUnit">
+                        <input type="text" name="orderUnit" size="20" id="orderUnit">
                     </td>
                     <td>
                         <span><label for="insureCompany">保险公司</label></span>
-                        <input type="text" name="insureCompany" id="insureCompany" size="30">
+                        <input type="text" name="insureCompany" id="insureCompany" size="20">
                     </td>
                     <td>
-                        <span><label for="state">状态</label></span>
+                        <span style="padding: 5px;float: left">状态</span>
                         <select name="state" id="state" class="combox">
                             <option value="0" selected>全部选择</option>
                             <option value="1">一等</option>
@@ -45,7 +45,7 @@
     </form>
 </div>
 
-<div class="pageContent" style="border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid">
+<div class="pageContent" >
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="bbm_addInsureOrder.html" target="dialog" minable="false" maxable="true"><span>添加</span></a></li>
@@ -63,27 +63,25 @@
 
         </ul>
     </div>
-    <table class="list"  layoutH="160" rel="ID">
+    <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <!--ToDo:宽度改写成百分比 以充满余下空间-->
-
-            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">投保单号</th>
             <th width="100">保单名称</th>
-            <th width="200">投保单位</th>
-            <th width="100">保险公司</th>
+            <th width="150">投保单位</th>
+            <th width="150">保险公司</th>
             <th width="100">联系人</th>
-            <th>联系电话</th>
-            <th>联系人手机</th>
+            <th width="100">联系电话</th>
+            <th width="100">联系人手机</th>
             <th width="100">投保日期</th>
-            <th>到期日期</th>
-            <th>状态</th>
+            <th width="100">到期日期</th>
+            <th width="50">状态</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" name="checkCtrl"></td>
             <td>1</td>
             <td>bj0001</td>
             <td>xxx诊所</td>

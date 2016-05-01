@@ -25,15 +25,16 @@
                     </td>
                     <td>
                         <span><label for="company">保险公司</label></span>
-                        <input type="text" name="company" id="company" size="25">
+                        <input type="text" name="company" id="company" size="30">
                     </td>
                     <td>
-                        <span><label for="state">状态</label></span >
-                        <select name="state" id="state" class="combox">
+                        <span style="float: left;padding: 5px">状态</span>
+                        <select name="state"  class="combox">
                             <option value="0" selected>全部选择</option>
                             <option value="1">一等</option>
                             <option value="2">二等</option>
                         </select>
+
                     </td>
                 </tr>
 
@@ -65,7 +66,7 @@
     <table class="list"  layoutH="116" rel="ID" width="100%">
         <thead>
         <tr>
-            <th width="50"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="10"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">投保单号</th>
             <th width="100">保单名称</th>
             <th width="200">投保单位</th>
@@ -78,7 +79,7 @@
         </thead>
         <tbody>
         <tr>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" name="checkCtrl"></td>
             <td>1</td>
             <td>bj0001</td>
             <td>xxx诊所</td>
