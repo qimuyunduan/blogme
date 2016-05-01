@@ -463,18 +463,19 @@ body { overflow:hidden;}
 
 /* Pages default */
 .page { display:block; overflow:hidden;float:left; width:100%;}
-.pageHeader { display:block; overflow:auto; margin-bottom:1px; padding:5px; border-style:solid; border-width:0 0 1px 0; position:relative;}
+.pageHeader { display:block; overflow:auto; margin-bottom:1px; padding:5px;  border:1px #B8D0D6 solid;position:relative;}
 .searchBar {}
 .searchBar ul.searchContent { display:block; overflow:hidden; height:25px;}
 .searchBar ul.searchContent li { float:left; display:block; overflow:hidden; width:300px; height:21px; padding:2px 0;}
 .searchBar select { padding-left:-5px}
 .searchBar label { float:left; width:80px; padding:0 5px; line-height:23px;}
 
-.searchBar .searchContent td{padding-right:20px; white-space:nowrap; height:25px}
+.searchBar .searchContent td{padding-right:5px; white-space:nowrap; height:25px}
+
 .searchBar .subBar { height:25px;}
 .searchBar .subBar ul { float:right;}
 .searchBar .subBar li { float:left; margin-left:5px;}
-.pageContent { display:block;overflow:auto;position:relative;}
+.pageContent { display:block;overflow:auto;position:relative;border-left:1px #B8D0D6 solid;border-right:1px #B8D0D6 solid}
 
 .dateRange input{width:72px;}
 .dateRange .limit {text-align: center; width: 15px; line-height:21px; }
