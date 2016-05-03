@@ -40,23 +40,17 @@ routes = function apiRoutes() {
 		};
 		res.render("index",data);
 	});
-	router.post("/index.html",function(req,res){
-		var data = {
-			title:"爱都信息管理平台"
-		};
-		console.log(req.body);
-		res.render("index",data);
-	});
+
 
     router.get("/authorized",function(req,res){
 
-		console.log(req.body);
+		console.log(req);
 		res.render("authorized");
 	});
 
 	router.get("/authorized.html",function(req,res){
 
-		console.log(req.body);
+		console.log(req);
 		res.render("authorized");
 
 
@@ -85,6 +79,10 @@ routes = function apiRoutes() {
 
 		res.json(JSON.stringify(gather));
 	});
+
+
+	///pc  routes
+
 
 	//routes for bbm modules
 	router.get("/bbm_assureUnit.html",function(req,res){
