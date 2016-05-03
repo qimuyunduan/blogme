@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var shrink = require('gulp-minify-css');
+var minifyCss = require('gulp-minify-css');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 //var webpack = require('gulp-webpack');
@@ -26,12 +26,21 @@ gulp.task('publish-js', function () {
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('publish-css', function () {
-    return gulp.src(['./core/server/views/css/app.css'])
-        .pipe(shrink())
+    return gulp.src(['./core/server/views/css/style.css','./core/server/views/css/core.css','./core/server/views/css/login.css'])
+        .pipe(concat('core.min.css'))
+		//.pipe(minifyCss())
         .pipe(rev())
         .pipe(gulp.dest('./core/server/views/css/'))
         .pipe(rev.manifest())//加上MD5后缀
-        .pipe(gulp.dest('../core/server/views/css'));
+        .pipe(gulp.dest('../core/server/views/css/'));
+});
+gulp.task('mini-css', function () {
+	return gulp.src(['./core/server/views/css/print.css'])
+		.pipe(minifyCss())
+		.pipe(rev())
+		.pipe(gulp.dest('./core/server/views/css/'))
+		.pipe(rev.manifest())//加上MD5后缀
+		.pipe(gulp.dest('../core/server/views/css/'));
 });
 gulp.task('clean',function() {
     del('./core/server/views/css/style-*.css','./public/js/*-*.js');
