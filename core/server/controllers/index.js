@@ -14,6 +14,7 @@ var _           = require('lodash'),
 	models              = require('../models'),
     controllers;
 
+var dataPrefix  = '<td><input type="checkbox" name="checkCtrl"></td>';
 
 controllers = {
 

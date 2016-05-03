@@ -15,8 +15,8 @@ body { margin:0; text-align:center; background:#FFF;background:url(../img/touch-
     background-size:100% }
 #login_header { display:block;  }
 #login form {position: absolute;top:0;left:0;right:0;bottom:0;margin:auto;width: 400px;height: 300px; font-size: 16px}
-#login form input[type=button] {width: 120px;height: 30px;background: url(../img/loginButton.png) ;color: #FFF;border: none}
-#login form input[type=button]:hover{transform: scale(1.2,1.2);-ms-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-webkit-transform:scale(1.2,1.2);-o-transform:scale(1.2,1.2);}
+#login form input[type=button] {width: 120px;height: 30px;vertical-align:middle;background: url(../img/loginButton.png) ;color: #FFF;border: none}
+#login form input[type=button]:hover{transform: scale(1.1,1.1);-ms-transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);-o-transform:scale(1.1,1.1);}
 #login form .unit{padding-bottom: 20px}
 #login form .unit span.leftToRight{padding-right: 20px}
 #login form .unit input{background: transparent; border: 1px solid #FFF;padding:5px;border-radius:5px;-webkit-border-radius: 5px;
@@ -28,4 +28,4 @@ body { margin:0; text-align:center; background:#FFF;background:url(../img/touch-
 .navList li { float:left; display:block; margin-left:-1px; padding:0 10px;}
 .navList a { display:block; white-space:nowrap; line-height:21px; text-decoration:none;}
 .navList a:hover { text-decoration:underline;}
-.footer { position: absolute;bottom:0;display:block; margin-bottom:30px; margin-left:50px; color:#666; text-align:center;}
+.footer { position: absolute;bottom:0;display:block; margin-bottom:10px; margin-left:50px; color:#666; text-align:center;}

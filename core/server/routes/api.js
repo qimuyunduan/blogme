@@ -46,9 +46,8 @@ routes = function apiRoutes() {
 
 		console.log(req.body);
 		res.render("authorized");
-
-
 	});
+
 	router.get("/authorized.html",function(req,res){
 
 		console.log(req.body);
@@ -80,10 +79,15 @@ routes = function apiRoutes() {
 
 		res.json(JSON.stringify(gather));
 	});
-	router.del("/authorized",function(req,res){
-		console.log("render authorized.hbs...");
+	router.get("/bbm_assureUnit.html",function(req,res){
 		console.log(req.body);
-		res.send("ok got it! delete"+req.body);
+		res.render("bbm_assureUnit");
+
+	});
+	router.get("/bbm_shopGroup.html",function(req,res){
+		console.log(req.body);
+		var data={tableData:"<td>segeg</td><td>gegeg</td><td>tjrj</td><td>ryeye</td><td>kikik</td><td>erwrew</td><td>QWRWR</td>"};
+		res.render("bbm_shopGroup",data);
 
 	});
 
