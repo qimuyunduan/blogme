@@ -1,3 +1,6 @@
+<style>
+    table td input{margin-left: -20px;vertical-align: middle}
+</style>
 <div class="pageContent">
     <form action="" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this)">
         <div class="pageFormContent" layoutH="58">
@@ -10,6 +13,204 @@
             <div class="unit">
                 <label for="roleName">角色名称:</label>
                 <input type="text" name="roleName" size="40" id="roleName" class="required">
+            </div>
+            <div class="unit">
+                <label>业务基础维护:</label>
+
+                <table  width="98%">
+                    <tr>
+                        <td width="100">
+                            <label for="bbm_assureUnit">投保单位</label>
+
+                            <input type="checkbox"  id="bbm_assureUnit" >
+                        </td>
+                        <td width="100">
+                            <label for="bbm_shoperGroup">商家集团</label>
+                            <input type="checkbox"  id="bbm_shoperGroup" >
+                        </td>
+                        <td width="100">
+                            <label for="bbm_sysUser">系统用户</label>
+                            <input type="checkbox"  id="bbm_sysUser">
+                        </td>
+                        <td width="100">
+                            <label for="shoperManage">商家管理</label>
+                            <input type="checkbox" id="shoperManage">
+                        </td>
+                        <td width="150">
+                            <label for="bbm_assureOrder">保单信息维护</label>
+                            <input type="checkbox" id="bbm_assureOrder">
+                        </td>
+                        <td width="100">
+                            <label for="shopManage">商铺管理</label>
+                            <input type="checkbox" id="shopManage">
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td width="100">
+                            <label for="assureCompany">保险公司</label>
+                            <input type="checkbox" id="assureCompany">
+                        </td>
+                        <td width="100">
+                            <label for="bbm_assureUser">投保用户</label>
+                            <input type="checkbox" id="bbm_assureUser">
+                        </td>
+                        <td width="100">
+                            <label for="bbm_drugCategory">药品类别</label>
+                            <input type="checkbox" id="bbm_drugCategory">
+                        </td>
+                        <td width="100">
+                            <label for="bbm_subCompany">分公司维护</label>
+                            <input type="checkbox" id="bbm_subCompany">
+                        </td>
+                        <td>
+                            <label for="bbm_assureCompanyDic">公司业务字典</label>
+                            <input type="checkbox" id="bbm_assureCompanyDic">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>业务操作:</label>
+
+                <table width="98%">
+                    <tr>
+                        <td>
+                            <label for="bc_recharge">保单充值</label>
+                            <input type="checkbox" id="bc_recharge">
+                        </td>
+                        <td>
+                            <label for="bc_signContract">商家签约</label>
+                            <input type="checkbox" id="bc_signContract">
+                        </td>
+                        <td>
+                            <label for="bc_homeUser">家庭用户</label>
+                            <input type="checkbox" id="bc_homeUser">
+                        </td>
+                        <td>
+                            <label for="bc_yiliao">医疗消费</label>
+                            <input type="checkbox" id="bc_yiliao">
+                        </td>
+                        <td>
+                            <label for="bc_orderManage">订单管理</label>
+                            <input type="checkbox" id="bc_orderManage">
+                        </td>
+                        <td>
+                            <label for="bc_specialOrder">理赔单管理</label>
+                            <input type="checkbox" id="bc_specialOrder">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>对账管理:</label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="bm_today">今日账单</label>
+                            <input type="checkbox" id="bm_today">
+                        </td>
+                        <td>
+                            <label for="bm_currentMonth">本月账单</label>
+                            <input type="checkbox" id="bm_currentMonth">
+                        </td>
+                        <td>
+                            <label for="bm_history">历史账单</label>
+                            <input type="checkbox" id="bm_history">
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>移动端维护:</label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="mm_shopConfig">手机端商铺配置</label>
+                            <input type="checkbox" id="mm_shopConfig">
+                        </td>
+                        <td>
+                            <label for="mm_cityAD">城市广告</label>
+                            <input type="checkbox" id="mm_cityAD">
+                        </td>
+                        <td>
+                            <label for="mm_versionManage">客户端版本管理</label>
+                            <input type="checkbox" id="mm_versionManage">
+                        </td>
+                        <td>
+                            <label for="mm_feedback">意见反馈</label>
+                            <input type="checkbox"id="mm_feedback">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>权限系统:</label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="ps_menuList">菜单列表</label>
+                            <input type="checkbox" id="ps_menuList">
+                        </td>
+                        <td>
+                            <label for="ps_roleManage">角色管理</label>
+                            <input type="checkbox" id="ps_roleManage">
+                        </td>
+                        <td>
+                            <label for="ps_userType">用户类型授权</label>
+                            <input type="checkbox" id="ps_userType">
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>参数管理</label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="pm_list">参数列表</label>
+                            <input type="checkbox" id="pm_list">
+                        </td>
+                        <td>
+                            <label for="pm_manage">参数管理</label>
+                            <input type="checkbox" id="pm_manage">
+                        </td>
+                        <td>
+                            <label for="pm_cache">缓存列表</label>
+                            <input type="checkbox" id="pm_cache">
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <div class="divider"></div>
+            <div class="unit">
+                <label>其他模块:</label>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="om_log">操作日志</label>
+                            <input type="checkbox" id="om_log">
+                        </td>
+                        <td>
+                            <label for="om_fileManage">文件管理</label>
+                            <input type="checkbox" id="om_fileManage">
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         </div>

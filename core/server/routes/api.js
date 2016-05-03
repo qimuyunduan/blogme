@@ -34,6 +34,12 @@ routes = function apiRoutes() {
 		};
 		res.render("index",data);
 	});//  写路由时要注意把.html包含在内
+	router.get("/index.html",function(req,res){
+		var data = {
+			title:"爱都信息管理平台"
+		};
+		res.render("index",data);
+	});
 	router.post("/index.html",function(req,res){
 		var data = {
 			title:"爱都信息管理平台"
@@ -79,15 +85,69 @@ routes = function apiRoutes() {
 
 		res.json(JSON.stringify(gather));
 	});
+
+	//routes for bbm modules
 	router.get("/bbm_assureUnit.html",function(req,res){
 		console.log(req.body);
 		res.render("bbm_assureUnit");
 
 	});
-	router.get("/bbm_shopGroup.html",function(req,res){
+
+	//routes for bbm modules
+
+
+
+
+
+
+	//routes for bv modules
+
+
+
+
+	//routes for bm modules
+
+
+
+
+	//routes for mm modules
+
+
+
+
+
+	//routes for ps modules
+
+
+
+
+
+	//routes for pm modules
+
+
+
+
+
+
+	//routes for om modules
+	router.get("/ps_roleManage.html",function(req,res){
 		console.log(req.body);
-		var data={tableData:"<td>segeg</td><td>gegeg</td><td>tjrj</td><td>ryeye</td><td>kikik</td><td>erwrew</td><td>QWRWR</td>"};
-		res.render("bbm_shopGroup",data);
+		res.render("ps_roleManage.html");
+
+	});
+	router.get("/ps_addRole.html",function(req,res){
+		console.log(req.body);
+		res.render("ps_addRole.html");
+
+	});
+	router.get("/ps_userAuthorize.html",function(req,res){
+		console.log(req.body);
+		res.render("ps_userAuthorize.html");
+
+	});
+	router.get("/ps_addUserClass.html",function(req,res){
+		console.log(req.body);
+		res.render("ps_addUserClass.html");
 
 	});
 
