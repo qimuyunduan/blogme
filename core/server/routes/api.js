@@ -24,33 +24,24 @@ routes = function apiRoutes() {
 
 	router.get("/",function(req,res){
 		var data = {
-			title:"风险管理平台"
+			title:"爱都信息管理平台"
 		};
 		res.render("index",data);
 	});
 	router.get("/index",function(req,res){
 		var data = {
-			title:"风险管理平台"
+			title:"爱都信息管理平台"
 		};
 		res.render("index",data);
 	});//  写路由时要注意把.html包含在内
 	router.post("/index.html",function(req,res){
 		var data = {
-			title:"风险管理平台"
+			title:"爱都信息管理平台"
 		};
 		console.log(req.body);
 		res.render("index",data);
 	});
-	router.get("/authorized_copy",function(req,res){
 
-		res.render("authorized_copy");
-	});
-
-
-
-	router.get("/demo_page1",function(req,res){
-		res.render("demo_page1");
-	});
     router.get("/authorized",function(req,res){
 
 		console.log(req.body);

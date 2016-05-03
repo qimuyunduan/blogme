@@ -1,18 +1,19 @@
 
 'use strict';
 
-var gulp = require('gulp');
-var del = require('del');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var minifyCss = require('gulp-minify-css');
-var watch = require('gulp-watch');
-var browserSync = require('browser-sync').create();
-//var webpack = require('gulp-webpack');
-//var config = require('./webpack.config');
-var rev = require('gulp-rev');////- 对文件名加MD5后缀
-var revCollector = require('gulp-rev-collector');//- 路径替换
-var runSequence = require('run-sequence');//Run a series of dependent gulp tasks in order
+var      gulp   = require('gulp'),
+	     del    = require('del'),
+      uglify    = require('gulp-uglify'),
+      concat    = require('gulp-concat'),
+	  minifyCss = require('gulp-minify-css'),
+	minifyImage = require('gulp-imagemin'),
+      watch     = require('gulp-watch'),
+	browserSync = require('browser-sync').create(),
+//      webpack = require('gulp-webpack');
+//       config = require('./webpack.config');
+           rev  = require('gulp-rev'),////- 对文件名加MD5后缀
+   revCollector = require('gulp-rev-collector'),//- 路径替换
+    runSequence = require('run-sequence');//Run a series of dependent gulp tasks in order
 
 
 
@@ -42,6 +43,15 @@ gulp.task('mini-css', function () {
 		.pipe(rev.manifest())//加上MD5后缀
 		.pipe(gulp.dest('../core/server/views/css/'));
 });
+gulp.task('mini-image', function () {
+	return gulp.src(['./core/server/views/img/touch.png'])
+		.pipe(minifyImage())
+		.pipe(rev())
+		.pipe(gulp.dest('./core/server/views/img/'))
+		.pipe(rev.manifest())//加上MD5后缀
+		.pipe(gulp.dest('../core/server/views/img/'));
+});
+
 gulp.task('clean',function() {
     del('./core/server/views/css/style-*.css','./public/js/*-*.js');
 });

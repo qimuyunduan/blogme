@@ -49,8 +49,8 @@ setupMiddleware  = function setupMiddleware(App) {
 
 
     // Static assets
-	App.use('/', express.static(path.join(corePath, '/server/views'), {maxAge: utils.ONE_YEAR_S}));
 	App.use('/js',express.static(path.join(corePath,'/server/views/js')));
+	App.use('/css',express.static(path.join(corePath,'/server/views/css')));
 	App.use('/themes',express.static(path.join(corePath,'/server/views/themes')));
 	App.use('/img',express.static(path.join(corePath,'/server/views/img')));
 	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify')));

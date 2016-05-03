@@ -11,7 +11,7 @@ table, caption, tbody, tfoot, thead, tr, th, td
 
 { padding:0; margin:0; line-height:100%; font-family:Arial, sans-serif;font-size: 14px}
 
-body { margin:0; text-align:center; background:#FFF;background:url(../img/touch.png) no-repeat;
+body { margin:0; text-align:center; background:#FFF;background:url(../img/touch-67e247919d.png) no-repeat;
     background-size:100% }
 #login_header { display:block;  }
 #login form {position: absolute;top:0;left:0;right:0;bottom:0;margin:auto;width: 400px;height: 300px; font-size: 16px}
@@ -28,4 +28,4 @@ body { margin:0; text-align:center; background:#FFF;background:url(../img/touch.
 .navList li { float:left; display:block; margin-left:-1px; padding:0 10px;}
 .navList a { display:block; white-space:nowrap; line-height:21px; text-decoration:none;}
 .navList a:hover { text-decoration:underline;}
-.footer { clear:both;position: fixed; display:block; margin-bottom:20px; padding:10px;  color:#666; text-align:center;}
+.footer { position: absolute;bottom:0;display:block; margin-bottom:30px; margin-left:50px; color:#666; text-align:center;}
