@@ -14,14 +14,6 @@
             <h1 class="login_logo">
                 <a href="javascript:;"><img src="themes/default/images/login_logo.png"/></a>
             </h1>
-            <div class="login_headerContent">
-                <div class="navList">
-                    <ul>
-                        <li><a  onclick="setHome(this,window.location)">设为首页</a></li>
-                        <li><a  onclick="addFavorite()">加入收藏</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
         <form method="post" action="authorized.html" class="pageForm required-validate"
               onsubmit="return validateCallback(this, dialogAjaxDone)">
@@ -29,12 +21,12 @@
 
                 <div class="unit">
                     <span>用户名：</span>
-                    <input id="userName" type="text" name="userName" size="30" minlength="6" maxlength="20"
+                    <input id="userName" type="text" name="userName" size="30" minlength="2" maxlength="6"
                            class="required"/>
                 </div>
                 <div class="unit">
                     <span class="leftToRight">密码: </span>
-                    <input id="pwd" type="password" name="pwd" size="30" class="required alphanumeric"/>
+                    <input id="pwd" type="password" name="pwd" size="30" minlength="6" maxlength="20" class="required alphanumeric"/>
                 </div>
                 <div>
                     <span>记住用户名:</span>
