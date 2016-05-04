@@ -2,7 +2,7 @@
 <html>
 <head>
     {{>head}}
-    <link rel="stylesheet" href="css/core-8b57ac6a66.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/core-bcfb454107.min.css" type="text/css" media="screen">
     <link href="css/print-9c7162717a.css" rel="stylesheet" type="text/css" media="print"/>
     <link href="uploadify/css/uploadify.css" rel="stylesheet" type="text/css" media="screen"/>
     <!--[if IE]>
@@ -29,7 +29,7 @@
     <script type="text/javascript">
         $(function () {
             DWZ.init("common/dwz.frag.xml", {
-                loginUrl:"index.html",	// 跳到登录页面
+                loginUrl: "index.html",
                 statusCode: {ok: 200, error: 300, timeout: 301}, //【可选】
                 pageInfo: {
                     pageNum: "pageNum",
@@ -42,7 +42,7 @@
                 debug: false,	// 调试模式 【true|false】
                 callback: function () {
                     initEnv();
-//                    $("#themeList").theme({themeBase: "themes"}); // themeBase 相对于index页面的主题base路径
+
                 }
             });
         });
@@ -50,19 +50,19 @@
 </head>
 
 <body>
-    <div id="layout">
-    <div id="header" >
+<div id="layout">
+    <div id="header">
         <div class="headerNav">
             <ul class="nav">
-                <li><a href="myInfo.html" target="dialog" width="600">我的资料</a></li>
-                <li><a href="changePwd.html" target="dialog" width="600">修改密码</a></li>
+                <li><span>{{{dateTime}}}</span></li>
+                <li><a href="myInfo.html" target="dialog">我的资料</a></li>
+                <li><a href="changePwd.html" target="dialog">修改密码</a></li>
                 <li><a href="index.html">退出</a></li>
             </ul>
         </div>
         <!-- navMenu -->
     </div>
-
-    <div id="leftside" >
+    <div id="leftside">
         <div id="sidebar_s">
             <div class="collapse">
                 <div class="toggleCollapse">
@@ -85,44 +85,48 @@
                     <ul class="tree treeFolder">
                         <li><a>业务基础维护</a>
                             <ul>
-                                <li><a href="bbm_assureUnit.html" target="navTab" rel=""  >投保单位</a></li>
-                                <li><a href="bbm_shopGroup.html" target="navTab" rel="" >商家集团</a></li>
-                                <li><a href="bbm_sysUser.html" target="navTab" rel="" >系统用户</a></li>
-                                <li><a href="bbm_insureCompanyDic.html" target="navTab" rel="" >保险公司业务字典</a></li>
-                                <li><a href="bbm_shoperManage.html" target="navTab" rel="" >商家管理</a></li>
-                                <li><a href="bbm_shopManage.html" target="navTab" rel="" >商铺管理</a></li>
-                                <li><a href="bbm_insureCompany.html" target="navTab" rel="" >保险公司</a></li>
-                                <li><a href="bbm_orderMaintain.html" target="navTab" rel="" >保单信息维护</a></li>
-                                <li><a href="bbm_insureUser.html" target="navTab" rel="" >投保用户</a></li>
-                                <li><a href="bbm_drugCategory.html" target="navTab" rel="" >药品类别</a></li>
-                                <li><a href="bbm_subCompany.html" target="navTab" rel="" >分公司维护</a></li>
+                                <li><a href="bbm_assureUnit.html" target="navTab" rel="bbm_assureUnit">投保单位</a></li>
+                                <li><a href="bbm_shopGroup.html" target="navTab" rel="bbm_shopGroup">商家集团</a></li>
+                                <li><a href="bbm_sysUser.html" target="navTab" rel="bbm_sysUser">系统用户</a></li>
+                                <li><a href="bbm_insureCompanyDic.html" target="navTab" rel="bbm_insureCompanyDic">保险公司业务字典</a>
+                                </li>
+                                <li><a href="bbm_shoperManage.html" target="navTab" rel="bbm_shoperManage">商家管理</a></li>
+                                <li><a href="bbm_shopManage.html" target="navTab" rel="bbm_shopManage">商铺管理</a></li>
+                                <li><a href="bbm_insureCompany.html" target="navTab" rel="bbm_insureCompany">保险公司</a>
+                                </li>
+                                <li><a href="bbm_orderMaintain.html" target="navTab" rel="bbm_orderMaintain">保单信息维护</a>
+                                </li>
+                                <li><a href="bbm_insureUser.html" target="navTab" rel="bbm_insureUser">投保用户</a></li>
+                                <li><a href="bbm_drugCategory.html" target="navTab" rel="bbm_drugCategory">药品类别</a></li>
+                                <li><a href="bbm_subCompany.html" target="navTab" rel="bbm_subCompany">分公司维护</a></li>
 
                             </ul>
                         </li>
                         <li>
                             <a>业务操作</a>
                             <ul>
-                                <li><a href="bc_recharge.html" target="navTab" rel="">保单充值</a></li>
-                                <li><a href="bc_signContract.html" target="navTab" rel="">商家签约</a></li>
-                                <li><a href="bc_homeUser.html" target="navTab" rel="">家庭用户</a></li>
-                                <li><a href="bc_yiliaofare.html" target="navTab" rel="">医疗消费</a></li>
-                                <li><a href="bc_orderManage.html" target="navTab" rel="">订单管理</a></li>
-                                <li><a href="bc_specialOrder.html" target="navTab" rel="">理赔单管理</a></li>
+                                <li><a href="bc_recharge.html" target="navTab" rel="bc_recharge">保单充值</a></li>
+                                <li><a href="bc_signContract.html" target="navTab" rel="bc_signContract">商家签约</a></li>
+                                <li><a href="bc_homeUser.html" target="navTab" rel="bc_homeUser">家庭用户</a></li>
+                                <li><a href="bc_yiliaofare.html" target="navTab" rel="bc_yiliaofare">医疗消费</a></li>
+                                <li><a href="bc_orderManage.html" target="navTab" rel="bc_orderManage">订单管理</a></li>
+                                <li><a href="bc_specialOrder.html" target="navTab" rel="bc_specialOrder">理赔单管理</a></li>
                             </ul>
                         </li>
                         <li><a>对账管理</a>
                             <ul>
-                                <li><a href="bm_todayBill.html" target="navTab" rel="">今日账单</a></li>
-                                <li><a href="bm_currentMonth.html" target="navTab" rel="">本月账单</a></li>
-                                <li><a href="bm_historyBill.html" target="navTab" rel="">历史账单</a></li>
+                                <li><a href="bm_todayBill.html" target="navTab" rel="bm_todayBill">今日账单</a></li>
+                                <li><a href="bm_currentMonth.html" target="navTab" rel="bm_currentMonth">本月账单</a></li>
+                                <li><a href="bm_historyBill.html" target="navTab" rel="bm_historyBill">历史账单</a></li>
                             </ul>
                         </li>
                         <li><a>移动端维护</a>
                             <ul>
-                                <li><a href="mm_shopConfig.html" target="navTab" rel="">手机端商铺配置</a></li>
-                                <li><a href="mm_cityAD.html" target="navTab" rel="">城市广告</a></li>
-                                <li><a href="mm_versionManage.html" target="navTab" rel="">客户端版本管理</a></li>
-                                <li><a href="mm_maintain.html" target="navTab" rel="">意见反馈</a></li>
+                                <li><a href="mm_shopConfig.html" target="navTab" rel="mm_shopConfig">手机端商铺配置</a></li>
+                                <li><a href="mm_cityAD.html" target="navTab" rel="mm_cityAD">城市广告</a></li>
+                                <li><a href="mm_versionManage.html" target="navTab" rel="mm_versionManage">客户端版本管理</a>
+                                </li>
+                                <li><a href="mm_maintain.html" target="navTab" rel="mm_maintain">意见反馈</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -137,26 +141,27 @@
                         <li>
                             <a>权限系统</a>
                             <ul>
-                                <li><a href="ps_menuManage.html" target="navTab" rel="">菜单列表</a></li>
-                                <li><a href="ps_roleManage.html" target="navTab" rel="">角色管理</a></li>
-                                <li><a href="ps_userAuthorize.html" target="navTab" rel="">用户类型授权</a></li>
+                                <li><a href="ps_menuManage.html" target="navTab" rel="ps_menuManage">菜单列表</a></li>
+                                <li><a href="ps_roleManage.html" target="navTab" rel="ps_roleManage">角色管理</a></li>
+                                <li><a href="ps_userAuthorize.html" target="navTab" rel="ps_userAuthorize">用户类型授权</a>
+                                </li>
                             </ul>
                         </li>
 
                         <li>
                             <a>参数管理</a>
                             <ul>
-                                <li><a href="pm_paramList.html" target="navTab" rel="" >参数列表</a></li>
-                                <li><a href="pm_paramManage.html" target="navTab" rel="" >参数管理</a></li>
-                                <li><a href="pm_cacheList.html" target="navTab" rel="" >缓存列表</a></li>
+                                <li><a href="pm_paramList.html" target="navTab" rel="pm_paramList">参数列表</a></li>
+                                <li><a href="pm_paramManage.html" target="navTab" rel="pm_paramManage">参数管理</a></li>
+                                <li><a href="pm_cacheList.html" target="navTab" rel="pm_cacheList">缓存列表</a></li>
                             </ul>
                         </li>
 
                         <li>
                             <a>其他模块</a>
                             <ul>
-                                <li><a href="om_log.html" target="navTab" rel="">操作日志</a></li>
-                                <li><a href="om_fileManage.html" target="navTab" rel="">文件管理</a></li>
+                                <li><a href="om_log.html" target="navTab" rel="om_log">操作日志</a></li>
+                                <li><a href="om_fileManage.html" target="navTab" rel="om_fileManage">文件管理</a></li>
                             </ul>
                         </li>
 
@@ -166,29 +171,27 @@
         </div>
     </div>
 
-        <div id="container">
-            <div id="navTab" class="tabsPage">
-                <div class="tabsPageHeader">
-                    <div class="tabsPageHeaderContent">
-                        <ul class="navTab-tab">
-                            <li tabid="main" class="main"><a href="javascript:;"><span><span class="home_icon">我的主页</span></span></a></li>
-                        </ul>
-                    </div>
-                    <!--<div class="tabsLeft">left</div>&lt;!&ndash; 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" &ndash;&gt;-->
-                    <!--<div class="tabsRight">right</div>&lt;!&ndash; 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" &ndash;&gt;-->
-                    <div class="tabsMore">more</div>
+    <div id="container">
+        <div id="navTab" class="tabsPage">
+            <div class="tabsPageHeader">
+                <div class="tabsPageHeaderContent">
+                    <ul class="navTab-tab">
+                        <li tabid="main" class="main"><a href="javascript:;"><span class="home_icon" ></span><span>最新消息</span></a></li>
+                    </ul>
                 </div>
-                <ul class="tabsMoreList">
-                    <li><a href="javascript:;">我的主页</a></li>
-                </ul>
+                <div class="tabsMore">more</div>
+            </div>
+            <ul class="tabsMoreList">
+                <li><a href="javascript:;">最新消息</a></li>
+            </ul>
             <div class="navTab-panel tabsPageContent layoutBox">
-                <div class="page unitBox">
-
+                <div class="mRight">
+                    <h2>公司最新消息:</h2>
                 </div>
             </div>
-
         </div>
     </div>
+
 </div>
 {{>footer}}
 </body>

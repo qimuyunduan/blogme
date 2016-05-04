@@ -3,7 +3,8 @@
 var express     = require('express'),
     api         = require('../api'),
 	controller  = require('../controllers'),
-    routes;
+	moment      = require('../utils/moment'),
+	routes;
 
 
 function constructOptions(request){
@@ -43,8 +44,8 @@ routes = function apiRoutes() {
 	});
 	router.get("/authorized",function(req,res){
 
-		console.log(req);
-		res.render("authorized");
+		var dateTime = moment.localDateAndTime;
+		res.render("authorized",{dateTime:dateTime});
 	});
 
     router.post("/authorized",function(req,res){
