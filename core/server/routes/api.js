@@ -81,7 +81,8 @@ routes = function apiRoutes() {
 
 
 	router.get("/myInfo.html",function(req,res){
-			res.render("myInfo");
+		var data = {userName:"fwege",userRealName:"gewgg",email:"gewgweg",cellphone:"hrretw35234",userState:"343fef",unit:"bbrrag"};
+			res.render("myInfo",data);
 	});
 
 	//routes for bbm modules
