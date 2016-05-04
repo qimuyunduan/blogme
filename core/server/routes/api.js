@@ -237,7 +237,7 @@ routes = function apiRoutes() {
 	router.get("/bbm_queryChangeRecord.html",function(req,res){
 		res.render("bbm_queryChangeRecord");
 	});
-	router.get("/bbm_shjs.html",function(req,res){
+	router.get("/bbm_assureUnit.html",function(req,res){
 		res.render("bbm_shjs");
 	});
 
@@ -269,8 +269,8 @@ routes = function apiRoutes() {
 		res.render("bbm_sysUser");
 	});
 
-	router.get("/bbm_updateInsureUser.html",function(req,res){
-		res.render("bbm_updateInsureUser");
+	router.get("/bbm_addInsureUnit.html",function(req,res){
+		res.render("bbm_addInsureUnit");
 	});
 
 	router.get("/bbm_uploadFile.html",function(req,res){

@@ -796,9 +796,6 @@ a.btnAttach{background-position: -183px 0}
 .viewInfo dl.nowrap dd {width: auto;}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
-
-
-.pageContent .leftTree{float:left; display:block; overflow:auto; width:240px;  line-height:21px; background:#fff}
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}
 
@@ -826,10 +823,4 @@ body { margin:0; text-align:center; background:#FFF;background:url(../img/touch-
 #login form .unit input{background: transparent; border: 1px solid #FFF;padding:5px;border-radius:5px;-webkit-border-radius: 5px;
     -moz-border-radius: 5px;height: 30px;width: 200px;}
 .login_logo { float:left;margin-left: 50px;margin-top: 30px}
-.login_headerContent { float:right; display:block; width:280px; height:80px;margin-top: 50px}
-.navList { display:block; overflow:hidden; height:20px; padding-left:30px;}
-.navList ul { float:left; display:block; overflow:hidden;}
-.navList li { float:left; display:block; margin-left:-1px; padding:0 10px;}
-.navList a { display:block; white-space:nowrap; line-height:21px; text-decoration:none;}
-.navList a:hover { text-decoration:underline;}
 .footer { position: absolute;bottom:0;display:block; margin-bottom:10px; margin-left:50px; color:#666; text-align:center;}

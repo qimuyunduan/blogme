@@ -600,8 +600,5 @@ a.btnAttach{background-position: -183px 0}
 .viewInfo dl.nowrap dd {width: auto;}
 .dialogContent .viewInfo {background-color:#fff}
 .pageContent .panel {clear:both; margin: 5px}
-
-
-.pageContent .leftTree{float:left; display:block; overflow:auto; width:240px;  line-height:21px; background:#fff}
 .sortDragPlaceholder {border:1px dashed #ccc;}
 #printBox {display:none}
