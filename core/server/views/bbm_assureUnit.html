@@ -1,20 +1,16 @@
 <div>
     <div class="pageHeader">
-        <form id="pagerForm" onsubmit="return divSearch(this, 'jbsxBox');" action="" method="post">
-            <input type="hidden" name="pageNum" value="1" />
-            <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
-            <input type="hidden" name="orderField" value="${param.orderField}" />
-            <input type="hidden" name="orderDirection" value="${param.orderDirection}" />
+        <form id="pagerForm">
             <div class="searchBar">
                 <table class="searchContent">
                     <tr>
                         <td>
-                            <span><label for="assureNumber">编号</label></span>
-                            <input type="text" size="30" name="assureNumber" id="assureNumber">
+                            <span><label for="insureNumber">编号</label></span>
+                            <input type="text" size="30" name="insureNumber" id="insureNumber">
                         </td>
                         <td>
-                            <span><label for="assureUnit">投保单位</label></span>
-                            <input type="text" size="30" name="assureUnit" id="assureUnit">
+                            <span><label for="insureUnit">投保单位</label></span>
+                            <input type="text" size="30" name="insureUnit" id="insureUnit">
                         </td>
                     </tr>
 
@@ -22,7 +18,7 @@
                 <div class="subBar">
                     <ul>
                         <li>
-                            <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                            <div class="buttonActive"><div class="buttonContent"><button type="button" onclick="queryRecords('pagerForm','bbm_assureUnit')">检索</button></div></div>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +65,7 @@
                     <option value="150">150</option>
                     <option value="200">200</option>
                 </select>
-                <span>条，共${totalCount}条</span>
+                <span>条，共{{totalCount}}条</span>
             </div>
             <div class="pagination" rel="ID" totalCount="200" numPerPage="20" pageNumShown="5" currentPage="1"></div>
         </div>

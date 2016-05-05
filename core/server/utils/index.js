@@ -1,5 +1,6 @@
 var _            = require('lodash'),
 	getFileNames = require('./getFileNames'),
+	moment       = require('./moment'),
     utils,
     getRandomInt;
 
@@ -23,7 +24,7 @@ utils = {
 
 	//utils functions
 	getFileNames:getFileNames,
-
+	moment:moment,
     /**
      * Return a unique identifier with the given `len`.
      *

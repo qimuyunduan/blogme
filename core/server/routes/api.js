@@ -3,7 +3,7 @@
 var express     = require('express'),
     api         = require('../api'),
 	controller  = require('../controllers'),
-	moment      = require('../utils/moment'),
+	utils      = require('../utils'),
 	routes;
 
 
@@ -44,7 +44,7 @@ routes = function apiRoutes() {
 	});
 	router.get("/authorized",function(req,res){
 
-		var dateTime = moment.localDateAndTime;
+		var dateTime = utils.moment.localDateAndTime;
 		res.render("authorized",{dateTime:dateTime});
 	});
 
@@ -176,6 +176,16 @@ routes = function apiRoutes() {
 		res.render("bbm_assureUnit");
 		
 	});
+	router.get("/bbm_assureUnit",function(req,res){
+		console.log(req.query.insureNumber);
+		console.log(req.query.insureUnit);
+		res.render("bbm_assureUnit");
+
+	});
+
+
+
+
 
 	router.get("/bbm_attachmentManage.html",function(req,res){
 
