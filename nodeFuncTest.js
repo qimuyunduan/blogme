@@ -16,4 +16,7 @@ var _ = require('lodash'),
 
 
 
-console.log("2016年5月4日".substring(5));
+var mystring = "insureNumber=agewg&insureUnit=";
+var myarray = mystring.split(/[=&]/);
+console.log(myarray);
+console.log(myarray.length);

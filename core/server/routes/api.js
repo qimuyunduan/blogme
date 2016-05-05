@@ -179,8 +179,8 @@ routes = function apiRoutes() {
 	router.get("/bbm_assureUnit",function(req,res){
 		console.log(req.query.insureNumber);
 		console.log(req.query.insureUnit);
-		res.render("bbm_assureUnit");
-
+		//res.render("bbm_assureUnit");
+		res.send("get it");
 	});
 
 
