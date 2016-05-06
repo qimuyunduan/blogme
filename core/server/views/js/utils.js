@@ -197,17 +197,18 @@ function deleteRecords(formID, url) {
 
 //dispose user login
 function login(formID) {
-	if (antiSQL(formID, 2)) {
-		$.ajax({
-			type: "POST",
-			url: url,
-			data: $('#' + formID).serialize(),
-			async: false,
-			error: function () {
-				alertMsg.error("...");
-			}
-		});
-	}
+
+	//alert(""+$('#' + formID).serialize);
+	$.ajax({
+		type: "POST",
+		url: "index",
+		//data: $('#' + formID).serializeArray(),
+		async: false,
+		error: function () {
+			alertMsg.error("...");
+		}
+	});
+
 }
 
 

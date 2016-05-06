@@ -15,12 +15,12 @@
                 <a href="javascript:;"><img src="themes/default/images/login_logo.png"/></a>
             </h1>
         </div>
-        <form  class="pageForm required-validate">
+        <form  class="pageForm required-validate" id="loginForm">
             <div class="pageFormContent" layoutH="58">
 
                 <div class="unit">
                     <span>用户名：</span>
-                    <input id="userName" type="text" name="userName" size="30" minlength="2" maxlength="6"
+                    <input id="userName" type="text" name="userName" size="30" minlength="2" maxlength="10"
                            class="required"/>
                 </div>
                 <div class="unit">
@@ -30,7 +30,7 @@
                 <div>
                     <span>记住用户名:</span>
                     <input type="checkbox" name="rememberName" checked>
-                    <input type="button" onclick="login()">
+                    <input type="button" onclick="login('loginForm')">
                 </div>
             </div>
 

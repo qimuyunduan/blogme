@@ -14,6 +14,8 @@ var bodyParser       = require('body-parser'),
     spamPrevention   = require('./spam-prevention'),
     staticTheme      = require('./static-theme'),
     uncapitalise     = require('./uncapitalise'),
+	cookieParser     = require('cookie-parser'),
+	session          = require('express-session'),
     middleware,
     setupMiddleware;
 
@@ -82,7 +84,13 @@ setupMiddleware  = function setupMiddleware(App) {
     App.use(cacheControl('public'));
 
     App.use(routes.apiBaseUri, cacheControl('private'));
+	// ### cookie and session
+	app.use(cookieParser());
 
+	app.use(session({
+		secret: 'The Index consists of stocks traded primarily oMU, OLN, PFE, PHM, T, TWTR, GDX kids own EFA, EFG, EWJ, IJR, SPY. Dan Nathan isMay 28 t 100 p ',
+		cookie: { maxAge: 60 * 1000 }  //一分钟
+	}));
 
     // ### Routing
     // Set up API routes

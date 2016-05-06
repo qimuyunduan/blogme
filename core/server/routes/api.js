@@ -31,12 +31,7 @@ routes = function apiRoutes() {
 			title:"爱都信息管理平台"
 		};
 		res.render("index",data);
-	});
-	router.get("/index",function(req,res){
-		var data = {
-			title:"爱都信息管理平台"
-		};
-		res.render("index",data);
+
 	});
 	router.get("/index.html",function(req,res){
 		var data = {
@@ -44,42 +39,38 @@ routes = function apiRoutes() {
 		};
 		res.render("index",data);
 	});
-	router.get("/authorized",function(req,res){
+	router.route("/index")
+		.get(function (req, res) {
+			var data = {
+				title: "爱都信息管理平台"
+			};
+			res.render("index", data);
+		})
+		.post("/index", function (req, res) {
+			console.log(req.body);
+			//check DB
+			req.session.user_id = "logined";
+			res.redirect("/authorized");
+		});
 
-		var dateTime = utils.moment.localDateAndTime;
-		res.render("authorized",{dateTime:dateTime});
-	});
 
-    router.post("/authorized",function(req,res){
+    router.get("/authorized",function(req,res){
+		//if (!req.session.user_id) {
+		//	console.log("not login");
+		//	res.redirect('/');
+		//} else {
+		//	console.log(" login");
+			var dateTime = utils.moment.localDateAndTime;
+			res.render("authorized",{dateTime:dateTime});
+		//}
 
-		console.log(req);
-		res.render("authorized");
-	});
-
-	router.post("/authorized.html",function(req,res){
-		console.log("render authorized.hbs...");
-
-		var gather = {
-			id : 1314,
-			name : "pom",
-			ih : {
-				age : 20,
-				sex : 'man',
-				marry : false,
-				identity : 622421,
-				habit : ['篮球','台球','乒乓球','游戏',true]
-			},
-			family : ['妈妈','爸爸','弟弟'],
-			likeGames : ['PCgame','Netgame']
-
-		};
-
-		res.json(JSON.stringify(gather));
 	});
 
 
 	router.get("/changePwd.html",function(req,res){
+		console.log(req.session.user_id);
 		res.render("changePwd");
+
 	});
 
 
@@ -180,13 +171,8 @@ routes = function apiRoutes() {
 	});
 	router.get("/bbm_assureUnit",function(req,res){
 
-
-		//var options = constructOptions();
-		console.log(req.query);
-
-		res.end();
-		//var data = controller.Q(options);
-		//res.render("bbm_assureUnit",data);
+		var data = controller.Q(constructOptions(req.query,[]));
+		res.render("bbm_assureUnit",data);
 
 	});
 
