@@ -16,7 +16,20 @@ var _ = require('lodash'),
 
 
 
-var mystring = "insureNumber=agewg&insureUnit=";
-var myarray = mystring.split(/[=&]/);
-console.log(myarray);
-console.log(myarray.length);
+var gather = {
+	id : 1314,
+	name : "pom",
+	ih : {
+		age : 20,
+		sex : 'man',
+		marry : false,
+		identity : 622421,
+		habit : ['篮球','台球','乒乓球','游戏',true]
+	},
+	family : ['妈妈','爸爸','弟弟'],
+	likeGames : ['PCgame','Netgame']
+
+};
+
+var  f = {models:[2.3,4]};
+console.log(_.assign(gather,f));

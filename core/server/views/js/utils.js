@@ -9,88 +9,146 @@
  *
  */
 
-// check :is empty for every field
 
-function isEmptyFields(values){
-	if($.isArray(values)){
-		var count = values.length;
-		for(var i=0;i<length;i++){
-			if(decodeURI()){
-
-			}
-
+//clear left and right blanks
+function trimLeftRight(strArr) {
+	var length = 0;
+	if ($.isArray(strArr)) {
+		length = strArr.length;
+		for (var i = 0; i < length; i++) {
+			strArr[i] = strArr[i].replace(/^\s+|\s+$/g, "");
 		}
+	}
+	return strArr;
+}
+
+
+// check :is empty for every field and trim blanks
+
+function checkTrim(values) {
+	var sumLength = 0;
+	if ($.isArray(values)) {
+		var count = values.length;
+		for (var i = 0; i < count; i++) {
+			//去掉所有空格
+			values[i] = values[i].replace(/\s+/g, "");
+			sumLength += values[i].length;
+		}
+	}
+	if (sumLength == 0) {
+		alertMsg.warn("输入内容不能为空......");
+		return false;
+	}
+	else {
+		return values;
 	}
 
 
 }
 
 
-//antiSQL
-function antiSQL(formID,excludeElementNumber) {
-
-	re = /select|update|delete|exec|count|’|"|=|;|>|<|%/i;
-	var form = $("#"+formID);
-	for(var i=0;i<form.elements.length-excludeElementNumber;i++){
-		if (re.test(form.elements[i].value)) {
-			alertMsg.warn("请不要输入特殊字符...");
-			form.elements[i].value = "";
-
-			return false;
+// merge two array to object
+function mergeToObject(keys,values){
+	var hash = {};
+	if($.isArray(keys) && $.isArray(values)&& keys.length == values.length){
+		var length = keys.length;
+		for (i = 0;i < length; i++) {
+			hash[keys[i]] = values[i];
 		}
 	}
+	return hash;
+}
+
+function isContainSpecialChar(strArr) {
+
+	//匹配特殊字符
+	var pattern=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+	if ($.isArray(strArr)) {
+		var count = strArr.length;
+		for (var i = 0; i < count; i++) {
+			if (pattern.test(strArr[i])) {
+				alertMsg.warn("输入框内包含有非法字符......");
+				return true;
+			}
+		}
+	}
+	return false;
+
+}
+//antiSQL
+function antiSQL(values) {
+
+	var regex = /select|update|delete|exec|count|’|"|=|;|>|<|%/i;
+	var length = values.length;
+	if ($.isArray(values)) {
+		for (var i = 0; i < length; i++) {
+			if (regex.test(values[i])) {
+				alertMsg.warn("请不要输入特殊字符串...");
+				return false;
+			}
+		}
+	}
+
 	return true;
 }
 
 
-//获取每个查询字段的值
-function getFieldSValue(formID){
-	var form = document.getElementById(formID);
+//获取去除空格后每个查询字段的值
+function getQueryObject(formID) {
+	var form = $('#' + formID);
+	var keys = [];
 	var values = [];
-	if(form){
-		var queryStr = form.serialize();
-		var splitedStr = queryStr.split(/[=&]/);
-		var length = splitedStr.length;
-		for(var i=1;i<length;i+=2){
-			if(i<length){
-				values.push(splitedStr[i]);
-			}
+	var queryObject = {};
+	if (form) {
+		var querySer = form.serializeArray();
+		$.each(querySer, function (i, field) {
+			keys.push(field.name);
+			values.push(field.value);
+		});
 
-		}
 	}
-	return values;
+	//add control for showing records
+	keys.push("numPerPage");
+	keys.push("currentPage");
+	var results = checkTrim(values);
+	if (results) {
+		if (!isContainSpecialChar(results)) {
+			if (antiSQL(values)) {
+				results.push("50");
+				results.push("1");
+				alert(keys);
+				alert(values);
+				queryObject = mergeToObject(keys, results);
+				return queryObject;
+			}
+		}
+
+	}
+	return false;
 }
 //send get request
 function queryRecords(formID, url) {
 
-		alert(getFieldSValue(formID));
-
-		//alert(queryStr);
-		//var spliedStr = queryStr.split(/[=&]/);
-
-		//alert(decodeURI(queryStr));
-		//if(!isEmptyFields(queryStr)){
-		//	if(antiSQL(formID,2)){
-		//		$.ajax({
-		//			type: "GET",
-		//			url: url,
-		//			data: $('#' + formID).serialize(),
-		//			async: false,
-		//			error: function () {
-		//				alertMsg.error("数据查询失败...");
-		//			}
-		//		});
-		//	}
-		//
-		//}
-
+	var data = getQueryObject(formID);
+	//send request
+	if (data) {
+		$.ajax({
+			type: "GET",
+			url: url,
+			data: data,
+			async: false,
+			error: function () {
+				alertMsg.error("数据查询失败...");
+			}
+		});
+	}
 
 
 }
 //send post request
 function addRecords(formID, url) {
 	if (document.getElementById(formID)) {
-		if(antiSQL(formID,2)){
+		if (antiSQL(formID, 2)) {
 			$.ajax({
 				type: "POST",
 				url: url,
@@ -106,7 +164,7 @@ function addRecords(formID, url) {
 //send update requests
 function updateRecords(formID, url) {
 	if (document.getElementById(formID)) {
-		if(antiSQL(formID,2)){
+		if (antiSQL(formID, 2)) {
 			$.ajax({
 				type: "PUT",
 				url: url,
@@ -123,7 +181,7 @@ function updateRecords(formID, url) {
 //send delete requset
 function deleteRecords(formID, url) {
 	if (document.getElementById(formID)) {
-		if(antiSQL(formID,2)){
+		if (antiSQL(formID, 2)) {
 			$.ajax({
 				type: "DELETE",
 				url: url,
@@ -139,7 +197,7 @@ function deleteRecords(formID, url) {
 
 //dispose user login
 function login(formID) {
-	if(antiSQL(formID,2)){
+	if (antiSQL(formID, 2)) {
 		$.ajax({
 			type: "POST",
 			url: url,

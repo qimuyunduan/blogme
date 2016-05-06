@@ -7,8 +7,10 @@ var express     = require('express'),
 	routes;
 
 
-function constructOptions(request){
-
+function constructOptions(reqParams,models){
+	if(_.isObject(reqParams)&& _.isArray(models)){
+		return _.assign(reqParams,{models:models});
+	}
 }
 
 
@@ -174,13 +176,18 @@ routes = function apiRoutes() {
 	router.get("/bbm_assureUnit.html",function(req,res){
 		console.log(req.body);
 		res.render("bbm_assureUnit");
-		
+
 	});
 	router.get("/bbm_assureUnit",function(req,res){
-		console.log(req.query.insureNumber);
-		console.log(req.query.insureUnit);
-		//res.render("bbm_assureUnit");
-		res.send("get it");
+
+
+		//var options = constructOptions();
+		console.log(req.query);
+
+		res.end();
+		//var data = controller.Q(options);
+		//res.render("bbm_assureUnit",data);
+
 	});
 
 
