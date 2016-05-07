@@ -42,12 +42,18 @@ routes = function apiRoutes() {
 	router.route("/index")
 		.get(function (req, res) {
 			var data = {
-				title: "爱都信息管理平台"
+				title: "爱都信息管理平台",
+				userName:req.cookies.loginUserName
 			};
 			res.render("index", data);
 		})
-		.post("/index", function (req, res) {
-			console.log(req.body);
+		.post(function (req, res) {
+			if(req.body.rememberName=="on"){
+				if(!req.cookies.loginUserName){
+					res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
+				}
+			}
+			console.log(req.body.rememberName);
 			//check DB
 			req.session.user_id = "logined";
 			res.redirect("/authorized");
@@ -55,20 +61,24 @@ routes = function apiRoutes() {
 
 
     router.get("/authorized",function(req,res){
-		//if (!req.session.user_id) {
-		//	console.log("not login");
-		//	res.redirect('/');
-		//} else {
-		//	console.log(" login");
+
+		console.log(req.headers);
+
+		if (!req.session.user_id) {
+			console.log("not login");
+			res.redirect('/');
+		} else {
+
+			console.log(req.session.user_id);
 			var dateTime = utils.moment.localDateAndTime;
 			res.render("authorized",{dateTime:dateTime});
-		//}
+		}
 
 	});
 
 
 	router.get("/changePwd.html",function(req,res){
-		console.log(req.session.user_id);
+
 		res.render("changePwd");
 
 	});
@@ -169,12 +179,14 @@ routes = function apiRoutes() {
 		res.render("bbm_assureUnit");
 
 	});
-	router.get("/bbm_assureUnit",function(req,res){
+	router.route("/bbm_assureUnit")
+		.get(function (req, res) {
 
-		var data = controller.Q(constructOptions(req.query,[]));
-		res.render("bbm_assureUnit",data);
+			//var data = controller.Q(constructOptions(req.query, []));
+			//res.render("bbm_assureUnit", data);
+			console.log(req.query);
 
-	});
+		});
 
 
 

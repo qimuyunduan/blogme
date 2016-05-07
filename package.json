@@ -41,7 +41,6 @@
     "mysql": "2.1.1",
     "node-uuid": "1.4.7",
     "nodemailer": "0.7.1",
-    "utility": "^1.7.0",
     "validator": "4.5.0"
   },
   "optionalDependencies": {},

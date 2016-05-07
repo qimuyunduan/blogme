@@ -85,11 +85,12 @@ setupMiddleware  = function setupMiddleware(App) {
 
     App.use(routes.apiBaseUri, cacheControl('private'));
 	// ### cookie and session
-	app.use(cookieParser());
+	App.use(cookieParser());
 
-	app.use(session({
-		secret: 'The Index consists of stocks traded primarily oMU, OLN, PFE, PHM, T, TWTR, GDX kids own EFA, EFG, EWJ, IJR, SPY. Dan Nathan isMay 28 t 100 p ',
-		cookie: { maxAge: 60 * 1000 }  //一分钟
+	App.use(session({
+		secret: ' sessionSec',
+		resave:false,
+		saveUninitialized:false
 	}));
 
     // ### Routing

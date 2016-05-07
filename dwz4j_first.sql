@@ -7308,11 +7308,12 @@ INSERT INTO `file_t` VALUES ('3', '2', '333', null, '333333');
 DROP TABLE IF EXISTS `ido_user`;
 CREATE TABLE `ido_user` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `user_Name` varchar(100) NOT NULL,
-  `user_id` varchar(100) DEFAULT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `user_salt` varchar(50) DEFAULT NULL,
+  `user_id` varchar(50) DEFAULT NULL,
   `user_type` varchar(100) DEFAULT NULL,
   `user_unit` varchar(100) DEFAULT NULL,
-  `user_pass` varchar(100) DEFAULT NULL,
+  `user_pass` varchar(50) DEFAULT NULL,
   `user_status` int(10) DEFAULT NULL,
   `user_phone` varchar(50) DEFAULT NULL,
   `user_email` varchar(200) DEFAULT NULL,
@@ -7326,46 +7327,6 @@ CREATE TABLE `ido_user` (
   UNIQUE KEY `user_id` (`user_id`),
   KEY `ido_user_userid` (`user_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=gbk;
-
--- ----------------------------
--- Records of ido_user
--- ----------------------------
-INSERT INTO `ido_user` VALUES ('36', '测试用户', 'test2', '98', '111111', '716356F18120B1F0364024B69ED3F80F', '70', '', '', '', '31', '2015-02-07 16:33:28', '0', null, null);
-INSERT INTO `ido_user` VALUES ('34', '用户1', 'user1', '98', 'wewew', '716356F18120B1F0364024B69ED3F80F', '69', '', '', '', '31', '2015-02-07 13:58:28', '31', '2015-02-07 16:32:39', null);
-INSERT INTO `ido_user` VALUES ('35', '测试用户', 'test', '98', '他他他', '716356F18120B1F0364024B69ED3F80F', '70', '', '', '', '31', '2015-02-07 16:32:17', '0', null, null);
-INSERT INTO `ido_user` VALUES ('39', '他他他', 'ssss', '98', 'wewew', '716356F18120B1F0364024B69ED3F80F', '70', '', '', '', '31', '2015-02-08 15:56:39', '0', null, null);
-INSERT INTO `ido_user` VALUES ('32', '水清', 'lisq', '103', '爱都科技', '716356F18120B1F0364024B69ED3F80F', '69', '', '', '', '2', '2015-01-28 20:02:02', '31', '2015-01-28 22:01:18', null);
-INSERT INTO `ido_user` VALUES ('31', '超级管理员', 'admin', '103', '爱都科技', '716356F18120B1F0364024B69ED3F80F', '69', '', '', '', '2', '2015-01-28 20:01:20', '31', '2015-08-09 19:37:21', null);
-INSERT INTO `ido_user` VALUES ('38', '高压这', 'gyz', '98', '感觉好怪', '716356F18120B1F0364024B69ED3F80F', '70', '', '', '', '31', '2015-02-07 16:46:21', '0', null, null);
-INSERT INTO `ido_user` VALUES ('40', '232323', 'test3', '100', '2', '716356F18120B1F0364024B69ED3F80F', '70', '', '', '', '0', '2015-03-02 21:48:00', '31', '2015-03-02 21:48:48', null);
-INSERT INTO `ido_user` VALUES ('41', '李忠怡', 'zhongyi', '101', '青浦老百姓药店', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-03-02 21:51:18', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('42', '李水清', 'lishuiqing', '101', '海王星辰商店', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-03-08 13:29:43', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('43', '18616818351', null, null, null, '716356F18120B1F0364024B69ED3F80F', null, '', null, null, '31', '2015-03-17 23:21:05', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('44', '18616812351', null, null, null, '716356F18120B1F0364024B69ED3F80F', null, '', null, null, '31', '2015-03-17 23:21:05', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('45', '刘德华', 'liudehua', '商铺', '海王星辰商店', '716356F18120B1F0364024B69ED3F80F', null, '123474758', '323@232.com', '北京西站', '31', '2015-03-21 13:50:42', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('46', '刘德华', 'liudehua2', '商铺', '海王星辰商店', '716356F18120B1F0364024B69ED3F80F', null, '123474758', '323@232.com', '北京西站', '31', '2015-03-21 14:03:39', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('47', '刘德华', 'liudehua3', '101', '海王星辰商店', '694460838A5FC2F1650E1067ABBA455D', '69', '123474758', '323@232.com', '北京西站', '31', '2015-03-21 14:10:12', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('48', '测试商家', 'testshangjia', '100', '海王星辰药店子集团', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-03-24 22:46:34', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('49', '山东省', 'sdd', '99', '海王星辰集团', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-03-24 23:00:23', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('50', '李水清', 'lishuiqing1', '98', '中国平安人寿上海非公司', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-04-19 11:52:06', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('51', '张亮', 'zhangliang', '101', '老百姓广东公司黄石东路店', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-04-19 12:36:26', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('52', '天天好集团', 'tiantianhao', '99', '天天好大药房集团', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-05-11 21:14:12', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('53', '天天好财务', 'tthcw01', '100', '天天好大药房', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-05-11 21:33:33', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('54', '天天好建国路店收银', 'tthjg01', '101', '天天好大药房建国路店', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-05-11 21:48:44', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('55', '123', '123', '99', '天天好大药房集团', '1D426B29C015E79EEA6895BF7C18C404', '70', '', '', '', '31', '2015-05-14 16:12:07', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('57', '刘德华', 'liudehua1', '101', '上海老百姓长顺店', '694460838A5FC2F1650E1067ABBA455D', '69', '', '', '', '31', '2015-05-20 20:27:04', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('58', '李', '111', '104', '11', '1D426B29C015E79EEA6895BF7C18C404', '70', '', '', '', '31', '2015-05-28 16:29:58', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('59', '彰武', 'zhangwu', '99', '测试', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-06-17 18:16:30', '0', null, '1');
-INSERT INTO `ido_user` VALUES ('60', '李水清', 'lishuiqing2', '101', '药到病除网', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-06-17 19:43:22', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('61', '岳苏宁', 'suning', '100', '杭州九洲大药房连锁有限公司', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-06-17 21:26:41', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('62', '商家', 'shangjia', '99', '测试', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-06-17 21:39:58', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('63', '李三', 'lisan', '97', 'test', '1D426B29C015E79EEA6895BF7C18C404', '70', '', '', '', '31', '2015-06-18 09:05:32', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('64', '李水清3', 'lishuiqing3', '104', '123', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-07-06 18:40:36', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('65', '江山', 'jiangshan', '101', '慈爱体检', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-07-16 20:07:03', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('66', '华一芬', 'huayifen', '104', 'test', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-07-29 22:15:27', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('67', 'huayilin', 'huayilin', '101', '测试新的商铺', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-08-09 20:34:54', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('68', 'huayifan', 'huayifan', '99', 'test', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-08-09 21:42:23', '0', null, '0');
-INSERT INTO `ido_user` VALUES ('69', 'huayifan2', 'huayifan2', '99', 'test', '1D426B29C015E79EEA6895BF7C18C404', '69', '', '', '', '31', '2015-08-09 21:42:39', '0', null, '0');
 
 -- ----------------------------
 -- Table structure for `inf_news`

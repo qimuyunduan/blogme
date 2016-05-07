@@ -8,28 +8,48 @@
  * @version
  *
  */
-var _ = require('lodash'),
-	moment = require('./core/server/utils/moment');
-	//moment = require('moment');
-//moment.locale('zh-cn');
-//console.log(typeof moment().format('d'));
+var crypto = require('crypto'),
+	uuid = require('node-uuid'),
+	moment = require('./core/server/utils/moment'),
+	model = require("./core/server/models/idoUser");
 
 
 
-var gather = {
-	id : 1314,
-	name : "pom",
-	ih : {
-		age : 20,
-		sex : 'man',
-		marry : false,
-		identity : 622421,
-		habit : ['篮球','台球','乒乓球','游戏',true]
-	},
-	family : ['妈妈','爸爸','弟弟'],
-	likeGames : ['PCgame','Netgame']
+var md5 = crypto.createHash('md5');
+var txt = "101410";
+var salt = uuid.v4();
+md5.update(txt);
 
-};
+var awre = md5.digest('hex');
+console.log(awre+salt);
 
-var  f = {models:[2.3,4]};
-console.log(_.assign(gather,f));
+var md5Pass = crypto.createHash('md5');
+
+md5Pass.update(awre+salt);
+var af = md5Pass.digest('hex');
+console.log(af);
+
+//md5 = crypto.createHash('md5');
+//
+//console.log(salt);
+//
+//
+//
+//console.log(md5.update("101410").digest('hex'));
+//console.log(md5.update("101410").digest('hex')+salt);
+//var pass =md5.update(salt+md5.update("101410").digest('hex')).digest('hex');
+//console.log(pass);
+model.idoUser.model().forge({
+		user_name: "qimu",
+		user_salt: salt,
+		user_id:uuid.v1(),
+		user_pass:af
+	})
+	.save()
+	.then(function (user) {
+		console.log({error: false, data: user});
+	})
+	.catch(function (err) {
+		console.log({error: true, data: {message: err.message}});
+	});
+

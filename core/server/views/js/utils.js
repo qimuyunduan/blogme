@@ -36,14 +36,28 @@ function checkTrim(values) {
 		}
 	}
 	if (sumLength == 0) {
-		alertMsg.warn("输入内容不能为空......");
-		return false;
+			alertMsg.warn("输入内容不能为空......");
+			return false;
 	}
 	else {
 		return values;
 	}
 
 
+}
+//check field values length
+function checkLength(min,max,values){
+	var length = 0;
+	if ($.isArray(values)) {
+		length = values.length;
+		for (var i = 0; i < length-1; i++) {
+			if(values[i].length<min||values[i].length>max){
+				alert("输入内容最小长度为4,最大长度为20......");
+				return false;
+			}
+		}
+	}
+	return true;
 }
 
 
@@ -59,7 +73,7 @@ function mergeToObject(keys,values){
 	return hash;
 }
 
-function isContainSpecialChar(strArr) {
+function isContainSpecialChar(strArr,isLogin) {
 
 	//匹配特殊字符
 	var pattern=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
@@ -67,8 +81,14 @@ function isContainSpecialChar(strArr) {
 		var count = strArr.length;
 		for (var i = 0; i < count; i++) {
 			if (pattern.test(strArr[i])) {
+
+				if(isLogin){
+					$('#loginUserName').val("用户名或密码包含有非法字符......");
+					return true;
+				}
 				alertMsg.warn("输入框内包含有非法字符......");
 				return true;
+
 			}
 		}
 	}
@@ -76,15 +96,22 @@ function isContainSpecialChar(strArr) {
 
 }
 //antiSQL
-function antiSQL(values) {
+function antiSQL(values,isLogin) {
 
-	var regex = /select|update|delete|exec|count|’|"|=|;|>|<|%/i;
+	var regex = /select|update|delete|insert|exec|count|’|"|=|;|>|<|%/i;
 	var length = values.length;
+
 	if ($.isArray(values)) {
 		for (var i = 0; i < length; i++) {
 			if (regex.test(values[i])) {
+
+				if(isLogin){
+					$('#loginUserName').val("用户名或密码含有特殊字符串...");
+					return false;
+				}
 				alertMsg.warn("请不要输入特殊字符串...");
 				return false;
+
 			}
 		}
 	}
@@ -112,12 +139,10 @@ function getQueryObject(formID) {
 	keys.push("currentPage");
 	var results = checkTrim(values);
 	if (results) {
-		if (!isContainSpecialChar(results)) {
-			if (antiSQL(values)) {
+		if (!isContainSpecialChar(results,false)) {
+			if (antiSQL(values,false)) {
 				results.push("50");
 				results.push("1");
-				alert(keys);
-				alert(values);
 				queryObject = mergeToObject(keys, results);
 				return queryObject;
 			}
@@ -196,18 +221,41 @@ function deleteRecords(formID, url) {
 }
 
 //dispose user login
-function login(formID) {
+function login() {
+	var form = $('#loginForm');
+	var keys = [];
+	var values = [];
+	var queryObject = {};
+	if (form) {
+		var querySer = form.serializeArray();
+		$.each(querySer, function (i, field) {
+			keys.push(field.name);
+			values.push(field.value);
+		});
 
-	//alert(""+$('#' + formID).serialize);
-	$.ajax({
-		type: "POST",
-		url: "index",
-		//data: $('#' + formID).serializeArray(),
-		async: false,
-		error: function () {
-			alertMsg.error("...");
+	}
+
+	var result = checkTrim(values);
+
+	if (checkLength(4, 20, result)) {
+		if (!isContainSpecialChar(result,true)) {
+
+			if (antiSQL(result,true)) {
+				queryObject = mergeToObject(keys, result);
+				$.ajax({
+					type: "post",
+					url: "index",
+					data: queryObject,
+					async: false,
+					error: function () {
+						alert("error connection...");
+					}
+				});
+
+			}
 		}
-	});
+
+	}
 
 }
 
