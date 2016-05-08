@@ -4,40 +4,51 @@
 var _           = require('lodash'),
     api         = require('../api/index'),
     path        = require('path'),
-    config      = require('../config/index'),
     errors      = require('../errors/index'),
-    Promise     = require('bluebird'),
-
-    handleError         = require('./error'),
+    handleError = require('./error'),
     reply       = require('./sendResponse'),
     setRequestIsSecure  = require('./secure'),
 	models              = require('../models'),
     controllers;
 
+function getResult(options,fromCollection) {
 
+	if(models[options.model]){
+
+		if(fromCollection){
+			models[options.model].collection().forge(options.requestParas).fetch()
+				.then(function(collection){
+					console.log(typeof  collection.toArray());//object
+					console.log(collection.toJSON());
+				}).catch(function(){
+				reply.fail();
+			})
+		}
+		else{
+			models[options.model].model().forge(options.requestParas).fetch()
+				.then(function(model){
+
+				}).catch(function(){
+				reply.fail();
+			})
+		}
+
+	}
+}
 
 controllers = {
 
 	A: function (options) {
-
+		getResult(options);
 	},
 	D: function(options){
-
+		getResult(options);
 	},
 	U: function (options) {
-
+		getResult(options);
 	},
 	Q: function(options){
-
-		if(models[options.model]){
-			models[options.model].collection().forge(options.requestParas).fetch()
-				.then(function(collection){
-				console.log(typeof  collection.toArray());//object
-				console.log(collection.toJSON());
-			}).catch(function(err){
-				console.log(err);
-			})
-		}
+		getResult(options,true);
 	}
 
 };

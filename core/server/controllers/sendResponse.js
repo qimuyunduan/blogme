@@ -1,8 +1,7 @@
 var _       = require('lodash'),
-	resData = require('./resData'),
 	utils  = require('../utils');
 
-var dataPrefix  = '<td><input type="checkbox" name="checkCtrl"></td>';
+var dataPrefix  = '<tr><td><input type="checkbox" name="checkCtrl"></td>';
 /**
  * formats response data for client.
  */
@@ -14,9 +13,9 @@ function filterFields(values,fields){
 		var length = values.length;
 		for(var i=0;i<length;i++){
 			if(_.isObject(values[i])){
-				var filterObject = utils.filters.filterObject(values[i],fields);
-				if(filterObject){
-					filterValues.push(filterObject);
+				var filterValue = utils.filters.filterObject(values[i],fields);
+				if(filterValue){
+					filterValues.push(filterValue);
 				}
 			}
 		}
@@ -27,46 +26,60 @@ function filterFields(values,fields){
 	return filterValues;
 }
 
-function constructResponseData(){
 
+function replyWithSuccess(){
+	return {err:false};
 }
-
-function successWithInfo(){
-
+function replyWithData(values,fields){
+	var data = filterFields(values,fields);
+	if(data){
+		return {err:false,data:data};
+	}
+	return fail();
 }
-function successWithData(){
-
-}
-function successWithPageData(values,fields,pageNumber,pageLimit,isContainCheckbox){
+function replyWithPageData(values,fields,pageNumber,pageLimit,isContainCheckbox){
 	var pageNum = pageNumber==undefined ? 0:pageNumber;
 	var pageRecordsNum = pageLimit==undefined ? 50:pageLimit;
+	var containCheckbox = isContainCheckbox==undefined ;
+	var fieldLength = fields.length;
 	var totalPages = 0;
-	var subValues = [];
+	var tableData = "";
 	if(_.isArray(values)){
 		var length = values.length;
 
 		totalPages =  length%pageRecordsNum==0 ?length/pageRecordsNum :length/pageRecordsNum+1;
 
 		if(pageNum<=totalPages){
-			subValues = _.slice(values,pageNum*pageRecordsNum,pageNum*pageRecordsNum+pageRecordsNum);
+			//截取一页的数据
+			var subValues = _.slice(values,pageNum*pageRecordsNum,pageNum*pageRecordsNum+pageRecordsNum);
 			var filteredSubValues = filterFields(subValues,fields);
 			if(filteredSubValues){
-				if(isContainCheckbox){
-
+				dataPrefix = containCheckbox?dataPrefix:"<tr>";
+				for(var i=0;i<pageRecordsNum;i++){
+					tableData += dataPrefix;
+					for(var j=0;j<fieldLength;j++){
+						tableData += "<td>"+filteredSubValues[i][j]+"</td>"
+					}
+					tableData += "</tr>"
 				}
+				return {err:false,tableData:tableData,totalRecords:length}
 			}
+
 		}
 
+	}
+	else if(_.isObject(values)){
 
 	}
+	return fail();
 }
 function fail(){
-
+	return {err:true};
 }
 
 module.exports = {
-    SuccessWithInfo: successWithInfo,
-	SuccessWithData:successWithData,
-	SuccessWithPageData:successWithPageData,
-    Fail: fail
+	replyWithSuccess: replyWithSuccess,
+	replyWithData:replyWithData,
+	replyWithPageData:replyWithPageData,
+    fail: fail
 };

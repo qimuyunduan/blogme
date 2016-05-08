@@ -76,20 +76,25 @@ routes = function apiRoutes() {
 			res.render("index", data);
 		})
 		.post(function (req, res) {
-			controller.Q(constructOptions(req.body,['user_name'], "idoUser",['user_salt','user_pass'],[0]));
-			//if(utils.isValidUser(req.body.pwd,data.user_salt,data.user_pass)){
-			//	// set cookie
-			//	if(req.body.rememberName=="on"){
-			//		if(!req.cookies.loginUserName){
-			//			res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
-			//		}
-			//	}
-			//	// set session
-			//	//TODO:
-			//	res.redirect("/authorized");
-			//}else{
-			//	res.send("用户名或密码错误...");
-			//}
+			var result= controller.Q(constructOptions(req.body,['user_name'], "idoUser",['user_salt','user_pass'],[0]));
+			if(!result.err){
+
+				if(utils.isValidUser(req.body.pwd,result.data[0],result.data[i])){
+					// set cookie
+					if(req.body.rememberName=="on"){
+						if(!req.cookies.loginUserName){
+							res.cookie("loginUserName",req.body.userName,{maxAge:60*1000*60*24*30})
+						}
+					}
+					// set session
+					//TODO:
+					res.redirect("/authorized");
+				}
+			}
+
+			else{
+				res.send("用户名或密码错误...");
+			}
 
 		});
 

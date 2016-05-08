@@ -13,15 +13,15 @@ var crypto = require('crypto'),
 	moment = require('./core/server/utils/moment'),
 	model = require("./core/server/models/idoUser");
 
-	var hewig ={age:"4",sex:"2"};
-
-function test (waert){
-
-		console.log(hewig['age']);
-
+function saer(sert){
+	if(!sert){
+		console.log("false");
+	}
 }
+saer();
 
-test();
+
+
 //model.idoUser.model().forge({
 //		user_name: "qimu",
 //		user_salt: salt,
