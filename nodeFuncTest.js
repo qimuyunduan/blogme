@@ -13,12 +13,12 @@ var crypto = require('crypto'),
 	moment = require('./core/server/utils/moment'),
 	model = require("./core/server/models/idoUser");
 
-	var hewig =["4","2","6","2","1","8"];
+	var hewig ={age:"4",sex:"2"};
 
 function test (waert){
-	if(waert == undefined){
-		console.log("undefined");
-	}
+
+		console.log(hewig['age']);
+
 }
 
 test();

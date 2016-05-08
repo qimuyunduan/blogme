@@ -8,65 +8,41 @@
  * @version
  *
  */
+
+
+//the base response data structure
+
 function Response(){
-	this.message = "";
-	this.currenPage = 0;
-	this.totalPages = 0;
-	this.result = [];
+	this.status = {statusCode:200,message:""};
+	this.totalNumber = 0;
+	this.responseData = [];
 }
 // the message returned to client
 function setMessage(message){
 
 	if (message != "") {
-		this.message = message;
+		this.status.message = message;
 	}
 
 }
-function setCurrentPage(page) {
 
-	if (page != this.currenPage){
-		this.currenPage = page ;
+function  setSuccessStatusCode(){
+	this.status.statusCode = 200
+}
+
+function setFailStatusCode(){
+	this.status.statusCode = 404
+}
+//the total records for result
+function  setTotalRecords(totalRecords){
+
+	if (typeof(totalRecords)=='number'){
+		this.totalNumber = totalRecords ;
 	}
 
 }
-//the total data pages
-function  setTotalPages(totalPages){
 
-	if (totalPages != this.totalPages){
-		this.totalPages = totalPages ;
-	}
+function setResponeseData(){
 
 }
-function  setResult(result){
-
-	if (!_.empty(result)){
-		this.result = result;
-	}
-}
-Response.prototype.getCurrentPage=function(){
-	return this.currenPage;
-};
-Response.prototype.getTotalPages=function(){
-	return this.totalPages;
-};
-
-function setResponseData(cur,total,result,message) {
-
-	setCurrentPage(cur);
-	setMessage(message);
-	setResult(result);
-	setTotalPages(total);
-}
-//send response data
-Response.prototype.responseData=function (cur,total,result,message) {
-	var self = this;
-	setResponseData(cur,total,result,message);
-	return {
-		"currentPage":self.currenPage,
-		"totalPage":self.totalPages,
-		"result":self.result,
-		"message":self.message
-
-	};
-};
 module.exports = Response;

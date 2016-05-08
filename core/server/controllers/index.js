@@ -9,12 +9,12 @@ var _           = require('lodash'),
     Promise     = require('bluebird'),
 
     handleError         = require('./error'),
-    formatResponse      = require('./format-response'),
+    reply       = require('./sendResponse'),
     setRequestIsSecure  = require('./secure'),
 	models              = require('../models'),
     controllers;
 
-var dataPrefix  = '<td><input type="checkbox" name="checkCtrl"></td>';
+
 
 controllers = {
 
@@ -29,6 +29,15 @@ controllers = {
 	},
 	Q: function(options){
 
+		if(models[options.model]){
+			models[options.model].collection().forge(options.requestParas).fetch()
+				.then(function(collection){
+				console.log(typeof  collection.toArray());//object
+				console.log(collection.toJSON());
+			}).catch(function(err){
+				console.log(err);
+			})
+		}
 	}
 
 };

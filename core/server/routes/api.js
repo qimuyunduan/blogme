@@ -8,7 +8,7 @@ var _           = require('lodash'),
 	routes;
 
 
-function constructOptions(reqParams,requestFields,models,fetchFields,filter){
+function constructOptions(reqParams,requestFields,model,fetchFields,filter){
 	var requestParas = {};
 	if(_.isObject(reqParams)&& _.isArray(requestFields)){
 		var values = _.values(reqParams);
@@ -26,12 +26,12 @@ function constructOptions(reqParams,requestFields,models,fetchFields,filter){
 				requestParas = _.zipObject(requestFields,values);
 			}
 		}
-		//return _.assign(reqParams,{models:models});
+		else return false;
 	}
 
 
-	if(_.isArray(models)&& _.isArray(fetchFields)){
-		return {requestParas:requestParas,models:models,fetchFields:fetchFields}
+	if(_.isString(model)&& _.isArray(fetchFields)){
+		return {requestParas:requestParas,model:model,fetchFields:fetchFields}
 	}
 	return false;
 }
@@ -76,20 +76,20 @@ routes = function apiRoutes() {
 			res.render("index", data);
 		})
 		.post(function (req, res) {
-			var data = controller.Q(constructOptions({userName:req.body.userName}, ["idoUser"]));
-			if(utils.isValidUser(req.body.pwd,data.user_salt,data.user_pass)){
-				// set cookie
-				if(req.body.rememberName=="on"){
-					if(!req.cookies.loginUserName){
-						res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
-					}
-				}
-				// set session
-				//TODO:
-				res.redirect("/authorized");
-			}else{
-				res.send("用户名或密码错误...");
-			}
+			controller.Q(constructOptions(req.body,['user_name'], "idoUser",['user_salt','user_pass'],[0]));
+			//if(utils.isValidUser(req.body.pwd,data.user_salt,data.user_pass)){
+			//	// set cookie
+			//	if(req.body.rememberName=="on"){
+			//		if(!req.cookies.loginUserName){
+			//			res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
+			//		}
+			//	}
+			//	// set session
+			//	//TODO:
+			//	res.redirect("/authorized");
+			//}else{
+			//	res.send("用户名或密码错误...");
+			//}
 
 		});
 

@@ -35,17 +35,17 @@ function filterArray(data, filters) {
 // filter  object element based on keys
 function filterObject(data, keys) {
 	var values = [];
-	if (_.isObject(data) && _.isArray(filters)) {
+	if (_.isObject(data) && _.isArray(keys)) {
 		var countData = _.keys(data).length;
 		var countFilter = keys.length;
 		if (countData >= countFilter) {
 
 			for (var i = 0; i < countFilter; i++) {
-				if (data.keys[i]) {
-					values.push(data.keys[i])
+				if (data[keys[i]]) {
+					values.push(data[keys[i]])
 				}
 			}
-			return _.zipObject(keys, values)
+			return values;
 		}
 	}
 	return false;

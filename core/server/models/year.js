@@ -150,7 +150,7 @@ year = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
