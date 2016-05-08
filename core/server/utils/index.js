@@ -1,6 +1,8 @@
 var _            = require('lodash'),
 	getFileNames = require('./getFileNames'),
 	moment       = require('./moment'),
+	checkUser    = require('./isUserValid'),
+	filters      = require('./filter'),
     utils,
     getRandomInt;
 
@@ -25,28 +27,9 @@ utils = {
 	//utils functions
 	getFileNames:getFileNames,
 	moment:moment,
-    /**
-     * Return a unique identifier with the given `len`.
-     *
-     *     utils.uid(10);
-     *     // => "FDaS435D2z"
-     *
-     * @param {Number} len
-     * @return {String}
-     * @api private
-     */
-    uid: function (len) {
-        var buf = [],
-            chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-            charlen = chars.length,
-            i;
+	isValidUser:checkUser,
+	filters:filters,
 
-        for (i = 1; i < len; i = i + 1) {
-            buf.push(chars[getRandomInt(0, charlen - 1)]);
-        }
-
-        return buf.join('');
-    },
     safeString: function (string, options) {
         options = options || {};
 

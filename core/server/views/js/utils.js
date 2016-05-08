@@ -249,6 +249,9 @@ function login() {
 					async: false,
 					error: function () {
 						alert("error connection...");
+					},
+					success:function(data){
+						$('#loginUserName').val(data);
 					}
 				});
 

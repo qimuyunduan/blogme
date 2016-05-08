@@ -1,16 +1,39 @@
 // # API routes
 
-var express     = require('express'),
+var _           = require('lodash'),
+	express     = require('express'),
     api         = require('../api'),
 	controller  = require('../controllers'),
-	utils      = require('../utils'),
+	utils       = require('../utils'),
 	routes;
 
 
-function constructOptions(reqParams,models){
-	if(_.isObject(reqParams)&& _.isArray(models)){
-		return _.assign(reqParams,{models:models});
+function constructOptions(reqParams,requestFields,models,fetchFields,filter){
+	var requestParas = {};
+	if(_.isObject(reqParams)&& _.isArray(requestFields)){
+		var values = _.values(reqParams);
+		//filter some values
+		if(_.isArray(filter)&&!_.isEmpty(filter)){
+			var result = utils.filters.filterArray(values,filter);
+			if(result){
+				if(requestFields.length==result.length){
+					requestParas = _.zipObject(requestFields,result);
+				}
+			}
+		}
+		else if(filter==undefined){
+			if(requestFields.length==values.length){
+				requestParas = _.zipObject(requestFields,values);
+			}
+		}
+		//return _.assign(reqParams,{models:models});
 	}
+
+
+	if(_.isArray(models)&& _.isArray(fetchFields)){
+		return {requestParas:requestParas,models:models,fetchFields:fetchFields}
+	}
+	return false;
 }
 
 
@@ -41,22 +64,33 @@ routes = function apiRoutes() {
 	});
 	router.route("/index")
 		.get(function (req, res) {
-			var data = {
-				title: "爱都信息管理平台",
-				userName:req.cookies.loginUserName
-			};
+
+			var data={title: "爱都信息管理平台"};
+			if(req.cookies.loginUserName){
+				data = {
+					title: "爱都信息管理平台",
+					userName:req.cookies.loginUserName
+				};
+			}
+
 			res.render("index", data);
 		})
 		.post(function (req, res) {
-			if(req.body.rememberName=="on"){
-				if(!req.cookies.loginUserName){
-					res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
+			var data = controller.Q(constructOptions({userName:req.body.userName}, ["idoUser"]));
+			if(utils.isValidUser(req.body.pwd,data.user_salt,data.user_pass)){
+				// set cookie
+				if(req.body.rememberName=="on"){
+					if(!req.cookies.loginUserName){
+						res.cookie(loginUserName,req.body.userName,{maxAge:60*1000*60*24*30})
+					}
 				}
+				// set session
+				//TODO:
+				res.redirect("/authorized");
+			}else{
+				res.send("用户名或密码错误...");
 			}
-			console.log(req.body.rememberName);
-			//check DB
-			req.session.user_id = "logined";
-			res.redirect("/authorized");
+
 		});
 
 
@@ -182,8 +216,8 @@ routes = function apiRoutes() {
 	router.route("/bbm_assureUnit")
 		.get(function (req, res) {
 
-			//var data = controller.Q(constructOptions(req.query, []));
-			//res.render("bbm_assureUnit", data);
+			var data = controller.Q(constructOptions(req.query, []));
+			res.render("bbm_assureUnit", data);
 			console.log(req.query);
 
 		});
