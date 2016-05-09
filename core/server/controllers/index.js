@@ -1,78 +1,120 @@
-
 /*global require, module */
 
-var _           = require('lodash'),
-	promise     = require('bluebird'),
-    api         = require('../api/index'),
-    path        = require('path'),
-    errors      = require('../errors/index'),
-	utils       = require('../utils'),
-    handleError = require('./error'),
-    reply       = require('./sendResponse'),
-    setRequestIsSecure  = require('./secure'),
-	models              = require('../models'),
-    controllers;
+var _ = require('lodash'),
+	api = require('../api/index'),
+	path = require('path'),
+	errors = require('../errors/index'),
+	utils = require('../utils'),
+	handleError = require('./error'),
+	reply = require('./sendResponse'),
+	setRequestIsSecure = require('./secure'),
+	models = require('../models'),
+	controllers;
 
-function getResult(req,res,options,url,fromCollection) {
+function getResult(req, res, options) {
 
-	if(models[options.model]){
+	//handle login
+	if (options.reqUrl == 'index') {
 
+		models[options.model].model().forge(options.reqParams).fetch()
+			.then(function (model) {
+					if (model) {
+						var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+						if (!result.err) {
 
-		if(fromCollection){
-			models[options.model].collection().forge(options.requestParas).fetch()
-				.then(function(collection){
-
-					console.log(collection.toJSON());
-					return reply.replyWithPageData(model.toJSON(),options.fetchFields) ;
-
-				}).then(function(result){
-					if(result.err){
-						res.send("数据操作失败...");
-					}
-					res.render(url,result.data);
-			}).catch(function(){
-				res.send("数据操作失败...");
-			})
-		}
-		else{
-			models[options.model].model().forge(options.requestParas).fetch()
-				.then(function(model){
-					if(model&&url=='index'){
-						//handle login
-						//console.log(reply.replyWithData(model.toJSON(),options.fetchFields)) ;
-						var result = reply.replyWithData(model.toJSON(),options.fetchFields) ;
-						if(!result.err){
-
-							if(utils.isValidUser(req.body.pwd,result.data[0],result.data[i])){
+							if (utils.isValidUser(req.body.pwd, result.data[0], result.data[i])) {
 								// set cookie
-								if(req.body.rememberName=="on"){
-									if(!req.cookies.loginUserName){
-										res.cookie("loginUserName",req.body.userName,{maxAge:60*1000*60*24*30})
+								if (req.body.rememberName == "on") {
+									if (!req.cookies.loginUserName) {
+										res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
 									}
 								}
 								// set session
 								//TODO:
 								res.redirect("/authorized");
+							} else {
+								res.send("用户名或密码错误...");
 							}
-						}
-
-						else{
-							res.send("用户名或密码错误...");
+						} else {
+							res.send("查找数据失败.....");
 						}
 					}
-
-				}).catch(function(){
-				promise.reject(reply.fail()) ;
-			})
-		}
-
+				}
+			).catch(function () {
+			res.send("出错了....");
+		})
 	}
+
+	else {
+		models[options.model].collection().forge(options.reqParams).fetch()
+			.then(function (collection) {
+				//TODO:
+				if (collection) {
+					var pageData = reply.replyWithPageData(model.toJSON(), options.fetchFields);
+					if (!pageData.err) {
+						res.render(options.reqUrl, pageData.data);
+					}
+				} else {
+					res.send("查找数据失败.....");
+				}
+
+			}).catch(function () {
+			res.send("出错了....");
+		})
+	}
+}
+function updateRecord(req, res, options) {
+	models[options.model].model().forge(options.reqParams).fetch()
+		.then(function (model) {
+				if (model) {
+					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+					if (!result.err) {
+
+					}
+				}
+			}
+		).catch(function () {
+		res.send("出错了....");
+	})
+}
+function deleteRecord(req, res, options) {
+	models[options.model].model().forge(options.reqParams).fetch()
+		.then(function (model) {
+				if (model) {
+					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+
+				}
+			}
+		).catch(function () {
+		res.send("出错了....");
+	})
+}
+
+function createRecord(req, res, options) {
+	models[options.model].model().forge(options.reqParams).fetch()
+		.then(function (model) {
+				if (model) {
+					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+
+				}
+			}
+		).catch(function () {
+		res.send("出错了....");
+	})
 }
 
 controllers = {
-
-	handleRequest: function (req,res,options) {
-		return getResult(options);
+	create: function (req, res, options) {
+		createRecord(req, res, options);
+	},
+	del: function (req, res, options) {
+		deleteRecord(req, res, options);
+	},
+	update: function (req, res, options) {
+		updateRecord(req, res, options);
+	},
+	fetch: function (req, res, options) {
+		getResult(req, res, options);
 	}
 
 };

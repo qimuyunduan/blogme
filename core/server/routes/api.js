@@ -35,7 +35,7 @@ function  constructFetchParams(reqParams,requestFields,filter){
 function consOptions(reqParams,model,fetchFields,url,reqType){
 	var options={};
 	if(_.isObject(reqParams)&&! _.isEmpty(reqParams)){
-		options=reqParams;
+		options={reqParams:reqParams};
 	}
 	if(_.isString(model)&&_.isArray(fetchFields)&&_.isString(reqType)&&_.isString(url)){
 		if(model.length&&reqType.length&&url.length){
