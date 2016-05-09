@@ -3,13 +3,12 @@
 var _           = require('lodash'),
 	express     = require('express'),
     api         = require('../api'),
-	controller  = require('../controllers'),
 	utils       = require('../utils'),
+	controller  = require('../controllers'),
 	routes;
 
-
-function constructOptions(reqParams,requestFields,model,fetchFields,filter){
-	var requestParas = {};
+function  constructFetchParams(reqParams,requestFields,filter){
+	var fetchParas = {};
 	if(_.isObject(reqParams)&& _.isArray(requestFields)){
 		var values = _.values(reqParams);
 		//filter some values
@@ -17,26 +16,35 @@ function constructOptions(reqParams,requestFields,model,fetchFields,filter){
 			var result = utils.filters.filterArray(values,filter);
 			if(result){
 				if(requestFields.length==result.length){
-					requestParas = _.zipObject(requestFields,result);
+					fetchParas = _.zipObject(requestFields,result);
+					return fetchParas;
 				}
 			}
 		}
-		else if(filter==undefined){
+		else if(filter){
 			if(requestFields.length==values.length){
-				requestParas = _.zipObject(requestFields,values);
+				fetchParas = _.zipObject(requestFields,values);
+				return fetchParas;
 			}
 		}
-		else return false;
+		return false;
 	}
-
-
-	if(_.isString(model)&& _.isArray(fetchFields)){
-		return {requestParas:requestParas,model:model,fetchFields:fetchFields}
-	}
-	return false;
 }
 
 
+function consOptions(reqParams,model,fetchFields,url,reqType){
+	var options={};
+	if(_.isObject(reqParams)&&! _.isEmpty(reqParams)){
+		options=reqParams;
+	}
+	if(_.isString(model)&&_.isArray(fetchFields)&&_.isString(reqType)&&_.isString(url)){
+		if(model.length&&reqType.length&&url.length){
+			_.assign(options,{reqModel:model,fetchFields:fetchFields,reqType:reqType,reqUrl:url})
+		}
+
+	}
+	return options;
+}
 
 
 routes = function apiRoutes() {
@@ -67,33 +75,18 @@ routes = function apiRoutes() {
 
 			var data={title: "爱都信息管理平台"};
 			if(req.cookies.loginUserName){
-				data = {
-					title: "爱都信息管理平台",
-					userName:req.cookies.loginUserName
-				};
+				data.userName=req.cookies.loginUserName;
+				console.log(data.userName);
 			}
 
 			res.render("index", data);
 		})
 		.post(function (req, res) {
-			var result= controller.Q(constructOptions(req.body,['user_name'], "idoUser",['user_salt','user_pass'],[0]));
-			if(!result.err){
 
-				if(utils.isValidUser(req.body.pwd,result.data[0],result.data[i])){
-					// set cookie
-					if(req.body.rememberName=="on"){
-						if(!req.cookies.loginUserName){
-							res.cookie("loginUserName",req.body.userName,{maxAge:60*1000*60*24*30})
-						}
-					}
-					// set session
-					//TODO:
-					res.redirect("/authorized");
-				}
-			}
+			var queryOptions = consOptions(constructFetchParams(req.body,['user_name'],[0]), "idoUser",['user_salt','user_pass'],'index','post');
+			if(!_.isEmpty(queryOptions)){
 
-			else{
-				res.send("用户名或密码错误...");
+				controller.handleRequest(req,res,queryOptions);
 			}
 
 		});
@@ -101,7 +94,7 @@ routes = function apiRoutes() {
 
     router.get("/authorized",function(req,res){
 
-		console.log(req.headers);
+		//console.log(req.headers);
 
 		if (!req.session.user_id) {
 			console.log("not login");

@@ -62,7 +62,7 @@ function replyWithPageData(values,fields,pageNumber,pageLimit,isContainCheckbox)
 					}
 					tableData += "</tr>"
 				}
-				return {err:false,tableData:tableData,totalRecords:length}
+				return {err:false,data:{tableData:tableData,totalRecords:length}}
 			}
 
 		}

@@ -14,11 +14,12 @@ var crypto = require('crypto'),
 	model = require("./core/server/models/idoUser");
 
 function saer(sert){
-	if(!sert){
-		console.log("false");
+	if(sert){
+		console.log("true");
 	}
+	else{console.log("false");}
 }
-saer();
+saer({});// true
 
 
 
