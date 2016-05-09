@@ -4,7 +4,61 @@
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/sendResponse.js" afterPath="$PROJECT_DIR$/core/server/controllers/sendResponse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_attachmentManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_drugCategory.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_drugCategory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_freezeUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_freezeUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureCompanyDic.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureCompanyDic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_logoutUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_logoutUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_subCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_subCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_userManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_addAssociateShoper.html" afterPath="$PROJECT_DIR$/core/server/views/bc_addAssociateShoper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_addHomeUser.html" afterPath="$PROJECT_DIR$/core/server/views/bc_addHomeUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_addSpecialOrder.html" afterPath="$PROJECT_DIR$/core/server/views/bc_addSpecialOrder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_homeUser.html" afterPath="$PROJECT_DIR$/core/server/views/bc_homeUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_orderManage.html" afterPath="$PROJECT_DIR$/core/server/views/bc_orderManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_recharge.html" afterPath="$PROJECT_DIR$/core/server/views/bc_recharge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_signContract.html" afterPath="$PROJECT_DIR$/core/server/views/bc_signContract.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" afterPath="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_specialOrderManage.html" afterPath="$PROJECT_DIR$/core/server/views/bc_specialOrderManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bm_currentMonth.html" afterPath="$PROJECT_DIR$/core/server/views/bm_currentMonth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bm_historyBill.html" afterPath="$PROJECT_DIR$/core/server/views/bm_historyBill.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bm_todayBill.html" afterPath="$PROJECT_DIR$/core/server/views/bm_todayBill.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/changePwd.html" afterPath="$PROJECT_DIR$/core/server/views/changePwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" afterPath="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_addVersion.html" afterPath="$PROJECT_DIR$/core/server/views/mm_addVersion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_cityAD.html" afterPath="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_maintain.html" afterPath="$PROJECT_DIR$/core/server/views/mm_maintain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_shopConfig.html" afterPath="$PROJECT_DIR$/core/server/views/mm_shopConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_versionManage.html" afterPath="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/om_fileManage.html" afterPath="$PROJECT_DIR$/core/server/views/om_fileManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/om_log.html" afterPath="$PROJECT_DIR$/core/server/views/om_log.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/om_review.html" afterPath="$PROJECT_DIR$/core/server/views/om_review.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/pm_addParam.html" afterPath="$PROJECT_DIR$/core/server/views/pm_addParam.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/pm_addParams.html" afterPath="$PROJECT_DIR$/core/server/views/pm_addParams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/pm_cacheList.html" afterPath="$PROJECT_DIR$/core/server/views/pm_cacheList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/pm_paramList.html" afterPath="$PROJECT_DIR$/core/server/views/pm_paramList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/pm_paramManage.html" afterPath="$PROJECT_DIR$/core/server/views/pm_paramManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_addMenu.html" afterPath="$PROJECT_DIR$/core/server/views/ps_addMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_addRole.html" afterPath="$PROJECT_DIR$/core/server/views/ps_addRole.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_addUserClass.html" afterPath="$PROJECT_DIR$/core/server/views/ps_addUserClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_menuManage.html" afterPath="$PROJECT_DIR$/core/server/views/ps_menuManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_roleManage.html" afterPath="$PROJECT_DIR$/core/server/views/ps_roleManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" afterPath="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeFuncTest.js" afterPath="$PROJECT_DIR$/nodeFuncTest.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,17 +83,7 @@
         <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="95" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nodeFuncTest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeFuncTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -60,23 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
+      <file leaf-file-name="ps_addRole.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/ps_addRole.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3875968">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendResponse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/controllers/sendResponse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.13586956">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -103,10 +135,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/core/server/views/bbm_drugCategory.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_freezeCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_freezeUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_importRecords.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompanyDic.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_logoutUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_subCompany.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bc_addAssociateShoper.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_addHomeUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_addSpecialOrder.html" />
         <option value="$PROJECT_DIR$/core/server/views/bc_homeUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bc_orderManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bc_recharge.html" />
@@ -116,44 +165,27 @@
         <option value="$PROJECT_DIR$/core/server/views/bm_currentMonth.html" />
         <option value="$PROJECT_DIR$/core/server/views/bm_historyBill.html" />
         <option value="$PROJECT_DIR$/core/server/views/bm_todayBill.html" />
+        <option value="$PROJECT_DIR$/core/server/views/changePwd.html" />
+        <option value="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" />
+        <option value="$PROJECT_DIR$/core/server/views/mm_addVersion.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_maintain.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_shopConfig.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/om_fileManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/om_log.html" />
+        <option value="$PROJECT_DIR$/core/server/views/om_review.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_addParam.html" />
+        <option value="$PROJECT_DIR$/core/server/views/pm_addParams.html" />
         <option value="$PROJECT_DIR$/core/server/views/pm_cacheList.html" />
         <option value="$PROJECT_DIR$/core/server/views/pm_paramList.html" />
         <option value="$PROJECT_DIR$/core/server/views/pm_paramManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/ps_menuManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" />
-        <option value="$PROJECT_DIR$/core/server/views/ps_roleManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_addMenu.html" />
         <option value="$PROJECT_DIR$/core/server/views/ps_addRole.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_userManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/myInfo.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shjs.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_addInsureUnit.html" />
-        <option value="$PROJECT_DIR$/core/server/views/css/core.css" />
-        <option value="$PROJECT_DIR$/core/server/utils/moment.js" />
-        <option value="$PROJECT_DIR$/core/server/views/bc_addHomeUser.html" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
-        <option value="$PROJECT_DIR$/core/server/views/css/login.css" />
-        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_assureUnit.html" />
-        <option value="$PROJECT_DIR$/core/server/views/index.html" />
-        <option value="$PROJECT_DIR$/core/server/views/js/utils.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/isUserValid.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/index.js" />
-        <option value="$PROJECT_DIR$/core/server/models/yiAnList.js" />
-        <option value="$PROJECT_DIR$/core/server/models/year.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/format-response.js" />
-        <option value="$PROJECT_DIR$/core/server/utils/filter.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/resData.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/sendResponse.js" />
-        <option value="$PROJECT_DIR$/nodeFuncTest.js" />
-        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
-        <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_addUserClass.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_menuManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_roleManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/ps_userAuthorize.html" />
       </list>
     </option>
   </component>
@@ -545,12 +577,6 @@
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
     </task>
-    <task id="LOCAL-00067" summary="change views">
-      <created>1461566301135</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1461566301136</updated>
-    </task>
     <task id="LOCAL-00068" summary="change views">
       <created>1461594116536</created>
       <option name="number" value="00068" />
@@ -839,7 +865,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462779505048</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="change views">
+      <created>1462784698434</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1462784698434</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -855,14 +887,14 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15165877" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15165877" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326733" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5018431" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20594059" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20990099" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -945,333 +977,394 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParams.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6873278">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_queryChangeRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.013513514">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramList.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shoperManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30991736">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramManage.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24104683">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addMenu.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopGroup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4449036">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.7027028">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addUserClass.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75619835">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_menuManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38016528">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/partials/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6043956">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_roleManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23278236">
-          <caret line="31" column="110" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addRole.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8953168">
-          <caret line="176" column="2" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_userManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5826447">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_userAuthorize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25757575">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addSubcompany.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/myInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20798898">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addShop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.584022">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_logoutCompany.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.446281">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4104683">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.86088157">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9406075">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/om_fileManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16129032">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_subCompany.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/js/dwz.min.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.30875">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_uploadFile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18243243">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/moment.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_userManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03125">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59273183">
-          <caret line="636" column="9" selection-start-line="636" selection-start-column="9" selection-end-line="636" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70927316">
-          <caret line="960" column="9" selection-start-line="960" selection-start-column="6" selection-end-line="960" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureUnit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7352941">
-          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="349.2353">
-          <caret line="105" column="53" selection-start-line="105" selection-start-column="53" selection-end-line="105" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5992011">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.764706">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.49933422">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6283784">
+          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_addAssociateShoper.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18135376">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/getFileNames.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6878981">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/isUserValid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54140127">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bc_addHomeUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033512063">
-          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/sysRole.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_addSpecialOrder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.673077">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_homeUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6621622">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_inputConsumeNumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/idoUser.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_orderManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.301282">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_signContract.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_specialOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_specialOrderManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_yiliaoConsumeManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5833333">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7130102">
-          <caret line="168" column="5" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/yiAnList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20280612">
-          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/models/year.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45790815">
-          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0776566">
-          <caret line="8" column="109" selection-start-line="8" selection-start-column="109" selection-end-line="8" selection-end-column="109" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/cookie-parser/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_yiliaofare.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032467533">
-          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/index.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bm_currentMonth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032467533">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.16891892">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/filter.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bm_historyBill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032467533">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#159#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.13513513">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/index.html">
+    <entry file="file://$PROJECT_DIR$/core/server/views/bm_todayBill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16304348">
-          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/changePwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.067567565">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_addCityAD.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_addVersion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_maintain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_shopConfig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/myInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/om_fileManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/om_log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/om_review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_addParams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_cacheList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.067567565">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/pm_paramManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addUserClass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03396739">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_menuManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03396739">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_roleManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03396739">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_userAuthorize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03396739">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1289,37 +1382,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeFuncTest.js">
+    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addRole.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.13586956">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/sendResponse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="95" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3875968">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

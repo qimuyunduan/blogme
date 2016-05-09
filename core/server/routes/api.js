@@ -12,16 +12,20 @@ function  constructFetchParams(reqParams,requestFields,filter){
 	if(_.isObject(reqParams)&& _.isArray(requestFields)){
 		var values = _.values(reqParams);
 		//filter some values
-		if(_.isArray(filter)&&!_.isEmpty(filter)){
-			var result = utils.filters.filterArray(values,filter);
-			if(result){
-				if(requestFields.length==result.length){
-					fetchParas = _.zipObject(requestFields,result);
-					return fetchParas;
+		if(filter){
+
+			if(_.isArray(filter)&&!_.isEmpty(filter)){
+				var result = utils.filters.filterArray(values,filter);
+				if(result){
+					if(requestFields.length==result.length){
+						fetchParas = _.zipObject(requestFields,result);
+						return fetchParas;
+					}
 				}
 			}
 		}
-		else if(filter){
+		else {
+
 			if(requestFields.length==values.length){
 				fetchParas = _.zipObject(requestFields,values);
 				return fetchParas;
@@ -32,14 +36,14 @@ function  constructFetchParams(reqParams,requestFields,filter){
 }
 
 
-function consOptions(reqParams,model,fetchFields,url,reqType){
+function consOptions(reqParams,model,fetchFields,url){
 	var options={};
 	if(_.isObject(reqParams)&&! _.isEmpty(reqParams)){
 		options={reqParams:reqParams};
 	}
-	if(_.isString(model)&&_.isArray(fetchFields)&&_.isString(reqType)&&_.isString(url)){
-		if(model.length&&reqType.length&&url.length){
-			_.assign(options,{reqModel:model,fetchFields:fetchFields,reqType:reqType,reqUrl:url})
+	if(_.isString(model)&&_.isArray(fetchFields)&&_.isString(url)){
+		if(model.length&&url.length){
+			_.assign(options,{reqModel:model,fetchFields:fetchFields,reqUrl:url})
 		}
 
 	}
@@ -83,10 +87,10 @@ routes = function apiRoutes() {
 		})
 		.post(function (req, res) {
 
-			var queryOptions = consOptions(constructFetchParams(req.body,['user_name'],[0]), "idoUser",['user_salt','user_pass'],'index','post');
+			var queryOptions = consOptions(constructFetchParams(req.body,['user_name'],[0]), "idoUser",['user_salt','user_pass'],'index');
 			if(!_.isEmpty(queryOptions)){
 
-				controller.handleRequest(req,res,queryOptions);
+				controller.fetch(req,res,queryOptions);
 			}
 
 		});

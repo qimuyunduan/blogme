@@ -27,9 +27,6 @@ function filterFields(values,fields){
 }
 
 
-function replyWithSuccess(){
-	return {err:false};
-}
 function replyWithData(values,fields){
 	var data = filterFields(values,fields);
 	if(data){
@@ -78,8 +75,6 @@ function fail(){
 }
 
 module.exports = {
-	replyWithSuccess: replyWithSuccess,
 	replyWithData:replyWithData,
-	replyWithPageData:replyWithPageData,
-    fail: fail
+	replyWithPageData:replyWithPageData
 };

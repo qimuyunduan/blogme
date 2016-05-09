@@ -1,14 +1,8 @@
 
-<form id="pagerForm" method="post" action="">
-    <input type="hidden" name="status" value="${param.status}">
-    <input type="hidden" name="keywords" value="${param.keywords}" />
-    <input type="hidden" name="pageNum" value="1" />
-    <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
-    <input type="hidden" name="orderField" value="${param.orderField}" />
-</form>
+
 
 <div class="pageHeader">
-    <form onsubmit="return navTabSearch(this);" action="" method="post">
+    <form id="">
 
         <div class="searchBar">
             <table class="searchContent">
@@ -84,7 +78,7 @@
                 <option value="150">150</option>
                 <option value="200">200</option>
             </select>
-            <span>条，共${totalCount}条</span>
+            <span>条，共{{totalCount}}条</span>
         </div>
         <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
     </div >

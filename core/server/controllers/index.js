@@ -63,51 +63,64 @@ function getResult(req, res, options) {
 		})
 	}
 }
-function updateRecord(req, res, options) {
+function updateRecord(res, options) {
 	models[options.model].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 				if (model) {
-					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
-					if (!result.err) {
-
+					// change the model
+					model.save({}).then(function(){
+						res.send("更新数据成功..");
+					}).catch(function(){
+						res.send("更新数据失败....");
+					})
+				}
+			}
+		).catch(function () {
+		res.send("更新数据失败....");
+	})
+}
+function deleteRecord(res, options) {
+	models[options.model].model().forge(options.reqParams).fetch()
+		.then(function (model) {
+			if (model) {
+				model.destroy().then(function(result){
+					if (result) {
+						console.log(result);
+						res.send("删除成功...");
 					}
-				}
+					else{
+						res.send("删除失败...");
+					}
+				})
 			}
-		).catch(function () {
-		res.send("出错了....");
-	})
-}
-function deleteRecord(req, res, options) {
-	models[options.model].model().forge(options.reqParams).fetch()
-		.then(function (model) {
-				if (model) {
-					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
-
-				}
-			}
-		).catch(function () {
-		res.send("出错了....");
+		}).catch(function () {
+		res.send("删除失败....");
 	})
 }
 
-function createRecord(req, res, options) {
-	models[options.model].model().forge(options.reqParams).fetch()
+function createRecord(res, options) {
+	models[options.model].model().forge(options.reqParams).save()
 		.then(function (model) {
 				if (model) {
-					var result = reply.replyWithData(model.toJSON(), options.fetchFields);
 
+					res.send("添加成功...");
 				}
+			else{
+					res.send("添加失败...");
+				}
+
+
 			}
 		).catch(function () {
-		res.send("出错了....");
+		res.send("添加失败....");
 	})
 }
 
 controllers = {
-	create: function (req, res, options) {
+	create: function (res, options) {
 		createRecord(req, res, options);
 	},
-	del: function (req, res, options) {
+	del: function (res, options) {
 		deleteRecord(req, res, options);
 	},
 	update: function (req, res, options) {

@@ -8,20 +8,21 @@
  * @version
  *
  */
-var crypto = require('crypto'),
-	uuid = require('node-uuid'),
+var _      = require('lodash'),
+	crypto = require('crypto'),
+	uuid   = require('node-uuid'),
 	moment = require('./core/server/utils/moment'),
-	model = require("./core/server/models/idoUser");
+	model  = require("./core/server/models/idoUser");
 
-function saer(sert){
-	if(sert){
-		console.log("true");
-	}
-	else{console.log("false");}
-}
-saer({});// true
+//function saer(sert){
+//	if(sert){
+//		console.log("true");
+//	}
+//	else{console.log("false");}
+//}
+//saer({});// true
 
-
+console.log(_.isEmpty([]));
 
 //model.idoUser.model().forge({
 //		user_name: "qimu",
