@@ -20,10 +20,10 @@ function filterArray(data, filters) {
 		var countData = data.length;
 		var countFilter = filters.length;
 		if (countData >= countFilter) {
-			values = filters.sort();
+			filters.sort();
 			for (var i = 0; i < countFilter; i++) {
-				if (values[i] < countData) {
-					values[i] = data[i];
+				if (filters[i] < countData) {
+					values.push(data[filters[i]]);
 				}
 			}
 			return values;

@@ -35,16 +35,14 @@ function getResult(req, res, options) {
 								//TODO:
 								//res.redirect("/authorized");
 								res.send("success");
-							} else {
-								res.send("用户名或密码错误...");
 							}
 						}
-					}else {
-						rres.send("用户名或密码错误...");
 					}
 				}
-			).catch(function () {
-			res.send("用户名或密码错误...");
+			).catch(function (err) {
+
+			console.log(err);
+			// do other things
 		})
 	}
 
@@ -57,29 +55,43 @@ function getResult(req, res, options) {
 					if (!pageData.err) {
 						res.render(options.reqUrl, pageData.data);
 					}
-				} else {
-					res.send("查找数据失败.....");
 				}
-
-			}).catch(function () {
-			res.send("出错了....");
+			}).catch(function (err) {
+			console.log(err);
+			// do other things
 		})
 	}
 }
+
 function updateRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 				if (model) {
-					// change the model
-					model.save({}).then(function(){
-						res.send("更新数据成功..");
-					}).catch(function(){
-						res.send("更新数据失败....");
-					})
+					if(_.isObject(options.fetchFields)&&! _.isEmpty(options.fetchFields)){
+
+						// change the model
+						model.save(options.fetchFields).then(function(){
+							res.send("success");
+						}).catch(function(err){
+							console.log(err);
+							// do other things
+						})
+					}
+					else if(_.isString(options.fetchFields) && options.fetchFields.length != 0){
+
+						if(options.reqUrl == 'changePwd'){
+							var keys = options.fetchFields.split(" ");
+							var results = model.toJSON();
+							console.log(results[fields[0]]);
+							//console.log(model[fields[1]]);
+						}
+					}
+
 				}
 			}
-		).catch(function () {
-		res.send("更新数据失败....");
+		).catch(function (err) {
+		console.log(err);
+		// do other things
 	})
 }
 function deleteRecord(res, options) {

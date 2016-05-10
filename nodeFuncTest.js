@@ -14,14 +14,14 @@ var _      = require('lodash'),
 	moment = require('./core/server/utils/moment'),
 	model  = require("./core/server/models/idoUser");
 
+function fs(rg){
+	if(rg){
+		rg.sort();
+		console.log(rg);
+	}
+}
 
-var grth = {};
-
-var userId = uuid.v4();
-grth[userId]="asertryj";
-
-console.log(grth[userId]);  //可以uuid产生一个唯一性的session person id
-
+fs([3,4,2,5]);
 //function saer(sert){
 //	if(sert){
 //		console.log("true");

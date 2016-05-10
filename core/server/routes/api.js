@@ -28,6 +28,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 
 			if (requestFields.length == values.length) {
 				fetchParas = _.zipObject(requestFields, values);
+
 				return fetchParas;
 			}
 		}
@@ -41,7 +42,7 @@ function consOptions(reqParams, model, fetchFields, url) {
 	if (_.isObject(reqParams) && !_.isEmpty(reqParams)) {
 		options = {reqParams: reqParams};
 	}
-	if (_.isString(model) && _.isArray(fetchFields) && _.isString(url)) {
+	if (_.isString(model) && (_.isString(fetchFields)|| _.isObject(fetchFields))&& _.isString(url)) {
 		if (model.length && url.length) {
 			_.assign(options, {reqModel: model, fetchFields: fetchFields, reqUrl: url})
 		}
@@ -80,6 +81,7 @@ routes = function apiRoutes() {
 		.post(function (req, res) {
 
 			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [0]), "idoUser", ['user_salt', 'user_pass'], 'index');
+
 			if (!_.isEmpty(queryOptions)) {
 
 				controller.fetch(req, res, queryOptions);
@@ -108,10 +110,9 @@ routes = function apiRoutes() {
 			res.render("changePwd");
 		})
 		.put(function (req, res) {
-			console.log(req.body);
 
-
-			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [3]), "idoUser", ['user_salt', 'user_pass'], 'changePwd');
+			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [3]), "idoUser", 'user_salt user_pass', 'changePwd');
+			console.log(queryOptions);
 			if (!_.isEmpty(queryOptions)) {
 
 				controller.update(res, queryOptions);

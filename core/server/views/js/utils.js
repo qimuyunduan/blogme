@@ -192,7 +192,6 @@ function getCookieValue(name) {
 function changePwd(formID, url,method){
 
 	var userName = getCookieValue('loginUserName');
-	alert(userName);
 	if(userName){
 		var formData = getKeysAndValues(formID);
 		formData.keys.push("userName");
@@ -202,23 +201,10 @@ function changePwd(formID, url,method){
 			if(antiSQL(trimedValues)){
 				if(checkLength(6,20,trimedValues)){
 					if(trimedValues[1]==trimedValues[2]){
-						$.ajax({
-							type: method,
-							url: url,
-							data: mergeToObject(formData.keys,trimedValues),
-							async: false,
-							error: function () {
-								alertMsg.error("sorry!链接服务器失败...");
-							},
-							success:function(data){
-								if(data=="success"){
-									alertMsg.success("修改密码成功...");
-								}
-								else{
-									alertMsg.info("修改密码失败....");
-								}
-							}
-						});
+						sendRequest(url,method,mergeToObject(formData.keys,trimedValues));
+					}
+					else{
+						alertMsg.info("两次输入的密码不一致......");
 					}
 				}
 			}
@@ -226,23 +212,53 @@ function changePwd(formID, url,method){
 		}
 	}
 
-
-
 }
 
 //send request
 
-function sendRequest(formID, url,method){
-	var formData = getQueryObject(formID);
-	if(formData){
+function sendRequest(url,method,data){
+
+	if(data){
 		$.ajax({
 			type: method,
 			url: url,
-			data: formData,
+			data: data,
 			async: false,
 			error: function () {
 				alertMsg.error("sorry!链接服务器失败...");
+			},
+			success:function(data){
+				if(data=="success"){
+					switch (method) {
+						case 'post':
+							alertMsg.success("创建成功...");
+							break;
+						case 'put':
+							alertMsg.success("修改成功...");
+							break;
+						case 'delete':
+							alertMsg.success("删除成功...");
+							break;
+						default:break;
+					}
+
+				}
+				else{
+					switch (method) {
+						case 'post':
+							alertMsg.success("创建失败...");
+							break;
+						case 'put':
+							alertMsg.success("修改失败...");
+							break;
+						case 'delete':
+							alertMsg.success("删除失败...");
+							break;
+						default:break;
+					}
+				}
 			}
+
 		});
 	}
 
@@ -252,38 +268,27 @@ function sendRequest(formID, url,method){
 
 function setMessage(message){
 	$('#loginUserName').val(message);
-	$('pwd').val("");
+	$('#pwd').val("");
 }
 
 //dispose user login
 function login() {
-	var form = $('#loginForm');
-	var keys = [];
-	var values = [];
-	var queryObject = {};
-	if (form) {
-		var querySer = form.serializeArray();
-		$.each(querySer, function (i, field) {
-			keys.push(field.name);
-			values.push(field.value);
-		});
 
-	}
-
-	var result = checkTrim(values);
+	var queryObject = getKeysAndValues('loginForm');
+	var result = checkTrim(queryObject.values);
 
 	if (checkLength(6, 20, result)) {
 		if (!isContainSpecialChar(result,true)) {
 
 			if (antiSQL(result,true)) {
-				queryObject = mergeToObject(keys, result);
+				queryObject = mergeToObject(queryObject.keys, result);
 				$.ajax({
 					type: "post",
 					url: "index",
 					data: queryObject,
 					async: false,
 					error: function () {
-						alert("error connection...");
+						alert("sorry!链接服务器失败......");
 					},
 					success:function(data){
 
