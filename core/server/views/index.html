@@ -10,7 +10,7 @@
     <script src="js/utils.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body onkeypress="responseEnter()">
 <div id="login">
 
     <div>
@@ -32,7 +32,7 @@
                 <div>
                     <span>记住用户名:</span>
                     <input type="checkbox" name="rememberName" checked>
-                    <button type="button" onclick="login()"></button>
+                    <button type="button" onclick="login()" id="btnSure"></button>
                 </div>
             </div>
 

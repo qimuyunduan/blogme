@@ -52,7 +52,7 @@ function checkLength(min,max,values){
 		length = values.length;
 		for (var i = 0; i < length-1; i++) {
 			if(values[i].length<min||values[i].length>max){
-				setMessage("用户名和密码长度不小于4...");
+				setMessage("用户名和密码长度不小于6...");
 				return false;
 			}
 		}
@@ -119,13 +119,10 @@ function antiSQL(values,isLogin) {
 	return true;
 }
 
-
-//获取去除空格后每个查询字段的值
-function getQueryObject(formID) {
-	var form = $('#' + formID);
+function getKeysAndValues(formId){
+	var form = $('#' + formId);
 	var keys = [];
 	var values = [];
-	var queryObject = {};
 	if (form) {
 		var querySer = form.serializeArray();
 		$.each(querySer, function (i, field) {
@@ -134,13 +131,23 @@ function getQueryObject(formID) {
 		});
 
 	}
+	return {keys:keys,values:values};
+
+}
+//获取去除空格后每个查询字段的值
+function getQueryObject(formID) {
+
+	var data   = getKeysAndValues(formID);
+	var keys   = data.keys;
+	var values = data.values;
+	var queryObject = {};
 	//add control for showing records
 	keys.push("numPerPage");
 	keys.push("currentPage");
 	var results = checkTrim(values);
 	if (results) {
-		if (!isContainSpecialChar(results,false)) {
-			if (antiSQL(values,false)) {
+		if (!isContainSpecialChar(results)) {
+			if (antiSQL(values)) {
 				results.push("50");
 				results.push("1");
 				queryObject = mergeToObject(keys, results);
@@ -160,6 +167,69 @@ function getRowData(){
 function changePageNum(){
 
 }
+
+
+function responseEnter(){
+	if (event.keyCode == 13) {
+		login();
+	}
+}
+function getCookieValue(name) {
+
+	var start = document.cookie.indexOf(name + "=");
+
+	if (start != -1) {
+
+		start = start + name.length + 1;
+		var end = document.cookie.indexOf(";", start);
+		if (end == -1) end = document.cookie.length;
+		return document.cookie.substring(start, end);
+
+	}
+	return false;
+}
+
+function changePwd(formID, url,method){
+
+	var userName = getCookieValue('loginUserName');
+	alert(userName);
+	if(userName){
+		var formData = getKeysAndValues(formID);
+		formData.keys.push("userName");
+		formData.values.push(userName);
+		var trimedValues = checkTrim(formData.values);
+		if(trimedValues){
+			if(antiSQL(trimedValues)){
+				if(checkLength(6,20,trimedValues)){
+					if(trimedValues[1]==trimedValues[2]){
+						$.ajax({
+							type: method,
+							url: url,
+							data: mergeToObject(formData.keys,trimedValues),
+							async: false,
+							error: function () {
+								alertMsg.error("sorry!链接服务器失败...");
+							},
+							success:function(data){
+								if(data=="success"){
+									alertMsg.success("修改密码成功...");
+								}
+								else{
+									alertMsg.info("修改密码失败....");
+								}
+							}
+						});
+					}
+				}
+			}
+
+		}
+	}
+
+
+
+}
+
 //send request
 
 function sendRequest(formID, url,method){
@@ -202,7 +272,7 @@ function login() {
 
 	var result = checkTrim(values);
 
-	if (checkLength(4, 20, result)) {
+	if (checkLength(6, 20, result)) {
 		if (!isContainSpecialChar(result,true)) {
 
 			if (antiSQL(result,true)) {
