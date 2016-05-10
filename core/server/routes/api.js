@@ -64,10 +64,6 @@ function responseHomePage(req,res){
 routes = function apiRoutes() {
 
     var router = express.Router();
-		
-
-    // alias delete with del
-    router.del = router.delete;
 
 	///pc  routes
 
@@ -232,9 +228,6 @@ routes = function apiRoutes() {
 		});
 
 
-
-
-
 	router.get("/bbm_attachmentManage.html",function(req,res){
 
 		res.render("bbm_attachmentManage");
@@ -342,99 +335,203 @@ routes = function apiRoutes() {
 
 
 	//routes for bc modules
-	router.get("/bc_addAssociateShoper.html",function(req,res){
+	router.route("/bc_addAssociateShoper.html")
+		.get(function(req,res){
 		res.render("bc_addAssociateShoper");
 	});
-	router.get("/bc_addHomeUser.html",function(req,res){
+	router.route("/bc_addHomeUser.html")
+		.get(function(req,res){
 		res.render("bc_addHomeUser");
 	});
-	router.get("/bc_addSpecialOrder.html",function(req,res){
+	router.route("/bc_addSpecialOrder.html")
+		.get(function(req,res){
 		res.render("bc_addSpecialOrder");
 	});
-	router.get("/bc_homeUser.html",function(req,res){
+	router.route("/bc_homeUser.html")
+		.get(function(req,res){
 		res.render("bc_homeUser");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
 	});
-	router.get("/bc_inputConsumeNumber.html",function(req,res){
+
+	router.route("/bc_inputConsumeNumber.html")
+		.get(function(req,res){
 		res.render("bc_inputConsumeNumber");
 	});
-	router.get("/bc_orderManage.html",function(req,res){
+	router.route("/bc_orderManage.html")
+		.get(function(req,res){
 		res.render("bc_orderManage");
+		})
+		.delete(function (req, res) {
+
 	});
-	router.get("/bc_recharge.html",function(req,res){
+	router.route("/bc_recharge.html")
+		.get(function(req,res){
 		res.render("bc_recharge");
+		})
+		.post(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
 	});
-	router.get("/bc_signContract.html",function(req,res){
+	router.route("/bc_signContract.html")
+		.get(function(req,res){
 		res.render("bc_signContract");
+		})
+		.post(function (req, res) {
+
 	});
-	router.get("/bc_specialOrder.html",function(req,res){
-		res.render("bc_specialOrder");
-	});
-	router.get("/bc_specialOrderManage.html",function(req,res){
+	router.route("/bc_specialOrder.html")
+		.get(function(req,res){
+			res.render("bc_specialOrder");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
+	router.route("/bc_specialOrderManage.html")
+		.get(function(req,res){
 		res.render("bc_specialOrderManage");
 	});
-	router.get("/bc_yiliaoConsumeManage.html",function(req,res){
+	router.route("/bc_yiliaoConsumeManage.html")
+		.get(function(req,res){
 		res.render("bc_yiliaoConsumeManage");
 	});
-	router.get("/bc_yiliaofare.html",function(req,res){
+	router.route("/bc_yiliaofare.html")
+		.get(function(req,res){
 		res.render("bc_yiliaofare");
 
 	});
 
 	//routes for bm modules
 
-	router.get("/bm_currentMonth.html",function(req,res){
+	router.route("/bm_currentMonth.html")
+		.get(function(req,res){
 		res.render("bm_currentMonth");
 	});
-	router.get("/bm_historyBill.html",function(req,res){
+	router.route("/bm_historyBill.html")
+		.get(function(req,res){
 		res.render("bm_historyBill");
 	});
-	router.get("/bm_todayBill.html",function(req,res){
+	router.route("/bm_todayBill.html")
+		.get(function(req,res){
 		res.render("bm_todayBill");
 	});
 
 
 	//routes for mm modules
 
-	router.get("/mm_addCityAD.html",function(req,res){
-		res.render("mm_addCityAD");
+	router.route("/mm_addCityAD.html")
+		.get(function (req, res) {
+			res.render("mm_addCityAD");
+		});
+	router.route("/mm_addVersion.html")
+		.get(function (req, res) {
+			res.render("mm_addVersion");
+		});
+	router.route("/mm_cityAD.html")
+		.get(function (req, res) {
+			res.render("mm_cityAD");
+		});
+	router.route("/mm_feedback.html")
+		.get(function (req, res) {
+			res.render("mm_feedback");
+		})
+		.delete(function (req, res) {
+
 	});
-	router.get("/mm_addVersion.html",function(req,res){
-		res.render("mm_addVersion");
-	});
-	router.get("/mm_cityAD.html",function(req,res){
-		res.render("mm_cityAD");
-	});
-	router.get("/mm_maintain.html",function(req,res){
-		res.render("mm_maintain");
-	});
-	router.get("/mm_shopConfig.html",function(req,res){
-		res.render("mm_shopConfig");
-	});
-	router.get("/mm_versionManage.html",function(req,res){
+	router.route("/mm_shopConfig.html")
+		.get(function (req, res) {
+			res.render("mm_shopConfig");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		});
+	router.route("/mm_versionManage.html")
+		.get(function (req, res) {
 		res.render("mm_versionManage");
-	});
+	    })
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
 
 
 	//routes for ps modules
 
-	router.get("/ps_addMenu.html",function(req,res){
+	router.route("/ps_addMenu.html")
+		.get(function(req,res){
 		res.render("ps_addMenu");
 	});
-	router.get("/ps_addRole.html",function(req,res){
+	router.route("/ps_addRole.html")
+		.get(function(req,res){
 		res.render("ps_addRole");
 	});
-	router.get("/ps_addUserClass.html",function(req,res){
+	router.route("/ps_addUserClass.html")
+		.get(function(req,res){
 		res.render("ps_addUserClass");
 	});
-	router.get("/ps_menuManage.html",function(req,res){
-		res.render("ps_menuManage");
-	});
-	router.get("/ps_roleManage.html",function(req,res){
-		res.render("ps_roleManage");
-	});
-	router.get("/ps_userAuthorize.html",function(req,res){
-		res.render("ps_userAuthorize");
-	});
+
+	router.route("/ps_menuManage.html")
+		.get(function (req, res) {
+			res.render("ps_menuManage");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
+	router.route("/ps_roleManage.html")
+		.get(function (req, res) {
+			res.render("ps_roleManage");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
+	router.route("/ps_userAuthorize.html")
+		.get(function (req, res) {
+			res.render("ps_userAuthorize");
+		})
+		.post(function (req, res) {
+
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
 
 	//routes for pm modules
 
