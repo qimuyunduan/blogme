@@ -52,7 +52,7 @@ function checkLength(min,max,values){
 		length = values.length;
 		for (var i = 0; i < length-1; i++) {
 			if(values[i].length<min||values[i].length>max){
-				alert("输入内容最小长度为4,最大长度为20......");
+				setMessage("用户名和密码长度不小于4...");
 				return false;
 			}
 		}
@@ -83,7 +83,7 @@ function isContainSpecialChar(strArr,isLogin) {
 			if (pattern.test(strArr[i])) {
 
 				if(isLogin){
-					$('#loginUserName').val("用户名或密码包含有非法字符......");
+					setMessage("用户名或密码包含有非法字符......");
 					return true;
 				}
 				alertMsg.warn("输入框内包含有非法字符......");
@@ -106,7 +106,7 @@ function antiSQL(values,isLogin) {
 			if (regex.test(values[i])) {
 
 				if(isLogin){
-					$('#loginUserName').val("用户名或密码含有特殊字符串...");
+					setMessage("用户名或密码含有特殊字符串...");
 					return false;
 				}
 				alertMsg.warn("请不要输入特殊字符串...");
@@ -151,73 +151,38 @@ function getQueryObject(formID) {
 	}
 	return false;
 }
-//send get request
-function queryRecords(formID, url) {
 
-	var data = getQueryObject(formID);
-	//send request
-	if (data) {
+// get table row data
+function getRowData(){
+
+}
+
+function changePageNum(){
+
+}
+//send request
+
+function sendRequest(formID, url,method){
+	var formData = getQueryObject(formID);
+	if(formData){
 		$.ajax({
-			type: "GET",
+			type: method,
 			url: url,
-			data: data,
+			data: formData,
 			async: false,
 			error: function () {
-				alertMsg.error("数据查询失败...");
+				alertMsg.error("sorry!链接服务器失败...");
 			}
 		});
 	}
 
+}
 
-}
-//send post request
-function addRecords(formID, url) {
-	if (document.getElementById(formID)) {
-		if (antiSQL(formID, 2)) {
-			$.ajax({
-				type: "POST",
-				url: url,
-				data: $('#' + formID).serialize(),
-				async: false,
-				error: function () {
-					alertMsg.error("增加记录失败...");
-				}
-			});
-		}
-	}
-}
-//send update requests
-function updateRecords(formID, url) {
-	if (document.getElementById(formID)) {
-		if (antiSQL(formID, 2)) {
-			$.ajax({
-				type: "PUT",
-				url: url,
-				data: $('#' + formID).serialize(),
-				async: false,
-				error: function () {
-					alertMsg.error("更新记录失败...");
-				}
-			});
-		}
-	}
 
-}
-//send delete requset
-function deleteRecords(formID, url) {
-	if (document.getElementById(formID)) {
-		if (antiSQL(formID, 2)) {
-			$.ajax({
-				type: "DELETE",
-				url: url,
-				data: $('#' + formID).serialize(),
-				async: false,
-				error: function () {
-					alertMsg.error("删除记录失败...");
-				}
-			});
-		}
-	}
+
+function setMessage(message){
+	$('#loginUserName').val(message);
+	$('pwd').val("");
 }
 
 //dispose user login
@@ -251,7 +216,13 @@ function login() {
 						alert("error connection...");
 					},
 					success:function(data){
-						$('#loginUserName').val(data);
+
+						if(data=="success"){
+							window.location = "/authorized"
+						}
+						else{
+							setMessage("用户名或密码错误...");
+						}
 					}
 				});
 

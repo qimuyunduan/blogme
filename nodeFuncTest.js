@@ -14,6 +14,14 @@ var _      = require('lodash'),
 	moment = require('./core/server/utils/moment'),
 	model  = require("./core/server/models/idoUser");
 
+
+var grth = {};
+
+var userId = uuid.v4();
+grth[userId]="asertryj";
+
+console.log(grth[userId]);  //可以uuid产生一个唯一性的session person id
+
 //function saer(sert){
 //	if(sert){
 //		console.log("true");
@@ -22,19 +30,6 @@ var _      = require('lodash'),
 //}
 //saer({});// true
 
-console.log(_.isEmpty([]));
 
-//model.idoUser.model().forge({
-//		user_name: "qimu",
-//		user_salt: salt,
-//		user_id:uuid.v1(),
-//		user_pass:af
-//	})
-//	.save()
-//	.then(function (user) {
-//		console.log({error: false, data: user});
-//	})
-//	.catch(function (err) {
-//		console.log({error: true, data: {message: err.message}});
-//	});
+
 

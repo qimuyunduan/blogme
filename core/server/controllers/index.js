@@ -16,13 +16,14 @@ function getResult(req, res, options) {
 	//handle login
 	if (options.reqUrl == 'index') {
 
-		models[options.model].model().forge(options.reqParams).fetch()
+		models[options.reqModel].model().forge(options.reqParams).fetch()
 			.then(function (model) {
 					if (model) {
 						var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+
 						if (!result.err) {
 
-							if (utils.isValidUser(req.body.pwd, result.data[0], result.data[i])) {
+							if (utils.isValidUser(req.body.pwd, result.data[0], result.data[1])) {
 								// set cookie
 								if (req.body.rememberName == "on") {
 									if (!req.cookies.loginUserName) {
@@ -30,23 +31,25 @@ function getResult(req, res, options) {
 									}
 								}
 								// set session
+								req.session.user_id ='login';
 								//TODO:
-								res.redirect("/authorized");
+								//res.redirect("/authorized");
+								res.send("success");
 							} else {
 								res.send("用户名或密码错误...");
 							}
-						} else {
-							res.send("查找数据失败.....");
 						}
+					}else {
+						rres.send("用户名或密码错误...");
 					}
 				}
 			).catch(function () {
-			res.send("出错了....");
+			res.send("用户名或密码错误...");
 		})
 	}
 
 	else {
-		models[options.model].collection().forge(options.reqParams).fetch()
+		models[options.reqModel].collection().forge(options.reqParams).fetch()
 			.then(function (collection) {
 				//TODO:
 				if (collection) {
@@ -64,7 +67,7 @@ function getResult(req, res, options) {
 	}
 }
 function updateRecord(res, options) {
-	models[options.model].model().forge(options.reqParams).fetch()
+	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 				if (model) {
 					// change the model
@@ -80,7 +83,7 @@ function updateRecord(res, options) {
 	})
 }
 function deleteRecord(res, options) {
-	models[options.model].model().forge(options.reqParams).fetch()
+	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 			if (model) {
 				model.destroy().then(function(result){
@@ -99,7 +102,7 @@ function deleteRecord(res, options) {
 }
 
 function createRecord(res, options) {
-	models[options.model].model().forge(options.reqParams).save()
+	models[options.reqModel].model().forge(options.reqParams).save()
 		.then(function (model) {
 				if (model) {
 
@@ -117,18 +120,11 @@ function createRecord(res, options) {
 }
 
 controllers = {
-	create: function (res, options) {
-		createRecord(req, res, options);
-	},
-	del: function (res, options) {
-		deleteRecord(req, res, options);
-	},
-	update: function (req, res, options) {
-		updateRecord(req, res, options);
-	},
-	fetch: function (req, res, options) {
-		getResult(req, res, options);
-	}
+
+	create: createRecord,
+	del:deleteRecord,
+	update:updateRecord,
+	fetch:getResult
 
 };
 

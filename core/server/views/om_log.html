@@ -14,7 +14,7 @@
             <div class="subBar">
                 <ul>
                     <li>
-                        <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                        <a href="" class="buttonActive"><div class="buttonContent"><button type="button">检索</button></div></a>
                     </li>
                 </ul>
             </div>
@@ -37,12 +37,12 @@
             <th width="20"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
             <th width="100">用户</th>
             <th width="100">时间</th>
-            <th width="50">操作类型</th>
+            <th width="100">操作类型</th>
             <th width="150">ip地址</th>
             <th width="150">操作地址</th>
             <th width="150">修改前</th>
             <th width="150">修改后</th>
-            <th width="150">备注</th>
+            <th width="100">备注</th>
         </tr>
         </thead>
         <tbody>
@@ -55,13 +55,13 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+            <select class="combox" name="numPerPage" onchange="">
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="150">150</option>
                 <option value="200">200</option>
             </select>
-            <span>条，共${totalCount}条</span>
+            <span>条，共{{totalCount}}条</span>
         </div>
         <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
     </div>

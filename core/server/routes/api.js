@@ -50,6 +50,16 @@ function consOptions(reqParams,model,fetchFields,url){
 	return options;
 }
 
+function responseHomePage(req,res){
+
+	var data={title: "爱都信息管理平台"};
+	if(req.cookies.loginUserName){
+		data.userName=req.cookies.loginUserName;
+	}
+
+	res.render("index", data);
+}
+
 
 routes = function apiRoutes() {
 
@@ -62,28 +72,14 @@ routes = function apiRoutes() {
 	///pc  routes
 
 	router.get("/",function(req,res){
-		var data = {
-			title:"爱都信息管理平台"
-		};
-		res.render("index",data);
-
+		responseHomePage(req,res);
 	});
 	router.get("/index.html",function(req,res){
-		var data = {
-			title:"爱都信息管理平台"
-		};
-		res.render("index",data);
+		responseHomePage(req,res);
 	});
 	router.route("/index")
 		.get(function (req, res) {
-
-			var data={title: "爱都信息管理平台"};
-			if(req.cookies.loginUserName){
-				data.userName=req.cookies.loginUserName;
-				console.log(data.userName);
-			}
-
-			res.render("index", data);
+			responseHomePage(req,res)
 		})
 		.post(function (req, res) {
 
@@ -96,34 +92,45 @@ routes = function apiRoutes() {
 		});
 
 
-    router.get("/authorized",function(req,res){
+    router.route("/authorized")
+		.get(function(req,res){
 
-		//console.log(req.headers);
+			if (!req.session.user_id) {
+				console.log("not login");
+				res.redirect('/');
+			} else {
+				console.log(req.session.user_id);
+				var dateTime = utils.moment.localDateAndTime;
+				res.render("authorized",{dateTime:dateTime});
+			}
 
-		if (!req.session.user_id) {
-			console.log("not login");
-			res.redirect('/');
-		} else {
+		});
 
-			console.log(req.session.user_id);
-			var dateTime = utils.moment.localDateAndTime;
-			res.render("authorized",{dateTime:dateTime});
-		}
+
+	router.route("/changePwd.html")
+		.get(function (req, res) {
+			res.render("changePwd");
+		})
+		.put(function (req, res) {
 
 	});
 
 
-	router.get("/changePwd.html",function(req,res){
+	router.route("/myInfo.html")
+		.get(function (req, res) {
+			var data = {
+				userName: "fwege",
+				userRealName: "gewgg",
+				email: "gewgweg",
+				cellphone: "hrretw35234",
+				userState: "343fef",
+				unit: "bbrrag"
+			};
+			res.render("myInfo", data);
+		});
 
-		res.render("changePwd");
-
-	});
 
 
-	router.get("/myInfo.html",function(req,res){
-		var data = {userName:"fwege",userRealName:"gewgg",email:"gewgweg",cellphone:"hrretw35234",userState:"343fef",unit:"bbrrag"};
-			res.render("myInfo",data);
-	});
 
 	//routes for bbm modules
 	
@@ -431,40 +438,66 @@ routes = function apiRoutes() {
 
 	//routes for pm modules
 
-	router.get("/pm_addParam.html",function(req,res){
-		res.render("pm_addParam");
-	});
-	router.get("/pm_addParams.html",function(req,res){
-		res.render("pm_addParams");
-	});
-	router.get("/pm_cacheList.html",function(req,res){
-		res.render("pm_cacheList");
-	});
-	router.get("/pm_paramList.html",function(req,res){
+	router.route("/pm_addParam.html")
+		.get(function (req, res) {
+			res.render("pm_addParam");
+		});
+	router.route("/pm_addParams.html")
+		.get(function (req, res) {
+			res.render("pm_addParams");
+		});
+	router.route("/pm_cacheList.html")
+		.get(function (req, res) {
+			res.render("pm_cacheList");
+		});
+	router.route("/pm_paramList.html")
+		.get(function(req,res){
 		res.render("pm_paramList");
-	});
-	router.get("/pm_paramManage.html",function(req,res){
-		res.render("pm_paramManage");
+	    })
+		.post(function (req, res) {
+		})
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
+		});
+	router.route("/pm_paramManage.html")
+		.get(function (req, res) {
+			res.render("pm_paramManage");
+		})
+		.post(function (req, res) {
+
+	    })
+		.put(function (req, res) {
+
+		})
+		.delete(function (req, res) {
+
 	});
 
 
 	//routes for om modules
 
-	router.get("/om_fileManage.html",function(req,res){
-		console.log(req.body);
-		res.render("om_fileManage");
+	router.route("/om_fileManage.html")
+		.get(function (req, res) {
+			res.render("om_fileManage");
+		})
+		.delete(function (req, res) {
 
 	});
-	router.get("/om_log.html",function(req,res){
-		console.log(req.body);
-		res.render("om_log");
+
+	router.route("/om_log.html")
+		.get(function (req, res) {
+			res.render("om_log");
+		})
+		.delete(function (req, res) {
 
 	});
-	router.get("/om_review.html",function(req,res){
-		console.log(req.body);
+	router.route("/om_review.html")
+		.get(function(req,res){
 		res.render("om_review");
-
-	});
+});
 
     //// ## Uploads
     //router.post('/uploads',  middleware.busboy, api.http(api.uploads.add));
