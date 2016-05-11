@@ -36,12 +36,13 @@ function filterArray(data, filters) {
 function filterObject(data, keys) {
 	var values = [];
 	if (_.isObject(data) && _.isArray(keys)) {
-		var countData = _.keys(data).length;
+
+		var dataKeys = _.keys(data);
 		var countFilter = keys.length;
-		if (countData >= countFilter) {
+		if (dataKeys.length >= countFilter) {
 
 			for (var i = 0; i < countFilter; i++) {
-				if (data[keys[i]]) {
+				if (_.indexOf(dataKeys,keys[i])!=-1) {
 					values.push(data[keys[i]])
 				}
 			}

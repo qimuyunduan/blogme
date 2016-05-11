@@ -168,7 +168,9 @@ function changePageNum() {
 
 }
 
+function banRefresh(){
 
+}
 function responseEnter() {
 	if (event.keyCode == 13) {
 		login();

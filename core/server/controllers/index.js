@@ -19,6 +19,7 @@ function getResult(req, res, options) {
 		models[options.reqModel].model().forge(options.reqParams).fetch()
 			.then(function (model) {
 					if (model) {
+						console.log(model.toJSON());
 						var result = reply.replyWithData(model.toJSON(), options.fetchFields);
 
 						if (!result.err) {
@@ -31,11 +32,14 @@ function getResult(req, res, options) {
 									}
 								}
 								// set session
-								req.session.user_id ='login';
-								//TODO:
-								//res.redirect("/authorized");
+								req.session.user_id = 'login';
+
 								res.send("success");
+							} else {
+								res.send('fail');
 							}
+						} else {
+							res.send('fail');
 						}
 					}
 				}
@@ -44,18 +48,38 @@ function getResult(req, res, options) {
 			console.log(err);
 			// do other things
 		})
+	} else if (options.reqUrl == 'myInfo') {
+		models[options.reqModel].model().forge(options.reqParams).fetch()
+			.then(function (model) {
+				var result = reply.replyWithData(model.toJSON(), options.fetchFields);
+
+				if (!result.err && result.data.length == 5) {
+					console.log(utils.iconv.gbkToUtf8(result.data[4]));
+					res.render('myInfo', {
+						userName: result.data[0],
+						email: result.data[1],
+						cellphone: result.data[2],
+						userState: result.data[3],
+						unit: result.data[4]
+					});
+				}
+
+			}).catch(function(err){
+			console.log(err);
+		})
 	}
 
 	else {
 		models[options.reqModel].collection().forge(options.reqParams).fetch()
 			.then(function (collection) {
 				//TODO:
-				if (collection) {
-					var pageData = reply.replyWithPageData(model.toJSON(), options.fetchFields);
-					if (!pageData.err) {
-						res.render(options.reqUrl, pageData.data);
-					}
-				}
+				console.log(collection.toJSON());
+				//if (collection) {
+				//	var pageData = reply.replyWithPageData(model.toJSON(), options.fetchFields);
+				//	if (!pageData.err) {
+				//		res.render(options.reqUrl, pageData.data);
+				//	}
+				//}
 			}).catch(function (err) {
 			console.log(err);
 			// do other things
@@ -67,32 +91,32 @@ function updateRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 				if (model) {
-					if(_.isObject(options.fetchFields)&&! _.isEmpty(options.fetchFields)){
+					if (_.isObject(options.fetchFields) && !_.isEmpty(options.fetchFields)) {
 
 						// change the model
-						model.save(options.fetchFields).then(function(){
+						model.save(options.fetchFields).then(function () {
 							res.send("success");
-						}).catch(function(err){
+						}).catch(function (err) {
 							console.log(err);
 							// do other things
 						})
 					}
-					else if(_.isString(options.fetchFields) && options.fetchFields.length != 0){
+					else if (_.isString(options.fetchFields) && options.fetchFields.length != 0) {
 
-						if(options.reqUrl == 'changePwd'){
+						if (options.reqUrl == 'changePwd') {
 							var keys = options.fetchFields.split(" ");
 							var results = model.toJSON();
-							var checkResult = utils.checkUser.isValidUser(options.data.oldPassword,results[keys[0]],results[keys[1]]);
-							if(checkResult){
-								var newPass = utils.checkUser.cryptPass(options.data.newPassword,results[keys[0]]);
-								model.save({user_pass:newPass}).then(function(){
+							var checkResult = utils.checkUser.isValidUser(options.data.oldPassword, results[keys[0]], results[keys[1]]);
+							if (checkResult) {
+								var newPass = utils.checkUser.cryptPass(options.data.newPassword, results[keys[0]]);
+								model.save({user_pass: newPass}).then(function () {
 									res.send("success");
-								}).catch(function(err){
+								}).catch(function (err) {
 									console.log(err);
 									// do other things
 								})
 							}
-							else{
+							else {
 								res.send("fail");
 							}
 						}
@@ -109,12 +133,12 @@ function deleteRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 			if (model) {
-				model.destroy().then(function(result){
+				model.destroy().then(function (result) {
 					if (result) {
 						console.log(result);
 						res.send("删除成功...");
 					}
-					else{
+					else {
 						res.send("删除失败...");
 					}
 				})
@@ -131,7 +155,7 @@ function createRecord(res, options) {
 
 					res.send("添加成功...");
 				}
-			else{
+				else {
 					res.send("添加失败...");
 				}
 
@@ -145,9 +169,9 @@ function createRecord(res, options) {
 controllers = {
 
 	create: createRecord,
-	del:deleteRecord,
-	update:updateRecord,
-	fetch:getResult
+	del: deleteRecord,
+	update: updateRecord,
+	fetch: getResult
 
 };
 

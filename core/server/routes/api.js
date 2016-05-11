@@ -1,9 +1,9 @@
 // # API routes
 
-var _ = require('lodash'),
+var _       = require('lodash'),
 	express = require('express'),
-	api = require('../api'),
-	utils = require('../utils'),
+	api     = require('../api'),
+	utils   = require('../utils'),
 	controller = require('../controllers'),
 	routes;
 
@@ -122,6 +122,15 @@ routes = function apiRoutes() {
 
 	router.route("/myInfo.html")
 		.get(function (req, res) {
+			var userName = req.cookies.loginUserName;
+			if(userName){
+				var queryOptions = consOptions(constructFetchParams({userName:userName}, ['user_name']), "idoUser", ['user_name', 'user_email','user_phone','user_status','user_unit'], 'myInfo');
+
+				if (!_.isEmpty(queryOptions)) {
+
+					controller.fetch(req,res, queryOptions);
+				}
+			}
 
 		});
 
