@@ -1,22 +1,21 @@
 <div class="pageContent">
 
-    <form id="">
+    <form id="changePwd">
         <div class="pageFormContent" layoutH="58">
 
             <div class="unit">
                 <label for="old_pwd">旧密码：</label>
-                <input id="old_pwd" type="password" name="oldPassword" size="30" minlength="6" maxlength="20"
+                <input id="old_pwd" type="password" name="oldPassword" size="30" maxlength="20"
                        class="required"/>
             </div>
             <div class="unit">
                 <label for="new_pwd">新密码：</label>
-                <input id="new_pwd" type="password" name="newPassword" size="30" minlength="6" maxlength="20"
+                <input id="new_pwd" type="password" name="newPassword" size="30"  maxlength="20"
                        class="required alphanumeric"/>
             </div>
             <div class="unit">
                 <label for="new_pwd2">重复输入新密码：</label>
-                <input id="new_pwd2" type="password" name="rnewPassword" size="30" equalTo="#new_pwd"
-                       class="required alphanumeric"/>
+                <input id="new_pwd2" type="password" name="rnewPassword" size="30" class="required alphanumeric"/>
             </div>
 
         </div>
@@ -25,7 +24,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="submit">确定</button>
+                            <button type="button" onclick="changePwd('changePwd','changePwd.html','put')">确定</button>
                         </div>
                     </div>
                 </li>

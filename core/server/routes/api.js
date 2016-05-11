@@ -19,7 +19,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 				if (result) {
 					if (requestFields.length == result.length) {
 						fetchParas = _.zipObject(requestFields, result);
-						return fetchParas;
+						return {data:reqParams,reqParams:fetchParas};
 					}
 				}
 			}
@@ -28,8 +28,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 
 			if (requestFields.length == values.length) {
 				fetchParas = _.zipObject(requestFields, values);
-
-				return fetchParas;
+				return {data:reqParams,reqParams:fetchParas};
 			}
 		}
 		return false;
@@ -38,17 +37,18 @@ function constructFetchParams(reqParams, requestFields, filter) {
 
 
 function consOptions(reqParams, model, fetchFields, url) {
-	var options = {};
-	if (_.isObject(reqParams) && !_.isEmpty(reqParams)) {
-		options = {reqParams: reqParams};
-	}
-	if (_.isString(model) && (_.isString(fetchFields)|| _.isObject(fetchFields))&& _.isString(url)) {
-		if (model.length && url.length) {
-			_.assign(options, {reqModel: model, fetchFields: fetchFields, reqUrl: url})
+	if(reqParams){
+		if (_.isString(model) && (_.isString(fetchFields)|| _.isObject(fetchFields))&& _.isString(url)) {
+			if (model.length && url.length) {
+				_.assign(reqParams, {reqModel: model, fetchFields: fetchFields, reqUrl: url});
+				return reqParams;
+			}
+
 		}
 
 	}
-	return options;
+	return false;
+
 }
 
 function responseHomePage(req, res) {

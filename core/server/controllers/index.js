@@ -82,8 +82,19 @@ function updateRecord(res, options) {
 						if(options.reqUrl == 'changePwd'){
 							var keys = options.fetchFields.split(" ");
 							var results = model.toJSON();
-							console.log(results[fields[0]]);
-							//console.log(model[fields[1]]);
+							var checkResult = utils.isValidUser(options.data.oldPassword,results[keys[0]],results[keys[1]]);
+							if(checkResult){
+								model.save({user_pass:options.data.newPassword}).then(function(){
+									console.log("change success...");
+									res.send("success");
+								}).catch(function(err){
+									console.log(err);
+									// do other things
+								})
+							}
+							else{
+								res.send("fail");
+							}
 						}
 					}
 

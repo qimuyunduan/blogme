@@ -36,8 +36,8 @@ function checkTrim(values) {
 		}
 	}
 	if (sumLength == 0) {
-			alertMsg.warn("输入内容不能为空......");
-			return false;
+		alertMsg.warn("输入内容不能为空......");
+		return false;
 	}
 	else {
 		return values;
@@ -46,12 +46,12 @@ function checkTrim(values) {
 
 }
 //check field values length
-function checkLength(min,max,values){
+function checkLength(min, max, values) {
 	var length = 0;
 	if ($.isArray(values)) {
 		length = values.length;
-		for (var i = 0; i < length-1; i++) {
-			if(values[i].length<min||values[i].length>max){
+		for (var i = 0; i < length - 1; i++) {
+			if (values[i].length < min || values[i].length > max) {
 				setMessage("用户名和密码长度不小于6...");
 				return false;
 			}
@@ -62,27 +62,27 @@ function checkLength(min,max,values){
 
 
 // merge two array to object
-function mergeToObject(keys,values){
+function mergeToObject(keys, values) {
 	var hash = {};
-	if($.isArray(keys) && $.isArray(values)&& keys.length == values.length){
+	if ($.isArray(keys) && $.isArray(values) && keys.length == values.length) {
 		var length = keys.length;
-		for (i = 0;i < length; i++) {
+		for (i = 0; i < length; i++) {
 			hash[keys[i]] = values[i];
 		}
 	}
 	return hash;
 }
 
-function isContainSpecialChar(strArr,isLogin) {
+function isContainSpecialChar(strArr, isLogin) {
 
 	//匹配特殊字符
-	var pattern=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+	var pattern = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
 	if ($.isArray(strArr)) {
 		var count = strArr.length;
 		for (var i = 0; i < count; i++) {
 			if (pattern.test(strArr[i])) {
 
-				if(isLogin){
+				if (isLogin) {
 					setMessage("用户名或密码包含有非法字符......");
 					return true;
 				}
@@ -96,7 +96,7 @@ function isContainSpecialChar(strArr,isLogin) {
 
 }
 //antiSQL
-function antiSQL(values,isLogin) {
+function antiSQL(values, isLogin) {
 
 	var regex = /select|update|delete|insert|exec|count|’|"|=|;|>|<|%/i;
 	var length = values.length;
@@ -105,7 +105,7 @@ function antiSQL(values,isLogin) {
 		for (var i = 0; i < length; i++) {
 			if (regex.test(values[i])) {
 
-				if(isLogin){
+				if (isLogin) {
 					setMessage("用户名或密码含有特殊字符串...");
 					return false;
 				}
@@ -119,7 +119,7 @@ function antiSQL(values,isLogin) {
 	return true;
 }
 
-function getKeysAndValues(formId){
+function getKeysAndValues(formId) {
 	var form = $('#' + formId);
 	var keys = [];
 	var values = [];
@@ -131,14 +131,14 @@ function getKeysAndValues(formId){
 		});
 
 	}
-	return {keys:keys,values:values};
+	return {keys: keys, values: values};
 
 }
 //获取去除空格后每个查询字段的值
 function getQueryObject(formID) {
 
-	var data   = getKeysAndValues(formID);
-	var keys   = data.keys;
+	var data = getKeysAndValues(formID);
+	var keys = data.keys;
 	var values = data.values;
 	var queryObject = {};
 	//add control for showing records
@@ -160,16 +160,16 @@ function getQueryObject(formID) {
 }
 
 // get table row data
-function getRowData(){
+function getRowData() {
 
 }
 
-function changePageNum(){
+function changePageNum() {
 
 }
 
 
-function responseEnter(){
+function responseEnter() {
 	if (event.keyCode == 13) {
 		login();
 	}
@@ -189,21 +189,45 @@ function getCookieValue(name) {
 	return false;
 }
 
-function changePwd(formID, url,method){
+function changePwd(formID, url, method) {
 
 	var userName = getCookieValue('loginUserName');
-	if(userName){
+	if (userName) {
 		var formData = getKeysAndValues(formID);
 		formData.keys.push("userName");
 		formData.values.push(userName);
 		var trimedValues = checkTrim(formData.values);
-		if(trimedValues){
-			if(antiSQL(trimedValues)){
-				if(checkLength(6,20,trimedValues)){
-					if(trimedValues[1]==trimedValues[2]){
-						sendRequest(url,method,mergeToObject(formData.keys,trimedValues));
+		if (trimedValues) {
+			if (antiSQL(trimedValues)) {
+				if (checkLength(6, 20, trimedValues)) {
+					if (trimedValues[0] == trimedValues[1]) {
+						alertMsg.info("新密码与原密码应该不一致...");
 					}
-					else{
+					else if (trimedValues[1] == trimedValues[2]) {
+						formData = mergeToObject(formData.keys, trimedValues);
+						$.ajax({
+							type: method,
+							url: url,
+							data: formData,
+							async: false,
+							error: function () {
+								alertMsg.error("sorry!链接服务器失败......");
+							},
+							success: function (data) {
+								alertMsg.info(data);
+								if (data == "success") {
+									$.pdialog.closeCurrent();
+									alertMsg.success("修改密码成功......");
+								}
+								else {
+									alertMsg.info("你输入的原始密码不正确...");
+								}
+							}
+						});
+
+
+					}
+					else {
 						alertMsg.info("两次输入的密码不一致......");
 					}
 				}
@@ -216,9 +240,9 @@ function changePwd(formID, url,method){
 
 //send request
 
-function sendRequest(url,method,data){
+function sendRequest(url, method, data) {
 
-	if(data){
+	if (data) {
 		$.ajax({
 			type: method,
 			url: url,
@@ -227,8 +251,8 @@ function sendRequest(url,method,data){
 			error: function () {
 				alertMsg.error("sorry!链接服务器失败...");
 			},
-			success:function(data){
-				if(data=="success"){
+			success: function (data) {
+				if (data == "success") {
 					switch (method) {
 						case 'post':
 							alertMsg.success("创建成功...");
@@ -239,11 +263,12 @@ function sendRequest(url,method,data){
 						case 'delete':
 							alertMsg.success("删除成功...");
 							break;
-						default:break;
+						default:
+							break;
 					}
 
 				}
-				else{
+				else {
 					switch (method) {
 						case 'post':
 							alertMsg.success("创建失败...");
@@ -254,7 +279,8 @@ function sendRequest(url,method,data){
 						case 'delete':
 							alertMsg.success("删除失败...");
 							break;
-						default:break;
+						default:
+							break;
 					}
 				}
 			}
@@ -265,8 +291,7 @@ function sendRequest(url,method,data){
 }
 
 
-
-function setMessage(message){
+function setMessage(message) {
 	$('#loginUserName').val(message);
 	$('#pwd').val("");
 }
@@ -278,9 +303,9 @@ function login() {
 	var result = checkTrim(queryObject.values);
 
 	if (checkLength(6, 20, result)) {
-		if (!isContainSpecialChar(result,true)) {
+		if (!isContainSpecialChar(result, true)) {
 
-			if (antiSQL(result,true)) {
+			if (antiSQL(result, true)) {
 				queryObject = mergeToObject(queryObject.keys, result);
 				$.ajax({
 					type: "post",
@@ -290,12 +315,12 @@ function login() {
 					error: function () {
 						alert("sorry!链接服务器失败......");
 					},
-					success:function(data){
+					success: function (data) {
 
-						if(data=="success"){
+						if (data == "success") {
 							window.location = "/authorized"
 						}
-						else{
+						else {
 							setMessage("用户名或密码错误...");
 						}
 					}
