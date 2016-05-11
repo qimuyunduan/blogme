@@ -27,7 +27,7 @@ utils = {
 	//utils functions
 	getFileNames:getFileNames,
 	moment:moment,
-	isValidUser:checkUser,
+	checkUser:checkUser,
 	filters:filters,
 
     safeString: function (string, options) {

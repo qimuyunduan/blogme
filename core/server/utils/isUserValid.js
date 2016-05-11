@@ -24,4 +24,19 @@ function checkUser(pass,salt,DBPass){
 	var pwd = md5Pass.digest('hex');
 	return pwd==DBPass;
 }
-module.exports=checkUser;
+function cryptPass(pass,salt){
+	var md5 = crypto.createHash('md5');
+
+	md5.update(pass);
+
+	var md5_pass = md5.digest('hex');
+
+	var md5Pass = crypto.createHash('md5');
+
+	md5Pass.update(md5_pass+salt);
+	return md5Pass.digest('hex');
+}
+module.exports={
+	isValidUser:checkUser,
+	cryptPass:cryptPass
+};

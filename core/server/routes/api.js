@@ -122,15 +122,7 @@ routes = function apiRoutes() {
 
 	router.route("/myInfo.html")
 		.get(function (req, res) {
-			var data = {
-				userName: "fwege",
-				userRealName: "gewgg",
-				email: "gewgweg",
-				cellphone: "hrretw35234",
-				userState: "343fef",
-				unit: "bbrrag"
-			};
-			res.render("myInfo", data);
+
 		});
 
 

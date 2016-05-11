@@ -197,6 +197,7 @@ function changePwd(formID, url, method) {
 		formData.keys.push("userName");
 		formData.values.push(userName);
 		var trimedValues = checkTrim(formData.values);
+		alertMsg.info(trimedValues);
 		if (trimedValues) {
 			if (antiSQL(trimedValues)) {
 				if (checkLength(6, 20, trimedValues)) {
@@ -204,6 +205,7 @@ function changePwd(formID, url, method) {
 						alertMsg.info("新密码与原密码应该不一致...");
 					}
 					else if (trimedValues[1] == trimedValues[2]) {
+
 						formData = mergeToObject(formData.keys, trimedValues);
 						$.ajax({
 							type: method,
@@ -216,19 +218,16 @@ function changePwd(formID, url, method) {
 							success: function (data) {
 								alertMsg.info(data);
 								if (data == "success") {
-									$.pdialog.closeCurrent();
-									alertMsg.success("修改密码成功......");
+									alertMsg.info("修改密码成功......");
 								}
 								else {
-									alertMsg.info("你输入的原始密码不正确...");
+									alertMsg.warn("你输入的原始密码不正确...");
 								}
 							}
 						});
-
-
 					}
 					else {
-						alertMsg.info("两次输入的密码不一致......");
+						alertMsg.warn("两次输入的密码不一致......");
 					}
 				}
 			}
