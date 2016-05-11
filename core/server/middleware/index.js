@@ -90,7 +90,8 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use(session({
 		secret: ' sessionSec',
 		resave:false,
-		saveUninitialized:false
+		saveUninitialized:false,
+		cookie: {maxAge: 60 * 1000 * 30}
 	}));
 
     // ### Routing

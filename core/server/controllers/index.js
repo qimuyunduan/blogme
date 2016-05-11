@@ -54,7 +54,7 @@ function getResult(req, res, options) {
 				var result = reply.replyWithData(model.toJSON(), options.fetchFields);
 
 				if (!result.err && result.data.length == 5) {
-					console.log(utils.iconv.gbkToUtf8(result.data[4]));
+					console.log(result.data[4]);
 					res.render('myInfo', {
 						userName: result.data[0],
 						email: result.data[1],

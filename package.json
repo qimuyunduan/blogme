@@ -33,7 +33,6 @@
     "fs-extra": "0.26.5",
     "glob": "5.0.15",
     "html-to-text": "1.6.0",
-    "iconv-lite": "^0.4.13",
     "jsonpath": "0.2.2",
     "knex": "0.9.0",
     "lodash": "3.10.1",
