@@ -35,7 +35,7 @@ CREATE TABLE `addmoney_record_detail` (
   `remark` varchar(2000) DEFAULT NULL,
   `counttosum` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=460 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=460 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of addmoney_record_detail
@@ -130,7 +130,7 @@ CREATE TABLE `app_version` (
   `create_user` int(10) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of app_version
@@ -156,7 +156,7 @@ CREATE TABLE `bind_family` (
   `logincount` int(10) DEFAULT '0' COMMENT '登录次数',
   `family_no` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bind_family
@@ -184,7 +184,7 @@ CREATE TABLE `bug_list` (
   `remark` varchar(1000) NOT NULL,
   `question_sort` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bug_list
@@ -261,7 +261,7 @@ CREATE TABLE `business_group` (
   `del_tag` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `business_group_g_sno` (`g_sno`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of business_group
@@ -304,7 +304,7 @@ CREATE TABLE `business_man` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `shopm_sno` (`shopm_sno`),
   KEY `business_man_shopm_sno` (`shopm_sno`)
-) ENGINE=MyISAM AUTO_INCREMENT=1386 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=1386 DEFAULT CHARSET=utf8;
 -- ----------------------------
 -- Records of business_man
 -- ----------------------------
@@ -1732,7 +1732,7 @@ CREATE TABLE `business_shop` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `shop_sno` (`shop_sno`),
   KEY `business_shop_sno` (`shop_sno`)
-) ENGINE=MyISAM AUTO_INCREMENT=1206 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=1206 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of business_shop
@@ -2951,7 +2951,7 @@ CREATE TABLE `cache_t` (
   `cacheId` varchar(1000) DEFAULT NULL,
   `cacheName` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2140 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=2140 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cache_t
@@ -3031,7 +3031,7 @@ CREATE TABLE `city_advise` (
   `create_time` varchar(20) DEFAULT NULL,
   `random_key` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of city_advise
@@ -3071,7 +3071,7 @@ CREATE TABLE `city_info` (
   `pid` varchar(10) DEFAULT NULL,
   `isleaf` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of city_info
@@ -6413,7 +6413,7 @@ CREATE TABLE `console_compensation_info` (
   `update_time` varchar(20) DEFAULT NULL,
   `exception_Info` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of console_compensation_info
@@ -6449,7 +6449,7 @@ CREATE TABLE `console_msg` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of console_msg
@@ -6483,7 +6483,7 @@ CREATE TABLE `consume_detail` (
   `consume_Sno` varchar(50) DEFAULT NULL,
   `del_tag` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of consume_detail
@@ -6540,7 +6540,7 @@ CREATE TABLE `consume_info` (
   `family_id` int(10) DEFAULT NULL,
   `family_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of consume_info
@@ -6586,7 +6586,7 @@ CREATE TABLE `con_file` (
   `FILE_TYPE` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `insert_date` (`INSERT_DATE`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of con_file
@@ -6607,7 +6607,7 @@ CREATE TABLE `con_folder` (
   `INSERT_BY` varchar(32) NOT NULL,
   `ROLE_ID` varchar(32) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of con_folder
@@ -6636,7 +6636,7 @@ CREATE TABLE `deletemoney_record_detail` (
   `Com_id` int(11) DEFAULT NULL COMMENT '投保保险公司',
   `pay_type` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of deletemoney_record_detail
@@ -6672,7 +6672,7 @@ CREATE TABLE `dict_city` (
   `N_PROVID` int(10) unsigned NOT NULL,
   `S_STATE` varchar(3) DEFAULT NULL COMMENT '0 - 禁用\r\n1 - 启用 \r\n',
   PRIMARY KEY (`N_CITYID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dict_city
@@ -7193,7 +7193,7 @@ CREATE TABLE `dict_drugtypes` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dict_drugtypes
@@ -7224,7 +7224,7 @@ CREATE TABLE `dict_insured_company` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dict_insured_company
@@ -7242,7 +7242,7 @@ CREATE TABLE `dict_province` (
   `S_TYPE` varchar(3) DEFAULT NULL COMMENT '1 - 直辖市\r\n2 - 行政省\r\n3 - 自治区\r\n4 - 特别行政区\r\n5 - 其他国家\r\n见全局数据字典[省份类型] \r\n',
   `S_STATE` varchar(3) DEFAULT NULL COMMENT '0 - 禁用\r\n1 - 启用',
   PRIMARY KEY (`N_PROVID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dict_province
@@ -7294,7 +7294,7 @@ CREATE TABLE `file_t` (
   `content` mediumblob,
   `filelen` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of file_t
@@ -7314,7 +7314,7 @@ CREATE TABLE `ido_user` (
   `user_type` varchar(100) DEFAULT NULL,
   `user_unit` varchar(100) DEFAULT NULL,
   `user_pass` varchar(50) DEFAULT NULL,
-  `user_status` int(10) DEFAULT NULL,
+  `user_status` varchar(5) DEFAULT NULL,
   `user_phone` varchar(50) DEFAULT NULL,
   `user_email` varchar(200) DEFAULT NULL,
   `user_address` varchar(1000) DEFAULT NULL,
@@ -7326,7 +7326,7 @@ CREATE TABLE `ido_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`),
   KEY `ido_user_userid` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for `inf_news`
@@ -7346,7 +7346,7 @@ CREATE TABLE `inf_news` (
   PRIMARY KEY (`ID`),
   KEY `INSERT_DATE` (`INSERT_DATE`),
   KEY `NewIndex1` (`UPDATE_DATE`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of inf_news
@@ -7379,7 +7379,7 @@ CREATE TABLE `insured_company` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `com_no` (`com_no`),
   KEY `insured_company_com_no` (`com_no`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of insured_company
@@ -7428,7 +7428,7 @@ CREATE TABLE `insured_file` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `f_id` (`f_id`),
   KEY `insured_file_f_id` (`f_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of insured_file
@@ -7471,7 +7471,7 @@ CREATE TABLE `insured_unit` (
   `exception_Info` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `unit_Name` (`unit_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of insured_unit
@@ -7554,7 +7554,7 @@ CREATE TABLE `insured_user` (
   KEY `insured_user_phone` (`Iuser_phone`),
   KEY `insured_user_cardno` (`Iuser_cardno`),
   KEY `Insured_user_userno` (`Iuser_no`)
-) ENGINE=MyISAM AUTO_INCREMENT=350 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=350 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of insured_user
@@ -7919,7 +7919,7 @@ CREATE TABLE `inv_category` (
   `insert_date` datetime NOT NULL,
   `update_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of inv_category
@@ -7960,7 +7960,7 @@ CREATE TABLE `inv_product` (
   `insert_date` datetime DEFAULT NULL,
   `update_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of inv_product
@@ -7982,7 +7982,7 @@ CREATE TABLE `log_info` (
   `operate_desc` mediumtext,
   `operate_username` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=1983 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=1983 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log_info
@@ -9984,7 +9984,7 @@ CREATE TABLE `menu_t` (
   `valid` char(1) DEFAULT NULL COMMENT '是否有效，1有效，0无效',
   `del_tag` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`menuid`)
-) ENGINE=MyISAM AUTO_INCREMENT=211 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=211 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of menu_t
@@ -10158,7 +10158,7 @@ CREATE TABLE `messageinfo` (
   `create_user` int(10) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of messageinfo
@@ -10187,7 +10187,7 @@ CREATE TABLE `mobilecity` (
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `city_name` (`city_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mobilecity
@@ -10206,7 +10206,7 @@ DROP TABLE IF EXISTS `month_t`;
 CREATE TABLE `month_t` (
   `ID` varchar(2) NOT NULL,
   `VALUE` varchar(2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of month_t
@@ -10238,7 +10238,7 @@ CREATE TABLE `new_role` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of new_role
@@ -10265,7 +10265,7 @@ CREATE TABLE `organization_t` (
   `parentOrg` varchar(1000) DEFAULT NULL,
   `orderid` varchar(1000) DEFAULT NULL,
   KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of organization_t
@@ -10286,7 +10286,7 @@ CREATE TABLE `parameter_type` (
   `isSystem` int(11) DEFAULT NULL,
   `del_tag` char(1) DEFAULT NULL,
   PRIMARY KEY (`parameter_type_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of parameter_type
@@ -10337,7 +10337,7 @@ CREATE TABLE `params` (
   `issystem` int(11) DEFAULT NULL,
   `del_tag` char(1) DEFAULT NULL,
   PRIMARY KEY (`parameterID`)
-) ENGINE=MyISAM AUTO_INCREMENT=190 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=190 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of params
@@ -10503,7 +10503,7 @@ CREATE TABLE `push_user` (
   `devicetype` varchar(10) DEFAULT NULL,
   `syscode` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of push_user
@@ -10536,7 +10536,7 @@ CREATE TABLE `rep_user` (
   `month` int(11) DEFAULT NULL,
   `day` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of rep_user
@@ -10568,7 +10568,7 @@ CREATE TABLE `role_menu_right` (
   `menuid` int(11) DEFAULT NULL,
   `id` int(15) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=401 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=401 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role_menu_right
@@ -10798,7 +10798,7 @@ CREATE TABLE `role_t` (
   `roledesc` varchar(100) DEFAULT NULL,
   `id` int(15) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role_t
@@ -10822,7 +10822,7 @@ CREATE TABLE `set_preference` (
   `UPDATE_DATE` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `insert_date` (`INSERT_DATE`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of set_preference
@@ -10842,7 +10842,7 @@ CREATE TABLE `sub_company` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sub_company
@@ -10859,7 +10859,7 @@ CREATE TABLE `system_sequence_t` (
   `sequence_name` varchar(100) DEFAULT NULL,
   `content` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of system_sequence_t
@@ -10883,7 +10883,7 @@ CREATE TABLE `sys_log` (
   `INSERT_DATE` datetime NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `FK_sys_log_user` (`USER_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_log
@@ -10899,7 +10899,7 @@ CREATE TABLE `sys_permission` (
   PRIMARY KEY (`ROLE_ID`,`RESOURCE_ID`),
   KEY `FK_sys_permission` (`RESOURCE_ID`),
   KEY `FK_sys_permission2` (`ROLE_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_permission
@@ -10916,7 +10916,7 @@ CREATE TABLE `sys_resource` (
   `DESCRIPTION` varchar(200) DEFAULT NULL,
   `PURVIEW` tinyint(4) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_resource
@@ -10932,7 +10932,7 @@ CREATE TABLE `sys_role` (
   `DESCRIPTION` varchar(200) DEFAULT NULL,
   `STATUS` enum('ACTIVE','INACTIVE') DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_role
@@ -10962,7 +10962,7 @@ CREATE TABLE `sys_user` (
   `INSERT_BY` varchar(32) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `i_user_name` (`USER_NAME`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user
@@ -11005,7 +11005,7 @@ CREATE TABLE `sys_user_role` (
   PRIMARY KEY (`USER_ID`,`ROLE_ID`),
   KEY `FK_sys_user_role` (`USER_ID`),
   KEY `FK_sys_user_role2` (`ROLE_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user_role
@@ -11025,7 +11025,7 @@ CREATE TABLE `update_user_logger` (
   `create_time` varchar(20) DEFAULT NULL,
   `del_tag` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=492 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=492 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of update_user_logger
@@ -11505,7 +11505,7 @@ CREATE TABLE `uploadfile` (
   `create_user` int(10) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of uploadfile
@@ -11520,7 +11520,7 @@ CREATE TABLE `user_menu_right` (
   `menuid` int(11) DEFAULT NULL,
   `id` int(15) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=383 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=383 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_menu_right
@@ -11596,7 +11596,7 @@ CREATE TABLE `user_role_right` (
   `userid` int(11) DEFAULT NULL,
   `id` int(15) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_role_right
@@ -11625,7 +11625,7 @@ CREATE TABLE `user_t1` (
   `address` varchar(1000) DEFAULT NULL,
   `orderId` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_t1
@@ -11651,7 +11651,7 @@ CREATE TABLE `web_page` (
   `INSERT_DATE` datetime NOT NULL,
   `UPDATE_DATE` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of web_page
@@ -11684,7 +11684,7 @@ CREATE TABLE `web_website` (
   `AREA_FOOTER` text,
   `ICP` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of web_website
@@ -11698,7 +11698,7 @@ DROP TABLE IF EXISTS `year_t`;
 CREATE TABLE `year_t` (
   `ID` varchar(4) NOT NULL,
   `VALUE` varchar(4) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of year_t
@@ -11723,7 +11723,7 @@ CREATE TABLE `yijian_list` (
   `create_user` varchar(100) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yijian_list

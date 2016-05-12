@@ -3,6 +3,7 @@ var _            = require('lodash'),
 	moment       = require('./moment'),
 	checkUser    = require('./isUserValid'),
 	filters      = require('./filter'),
+	postProcess  = require('./postProcess'),
     utils,
     getRandomInt;
 
@@ -29,7 +30,7 @@ utils = {
 	moment:moment,
 	checkUser:checkUser,
 	filters:filters,
-
+	postProcess:postProcess,
     safeString: function (string, options) {
         options = options || {};
 
