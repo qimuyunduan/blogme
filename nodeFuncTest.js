@@ -11,15 +11,8 @@
 var _      = require('lodash'),
 	uuid   = require('node-uuid'),
 	utils  = require('./core/server/utils'),
-	user   = require('./core/server/models/idoUser');
+	unit   = require('./core/server/models/insuredUnit');
 
-
-var egrth={dgd:'',eygh:'aeryrt'};
-console.log(_.pick(egrth, _.isEqual(egrth,'')));
-var object = { 'a': 1, 'b': '2', 'c': 3 };
-
-_.omit(object, _.isNumber);
-// → { 'a': 1, 'c': 3 }
 
 //var salt = uuid.v4();
 //var id = uuid.v1();
@@ -29,7 +22,7 @@ _.omit(object, _.isNumber);
 //console.log(id);
 //console.log(pass);
 //    user.idoUser.model().forge({
-//			user_name: "qimuyun",
+//			user_name: "yunduan",
 //			user_email: "84602445@qq.com",
 //			user_pass:pass,
 //			user_salt:salt,
@@ -42,6 +35,9 @@ _.omit(object, _.isNumber);
 //		.then(function (user) {
 //			console.log(user);
 //		});
+unit.insuredUnit.collection().query().where({unit_state:67,unit_code:'0006'}).select().then(function(data){
+	console.log(data);
+});
 
 
 

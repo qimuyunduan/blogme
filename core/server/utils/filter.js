@@ -52,7 +52,7 @@ function filterObject(data, keys) {
 	return false;
 }
 function compactObj(obj) {
-	var length = obj.length;
+	var length = _.keys(obj).length;
 	var keys   = _.keys(obj);
 	var values = _.values(obj);
 	var index=[];
@@ -61,7 +61,9 @@ function compactObj(obj) {
 			index.push(i);
 		}
 	}
-	return _.zipObject(_.pullAt(keys,index), _.pullAt(values,index));
+	_.pullAt(keys,index);
+	_.pullAt(values,index);
+	return _.zipObject(keys,values);
 }
 
 module.exports = {filterArray: filterArray, filterObject: filterObject,compactObj:compactObj};

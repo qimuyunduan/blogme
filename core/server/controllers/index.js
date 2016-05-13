@@ -69,12 +69,12 @@ function getResult(req, res, options) {
 	}
 
 	else {
-		models[options.reqModel].collection().forge(options.reqParams).fetch()
+		models[options.reqModel].collection().query().where(options.reqParams).select()
 			.then(function (collection) {
 
 				if (collection) {
-					var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields,options.data);
-
+					var pageData = reply.replyWithPageData(collection, options.fetchFields,options.data);
+					console.log(pageData);
 					if (!pageData.err) {
 						res.render(options.reqUrl, pageData.data);
 					}

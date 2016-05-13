@@ -56,7 +56,7 @@ function replyWithPageData(values,fields,reqBody){
 			var filteredSubValues = filterFields(subValues, fields);
 			console.log(filteredSubValues);
 			if (filteredSubValues) {
-				dataPrefix = reqBody.containCheckBox ? dataPrefix : "<tr>";
+				dataPrefix = reqBody.containCheckbox ? dataPrefix : "<tr>";
 				pageRecordsNum = pageRecordsNum<length ? pageRecordsNum:length;
 				for (var i = 0; i < pageRecordsNum; i++) {
 					tableData += dataPrefix;

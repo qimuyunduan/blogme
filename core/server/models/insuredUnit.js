@@ -154,7 +154,7 @@ insured_unit = appBookshelf.Model.extend({
 
 });
 
-insured_units= appBookshelf.Collection.extend({
+insured_units = appBookshelf.Collection.extend({
 	model:insured_unit
 });
 

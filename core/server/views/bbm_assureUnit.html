@@ -18,7 +18,7 @@
                 <div class="subBar">
                     <ul>
                         <li>
-                            <div class="buttonActive"><div class="buttonContent"><button type="button" onclick="sendRequest('pagerForm','bbm_assureUnit.html','get')">检索</button></div></div>
+                            <div class="buttonActive"><div class="buttonContent"><button type="button" onclick="sendRequest('pagerForm','bbm_assureUnit','get')">检索</button></div></div>
                         </li>
                     </ul>
                 </div>
@@ -65,7 +65,7 @@
                     <option value="150">150</option>
                     <option value="200">200</option>
                 </select>
-                <span>条，共{{totalCount}}条</span>
+                <span>条，共{{totalCount}}<span id="totalCount"></span>条</span>
             </div>
             <div class="pagination" rel="ID" totalCount="200" numPerPage="20" pageNumShown="5" currentPage="1"></div>
         </div>

@@ -21,6 +21,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 					var resultLength = result.length;
 					if (requestFields.length == resultLength) {
 						//compact fetParas
+
 						fetchParas = utils.filters.compactObj(_.zipObject(requestFields, result));
 						return {data:reqParams,reqParams:fetchParas};
 					}
@@ -68,10 +69,10 @@ function responseHomePage(req, res) {
 
 function  setDefaultPageReqParas(containCheckbox){
 	if(containCheckbox){
-		return {numPerPage:50,currentPage:1,containCheckBox:false};
+		return {numPerPage:50,currentPage:1,containCheckbox:false};
 	}
 	else{
-		return {numPerPage:50,currentPage:1,containCheckBox:true};
+		return {numPerPage:50,currentPage:1,containCheckbox:true};
 	}
 
 }
@@ -236,11 +237,12 @@ routes = function apiRoutes() {
 
 				var reqBody=setDefaultPageReqParas();
 				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				//console.log(queryOptions);
+				console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
 
 					controller.fetch(req,res, queryOptions);
 				}
+
 			}else{
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');

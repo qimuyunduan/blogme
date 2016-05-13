@@ -282,6 +282,9 @@ function sendRequest(formId, url, method,containCheckbox) {
 						case 'delete':
 							alertMsg.success("删除成功...");
 							break;
+						//case 'get':
+						//	$('#totalCount').innerText = data.totalCount;
+						//	break;
 						default:
 							break;
 					}
