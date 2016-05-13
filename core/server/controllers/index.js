@@ -71,10 +71,10 @@ function getResult(req, res, options) {
 	else {
 		models[options.reqModel].collection().forge(options.reqParams).fetch()
 			.then(function (collection) {
-				//TODO:
-				console.log(collection.toJSON());
+
 				if (collection) {
 					var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields,options.data);
+
 					if (!pageData.err) {
 						res.render(options.reqUrl, pageData.data);
 					}

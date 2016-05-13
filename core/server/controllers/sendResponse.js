@@ -37,37 +37,48 @@ function replyWithData(values,fields){
 function replyWithPageData(values,fields,reqBody){
 	var pageNum = reqBody.currentPage;
 	var pageRecordsNum = reqBody.numPerPage;
-	var containCheckbox = reqBody.containCheckBox;
 	var fieldLength = fields.length;
 	var totalPages = 0;
 	var tableData = "";
+	console.log('current page is '+pageNum);
+	console.log('fieldLength is '+fieldLength);
+	console.log('records per page is '+pageRecordsNum);
 	if(_.isArray(values)){
 		var length = values.length;
-
-		totalPages =  length%pageRecordsNum==0 ?length/pageRecordsNum :length/pageRecordsNum+1;
-
-		if(pageNum<=totalPages){
+		console.log('total record is '+length);
+		totalPages =  (length%pageRecordsNum) == 0 ? length/pageRecordsNum :parseInt(length/pageRecordsNum)+1;
+		console.log('total page is '+totalPages);
+		if (pageNum > totalPages) {
+		} else {
 			//截取一页的数据
-			var subValues = _.slice(values,pageNum*pageRecordsNum,pageNum*pageRecordsNum+pageRecordsNum);
-			var filteredSubValues = filterFields(subValues,fields);
-			if(filteredSubValues){
-				dataPrefix = containCheckbox?dataPrefix:"<tr>";
-				for(var i=0;i<pageRecordsNum;i++){
+			var subValues = _.slice(values, (pageNum - 1) * pageRecordsNum, (pageNum - 1) * pageRecordsNum + pageRecordsNum);
+			console.log('filter subValues is');
+			var filteredSubValues = filterFields(subValues, fields);
+			console.log(filteredSubValues);
+			if (filteredSubValues) {
+				dataPrefix = reqBody.containCheckBox ? dataPrefix : "<tr>";
+				pageRecordsNum = pageRecordsNum<length ? pageRecordsNum:length;
+				for (var i = 0; i < pageRecordsNum; i++) {
 					tableData += dataPrefix;
-					for(var j=0;j<fieldLength;j++){
-						tableData += "<td>"+filteredSubValues[i][j]+"</td>"
+					for (var j = 0; j < fieldLength; j++) {
+
+						if(filteredSubValues[i][j]){
+							tableData += "<td>" + filteredSubValues[i][j] + "</td>";
+						}
+						else{
+							tableData += "<td>" + "" + "</td>";
+						}
 					}
-					tableData += "</tr>"
+					tableData += "</tr>";
 				}
-				return {err:false,data:{tableData:tableData,totalCount:length}}
+
+				return {err: false, data: {tableData: tableData, totalCount: length}}
 			}
 
 		}
 
 	}
-	else if(_.isObject(values)){
 
-	}
 	return fail();
 }
 function fail(){

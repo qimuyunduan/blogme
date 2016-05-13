@@ -15,12 +15,12 @@ var _              = require('lodash'),
 	events         = require('../events'),
 	appBookshelf   = require('./base'),
 	validator      = require('validator'),
-	insured_uuit,
-	insured_uuits;
+	insured_unit,
+	insured_units;
 
-insured_uuit = appBookshelf.Model.extend({
+insured_unit = appBookshelf.Model.extend({
 
-	tableName: ' insured_uuit ',
+	tableName: ' insured_unit ',
 
 	saving: function saving() {
 
@@ -150,21 +150,21 @@ insured_uuit = appBookshelf.Model.extend({
 			};
 			return Promise.reject(new errors.BadRequestError('errors.models.user.invalidToken'));
 		});
-	},
+	}
 
 });
 
-insured_uuits= appBookshelf.Collection.extend({
-	model:insured_uuit
+insured_units= appBookshelf.Collection.extend({
+	model:insured_unit
 });
 
 module.exports = {
 	insuredUnit:{
 		model: function(){
-			return insured_uuit;
+			return insured_unit;
 		},
 		collection:function(){
-			return insured_uuits;
+			return insured_units;
 		}
 	}
 

@@ -15,10 +15,13 @@ function constructFetchParams(reqParams, requestFields, filter) {
 		if (filter) {
 
 			if (_.isArray(filter) && !_.isEmpty(filter)) {
+
 				var result = utils.filters.filterArray(values, filter);
 				if (result) {
-					if (requestFields.length == result.length) {
-						fetchParas = _.zipObject(requestFields, result);
+					var resultLength = result.length;
+					if (requestFields.length == resultLength) {
+						//compact fetParas
+						fetchParas = utils.filters.compactObj(_.zipObject(requestFields, result));
 						return {data:reqParams,reqParams:fetchParas};
 					}
 				}
@@ -228,17 +231,19 @@ routes = function apiRoutes() {
 
 	router.route("/bbm_assureUnit.html")
 		.get(function (req, res) {
-			console.log(req.query);
-			if(_.keys(req.query==1)){
+
+			if(_.keys(req.query).length==1){
+
 				var reqBody=setDefaultPageReqParas();
-				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insure_unit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryOptions);
+				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				//console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
 
 					controller.fetch(req,res, queryOptions);
 				}
 			}else{
-				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insure_unit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+
+				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
 				console.log(queryObj);
 				if (!_.isEmpty(queryObj)) {
 
@@ -246,7 +251,7 @@ routes = function apiRoutes() {
 				}
 			}
 
-			res.render("bbm_assureUnit");
+
 
 		})
 		.post(function (req, res) {
