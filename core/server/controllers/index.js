@@ -54,11 +54,10 @@ function getResult(req, res, options) {
 				var result = reply.replyWithData(model.toJSON(), options.fetchFields);
 
 				if (!result.err && result.data.length == 5) {
-					console.log(result.data[4]);
 					res.render('myInfo', {
 						userName: result.data[0],
-						email: result.data[1],
-						cellphone: result.data[2],
+						email: utils.postProcess.replaceStr(result.data[1],'*',2,3),
+						cellphone: utils.postProcess.replaceStr(result.data[2],'*',3,4),
 						userState: result.data[3],
 						unit: result.data[4]
 					});
@@ -74,12 +73,12 @@ function getResult(req, res, options) {
 			.then(function (collection) {
 				//TODO:
 				console.log(collection.toJSON());
-				//if (collection) {
-				//	var pageData = reply.replyWithPageData(model.toJSON(), options.fetchFields);
-				//	if (!pageData.err) {
-				//		res.render(options.reqUrl, pageData.data);
-				//	}
-				//}
+				if (collection) {
+					var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields,options.data);
+					if (!pageData.err) {
+						res.render(options.reqUrl, pageData.data);
+					}
+				}
 			}).catch(function (err) {
 			console.log(err);
 			// do other things

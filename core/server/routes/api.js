@@ -9,7 +9,7 @@ var _       = require('lodash'),
 
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
-	if (_.isObject(reqParams) && _.isArray(requestFields)) {
+	if (!_.isEmpty(requestFields)) {
 		var values = _.values(reqParams);
 		//filter some values
 		if (filter) {
@@ -32,6 +32,8 @@ function constructFetchParams(reqParams, requestFields, filter) {
 			}
 		}
 		return false;
+	}else{
+		return{data:reqParams,reqParams:{}}
 	}
 }
 
@@ -61,7 +63,15 @@ function responseHomePage(req, res) {
 	res.render("index", data);
 }
 
+function  setDefaultPageReqParas(containCheckbox){
+	if(containCheckbox){
+		return {numPerPage:50,currentPage:1,containCheckBox:false};
+	}
+	else{
+		return {numPerPage:50,currentPage:1,containCheckBox:true};
+	}
 
+}
 routes = function apiRoutes() {
 
 	var router = express.Router();
@@ -218,6 +228,24 @@ routes = function apiRoutes() {
 
 	router.route("/bbm_assureUnit.html")
 		.get(function (req, res) {
+			console.log(req.query);
+			if(_.keys(req.query==1)){
+				var reqBody=setDefaultPageReqParas();
+				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insure_unit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				console.log(queryOptions);
+				if (!_.isEmpty(queryOptions)) {
+
+					controller.fetch(req,res, queryOptions);
+				}
+			}else{
+				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insure_unit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				console.log(queryObj);
+				if (!_.isEmpty(queryObj)) {
+
+					controller.fetch(req,res, queryObj);
+				}
+			}
+
 			res.render("bbm_assureUnit");
 
 		})

@@ -34,10 +34,10 @@ function replyWithData(values,fields){
 	}
 	return fail();
 }
-function replyWithPageData(values,fields,pageNumber,pageLimit,isContainCheckbox){
-	var pageNum = pageNumber==undefined ? 0:pageNumber;
-	var pageRecordsNum = pageLimit==undefined ? 50:pageLimit;
-	var containCheckbox = isContainCheckbox==undefined ;
+function replyWithPageData(values,fields,reqBody){
+	var pageNum = reqBody.currentPage;
+	var pageRecordsNum = reqBody.numPerPage;
+	var containCheckbox = reqBody.containCheckBox;
 	var fieldLength = fields.length;
 	var totalPages = 0;
 	var tableData = "";
@@ -59,7 +59,7 @@ function replyWithPageData(values,fields,pageNumber,pageLimit,isContainCheckbox)
 					}
 					tableData += "</tr>"
 				}
-				return {err:false,data:{tableData:tableData,totalRecords:length}}
+				return {err:false,data:{tableData:tableData,totalCount:length}}
 			}
 
 		}

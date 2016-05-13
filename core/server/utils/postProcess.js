@@ -13,9 +13,12 @@ var _  = require('lodash');
 function replaceStr(str,replaceChar,start,length){
 	if(_.isString(str)&&str.length&&(start+length)<str.length){
 		var headStr = str.substr(0,start);
-		var middleStr = str.substr(start,start+length);
+		var middleStr = '';
 		var tailStr = str.substr(start+length);
-		return headStr+middleStr.replace(/.*/,replaceChar)+tailStr;
+		for(var i=0;i<length;i++){
+			middleStr+='*'
+		}
+		return headStr+middleStr+tailStr;
 	}
 }
 module.exports={

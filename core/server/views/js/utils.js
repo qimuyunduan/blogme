@@ -46,16 +46,26 @@ function checkTrim(values) {
 
 }
 //check field values length
-function checkLength(min, max, values) {
+function checkLength(min, max, values,login) {
 	var length = 0;
 	if ($.isArray(values)) {
 		length = values.length;
-		for (var i = 0; i < length - 1; i++) {
-			if (values[i].length < min || values[i].length > max) {
-				setMessage("用户名和密码长度不小于6...");
-				return false;
+		if(login){
+			for (var i = 0; i < length - 1; i++) {
+				if (values[i].length < min || values[i].length > max) {
+					setMessage("用户名和密码长度不小于6...");
+					return false;
+				}
+			}
+		}else{
+			for (var j = 0; j < length ; j++) {
+				if (values[j].length < min || values[j].length > max) {
+					alertMsg.info("输入框内容长度不小于6...");
+					return false;
+				}
 			}
 		}
+
 	}
 	return true;
 }
@@ -135,7 +145,7 @@ function getKeysAndValues(formId) {
 
 }
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID) {
+function getQueryObject(formID,containCheckbox) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
@@ -144,12 +154,18 @@ function getQueryObject(formID) {
 	//add control for showing records
 	keys.push("numPerPage");
 	keys.push("currentPage");
+	keys.push("containCheckbox");
 	var results = checkTrim(values);
 	if (results) {
 		if (!isContainSpecialChar(results)) {
 			if (antiSQL(values)) {
 				results.push("50");
 				results.push("1");
+				if(containCheckbox){
+					results.push("false");
+				}else{
+					results.push("true");
+				}
 				queryObject = mergeToObject(keys, results);
 				return queryObject;
 			}
@@ -199,10 +215,11 @@ function changePwd(formID, url, method) {
 		formData.keys.push("userName");
 		formData.values.push(userName);
 		var trimedValues = checkTrim(formData.values);
-		alertMsg.info(trimedValues);
+
 		if (trimedValues) {
 			if (antiSQL(trimedValues)) {
 				if (checkLength(6, 20, trimedValues)) {
+
 					if (trimedValues[0] == trimedValues[1]) {
 						alertMsg.info("新密码与原密码应该不一致...");
 					}
@@ -241,13 +258,14 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(url, method, data) {
+function sendRequest(formId, url, method,containCheckbox) {
 
-	if (data) {
+	var queryObject = getQueryObject(formId,containCheckbox);
+	if (queryObject) {
 		$.ajax({
 			type: method,
 			url: url,
-			data: data,
+			data: queryObject,
 			async: false,
 			error: function () {
 				alertMsg.error("sorry!链接服务器失败...");
@@ -303,7 +321,7 @@ function login() {
 	var queryObject = getKeysAndValues('loginForm');
 	var result = checkTrim(queryObject.values);
 
-	if (checkLength(6, 20, result)) {
+	if (checkLength(6, 20, result,true)) {
 		if (!isContainSpecialChar(result, true)) {
 
 			if (antiSQL(result, true)) {
