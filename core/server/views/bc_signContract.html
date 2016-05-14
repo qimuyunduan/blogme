@@ -64,56 +64,13 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+            <select class="combox" name="numPerPage" onchange="">
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="150">150</option>
                 <option value="200">200</option>
             </select>
-            <span>条，共{{totalCount}}条</span>
+            <span>条，共</span><span id="totalCount">{{totalCount}}</span><span>条</span>
         </div>
     </div>
 </div>
-
-
-<!--<div class="pageContent">-->
-    <!--<div class="panelBar">-->
-        <!--<ul class="toolBar">-->
-            <!--<li><a class="add" href="bc_cancelAssociateShoper.html" target="dialog" minable="false" maxable="true"><span>解除绑定</span></a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--<table class="list"  layoutH="116" rel="ID">-->
-        <!--<thead>-->
-        <!--<tr>-->
-            <!--<th width="50"><input type="checkbox" name="" value=""></th>-->
-            <!--<th width="100">商家编号</th>-->
-            <!--<th width="100">商家名称</th>-->
-            <!--<th width="200">联系人名称</th>-->
-            <!--<th width="100">联系人手机</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-        <!--<tr>-->
-            <!--<td><input type="checkbox" name="" value="false"></td>-->
-            <!--<td>xxx</td>-->
-            <!--<td>张三</td>-->
-            <!--<td>2011-9-6</td>-->
-            <!--<td>xxx</td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-    <!--</table>-->
-
-    <!--<div class="panelBar">-->
-        <!--<div class="pages">-->
-            <!--<span>显示</span>-->
-            <!--<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">-->
-                <!--<option value="50">50</option>-->
-                <!--<option value="100">100</option>-->
-                <!--<option value="150">150</option>-->
-                <!--<option value="200">200</option>-->
-            <!--</select>-->
-            <!--<span>条，共${totalCount}条</span>-->
-        <!--</div>-->
-        <!--<div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>-->
-    <!--</div>-->
-<!--</div>-->

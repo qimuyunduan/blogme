@@ -46,19 +46,19 @@ function checkTrim(values) {
 
 }
 //check field values length
-function checkLength(min, max, values,login) {
+function checkLength(min, max, values, login) {
 	var length = 0;
 	if ($.isArray(values)) {
 		length = values.length;
-		if(login){
+		if (login) {
 			for (var i = 0; i < length - 1; i++) {
 				if (values[i].length < min || values[i].length > max) {
 					setMessage("用户名和密码长度不小于6...");
 					return false;
 				}
 			}
-		}else{
-			for (var j = 0; j < length ; j++) {
+		} else {
+			for (var j = 0; j < length; j++) {
 				if (values[j].length < min || values[j].length > max) {
 					alertMsg.info("输入框内容长度不小于6...");
 					return false;
@@ -145,7 +145,7 @@ function getKeysAndValues(formId) {
 
 }
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID,containCheckbox) {
+function getQueryObject(formID, containCheckbox) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
@@ -163,9 +163,9 @@ function getQueryObject(formID,containCheckbox) {
 			if (antiSQL(values)) {
 				results.push("50");
 				results.push("1");
-				if(containCheckbox){
+				if (containCheckbox) {
 					results.push("false");
-				}else{
+				} else {
 					results.push("true");
 				}
 				results.push('true');
@@ -187,7 +187,7 @@ function changePageNum() {
 
 }
 
-function banRefresh(){
+function banRefresh() {
 
 }
 function responseEnter() {
@@ -262,64 +262,61 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(formId, url, method,containCheckbox) {
+function sendRequest(formId, url, method, containCheckbox) {
 
-	var queryObject = getQueryObject(formId,containCheckbox);
+	var queryObject = getQueryObject(formId, containCheckbox);
 	if (queryObject) {
 		$.ajax({
 			type: method,
 			url: url,
 			data: queryObject,
 			async: false,
-			dataType:"json",
+			dataType: "json",
 			error: function () {
 				alertMsg.error("sorry!链接服务器失败...");
 			},
 			success: function (Pagedata) {
 
 
-				if(!Pagedata.err){
-					$("#tbody").html(Pagedata.data.tableData);
+				if (!Pagedata.err) {
+
+					switch (method) {
+						case 'post':
+							alertMsg.success("创建成功...");
+							break;
+						case 'put':
+							alertMsg.success("修改成功...");
+							break;
+						case 'delete':
+							alertMsg.success("删除成功...");
+							break;
+						case 'get':
+							$("#tbody").html(Pagedata.data.tableData);
+							$("#totalCount").html(Pagedata.data.totalCount);
+							break;
+						default:
+							break;
+					}
 
 				}
-
-				//if (3) {
-				//	switch (method) {
-				//		case 'post':
-				//			alertMsg.success("创建成功...");
-				//			break;
-				//		case 'put':
-				//			alertMsg.success("修改成功...");
-				//			break;
-				//		case 'delete':
-				//			alertMsg.success("删除成功...");
-				//			break;
-				//		case 'get':
-				//			//$('#totalCount').innerText = data.totalCount;
-				//			alertMsg.success(Pagedata);
-				//			break;
-				//		default:
-				//			break;
-				//	}
-				//
-				//}
-				//else {
-				//	switch (method) {
-				//		case 'post':
-				//			alertMsg.success("创建失败...");
-				//			break;
-				//		case 'put':
-				//			alertMsg.success("修改失败...");
-				//			break;
-				//		case 'delete':
-				//			alertMsg.success("删除失败...");
-				//			break;
-				//		default:
-				//			break;
-				//	}
-				//}
-
-				//$('#tbody').html(Pagedata);
+				else {
+					switch (method) {
+						case 'post':
+							alertMsg.success("创建失败...");
+							break;
+						case 'put':
+							alertMsg.success("修改失败...");
+							break;
+						case 'delete':
+							alertMsg.success("删除失败...");
+							break;
+						case 'get':
+							alertMsg.error('发生错误...');
+							break;
+						default:
+							break;
+					}
+				}
 			}
 
 		});
@@ -339,7 +336,7 @@ function login() {
 	var queryObject = getKeysAndValues('loginForm');
 	var result = checkTrim(queryObject.values);
 
-	if (checkLength(6, 20, result,true)) {
+	if (checkLength(6, 20, result, true)) {
 		if (!isContainSpecialChar(result, true)) {
 
 			if (antiSQL(result, true)) {

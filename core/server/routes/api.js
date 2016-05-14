@@ -235,7 +235,7 @@ routes = function apiRoutes() {
 
 			if(_.keys(req.query).length==1){
 
-				var reqBody=setDefaultPageReqParas();
+				var reqBody = setDefaultPageReqParas();
 				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
 
 				if (!_.isEmpty(queryOptions)) {

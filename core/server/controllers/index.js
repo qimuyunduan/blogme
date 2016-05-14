@@ -76,10 +76,10 @@ function getResult(req, res, options) {
 					var pageData = reply.replyWithPageData(collection, options.fetchFields,options.data);
 					if(options.data.forSearch){
 						res.send(JSON.stringify(pageData));
-
 					}
 					else{
 						if (!pageData.err) {
+							console.log(pageData.data.totalCount);
 							res.render(options.reqUrl, pageData.data);
 						}
 					}

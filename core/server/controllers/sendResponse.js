@@ -70,7 +70,7 @@ function replyWithPageData(values,fields,reqBody){
 					tableData += "</tr>";
 				}
 
-				return {err: false, data: {tableData: tableData, totalCount: _.toString(length)}}
+				return {err: false, data: {tableData: tableData, totalCount: length}}
 			}
 
 		}
