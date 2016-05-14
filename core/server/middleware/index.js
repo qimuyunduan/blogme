@@ -49,18 +49,12 @@ setupMiddleware  = function setupMiddleware(App) {
     // Favicon
     App.use(serveSharedFile('favicon.ico', 'image/x-icon', utils.ONE_DAY_S));
 
-
-    // Static assets
-	//App.use('/',express.static(path.join(corePath,'/server/views/')));
 	App.use('/js',express.static(path.join(corePath,'/server/views/js')));
 	App.use('/css',express.static(path.join(corePath,'/server/views/css')));
 	App.use('/themes',express.static(path.join(corePath,'/server/views/themes')));
 	App.use('/img',express.static(path.join(corePath,'/server/views/img')));
 	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify')));
-	App.use('/xheditor',express.static(path.join(corePath,'/server/views/xheditor')));
-	App.use('/chart',express.static(path.join(corePath,'/server/views/chart')));
 	App.use('/common', express.static(path.join(corePath, '/server/views/static')));
-	App.use('/demo', express.static(path.join(corePath, '/server/views/demo')));
 	App.use('/shared', express.static(path.join(corePath, '/shared')));
 	//
     // //First determine whether we're serving admin

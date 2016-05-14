@@ -74,10 +74,16 @@ function getResult(req, res, options) {
 
 				if (collection) {
 					var pageData = reply.replyWithPageData(collection, options.fetchFields,options.data);
-					console.log(pageData);
-					if (!pageData.err) {
-						res.render(options.reqUrl, pageData.data);
+					if(options.data.forSearch){
+						res.send(JSON.stringify(pageData));
+
 					}
+					else{
+						if (!pageData.err) {
+							res.render(options.reqUrl, pageData.data);
+						}
+					}
+
 				}
 			}).catch(function (err) {
 			console.log(err);

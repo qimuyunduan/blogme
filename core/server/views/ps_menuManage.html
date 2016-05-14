@@ -63,7 +63,7 @@
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+            <select class="combox" name="numPerPage" onchange="">
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="150">150</option>
@@ -71,7 +71,6 @@
             </select>
             <span>条，共{{totalCount}}条</span>
         </div>
-        <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
     </div>
 
 

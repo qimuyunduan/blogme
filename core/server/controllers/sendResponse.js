@@ -40,21 +40,19 @@ function replyWithPageData(values,fields,reqBody){
 	var fieldLength = fields.length;
 	var totalPages = 0;
 	var tableData = "";
-	console.log('current page is '+pageNum);
-	console.log('fieldLength is '+fieldLength);
-	console.log('records per page is '+pageRecordsNum);
+
 	if(_.isArray(values)){
 		var length = values.length;
-		console.log('total record is '+length);
+
 		totalPages =  (length%pageRecordsNum) == 0 ? length/pageRecordsNum :parseInt(length/pageRecordsNum)+1;
-		console.log('total page is '+totalPages);
+
 		if (pageNum > totalPages) {
 		} else {
 			//截取一页的数据
 			var subValues = _.slice(values, (pageNum - 1) * pageRecordsNum, (pageNum - 1) * pageRecordsNum + pageRecordsNum);
-			console.log('filter subValues is');
+
 			var filteredSubValues = filterFields(subValues, fields);
-			console.log(filteredSubValues);
+
 			if (filteredSubValues) {
 				dataPrefix = reqBody.containCheckbox ? dataPrefix : "<tr>";
 				pageRecordsNum = pageRecordsNum<length ? pageRecordsNum:length;
@@ -72,7 +70,7 @@ function replyWithPageData(values,fields,reqBody){
 					tableData += "</tr>";
 				}
 
-				return {err: false, data: {tableData: tableData, totalCount: length}}
+				return {err: false, data: {tableData: tableData, totalCount: _.toString(length)}}
 			}
 
 		}

@@ -48,66 +48,10 @@
         </tbody>
     </table>
 
-    <!--<div class="tree checked" width="35%" style="float: right;">-->
-        <!--<div class="accordionHeader">-->
-            <!--<h2><span>Folder</span>业务系统</h2>-->
-        <!--</div>-->
-        <!--<div class="accordionContent">-->
-            <!--<ul class="tree treeFolder">-->
-                <!--<li><a>业务基础维护</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="bbm_assureUnit.html" target="navTab" rel="" >投保单位</a></li>-->
-                        <!--<li><a href="bbm_shopGroup.html" target="navTab" rel="" >商家集团</a></li>-->
-                        <!--<li><a href="bbm_sysUser.html" target="navTab" rel="" >系统用户</a></li>-->
-                        <!--<li><a href="bbm_insureCompanyDic.html" target="navTab" rel="" >保险公司业务字典</a></li>-->
-                        <!--<li><a href="bbm_shoperManage.html" target="navTab" rel="" >商家管理</a></li>-->
-                        <!--<li><a href="bbm_shopManage.html" target="navTab" rel="" >商铺管理</a></li>-->
-                        <!--<li><a href="bbm_insureCompany.html" target="navTab" rel="" >保险公司</a></li>-->
-                        <!--<li><a href="bbm_orderMaintain.html" target="navTab" rel="" >保单信息维护</a></li>-->
-                        <!--<li><a href="bbm_insureUser.html" target="navTab" rel="" >投保用户</a></li>-->
-                        <!--<li><a href="bbm_drugCategory.html" target="navTab" rel="" >药品类别</a></li>-->
-                        <!--<li><a href="bbm_subCompany.html" target="navTab" rel="" >分公司维护</a></li>-->
-
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a>业务操作</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="bc_recharge.html" target="navTab" rel="">保单充值</a></li>-->
-                        <!--<li><a href="bc_signContract.html" target="navTab" rel="">商家签约</a></li>-->
-                        <!--<li><a href="bc_homeUser.html" target="navTab" rel="">家庭用户</a></li>-->
-                        <!--<li><a href="bc_yiliaofare.html" target="navTab" rel="">医疗消费</a></li>-->
-                        <!--<li><a href="bc_orderManage.html" target="navTab" rel="">订单管理</a></li>-->
-                        <!--<li><a href="bc_specialOrder.html" target="navTab" rel="">理赔单管理</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li><a>对账管理</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="bm_todayBill.html" target="navTab" rel="">今日账单</a></li>-->
-                        <!--<li><a href="bm_currentMonth.html" target="navTab" rel="">本月账单</a></li>-->
-                        <!--<li><a href="bm_historyBill.html" target="navTab" rel="">历史账单</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li><a>移动端维护</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="mm_shopConfig.html" target="navTab" rel="">手机端商铺配置</a></li>-->
-                        <!--<li><a href="mm_cityAD.html" target="navTab" rel="">城市广告</a></li>-->
-                        <!--<li><a href="mm_versionManage.html" target="navTab" rel="">客户端版本管理</a></li>-->
-                        <!--<li><a href="mm_feedback.html" target="navTab" rel="">意见反馈</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-
-        <!--<div class="accordionHeader">-->
-            <!--<h2><span>Folder</span>系统维护</h2>-->
-        <!--</div>-->
-    <!--</div>-->
-
     <div class="panelBar">
         <div class="pages">
             <span>显示</span>
-            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value}, 'ID')">
+            <select class="combox" name="numPerPage" onchange="">
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="150">150</option>
@@ -115,7 +59,6 @@
             </select>
             <span>条，共{{totalCount}}条</span>
         </div>
-        <div class="pagination" rel="ID" totalCount="100" numPerPage="20" pageNumShown="1" currentPage="1"></div>
     </div>
 
 

@@ -6,7 +6,7 @@ var _       = require('lodash'),
 	utils   = require('../utils'),
 	controller = require('../controllers'),
 	routes;
-
+var count = 0;
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
@@ -237,7 +237,7 @@ routes = function apiRoutes() {
 
 				var reqBody=setDefaultPageReqParas();
 				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryOptions);
+
 				if (!_.isEmpty(queryOptions)) {
 
 					controller.fetch(req,res, queryOptions);
@@ -246,15 +246,12 @@ routes = function apiRoutes() {
 			}else{
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryObj);
+				console.log(queryObj.reqParams);
 				if (!_.isEmpty(queryObj)) {
 
 					controller.fetch(req,res, queryObj);
 				}
 			}
-
-
-
 		})
 		.post(function (req, res) {
 
@@ -264,6 +261,17 @@ routes = function apiRoutes() {
 		})
 		.delete(function (req, res) {
 
+		});
+
+	router.route("/testGet.html")
+		.get(function (req, res) {
+
+			count++;
+			var queryObj = consOptions(constructFetchParams(req.query, ['unit_code', 'unit_name'], [0, 1]), "insuredUnit", ['unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'del_tag', 'unit_address', 'unit_remark'], 'bbm_assureUnit');
+			console.log(queryObj.reqParams);
+
+			var dara = '<tr><td><input type="checkbox" name="checkCtrl"></td><td>0006</td><td>建设银行</td><td>李水清</td><td></td><td></td><td>0</td><td></td><td></td></tr>';
+			res.send(dara);
 		});
 
 

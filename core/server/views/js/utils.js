@@ -155,6 +155,8 @@ function getQueryObject(formID,containCheckbox) {
 	keys.push("numPerPage");
 	keys.push("currentPage");
 	keys.push("containCheckbox");
+	keys.push('forSearch');
+
 	var results = checkTrim(values);
 	if (results) {
 		if (!isContainSpecialChar(results)) {
@@ -166,6 +168,7 @@ function getQueryObject(formID,containCheckbox) {
 				}else{
 					results.push("true");
 				}
+				results.push('true');
 				queryObject = mergeToObject(keys, results);
 				return queryObject;
 			}
@@ -192,6 +195,7 @@ function responseEnter() {
 		login();
 	}
 }
+
 function getCookieValue(name) {
 
 	var start = document.cookie.indexOf(name + "=");
@@ -267,44 +271,55 @@ function sendRequest(formId, url, method,containCheckbox) {
 			url: url,
 			data: queryObject,
 			async: false,
+			dataType:"json",
 			error: function () {
 				alertMsg.error("sorry!链接服务器失败...");
 			},
-			success: function (data) {
-				if (data == "success") {
-					switch (method) {
-						case 'post':
-							alertMsg.success("创建成功...");
-							break;
-						case 'put':
-							alertMsg.success("修改成功...");
-							break;
-						case 'delete':
-							alertMsg.success("删除成功...");
-							break;
-						//case 'get':
-						//	$('#totalCount').innerText = data.totalCount;
-						//	break;
-						default:
-							break;
-					}
+			success: function (Pagedata) {
+
+
+				if(!Pagedata.err){
+					$("#tbody").html(Pagedata.data.tableData);
 
 				}
-				else {
-					switch (method) {
-						case 'post':
-							alertMsg.success("创建失败...");
-							break;
-						case 'put':
-							alertMsg.success("修改失败...");
-							break;
-						case 'delete':
-							alertMsg.success("删除失败...");
-							break;
-						default:
-							break;
-					}
-				}
+
+				//if (3) {
+				//	switch (method) {
+				//		case 'post':
+				//			alertMsg.success("创建成功...");
+				//			break;
+				//		case 'put':
+				//			alertMsg.success("修改成功...");
+				//			break;
+				//		case 'delete':
+				//			alertMsg.success("删除成功...");
+				//			break;
+				//		case 'get':
+				//			//$('#totalCount').innerText = data.totalCount;
+				//			alertMsg.success(Pagedata);
+				//			break;
+				//		default:
+				//			break;
+				//	}
+				//
+				//}
+				//else {
+				//	switch (method) {
+				//		case 'post':
+				//			alertMsg.success("创建失败...");
+				//			break;
+				//		case 'put':
+				//			alertMsg.success("修改失败...");
+				//			break;
+				//		case 'delete':
+				//			alertMsg.success("删除失败...");
+				//			break;
+				//		default:
+				//			break;
+				//	}
+				//}
+
+				//$('#tbody').html(Pagedata);
 			}
 
 		});

@@ -56,8 +56,9 @@ function compactObj(obj) {
 	var keys   = _.keys(obj);
 	var values = _.values(obj);
 	var index=[];
-	for(var i=1;i<length;i++){
-		if(values[i]==''){
+	for(var i=0;i<length;i++){
+		values[i] += '';
+		if(values[i].length==0){
 			index.push(i);
 		}
 	}
