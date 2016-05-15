@@ -60,14 +60,14 @@
 
         <div class="panelBar">
             <div class="pages">
-                <span>显示</span>
-                <select class="combox" name="numPerPage" onchange="sendRequest('pagerForm','bbm_assureUnit.html','get',100)">
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                    <option value="150">150</option>
-                    <option value="200">200</option>
-                </select>
-                <span>条，共</span><span id="totalCount">{{totalCount}}</span><span>条</span>
+                    <span>显示</span>
+                    <select onchange="sendRequest('pagerForm','bbm_assureUnit.html','get',this.value)">
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
+                    </select>
+                    <span>条，共</span><span id="totalCount">{{totalCount}}</span><span>条</span>
             </div>
         </div>
     </div>

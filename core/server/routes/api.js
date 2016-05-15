@@ -258,7 +258,6 @@ routes = function apiRoutes() {
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
 				if (!_.isEmpty(queryObj)) {
-					console.log(queryObj);
 					controller.fetch(req,res, queryObj);
 				}
 			}

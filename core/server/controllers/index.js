@@ -19,7 +19,6 @@ function getResult(req, res, options) {
 		models[options.reqModel].model().forge(options.reqParams).fetch()
 			.then(function (model) {
 					if (model) {
-						console.log(model.toJSON());
 						var result = reply.replyWithData(model.toJSON(), options.fetchFields);
 
 						if (!result.err) {

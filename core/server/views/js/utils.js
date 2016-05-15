@@ -215,7 +215,9 @@ function getCookieValue(name) {
 
 		start = start + name.length + 1;
 		var end = document.cookie.indexOf(";", start);
-		if (end == -1) end = document.cookie.length;
+		if (end == -1) {
+			end = document.cookie.length;
+		}
 		return document.cookie.substring(start, end);
 
 	}
@@ -335,10 +337,14 @@ function sendRequest(formId, url, method, pageNum,containCheckbox) {
 
 }
 
-
+function fillUserName(){
+	var userName = getCookieValue('loginUserName');
+	$('#loginUserName').val(userName);
+}
 function setMessage(message) {
 	$('#loginUserName').val(message);
 	$('#pwd').val("");
+	setTimeout(fillUserName,1500);
 }
 
 //dispose user login
