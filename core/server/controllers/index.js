@@ -73,6 +73,7 @@ function getResult(req, res, options) {
 			.then(function (collection) {
 
 				if (collection) {
+
 					var pageData = reply.replyWithPageData(collection, options.fetchFields,options.data);
 					if(options.data.forSearch){
 						res.send(JSON.stringify(pageData));

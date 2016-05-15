@@ -258,7 +258,7 @@ routes = function apiRoutes() {
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
 				if (!_.isEmpty(queryObj)) {
-
+					console.log(queryObj);
 					controller.fetch(req,res, queryObj);
 				}
 			}
@@ -266,7 +266,6 @@ routes = function apiRoutes() {
 		.post(function (req, res) {
 			req.body.superCompany = parseInt(req.body.superCompany);
 			var queryObj = constructPostParams(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
-			console.log(queryObj);
 			if (!_.isEmpty(queryObj)) {
 
 				controller.create(res, queryObj);

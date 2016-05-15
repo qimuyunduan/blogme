@@ -145,7 +145,7 @@ function getKeysAndValues(formId) {
 
 }
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID,method, containCheckbox) {
+function getQueryObject(formID,method,pageLimit,containCheckbox) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
@@ -164,7 +164,13 @@ function getQueryObject(formID,method, containCheckbox) {
 		if (!isContainSpecialChar(results)) {
 			if (antiSQL(values)) {
 				if(method=='get'){
-					results.push("50");
+					if(pageLimit){
+						results.push(pageLimit);
+					}
+					else{
+						results.push("50");
+					}
+
 					results.push("1");
 					if (containCheckbox) {
 						results.push("false");
@@ -196,7 +202,11 @@ function responseEnter() {
 		login();
 	}
 }
-
+function search(url){
+	if (event.keyCode == 13) {
+		sendRequest('pagerForm',url,'get');
+	}
+}
 function getCookieValue(name) {
 
 	var start = document.cookie.indexOf(name + "=");
@@ -263,9 +273,9 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(formId, url, method, containCheckbox) {
+function sendRequest(formId, url, method, pageNum,containCheckbox) {
 
-	var queryObject = getQueryObject(formId,method, containCheckbox);
+	var queryObject = getQueryObject(formId,method,pageNum, containCheckbox);
 	if (queryObject) {
 		$.ajax({
 			type: method,

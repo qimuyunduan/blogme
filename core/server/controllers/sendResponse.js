@@ -77,7 +77,7 @@ function replyWithPageData(values,fields,reqBody){
 
 	}
 
-	return fail();
+	return {err:false,data:{tableData:'',totalCount:0}};
 }
 function fail(){
 	return {err:true};
