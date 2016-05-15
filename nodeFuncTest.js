@@ -11,33 +11,31 @@
 var _      = require('lodash'),
 	uuid   = require('node-uuid'),
 	utils  = require('./core/server/utils'),
-	unit   = require('./core/server/models/insuredUnit');
+	models   = require('./core/server/models');
 
 
-//var salt = uuid.v4();
-//var id = uuid.v1();
-//var pass = utils.checkUser.cryptPass('101410',salt);
+var salt = uuid.v4();
+var id = uuid.v1();
+var pass = utils.checkUser.cryptPass('101410',salt);
 //
 //console.log(salt);
 //console.log(id);
 //console.log(pass);
-//    user.idoUser.model().forge({
-//			user_name: "yunduan",
-//			user_email: "84602445@qq.com",
-//			user_pass:pass,
-//			user_salt:salt,
-//			user_id:id,
-//			user_unit:'爱都科技',
-//			user_phone:'18648642133',
-//			user_status:'正常'
-//		})
-//		.save()
-//		.then(function (user) {
-//			console.log(user);
-//		});
-unit.insuredUnit.collection().query().where({unit_state:67,unit_code:'0006'}).select().then(function(data){
-	console.log(data);
-});
+models['insuredUnit'].model().forge({
+		unit_code: '21124',
+		unit_name: 'wrteyrt',
+		contact_name: 'xiaoli',
+		contact_mobile: '14566765431',
+		contact_email: '',
+		unit_parent_id: 4,
+		del_tag: '1',
+		unit_address: ''
+	})
+	.save()
+	.then(function (user) {
+		console.log(user);
+	});
+
 
 
 

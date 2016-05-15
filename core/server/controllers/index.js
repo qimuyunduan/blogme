@@ -79,7 +79,6 @@ function getResult(req, res, options) {
 					}
 					else{
 						if (!pageData.err) {
-							console.log(pageData.data.totalCount);
 							res.render(options.reqUrl, pageData.data);
 						}
 					}
@@ -100,7 +99,7 @@ function updateRecord(res, options) {
 
 						// change the model
 						model.save(options.fetchFields).then(function () {
-							res.send("success");
+							res.send(JSON.stringify({err:false}));
 						}).catch(function (err) {
 							console.log(err);
 							// do other things
@@ -141,33 +140,32 @@ function deleteRecord(res, options) {
 				model.destroy().then(function (result) {
 					if (result) {
 						console.log(result);
-						res.send("删除成功...");
+						res.send(JSON.stringify({err:false}));
 					}
 					else {
-						res.send("删除失败...");
+						res.send(JSON.stringify({err:true}));
 					}
 				})
 			}
 		}).catch(function () {
-		res.send("删除失败....");
+		res.send(JSON.stringify({err:true}));
 	})
 }
 
 function createRecord(res, options) {
+
 	models[options.reqModel].model().forge(options.reqParams).save()
 		.then(function (model) {
 				if (model) {
-
-					res.send("添加成功...");
+					console.log(model);
+					res.send(JSON.stringify({err:false}));
 				}
 				else {
-					res.send("添加失败...");
+					res.send(JSON.stringify({err:true}));
 				}
-
-
 			}
 		).catch(function () {
-		res.send("添加失败....");
+		res.send(JSON.stringify({err:true}));
 	})
 }
 

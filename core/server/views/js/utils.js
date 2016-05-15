@@ -145,30 +145,34 @@ function getKeysAndValues(formId) {
 
 }
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID, containCheckbox) {
+function getQueryObject(formID,method, containCheckbox) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
 	var values = data.values;
 	var queryObject = {};
 	//add control for showing records
-	keys.push("numPerPage");
-	keys.push("currentPage");
-	keys.push("containCheckbox");
-	keys.push('forSearch');
+	if(method=='get'){
+		keys.push("numPerPage");
+		keys.push("currentPage");
+		keys.push("containCheckbox");
+		keys.push('forSearch');
+	}
 
 	var results = checkTrim(values);
 	if (results) {
 		if (!isContainSpecialChar(results)) {
 			if (antiSQL(values)) {
-				results.push("50");
-				results.push("1");
-				if (containCheckbox) {
-					results.push("false");
-				} else {
-					results.push("true");
+				if(method=='get'){
+					results.push("50");
+					results.push("1");
+					if (containCheckbox) {
+						results.push("false");
+					} else {
+						results.push("true");
+					}
+					results.push('true');
 				}
-				results.push('true');
 				queryObject = mergeToObject(keys, results);
 				return queryObject;
 			}
@@ -187,9 +191,6 @@ function changePageNum() {
 
 }
 
-function banRefresh() {
-
-}
 function responseEnter() {
 	if (event.keyCode == 13) {
 		login();
@@ -264,7 +265,7 @@ function changePwd(formID, url, method) {
 
 function sendRequest(formId, url, method, containCheckbox) {
 
-	var queryObject = getQueryObject(formId, containCheckbox);
+	var queryObject = getQueryObject(formId,method, containCheckbox);
 	if (queryObject) {
 		$.ajax({
 			type: method,
@@ -282,13 +283,13 @@ function sendRequest(formId, url, method, containCheckbox) {
 
 					switch (method) {
 						case 'post':
-							alertMsg.success("创建成功...");
+							alertMsg.info("创建成功...");
 							break;
 						case 'put':
-							alertMsg.success("修改成功...");
+							alertMsg.info("修改成功...");
 							break;
 						case 'delete':
-							alertMsg.success("删除成功...");
+							alertMsg.info("删除成功...");
 							break;
 						case 'get':
 							$("#tbody").html(Pagedata.data.tableData);
@@ -302,13 +303,13 @@ function sendRequest(formId, url, method, containCheckbox) {
 				else {
 					switch (method) {
 						case 'post':
-							alertMsg.success("创建失败...");
+							alertMsg.error("创建失败...");
 							break;
 						case 'put':
-							alertMsg.success("修改失败...");
+							alertMsg.error("修改失败...");
 							break;
 						case 'delete':
-							alertMsg.success("删除失败...");
+							alertMsg.error("删除失败...");
 							break;
 						case 'get':
 							alertMsg.error('发生错误...');

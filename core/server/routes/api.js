@@ -43,17 +43,28 @@ function constructFetchParams(reqParams, requestFields, filter) {
 
 
 function consOptions(reqParams, model, fetchFields, url) {
+
 	if(reqParams){
 		if (_.isString(model) && (_.isString(fetchFields)|| _.isObject(fetchFields))&& _.isString(url)) {
 			if (model.length && url.length) {
 				_.assign(reqParams, {reqModel: model, fetchFields: fetchFields, reqUrl: url});
 				return reqParams;
 			}
-
 		}
-
 	}
 	return false;
+
+}
+
+function constructPostParams(reqBody,fields,model) {
+
+	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
+		var values = _.values(reqBody);
+		if(_.isArray(fields)&&!_.isEmpty(fields)&&values.length == fields.length){
+			var params = _.zipObject(fields,values);
+			return _.assign({reqParams:params},{reqModel:model});
+		}
+	}
 
 }
 
@@ -246,7 +257,6 @@ routes = function apiRoutes() {
 			}else{
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryObj.reqParams);
 				if (!_.isEmpty(queryObj)) {
 
 					controller.fetch(req,res, queryObj);
@@ -254,24 +264,19 @@ routes = function apiRoutes() {
 			}
 		})
 		.post(function (req, res) {
+			req.body.superCompany = parseInt(req.body.superCompany);
+			var queryObj = constructPostParams(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
+			console.log(queryObj);
+			if (!_.isEmpty(queryObj)) {
 
+				controller.create(res, queryObj);
+			}
 		})
 		.put(function (req, res) {
 
 		})
 		.delete(function (req, res) {
 
-		});
-
-	router.route("/testGet.html")
-		.get(function (req, res) {
-
-			count++;
-			var queryObj = consOptions(constructFetchParams(req.query, ['unit_code', 'unit_name'], [0, 1]), "insuredUnit", ['unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'del_tag', 'unit_address', 'unit_remark'], 'bbm_assureUnit');
-			console.log(queryObj.reqParams);
-
-			var dara = '<tr><td><input type="checkbox" name="checkCtrl"></td><td>0006</td><td>建设银行</td><td>李水清</td><td></td><td></td><td>0</td><td></td><td></td></tr>';
-			res.send(dara);
 		});
 
 

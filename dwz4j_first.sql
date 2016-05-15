@@ -7474,7 +7474,7 @@ CREATE TABLE `insured_unit` (
 ) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 ----------------------------
-Records of insured_unit
+-- Records of insured_unit
 ----------------------------
 INSERT INTO `insured_unit` VALUES ('1', '0005', 'test', '刘德华', '', '', '6', '67', '', '', '0', null, '0', '', '', '', null);
 INSERT INTO `insured_unit` VALUES ('2', '0006', '建设银行', '李水清', '', '', '0', '67', '', '', '0', null, '0', null, '0', null, null);

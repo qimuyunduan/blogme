@@ -1,9 +1,9 @@
 <div class="pageContent">
-    <form>
+    <form id="PagerForm">
         <div class="pageFormContent" layoutH="60">
             <div class="unit">
                 <label for="number">编号:</label>
-                <input type="text" size="30" class="required" id="number" name="orderNumber">
+                <input type="text" size="30" class="required" id="number" name="orderNumber" required="required">
             </div>
             <div class="unit">
                 <label for="insureUnit">投保单位:</label>
@@ -44,7 +44,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="submit">保存</button>
+                            <button type="button" onclick="sendRequest('PagerForm','bbm_assureUnit.html','post')">保存</button>
                         </div>
                     </div>
                 </li>
