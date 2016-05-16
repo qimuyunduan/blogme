@@ -274,7 +274,13 @@ routes = function apiRoutes() {
 
 		})
 		.delete(function (req, res) {
-
+			console.log(req.body);
+			//var filteredValues = '';
+			//var queryObj = constructPostParams(req.body,['unit_code','unit_name'],"insuredUnit");
+			//if (!_.isEmpty(queryObj)) {
+			//
+			//	controller.del(res, queryObj);
+			//}
 		});
 
 

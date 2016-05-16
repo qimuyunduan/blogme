@@ -189,7 +189,57 @@ function getQueryObject(formID,method,pageLimit,containCheckbox) {
 }
 
 // get table row data
-function getRowData() {
+function getRowData(method,containCheckbox) {
+	var tr_s = $('tbody :checked').parents('tr');
+
+	var data = [];
+	if(typeof(tr_s) == 'object'){
+
+		var trsCount = tr_s.length;
+
+			if(method=='put'){
+				if(trsCount>1){
+					alertMsg.info('只能选择一个...');
+					return;
+				}
+				else if(trsCount==0){
+					alertMsg.info('请先选择一个...');
+					return;
+				}
+			}else{
+				if(trsCount==0) {
+					alertMsg.info('请先选择一个...');
+					return;
+				}
+			}
+
+		var cellCount = tr_s[0].cells.length;
+
+
+		for (var i = 0; i < trsCount; i++) {
+
+			var j = containCheckbox ? 0 : 1;
+			data[i] = [];
+
+			if (j) {
+				for (;j < cellCount;j++) {
+					data[i][j - 1] = tr_s[i].cells[j].innerHTML;
+				}
+			}
+			else {
+				for (; j < cellCount; j++) {
+					data[i][j] = tr_s[i].cells[j].innerHTML;
+				}
+			}
+
+		}
+	}
+	if(data){
+		return {data:data};
+	}
+	else{
+		return false;
+	}
 
 }
 
@@ -275,14 +325,23 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(formId, url, method, pageNum,containCheckbox) {
+function sendRequest( url, method,formId, pageNum,containCheckbox) {
 
-	var queryObject = getQueryObject(formId,method,pageNum, containCheckbox);
-	if (queryObject) {
+
+	var queryData;
+
+	if(formId){
+		 queryData = getQueryObject(formId,method,pageNum, containCheckbox);
+	}
+	else {
+		 queryData = getRowData(method,containCheckbox);
+	}
+	alert(queryData);
+	if (queryData) {
 		$.ajax({
 			type: method,
 			url: url,
-			data: queryObject,
+			data: queryData,
 			async: false,
 			dataType: "json",
 			error: function () {
