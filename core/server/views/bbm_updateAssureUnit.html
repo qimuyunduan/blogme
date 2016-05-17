@@ -1,0 +1,62 @@
+<div class="pageContent">
+    <form id="PagerForm">
+        <div class="pageFormContent" layoutH="60">
+            <div class="unit">
+                <label for="number">编号:</label>
+                <input type="text" size="30" class="required" id="number" name="orderNumber" required="required" value="{{number}}">
+            </div>
+            <div class="unit">
+                <label for="insureUnit">投保单位:</label>
+                <input type="text" size="30" name="insureNumber" id="insureUnit" value="{{insureUnit}}">
+            </div>
+            <div class="unit">
+                <label for="contactPerson">联系人:</label>
+                <input type="text" name="contactPerson" id="contactPerson" size="30" value="{{contactPerson}}">
+            </div>
+            <div class="unit">
+                <label for="cellphone">手机:</label>
+                <input type="text" class="number" minlength="11" maxlength="11" size="30" name="{{phoneNumber}}"
+                       id="cellphone" value="phoneNumber">
+            </div>
+            <div class="unit">
+                <label for="email">邮箱:</label>
+                <input type="email" class="email" name="email" id="email" size="30" value="email">
+            </div>
+            <div class="unit">
+                <label for="isShow">是否显示:</label>
+                <select name="isShow" id="isShow" class="combox">
+                    <option value="1" selected>是</option>
+                    <option value="0">否</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="address">地址:</label>
+                <input type="text" size="30" minlength="2" name="address" id="address" value="address">
+            </div>
+            <div class="unit">
+                <label for="detail">备注:</label>
+                <input type="text"  size="30" name="detail" id="detail" value="detail">
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" onclick="sendRequest('PagerForm','bbm_assureUnit.html','post')">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </form>
+</div>

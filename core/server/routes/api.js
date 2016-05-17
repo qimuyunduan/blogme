@@ -6,7 +6,7 @@ var _       = require('lodash'),
 	utils   = require('../utils'),
 	controller = require('../controllers'),
 	routes;
-var count = 0;
+var changeRecord = [];
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
@@ -272,6 +272,11 @@ routes = function apiRoutes() {
 		})
 		.put(function (req, res) {
 
+
+			//if (!_.isEmpty(queryObj)) {
+			//
+			//	controller.update(res, queryObj);
+			//}
 		})
 		.delete(function (req, res) {
 			var reqParams = utils.filters.filterArrays(req.body.data,[0,1],['unit_code','unit_name']);
@@ -281,7 +286,17 @@ routes = function apiRoutes() {
 				controller.del(res, queryObj);
 			}
 		});
+	router.route('/bbm_updateAssureUnit.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateAssureUnit',{number:changeRecord[0],insureUnit:changeRecord[1],contactPerson:changeRecord[2]});
+			}
 
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
 
 	router.route("/bbm_attachmentManage.html")
 		.get(function (req, res) {

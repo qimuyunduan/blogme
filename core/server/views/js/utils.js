@@ -145,14 +145,14 @@ function getKeysAndValues(formId) {
 
 }
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID,method,pageLimit,containCheckbox) {
+function getQueryObject(formID, method, pageLimit, containCheckbox) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
 	var values = data.values;
 	var queryObject = {};
 	//add control for showing records
-	if(method=='get'){
+	if (method == 'get') {
 		keys.push("numPerPage");
 		keys.push("currentPage");
 		keys.push("containCheckbox");
@@ -163,11 +163,11 @@ function getQueryObject(formID,method,pageLimit,containCheckbox) {
 	if (results) {
 		if (!isContainSpecialChar(results)) {
 			if (antiSQL(values)) {
-				if(method=='get'){
-					if(pageLimit){
+				if (method == 'get') {
+					if (pageLimit) {
 						results.push(pageLimit);
 					}
-					else{
+					else {
 						results.push("50");
 					}
 
@@ -189,29 +189,29 @@ function getQueryObject(formID,method,pageLimit,containCheckbox) {
 }
 
 // get table row data
-function getRowData(method,containCheckbox) {
+function getRowData(method, containCheckbox) {
 	var tr_s = $('tbody :checked').parents('tr');
 
 	var data = [];
-	if(typeof(tr_s) == 'object'){
+	if (typeof(tr_s) == 'object') {
 
 		var trsCount = tr_s.length;
 
-			if(method=='put'){
-				if(trsCount>1){
-					alertMsg.info('只能选择一个...');
-					return;
-				}
-				else if(trsCount==0){
-					alertMsg.info('请先选择一个...');
-					return;
-				}
-			}else{
-				if(trsCount==0) {
-					alertMsg.info('请先选择一个...');
-					return;
-				}
+		if (method == 'put') {
+			if (trsCount > 1) {
+				alertMsg.info('只能选择一个...');
+				return;
 			}
+			else if (trsCount == 0) {
+				alertMsg.info('请先选择一个...');
+				return;
+			}
+		} else {
+			if (trsCount == 0) {
+				alertMsg.info('请先选择一个...');
+				return;
+			}
+		}
 
 		var cellCount = tr_s[0].cells.length;
 
@@ -222,7 +222,7 @@ function getRowData(method,containCheckbox) {
 			data[i] = [];
 
 			if (j) {
-				for (;j < cellCount;j++) {
+				for (; j < cellCount; j++) {
 					data[i][j - 1] = tr_s[i].cells[j].innerHTML;
 				}
 			}
@@ -234,10 +234,10 @@ function getRowData(method,containCheckbox) {
 
 		}
 	}
-	if(data){
-		return {data:data};
+	if (data) {
+		return {data: data};
 	}
-	else{
+	else {
 		return false;
 	}
 
@@ -252,9 +252,9 @@ function responseEnter() {
 		login();
 	}
 }
-function search(url){
+function search(url) {
 	if (event.keyCode == 13) {
-		sendRequest('pagerForm',url,'get');
+		sendRequest('pagerForm', url, 'get');
 	}
 }
 function getCookieValue(name) {
@@ -325,16 +325,16 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest( url, method,formId, pageNum,containCheckbox) {
+function sendRequest(url, method, formId, pageNum, containCheckbox) {
 
 
 	var queryData;
 
-	if(formId){
-		 queryData = getQueryObject(formId,method,pageNum, containCheckbox);
+	if (formId) {
+		queryData = getQueryObject(formId, method, pageNum, containCheckbox);
 	}
 	else {
-		 queryData = getRowData(method,containCheckbox);
+		queryData = getRowData(method, containCheckbox);
 	}
 	if (queryData) {
 		$.ajax({
@@ -395,14 +395,27 @@ function sendRequest( url, method,formId, pageNum,containCheckbox) {
 
 }
 
-function fillUserName(){
+function sendChangeRecordRequest(url) {
+	var data = getRowData('put');
+	if (data) {
+		$.ajax({
+			type: 'put',
+			url: url,
+			data: data,
+			async: false
+		})
+	}
+}
+
+
+function fillUserName() {
 	var userName = getCookieValue('loginUserName');
 	$('#loginUserName').val(userName);
 }
 function setMessage(message) {
 	$('#loginUserName').val(message);
 	$('#pwd').val("");
-	setTimeout(fillUserName,1500);
+	setTimeout(fillUserName, 1500);
 }
 
 //dispose user login
@@ -439,8 +452,8 @@ function login() {
 		}
 
 	}
-
 }
+
 
 
 // request
