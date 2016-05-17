@@ -2,8 +2,12 @@
     <form id="PagerForm">
         <div class="pageFormContent" layoutH="60">
             <div class="unit">
+                <label for="recordID">ID:</label>
+                <input  size="30"  class="required" id="recordID"  readonly ="readonly" name="recordID" required="required" value="{{ID}}">
+            </div>
+            <div class="unit">
                 <label for="number">编号:</label>
-                <input type="text" size="30" class="required" id="number" name="orderNumber" required="required" value="{{number}}">
+                <input type="text" size="30"  class="required" id="number" name="orderNumber" required="required" value="{{number}}">
             </div>
             <div class="unit">
                 <label for="insureUnit">投保单位:</label>
@@ -15,12 +19,12 @@
             </div>
             <div class="unit">
                 <label for="cellphone">手机:</label>
-                <input type="text" class="number" minlength="11" maxlength="11" size="30" name="{{phoneNumber}}"
-                       id="cellphone" value="phoneNumber">
+                <input type="text" class="number" minlength="11" maxlength="11" size="30" name="phoneNumber"
+                       id="cellphone" value="{{phoneNumber}}">
             </div>
             <div class="unit">
                 <label for="email">邮箱:</label>
-                <input type="email" class="email" name="email" id="email" size="30" value="email">
+                <input type="email" class="email" name="email" id="email" size="30" value="{{email}}">
             </div>
             <div class="unit">
                 <label for="isShow">是否显示:</label>
@@ -31,11 +35,11 @@
             </div>
             <div class="unit">
                 <label for="address">地址:</label>
-                <input type="text" size="30" minlength="2" name="address" id="address" value="address">
+                <input type="text" size="30" minlength="2" name="address" id="address" value="{{address}}">
             </div>
             <div class="unit">
                 <label for="detail">备注:</label>
-                <input type="text"  size="30" name="detail" id="detail" value="detail">
+                <input type="text"  size="30" name="detail" id="detail" value="{{detail}}">
             </div>
         </div>
 
@@ -44,7 +48,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="button" onclick="sendRequest('PagerForm','bbm_assureUnit.html','post')">保存</button>
+                            <button type="button" onclick="sendRequest('bbm_assureUnit.html','put','PagerForm')">保存</button>
                         </div>
                     </div>
                 </li>

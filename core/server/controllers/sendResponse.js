@@ -46,10 +46,15 @@ function replyWithPageData(values,fields,reqBody){
 
 		totalPages =  (length%pageRecordsNum) == 0 ? length/pageRecordsNum :parseInt(length/pageRecordsNum)+1;
 
-		if (pageNum > totalPages) {
-		} else {
-			//截取一页的数据
-			var subValues = _.slice(values, (pageNum - 1) * pageRecordsNum, (pageNum - 1) * pageRecordsNum + pageRecordsNum);
+		if (pageNum <= totalPages||pageNum==-1) {
+			var subValues;
+			if(pageNum == -1||pageNum==totalPages-1){
+				subValues = _.slice(values, (totalPages - 1) * pageRecordsNum);
+			}
+			else{
+				//截取一页的数据
+				subValues = _.slice(values, pageNum * pageRecordsNum, pageNum * pageRecordsNum + pageRecordsNum);
+			}
 
 			var filteredSubValues = filterFields(subValues, fields);
 
@@ -74,7 +79,6 @@ function replyWithPageData(values,fields,reqBody){
 			}
 
 		}
-
 	}
 
 	return {err:false,data:{tableData:'',totalCount:0}};

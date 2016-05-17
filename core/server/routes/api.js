@@ -10,7 +10,8 @@ var changeRecord = [];
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
-		var values = _.values(reqParams);
+
+		var values = reqParams.queryData ? _.values(reqParams.queryData):_.values(reqParams);
 		//filter some values
 		if (filter) {
 
@@ -21,9 +22,14 @@ function constructFetchParams(reqParams, requestFields, filter) {
 					var resultLength = result.length;
 					if (requestFields.length == resultLength) {
 						//compact fetParas
-
 						fetchParas = utils.filters.compactObj(_.zipObject(requestFields, result));
-						return {data:reqParams,reqParams:fetchParas};
+						if(reqParams.queryCon){
+							return {data:reqParams.queryData,reqParams:fetchParas,queryCon:reqParams.queryCon};
+						}
+						else{
+							return {data:reqParams.queryData,reqParams:fetchParas};
+						}
+
 					}
 				}
 			}
@@ -37,7 +43,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 		}
 		return false;
 	}else{
-		return{data:reqParams,reqParams:{}}
+		return{data:{},reqParams:{},queryCon:reqParams}
 	}
 }
 
@@ -68,6 +74,22 @@ function constructPostOptions(reqBody, fields, model) {
 
 }
 
+function constructPutOptions(reqParams,fields,model,url){
+	if(_.isObject(reqParams)&& !_.isEmpty(reqParams)){
+		var values = _.values(reqParams);
+		var fetchValues = values.slice(1);
+		if(fetchValues.length==fields.length){
+			var obj = _.zipObject(fields,fetchValues);
+			return {reqParams:{id:values[0]},reqFields:obj,reqModel:model,reqUrl:url};
+		}
+	}else {
+		return false;
+	}
+
+}
+
+
+
 function responseHomePage(req, res) {
 
 	var data = {title: "爱都信息管理平台"};
@@ -80,10 +102,10 @@ function responseHomePage(req, res) {
 
 function  setDefaultPageReqParas(containCheckbox){
 	if(containCheckbox){
-		return {numPerPage:50,currentPage:1,containCheckbox:false};
+		return {numPerPage:50,currentPage:0,containCheckbox:false,forSearch:false};
 	}
 	else{
-		return {numPerPage:50,currentPage:1,containCheckbox:true};
+		return {numPerPage:50,currentPage:0,containCheckbox:false,forSearch:false};
 	}
 
 }
@@ -247,8 +269,8 @@ routes = function apiRoutes() {
 			if(_.keys(req.query).length==1){
 
 				var reqBody = setDefaultPageReqParas();
-				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-
+				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
 
 					controller.fetch(req,res, queryOptions);
@@ -256,7 +278,8 @@ routes = function apiRoutes() {
 
 			}else{
 
-				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
+				console.log(queryObj);
 				if (!_.isEmpty(queryObj)) {
 					controller.fetch(req,res, queryObj);
 				}
@@ -264,7 +287,9 @@ routes = function apiRoutes() {
 		})
 		.post(function (req, res) {
 			req.body.superCompany = parseInt(req.body.superCompany);
+
 			var queryObj = constructPostOptions(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
+			console.log(queryObj);
 			if (!_.isEmpty(queryObj)) {
 
 				controller.create(res, queryObj);
@@ -272,24 +297,28 @@ routes = function apiRoutes() {
 		})
 		.put(function (req, res) {
 
+			var queryObj = constructPutOptions(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'],"insuredUnit",'bbm_assureUnit');
+			if (!_.isEmpty(queryObj)) {
+				controller.update(res, queryObj);
+			}
 
-			//if (!_.isEmpty(queryObj)) {
-			//
-			//	controller.update(res, queryObj);
-			//}
 		})
 		.delete(function (req, res) {
-			var reqParams = utils.filters.filterArrays(req.body.data,[0,1],['unit_code','unit_name']);
+			var reqParams = utils.filters.filterArrays(req.body.data,[0],['id']);
 			var queryObj = {reqParams:reqParams,reqModel:"insuredUnit"};
 			if (!_.isEmpty(queryObj)) {
 
 				controller.del(res, queryObj);
 			}
 		});
+
+
 	router.route('/bbm_updateAssureUnit.html')
 		.get(function(req,res){
 			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateAssureUnit',{number:changeRecord[0],insureUnit:changeRecord[1],contactPerson:changeRecord[2]});
+				res.render('bbm_updateAssureUnit',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+			}else{
+				res.render('bbm_updateAssureUnit');
 			}
 
 		})

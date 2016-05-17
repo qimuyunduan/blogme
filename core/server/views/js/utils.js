@@ -144,41 +144,32 @@ function getKeysAndValues(formId) {
 	return {keys: keys, values: values};
 
 }
+
+
+function defaultQueryControl(){
+	return {queryCon:{numPerPage:50,currentPage:0,containCheckbox:true,forSearch:true}};
+}
+
+function changePageNum(pageNum){
+	return {queryCon:{numPerPage:50,currentPage:pageNum,containCheckbox:true,forSearch:true}};
+}
+
+function changePageLimit(number){
+	return  {queryCon:{numPerPage:number,currentPage:0,containCheckbox:true,forSearch:true}};
+}
+
+
 //获取去除空格后每个查询字段的值
-function getQueryObject(formID, method, pageLimit, containCheckbox) {
+function getFormValues(formID) {
 
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
 	var values = data.values;
 	var queryObject = {};
-	//add control for showing records
-	if (method == 'get') {
-		keys.push("numPerPage");
-		keys.push("currentPage");
-		keys.push("containCheckbox");
-		keys.push('forSearch');
-	}
-
 	var results = checkTrim(values);
 	if (results) {
 		if (!isContainSpecialChar(results)) {
 			if (antiSQL(values)) {
-				if (method == 'get') {
-					if (pageLimit) {
-						results.push(pageLimit);
-					}
-					else {
-						results.push("50");
-					}
-
-					results.push("1");
-					if (containCheckbox) {
-						results.push("false");
-					} else {
-						results.push("true");
-					}
-					results.push('true');
-				}
 				queryObject = mergeToObject(keys, results);
 				return queryObject;
 			}
@@ -243,9 +234,7 @@ function getRowData(method, containCheckbox) {
 
 }
 
-function changePageNum() {
 
-}
 
 function responseEnter() {
 	if (event.keyCode == 13) {
@@ -256,6 +245,11 @@ function search(url) {
 	if (event.keyCode == 13) {
 		sendRequest('pagerForm', url, 'get');
 	}
+}
+
+function setPageContent(pageData){
+	$("#tbody").html(pageData.data.tableData);
+	$("#totalCount").html(pageData.data.totalCount);
 }
 function getCookieValue(name) {
 
@@ -325,22 +319,30 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(url, method, formId, pageNum, containCheckbox) {
+function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 
 
-	var queryData;
+	var data;
 
 	if (formId) {
-		queryData = getQueryObject(formId, method, pageNum, containCheckbox);
+		queryData = getFormValues(formId);
 	}
 	else {
 		queryData = getRowData(method, containCheckbox);
+	}
+	if(pageLimit){
+		data = $.extend({queryData:queryData},changePageLimit(pageLimit));
+	}else if(pageNum){
+		data = $.extend({queryData:queryData},changePageNum(pageNum));
+	}
+	else{
+		data = $.extend({queryData:queryData},defaultQueryControl());
 	}
 	if (queryData) {
 		$.ajax({
 			type: method,
 			url: url,
-			data: queryData,
+			data: data,
 			async: false,
 			dataType: "json",
 			error: function () {
@@ -354,16 +356,18 @@ function sendRequest(url, method, formId, pageNum, containCheckbox) {
 					switch (method) {
 						case 'post':
 							alertMsg.info("创建成功...");
+							setPageContent(Pagedata);
 							break;
 						case 'put':
 							alertMsg.info("修改成功...");
+							setPageContent(Pagedata);
 							break;
 						case 'delete':
 							alertMsg.info("删除成功...");
+							setPageContent(Pagedata);
 							break;
 						case 'get':
-							$("#tbody").html(Pagedata.data.tableData);
-							$("#totalCount").html(Pagedata.data.totalCount);
+							setPageContent(Pagedata);
 							break;
 						default:
 							break;

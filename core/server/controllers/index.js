@@ -11,7 +11,31 @@ var _ = require('lodash'),
 	models = require('../models'),
 	controllers;
 
-function getResult(req, res, options) {
+function getResultFromCollection(res,options){
+	models[options.reqModel].collection().query().where(options.reqParams).select()
+		.then(function (collection) {
+
+			if (collection) {
+
+				var pageData = reply.replyWithPageData(collection, options.fetchFields, options.queryCon);
+				if (options.queryCon.forSearch) {
+					res.json(pageData);
+				}
+				else {
+					if (!pageData.err) {
+						res.render(options.reqUrl, pageData.data);
+					}
+				}
+
+			}
+		}).catch(function (err) {
+		console.log(err);
+		// do other things
+	})
+}
+
+
+function getRecord(req, res, options) {
 
 	//handle login
 	if (options.reqUrl == 'index') {
@@ -68,26 +92,7 @@ function getResult(req, res, options) {
 	}
 
 	else {
-		models[options.reqModel].collection().query().where(options.reqParams).select()
-			.then(function (collection) {
-
-				if (collection) {
-
-					var pageData = reply.replyWithPageData(collection, options.fetchFields, options.data);
-					if (options.data.forSearch) {
-						res.json(pageData);
-					}
-					else {
-						if (!pageData.err) {
-							res.render(options.reqUrl, pageData.data);
-						}
-					}
-
-				}
-			}).catch(function (err) {
-			console.log(err);
-			// do other things
-		})
+		getResultFromCollection(res,options);
 	}
 }
 
@@ -95,10 +100,10 @@ function updateRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).fetch()
 		.then(function (model) {
 				if (model) {
-					if (_.isObject(options.fetchFields) && !_.isEmpty(options.fetchFields)) {
+					if (_.isObject(options.reqFields) && !_.isEmpty(options.reqFields)) {
 
 						// change the model
-						model.save(options.fetchFields).then(function () {
+						model.save(options.reqFields).then(function () {
 							res.send(JSON.stringify({err: false}));
 						}).catch(function (err) {
 							console.log(err);
@@ -130,10 +135,10 @@ function updateRecord(res, options) {
 			}
 		).catch(function (err) {
 		console.log(err);
-		// do other things
+
 	})
 }
-function deleteRecord(res, options) {
+function deleteRecord(res, options) 	{
 
 	_.forEach(options.reqParams, function (value) {
 
@@ -147,6 +152,7 @@ function deleteRecord(res, options) {
 			console.log(eerr);
 		})
 	});
+
 	res.json({err: false});
 }
 
@@ -156,7 +162,7 @@ function createRecord(res, options) {
 		.then(function (model) {
 				if (model) {
 
-					res.json({err: false});
+					getResultFromCollection(res,options);
 				}
 				else {
 					res.json({err: true});
@@ -167,12 +173,15 @@ function createRecord(res, options) {
 	})
 }
 
+
+
 controllers = {
 
 	create: createRecord,
 	del: deleteRecord,
 	update: updateRecord,
-	fetch: getResult
+	fetch: getRecord
+
 
 };
 
