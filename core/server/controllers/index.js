@@ -55,14 +55,14 @@ function getResult(req, res, options) {
 				if (!result.err && result.data.length == 5) {
 					res.render('myInfo', {
 						userName: result.data[0],
-						email: utils.postProcess.replaceStr(result.data[1],'*',2,3),
-						cellphone: utils.postProcess.replaceStr(result.data[2],'*',3,4),
+						email: utils.postProcess.replaceStr(result.data[1], '*', 2, 3),
+						cellphone: utils.postProcess.replaceStr(result.data[2], '*', 3, 4),
 						userState: result.data[3],
 						unit: result.data[4]
 					});
 				}
 
-			}).catch(function(err){
+			}).catch(function (err) {
 			console.log(err);
 		})
 	}
@@ -73,11 +73,11 @@ function getResult(req, res, options) {
 
 				if (collection) {
 
-					var pageData = reply.replyWithPageData(collection, options.fetchFields,options.data);
-					if(options.data.forSearch){
-						res.send(JSON.stringify(pageData));
+					var pageData = reply.replyWithPageData(collection, options.fetchFields, options.data);
+					if (options.data.forSearch) {
+						res.json(pageData);
 					}
-					else{
+					else {
 						if (!pageData.err) {
 							res.render(options.reqUrl, pageData.data);
 						}
@@ -99,7 +99,7 @@ function updateRecord(res, options) {
 
 						// change the model
 						model.save(options.fetchFields).then(function () {
-							res.send(JSON.stringify({err:false}));
+							res.send(JSON.stringify({err: false}));
 						}).catch(function (err) {
 							console.log(err);
 							// do other things
@@ -134,22 +134,20 @@ function updateRecord(res, options) {
 	})
 }
 function deleteRecord(res, options) {
-	models[options.reqModel].model().forge(options.reqParams).fetch()
-		.then(function (model) {
-			if (model) {
-				model.destroy().then(function (result) {
-					if (result) {
-						console.log(result);
-						res.send(JSON.stringify({err:false}));
-					}
-					else {
-						res.send(JSON.stringify({err:true}));
-					}
-				})
-			}
-		}).catch(function () {
-		res.send(JSON.stringify({err:true}));
-	})
+
+	_.forEach(options.reqParams, function (value) {
+
+		models[options.reqModel].model().forge(value).fetch()
+			.then(function (model) {
+				if (model) {
+					model.destroy();
+				}
+			}).catch(function (eerr) {
+			res.json({err: true});
+			console.log(eerr);
+		})
+	});
+	res.json({err: false});
 }
 
 function createRecord(res, options) {
@@ -157,15 +155,15 @@ function createRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).save()
 		.then(function (model) {
 				if (model) {
-					console.log(model);
-					res.send(JSON.stringify({err:false}));
+
+					res.json({err: false});
 				}
 				else {
-					res.send(JSON.stringify({err:true}));
+					res.json({err: true});
 				}
 			}
 		).catch(function () {
-		res.send(JSON.stringify({err:true}));
+		res.json({err: true});
 	})
 }
 

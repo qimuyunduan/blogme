@@ -21,15 +21,15 @@ var pass = utils.checkUser.cryptPass('101410',salt);
 //console.log(salt);
 //console.log(id);
 //console.log(pass);
-models['insuredUnit'].model().forge({
-		unit_code: '21124',
-		unit_name: 'wrteyrt',
-		contact_name: 'xiaoli',
-		contact_mobile: '14566765431',
-		contact_email: '',
-		unit_parent_id: 4,
+models['idoUser'].model().forge({
+		user_name: 'qimuyun',
+		user_salt: salt,
+		user_id: id,
+		user_unit: '爱都科技',
+		user_pass: pass,
+		user_email: '84622534@qq.com',
 		del_tag: '1',
-		unit_address: ''
+		user_phone: '16544542423'
 	})
 	.save()
 	.then(function (user) {

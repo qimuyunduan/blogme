@@ -56,7 +56,7 @@ function consOptions(reqParams, model, fetchFields, url) {
 
 }
 
-function constructPostParams(reqBody,fields,model) {
+function constructPostOptions(reqBody, fields, model) {
 
 	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
 		var values = _.values(reqBody);
@@ -264,7 +264,7 @@ routes = function apiRoutes() {
 		})
 		.post(function (req, res) {
 			req.body.superCompany = parseInt(req.body.superCompany);
-			var queryObj = constructPostParams(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
+			var queryObj = constructPostOptions(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
 			if (!_.isEmpty(queryObj)) {
 
 				controller.create(res, queryObj);
@@ -274,13 +274,12 @@ routes = function apiRoutes() {
 
 		})
 		.delete(function (req, res) {
-			console.log(req.body);
-			//var filteredValues = '';
-			//var queryObj = constructPostParams(req.body,['unit_code','unit_name'],"insuredUnit");
-			//if (!_.isEmpty(queryObj)) {
-			//
-			//	controller.del(res, queryObj);
-			//}
+			var reqParams = utils.filters.filterArrays(req.body.data,[0,1],['unit_code','unit_name']);
+			var queryObj = {reqParams:reqParams,reqModel:"insuredUnit"};
+			if (!_.isEmpty(queryObj)) {
+
+				controller.del(res, queryObj);
+			}
 		});
 
 

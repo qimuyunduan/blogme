@@ -42,7 +42,7 @@ function filterObject(data, keys) {
 		if (dataKeys.length >= countFilter) {
 
 			for (var i = 0; i < countFilter; i++) {
-				if (_.indexOf(dataKeys,keys[i])!=-1) {
+				if (_.indexOf(dataKeys, keys[i]) != -1) {
 					values.push(data[keys[i]])
 				}
 			}
@@ -51,20 +51,36 @@ function filterObject(data, keys) {
 	}
 	return false;
 }
+function filterArrays(values, filterIndexs, fields) {
+	var data = [];
+	if(_.isArray(values)&&!_.isEmpty(values)&&filterIndexs.length==fields.length){
+
+		_.forEach(values,function (value) {
+			var filteredValues = filterArray(value,filterIndexs);
+			data.push(_.zipObject(fields,filteredValues));
+		});
+	}
+	return data ? data:false;
+}
 function compactObj(obj) {
 	var length = _.keys(obj).length;
-	var keys   = _.keys(obj);
+	var keys = _.keys(obj);
 	var values = _.values(obj);
-	var index=[];
-	for(var i=0;i<length;i++){
+	var index = [];
+	for (var i = 0; i < length; i++) {
 		values[i] += '';
-		if(values[i].length==0){
+		if (values[i].length == 0) {
 			index.push(i);
 		}
 	}
-	_.pullAt(keys,index);
-	_.pullAt(values,index);
-	return _.zipObject(keys,values);
+	_.pullAt(keys, index);
+	_.pullAt(values, index);
+	return _.zipObject(keys, values);
 }
 
-module.exports = {filterArray: filterArray, filterObject: filterObject,compactObj:compactObj};
+module.exports = {
+	filterArray: filterArray,
+	filterArrays: filterArrays,
+	filterObject: filterObject,
+	compactObj: compactObj
+};

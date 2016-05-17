@@ -336,7 +336,6 @@ function sendRequest( url, method,formId, pageNum,containCheckbox) {
 	else {
 		 queryData = getRowData(method,containCheckbox);
 	}
-	alert(queryData);
 	if (queryData) {
 		$.ajax({
 			type: method,
