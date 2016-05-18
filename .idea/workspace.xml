@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/sendResponse.js" afterPath="$PROJECT_DIR$/core/server/controllers/sendResponse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_assureUnit.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_assureUnit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/utils.js" afterPath="$PROJECT_DIR$/core/server/views/js/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeFuncTest.js" afterPath="$PROJECT_DIR$/nodeFuncTest.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.33628318">
-              <caret line="64" column="95" selection-start-line="64" selection-start-column="95" selection-end-line="64" selection-end-column="95" />
+              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -507,12 +501,6 @@
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
     </task>
-    <task id="LOCAL-00091" summary="change views">
-      <created>1462086426299</created>
-      <option name="number" value="00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1462086426299</updated>
-    </task>
     <task id="LOCAL-00092" summary="change views">
       <created>1462107124652</created>
       <option name="number" value="00092" />
@@ -801,7 +789,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463538478099</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary=" change gview">
+      <created>1463564995604</created>
+      <option name="number" value="00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1463564995604</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -817,7 +811,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15165877" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15165877" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326733" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5018431" order="10" side_tool="true" content_ui="tabs" />
@@ -1271,7 +1265,7 @@
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33628318">
-          <caret line="64" column="95" selection-start-line="64" selection-start-column="95" selection-end-line="64" selection-end-column="95" />
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
           <folding />
         </state>
       </provider>
