@@ -43,7 +43,7 @@ function filterObject(data, keys) {
 
 			for (var i = 0; i < countFilter; i++) {
 				if (_.indexOf(dataKeys, keys[i]) != -1) {
-					values.push(data[keys[i]])
+					values.push(data[keys[i]]);
 				}
 			}
 			return values;

@@ -40,7 +40,6 @@ function replyWithPageData(values,fields,reqBody){
 	var fieldLength = fields.length;
 	var totalPages = 0;
 	var tableData = "";
-
 	if(_.isArray(values)){
 		var length = values.length;
 
@@ -49,7 +48,9 @@ function replyWithPageData(values,fields,reqBody){
 		if (pageNum <= totalPages||pageNum==-1) {
 			var subValues;
 			if(pageNum == -1||pageNum==totalPages-1){
-				subValues = _.slice(values, (totalPages - 1) * pageRecordsNum);
+
+				subValues = _.slice(values, (totalPages - 1) * pageRecordsNum,length);
+
 			}
 			else{
 				//截取一页的数据
@@ -58,9 +59,12 @@ function replyWithPageData(values,fields,reqBody){
 
 			var filteredSubValues = filterFields(subValues, fields);
 
+
 			if (filteredSubValues) {
+				//console.log(filteredSubValues);
 				dataPrefix = reqBody.containCheckbox ? dataPrefix : "<tr>";
 				pageRecordsNum = pageRecordsNum<length ? pageRecordsNum:length;
+
 				for (var i = 0; i < pageRecordsNum; i++) {
 					tableData += dataPrefix;
 					for (var j = 0; j < fieldLength; j++) {

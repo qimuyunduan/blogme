@@ -11,7 +11,8 @@ function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
 
-		var values = reqParams.queryData ? _.values(reqParams.queryData):_.values(reqParams);
+		var values = reqParams.Data ? _.values(reqParams.Data):_.values(reqParams);
+		console.log(values);
 		//filter some values
 		if (filter) {
 
@@ -24,10 +25,10 @@ function constructFetchParams(reqParams, requestFields, filter) {
 						//compact fetParas
 						fetchParas = utils.filters.compactObj(_.zipObject(requestFields, result));
 						if(reqParams.queryCon){
-							return {data:reqParams.queryData,reqParams:fetchParas,queryCon:reqParams.queryCon};
+							return {data:reqParams.Data,reqParams:fetchParas,queryCon:reqParams.queryCon};
 						}
 						else{
-							return {data:reqParams.queryData,reqParams:fetchParas};
+							return {data:reqParams.Data,reqParams:fetchParas};
 						}
 
 					}
@@ -35,16 +36,16 @@ function constructFetchParams(reqParams, requestFields, filter) {
 			}
 		}
 		else {
-
 			if (requestFields.length == values.length) {
 				fetchParas = _.zipObject(requestFields, values);
-				return {data:reqParams,reqParams:fetchParas};
+				return {data:reqParams.Data,reqParams:fetchParas,queryCon:reqParams.queryCon};
 			}
 		}
-		return false;
+
 	}else{
 		return{data:{},reqParams:{},queryCon:reqParams}
 	}
+	return false;
 }
 
 
@@ -62,13 +63,15 @@ function consOptions(reqParams, model, fetchFields, url) {
 
 }
 
-function constructPostOptions(reqBody, fields, model) {
+function constructPostOptions(reqBody,fields) {
 
 	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
-		var values = _.values(reqBody);
+
+		var values = _.values(reqBody.Data);
 		if(_.isArray(fields)&&!_.isEmpty(fields)&&values.length == fields.length){
 			var params = _.zipObject(fields,values);
-			return _.assign({reqParams:params},{reqModel:model});
+
+			return _.assign({reqParams:params},{queryCon:reqBody.queryCon});
 		}
 	}
 
@@ -102,10 +105,10 @@ function responseHomePage(req, res) {
 
 function  setDefaultPageReqParas(containCheckbox){
 	if(containCheckbox){
-		return {numPerPage:50,currentPage:0,containCheckbox:false,forSearch:false};
+		return {numPerPage:50,currentPage:0,containCheckbox:true,forSearch:false};
 	}
 	else{
-		return {numPerPage:50,currentPage:0,containCheckbox:false,forSearch:false};
+		return {numPerPage:50,currentPage:0,containCheckbox:true,forSearch:false};
 	}
 
 }
@@ -279,20 +282,21 @@ routes = function apiRoutes() {
 			}else{
 
 				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryObj);
+				//console.log(queryObj);
 				if (!_.isEmpty(queryObj)) {
 					controller.fetch(req,res, queryObj);
 				}
 			}
 		})
 		.post(function (req, res) {
-			req.body.superCompany = parseInt(req.body.superCompany);
+			req.body.Data.superCompany = parseInt(req.body.Data.superCompany);
+			var fields   = ['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'];
+			var queryObj = constructPostOptions(req.body,fields);
+			var options  = consOptions(queryObj,"insuredUnit",fields,'bbm_assureUnit');
+			console.log(options);
+			if (!_.isEmpty(options)) {
 
-			var queryObj = constructPostOptions(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'],"insuredUnit");
-			console.log(queryObj);
-			if (!_.isEmpty(queryObj)) {
-
-				controller.create(res, queryObj);
+				controller.create(res, options);
 			}
 		})
 		.put(function (req, res) {
@@ -304,7 +308,7 @@ routes = function apiRoutes() {
 
 		})
 		.delete(function (req, res) {
-			var reqParams = utils.filters.filterArrays(req.body.data,[0],['id']);
+			var reqParams = utils.filters.filterArrays(req.body.queryData,[0],['id']);
 			var queryObj = {reqParams:reqParams,reqModel:"insuredUnit"};
 			if (!_.isEmpty(queryObj)) {
 

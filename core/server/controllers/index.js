@@ -12,22 +12,16 @@ var _ = require('lodash'),
 	controllers;
 
 function getResultFromCollection(res,options){
-	models[options.reqModel].collection().query().where(options.reqParams).select()
+	models[options.reqModel].collection().forge().fetch()
 		.then(function (collection) {
 
 			if (collection) {
 
-				var pageData = reply.replyWithPageData(collection, options.fetchFields, options.queryCon);
-				if (options.queryCon.forSearch) {
-					res.json(pageData);
-				}
-				else {
-					if (!pageData.err) {
-						res.render(options.reqUrl, pageData.data);
-					}
-				}
+				var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields, options.queryCon);
 
+				res.json(pageData);
 			}
+
 		}).catch(function (err) {
 		console.log(err);
 		// do other things
@@ -92,7 +86,26 @@ function getRecord(req, res, options) {
 	}
 
 	else {
-		getResultFromCollection(res,options);
+		models[options.reqModel].collection().query().where(options.reqParams).select()
+			.then(function (collection) {
+
+				if (collection) {
+					console.log(collection);
+					var pageData = reply.replyWithPageData(collection, options.fetchFields, options.queryCon);
+					if (options.queryCon.forSearch) {
+						res.json(pageData);
+					}
+					else {
+						if (!pageData.err) {
+							res.render(options.reqUrl, pageData.data);
+						}
+					}
+
+				}
+			}).catch(function (err) {
+			console.log(err);
+			// do other things
+		})
 	}
 }
 
@@ -138,6 +151,7 @@ function updateRecord(res, options) {
 
 	})
 }
+
 function deleteRecord(res, options) 	{
 
 	_.forEach(options.reqParams, function (value) {

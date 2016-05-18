@@ -322,23 +322,25 @@ function changePwd(formID, url, method) {
 function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 
 
-	var data;
+	var data,Data;
 
 	if (formId) {
-		queryData = getFormValues(formId);
+		Data = getFormValues(formId);
 	}
 	else {
-		queryData = getRowData(method, containCheckbox);
+		Data = getRowData(method, containCheckbox);
 	}
+
 	if(pageLimit){
-		data = $.extend({queryData:queryData},changePageLimit(pageLimit));
+		data = $.extend({Data:Data},changePageLimit(pageLimit));
 	}else if(pageNum){
-		data = $.extend({queryData:queryData},changePageNum(pageNum));
+		data = $.extend({Data:Data},changePageNum(pageNum));
 	}
 	else{
-		data = $.extend({queryData:queryData},defaultQueryControl());
+		data = $.extend({Data:Data},defaultQueryControl());
 	}
-	if (queryData) {
+
+	if (Data) {
 		$.ajax({
 			type: method,
 			url: url,
