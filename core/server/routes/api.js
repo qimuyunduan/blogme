@@ -12,7 +12,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 	if (!_.isEmpty(requestFields)) {
 
 		var values = reqParams.Data ? _.values(reqParams.Data):_.values(reqParams);
-		console.log(values);
+
 		//filter some values
 		if (filter) {
 
@@ -27,63 +27,52 @@ function constructFetchParams(reqParams, requestFields, filter) {
 						if(reqParams.queryCon){
 							return {data:reqParams.Data,reqParams:fetchParas,queryCon:reqParams.queryCon};
 						}
-						else{
-							return {data:reqParams.Data,reqParams:fetchParas};
+						else{ // eg: changePwd.html
+							return {data:reqParams,reqParams:fetchParas};
 						}
 
 					}
 				}
 			}
 		}
-		else {
+		else {//  get myInfo.html
 			if (requestFields.length == values.length) {
 				fetchParas = _.zipObject(requestFields, values);
-				return {data:reqParams.Data,reqParams:fetchParas,queryCon:reqParams.queryCon};
+				return {reqParams:fetchParas};
 			}
 		}
 
-	}else{
+	}else{// eg://get bbm_assureUnit.html
 		return{data:{},reqParams:{},queryCon:reqParams}
 	}
 	return false;
 }
 
 
-function consOptions(reqParams, model, fetchFields, url) {
 
-	if(reqParams){
-		if (_.isString(model) && (_.isString(fetchFields)|| _.isObject(fetchFields))&& _.isString(url)) {
-			if (model.length && url.length) {
-				_.assign(reqParams, {reqModel: model, fetchFields: fetchFields, reqUrl: url});
-				return reqParams;
-			}
-		}
-	}
-	return false;
 
-}
-
-function constructPostOptions(reqBody,fields) {
+function constructPostParams(reqBody,fields) {
 
 	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
 
 		var values = _.values(reqBody.Data);
 		if(_.isArray(fields)&&!_.isEmpty(fields)&&values.length == fields.length){
 			var params = _.zipObject(fields,values);
-
 			return _.assign({reqParams:params},{queryCon:reqBody.queryCon});
 		}
+	}else {
+		return false;
 	}
 
 }
 
-function constructPutOptions(reqParams,fields,model,url){
-	if(_.isObject(reqParams)&& !_.isEmpty(reqParams)){
-		var values = _.values(reqParams);
+function constructPutParams(reqBody,fields){
+	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
+		var values = _.values(reqBody.Data);
 		var fetchValues = values.slice(1);
 		if(fetchValues.length==fields.length){
 			var obj = _.zipObject(fields,fetchValues);
-			return {reqParams:{id:values[0]},reqFields:obj,reqModel:model,reqUrl:url};
+			return _.assign({reqParams:{id:values[0]},reqFields:obj},{queryCon:reqBody.queryCon});
 		}
 	}else {
 		return false;
@@ -92,6 +81,36 @@ function constructPutOptions(reqParams,fields,model,url){
 }
 
 
+function constructDeleteParams(params,queryCon){
+	if(_.isArray(params)&& !_.isEmpty(params)){
+
+		return _.assign({reqParams:params},{queryCon:queryCon});
+
+	}else {
+		return false;
+	}
+
+
+}
+
+function consOptions(reqParams, model, fetchFields, url) {
+
+	if(_.isObject(reqParams)&&!_.isEmpty(reqParams)){
+		if (_.isString(model) && (_.isArray(fetchFields)|| _.isString(fetchFields))) {
+
+			if(url){
+				return _.assign(reqParams, {reqModel: model, fetchFields: fetchFields, reqUrl: url});
+			}
+			else{
+				return _.assign(reqParams, {reqModel: model, fetchFields: fetchFields});
+			}
+
+
+		}
+	}
+	return false;
+
+}
 
 function responseHomePage(req, res) {
 
@@ -139,7 +158,6 @@ routes = function apiRoutes() {
 
 		});
 
-
 	router.route("/authorized")
 		.get(function (req, res) {
 
@@ -160,9 +178,7 @@ routes = function apiRoutes() {
 			res.render("changePwd");
 		})
 		.put(function (req, res) {
-
 			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [3]), "idoUser", 'user_salt user_pass', 'changePwd');
-			console.log(queryOptions);
 			if (!_.isEmpty(queryOptions)) {
 
 				controller.update(res, queryOptions);
@@ -175,7 +191,6 @@ routes = function apiRoutes() {
 			var userName = req.cookies.loginUserName;
 			if(userName){
 				var queryOptions = consOptions(constructFetchParams({userName:userName}, ['user_name']), "idoUser", ['user_name', 'user_email','user_phone','user_status','user_unit'], 'myInfo');
-
 				if (!_.isEmpty(queryOptions)) {
 
 					controller.fetch(req,res, queryOptions);
@@ -267,53 +282,58 @@ routes = function apiRoutes() {
 
 
 	router.route("/bbm_assureUnit.html")
-		.get(function (req, res) {
 
+		.get(function (req, res) {
+			var fetchFields = ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'];
 			if(_.keys(req.query).length==1){
 
-				var reqBody = setDefaultPageReqParas();
-				var queryOptions = consOptions(constructFetchParams(reqBody, [], []), "insuredUnit", ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				console.log(queryOptions);
+				var DefaultPageReqParas = setDefaultPageReqParas();
+				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "insuredUnit",fetchFields , 'bbm_assureUnit');
+				//console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
-
 					controller.fetch(req,res, queryOptions);
 				}
 
 			}else{
-
-				var queryObj = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'], 'bbm_assureUnit');
-				//console.log(queryObj);
-				if (!_.isEmpty(queryObj)) {
-					controller.fetch(req,res, queryObj);
+				var options = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", fetchFields);
+				//console.log(options);
+				if (!_.isEmpty(options)) {
+					controller.fetch(req,res,options);
 				}
 			}
 		})
 		.post(function (req, res) {
 			req.body.Data.superCompany = parseInt(req.body.Data.superCompany);
 			var fields   = ['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'];
-			var queryObj = constructPostOptions(req.body,fields);
-			var options  = consOptions(queryObj,"insuredUnit",fields,'bbm_assureUnit');
-			console.log(options);
+			var fetchFields = fields.concat(['id']);
+			var options = consOptions(constructPostParams(req.body,fields),"insuredUnit",fetchFields);
 			if (!_.isEmpty(options)) {
-
 				controller.create(res, options);
 			}
+
 		})
 		.put(function (req, res) {
 
-			var queryObj = constructPutOptions(req.body,['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'],"insuredUnit",'bbm_assureUnit');
-			if (!_.isEmpty(queryObj)) {
-				controller.update(res, queryObj);
+			if(_.values(req.body.Data)!=changeRecord){
+				var fields   = ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'];
+				var fetchFields = fields.concat(['id']);
+				var options = consOptions(constructPutParams(req.body,fields),"insuredUnit",fetchFields);
+				//console.log(options);
+				if (!_.isEmpty(options)) {
+					controller.update(res, options);
+				}
 			}
 
 		})
 		.delete(function (req, res) {
-			var reqParams = utils.filters.filterArrays(req.body.queryData,[0],['id']);
-			var queryObj = {reqParams:reqParams,reqModel:"insuredUnit"};
-			if (!_.isEmpty(queryObj)) {
-
-				controller.del(res, queryObj);
+			var params = utils.filters.filterArrays(req.body.Data,[0],['id']);
+			var fetchFields   = ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'];
+			var options = consOptions(constructDeleteParams(params,req.body.queryCon),"insuredUnit",fetchFields);
+			//console.log(options);
+			if (!_.isEmpty(options)) {
+				controller.del(res, options);
 			}
+
 		});
 
 
@@ -321,6 +341,7 @@ routes = function apiRoutes() {
 		.get(function(req,res){
 			if(!_.isEmpty(changeRecord)){
 				res.render('bbm_updateAssureUnit',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
 			}else{
 				res.render('bbm_updateAssureUnit');
 			}

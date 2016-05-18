@@ -11,7 +11,8 @@
 var _      = require('lodash'),
 	uuid   = require('node-uuid'),
 	utils  = require('./core/server/utils'),
-	models   = require('./core/server/models');
+	models   = require('./core/server/models'),
+	Promise  = require('bluebird');
 
 
 var salt = uuid.v4();
@@ -21,21 +22,32 @@ var pass = utils.checkUser.cryptPass('101410',salt);
 //console.log(salt);
 //console.log(id);
 //console.log(pass);
-models['insuredUnit'].model().forge({
-		unit_code: '0055',
-		unit_name: 'insureunit',
-		contact_name: 'xiaoli',
-		contact_mobile: '19912325589',
-		contact_email: '',
-		unit_parent_id: 1,
-		del_tag: '1',
-		unit_address: ''
-	})
-	.save()
-	.then(function (user) {
-		console.log(user);
+//models['insuredUnit'].model().forge({
+//		unit_code: '0055',
+//		unit_name: 'insureunit',
+//		contact_name: 'xiaoli',
+//		contact_mobile: '19912325589',
+//		contact_email: '',
+//		unit_parent_id: 1,
+//		del_tag: '1',
+//		unit_address: ''
+//	})
+//	.save()
+//	.then(function (user) {
+//		console.log(user);
+//	});
+
+Promise.resolve([1,2,3,4]).then(function(values) {
+	console.log(values);
+	_.forEach(values,function(value){
+		console.log(value);
 	});
+	return "handled";
+}).then(function(mes) {
+	console.log(mes);
+}).catch(function(e) {
 
-
+	console.log(e.statusText);
+});
 
 

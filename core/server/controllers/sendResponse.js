@@ -61,7 +61,7 @@ function replyWithPageData(values,fields,reqBody){
 
 
 			if (filteredSubValues) {
-				//console.log(filteredSubValues);
+
 				dataPrefix = reqBody.containCheckbox ? dataPrefix : "<tr>";
 				pageRecordsNum = pageRecordsNum<length ? pageRecordsNum:length;
 

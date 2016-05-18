@@ -11,20 +11,23 @@ var _ = require('lodash'),
 	models = require('../models'),
 	controllers;
 
-function getResultFromCollection(res,options){
+function responseResult(res, options) {
 	models[options.reqModel].collection().forge().fetch()
 		.then(function (collection) {
 
 			if (collection) {
 
 				var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields, options.queryCon);
-
+				//console.log(pageData);
 				res.json(pageData);
+			}else{
+				res.json({err: true});
 			}
 
 		}).catch(function (err) {
 		console.log(err);
 		// do other things
+		res.json({err: true});
 	})
 }
 
@@ -90,8 +93,9 @@ function getRecord(req, res, options) {
 			.then(function (collection) {
 
 				if (collection) {
-					console.log(collection);
+
 					var pageData = reply.replyWithPageData(collection, options.fetchFields, options.queryCon);
+
 					if (options.queryCon.forSearch) {
 						res.json(pageData);
 					}
@@ -114,10 +118,9 @@ function updateRecord(res, options) {
 		.then(function (model) {
 				if (model) {
 					if (_.isObject(options.reqFields) && !_.isEmpty(options.reqFields)) {
-
 						// change the model
 						model.save(options.reqFields).then(function () {
-							res.send(JSON.stringify({err: false}));
+							responseResult(res,options);
 						}).catch(function (err) {
 							console.log(err);
 							// do other things
@@ -152,22 +155,29 @@ function updateRecord(res, options) {
 	})
 }
 
-function deleteRecord(res, options) 	{
+function deleteRecord(res, options) {
 
+
+	var model = models[options.reqModel].model();
+	var countDeleteInstances = 0;
+	var length = options.reqParams.length;
 	_.forEach(options.reqParams, function (value) {
-
-		models[options.reqModel].model().forge(value).fetch()
+		model.forge(value).fetch()
 			.then(function (model) {
 				if (model) {
 					model.destroy();
+					countDeleteInstances++;
 				}
-			}).catch(function (eerr) {
-			res.json({err: true});
-			console.log(eerr);
-		})
+			})
+			.then(function () {
+				if (length == countDeleteInstances) {
+					responseResult(res, options);
+				}
+
+			})
 	});
 
-	res.json({err: false});
+
 }
 
 function createRecord(res, options) {
@@ -175,18 +185,14 @@ function createRecord(res, options) {
 	models[options.reqModel].model().forge(options.reqParams).save()
 		.then(function (model) {
 				if (model) {
+					responseResult(res, options);
+				}
 
-					getResultFromCollection(res,options);
-				}
-				else {
-					res.json({err: true});
-				}
 			}
 		).catch(function () {
 		res.json({err: true});
 	})
 }
-
 
 
 controllers = {

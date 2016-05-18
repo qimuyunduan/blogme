@@ -150,13 +150,10 @@ function defaultQueryControl(){
 	return {queryCon:{numPerPage:50,currentPage:0,containCheckbox:true,forSearch:true}};
 }
 
-function changePageNum(pageNum){
-	return {queryCon:{numPerPage:50,currentPage:pageNum,containCheckbox:true,forSearch:true}};
+function changePageParams(pageNum,pageLimit){
+	return {queryCon:{numPerPage:pageLimit,currentPage:pageNum,containCheckbox:true,forSearch:true}};
 }
 
-function changePageLimit(number){
-	return  {queryCon:{numPerPage:number,currentPage:0,containCheckbox:true,forSearch:true}};
-}
 
 
 //获取去除空格后每个查询字段的值
@@ -182,7 +179,6 @@ function getFormValues(formID) {
 // get table row data
 function getRowData(method, containCheckbox) {
 	var tr_s = $('tbody :checked').parents('tr');
-
 	var data = [];
 	if (typeof(tr_s) == 'object') {
 
@@ -224,14 +220,9 @@ function getRowData(method, containCheckbox) {
 			}
 
 		}
-	}
-	if (data) {
-		return {data: data};
-	}
-	else {
-		return false;
-	}
 
+	}
+	return data.length ? data:false;
 }
 
 
@@ -243,7 +234,7 @@ function responseEnter() {
 }
 function search(url) {
 	if (event.keyCode == 13) {
-		sendRequest('pagerForm', url, 'get');
+		sendRequest( url, 'get','pagerForm');
 	}
 }
 
@@ -293,11 +284,12 @@ function changePwd(formID, url, method) {
 							data: formData,
 							async: false,
 							error: function () {
-								alertMsg.error("sorry!链接服务器失败......");
+								alertMsg.info("sorry!链接服务器失败......");
 							},
 							success: function (data) {
 								alertMsg.info(data);
 								if (data == "success") {
+									$.pdialog.closeCurrent();
 									alertMsg.info("修改密码成功......");
 								}
 								else {
@@ -307,7 +299,7 @@ function changePwd(formID, url, method) {
 						});
 					}
 					else {
-						alertMsg.warn("两次输入的密码不一致......");
+						alertMsg.info("两次输入的密码不一致......");
 					}
 				}
 			}
@@ -331,10 +323,8 @@ function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 		Data = getRowData(method, containCheckbox);
 	}
 
-	if(pageLimit){
-		data = $.extend({Data:Data},changePageLimit(pageLimit));
-	}else if(pageNum){
-		data = $.extend({Data:Data},changePageNum(pageNum));
+	if(pageLimit||pageNum){
+		data = $.extend({Data:Data},changePageParams(pageNum,pageLimit));
 	}
 	else{
 		data = $.extend({Data:Data},defaultQueryControl());
@@ -357,10 +347,12 @@ function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 
 					switch (method) {
 						case 'post':
+							$.pdialog.closeCurrent();
 							alertMsg.info("创建成功...");
 							setPageContent(Pagedata);
 							break;
 						case 'put':
+							$.pdialog.closeCurrent();
 							alertMsg.info("修改成功...");
 							setPageContent(Pagedata);
 							break;
@@ -407,9 +399,11 @@ function sendChangeRecordRequest(url) {
 		$.ajax({
 			type: 'put',
 			url: url,
-			data: data,
+			data: {data:data},
 			async: false
 		})
+	}else{
+		return false;
 	}
 }
 
