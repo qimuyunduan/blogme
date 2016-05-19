@@ -19,9 +19,9 @@
                     <td>
                         <span><label for="shopClass">商家状态</label></span>
                         <select name="shopClass" id="shopClass" class="combox">
-                            <option value="0" selected>全部选择</option>
-                            <option value="1">一等</option>
-                            <option value="2">二等</option>
+                            <option value="0" selected>正常</option>
+                            <option value="1">冻结</option>
+                            <option value="2">注销</option>
                         </select>
                     </td>
                 </tr>
@@ -42,12 +42,13 @@
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="bbm_addShop.html" target="dialog"  maxable="true" width="600" height="350"><span>添加</span></a></li>
+            <li><a href="" class="edit" target="dialog"><span>修改</span></a></li>
             <li><a href="" class="delete" target="dialog"  maxable="true"><span>冻结</span></a></li>
             <li><a href="" class="delete" target="dialog"  maxable="true"><span>解冻</span></a></li>
-
-            <li><a href="" class="edit" target="dialog"><span>修改</span></a></li>
-            <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
             <li><a href="bbm_shopUserManage.html" class="add" target="dialog"  maxable="true" title="商铺用户管理"><span>用户管理</span></a></li>
+
+            <li><a href="" class="icon" target="dialog" title="确定要导出这些记录吗?"><span>导出</span></a></li>
+
             <li><a href="bbm_importRecords.html" class="icon" target="dialog" ><span>导入</span></a></li>
 
 
