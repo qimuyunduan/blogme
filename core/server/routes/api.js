@@ -464,6 +464,76 @@ routes = function apiRoutes() {
 			changeRecord = req.body.data[0];
 			res.end();
 		});
+	router.route('/ps_updateMenu.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('ps_updateMenu',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('ps_updateMenu');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/ps_updateRole.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('ps_updateRole',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('ps_updateRole');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/ps_updateUserClass.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('ps_updateUserClass',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('ps_updateUserClass');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/pm_updateParams.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('pm_updateParams',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('pm_updateParams');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/pm_updateParam.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('pm_updateParam',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('pm_updateParam');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
 	router.route("/bbm_attachmentManage.html")
 		.get(function (req, res) {
 
@@ -959,10 +1029,6 @@ routes = function apiRoutes() {
 		})
 		.delete(function (req, res) {
 
-		});
-	router.route("/om_review.html")
-		.get(function (req, res) {
-			res.render("om_review");
 		});
 
 	//// ## Uploads
