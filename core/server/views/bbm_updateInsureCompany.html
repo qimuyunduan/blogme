@@ -1,0 +1,56 @@
+<div class="pageContent">
+    <form id="pagerForm">
+        <div class="pageFormContent" layoutH="80">
+            <div class="unit">
+                <label for="insureCompanyName">保险公司名称:</label>
+                <input type="text" size="30" class="required" id="insureCompanyName" name="insureCompanyName">
+            </div>
+            <div class="unit">
+                <label for="insureCompanyNumber">保险公司编号:</label>
+                <input type="text" size="30" name="insureCompanyNumber" id="insureCompanyNumber" class="required">
+            </div>
+
+            <div class="unit">
+                <label for="shortIntroduction">简称:</label>
+                <input type="text"   size="30" name="shortIntroduction" id="shortIntroduction">
+            </div>
+            <div class="unit">
+                <label for="telephone">电话:</label>
+                <input type="text" class="number required" name="telephone" id="telephone" size="30">
+            </div>
+            <div class="unit">
+                <label for="contactName">联系人名称:</label>
+                <input type="text" class="required" size="30" name="contactName" id="contactName">
+            </div>
+            <div class="unit">
+                <label for="state">状态:</label>
+                <select name="state" id="state" class="combox">
+                    <option value="0">正常</option>
+                    <option value="1">冻结</option>
+                    <option value="2">注销</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+
+</div>

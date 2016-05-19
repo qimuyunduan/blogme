@@ -1,0 +1,117 @@
+<div class="pageContent">
+    <form id="pagerForm">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="city">城市:</label>
+
+                <select name="city" id="city" class="combox">
+                    <option value="bj">北京市</option>
+                    <option value="sh">上海市</option>
+                    <option value="tj">天津市</option>
+                    <option value="cq">重庆市</option>
+                    <option value="sc">四川省</option>
+                    <option value="hb">河北省</option>
+                    <option value="gx">广西省</option>
+                    <option value="sd">山东省</option>
+                    <option value="ln">辽宁省</option>
+                    <option value="hlj">黑龙江</option>
+                    <option value="jl">吉林省</option>
+                    <option value="gs">甘肃省</option>
+                    <option value="qh">青海省</option>
+                    <option value="hn">河南省</option>
+                    <option value="js">江苏省</option>
+                    <option value="hb">湖北省</option>
+                    <option value="hn">湖南省</option>
+                    <option value="jx">江西省</option>
+                    <option value="zj">浙江省</option>
+                    <option value="gd">广东省</option>
+                    <option value="yn">云南省</option>
+                    <option value="fj">福建省</option>
+                    <option value="ah">安徽省</option>
+                    <option value="gz">贵州省</option>
+                    <option value="sx">陕西省</option>
+                    <option value="xx">山西省</option>
+                    <option value="hn">海南省</option>
+                    <option value="nmg">内蒙古</option>
+                    <option value="xz">西藏</option>
+                    <option value="xj">新疆</option>
+                    <option value="nx">宁夏</option>
+                    <option value="am">澳门</option>
+                    <option value="xg">香港</option>
+                </select>
+
+            </div>
+
+            <div class="unit">
+                <label for="isValid">是否有效:</label>
+                <select name="isValid" id="isValid" class="combox">
+                    <option value="0">否</option>
+                    <option value="1" selected>是</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="title">广告标题:</label>
+                <input type="text" class="required" size="40" name="title" id="title">
+            </div>
+            <div class="unit">
+                <label for="subTitle">广告小标题:</label>
+                <input type="text" name="subTitle" size="40" id="subTitle">
+            </div>
+            <div class="unit">
+                <label for="ADContent">广告内容:</label>
+                <textarea name="ADContent" id="ADContent" cols="40" rows="5"></textarea>
+            </div>
+            <div class="unit">
+                <label for="adClass">广告类型:</label>
+                <select name="adCalss" id="adClass" class="combox">
+                    <option value="0">横向广告</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="showOrder">广告显示顺序:</label>
+                <select name="showOrder" id="showOrder" class="combox">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="picture">图片:</label>
+                <input type="file" class="required" size="30" name="picture" id="picture">
+
+            </div>
+            <div class="unit">
+                <label for="createBy">创建人:</label>
+                <input type="text" class="required" size="40" name="createBy" id="createBy">
+
+            </div>
+            <div class="unit">
+                <label for="createTime">创建时间:</label>
+                <input type="text" class="required" size="40" name="createTime" id="createTime">
+            </div>
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" onclick="">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

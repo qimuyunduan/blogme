@@ -1,0 +1,59 @@
+<div class="pageContent">
+    <form id="pagerForm">
+        <div class="pageFormContent" layoutH="60">
+            <div class="unit">
+                <label for="shoperNumber">商家编号:</label>
+                <input type="text" size="30" class="required" id="shoperNumber" name="shoperNumber">
+            </div>
+            <div class="unit">
+                <label for="shoperName">商家名称:</label>
+                <input type="text" size="30" name="shoperName" id="shoperName" class="required">
+            </div>
+            <div class="unit">
+                <label for="shoperIntroduction">商家简称:</label>
+                <input type="text" name="shoperIntroduction" id="shoperIntroduction" size="30" class="required">
+            </div>
+            <div class="unit">
+                <label for="shoperState">商家状态:</label>
+                <select name="shoperState" id="shoperState" class="combox">
+                    <option value="0" selected>正常</option>
+                    <option value="1">冻结</option>
+                    <option value="2">注销</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="contactName">联系人名称:</label>
+                <input type="text" class="required"  name="contactName" id="contactName" size="30">
+            </div>
+            <div class="unit">
+                <label for="cellphone">联系人手机:</label>
+                <input type="text" class="number required" minlength="11" maxlength="11" size="30" name="phoneNumber"
+                       id="cellphone">
+            </div>
+            <div class="unit">
+                <label for="email">邮箱:</label>
+                <input type="email" class="email required" name="email" id="email" size="30" >
+            </div>
+
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" onclick="">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

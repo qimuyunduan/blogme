@@ -1,0 +1,72 @@
+<div class="pageContent">
+    <form id="pagerForm">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="orderNumber">投保单号:</label>
+                <input type="text" size="30" class="required" id="orderNumber" name="orderNumber" >
+            </div>
+            <div class="unit">
+                <label for="orderName">保单名称:</label>
+                <input type="text" size="30" name="orderName"   id="orderName" class="required ">
+            </div>
+            <div class="unit">
+                <label for="insureUnit">投保单位:</label>
+                <input  name="insureUnit" id="insureUnit" size="30" class="required"  type="text">
+            </div>
+            <div class="unit">
+                <label for="insureCompany">保险公司:</label>
+                <input type="text" name="insureCompany" id="insureCompany" size="30" >
+
+            </div>
+            <div class="unit">
+                <label for="contactName">联系人:</label>
+                <input type="text" class="required" size="30" name="contactName" id="contactName">
+            </div>
+            <div class="unit">
+                <label for="contactPhone">联系电话:</label>
+                <input type="text" class="required number" size="30" name="contactPhone" id="contactPhone">
+            </div>
+            <div class="unit">
+                <label for="cellphone">联系人手机:</label>
+                <input type="text" size="30" name="cellphone" id="cellphone">
+            </div>
+            <div class="unit">
+                <label for="orderTime">投保日期:</label>
+                <input type="text" class="required" size="30" name="orderTime" id="orderTime">
+            </div>
+            <div class="unit">
+                <label for="deadLine">到期日期:</label>
+                <input type="text" class="required" size="30" name="deadLine" id="deadLine">
+            </div>
+            <div class="unit">
+                <span><label for="state">状态</label></span>
+                <select name="state" id="state" class="combox">
+                    <option value="0" selected>正常</option>
+                    <option value="1">冻结</option>
+                    <option value="2">注销</option>
+                </select>
+            </div>
+
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="button" onclick="">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

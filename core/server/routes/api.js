@@ -351,7 +351,119 @@ routes = function apiRoutes() {
 			changeRecord = req.body.data[0];
 			res.end();
 		});
+	router.route('/bbm_updateShoper.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateShoper',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateShoper');
+			}
 
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/bbm_updateInsureCompany.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateInsureCompany',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateInsureCompany');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/bbm_updateInsureOrder.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateInsureOrder',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateInsureOrder');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/bbm_updateInsureUser.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateInsureUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateInsureUser');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+
+	router.route('/bc_updateHomeUser.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bc_updateHomeUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bc_updateHomeUser');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/mm_updateVersion.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('mm_updateVersion',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('mm_updateVersion');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/mm_updateCityAD.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('mm_updateCityAD',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('mm_updateCityAD');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
+	router.route('/mm_updateShopConfig.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('mm_updateShopConfig',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('mm_updateShopConfig');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
 	router.route("/bbm_attachmentManage.html")
 		.get(function (req, res) {
 
