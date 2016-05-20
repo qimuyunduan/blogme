@@ -12,7 +12,8 @@ var _      = require('lodash'),
 	uuid   = require('node-uuid'),
 	utils  = require('./core/server/utils'),
 	models   = require('./core/server/models'),
-	Promise  = require('bluebird');
+	Promise  = require('bluebird'),
+	config   = require('./core/server/config');
 
 
 var salt = uuid.v4();
@@ -37,17 +38,6 @@ var pass = utils.checkUser.cryptPass('101410',salt);
 //		console.log(user);
 //	});
 
-Promise.resolve([1,2,3,4]).then(function(values) {
-	console.log(values);
-	_.forEach(values,function(value){
-		console.log(value);
-	});
-	return "handled";
-}).then(function(mes) {
-	console.log(mes);
-}).catch(function(e) {
-
-	console.log(e.statusText);
-});
+console.log(config.paths);
 
 

@@ -44,6 +44,7 @@ ConfigManager.prototype.set = function (config) {
 			contentPath:      contentPath,
 			imagesPath:       path.resolve(contentPath, 'images'),
 			imagesRelPath:    'content/images',
+			dataPath:         path.resolve(contentPath,'data'),
 			hbsViews:       path.join(corePath, '/server/views/'),
 			helpers:  path.join(corePath, '/server/helpers/'),
 			models:  path.resolve(corePath,'/server/models/')

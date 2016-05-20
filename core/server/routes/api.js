@@ -4,6 +4,8 @@ var _       = require('lodash'),
 	express = require('express'),
 	api     = require('../api'),
 	utils   = require('../utils'),
+	config  = require('../config'),
+	path    = require('path'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
@@ -799,6 +801,11 @@ routes = function apiRoutes() {
 	router.route("/bc_addSpecialOrder.html")
 		.get(function (req, res) {
 			res.render("bc_addSpecialOrder");
+		});
+	router.route("/bc_getRechargeModel")
+		.post(function (req, res) {
+			res.download(path.resolve(config.paths.dataPath,'./workDaily.xls'),'file.xls');
+
 		});
 	router.route("/bc_homeUser.html")
 		.get(function (req, res) {
