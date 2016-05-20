@@ -7,7 +7,6 @@ var _ = require('lodash'),
 	utils = require('../utils'),
 	handleError = require('./error'),
 	reply = require('./sendResponse'),
-	setRequestIsSecure = require('./secure'),
 	models = require('../models'),
 	controllers;
 

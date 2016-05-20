@@ -1,8 +1,4 @@
-/**
- * 
- * @author 张慧华 z@j-ui.com
- * @param {Object} opts Several options
- */
+
 (function($){
 	$.fn.extend({
 		pagination: function(opts){
@@ -110,7 +106,7 @@
 			currentPage:1,
 			callback:function(){return false;}
 		}, opts);
-	}
+	};
 	
 	$.extend(Pagination.prototype, {
 		targetType:function(){return this.opts.targetType},

@@ -16,7 +16,12 @@ function replaceStr(str,replaceChar,start,length){
 		var middleStr = '';
 		var tailStr = str.substr(start+length);
 		for(var i=0;i<length;i++){
-			middleStr+='*'
+			if(replaceChar){
+				middleStr+=replaceChar;
+			}else{
+				middleStr+='*'
+			}
+
 		}
 		return headStr+middleStr+tailStr;
 	}
