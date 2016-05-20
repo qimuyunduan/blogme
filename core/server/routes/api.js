@@ -534,6 +534,20 @@ routes = function apiRoutes() {
 			changeRecord = req.body.data[0];
 			res.end();
 		});
+	router.route('/bbm_updateSysUser.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateSysUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateSysUser');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		});
 	router.route("/bbm_attachmentManage.html")
 		.get(function (req, res) {
 

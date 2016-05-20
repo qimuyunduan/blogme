@@ -1,11 +1,9 @@
 // # App Data API
 var _              = require('lodash'),
     config         = require('../config'),
-    configuration  = require('./configuration'),
     mail           = require('./mail'),
     posts          = require('./posts'),
     settings       = require('./settings'),
-    clients        = require('./clients'),
     authentication = require('./authentication'),
     uploads        = require('./upload'),
 
@@ -196,11 +194,9 @@ module.exports = {
     init: init,
     http: http,
     // API Endpoints
-    configuration: configuration,
     mail: mail,
     posts: posts,
     settings: settings,
-    clients: clients,
     authentication: authentication,
     uploads: uploads
 };

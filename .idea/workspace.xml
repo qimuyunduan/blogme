@@ -2,50 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/api/clients.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/api/configuration.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/controllers/secure.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/img/loadingcat.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.alertMsg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.barDrag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.combox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.contextmenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.cssTable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.database.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.dialogDrag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.drag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.effects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.history.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.navTab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.panel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.resize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.scrollCenter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.sortDrag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.stable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.switchEnv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.taskBar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.theme.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.tree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.util.date.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.util.number.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.validate.method.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-1.11.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/jquery-2.1.4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/views/js/jquery.validate.min.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/server/views/bbm_updateSysUser.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/api/index.js" afterPath="$PROJECT_DIR$/core/server/api/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/utils/postProcess.js" afterPath="$PROJECT_DIR$/core/server/utils/postProcess.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.pagination.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.pagination.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/dwz.print.js" afterPath="$PROJECT_DIR$/core/server/views/js/dwz.print.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_homeUser.html" afterPath="$PROJECT_DIR$/core/server/views/bc_homeUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_orderManage.html" afterPath="$PROJECT_DIR$/core/server/views/bc_orderManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_recharge.html" afterPath="$PROJECT_DIR$/core/server/views/bc_recharge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" afterPath="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_cityAD.html" afterPath="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/mm_versionManage.html" afterPath="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/partials/footer.html" afterPath="$PROJECT_DIR$/core/server/views/partials/footer.html" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,77 +39,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/api/posts.js">
+      <file leaf-file-name="bbm_shopManage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopManage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/api/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/api/upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.558824">
+              <caret line="46" column="135" selection-start-line="46" selection-start-column="135" selection-end-line="46" selection-end-column="135" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/api/utils.js">
+      <file leaf-file-name="bbm_insureCompany.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureCompany.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.029411">
+              <caret line="46" column="138" selection-start-line="46" selection-start-column="138" selection-end-line="46" selection-end-column="138" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipeline.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
+      <file leaf-file-name="bbm_orderMaintain.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.617647">
+              <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authorized.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
+      <file leaf-file-name="bbm_insureUser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="49" column="98" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bc_recharge.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bc_recharge.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.088235">
+              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bc_homeUser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bc_homeUser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.6764705">
+              <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bc_orderManage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bc_orderManage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.352941">
+              <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bc_specialOrder.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bc_specialOrder.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="42" column="136" selection-start-line="42" selection-start-column="136" selection-end-line="42" selection-end-column="136" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mm_cityAD.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="29" column="116" selection-start-line="29" selection-start-column="116" selection-end-line="29" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mm_versionManage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25584796">
+              <caret line="28" column="117" selection-start-line="28" selection-start-column="117" selection-end-line="28" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -163,34 +160,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/views/bc_signContract.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompanyDic.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_updateShoper.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_shoperUserManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_shopUserManage.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_updateInsureCompany.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_updateInsureOrder.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_updateInsureUser.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_drugCategory.html" />
         <option value="$PROJECT_DIR$/core/server/views/bbm_subCompany.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bc_recharge.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bc_homeUser.html" />
         <option value="$PROJECT_DIR$/core/server/views/bc_updateHomeUser.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bc_orderManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" />
         <option value="$PROJECT_DIR$/core/server/views/bm_currentMonth.html" />
         <option value="$PROJECT_DIR$/core/server/views/bm_historyBill.html" />
         <option value="$PROJECT_DIR$/core/server/views/bm_todayBill.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_feedback.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_updateVersion.html" />
-        <option value="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
-        <option value="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_updateCityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_shopConfig.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_updateShopConfig.html" />
@@ -207,13 +190,27 @@
         <option value="$PROJECT_DIR$/core/server/views/pm_updateParams.html" />
         <option value="$PROJECT_DIR$/core/server/views/pm_paramList.html" />
         <option value="$PROJECT_DIR$/core/server/views/pm_paramManage.html" />
-        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
         <option value="$PROJECT_DIR$/core/server/views/pm_updateParam.html" />
         <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/core/server/api/index.js" />
         <option value="$PROJECT_DIR$/core/server/utils/postProcess.js" />
         <option value="$PROJECT_DIR$/core/server/views/js/dwz.print.js" />
         <option value="$PROJECT_DIR$/core/server/views/js/dwz.pagination.js" />
+        <option value="$PROJECT_DIR$/core/server/api/index.js" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
+        <option value="$PROJECT_DIR$/core/server/routes/api.js" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_updateSysUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/partials/footer.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shoperManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_shopManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureCompany.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_insureUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_recharge.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_homeUser.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_orderManage.html" />
+        <option value="$PROJECT_DIR$/core/server/views/bc_specialOrder.html" />
+        <option value="$PROJECT_DIR$/core/server/views/mm_cityAD.html" />
+        <option value="$PROJECT_DIR$/core/server/views/mm_versionManage.html" />
       </list>
     </option>
   </component>
@@ -321,6 +318,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,12 +624,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00096" summary="change views">
-      <created>1462153798196</created>
-      <option name="number" value="00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1462153798196</updated>
     </task>
     <task id="LOCAL-00097" summary="change views">
       <created>1462191475934</created>
@@ -896,7 +913,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463647100245</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary=" change structure">
+      <created>1463708365634</created>
+      <option name="number" value="00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1463708365634</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -914,13 +937,13 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18746708" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326733" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5018431" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29347825" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26138613" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -962,7 +985,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change theme" />
     <MESSAGE value="ADD  FRONT pages" />
     <MESSAGE value="delete some files" />
     <MESSAGE value="deleting pg,sqlite database support" />
@@ -987,7 +1009,8 @@
     <MESSAGE value="ezport models" />
     <MESSAGE value="change views" />
     <MESSAGE value=" change gview" />
-    <option name="LAST_COMMIT_MESSAGE" value=" change gview" />
+    <MESSAGE value=" change structure" />
+    <option name="LAST_COMMIT_MESSAGE" value=" change structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1002,104 +1025,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_updateCityAD.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-61.058823">
-          <caret line="102" column="55" selection-start-line="102" selection-start-column="55" selection-end-line="102" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bm_todayBill.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.294118">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_updateVersion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.352941">
-          <caret line="10" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.029411">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.323529">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_shopConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.882353">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/mm_updateShopConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.088235">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/om_fileManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.823529">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/om_log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.617647">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_updateMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.67647">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_menuManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.352941">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_addRole.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.617647">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/ps_updateRole.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.235294">
-          <caret line="221" column="20" selection-start-line="221" selection-start-column="20" selection-end-line="221" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/ps_roleManage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.617647">
@@ -1118,13 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.235294">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="528" column="42" selection-start-line="528" selection-start-column="42" selection-end-line="528" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1194,42 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.9141192">
-          <caret line="190" column="3" selection-start-line="190" selection-start-column="3" selection-end-line="190" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29112083">
@@ -1248,26 +1130,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/utils/postProcess.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.636099">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1350,8 +1216,188 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.49923196">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/utils/pipeline.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5620438">
+          <caret line="198" column="23" selection-start-line="198" selection-start-column="23" selection-end-line="198" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/events/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/api/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addSysUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.588235">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="542" column="45" selection-start-line="542" selection-start-column="45" selection-end-line="542" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_updateSysUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.147058">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shoperManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.352941">
+          <caret line="46" column="131" selection-start-line="46" selection-start-column="131" selection-end-line="46" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_shopManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.558824">
+          <caret line="46" column="135" selection-start-line="46" selection-start-column="135" selection-end-line="46" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureCompany.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.029411">
+          <caret line="46" column="138" selection-start-line="46" selection-start-column="138" selection-end-line="46" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_orderMaintain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.617647">
+          <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_insureUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="49" column="98" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.088235">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_homeUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6764705">
+          <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_orderManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.352941">
+          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bc_specialOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="42" column="136" selection-start-line="42" selection-start-column="136" selection-end-line="42" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_cityAD.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="29" column="116" selection-start-line="29" selection-start-column="116" selection-end-line="29" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/mm_versionManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25584796">
+          <caret line="28" column="117" selection-start-line="28" selection-start-column="117" selection-end-line="28" selection-end-column="117" />
           <folding />
         </state>
       </provider>

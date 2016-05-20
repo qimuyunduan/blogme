@@ -1,0 +1,66 @@
+<div class="pageContent">
+    <form id="pagerForm">
+        <div class="pageFormContent" layoutH="58">
+
+            <div class="unit">
+                <label for="userName">用户姓名:</label>
+                <input type="text" size="30" class="required" id="userName" name="userName" >
+            </div>
+            <div class="unit">
+                <label for="loginName">登录名称:</label>
+                <input type="text" size="30" name="loginName"   id="loginName" class="required ">
+            </div>
+            <div class="unit">
+                <label for="class">所属类别:</label>
+                <select name="class" id="class" class="combox">
+                    <option value="0" selected> 保险公司</option>
+                </select>
+
+            </div>
+            <div class="unit">
+                <label for="unit">所属单位:</label>
+                <input  name="unit" id="unit" size="30" class="required" >
+            </div>
+            <div class="unit">
+                <label for="userState">用户状态:</label>
+                <select name="userState" id="userState" class="combox">
+                    <option value="0">正常</option>
+                    <option value="1">冻结</option>
+                    <option value="2">注销</option>
+                </select>
+            </div>
+            <div class="unit">
+                <label for="contactPhone">联系电话:</label>
+                <input type="text" class="required" size="30" name="contactPhone" id="contactPhone">
+            </div>
+            <div class="unit">
+                <label for="email">邮箱:</label>
+                <input type="text" class="required" size="30" name="email" id="email">
+            </div>
+            <div class="unit">
+                <label for="address">地址:</label>
+                <input type="text" class="required" size="30" name="address" id="address">
+            </div>
+
+
+        </div>
+        <div class="formBar">
+            <ul>
+                <li>
+                    <div class="buttonActive">
+                        <div class="buttonContent">
+                            <button type="submit">保存</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button">
+                        <div class="buttonContent">
+                            <button type="button" class="close">取消</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
