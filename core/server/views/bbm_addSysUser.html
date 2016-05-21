@@ -1,25 +1,22 @@
 <div class="pageContent">
     <form id="pagerForm">
-        <div class="pageFormContent" layoutH="58">
+        <div class="pageFormContent" layoutH="60">
 
             <div class="unit">
                 <label for="userName">用户姓名:</label>
                 <input type="text" size="30" class="required" id="userName" name="userName" >
             </div>
             <div class="unit">
-                <label for="loginName">登录名称:</label>
-                <input type="text" size="30" name="loginName"   id="loginName" class="required ">
-            </div>
-            <div class="unit">
                 <label for="class">所属类别:</label>
-                <select name="class" id="class" class="combox">
-                    <option value="0" selected> 保险公司</option>
+                <select name="class" id="class" >
+                    <option value="技术部" selected> 技术部</option>
+                    <option value="人事部">人事部</option>
+                    <option value="销售部">销售部</option>
                 </select>
-
             </div>
             <div class="unit">
                 <label for="unit">所属单位:</label>
-                <input  name="unit" id="unit" size="30" class="required" >
+                <input  type = 'text' name="unit" id="unit" size="30" class="required" >
             </div>
             <div class="unit">
                 <label for="userPwd">用户密码:</label>
@@ -27,19 +24,23 @@
             </div>
             <div class="unit">
                 <label for="confirmPwd">确认密码:</label>
-                <input type="password" class="required" size="30" name="confirmPwd" id="confirmPwd">
+                <input type="password" class="required" size="30" name="confirmPwd" id="confirmPwd" >
             </div>
             <div class="unit">
                 <label for="userState">用户状态:</label>
-                <select name="userState" id="userState" class="combox">
-                    <option value="0">请选择</option>
-                    <option value="1">正常</option>
-                    <option value="2">失效</option>
-                </select>
+                <input type="text" size="30" readonly="readonly" id="userState" name="userState" value="正常">
             </div>
             <div class="unit">
                 <label for="contactPhone">联系电话:</label>
                 <input type="text" class="required" size="30" name="contactPhone" id="contactPhone">
+            </div>
+            <div class="unit">
+                <label for="email">邮箱:</label>
+                <input type="text" class="required" size="30" name="email" id="email">
+            </div>
+            <div class="unit">
+                <label for="address">地址:</label>
+                <input type="text" class="required" size="30" name="address" id="address">
             </div>
         </div>
         <div class="formBar">
@@ -47,7 +48,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="submit">保存</button>
+                            <button type="button" onclick="sendRequest('bbm_sysUser.html','post','pagerForm')">保存</button>
                         </div>
                     </div>
                 </li>

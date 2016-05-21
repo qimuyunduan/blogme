@@ -1,7 +1,7 @@
 <div class="pageHeader">
     <form id="pagerForm">
 
-        <div class="searchBar">
+        <div class="searchBar" onkeypress="search('bbm_sysUser.html')">
             <table class="searchContent">
                 <tr>
                     <td>
@@ -9,27 +9,23 @@
                         <input type="text" size="20" name="userName" id="userName">
                     </td>
                     <td>
-                        <span><label for="loginName">登录名称</label></span>
-                        <input type="text" size="20" name="loginName" id="loginName">
-                    </td>
-                    <td>
                         <span><label for="category">所属类别</label></span>
-                        <select name="category" id="category" class="combox">
-                            <option value="0" selected>全部选择</option>
-                            <option value="1"></option>
-                            <option value="2"></option>
+                        <select name="category" id="category">
+                            <option value="技术部" selected>技术部</option>
+                            <option value="销售部">销售部</option>
+                            <option value="人事部">人事部</option>
                         </select>
                     </td>
                     <td>
-                        <span><label for="company">保险公司</label></span>
-                        <input type="text" name="company" id="company" size="30">
+                        <span><label for="insureCompany">保险公司</label></span>
+                        <input type="text" name="insureCompany" id="insureCompany" size="30">
                     </td>
                     <td>
                         <span><label for="state">状态</label></span>
-                        <select name="state"  class="combox" id="state">
-                            <option value="0" selected>正常</option>
-                            <option value="1">冻结</option>
-                            <option value="2">注销</option>
+                        <select name="state"  id="state">
+                            <option value="正常" selected>正常</option>
+                            <option value="冻结">冻结</option>
+                            <option value="注销">注销</option>
                         </select>
 
                     </td>
@@ -39,7 +35,7 @@
             <div class="subBar">
                 <ul>
                     <li>
-                        <a href="" class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></a>
+                        <a href="" class="buttonActive"><div class="buttonContent"><button type="button" onclick="sendRequest('bbm_sysUser.html','get','pagerForm')">检索</button></div></a>
                     </li>
                 </ul>
             </div>
@@ -53,8 +49,10 @@
             <li><a class="add" href="bbm_addSysUser.html" target="dialog"  maxable="true" width="600" height="350"><span>添加</span></a></li>
             <li><a class="delete" onclick=""><span>删除</span></a></li>
             <li><a href="bbm_updateSysUser.html" class="edit" target="dialog"><span>修改</span></a></li>
+            <li><a class="edit" onclick=""><span>解冻</span></a></li>
+            <li><a class="delete" onclick=""><span>冻结</span></a></li>
             <li><a class="edit" onclick=""><span>开通</span></a></li>
-            <li><a class="edit" onclick=""><span>注销</span></a></li>
+            <li><a class="delete" onclick=""><span>注销</span></a></li>
             <li><a class="edit" onclick=""> <span>密码初始化</span></a></li>
         </ul>
     </div>
@@ -62,14 +60,14 @@
         <thead>
         <tr>
             <th width="10"><input type="checkbox" class="checkboxCtrl"group="checkCtrl"></th>
+            <th width="50">id</th>
             <th width="100">用户姓名</th>
-            <th width="100">登录名称</th>
-            <th width="200">所属类别</th>
+            <th width="100">所属类别</th>
             <th width="200">所属单位</th>
             <th width="100">用户状态</th>
             <th width="100">联系电话</th>
             <th width="100">邮箱</th>
-            <th width="100">地址</th>
+            <th width="200">地址</th>
         </tr>
         </thead>
         <tbody>

@@ -141,6 +141,7 @@ function getKeysAndValues(formId) {
 		});
 
 	}
+	alert(keys);
 	return {keys: keys, values: values};
 
 }
@@ -162,6 +163,7 @@ function getFormValues(formID) {
 	var data = getKeysAndValues(formID);
 	var keys = data.keys;
 	var values = data.values;
+
 	var queryObject = {};
 	var results = checkTrim(values);
 	if (results) {
