@@ -1,5 +1,5 @@
 <div class="pageContent">
-    <form id="pagerForm">
+    <form id="addSysUser">
         <div class="pageFormContent" layoutH="60">
 
             <div class="unit">
@@ -19,36 +19,29 @@
                 <input  type = 'text' name="unit" id="unit" size="30" class="required" >
             </div>
             <div class="unit">
-                <label for="userPwd">用户密码:</label>
-                <input type="password" class="required" size="30" name="userPwd" id="userPwd">
-            </div>
-            <div class="unit">
-                <label for="confirmPwd">确认密码:</label>
-                <input type="password" class="required" size="30" name="confirmPwd" id="confirmPwd" >
-            </div>
-            <div class="unit">
                 <label for="userState">用户状态:</label>
                 <input type="text" size="30" readonly="readonly" id="userState" name="userState" value="正常">
             </div>
             <div class="unit">
                 <label for="contactPhone">联系电话:</label>
-                <input type="text" class="required" size="30" name="contactPhone" id="contactPhone">
+                <input type="text" class="required number" size="30" name="contactPhone" id="contactPhone" minlength="11" maxlength="11">
             </div>
             <div class="unit">
                 <label for="email">邮箱:</label>
-                <input type="text" class="required" size="30" name="email" id="email">
+                <input type="email" class="required" size="30" name="email" id="email">
             </div>
             <div class="unit">
                 <label for="address">地址:</label>
                 <input type="text" class="required" size="30" name="address" id="address">
             </div>
         </div>
+
         <div class="formBar">
             <ul>
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="button" onclick="sendRequest('bbm_sysUser.html','post','pagerForm')">保存</button>
+                            <button type="button" onclick="sendRequest('bbm_sysUser.html','post','addSysUser')">保存</button>
                         </div>
                     </div>
                 </li>

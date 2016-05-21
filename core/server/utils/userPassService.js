@@ -9,7 +9,10 @@
  *
  */
 
-var crypto = require('crypto');
+var _      = require('lodash'),
+	crypto = require('crypto'),
+	uuid   = require('node-uuid');
+
 // check user is valid
 function checkUser(pass,salt,DBPass){
 	var md5 = crypto.createHash('md5');
@@ -36,7 +39,19 @@ function cryptPass(pass,salt){
 	md5Pass.update(md5_pass+salt);
 	return md5Pass.digest('hex');
 }
+function newUser(){
+		var initPassWord = '111111';
+		var salt    = uuid.v4();
+
+		var id = uuid.v1();
+
+		var cryptPass = cryptPass(initPassWord,salt);
+
+		return {user_id:id,user_salt:salt,user_pass:cryptPass};
+
+}
 module.exports={
 	isValidUser:checkUser,
-	cryptPass:cryptPass
+	cryptPass:cryptPass,
+	newUser:newUser
 };

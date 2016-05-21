@@ -94,7 +94,7 @@ function getRecord(req, res, options) {
 				if (collection) {
 
 					var pageData = reply.replyWithPageData(collection, options.fetchFields, options.queryCon);
-
+					console.log(pageData);
 					if (options.queryCon.forSearch) {
 						res.json(pageData);
 					}

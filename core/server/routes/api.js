@@ -760,7 +760,7 @@ routes = function apiRoutes() {
 
 	router.route("/bbm_sysUser.html")
 		.get(function (req, res) {
-			var fetchFields = ['id','user_name','user_type','user_unit','user_status','user_phone','user_email'];
+			var fetchFields = ['id','user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
 			if(_.keys(req.query).length==1){
 
 				var DefaultPageReqParas = setDefaultPageReqParas();
@@ -779,13 +779,16 @@ routes = function apiRoutes() {
 			}
 		})
 		.post(function (req, res) {
-			console.log(req.body.Data);
-			//var fields = ['user_name','user_type','user_unit','user_status','user_phone','user_email'];
-			//var fetchFields = fields.concat(['id']);
-			//var options = consOptions(constructPostParams(req.body,fields),"insuredUnit",fetchFields);
+
+			var fields = ['user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
+			var fetchFields = fields.concat(['id']);
+			var options = consOptions(constructPostParams(req.body,fields),"insuredUnit",fetchFields);
+			console.log(options);
+			console.log(utils.checkUser.newUser());
 			//if (!_.isEmpty(options)) {
 			//	controller.create(res, options);
 			//}
+			//console.log(options);
 			res.end();
 		})
 		.put(function (req, res) {

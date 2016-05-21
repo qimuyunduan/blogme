@@ -86,7 +86,7 @@ function mergeToObject(keys, values) {
 function isContainSpecialChar(strArr, isLogin) {
 
 	//匹配特殊字符
-	var pattern = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+	var pattern = /[`~!#$%^&*()_+<>?:"{},\/;'[\]]/im;
 	if ($.isArray(strArr)) {
 		var count = strArr.length;
 		for (var i = 0; i < count; i++) {
@@ -141,7 +141,6 @@ function getKeysAndValues(formId) {
 		});
 
 	}
-	alert(keys);
 	return {keys: keys, values: values};
 
 }

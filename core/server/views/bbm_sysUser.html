@@ -1,7 +1,7 @@
-<div class="pageHeader">
+<div class="pageHeader" onkeypress="search('bbm_sysUser.html')">
     <form id="pagerForm">
 
-        <div class="searchBar" onkeypress="search('bbm_sysUser.html')">
+        <div class="searchBar">
             <table class="searchContent">
                 <tr>
                     <td>
@@ -35,7 +35,7 @@
             <div class="subBar">
                 <ul>
                     <li>
-                        <a href="" class="buttonActive"><div class="buttonContent"><button type="button" onclick="sendRequest('bbm_sysUser.html','get','pagerForm')">检索</button></div></a>
+                        <div class="buttonActive"><div class="buttonContent"><button type="button" onclick="sendRequest('bbm_sysUser.html','get','pagerForm')">检索</button></div></div>
                     </li>
                 </ul>
             </div>
@@ -70,7 +70,7 @@
             <th width="200">地址</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
 
         {{{tableData}}}
 

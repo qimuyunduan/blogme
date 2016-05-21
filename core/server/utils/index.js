@@ -1,7 +1,7 @@
 var _            = require('lodash'),
 	getFileNames = require('./getFileNames'),
 	moment       = require('./moment'),
-	checkUser    = require('./isUserValid'),
+	checkUser    = require('./userPassService'),
 	filters      = require('./filter'),
 	postProcess  = require('./postProcess'),
     utils,
