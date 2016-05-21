@@ -454,16 +454,7 @@ function login() {
 	}
 }
 
-function downloadModel() {
-	$.ajax({
-		type: "post",
-		url: 'bc_getRechargeModel',
-		async: false,
-		error: function () {
-			alert("sorry,无法下载...");
-		}
-	});
-}
+
 
 // request
 //$.ajax({

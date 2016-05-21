@@ -38,6 +38,6 @@ var pass = utils.checkUser.cryptPass('101410',salt);
 //		console.log(user);
 //	});
 
-console.log(config.paths);
+console.log(config.paths.contentPath);
 
 

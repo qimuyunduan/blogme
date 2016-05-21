@@ -31,6 +31,7 @@ middleware = {
 setupMiddleware  = function setupMiddleware(App) {
 
     var logging  = config.logging,
+		contentPath = config.paths.contentPath,
         corePath = config.paths.corePath;
 
     // Make sure 'req.secure' is valid for proxied requests
@@ -56,6 +57,9 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/uploadify',express.static(path.join(corePath,'/server/views/uploadify')));
 	App.use('/common', express.static(path.join(corePath, '/server/views/static')));
 	App.use('/shared', express.static(path.join(corePath, '/shared')));
+	App.use('/res', express.static(contentPath));
+	App.use('/res/data', express.static(path.join(contentPath, '/data')));
+	App.use('/res/images', express.static(path.join(contentPath, '/images')));
 	//
     // //First determine whether we're serving admin
     //App.use(decideIsAdmin);

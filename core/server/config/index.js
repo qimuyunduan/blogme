@@ -35,7 +35,6 @@ ConfigManager.prototype.set = function (config) {
 	// Otherwise default to default content path location
 	contentPath = this._config.paths.contentPath || path.resolve(appRoot, 'content');
 
-
 	_.merge(this._config, {
 		paths: {
 			appRoot:          appRoot,

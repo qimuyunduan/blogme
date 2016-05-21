@@ -5,7 +5,6 @@ var _       = require('lodash'),
 	api     = require('../api'),
 	utils   = require('../utils'),
 	config  = require('../config'),
-	path    = require('path'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
@@ -802,9 +801,11 @@ routes = function apiRoutes() {
 		.get(function (req, res) {
 			res.render("bc_addSpecialOrder");
 		});
-	router.route("/bc_getRechargeModel")
-		.post(function (req, res) {
-			res.download(path.resolve(config.paths.dataPath,'./workDaily.xls'),'file.xls');
+	router.route("/res/data/file.xls")
+		.get(function (req, res) {
+			console.log('downloading...');
+
+			res.download(config.paths.dataPath,'file.xls');
 
 		});
 	router.route("/bc_homeUser.html")
