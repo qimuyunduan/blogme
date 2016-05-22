@@ -856,11 +856,12 @@ routes = function apiRoutes() {
 			_.assign(options.reqParams, utils.checkUser.newUser());
 
 			if (!_.isEmpty(options)) {
-				console.log(options);
-				//controller.create(res, options);
+
+				controller.create(res, options);
+
 			}
-			console.log(options);
-			res.end();
+
+
 		})
 		.put(function (req, res) {
 			if (_.values(req.body.Data) != changeRecord) {
@@ -906,6 +907,10 @@ routes = function apiRoutes() {
 		})
 		.post(function (req, res) {
 			console.log(req.body);
+			var initPassObj = utils.checkUser.newUser();
+			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
+			var options = constructUpdateOptions(req.body,'idoUser',['id'],initPassObj,fetchFields);
+			console.log(options);
 			res.end();
 		});
 

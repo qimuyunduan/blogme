@@ -195,7 +195,9 @@ function getRowData(method,containCheckbox) {
 				return;
 			}
 		} else {
+
 			if (trsCount == 0) {
+
 				alertMsg.info('请先选择一个...');
 				return;
 			}
@@ -226,7 +228,7 @@ function getRowData(method,containCheckbox) {
 
 	}
 
-	return data.length ? data:false;
+	return data.length ? data:0;
 }
 
 function initPass(url,trimIndex,containCheckbox){
@@ -244,24 +246,25 @@ function initPass(url,trimIndex,containCheckbox){
 			}
 			users[i]=temArr;
 		}
-	}
-    users = $.extend({data:users},defaultQueryControl());
-	if (users) {
-		$.ajax({
-			type: 'post',
-			url: url,
-			data:users,
-			async: false,
-			error:function(){
-				alertMsg.info('密码初始化失败...');
-			},
-			success:function(data){
-				if(!data.err){
-					alertMsg.info('密码初始化成功...');
+		users = $.extend({data:users},defaultQueryControl());
+		if (users) {
+			$.ajax({
+				type: 'post',
+				url: url,
+				data:users,
+				async: false,
+				error:function(){
+					alertMsg.info('密码初始化失败...');
+				},
+				success:function(data){
+					if(!data.err){
+						alertMsg.info('密码初始化成功...');
+					}
 				}
-			}
-		})
+			})
+		}
 	}
+
 
 }
 
@@ -360,7 +363,7 @@ function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 	else {
 		Data = getRowData(method, containCheckbox);
 	}
-	alert(Data);
+
 	if(pageLimit||pageNum){
 		data = $.extend({Data:Data},changePageParams(pageNum,pageLimit));
 	}

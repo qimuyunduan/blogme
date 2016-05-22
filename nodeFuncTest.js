@@ -10,17 +10,19 @@
  */
 var _      = require('lodash'),
 	uuid   = require('node-uuid'),
+	crypto  = require('crypto'),
 	utils  = require('./core/server/utils'),
 	models   = require('./core/server/models'),
 	Promise  = require('bluebird'),
 	config   = require('./core/server/config');
 
 
-var salt = uuid.v4();
-var id = uuid.v1();
+
+var id   = uuid.v1();
 //var pass = utils.checkUser.cryptPass('101410',salt);
 //var user = utils.checkUser.newUser();
-//
+//console.log(user);
+
 //console.log(salt);
 //console.log(id);
 //console.log(pass);
@@ -41,11 +43,6 @@ var id = uuid.v1();
 //		console.log(user);
 //	});
 
-
-var ef = [1,2,1,1];
-console.log(ef);
-ef = {"wdwd":14564};
-console.log(ef);
 
 
 
