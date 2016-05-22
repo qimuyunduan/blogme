@@ -39,17 +39,18 @@ function cryptPass(pass,salt){
 	md5Pass.update(md5_pass+salt);
 	return md5Pass.digest('hex');
 }
-function newUser(){
-		var initPassWord = '111111';
-		var salt    = uuid.v4();
+function newUser() {
+	var initPassWord = '111111';
+	var salt = uuid.v4();
 
-		var id = uuid.v1();
+	var id = uuid.v1();
 
-		var cryptPass = cryptPass(initPassWord,salt);
+	var cryptPass = cryptPass(initPassWord, salt);
 
-		return {user_id:id,user_salt:salt,user_pass:cryptPass};
+	return {user_id: id, user_salt: salt, user_pass: cryptPass};
 
 }
+
 module.exports={
 	isValidUser:checkUser,
 	cryptPass:cryptPass,

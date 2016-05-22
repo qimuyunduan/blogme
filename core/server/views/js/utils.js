@@ -178,8 +178,8 @@ function getFormValues(formID) {
 }
 
 // get table row data
-function getRowData(method, containCheckbox) {
-	var tr_s = $('tbody :checked').parents('tr');
+function getRowData(method,containCheckbox) {
+	var tr_s = $('#tbody :checked').parents('tr');
 	var data = [];
 	if (typeof(tr_s) == 'object') {
 
@@ -223,10 +223,44 @@ function getRowData(method, containCheckbox) {
 		}
 
 	}
+
 	return data.length ? data:false;
 }
 
+function initPass(url,trimIndex, containCheckbox){
 
+	var users = getRowData('delete', containCheckbox);
+
+	if(users){
+		var length = users.length;
+		var indexLength = trimIndex.length;
+
+		for(var i = 0;i<length;i++){
+			var temArr = [];
+			for(var j = 0;j<indexLength;j++){
+				temArr.push(users[i][trimIndex[j]]);
+			}
+			users[i]=temArr;
+		}
+	}
+	if (users) {
+		$.ajax({
+			type: 'post',
+			url: url,
+			data: {data:users},
+			async: false,
+			error:function(){
+				alertMsg.info('密码初始化失败...');
+			},
+			success:function(data){
+				if(!data.err){
+					alertMsg.info('密码初始化成功...');
+				}
+			}
+		})
+	}
+
+}
 
 function responseEnter() {
 	if (event.keyCode == 13) {
@@ -323,7 +357,7 @@ function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 	else {
 		Data = getRowData(method, containCheckbox);
 	}
-
+	alert(Data);
 	if(pageLimit||pageNum){
 		data = $.extend({Data:Data},changePageParams(pageNum,pageLimit));
 	}

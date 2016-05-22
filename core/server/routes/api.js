@@ -535,20 +535,7 @@ routes = function apiRoutes() {
 			changeRecord = req.body.data[0];
 			res.end();
 		});
-	router.route('/bbm_updateSysUser.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateSysUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
-				changeRecord = [];
-			}else{
-				res.render('bbm_updateSysUser');
-			}
 
-		})
-		.put(function (req, res) {
-			changeRecord = req.body.data[0];
-			res.end();
-		});
 	router.route("/bbm_attachmentManage.html")
 		.get(function (req, res) {
 
@@ -782,21 +769,58 @@ routes = function apiRoutes() {
 
 			var fields = ['user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
 			var fetchFields = fields.concat(['id']);
-			var options = consOptions(constructPostParams(req.body,fields),"insuredUnit",fetchFields);
+			var options = consOptions(constructPostParams(req.body,fields),"idoUser",fetchFields);
+			_.assign(options.reqParams,utils.checkUser.newUser());
+
+			if (!_.isEmpty(options)) {
+				console.log(options);
+				//controller.create(res, options);
+			}
 			console.log(options);
-			console.log(utils.checkUser.newUser());
-			//if (!_.isEmpty(options)) {
-			//	controller.create(res, options);
-			//}
-			//console.log(options);
 			res.end();
 		})
 		.put(function (req, res) {
-
+			if(_.values(req.body.Data)!=changeRecord){
+				var fields   = ['user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
+				var fetchFields = fields.concat(['id']);
+				console.log(req.body);
+				var options = consOptions(constructPutParams(req.body,fields),"idoUser",fetchFields);
+				console.log(options);
+				if (!_.isEmpty(options)) {
+					controller.update(res, options);
+				}
+			}
 		})
 		.delete(function (req, res) {
-
+			var params = utils.filters.filterArrays(req.body.Data,[0],['id']);
+			var fetchFields   = ['id','user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
+			var options = consOptions(constructDeleteParams(params,req.body.queryCon),"idoUser",fetchFields);
+			console.log(options);
+			if (!_.isEmpty(options)) {
+				controller.del(res, options);
+			}
 		});
+	router.route('/bbm_updateSysUser.html')
+		.get(function(req,res){
+			if(!_.isEmpty(changeRecord)){
+				res.render('bbm_updateSysUser',{ID:changeRecord[0],userName:changeRecord[1],unit:changeRecord[3],phone:changeRecord[5],email:changeRecord[6],address:changeRecord[7]});
+				changeRecord = [];
+			}else{
+				res.render('bbm_updateSysUser');
+			}
+
+		})
+		.put(function (req, res) {
+			changeRecord = req.body.data[0];
+			res.end();
+		})
+		.post(function(req,res){
+			console.log(req.body);
+			res.end();
+		});
+
+
+
 
 	router.route("/bbm_addInsureUnit.html")
 		.get(function (req, res) {

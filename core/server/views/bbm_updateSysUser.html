@@ -1,41 +1,44 @@
 <div class="pageContent">
-    <form id="pagerForm">
+    <form id="updateSysUser">
         <div class="pageFormContent" layoutH="60">
-
+            <div class="unit">
+                <label for="id">ID:</label>
+                <input type="text" size="30" class="required" id="id" name="id" value="{{ID}}" readonly="readonly">
+            </div>
             <div class="unit">
                 <label for="userName">用户姓名:</label>
-                <input type="text" size="30" class="required" id="userName" name="userName" >
+                <input type="text" size="30" class="required" id="userName" name="userName" value="{{userName}}">
             </div>
             <div class="unit">
                 <label for="class">所属类别:</label>
                 <select name="class" id="class" class="combox">
-                    <option value="0" selected> 保险公司</option>
+                    <option value="保险公司" selected> 保险公司</option>
                 </select>
 
             </div>
             <div class="unit">
                 <label for="unit">所属单位:</label>
-                <input  name="unit" id="unit" size="30" class="required" >
+                <input  name="unit" id="unit" size="30" class="required" value="{{unit}}">
             </div>
             <div class="unit">
                 <label for="userState">用户状态:</label>
                 <select name="userState" id="userState">
-                    <option value="0">正常</option>
-                    <option value="1">冻结</option>
-                    <option value="2">注销</option>
+                    <option value="正常" selected>正常</option>
+                    <option value="冻结">冻结</option>
+                    <option value="注销">注销</option>
                 </select>
             </div>
             <div class="unit">
                 <label for="contactPhone">联系电话:</label>
-                <input type="text" class="required" size="30" name="contactPhone" id="contactPhone">
+                <input type="text" class="required" size="30" name="contactPhone" id="contactPhone" value="{{phone}}">
             </div>
             <div class="unit">
                 <label for="email">邮箱:</label>
-                <input type="text" class="required" size="30" name="email" id="email">
+                <input type="text" class="required" size="30" name="email" id="email" value="{{email}}">
             </div>
             <div class="unit">
                 <label for="address">地址:</label>
-                <input type="text" class="required" size="30" name="address" id="address">
+                <input type="text" class="required" size="30" name="address" id="address" value="{{address}}">
             </div>
 
 
@@ -45,7 +48,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="submit">保存</button>
+                            <button type="button" onclick="sendRequest('bbm_sysUser.html','put','updateSysUser')">保存</button>
                         </div>
                     </div>
                 </li>
