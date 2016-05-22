@@ -153,6 +153,9 @@ function updateRecord(res, options) {
 
 	})
 }
+function renewAttr(){
+
+}
 
 function deleteRecord(res, options) {
 
@@ -199,7 +202,8 @@ controllers = {
 	create: createRecord,
 	del: deleteRecord,
 	update: updateRecord,
-	fetch: getRecord
+	fetch: getRecord,
+	renewAttr:renewAttr
 
 
 };

@@ -1,10 +1,10 @@
 // # API routes
 
-var _       = require('lodash'),
+var _ = require('lodash'),
 	express = require('express'),
-	api     = require('../api'),
-	utils   = require('../utils'),
-	config  = require('../config'),
+	api = require('../api'),
+	utils = require('../utils'),
+	config = require('../config'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
@@ -12,7 +12,7 @@ function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
 
-		var values = reqParams.Data ? _.values(reqParams.Data):_.values(reqParams);
+		var values = reqParams.Data ? _.values(reqParams.Data) : _.values(reqParams);
 
 		//filter some values
 		if (filter) {
@@ -25,11 +25,11 @@ function constructFetchParams(reqParams, requestFields, filter) {
 					if (requestFields.length == resultLength) {
 						//compact fetParas
 						fetchParas = utils.filters.compactObj(_.zipObject(requestFields, result));
-						if(reqParams.queryCon){
-							return {data:reqParams.Data,reqParams:fetchParas,queryCon:reqParams.queryCon};
+						if (reqParams.queryCon) {
+							return {data: reqParams.Data, reqParams: fetchParas, queryCon: reqParams.queryCon};
 						}
-						else{ // eg: changePwd.html
-							return {data:reqParams,reqParams:fetchParas};
+						else { // eg: changePwd.html
+							return {data: reqParams, reqParams: fetchParas};
 						}
 
 					}
@@ -39,55 +39,51 @@ function constructFetchParams(reqParams, requestFields, filter) {
 		else {//  get myInfo.html
 			if (requestFields.length == values.length) {
 				fetchParas = _.zipObject(requestFields, values);
-				return {reqParams:fetchParas};
+				return {reqParams: fetchParas};
 			}
 		}
 
-	}else{// eg://get bbm_assureUnit.html
-		return{data:{},reqParams:{},queryCon:reqParams}
+	} else {// eg://get bbm_assureUnit.html
+		return {data: {}, reqParams: {}, queryCon: reqParams}
 	}
 	return false;
 }
 
+function constructPostParams(reqBody, fields) {
 
-
-
-function constructPostParams(reqBody,fields) {
-
-	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
+	if (_.isObject(reqBody) && !_.isEmpty(reqBody)) {
 
 		var values = _.values(reqBody.Data);
-		if(_.isArray(fields)&&!_.isEmpty(fields)&&values.length == fields.length){
-			var params = _.zipObject(fields,values);
-			return _.assign({reqParams:params},{queryCon:reqBody.queryCon});
+		if (_.isArray(fields) && !_.isEmpty(fields) && values.length == fields.length) {
+			var params = _.zipObject(fields, values);
+			return _.assign({reqParams: params}, {queryCon: reqBody.queryCon});
 		}
-	}else {
+	} else {
 		return false;
 	}
 
 }
 
-function constructPutParams(reqBody,fields){
-	if(_.isObject(reqBody)&& !_.isEmpty(reqBody)){
+function constructPutParams(reqBody, fields) {
+	if (_.isObject(reqBody) && !_.isEmpty(reqBody)) {
 		var values = _.values(reqBody.Data);
 		var fetchValues = values.slice(1);
-		if(fetchValues.length==fields.length){
-			var obj = _.zipObject(fields,fetchValues);
-			return _.assign({reqParams:{id:values[0]},reqFields:obj},{queryCon:reqBody.queryCon});
+		if (fetchValues.length == fields.length) {
+			var obj = _.zipObject(fields, fetchValues);
+			return _.assign({reqParams: {id: values[0]}, reqFields: obj}, {queryCon: reqBody.queryCon});
 		}
-	}else {
+	} else {
 		return false;
 	}
 
 }
 
+function constructDeleteParams(params, queryCon) {
+	if (_.isArray(params) && !_.isEmpty(params)) {
 
-function constructDeleteParams(params,queryCon){
-	if(_.isArray(params)&& !_.isEmpty(params)){
+		return _.assign({reqParams: params}, {queryCon: queryCon});
 
-		return _.assign({reqParams:params},{queryCon:queryCon});
-
-	}else {
+	} else {
 		return false;
 	}
 
@@ -96,13 +92,13 @@ function constructDeleteParams(params,queryCon){
 
 function consOptions(reqParams, model, fetchFields, url) {
 
-	if(_.isObject(reqParams)&&!_.isEmpty(reqParams)){
-		if (_.isString(model) && (_.isArray(fetchFields)|| _.isString(fetchFields))) {
+	if (_.isObject(reqParams) && !_.isEmpty(reqParams)) {
+		if (_.isString(model) && (_.isArray(fetchFields) || _.isString(fetchFields))) {
 
-			if(url){
+			if (url) {
 				return _.assign(reqParams, {reqModel: model, fetchFields: fetchFields, reqUrl: url});
 			}
-			else{
+			else {
 				return _.assign(reqParams, {reqModel: model, fetchFields: fetchFields});
 			}
 
@@ -111,6 +107,23 @@ function consOptions(reqParams, model, fetchFields, url) {
 	}
 	return false;
 
+}
+
+function constructUpdateOptions(reqData, model, queryFields, saveObj, fetchFields) {
+	var length = reqData.data[0].length;
+	var reqParams = [];
+	_.forEach(reqData.data, function (itemArr) {
+		if (length == queryFields.length) {
+			reqParams.push(_.zipObject(queryFields, itemArr));
+		}
+	});
+	return {
+		reqParams: reqParams,
+		reqModel: model,
+		saveParams: saveObj,
+		fetchFields: fetchFields,
+		queryCon: reqData.queryCon
+	}
 }
 
 function responseHomePage(req, res) {
@@ -123,12 +136,12 @@ function responseHomePage(req, res) {
 	res.render("index", data);
 }
 
-function  setDefaultPageReqParas(containCheckbox){
-	if(containCheckbox){
-		return {numPerPage:50,currentPage:0,containCheckbox:true,forSearch:false};
+function setDefaultPageReqParas(containCheckbox) {
+	if (containCheckbox) {
+		return {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: false};
 	}
-	else{
-		return {numPerPage:50,currentPage:0,containCheckbox:true,forSearch:false};
+	else {
+		return {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: false};
 	}
 
 }
@@ -190,11 +203,11 @@ routes = function apiRoutes() {
 	router.route("/myInfo.html")
 		.get(function (req, res) {
 			var userName = req.cookies.loginUserName;
-			if(userName){
-				var queryOptions = consOptions(constructFetchParams({userName:userName}, ['user_name']), "idoUser", ['user_name', 'user_email','user_phone','user_status','user_unit'], 'myInfo');
+			if (userName) {
+				var queryOptions = consOptions(constructFetchParams({userName: userName}, ['user_name']), "idoUser", ['user_name', 'user_email', 'user_phone', 'user_status', 'user_unit'], 'myInfo');
 				if (!_.isEmpty(queryOptions)) {
 
-					controller.fetch(req,res, queryOptions);
+					controller.fetch(req, res, queryOptions);
 				}
 			}
 
@@ -285,29 +298,29 @@ routes = function apiRoutes() {
 	router.route("/bbm_assureUnit.html")
 
 		.get(function (req, res) {
-			var fetchFields = ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'];
-			if(_.keys(req.query).length==1){
+			var fetchFields = ['id', 'unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'del_tag', 'unit_address', 'unit_remark'];
+			if (_.keys(req.query).length == 1) {
 
 				var DefaultPageReqParas = setDefaultPageReqParas();
-				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "insuredUnit",fetchFields , 'bbm_assureUnit');
+				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "insuredUnit", fetchFields, 'bbm_assureUnit');
 				//console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
-					controller.fetch(req,res, queryOptions);
+					controller.fetch(req, res, queryOptions);
 				}
 
-			}else{
-				var options = consOptions(constructFetchParams(req.query, ['unit_code','unit_name'], [0,1]), "insuredUnit", fetchFields);
+			} else {
+				var options = consOptions(constructFetchParams(req.query, ['unit_code', 'unit_name'], [0, 1]), "insuredUnit", fetchFields);
 				//console.log(options);
 				if (!_.isEmpty(options)) {
-					controller.fetch(req,res,options);
+					controller.fetch(req, res, options);
 				}
 			}
 		})
 		.post(function (req, res) {
 			req.body.Data.superCompany = parseInt(req.body.Data.superCompany);
-			var fields   = ['unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'];
+			var fields = ['unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'unit_parent_id', 'del_tag', 'unit_address'];
 			var fetchFields = fields.concat(['id']);
-			var options = consOptions(constructPostParams(req.body,fields),"insuredUnit",fetchFields);
+			var options = consOptions(constructPostParams(req.body, fields), "insuredUnit", fetchFields);
 			if (!_.isEmpty(options)) {
 				controller.create(res, options);
 			}
@@ -315,10 +328,10 @@ routes = function apiRoutes() {
 		})
 		.put(function (req, res) {
 
-			if(_.values(req.body.Data)!=changeRecord){
-				var fields   = ['unit_code','unit_name','contact_name','contact_mobile','contact_email','del_tag','unit_address','unit_remark'];
+			if (_.values(req.body.Data) != changeRecord) {
+				var fields = ['unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'del_tag', 'unit_address', 'unit_remark'];
 				var fetchFields = fields.concat(['id']);
-				var options = consOptions(constructPutParams(req.body,fields),"insuredUnit",fetchFields);
+				var options = consOptions(constructPutParams(req.body, fields), "insuredUnit", fetchFields);
 				//console.log(options);
 				if (!_.isEmpty(options)) {
 					controller.update(res, options);
@@ -327,9 +340,9 @@ routes = function apiRoutes() {
 
 		})
 		.delete(function (req, res) {
-			var params = utils.filters.filterArrays(req.body.Data,[0],['id']);
-			var fetchFields   = ['id','unit_code','unit_name','contact_name','contact_mobile','contact_email', 'unit_parent_id','del_tag','unit_address'];
-			var options = consOptions(constructDeleteParams(params,req.body.queryCon),"insuredUnit",fetchFields);
+			var params = utils.filters.filterArrays(req.body.Data, [0], ['id']);
+			var fetchFields = ['id', 'unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'unit_parent_id', 'del_tag', 'unit_address'];
+			var options = consOptions(constructDeleteParams(params, req.body.queryCon), "insuredUnit", fetchFields);
 			//console.log(options);
 			if (!_.isEmpty(options)) {
 				controller.del(res, options);
@@ -339,11 +352,16 @@ routes = function apiRoutes() {
 
 
 	router.route('/bbm_updateAssureUnit.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateAssureUnit',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateAssureUnit', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateAssureUnit');
 			}
 
@@ -353,11 +371,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/bbm_updateShoper.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateShoper',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateShoper', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateShoper');
 			}
 
@@ -367,11 +390,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/bbm_updateInsureCompany.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateInsureCompany',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateInsureCompany', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateInsureCompany');
 			}
 
@@ -381,11 +409,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/bbm_updateInsureOrder.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateInsureOrder',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateInsureOrder', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateInsureOrder');
 			}
 
@@ -395,11 +428,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/bbm_updateInsureUser.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateInsureUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateInsureUser', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateInsureUser');
 			}
 
@@ -410,11 +448,16 @@ routes = function apiRoutes() {
 		});
 
 	router.route('/bc_updateHomeUser.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bc_updateHomeUser',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bc_updateHomeUser', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bc_updateHomeUser');
 			}
 
@@ -424,11 +467,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/mm_updateVersion.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('mm_updateVersion',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('mm_updateVersion', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('mm_updateVersion');
 			}
 
@@ -438,11 +486,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/mm_updateCityAD.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('mm_updateCityAD',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('mm_updateCityAD', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('mm_updateCityAD');
 			}
 
@@ -452,11 +505,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/mm_updateShopConfig.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('mm_updateShopConfig',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('mm_updateShopConfig', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('mm_updateShopConfig');
 			}
 
@@ -466,11 +524,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/ps_updateMenu.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('ps_updateMenu',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('ps_updateMenu', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('ps_updateMenu');
 			}
 
@@ -480,11 +543,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/ps_updateRole.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('ps_updateRole',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('ps_updateRole', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('ps_updateRole');
 			}
 
@@ -494,11 +562,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/ps_updateUserClass.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('ps_updateUserClass',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('ps_updateUserClass', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('ps_updateUserClass');
 			}
 
@@ -508,11 +581,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/pm_updateParams.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('pm_updateParams',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('pm_updateParams', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('pm_updateParams');
 			}
 
@@ -522,11 +600,16 @@ routes = function apiRoutes() {
 			res.end();
 		});
 	router.route('/pm_updateParam.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('pm_updateParam',{ID:changeRecord[0],number:changeRecord[1],insureUnit:changeRecord[2],contactPerson:changeRecord[3]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('pm_updateParam', {
+					ID: changeRecord[0],
+					number: changeRecord[1],
+					insureUnit: changeRecord[2],
+					contactPerson: changeRecord[3]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('pm_updateParam');
 			}
 
@@ -747,30 +830,30 @@ routes = function apiRoutes() {
 
 	router.route("/bbm_sysUser.html")
 		.get(function (req, res) {
-			var fetchFields = ['id','user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
-			if(_.keys(req.query).length==1){
+			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
+			if (_.keys(req.query).length == 1) {
 
 				var DefaultPageReqParas = setDefaultPageReqParas();
-				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "idoUser",fetchFields , 'bbm_sysUser');
+				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "idoUser", fetchFields, 'bbm_sysUser');
 				//console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
-					controller.fetch(req,res, queryOptions);
+					controller.fetch(req, res, queryOptions);
 				}
 
-			}else{
-				var options = consOptions(constructFetchParams(req.query, ['user_name','user_type','user_unit','user_status'], [0,1,2,3]), "idoUser", fetchFields);
+			} else {
+				var options = consOptions(constructFetchParams(req.query, ['user_name', 'user_type', 'user_unit', 'user_status'], [0, 1, 2, 3]), "idoUser", fetchFields);
 				console.log(options);
 				if (!_.isEmpty(options)) {
-					controller.fetch(req,res,options);
+					controller.fetch(req, res, options);
 				}
 			}
 		})
 		.post(function (req, res) {
 
-			var fields = ['user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
+			var fields = ['user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
 			var fetchFields = fields.concat(['id']);
-			var options = consOptions(constructPostParams(req.body,fields),"idoUser",fetchFields);
-			_.assign(options.reqParams,utils.checkUser.newUser());
+			var options = consOptions(constructPostParams(req.body, fields), "idoUser", fetchFields);
+			_.assign(options.reqParams, utils.checkUser.newUser());
 
 			if (!_.isEmpty(options)) {
 				console.log(options);
@@ -780,11 +863,11 @@ routes = function apiRoutes() {
 			res.end();
 		})
 		.put(function (req, res) {
-			if(_.values(req.body.Data)!=changeRecord){
-				var fields   = ['user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
+			if (_.values(req.body.Data) != changeRecord) {
+				var fields = ['user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
 				var fetchFields = fields.concat(['id']);
 				console.log(req.body);
-				var options = consOptions(constructPutParams(req.body,fields),"idoUser",fetchFields);
+				var options = consOptions(constructPutParams(req.body, fields), "idoUser", fetchFields);
 				console.log(options);
 				if (!_.isEmpty(options)) {
 					controller.update(res, options);
@@ -792,20 +875,27 @@ routes = function apiRoutes() {
 			}
 		})
 		.delete(function (req, res) {
-			var params = utils.filters.filterArrays(req.body.Data,[0],['id']);
-			var fetchFields   = ['id','user_name','user_type','user_unit','user_status','user_phone','user_email','user_address'];
-			var options = consOptions(constructDeleteParams(params,req.body.queryCon),"idoUser",fetchFields);
+			var params = utils.filters.filterArrays(req.body.Data, [0], ['id']);
+			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
+			var options = consOptions(constructDeleteParams(params, req.body.queryCon), "idoUser", fetchFields);
 			console.log(options);
 			if (!_.isEmpty(options)) {
 				controller.del(res, options);
 			}
 		});
 	router.route('/bbm_updateSysUser.html')
-		.get(function(req,res){
-			if(!_.isEmpty(changeRecord)){
-				res.render('bbm_updateSysUser',{ID:changeRecord[0],userName:changeRecord[1],unit:changeRecord[3],phone:changeRecord[5],email:changeRecord[6],address:changeRecord[7]});
+		.get(function (req, res) {
+			if (!_.isEmpty(changeRecord)) {
+				res.render('bbm_updateSysUser', {
+					ID: changeRecord[0],
+					userName: changeRecord[1],
+					unit: changeRecord[3],
+					phone: changeRecord[5],
+					email: changeRecord[6],
+					address: changeRecord[7]
+				});
 				changeRecord = [];
-			}else{
+			} else {
 				res.render('bbm_updateSysUser');
 			}
 
@@ -814,12 +904,10 @@ routes = function apiRoutes() {
 			changeRecord = req.body.data[0];
 			res.end();
 		})
-		.post(function(req,res){
+		.post(function (req, res) {
 			console.log(req.body);
 			res.end();
 		});
-
-
 
 
 	router.route("/bbm_addInsureUnit.html")
@@ -854,7 +942,7 @@ routes = function apiRoutes() {
 	router.route("/res/data/file.xls")
 		.get(function (req, res) {
 
-			res.download(config.paths.dataPath,'file.xls');
+			res.download(config.paths.dataPath, 'file.xls');
 
 		});
 	router.route("/bc_homeUser.html")

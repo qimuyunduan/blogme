@@ -25,7 +25,6 @@
                         <select name="state"  id="state">
                             <option value="正常" selected>正常</option>
                             <option value="冻结">冻结</option>
-                            <option value="注销">注销</option>
                         </select>
 
                     </td>
@@ -51,9 +50,7 @@
             <li><a href="bbm_updateSysUser.html" class="edit" target="dialog" onclick="sendChangeRecordRequest('bbm_updateSysUser.html')"><span>修改</span></a></li>
             <li><a class="edit" onclick=""><span>解冻</span></a></li>
             <li><a class="delete" onclick=""><span>冻结</span></a></li>
-            <li><a class="edit" onclick=""><span>开通</span></a></li>
-            <li><a class="delete" onclick=""><span>注销</span></a></li>
-            <li><a class="edit" onclick="initPass('bbm_updateSysUser.html','[0]')"> <span>密码初始化</span></a></li>
+            <li><a class="edit" onclick="initPass('bbm_updateSysUser.html',[0])"> <span>密码初始化</span></a></li>
         </ul>
     </div>
     <table class="list"  layoutH="116" rel="ID" width="100%">

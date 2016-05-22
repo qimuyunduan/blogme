@@ -18,8 +18,8 @@ var _      = require('lodash'),
 
 var salt = uuid.v4();
 var id = uuid.v1();
-var pass = utils.checkUser.cryptPass('101410',salt);
-var user = utils.checkUser.newUser();
+//var pass = utils.checkUser.cryptPass('101410',salt);
+//var user = utils.checkUser.newUser();
 //
 //console.log(salt);
 //console.log(id);
@@ -40,7 +40,13 @@ var user = utils.checkUser.newUser();
 //	.then(function (user) {
 //		console.log(user);
 //	});
-console.log(pass);
+
+
+var ef = [1,2,1,1];
+console.log(ef);
+ef = {"wdwd":14564};
+console.log(ef);
+
 
 
 

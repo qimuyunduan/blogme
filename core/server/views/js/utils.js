@@ -211,11 +211,13 @@ function getRowData(method,containCheckbox) {
 
 			if (j) {
 				for (; j < cellCount; j++) {
+
 					data[i][j - 1] = tr_s[i].cells[j].innerHTML;
 				}
 			}
 			else {
 				for (; j < cellCount; j++) {
+
 					data[i][j] = tr_s[i].cells[j].innerHTML;
 				}
 			}
@@ -227,9 +229,9 @@ function getRowData(method,containCheckbox) {
 	return data.length ? data:false;
 }
 
-function initPass(url,trimIndex, containCheckbox){
+function initPass(url,trimIndex,containCheckbox){
 
-	var users = getRowData('delete', containCheckbox);
+	var users = getRowData('delete',containCheckbox);
 
 	if(users){
 		var length = users.length;
@@ -243,11 +245,12 @@ function initPass(url,trimIndex, containCheckbox){
 			users[i]=temArr;
 		}
 	}
+    users = $.extend({data:users},defaultQueryControl());
 	if (users) {
 		$.ajax({
 			type: 'post',
 			url: url,
-			data: {data:users},
+			data:users,
 			async: false,
 			error:function(){
 				alertMsg.info('密码初始化失败...');
