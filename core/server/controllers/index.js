@@ -17,9 +17,8 @@ function responseResult(res, options) {
 			if (collection) {
 
 				var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields, options.queryCon);
-				console.log(pageData);
 				res.json(pageData);
-			}else{
+			} else {
 				res.json({err: true});
 			}
 
@@ -44,21 +43,32 @@ function getRecord(req, res, options) {
 						if (!result.err) {
 
 							if (utils.checkUser.isValidUser(req.body.pwd, result.data[0], result.data[1])) {
-								// set cookie
-								if (req.body.rememberName == "on") {
-									if (!req.cookies.loginUserName) {
-										res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
-									}
-								}
-								// set session
-								req.session.user_id = 'login';
+								if(result.data[2]=='冻结'){
+									res.send(JSON.stringify({err:true,message:'该用户已被冻结,请联系管理员...'}));
+								}else{
 
-								res.send("success");
+									if (req.body.rememberName == "on") {
+										if (!req.cookies.loginUserName||(req.cookies.loginUserName!=req.body.userName)) {
+											// set cookie
+											res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
+
+										}
+									}else {
+										if(req.cookies.loginUserName){
+											//delete cookie
+											res.clearCookie('loginUserName');
+										}
+									}
+									// set session
+									req.session.userStatus = 'logined';
+									res.send(JSON.stringify({err:false,message:''}));
+								}
+
 							} else {
-								res.send('fail');
+								res.send(JSON.stringify({err:true,message:'用户名或密码错误...'}));
 							}
 						} else {
-							res.send('fail');
+							res.send(JSON.stringify({err:true,message:'sorry,用户不存在...'}));
 						}
 					}
 				}
@@ -119,7 +129,7 @@ function updateRecord(res, options) {
 					if (_.isObject(options.reqFields) && !_.isEmpty(options.reqFields)) {
 						// change the model
 						model.save(options.reqFields).then(function () {
-							responseResult(res,options);
+							responseResult(res, options);
 						}).catch(function (err) {
 							console.log(err);
 							// do other things
@@ -153,7 +163,8 @@ function updateRecord(res, options) {
 
 	})
 }
-function renewAttr(res,options){
+
+function renewAttr(res, options) {
 	var model = models[options.reqModel].model();
 	var count = 0;
 	var length = options.reqParams.length;
@@ -161,20 +172,18 @@ function renewAttr(res,options){
 		model.forge(value).fetch()
 			.then(function (model) {
 				if (model) {
-					model.save(options.saveParams).then(function () {
-						count++;
-					}).catch(function (err) {
-						console.log(err);
-					});
-
+					model.save(options.saveParams);
+					count++;
 				}
 			})
 			.then(function () {
 				if (length == count) {
 					responseResult(res, options);
 				}
+
 			})
 	});
+
 }
 
 function deleteRecord(res, options) {
@@ -223,7 +232,7 @@ controllers = {
 	del: deleteRecord,
 	update: updateRecord,
 	fetch: getRecord,
-	renewAttr:renewAttr
+	renewAttr: renewAttr
 
 
 };

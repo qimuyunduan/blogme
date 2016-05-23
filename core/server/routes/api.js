@@ -163,7 +163,7 @@ routes = function apiRoutes() {
 		})
 		.post(function (req, res) {
 
-			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [0]), "idoUser", ['user_salt', 'user_pass'], 'index');
+			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [0]), "idoUser", ['user_salt', 'user_pass','user_status'], 'index');
 
 			if (!_.isEmpty(queryOptions)) {
 
@@ -175,15 +175,20 @@ routes = function apiRoutes() {
 	router.route("/authorized")
 		.get(function (req, res) {
 
-			if (!req.session.user_id) {
-				console.log("not login");
-				res.redirect('/');
-			} else {
-				console.log(req.session.user_id);
+			if (req.session.userStatus=='logined') {
 				var dateTime = utils.moment.localDateAndTime;
 				res.render("authorized", {dateTime: dateTime});
+
+			} else {
+				res.redirect('/');
 			}
 
+		})
+		.post(function(){
+			if(req.body.info=='logout'){
+				console.log('destroy session...');
+				req.session.destroy();
+			}
 		});
 
 
@@ -317,7 +322,6 @@ routes = function apiRoutes() {
 			}
 		})
 		.post(function (req, res) {
-			req.body.Data.superCompany = parseInt(req.body.Data.superCompany);
 			var fields = ['unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'unit_parent_id', 'del_tag', 'unit_address'];
 			var fetchFields = fields.concat(['id']);
 			var options = consOptions(constructPostParams(req.body, fields), "insuredUnit", fetchFields);
@@ -915,7 +919,7 @@ routes = function apiRoutes() {
 			}
 			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
 			var options = constructUpdateOptions(req.body,'idoUser',['id'],saveObj,fetchFields);
-
+			console.log(options);
 			if(options){
 
 				controller.renewAttr(res,options);

@@ -83,13 +83,16 @@ setupMiddleware  = function setupMiddleware(App) {
 
     App.use(routes.apiBaseUri, cacheControl('private'));
 	// ### cookie and session
+
+
 	App.use(cookieParser());
 
 	App.use(session({
-		secret: ' sessionSec',
+		name:'idoConnectSessId',
+		secret: 'sessionSec',
 		resave:false,
 		saveUninitialized:false,
-		cookie: {maxAge: 60 * 1000 * 30}
+		cookie: {maxAge: 60 * 1000 * 30}  // 设置 sessionCookie时间,过了这个时间,sessionCookie被浏览器自动清除,刷新页面会重新登录
 	}));
 
     // ### Routing

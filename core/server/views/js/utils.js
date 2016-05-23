@@ -265,7 +265,6 @@ function initPass(url, trimIndex, containCheckbox) {
 					alertMsg.info('密码初始化失败...');
 				},
 				success: function (data) {
-					alert(data.err);
 					if (!data.err) {
 						alertMsg.info('密码初始化成功...');
 					}
@@ -278,7 +277,7 @@ function initPass(url, trimIndex, containCheckbox) {
 }
 
 
-function updateState(url, containCheckbox) {
+function updateState(url,isFrozen, containCheckbox) {
 	var data = getRowData('delete', containCheckbox);
 	var states = filterElements(data, [4]);
 	var state = '';
@@ -292,9 +291,21 @@ function updateState(url, containCheckbox) {
 		}
 	}
 	if (states[0][0] == '正常') {
-		state = "冻结"
+		if(isFrozen){
+			state = "冻结"
+		}else{
+			alertMsg.info('该用户已经处于正常状态,不能解冻...');
+			return;
+		}
+
 	} else {
-		state = "正常"
+		if(isFrozen){
+			alertMsg.info('该用户已经处于冻结状态...');
+			return;
+		}else{
+			state = "正常"
+		}
+
 	}
 	data = filterElements(data, [0]);
 
@@ -311,10 +322,14 @@ function updateState(url, containCheckbox) {
 			},
 			success: function (data) {
 				if (!data.err) {
+
 					if(state=='正常'){
 						alertMsg.info("解冻用户成功...");
+						setPageContent(data);
+
 					}else {
-						alertMsg.info("冻结用户成功...");
+						alertMsg.info("冻结用户成功...")
+						setPageContent(data);
 					}
 
 				}
@@ -532,16 +547,17 @@ function login() {
 					url: "index",
 					data: queryObject,
 					async: false,
+					dataType:'json',
 					error: function () {
 						alert("sorry!链接服务器失败......");
 					},
 					success: function (data) {
 
-						if (data == "success") {
+						if (!data.err) {
 							window.location = "/authorized"
 						}
 						else {
-							setMessage("用户名或密码错误...");
+							setMessage(data.message);
 						}
 					}
 				});
@@ -552,6 +568,17 @@ function login() {
 	}
 }
 
+function logout(){
+	$.ajax({
+		type: 'post',
+		url:"authorized.html",
+		data:{info:'logout'},
+		async: false,
+		error: function() {
+			alertMsg.info("连接错误...");
+		}
+	});
+}
 
 // request
 //$.ajax({

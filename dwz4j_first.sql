@@ -30,7 +30,7 @@ CREATE TABLE `addmoney_record_detail` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `lastmoney` double DEFAULT NULL,
   `remark` varchar(2000) DEFAULT NULL,
   `counttosum` varchar(1) DEFAULT NULL,
@@ -151,7 +151,7 @@ CREATE TABLE `bind_family` (
   `phone` varchar(20) DEFAULT NULL,
   `create_user` int(10) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL COMMENT '支付密码',
   `logincount` int(10) DEFAULT '0' COMMENT '登录次数',
   `family_no` varchar(50) DEFAULT NULL,
@@ -258,7 +258,7 @@ CREATE TABLE `business_group` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `business_group_g_sno` (`g_sno`)
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
@@ -297,7 +297,7 @@ CREATE TABLE `business_man` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   `group_sno` int(10) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `qianyue_date` varchar(20) DEFAULT NULL,
   `shopm_Sort` int(11) DEFAULT NULL,
   `lianxi_Phone` varchar(40) DEFAULT NULL,
@@ -1722,7 +1722,7 @@ CREATE TABLE `business_shop` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   `shopm_sno` int(10) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `Shopm_type` varchar(10) DEFAULT NULL,
   `Shopm_address` varchar(50) DEFAULT NULL,
   `show_On_Mobile` varchar(5) DEFAULT NULL,
@@ -6481,7 +6481,7 @@ CREATE TABLE `consume_detail` (
   `create_user` int(10) DEFAULT NULL,
   `create_time` varchar(20) DEFAULT NULL,
   `consume_Sno` varchar(50) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
 
@@ -6533,7 +6533,7 @@ CREATE TABLE `consume_info` (
   `update_user` int(10) DEFAULT NULL,
   `free_money` double DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL,
   `month` varchar(2) DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL,
@@ -7322,7 +7322,7 @@ CREATE TABLE `ido_user` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`),
   KEY `ido_user_userid` (`user_id`)
@@ -7375,7 +7375,7 @@ CREATE TABLE `insured_company` (
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
   `com_status` int(10) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `com_no` (`com_no`),
   KEY `insured_company_com_no` (`com_no`)
@@ -7424,7 +7424,7 @@ CREATE TABLE `insured_file` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `f_id` (`f_id`),
   KEY `insured_file_f_id` (`f_id`)
@@ -7458,7 +7458,7 @@ CREATE TABLE `insured_unit` (
   `contact_name` varchar(100) DEFAULT NULL,
   `contact_mobile` varchar(20) DEFAULT NULL,
   `contact_email` varchar(500) DEFAULT NULL,
-  `unit_parent_id` int(10) DEFAULT NULL,
+  `unit_parent_id` varchar(20) DEFAULT NULL,
   `unit_state` int(10) DEFAULT NULL,
   `unit_address` varchar(500) DEFAULT NULL,
   `unit_remark` varchar(4000) DEFAULT NULL,
@@ -7466,7 +7466,7 @@ CREATE TABLE `insured_unit` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `unit_phone` varchar(40) DEFAULT NULL,
   `exception_Info` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -7538,7 +7538,7 @@ CREATE TABLE `insured_user` (
   `create_time` varchar(20) DEFAULT NULL,
   `update_user` int(10) DEFAULT NULL,
   `update_time` varchar(20) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   `iuser_pass` varchar(100) DEFAULT NULL COMMENT '手机客户端登录密码',
   `pay_pass` varchar(100) DEFAULT NULL COMMENT '支付密码',
   PRIMARY KEY (`id`),
@@ -10284,7 +10284,7 @@ CREATE TABLE `parameter_type` (
   `orderid` int(10) DEFAULT NULL,
   `code` varchar(100) DEFAULT NULL,
   `isSystem` int(11) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`parameter_type_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
@@ -10335,7 +10335,7 @@ CREATE TABLE `params` (
   `usevalue` varchar(100) DEFAULT NULL,
   `orderid` int(10) DEFAULT NULL,
   `issystem` int(11) DEFAULT NULL,
-  `del_tag` char(1) DEFAULT NULL,
+  `del_tag` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`parameterid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=190 DEFAULT CHARSET=utf8;
 
