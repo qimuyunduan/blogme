@@ -79,7 +79,7 @@ function replyWithPageData(values,fields,reqBody){
 					tableData += "</tr>";
 				}
 
-				return {err: false, data: {tableData: tableData, totalCount: length},mes:''}
+				return {err: false, data: {tableData: tableData, totalCount: length}}
 			}
 
 		}

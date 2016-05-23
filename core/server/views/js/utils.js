@@ -146,14 +146,13 @@ function getKeysAndValues(formId) {
 }
 
 
-function defaultQueryControl(){
-	return {queryCon:{numPerPage:50,currentPage:0,containCheckbox:true,forSearch:true}};
+function defaultQueryControl() {
+	return {queryCon: {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: true}};
 }
 
-function changePageParams(pageNum,pageLimit){
-	return {queryCon:{numPerPage:pageLimit,currentPage:pageNum,containCheckbox:true,forSearch:true}};
+function changePageParams(pageNum, pageLimit) {
+	return {queryCon: {numPerPage: pageLimit, currentPage: pageNum, containCheckbox: true, forSearch: true}};
 }
-
 
 
 //获取去除空格后每个查询字段的值
@@ -178,7 +177,7 @@ function getFormValues(formID) {
 }
 
 // get table row data
-function getRowData(method,containCheckbox) {
+function getRowData(method, containCheckbox) {
 	var tr_s = $('#tbody :checked').parents('tr');
 	var data = [];
 	if (typeof(tr_s) == 'object') {
@@ -228,36 +227,46 @@ function getRowData(method,containCheckbox) {
 
 	}
 
-	return data.length ? data:0;
+	return data.length ? data : 0;
 }
 
-function initPass(url,trimIndex,containCheckbox){
 
-	var users = getRowData('delete',containCheckbox);
+function filterElements(data, filter) {
+	var result = [];
+	if (typeof(data) == 'object') {
+		var length = data.length;
+		var indexLength = filter.length;
 
-	if(users){
-		var length = users.length;
-		var indexLength = trimIndex.length;
-
-		for(var i = 0;i<length;i++){
+		for (var i = 0; i < length; i++) {
 			var temArr = [];
-			for(var j = 0;j<indexLength;j++){
-				temArr.push(users[i][trimIndex[j]]);
+			for (var j = 0; j < indexLength; j++) {
+				temArr.push(data[i][filter[j]]);
 			}
-			users[i]=temArr;
+			result[i] = temArr;
 		}
-		users = $.extend({data:users},defaultQueryControl());
+	}
+	return result;
+}
+
+function initPass(url, trimIndex, containCheckbox) {
+
+	var users = getRowData('delete', containCheckbox);
+
+	if (users) {
+		users = filterElements(users, trimIndex);
+		users = $.extend({data: users}, defaultQueryControl());
 		if (users) {
 			$.ajax({
 				type: 'post',
 				url: url,
-				data:users,
+				data: users,
 				async: false,
-				error:function(){
+				error: function () {
 					alertMsg.info('密码初始化失败...');
 				},
-				success:function(data){
-					if(!data.err){
+				success: function (data) {
+					alert(data.err);
+					if (!data.err) {
 						alertMsg.info('密码初始化成功...');
 					}
 				}
@@ -268,6 +277,54 @@ function initPass(url,trimIndex,containCheckbox){
 
 }
 
+
+function updateState(url, containCheckbox) {
+	var data = getRowData('delete', containCheckbox);
+	var states = filterElements(data, [4]);
+	var state = '';
+	var length = states.length;
+	if(length>1){
+		for (var i = 1; i < length; i++) {
+			if (states[0][0] != states[i][0]) {
+				alertMsg.info('状态值不一样,请重新选择...');
+				return false;
+			}
+		}
+	}
+	if (states[0][0] == '正常') {
+		state = "冻结"
+	} else {
+		state = "正常"
+	}
+	data = filterElements(data, [0]);
+
+	data = $.extend({data: data, state: state}, defaultQueryControl());
+
+	if (data) {
+		$.ajax({
+			type: 'post',
+			url: url,
+			data: data,
+			async: false,
+			error: function () {
+				alertMsg.info('更新用户状态失败...');
+			},
+			success: function (data) {
+				if (!data.err) {
+					if(state=='正常'){
+						alertMsg.info("解冻用户成功...");
+					}else {
+						alertMsg.info("冻结用户成功...");
+					}
+
+				}
+			}
+		})
+	}
+
+}
+
+
 function responseEnter() {
 	if (event.keyCode == 13) {
 		login();
@@ -275,11 +332,11 @@ function responseEnter() {
 }
 function search(url) {
 	if (event.keyCode == 13) {
-		sendRequest( url, 'get','pagerForm');
+		sendRequest(url, 'get', 'pagerForm');
 	}
 }
 
-function setPageContent(pageData){
+function setPageContent(pageData) {
 	$("#tbody").html(pageData.data.tableData);
 	$("#totalCount").html(pageData.data.totalCount);
 }
@@ -352,10 +409,10 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
+function sendRequest(url, method, formId, pageNum, pageLimit, containCheckbox) {
 
 
-	var data,Data;
+	var data, Data;
 
 	if (formId) {
 		Data = getFormValues(formId);
@@ -364,11 +421,11 @@ function sendRequest(url, method, formId, pageNum,pageLimit, containCheckbox) {
 		Data = getRowData(method, containCheckbox);
 	}
 
-	if(pageLimit||pageNum){
-		data = $.extend({Data:Data},changePageParams(pageNum,pageLimit));
+	if (pageLimit || pageNum) {
+		data = $.extend({Data: Data}, changePageParams(pageNum, pageLimit));
 	}
-	else{
-		data = $.extend({Data:Data},defaultQueryControl());
+	else {
+		data = $.extend({Data: Data}, defaultQueryControl());
 	}
 
 	if (Data) {
@@ -440,10 +497,10 @@ function sendChangeRecordRequest(url) {
 		$.ajax({
 			type: 'put',
 			url: url,
-			data: {data:data},
+			data: {data: data},
 			async: false
 		})
-	}else{
+	} else {
 		return false;
 	}
 }
@@ -494,7 +551,6 @@ function login() {
 
 	}
 }
-
 
 
 // request

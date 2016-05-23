@@ -906,12 +906,20 @@ routes = function apiRoutes() {
 			res.end();
 		})
 		.post(function (req, res) {
-			console.log(req.body);
-			var initPassObj = utils.checkUser.newUser();
+
+			var saveObj ;
+			if(req.body.state){
+				saveObj = {user_status:req.body.state};
+			}else{
+				saveObj = utils.checkUser.newUser();
+			}
 			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
-			var options = constructUpdateOptions(req.body,'idoUser',['id'],initPassObj,fetchFields);
-			console.log(options);
-			res.end();
+			var options = constructUpdateOptions(req.body,'idoUser',['id'],saveObj,fetchFields);
+
+			if(options){
+
+				controller.renewAttr(res,options);
+			}
 		});
 
 

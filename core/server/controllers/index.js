@@ -153,8 +153,28 @@ function updateRecord(res, options) {
 
 	})
 }
-function renewAttr(){
+function renewAttr(res,options){
+	var model = models[options.reqModel].model();
+	var count = 0;
+	var length = options.reqParams.length;
+	_.forEach(options.reqParams, function (value) {
+		model.forge(value).fetch()
+			.then(function (model) {
+				if (model) {
+					model.save(options.saveParams).then(function () {
+						count++;
+					}).catch(function (err) {
+						console.log(err);
+					});
 
+				}
+			})
+			.then(function () {
+				if (length == count) {
+					responseResult(res, options);
+				}
+			})
+	});
 }
 
 function deleteRecord(res, options) {
