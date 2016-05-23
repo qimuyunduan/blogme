@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/middleware/static-theme.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/controllers/index.js" afterPath="$PROJECT_DIR$/core/server/controllers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/middleware/index.js" afterPath="$PROJECT_DIR$/core/server/middleware/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" afterPath="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/utils.js" afterPath="$PROJECT_DIR$/core/server/views/js/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dwz4j_first.sql" afterPath="$PROJECT_DIR$/dwz4j_first.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeFuncTest.js" afterPath="$PROJECT_DIR$/nodeFuncTest.js" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57528406">
-              <caret line="188" column="47" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="368" column="41" selection-start-line="368" selection-start-column="41" selection-end-line="368" selection-end-column="41" />
               <folding>
                 <element signature="n#!!block;n#constructFetchParams#0" expanded="false" />
                 <element signature="n#!!block;n#constructPostParams#0" expanded="false" />
                 <element signature="n#!!block;n#constructPutParams#0" expanded="false" />
                 <element signature="n#!!block;n#constructDeleteParams#0" expanded="false" />
                 <element signature="n#!!block;n#consOptions#0" expanded="false" />
-                <element signature="e#20569#20971#0" expanded="false" />
-                <element signature="e#21042#21380#0" expanded="false" />
+                <element signature="e#20674#21076#0" expanded="false" />
+                <element signature="e#21147#21485#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,9 +49,10 @@
         <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="71" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
               <folding>
                 <element signature="n#!!block;n#responseResult#0" expanded="false" />
+                <element signature="n#!!block;n#getRecord#0" expanded="false" />
                 <element signature="n#!!block;n#updateRecord#0" expanded="false" />
                 <element signature="n#!!block;n#renewAttr#0" expanded="false" />
                 <element signature="n#!!block;n#deleteRecord#0" expanded="false" />
@@ -69,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -91,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/core/server/views/js/utils.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="579" column="7" selection-start-line="579" selection-start-column="7" selection-end-line="579" selection-end-column="7" />
+              <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#trimLeftRight#0" expanded="false" />
                 <element signature="n#!!block;n#checkTrim#0" expanded="false" />
@@ -103,11 +100,26 @@
                 <element signature="n#!!block;n#getFormValues#0" expanded="false" />
                 <element signature="n#!!block;n#getRowData#0" expanded="false" />
                 <element signature="e#3628#3783#0" expanded="false" />
+                <element signature="n#!!block;n#responseEnter#0" expanded="false" />
+                <element signature="n#!!block;n#search#0" expanded="false" />
+                <element signature="n#!!block;n#getCookieValue#0" expanded="false" />
                 <element signature="n#!!block;n#changePwd#0" expanded="false" />
                 <element signature="n#!!block;n#sendChangeRecordRequest#0" expanded="false" />
                 <element signature="n#!!block;n#fillUserName#0" expanded="false" />
+                <element signature="n#!!block;n#setMessage#0" expanded="false" />
                 <element signature="n#!!block;n#login#0" expanded="false" />
+                <element signature="n#!!block;n#logout#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bbm_updateAssureUnit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_updateAssureUnit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.055555">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,8 +127,8 @@
       <file leaf-file-name="bbm_assureUnit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.5">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -132,21 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbm_addSysUser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addSysUser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bbm_sysUser.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bbm_sysUser.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.28293413">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -227,13 +229,13 @@
         <option value="$PROJECT_DIR$/core/server/views/bbm_shopGroup.html" />
         <option value="$PROJECT_DIR$/core/server/utils/userPassService.js" />
         <option value="$PROJECT_DIR$/core/server/controllers/sendResponse.js" />
-        <option value="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
         <option value="$PROJECT_DIR$/nodeFuncTest.js" />
         <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
-        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
         <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
         <option value="$PROJECT_DIR$/core/server/views/js/utils.js" />
+        <option value="$PROJECT_DIR$/core/server/middleware/index.js" />
         <option value="$PROJECT_DIR$/core/server/routes/api.js" />
+        <option value="$PROJECT_DIR$/core/server/views/bbm_sysUser.html" />
       </list>
     </option>
   </component>
@@ -486,12 +488,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00106" summary="change views">
-      <created>1462369912509</created>
-      <option name="number" value="00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1462369912509</updated>
     </task>
     <task id="LOCAL-00107" summary="change views">
       <created>1462434586448</created>
@@ -781,7 +777,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463981294717</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary=" change structure">
+      <created>1464005505101</created>
+      <option name="number" value="00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1464005505101</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -887,20 +889,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/server/views/bc_yiliaofare.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bm_currentMonth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.882353">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bm_historyBill.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.970589">
@@ -1154,26 +1142,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_updateAssureUnit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addSysUser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1202,64 +1174,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.0">
           <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="71" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
-          <folding>
-            <element signature="n#!!block;n#responseResult#0" expanded="false" />
-            <element signature="n#!!block;n#updateRecord#0" expanded="false" />
-            <element signature="n#!!block;n#renewAttr#0" expanded="false" />
-            <element signature="n#!!block;n#deleteRecord#0" expanded="false" />
-            <element signature="n#!!block;n#createRecord#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="579" column="7" selection-start-line="579" selection-start-column="7" selection-end-line="579" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!block;n#trimLeftRight#0" expanded="false" />
-            <element signature="n#!!block;n#checkTrim#0" expanded="false" />
-            <element signature="n#!!block;n#checkLength#0" expanded="false" />
-            <element signature="n#!!block;n#mergeToObject#0" expanded="false" />
-            <element signature="n#!!block;n#isContainSpecialChar#0" expanded="false" />
-            <element signature="n#!!block;n#antiSQL#0" expanded="false" />
-            <element signature="n#!!block;n#getKeysAndValues#0" expanded="false" />
-            <element signature="n#!!block;n#getFormValues#0" expanded="false" />
-            <element signature="n#!!block;n#getRowData#0" expanded="false" />
-            <element signature="e#3628#3783#0" expanded="false" />
-            <element signature="n#!!block;n#changePwd#0" expanded="false" />
-            <element signature="n#!!block;n#sendChangeRecordRequest#0" expanded="false" />
-            <element signature="n#!!block;n#fillUserName#0" expanded="false" />
-            <element signature="n#!!block;n#login#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1273,19 +1192,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/middleware/is-admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/middleware/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57528406">
-          <caret line="188" column="47" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="368" column="41" selection-start-line="368" selection-start-column="41" selection-end-line="368" selection-end-column="41" />
           <folding>
             <element signature="n#!!block;n#constructFetchParams#0" expanded="false" />
             <element signature="n#!!block;n#constructPostParams#0" expanded="false" />
             <element signature="n#!!block;n#constructPutParams#0" expanded="false" />
             <element signature="n#!!block;n#constructDeleteParams#0" expanded="false" />
             <element signature="n#!!block;n#consOptions#0" expanded="false" />
-            <element signature="e#20569#20971#0" expanded="false" />
-            <element signature="e#21042#21380#0" expanded="false" />
+            <element signature="e#20674#21076#0" expanded="false" />
+            <element signature="e#21147#21485#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/controllers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!block;n#responseResult#0" expanded="false" />
+            <element signature="n#!!block;n#getRecord#0" expanded="false" />
+            <element signature="n#!!block;n#updateRecord#0" expanded="false" />
+            <element signature="n#!!block;n#renewAttr#0" expanded="false" />
+            <element signature="n#!!block;n#deleteRecord#0" expanded="false" />
+            <element signature="n#!!block;n#createRecord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_updateAssureUnit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.055555">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#trimLeftRight#0" expanded="false" />
+            <element signature="n#!!block;n#checkTrim#0" expanded="false" />
+            <element signature="n#!!block;n#checkLength#0" expanded="false" />
+            <element signature="n#!!block;n#mergeToObject#0" expanded="false" />
+            <element signature="n#!!block;n#isContainSpecialChar#0" expanded="false" />
+            <element signature="n#!!block;n#antiSQL#0" expanded="false" />
+            <element signature="n#!!block;n#getKeysAndValues#0" expanded="false" />
+            <element signature="n#!!block;n#getFormValues#0" expanded="false" />
+            <element signature="n#!!block;n#getRowData#0" expanded="false" />
+            <element signature="e#3628#3783#0" expanded="false" />
+            <element signature="n#!!block;n#responseEnter#0" expanded="false" />
+            <element signature="n#!!block;n#search#0" expanded="false" />
+            <element signature="n#!!block;n#getCookieValue#0" expanded="false" />
+            <element signature="n#!!block;n#changePwd#0" expanded="false" />
+            <element signature="n#!!block;n#sendChangeRecordRequest#0" expanded="false" />
+            <element signature="n#!!block;n#fillUserName#0" expanded="false" />
+            <element signature="n#!!block;n#setMessage#0" expanded="false" />
+            <element signature="n#!!block;n#login#0" expanded="false" />
+            <element signature="n#!!block;n#logout#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_assureUnit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/bbm_sysUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28293413">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

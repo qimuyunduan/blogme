@@ -571,7 +571,7 @@ function login() {
 function logout(){
 	$.ajax({
 		type: 'post',
-		url:"authorized.html",
+		url:"authorized",
 		data:{info:'logout'},
 		async: false,
 		error: function() {

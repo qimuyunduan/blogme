@@ -184,10 +184,10 @@ routes = function apiRoutes() {
 			}
 
 		})
-		.post(function(){
+		.post(function(req,res){
 			if(req.body.info=='logout'){
-				console.log('destroy session...');
 				req.session.destroy();
+				res.end();
 			}
 		});
 
@@ -362,7 +362,12 @@ routes = function apiRoutes() {
 					ID: changeRecord[0],
 					number: changeRecord[1],
 					insureUnit: changeRecord[2],
-					contactPerson: changeRecord[3]
+					contactPerson: changeRecord[3],
+					phoneNumber:changeRecord[4],
+					email:changeRecord[5],
+					address:changeRecord[7],
+					detail:changeRecord[8]
+
 				});
 				changeRecord = [];
 			} else {
