@@ -5,6 +5,7 @@ var _ = require('lodash'),
 	api = require('../api'),
 	utils = require('../utils'),
 	config = require('../config'),
+	middleware = require('../middleware'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
@@ -1218,7 +1219,13 @@ routes = function apiRoutes() {
 		});
 
 	//// ## Uploads
-	//router.post('/uploads',  middleware.busboy, api.http(api.uploads.add));
+	router.route('/uploads')
+		.post(function(req,res){
+			console.log('uploaded');
+			console.log(req.files);
+			//api.http(api.uploads.add);
+			res.end();
+		});
 
 	// API Router middleware
 

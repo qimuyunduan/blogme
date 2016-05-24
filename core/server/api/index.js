@@ -2,7 +2,6 @@
 var _              = require('lodash'),
     config         = require('../config'),
     mail           = require('./mail'),
-    posts          = require('./posts'),
     settings       = require('./settings'),
     authentication = require('./authentication'),
     uploads        = require('./upload'),
@@ -195,7 +194,6 @@ module.exports = {
     http: http,
     // API Endpoints
     mail: mail,
-    posts: posts,
     settings: settings,
     authentication: authentication,
     uploads: uploads

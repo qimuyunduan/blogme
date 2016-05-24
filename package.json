@@ -38,6 +38,7 @@
     "lodash": "3.10.1",
     "moment": "2.11.2",
     "morgan": "1.6.1",
+    "multer": "^1.1.0",
     "mysql": "2.1.1",
     "node-uuid": "1.4.7",
     "nodemailer": "0.7.1",

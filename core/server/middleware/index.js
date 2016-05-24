@@ -7,6 +7,7 @@ var bodyParser       = require('body-parser'),
     routes           = require('../routes'),
     utils            = require('../utils'),
     busboy           = require('./busboy'),
+	multer           = require ('multer'),
     cacheControl     = require('./cache-control'),
 	uuid             = require('node-uuid'),
     privateBlogging  = require('./private-blogging'),
@@ -73,7 +74,10 @@ setupMiddleware  = function setupMiddleware(App) {
     //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     //App.use(privateBlogging.filterPrivateRoutes);
 
-    //App.use(uncapitalise);
+    //App.use(uncapitalise)
+
+	// the middleware for process fileUpload
+	App.use(multer({ dest: config.paths.dataPath}));
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));
@@ -99,6 +103,8 @@ setupMiddleware  = function setupMiddleware(App) {
 		//设置 sessionCookie时间,过了这个时间,sessionCookie被浏览器自动清除,刷新页面会重新登录
 		//若不设置这一项 sessionCookie的过期时间为浏览器默认关闭时间
 	}));
+
+
 
     // ### Routing
     // Set up API routes
