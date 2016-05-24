@@ -1,14 +1,26 @@
 // # API routes
 
-var _ = require('lodash'),
-	express = require('express'),
-	api = require('../api'),
-	utils = require('../utils'),
-	config = require('../config'),
+var _        = require('lodash'),
+	express  = require('express'),
+	api      = require('../api'),
+	utils    = require('../utils'),
+	config   = require('../config'),
+    multer   = require('multer'),
 	middleware = require('../middleware'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
+var storage = multer.diskStorage({
+	destination: function (req, file, cb){
+		cb(null, config.paths.dataPath)
+	},
+	filename: function (req, file, cb){
+		cb(null, file.originalname)
+	}
+});
+var upload = multer({
+	storage: storage
+});
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
@@ -187,6 +199,7 @@ routes = function apiRoutes() {
 
 		})
 		.post(function(req,res){
+
 			if(req.body.info=='logout'){
 				req.session.destroy();
 				res.end();
@@ -1218,17 +1231,12 @@ routes = function apiRoutes() {
 
 		});
 
-	//// ## Uploads
-	router.route('/uploads')
-		.post(function(req,res){
-			console.log('uploaded');
-			console.log(req.files);
-			//api.http(api.uploads.add);
+	// ## Uploads
+	router.post('/uploads',upload.single('uploadFileName'),function(req,res){
 			res.end();
 		});
 
 	// API Router middleware
-
 
 	return router;
 };

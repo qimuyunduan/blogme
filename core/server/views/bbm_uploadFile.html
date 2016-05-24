@@ -1,5 +1,5 @@
 <div class="pageContent">
-    <form id="uploadFile">
+    <form method="post"  action="/uploads" enctype="multipart/form-data">
         <div class="pageFormContent" layoutH="58">
 
             <div class="unit">
@@ -13,7 +13,7 @@
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <button type="button" onclick="startUpload('uploadFile','uploadFileName')">确定</button>
+                            <input type="submit" onclick="alertMsg.info('上传成功...')">
                         </div>
                     </div>
                 </li>

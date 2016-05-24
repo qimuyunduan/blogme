@@ -582,35 +582,7 @@ function logout(){
 		}
 	});
 }
-function startUpload(formID,fileID){
 
-	//var data = getFormValues(formID);
-	var data = {'uploadTime':'','uploadPerson':'','fileName':''};
-
-	$.ajaxFileUpload
-	(
-		{
-			url: 'uploads', //用于文件上传的服务器端请求地址
-			secureuri: false, //是否需要安全协议，一般设置为false
-			fileElementId: fileID, //文件上传域的ID
-			dataType: 'json', //返回值类型 一般设置为json
-			data:data,
-			type:'post',
-			success: function (data)  //服务器成功响应处理函数
-			{
-				if(!data.err){
-					alertMsg.info("上传成功...");
-				}else{
-					alertMsg.info("上传失败...");
-				}
-			},
-			error: function ()//服务器响应失败处理函数
-			{
-				alertMsg.info("sorry!连接服务器失败...");
-			}
-		}
-	);
-}
 // request
 //$.ajax({
 //	type: "POST”,//PUT GET DELETE

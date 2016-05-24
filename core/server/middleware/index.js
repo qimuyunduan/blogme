@@ -7,7 +7,6 @@ var bodyParser       = require('body-parser'),
     routes           = require('../routes'),
     utils            = require('../utils'),
     busboy           = require('./busboy'),
-	multer           = require ('multer'),
     cacheControl     = require('./cache-control'),
 	uuid             = require('node-uuid'),
     privateBlogging  = require('./private-blogging'),
@@ -50,6 +49,7 @@ setupMiddleware  = function setupMiddleware(App) {
         }
     }
 
+
     // Favicon
     App.use(serveSharedFile('favicon.ico', 'image/x-icon', utils.ONE_DAY_S));
 
@@ -76,8 +76,7 @@ setupMiddleware  = function setupMiddleware(App) {
 
     //App.use(uncapitalise)
 
-	// the middleware for process fileUpload
-	App.use(multer({ dest: config.paths.dataPath}));
+
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));
