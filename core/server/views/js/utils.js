@@ -146,12 +146,14 @@ function getKeysAndValues(formId) {
 }
 
 
-function defaultQueryControl() {
-	return {queryCon: {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: true}};
+function defaultQueryControl(tbodyID) {
+	if(tbodyID.length){
+		return {queryCon: {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: true,contentID:tbodyID }};
+	}
 }
 
-function changePageParams(pageNum, pageLimit) {
-	return {queryCon: {numPerPage: pageLimit, currentPage: pageNum, containCheckbox: true, forSearch: true}};
+function changePageParams(contentID,pageNum, pageLimit) {
+	return {queryCon: {contentID:contentID,numPerPage: pageLimit, currentPage: pageNum, containCheckbox: true, forSearch: true}};
 }
 
 
@@ -177,8 +179,8 @@ function getFormValues(formID) {
 }
 
 // get table row data
-function getRowData(method, containCheckbox) {
-	var tr_s = $('#tbody :checked').parents('tr');
+function getRowData(contentID,method, containCheckbox) {
+	var tr_s = $('#'+contentID+' :checked').parents('tr');
 	var data = [];
 	if (typeof(tr_s) == 'object') {
 
@@ -248,9 +250,9 @@ function filterElements(data, filter) {
 	return result;
 }
 
-function initPass(url, trimIndex, containCheckbox) {
+function initPass(contentID,url, trimIndex, containCheckbox) {
 
-	var users = getRowData('delete', containCheckbox);
+	var users = getRowData(contentID,'delete', containCheckbox);
 
 	if (users) {
 		users = filterElements(users, trimIndex);
@@ -277,8 +279,8 @@ function initPass(url, trimIndex, containCheckbox) {
 }
 
 
-function updateState(url,isFrozen, containCheckbox) {
-	var data = getRowData('delete', containCheckbox);
+function updateState(contentID,url,isFrozen, containCheckbox) {
+	var data = getRowData(contentID,'delete', containCheckbox);
 	var states = filterElements(data, [4]);
 	var state = '';
 	var length = states.length;
@@ -345,6 +347,7 @@ function responseEnter() {
 		login();
 	}
 }
+
 function search(url) {
 	if (event.keyCode == 13) {
 		sendRequest(url, 'get', 'pagerForm');
@@ -352,7 +355,8 @@ function search(url) {
 }
 
 function setPageContent(pageData) {
-	$("#tbody").html(pageData.data.tableData);
+	alert(pageData.contentID);
+	$("#"+pageData.contentID).html(pageData.data.tableData);
 	$("#totalCount").html(pageData.data.totalCount);
 }
 function getCookieValue(name) {
@@ -424,7 +428,7 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(url, method, formId, pageNum, pageLimit, containCheckbox) {
+function sendRequest(url, method,contentID,formId,pageNum, pageLimit, containCheckbox) {
 
 
 	var data, Data;
@@ -433,14 +437,14 @@ function sendRequest(url, method, formId, pageNum, pageLimit, containCheckbox) {
 		Data = getFormValues(formId);
 	}
 	else {
-		Data = getRowData(method, containCheckbox);
+		Data = getRowData(contentID,method, containCheckbox);
 	}
 
 	if (pageLimit || pageNum) {
-		data = $.extend({Data: Data}, changePageParams(pageNum, pageLimit));
+		data = $.extend({Data: Data}, changePageParams(contentID,pageNum, pageLimit));
 	}
 	else {
-		data = $.extend({Data: Data}, defaultQueryControl());
+		data = $.extend({Data: Data}, defaultQueryControl(contentID));
 	}
 
 	if (Data) {
@@ -506,8 +510,8 @@ function sendRequest(url, method, formId, pageNum, pageLimit, containCheckbox) {
 
 }
 
-function sendChangeRecordRequest(url) {
-	var data = getRowData('put');
+function sendChangeRecordRequest(contentID,url) {
+	var data = getRowData(contentID,'put');
 	if (data) {
 		$.ajax({
 			type: 'put',

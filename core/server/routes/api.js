@@ -136,12 +136,13 @@ function responseHomePage(req, res) {
 	res.render("index", data);
 }
 
-function setDefaultPageReqParas(containCheckbox) {
+function setDefaultPageReqParas(contendID,containCheckbox) {
+
 	if (containCheckbox) {
-		return {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: false};
+		return {contentID:contendID,numPerPage: 50, currentPage: 0, containCheckbox: false, forSearch: false};
 	}
 	else {
-		return {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: false};
+		return {contentID:contendID,numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: false};
 	}
 
 }
@@ -306,9 +307,9 @@ routes = function apiRoutes() {
 			var fetchFields = ['id', 'unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'del_tag', 'unit_address', 'unit_remark'];
 			if (_.keys(req.query).length == 1) {
 
-				var DefaultPageReqParas = setDefaultPageReqParas();
+				var DefaultPageReqParas = setDefaultPageReqParas('bbm_assureUnitTbody');
 				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "insuredUnit", fetchFields, 'bbm_assureUnit');
-				//console.log(queryOptions);
+				console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
 					controller.fetch(req, res, queryOptions);
 				}
@@ -326,6 +327,7 @@ routes = function apiRoutes() {
 			var fetchFields = fields.concat(['id']);
 			var options = consOptions(constructPostParams(req.body, fields), "insuredUnit", fetchFields);
 			if (!_.isEmpty(options)) {
+				console.log(options);
 				controller.create(res, options);
 			}
 
@@ -347,7 +349,7 @@ routes = function apiRoutes() {
 			var params = utils.filters.filterArrays(req.body.Data, [0], ['id']);
 			var fetchFields = ['id', 'unit_code', 'unit_name', 'contact_name', 'contact_mobile', 'contact_email', 'unit_parent_id', 'del_tag', 'unit_address'];
 			var options = consOptions(constructDeleteParams(params, req.body.queryCon), "insuredUnit", fetchFields);
-			//console.log(options);
+			console.log(options);
 			if (!_.isEmpty(options)) {
 				controller.del(res, options);
 			}
@@ -842,9 +844,9 @@ routes = function apiRoutes() {
 			var fetchFields = ['id', 'user_name', 'user_type', 'user_unit', 'user_status', 'user_phone', 'user_email', 'user_address'];
 			if (_.keys(req.query).length == 1) {
 
-				var DefaultPageReqParas = setDefaultPageReqParas();
+				var DefaultPageReqParas = setDefaultPageReqParas('bbm_sysUserTbody');
 				var queryOptions = consOptions(constructFetchParams(DefaultPageReqParas, [], []), "idoUser", fetchFields, 'bbm_sysUser');
-				//console.log(queryOptions);
+				console.log(queryOptions);
 				if (!_.isEmpty(queryOptions)) {
 					controller.fetch(req, res, queryOptions);
 				}
@@ -865,7 +867,7 @@ routes = function apiRoutes() {
 			_.assign(options.reqParams, utils.checkUser.newUser());
 
 			if (!_.isEmpty(options)) {
-
+				console.log(options);
 				controller.create(res, options);
 
 			}
