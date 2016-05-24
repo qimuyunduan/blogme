@@ -14,19 +14,26 @@ var _ = require('lodash');
 // filter array values
 //eg: filter:[1,2,4] will get (data[1],data[2],data[4])
 function filterArray(data, filters) {
-	var values = [];
 
 	if (_.isArray(data) && _.isArray(filters)) {
 		var countData = data.length;
 		var countFilter = filters.length;
-		if (countData >= countFilter) {
+		if (countData >= countFilter && countData > _.max(filters)) {
 			filters.sort();
-			for (var i = 0; i < countFilter; i++) {
-				if (filters[i] < countData) {
-					values.push(data[filters[i]]);
-				}
-			}
-			return values;
+			return _.pullAt(data,filters);
+		}
+	}
+	return false;
+}
+
+function shuffleArray(data,deleteIndexs){
+
+	if (_.isArray(data) && _.isArray(deleteIndexs)) {
+		var countData = data.length;
+		var countFilter = deleteIndexs.length;
+		if (countData >= countFilter && countData > _.max(deleteIndexs)) {
+			_.pullAt(data,deleteIndexs);
+			return data;
 		}
 	}
 	return false;
@@ -82,5 +89,6 @@ module.exports = {
 	filterArray: filterArray,
 	filterArrays: filterArrays,
 	filterObject: filterObject,
-	compactObj: compactObj
+	compactObj: compactObj,
+	shuffleArray:shuffleArray
 };

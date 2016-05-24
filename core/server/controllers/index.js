@@ -17,6 +17,7 @@ function responseResult(res, options) {
 			if (collection) {
 
 				var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields, options.queryCon);
+				console.log(pageData);
 				res.json(pageData);
 			} else {
 				res.json({err: true});
@@ -51,8 +52,9 @@ function getRecord(req, res, options) {
 										if (!req.cookies.loginUserName||(req.cookies.loginUserName!=req.body.userName)) {
 											// set cookie
 											res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
-
+											console.log(req.cookies);
 										}
+
 									}else {
 										if(req.cookies.loginUserName){
 											//delete cookie
@@ -61,6 +63,7 @@ function getRecord(req, res, options) {
 									}
 									// set session
 									req.session.userStatus = 'logined';
+
 									res.send(JSON.stringify({err:false,message:''}));
 								}
 

@@ -256,7 +256,7 @@ function initPass(contentID,url, trimIndex, containCheckbox) {
 
 	if (users) {
 		users = filterElements(users, trimIndex);
-		users = $.extend({data: users}, defaultQueryControl());
+		users = $.extend({data: users}, defaultQueryControl(contentID));
 		if (users) {
 			$.ajax({
 				type: 'post',
@@ -311,7 +311,7 @@ function updateState(contentID,url,isFrozen, containCheckbox) {
 	}
 	data = filterElements(data, [0]);
 
-	data = $.extend({data: data, state: state}, defaultQueryControl());
+	data = $.extend({data: data, state: state}, defaultQueryControl(contentID));
 
 	if (data) {
 		$.ajax({
@@ -330,7 +330,7 @@ function updateState(contentID,url,isFrozen, containCheckbox) {
 						setPageContent(data);
 
 					}else {
-						alertMsg.info("冻结用户成功...")
+						alertMsg.info("冻结用户成功...");
 						setPageContent(data);
 					}
 
@@ -348,14 +348,13 @@ function responseEnter() {
 	}
 }
 
-function search(url) {
+function search(contentID,url) {
 	if (event.keyCode == 13) {
-		sendRequest(url, 'get', 'pagerForm');
+		sendRequest(url, 'get', contentID,'pagerForm');
 	}
 }
 
 function setPageContent(pageData) {
-	alert(pageData.contentID);
 	$("#"+pageData.contentID).html(pageData.data.tableData);
 	$("#totalCount").html(pageData.data.totalCount);
 }
