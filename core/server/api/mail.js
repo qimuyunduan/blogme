@@ -86,63 +86,6 @@ mail = {
         return pipeline(tasks, options || {});
     },
 
-    /**
-     * ### SendTest
-     * Send a test email
-     *
-     * @public
-     * @param {Object} options required property 'to' which contains the recipient address
-     * @returns {Promise}
-     */
-    sendTest: function (options) {
-        var tasks;
-
-        /**
-         * ### Model Query
-         */
-
-        function modelQuery() {
-            return Models.User.findOne({id: options.context.user});
-        }
-
-        /**
-         * ### Generate content
-         */
-
-        function generateContent(result) {
-            return mail.generateContent({template: 'test'}).then(function (content) {
-                var payload = {
-                    mail: [{
-                        message: {
-                            to: result.get('email'),
-                            subject: 'common.api.mail.testGhostEmail',
-                            html: content.html,
-                            text: content.text
-                        }
-                    }]
-                };
-
-                return payload;
-            });
-        }
-
-        /**
-         * ### Send mail
-         */
-
-        function send(payload) {
-            return sendMail(payload, options);
-        }
-
-        tasks = [
-            modelQuery,
-            generateContent,
-            send
-        ];
-
-        return pipeline(tasks);
-    },
-
     generateContent: function (options) {
         var defaults,
             data;

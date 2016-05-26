@@ -583,6 +583,23 @@ function logout(){
 	});
 }
 
+function startUpload(id,url){
+	var uploadUrl ;
+	if(url){
+		uploadUrl = url;
+	}
+	else{
+		uploadUrl = '/uploads';
+	}
+	$("#"+id).uploadFile({
+		url:uploadUrl,
+		onSuccess:function()
+		{
+			alertMsg.info('上传成功...');
+		}
+
+	});
+}
 // request
 //$.ajax({
 //	type: "POST”,//PUT GET DELETE
