@@ -1,19 +1,14 @@
 <div class="pageContent">
-    <form method="post"  action="/uploads" enctype="multipart/form-data">
+    <form>
         <div class="pageFormContent" layoutH="58">
-
-            <div class="unit">
-                <label for ="uploadFileName">选择文件:</label>
-                <input id ="uploadFileName" type="file" name="uploadFileName"/>
-            </div>
-
+            <div class="unit" id="upload"></div>
         </div>
         <div class="formBar">
             <ul>
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">
-                            <input type="submit">
+                            <input type="button" value="确定" id="startUpload">
                         </div>
                     </div>
                 </li>
@@ -28,3 +23,43 @@
         </div>
     </form>
 </div>
+<script>
+    $(document).ready(function () {
+        var fileObj = $("#upload").uploadFile({
+            url: "/uploads",
+            fileName: "myFile",
+            dragDrop: true,
+            autoSubmit: false,
+            showDelete: true,
+            showCancel: true,
+            showProgress:true,
+            multiple:false,
+            onSuccess: function (files) {
+                alertMsg.info("文件"+JSON.stringify(files)+"上传成功...");
+            },
+            onError: function(files)
+            {
+                alertMsg.info("文件"+JSON.stringify(files)+"上传失败...")
+            },
+            deleteCallback: function(data,pd)
+            {
+                for(var i=0;i<data.length;i++)
+                {
+                    $.post("deleteUploads",{op:"delete",name:data[i]},
+                            function()
+                            {
+                                alertMsg.info("文件删除成功...");
+                            });
+                }
+                pd.statusbar.hide();
+
+            }
+        });
+        $("#startUpload").click(function () {
+
+            fileObj.startUpload();
+        });
+
+    });
+
+</script>

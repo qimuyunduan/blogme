@@ -147,13 +147,21 @@ function getKeysAndValues(formId) {
 
 
 function defaultQueryControl(tbodyID) {
-	if(tbodyID.length){
-		return {queryCon: {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: true,contentID:tbodyID }};
+	if (tbodyID.length) {
+		return {queryCon: {numPerPage: 50, currentPage: 0, containCheckbox: true, forSearch: true, contentID: tbodyID}};
 	}
 }
 
-function changePageParams(contentID,pageNum, pageLimit) {
-	return {queryCon: {contentID:contentID,numPerPage: pageLimit, currentPage: pageNum, containCheckbox: true, forSearch: true}};
+function changePageParams(contentID, pageNum, pageLimit) {
+	return {
+		queryCon: {
+			contentID: contentID,
+			numPerPage: pageLimit,
+			currentPage: pageNum,
+			containCheckbox: true,
+			forSearch: true
+		}
+	};
 }
 
 
@@ -179,8 +187,8 @@ function getFormValues(formID) {
 }
 
 // get table row data
-function getRowData(contentID,method, containCheckbox) {
-	var tr_s = $('#'+contentID+' :checked').parents('tr');
+function getRowData(contentID, method, containCheckbox) {
+	var tr_s = $('#' + contentID + ' :checked').parents('tr');
 	var data = [];
 	if (typeof(tr_s) == 'object') {
 
@@ -250,9 +258,9 @@ function filterElements(data, filter) {
 	return result;
 }
 
-function initPass(contentID,url, trimIndex, containCheckbox) {
+function initPass(contentID, url, trimIndex, containCheckbox) {
 
-	var users = getRowData(contentID,'delete', containCheckbox);
+	var users = getRowData(contentID, 'delete', containCheckbox);
 
 	if (users) {
 		users = filterElements(users, trimIndex);
@@ -279,12 +287,12 @@ function initPass(contentID,url, trimIndex, containCheckbox) {
 }
 
 
-function updateState(contentID,url,isFrozen, containCheckbox) {
-	var data = getRowData(contentID,'delete', containCheckbox);
+function updateState(contentID, url, isFrozen, containCheckbox) {
+	var data = getRowData(contentID, 'delete', containCheckbox);
 	var states = filterElements(data, [4]);
 	var state = '';
 	var length = states.length;
-	if(length>1){
+	if (length > 1) {
 		for (var i = 1; i < length; i++) {
 			if (states[0][0] != states[i][0]) {
 				alertMsg.info('状态值不一样,请重新选择...');
@@ -293,18 +301,18 @@ function updateState(contentID,url,isFrozen, containCheckbox) {
 		}
 	}
 	if (states[0][0] == '正常') {
-		if(isFrozen){
+		if (isFrozen) {
 			state = "冻结"
-		}else{
+		} else {
 			alertMsg.info('该用户已经处于正常状态,不能解冻...');
 			return;
 		}
 
 	} else {
-		if(isFrozen){
+		if (isFrozen) {
 			alertMsg.info('该用户已经处于冻结状态...');
 			return;
-		}else{
+		} else {
 			state = "正常"
 		}
 
@@ -325,11 +333,11 @@ function updateState(contentID,url,isFrozen, containCheckbox) {
 			success: function (data) {
 				if (!data.err) {
 
-					if(state=='正常'){
+					if (state == '正常') {
 						alertMsg.info("解冻用户成功...");
 						setPageContent(data);
 
-					}else {
+					} else {
 						alertMsg.info("冻结用户成功...");
 						setPageContent(data);
 					}
@@ -348,14 +356,14 @@ function responseEnter() {
 	}
 }
 
-function search(contentID,url) {
+function search(contentID, url) {
 	if (event.keyCode == 13) {
-		sendRequest(url, 'get', contentID,'pagerForm');
+		sendRequest(url, 'get', contentID, 'pagerForm');
 	}
 }
 
 function setPageContent(pageData) {
-	$("#"+pageData.contentID).html(pageData.data.tableData);
+	$("#" + pageData.contentID).html(pageData.data.tableData);
 	$("#totalCount").html(pageData.data.totalCount);
 }
 function getCookieValue(name) {
@@ -427,7 +435,7 @@ function changePwd(formID, url, method) {
 
 //send request
 
-function sendRequest(url, method,contentID,formId,pageNum, pageLimit, containCheckbox) {
+function sendRequest(url, method, contentID, formId, pageNum, pageLimit, containCheckbox) {
 
 
 	var data, Data;
@@ -436,11 +444,11 @@ function sendRequest(url, method,contentID,formId,pageNum, pageLimit, containChe
 		Data = getFormValues(formId);
 	}
 	else {
-		Data = getRowData(contentID,method, containCheckbox);
+		Data = getRowData(contentID, method, containCheckbox);
 	}
 
 	if (pageLimit || pageNum) {
-		data = $.extend({Data: Data}, changePageParams(contentID,pageNum, pageLimit));
+		data = $.extend({Data: Data}, changePageParams(contentID, pageNum, pageLimit));
 	}
 	else {
 		data = $.extend({Data: Data}, defaultQueryControl(contentID));
@@ -509,8 +517,8 @@ function sendRequest(url, method,contentID,formId,pageNum, pageLimit, containChe
 
 }
 
-function sendChangeRecordRequest(contentID,url) {
-	var data = getRowData(contentID,'put');
+function sendChangeRecordRequest(contentID, url) {
+	var data = getRowData(contentID, 'put');
 	if (data) {
 		$.ajax({
 			type: 'put',
@@ -550,7 +558,7 @@ function login() {
 					url: "index",
 					data: queryObject,
 					async: false,
-					dataType:'json',
+					dataType: 'json',
 					error: function () {
 						alert("sorry!链接服务器失败......");
 					},
@@ -571,48 +579,66 @@ function login() {
 	}
 }
 
-function logout(){
+function logout() {
 	$.ajax({
 		type: 'post',
-		url:"authorized",
-		data:{info:'logout'},
-		async: false,
-		error: function() {
+		url: "authorized",
+		data: {info: 'logout'},
+		async: false,
+		error: function () {
 			alertMsg.info("连接错误...");
 		}
 	});
 }
 
-function startUpload(id,url){
-	var uploadUrl ;
-	if(url){
-		uploadUrl = url;
-	}
-	else{
-		uploadUrl = '/uploads';
-	}
-	$("#"+id).uploadFile({
-		url:uploadUrl,
-		onSuccess:function()
-		{
-			alertMsg.info('上传成功...');
-		}
-
-	});
-}
-// request
-//$.ajax({
-//	type: "POST”,//PUT GET DELETE
-//	url:ajaxCallUrl,
-//	data:$('#yourformid').serialize(),// 你的formid
-//	async: false,
-//	error: function(request) {
-//		alert("Connection error");
-//	},
-//	success: function(data) {
-//		$("#commonLayout_appcreshi").parent().html(data);
-//	}
-//});
+//function initUpload(id, multiple) {
+//	var multipleEnabled = multiple ? true : false;
+//
+//	$("#" + id).uploadFile({
+//		url: "/uploads",
+//		fileName: "myFile",
+//		dragDrop: true,
+//		autoSubmit: false,
+//		showDelete: true,
+//		showCancel: true,
+//		showProgress: true,
+//		multiple: multipleEnabled,
+//		onSuccess: function (files) {
+//			alertMsg.info("文件" + JSON.stringify(files) + "上传成功...");
+//		},
+//		onError: function (files) {
+//			alertMsg.info("文件" + JSON.stringify(files) + "上传失败...")
+//		},
+//		deleteCallback: function (data, pd) {
+//			for (var i = 0; i < data.length; i++) {
+//				$.post("deleteUploads", {op: "delete", name: data[i]},
+//					function () {
+//						alertMsg.info("文件删除成功...");
+//					});
+//			}
+//			pd.statusbar.hide();
+//
+//		}
+//	});
+//}
+//
+////function startUpload(){
+////	var uploader = initUpload();
+////	uploader.startUpload();
+////}
+//// request
+////$.ajax({
+////	type: "POST”,//PUT GET DELETE
+////	url:ajaxCallUrl,
+////	data:$('#yourformid').serialize(),// 你的formid
+////	async: false,
+////	error: function(request) {
+////		alert("Connection error");
+////	},
+////	success: function(data) {
+////		$("#commonLayout_appcreshi").parent().html(data);
+////	}
+////});
 
 
 //alert

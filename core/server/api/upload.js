@@ -1,6 +1,7 @@
-var multer = require('multer'),
-	config = require('../config'),
+var multer    = require('multer'),
+	config    = require('../config'),
 	upload;
+
 var storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, config.paths.dataPath)

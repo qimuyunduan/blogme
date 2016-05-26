@@ -48,12 +48,7 @@ function sendMail(object) {
 
 mail = {
     /**
-     * ### Send
      * Send an email
-     *
-     * @public
-     * @param {Mail} object details of the email to send
-     * @returns {Promise}
      */
     send: function (object, options) {
         var tasks;
@@ -68,10 +63,6 @@ mail = {
 
             return object;
         }
-
-        /**
-         * ### Send Mail
-         */
 
         function send() {
             return sendMail(object, options);

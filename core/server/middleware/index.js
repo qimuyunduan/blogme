@@ -7,6 +7,8 @@ var bodyParser       = require('body-parser'),
     routes           = require('../routes'),
     utils            = require('../utils'),
     busboy           = require('./busboy'),
+	uploadify        = require('uploadify'),
+	multerConfig     = require('../api').uploads,
     cacheControl     = require('./cache-control'),
 	uuid             = require('node-uuid'),
     privateBlogging  = require('./private-blogging'),
@@ -48,7 +50,12 @@ setupMiddleware  = function setupMiddleware(App) {
             App.use(logger('dev', logging));
         }
     }
-
+	// process file upload
+	uploadify(App,{
+		path:'/uploads',
+		fileKey:'myFile',
+		multer:multerConfig
+	});
 
     // Favicon
     App.use(serveSharedFile('favicon.ico', 'image/x-icon', utils.ONE_DAY_S));

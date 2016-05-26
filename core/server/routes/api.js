@@ -1,12 +1,13 @@
 // # API routes
 
-var _        = require('lodash'),
-	express  = require('express'),
-	api      = require('../api'),
-	utils    = require('../utils'),
-	config   = require('../config'),
+var _          = require('lodash'),
+	express    = require('express'),
+	api        = require('../api'),
+	utils      = require('../utils'),
+	config     = require('../config'),
 	middleware = require('../middleware'),
 	controller = require('../controllers'),
+	fs         = require('fs-extra'),
 	routes;
 var changeRecord = [];
 
@@ -1221,9 +1222,23 @@ routes = function apiRoutes() {
 		});
 
 	// ## Uploads
-	router.post('/uploads',api.uploads.single('uploadFileName'),function(req,res){
-			res.end();
+	router.post('/uploads',function(req,res){
+			console.log(req.body);
+			var fieldName = req.body.fieldname;
+			api.uploads.single(fieldName);
+			res.send({err:false});
 		});
+
+	router.post('/deleteUploads',function(req,res){
+		console.log(req.body);
+		var filePath = req.body.name.path;
+		fs.remove(filePath, function (err) {
+			if (err) {
+				console.log(err);
+			}
+		});
+		res.end();
+	});
 
 	// API Router middleware
 
