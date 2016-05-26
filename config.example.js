@@ -80,27 +80,6 @@ config = {
         paths: {
             contentPath: path.join(__dirname, '/content/')
         }
-    },
-
-    // ### Testing MySQL
-
-    'testing-mysql': {
-        url: 'http://127.0.0.1:3306',
-        database: {
-            client: 'mysql',
-            connection: {
-                host     : '127.0.0.1',
-                user     : 'root',
-                password : 'root',
-                database : 'dwz4j',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '127.0.0.1',
-            port: '3306'
-        },
-        logging: false
     }
 
 };

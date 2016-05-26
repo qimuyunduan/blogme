@@ -5,22 +5,11 @@ var _        = require('lodash'),
 	api      = require('../api'),
 	utils    = require('../utils'),
 	config   = require('../config'),
-    multer   = require('multer'),
 	middleware = require('../middleware'),
 	controller = require('../controllers'),
 	routes;
 var changeRecord = [];
-var storage = multer.diskStorage({
-	destination: function (req, file, cb){
-		cb(null, config.paths.dataPath)
-	},
-	filename: function (req, file, cb){
-		cb(null, file.originalname)
-	}
-});
-var upload = multer({
-	storage: storage
-});
+
 function constructFetchParams(reqParams, requestFields, filter) {
 	var fetchParas = {};
 	if (!_.isEmpty(requestFields)) {
@@ -1232,7 +1221,7 @@ routes = function apiRoutes() {
 		});
 
 	// ## Uploads
-	router.post('/uploads',upload.single('uploadFileName'),function(req,res){
+	router.post('/uploads',api.uploads.single('uploadFileName'),function(req,res){
 			res.end();
 		});
 

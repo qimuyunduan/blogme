@@ -7,7 +7,7 @@ config = {
     // ### Production
 
     production:    {
-        url: 'http://blogme.com',
+        url: 'http://ido-qimuyunduan.rhcloud.com/',
         mail: {
             transport: 'SMTP',
             options: {
@@ -20,17 +20,17 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-				host:'127.0.0.1',
-				user:'root',
-				password:'root',
-				database:'dwz4j',
+				host:'http://ido-qimuyunduan.rhcloud.com/',
+				user:'adminbelIW8b',
+				password:'ules4q5Jn1fl',
+				database:'ido',
 				charset:'utf8'
             },
             debug: false
         },
 
         server: {
-            host: '127.0.0.1',
+            host: 'http://ido-qimuyunduan.rhcloud.com/',
             port: '2368'
         }
     },
@@ -80,26 +80,6 @@ config = {
         // Specify where your content directory lives
         paths: {
             contentPath: path.join(__dirname, '/content/')
-        }
-    },
-
-    // ### Testing MySQL
-
-    'testing-mysql': {
-        url: 'http://127.0.0.1:3306',
-        database: {
-            client: 'mysql',
-            connection: {
-                host     : '127.0.0.1',
-                user     : 'root',
-                password : 'root',
-                database : 'dwz4j',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '127.0.0.1',
-            port: '3306'
         }
     }
 
