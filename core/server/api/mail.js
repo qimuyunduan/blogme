@@ -36,7 +36,7 @@ function sendMail(object) {
 
 mail = {
 
-    send: function (object, options) {
+    send: function (object) {
 
         function formatResponse(data) {
 
@@ -52,7 +52,7 @@ mail = {
         }
 
 
-		return sendMail(object, options);
+		return sendMail(object);
 
     },
 
