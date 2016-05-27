@@ -2,18 +2,15 @@
 // API for sending Mail
 var _             = require('lodash').runInContext(),
     Promise       = require('bluebird'),
-    pipeline      = require('../utils/pipeline'),
     config        = require('../config'),
     errors        = require('../errors'),
-    GhostMail     = require('../mail'),
+    IdoMail       = require('../mail'),
     utils         = require('./utils'),
     path          = require('path'),
     fs            = require('fs'),
     mailTemplatesDir  = path.resolve(__dirname, '..', 'mail', 'templates'),
     htmlToText    = require('html-to-text'),
     readFile      = Promise.promisify(fs.readFile),
-    mode          = process.env.NODE_ENV,
-    testing       = mode !== 'production' && mode !== 'development',
     mailer,
     mail;
 
@@ -24,8 +21,8 @@ var _             = require('lodash').runInContext(),
  */
 
 function sendMail(object) {
-    if (!(mailer instanceof GhostMail) || testing) {
-        mailer = new GhostMail();
+    if (!(mailer instanceof IdoMail)) {
+        mailer = new IdoMail();
     }
 
     return mailer.send(object.mail[0].message).catch(function (err) {
@@ -38,13 +35,11 @@ function sendMail(object) {
 }
 
 mail = {
-    /**
-     * Send an email
-     */
+
     send: function (object, options) {
-        var tasks;
 
         function formatResponse(data) {
+
             delete object.mail[0].options;
 
             delete object.mail[0].message.transport;
@@ -56,17 +51,9 @@ mail = {
             return object;
         }
 
-        function send() {
-            return sendMail(object, options);
-        }
 
-        tasks = [
-                utils.handlePermissions(docName, 'send'),
-                send,
-                formatResponse
-        ];
+		return sendMail(object, options);
 
-        return pipeline(tasks, options || {});
     },
 
     generateContent: function (options) {

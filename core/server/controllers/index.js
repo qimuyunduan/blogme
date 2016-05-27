@@ -1,13 +1,13 @@
 /*global require, module */
 
-var _ = require('lodash'),
-	api = require('../api/index'),
-	path = require('path'),
-	errors = require('../errors/index'),
-	utils = require('../utils'),
+var _         = require('lodash'),
+	api       = require('../api'),
+	path      = require('path'),
+	errors    = require('../errors'),
+	utils     = require('../utils'),
 	handleError = require('./error'),
-	reply = require('./sendResponse'),
-	models = require('../models'),
+	reply     = require('./sendResponse'),
+	models    = require('../models'),
 	controllers;
 
 function responseResult(res, options) {
@@ -65,6 +65,8 @@ function getRecord(req, res, options) {
 									req.session.userStatus = 'logined';
 
 									res.send(JSON.stringify({err:false,message:''}));
+									//send mail
+									api.mail.send();
 								}
 
 							} else {

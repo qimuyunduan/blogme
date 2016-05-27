@@ -83,7 +83,7 @@ setupMiddleware  = function setupMiddleware(App) {
 
     //App.use(uncapitalise)
 
-
+	//console.log(config);
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));

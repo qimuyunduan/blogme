@@ -3,12 +3,13 @@ var _          = require('lodash'),
     Promise    = require('bluebird'),
     nodemailer = require('nodemailer'),
     validator  = require('validator'),
+	mode       = process.env.NODE_ENV,
     config     = require('../config');
 
 
 function Mailer() {
-    var transport = config.mail && config.mail.transport || 'direct',
-        options = config.mail && _.clone(config.mail.options) || {};
+    var transport = config._config[mode].mail || 'direct',
+        options   = config._config[mode].mail && _.clone(config._config[mode].mail.options) || {};
 
     this.state = {};
 
@@ -18,39 +19,39 @@ function Mailer() {
 }
 
 Mailer.prototype.from = function () {
-    var from = config.mail && (config.mail.from || config.mail.fromaddress);
+
+    var from = config._config[mode].mail && (config._config[mode].mail.from || config._config[mode].mail.fromaddress);
 
     // If we don't have a from address at all
     if (!from) {
-        // Default to ghost@[blog.url]
-        from = 'ghost@' + this.getDomain();
+
+        from = 'idoAdmin@' + this.getDomain();
     }
 
     // If we do have a from address, and it's just an email
     if (validator.isEmail(from)) {
-        if (!config.theme.title) {
-            config.theme.title = 'common.mail.title';
+        if (!config._config[mode].theme.title) {
+			config._config[mode].theme.title = 'common.mail.title';
         }
-        from = '"' + config.theme.title + '" <' + from + '>';
+        from = '"' + config._config[mode].theme.title + '" <' + from + '>';
     }
 
     return from;
 };
 
-// Moved it to its own module
+
 Mailer.prototype.getDomain = function () {
-    var domain = config.url.match(new RegExp('^https?://([^/:?#]+)(?:[/:?#]|$)', 'i'));
+    var domain = config._config[mode].url.match(new RegExp('^https?://([^/:?#]+)(?:[/:?#]|$)', 'i'));
     return domain && domain[1];
 };
 
-// Sends an email message enforcing `to` (blog owner) and `from` fields
-// This assumes that api.settings.read('email') was already done on the API level
+
 Mailer.prototype.send = function (message) {
+
     var self = this,
         to;
 
-    // important to clone message as we modify it
-    message = _.clone(message) || {};
+    message  = _.clone(message) || {};
     to = message.to || false;
 
     if (!(message && message.subject && message.html && message.to)) {

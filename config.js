@@ -9,8 +9,11 @@ config = {
     production:    {
         url: 'http://ido-qimuyunduan.rhcloud.com/',
         mail: {
-            transport: 'SMTP',
-            options: {
+			host: "smtp.126.com",
+			secureConnection: true,
+			// use SSL
+			port: 25,
+			options: {
                 auth: {
                     user: 'idoAdmin@126.com',
                     pass: '10141010122'
@@ -45,7 +48,10 @@ config = {
 
 
         mail: {
-            transport: 'SMTP',
+			host: "smtp.126.com",
+			secureConnection: true,
+			// use SSL
+			port: 25,
             options: {
                 auth: {
                     user: 'idoAdmin@126.com',

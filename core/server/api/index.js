@@ -5,7 +5,6 @@ var _              = require('lodash'),
     settings       = require('./settings'),
     authentication = require('./authentication'),
     uploads        = require('./upload'),
-
     http,
     addHeaders,
     cacheInvalidationHeader,
@@ -55,40 +54,7 @@ cacheInvalidationHeader = function cacheInvalidationHeader(req, result) {
     return cacheInvalidate;
 };
 
-/**
- * ### Location Header
- *
- * If the API request results in the creation of a new object, construct a Location: header which points to the new
- * resource.
- *
- * @private
- * @param {Express.request} req Original HTTP Request
- * @param {Object} result API method result
- * @return {String} Resolves to header string
- */
-locationHeader = function locationHeader(req, result) {
-    var apiRoot = config.urlFor('api'),
-        location,
-        newObject;
 
-    if (req.method === 'POST') {
-        if (result.hasOwnProperty('posts')) {
-            newObject = result.posts[0];
-            location = apiRoot + '/posts/' + newObject.id + '/?status=' + newObject.status;
-        } else if (result.hasOwnProperty('notifications')) {
-            newObject = result.notifications[0];
-            location = apiRoot + '/notifications/' + newObject.id + '/';
-        } else if (result.hasOwnProperty('users')) {
-            newObject = result.users[0];
-            location = apiRoot + '/users/' + newObject.id + '/';
-        } else if (result.hasOwnProperty('tags')) {
-            newObject = result.tags[0];
-            location = apiRoot + '/tags/' + newObject.id + '/';
-        }
-    }
-
-    return location;
-};
 
 /**
  * ### Content Disposition Header
@@ -189,10 +155,8 @@ http = function http(apiMethod) {
  * ## Public API
  */
 module.exports = {
-    // Extras
     init: init,
     http: http,
-    // API Endpoints
     mail: mail,
     settings: settings,
     authentication: authentication,
