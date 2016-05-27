@@ -6,20 +6,18 @@ var _             = require('lodash').runInContext(),
     config        = require('../config'),
     errors        = require('../errors'),
     GhostMail     = require('../mail'),
-    Models        = require('../models'),
     utils         = require('./utils'),
     path          = require('path'),
     fs            = require('fs'),
-    templatesDir  = path.resolve(__dirname, '..', 'mail', 'templates'),
+    mailTemplatesDir  = path.resolve(__dirname, '..', 'mail', 'templates'),
     htmlToText    = require('html-to-text'),
     readFile      = Promise.promisify(fs.readFile),
-    docName       = 'mail',
     mode          = process.env.NODE_ENV,
     testing       = mode !== 'production' && mode !== 'development',
     mailer,
     mail;
 
-_.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
 
 /**
  * Send mail helper
@@ -32,14 +30,7 @@ function sendMail(object) {
 
     return mailer.send(object.mail[0].message).catch(function (err) {
         if (mailer.state.usingDirect) {
-            notifications.add({notifications: [{
-                type: 'warn',
-                message: [
-                    'warnings.index.unableToSendEmail',
-					 'common.seeLinkForInstructions'
 
-                ].join(' ')
-            }]}, {context: {internal: true}});
         }
 
         return Promise.reject(new errors.EmailError(err.message));
@@ -55,8 +46,9 @@ mail = {
 
         function formatResponse(data) {
             delete object.mail[0].options;
-            // Sendmail returns extra details we don't need and that don't convert to JSON
+
             delete object.mail[0].message.transport;
+
             object.mail[0].status = {
                 message: data.message
             };
@@ -81,14 +73,10 @@ mail = {
         var defaults,
             data;
 
-        defaults = {
-            siteUrl: config.forceAdminSSL ? (config.urlSSL || config.url) : config.url
-        };
-
         data = _.defaults(defaults, options.data);
 
         // read the proper email body template
-        return readFile(path.join(templatesDir, options.template + '.html'), 'utf8').then(function (content) {
+        return readFile(path.join(mailTemplatesDir, options.template + '.html'), 'utf8').then(function (content) {
             var compiled,
                 htmlContent,
                 textContent;

@@ -12,7 +12,7 @@ config = {
             transport: 'SMTP',
             options: {
                 auth: {
-                    user: 'koonet6@gmail.com',
+                    user: 'idoAdmin@126.com',
                     pass: '10141010122'
                 }
             }
@@ -48,7 +48,7 @@ config = {
             transport: 'SMTP',
             options: {
                 auth: {
-                    user: 'koonet6@gmail.com',
+                    user: 'idoAdmin@126.com',
                     pass: '10141010122'
                 }
             }

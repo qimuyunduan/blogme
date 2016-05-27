@@ -1,3 +1,12 @@
+<script>
+    $(document).ready(function () {
+        var fileObj = initUpload('upload');
+        $("#startUpload").click(function () {
+
+            fileObj.startUpload();
+        });
+    });
+</script>
 <div class="pageContent">
     <form>
         <div class="pageFormContent" layoutH="58">
@@ -23,44 +32,3 @@
         </div>
     </form>
 </div>
-<script>
-    $(document).ready(function () {
-
-        var fileObj = $("#upload").uploadFile({
-            url: "/uploads",
-            fileName: "myFile",
-            dragDrop: true,
-            autoSubmit: false,
-            showDelete: true,
-            showCancel: true,
-            showProgress:true,
-            multiple:false,
-            onSuccess: function (files) {
-                alertMsg.info("文件"+JSON.stringify(files)+"上传成功...");
-            },
-            onError: function(files)
-            {
-                alertMsg.info("文件"+JSON.stringify(files)+"上传失败...")
-            },
-            deleteCallback: function(data,pd)
-            {
-                for(var i=0;i<data.length;i++)
-                {
-                    $.post("deleteUploads",{op:"delete",name:data[i]},
-                            function()
-                            {
-                                alertMsg.info("文件删除成功...");
-                            });
-                }
-                pd.statusbar.hide();
-
-            }
-        });
-        $("#startUpload").click(function () {
-
-            fileObj.startUpload();
-        });
-
-    });
-
-</script>

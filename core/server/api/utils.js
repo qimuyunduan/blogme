@@ -11,23 +11,14 @@ var Promise = require('bluebird'),
 utils = {
 
     globalDefaultOptions: ['context', 'include'],
-    // dataDefaultOptions - valid for all endpoints which take object as well as options
+
     dataDefaultOptions: ['data'],
 
-    // ### Manual Default Options
-    // These must be provided by the endpoint
-    // browseDefaultOptions - valid for all browse api endpoints
     browseDefaultOptions: ['page', 'limit', 'fields', 'filter', 'order', 'debug'],
-    // idDefaultOptions - valid whenever an id is valid
+
     idDefaultOptions: ['id'],
 
-    /**
-     * ## Validate
-     * Prepare to validate the object and options passed to an endpoint
-     * @param {String} docName
-     * @param {Object} extras
-     * @returns {Function} doValidate
-     */
+
     validate: function validate(docName, extras) {
         /**
          * ### Do Validate
@@ -130,12 +121,7 @@ utils = {
         return errors;
     },
 
-    /**
-     * ## Detect Public Context
-     * Calls parse context to expand the options.context object
-     * @param {Object} options
-     * @returns {Boolean}
-     */
+
     detectPublicContext: function detectPublicContext(options) {
         options.context = permissions.parseContext(options.context);
         return options.context.public;
@@ -149,11 +135,6 @@ utils = {
     handlePublicPermissions: function handlePublicPermissions(docName, method) {
         var singular = docName.replace(/s$/, '');
 
-        /**
-         * Check if this is a public request, if so use the public permissions, otherwise use standard canThis
-         * @param {Object} options
-         * @returns {Object} options
-         */
         return function doHandlePublicPermissions(options) {
             var permsPromise;
 
@@ -210,11 +191,7 @@ utils = {
     },
 
     convertOptions: function convertOptions(allowedIncludes) {
-        /**
-         * Convert our options from API-style to Model-style
-         * @param {Object} options
-         * @returns {Object} options
-         */
+
         return function doConversion(options) {
             if (options.include) {
                 options.include = utils.prepareInclude(options.include, allowedIncludes);
@@ -246,9 +223,11 @@ utils = {
 
         return Promise.resolve(object);
     },
+
     checkFileExists: function (options, filename) {
         return !!(options[filename] && options[filename].type && options[filename].path);
     },
+
     checkFileIsValid: function (file, types, extensions) {
         var type = file.type,
             ext = path.extname(file.name).toLowerCase();

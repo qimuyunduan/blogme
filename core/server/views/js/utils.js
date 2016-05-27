@@ -591,70 +591,34 @@ function logout() {
 	});
 }
 
-//function initUpload(id, multiple) {
-//	var multipleEnabled = multiple ? true : false;
-//
-//	$("#" + id).uploadFile({
-//		url: "/uploads",
-//		fileName: "myFile",
-//		dragDrop: true,
-//		autoSubmit: false,
-//		showDelete: true,
-//		showCancel: true,
-//		showProgress: true,
-//		multiple: multipleEnabled,
-//		onSuccess: function (files) {
-//			alertMsg.info("文件" + JSON.stringify(files) + "上传成功...");
-//		},
-//		onError: function (files) {
-//			alertMsg.info("文件" + JSON.stringify(files) + "上传失败...")
-//		},
-//		deleteCallback: function (data, pd) {
-//			for (var i = 0; i < data.length; i++) {
-//				$.post("deleteUploads", {op: "delete", name: data[i]},
-//					function () {
-//						alertMsg.info("文件删除成功...");
-//					});
-//			}
-//			pd.statusbar.hide();
-//
-//		}
-//	});
-//}
-//
-////function startUpload(){
-////	var uploader = initUpload();
-////	uploader.startUpload();
-////}
-//// request
-////$.ajax({
-////	type: "POST”,//PUT GET DELETE
-////	url:ajaxCallUrl,
-////	data:$('#yourformid').serialize(),// 你的formid
-////	async: false,
-////	error: function(request) {
-////		alert("Connection error");
-////	},
-////	success: function(data) {
-////		$("#commonLayout_appcreshi").parent().html(data);
-////	}
-////});
+function initUpload(id, multiple) {
+	var multipleEnabled = multiple ? true : false;
 
+	return $("#" + id).uploadFile({
+		url: "/uploads",
+		fileName: "myFile",
+		dragDrop: true,
+		autoSubmit: false,
+		showDelete: true,
+		showCancel: true,
+		showProgress: true,
+		multiple: multipleEnabled,
+		onSuccess: function (files) {
+			alertMsg.info("文件" + JSON.stringify(files) + "上传成功...");
+		},
+		onError: function (files) {
+			alertMsg.info("文件" + JSON.stringify(files) + "上传失败...")
+		},
+		deleteCallback: function (data, pd) {
+			for (var i = 0; i < data.length; i++) {
+				$.post("deleteUploads", {op: "delete", name: data[i]},
+					function () {
+						alertMsg.info("文件删除成功...");
+					});
+			}
+			pd.statusbar.hide();
 
-//alert
-//alertMsg.confirm("msg")
-//alertMsg.correct("msg");
-//alertMsg.error("msg");
-//alertMsg.warn("msg");
-//alertMsg.info("msg");
+		}
+	});
+}
 
-
-//navTab
-
-//open
-//navTab.openTab(tabid,title,url,[data])
-//reload
-//navTab.reload(url,data.[tabid])
-//close
-//navTab.closeTab(tabid)
-//navTab.closeCurrent()
