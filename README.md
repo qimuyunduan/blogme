@@ -1,4 +1,4 @@
-* blogme
+* ido
 personal nodeproject based on ghost
           使用dwz-jui框架搭建的一个快速开发平台
 =========
