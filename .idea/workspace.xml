@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a374648-3ba5-4cba-8087-552a18020534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.example.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/mail/templates/raw/invite-user.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/mail/templates/raw/reset-password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/server/mail/templates/raw/welcome.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/api/mail.js" afterPath="$PROJECT_DIR$/core/server/api/mail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/mail/index.js" afterPath="$PROJECT_DIR$/core/server/mail/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/mail/templates/invite-user.html" afterPath="$PROJECT_DIR$/core/server/mail/templates/invite-user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/mail/templates/reset-password.html" afterPath="$PROJECT_DIR$/core/server/mail/templates/reset-password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/mail/templates/welcome.html" afterPath="$PROJECT_DIR$/core/server/mail/templates/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/routes/api.js" afterPath="$PROJECT_DIR$/core/server/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/utils/startup-check.js" afterPath="$PROJECT_DIR$/core/server/utils/startup-check.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/js/utils.js" afterPath="$PROJECT_DIR$/core/server/views/js/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/server/views/authorized.html" afterPath="$PROJECT_DIR$/core/server/views/authorized.html" />
     </list>
     <ignored path="blogme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,8 +82,28 @@
       <file leaf-file-name="authorized.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="19.472221">
-              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+            <state vertical-scroll-proportion="-15.611111">
+              <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,7 +112,7 @@
       <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/mail/templates/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="231" selection-start-line="24" selection-start-column="231" selection-end-line="24" selection-end-column="231" />
               <folding />
             </state>
@@ -113,28 +122,18 @@
       <file leaf-file-name="reset-password.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/mail/templates/reset-password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.8333335">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="186" selection-start-line="26" selection-start-column="186" selection-end-line="26" selection-end-column="186" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invite-user.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="invite-user.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/server/mail/templates/invite-user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19765739">
-              <caret line="26" column="207" selection-start-line="26" selection-start-column="207" selection-end-line="26" selection-end-column="207" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1243" column="7" selection-start-line="1243" selection-start-column="7" selection-end-line="1243" selection-end-column="7" />
+              <caret line="26" column="207" selection-start-line="26" selection-start-column="207" selection-end-line="26" selection-end-column="207" />
               <folding />
             </state>
           </provider>
@@ -161,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/server/views/bm_todayBill.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_addCityAD.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_addVersion.html" />
         <option value="$PROJECT_DIR$/core/server/views/mm_updateShopConfig.html" />
@@ -201,17 +199,18 @@
         <option value="$PROJECT_DIR$/core/server/api/index.js" />
         <option value="$PROJECT_DIR$/nodeFuncTest.js" />
         <option value="$PROJECT_DIR$/core/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
         <option value="$PROJECT_DIR$/core/server/utils/startup-check.js" />
         <option value="$PROJECT_DIR$/core/server/routes/api.js" />
         <option value="$PROJECT_DIR$/core/server/views/js/utils.js" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/core/server/api/mail.js" />
         <option value="$PROJECT_DIR$/core/server/mail/index.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/core/server/mail/templates/welcome.html" />
         <option value="$PROJECT_DIR$/core/server/mail/templates/reset-password.html" />
         <option value="$PROJECT_DIR$/core/server/mail/templates/invite-user.html" />
+        <option value="$PROJECT_DIR$/core/server/views/authorized.html" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -249,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -562,7 +562,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -681,12 +680,6 @@
       <created>1458110515909</created>
       <option name="number" value="Default" />
       <updated>1458110515909</updated>
-    </task>
-    <task id="LOCAL-00119" summary="change views">
-      <created>1462849134325</created>
-      <option name="number" value="00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1462849134326</updated>
     </task>
     <task id="LOCAL-00120" summary="change views">
       <created>1462871043466</created>
@@ -976,7 +969,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464400516023</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary=" change structure">
+      <created>1464408373459</created>
+      <option name="number" value="00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1464408373460</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -994,21 +993,21 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18167457" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326733" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5018431" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26039603" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25988144" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326733" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
@@ -1082,6 +1081,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/mail/templates/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="231" selection-start-line="24" selection-start-column="231" selection-end-line="24" selection-end-column="231" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/mail/templates/reset-password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="186" selection-start-line="26" selection-start-column="186" selection-end-line="26" selection-end-column="186" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/mail/templates/invite-user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1243" column="7" selection-start-line="1243" selection-start-column="7" selection-end-line="1243" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/views/bbm_addInsureUnit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6304985">
@@ -1100,7 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2278481">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4841772">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6297376">
           <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,7 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33236152">
           <caret line="10714" column="13" selection-start-line="10714" selection-start-column="13" selection-end-line="10714" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,15 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.251809">
           <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48953974">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,24 +1368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="629" column="25" selection-start-line="629" selection-start-column="25" selection-end-line="629" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#trimLeftRight#0" expanded="false" />
-            <element signature="n#!!block;n#checkTrim#0" expanded="false" />
-            <element signature="n#!!block;n#checkLength#0" expanded="false" />
-            <element signature="n#!!block;n#mergeToObject#0" expanded="false" />
-            <element signature="n#!!block;n#isContainSpecialChar#0" expanded="false" />
-            <element signature="n#!!block;n#antiSQL#0" expanded="false" />
-            <element signature="e#3762#3917#0" expanded="false" />
-            <element signature="n#!!block;n#filterElements#0" expanded="false" />
-            <element signature="n#!!block;n#initPass#0" expanded="false" />
-            <element signature="n#!!block;n#updateState#0" expanded="false" />
-            <element signature="n#!!block;n#responseEnter#0" expanded="false" />
-            <element signature="n#!!block;n#getCookieValue#0" expanded="false" />
-            <element signature="n#!!block;n#changePwd#0" expanded="false" />
-            <element signature="n#!!block;n#sendRequest#0" expanded="false" />
-            <element signature="n#!!block;n#fillUserName#0" expanded="false" />
-            <element signature="n#!!block;n#logout#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1417,17 +1424,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="19.472221">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/server/mail/templates/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="231" selection-start-line="24" selection-start-column="231" selection-end-line="24" selection-end-column="231" />
           <folding />
         </state>
@@ -1435,7 +1434,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/mail/templates/reset-password.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.8333335">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="186" selection-start-line="26" selection-start-column="186" selection-end-line="26" selection-end-column="186" />
           <folding />
         </state>
@@ -1443,8 +1442,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/server/mail/templates/invite-user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19765739">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="207" selection-start-line="26" selection-start-column="207" selection-end-line="26" selection-end-column="207" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/server/views/authorized.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.611111">
+          <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
