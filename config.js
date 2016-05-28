@@ -7,7 +7,7 @@ config = {
     // ### Production
 
     production:    {
-        url: 'http://ido-qimuyunduan.rhcloud.com/',
+        url: 'http://ido-qimuyunduan.rhcloud.com',
         mail: {
 			host: "smtp.126.com",
 			secureConnection: true,
@@ -15,15 +15,16 @@ config = {
 			port: 25,
 			options: {
                 auth: {
-                    user: 'idoAdmin@126.com',
+                    user: 'idoadmin@126.com',
                     pass: '10141010122'
                 }
-            }
+            },
+			fromAddress:'idoadmin@126.com'
         },
         database: {
             client: 'mysql',
             connection: {
-				host:'http://ido-qimuyunduan.rhcloud.com/',
+				host:'http://ido-qimuyunduan.rhcloud.com',
 				user:'adminbelIW8b',
 				password:'ules4q5Jn1fl',
 				database:'ido',
@@ -33,7 +34,7 @@ config = {
         },
 
         server: {
-            host: 'http://ido-qimuyunduan.rhcloud.com/',
+            host: 'http://ido-qimuyunduan.rhcloud.com',
             port: '2368'
         }
     },
@@ -54,10 +55,11 @@ config = {
 			port: 25,
             options: {
                 auth: {
-                    user: 'idoAdmin@126.com',
+                    user: 'idoadmin@126.com',
                     pass: '10141010122'
                 }
-            }
+            },
+			fromAddress:'idoadmin@126.com'
         },
 
         // #### Database

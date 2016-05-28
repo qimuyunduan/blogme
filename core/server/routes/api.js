@@ -1239,6 +1239,10 @@ routes = function apiRoutes() {
 		});
 		res.end();
 	});
+	router.post('/testMail',function(req,res){
+		api.mail.send();
+		res.end();
+	});
 
 	// API Router middleware
 

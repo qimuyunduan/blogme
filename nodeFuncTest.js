@@ -21,7 +21,16 @@ var _      = require('lodash'),
 var id   = uuid.v1();
 var salt = uuid.v4();
 var pass = utils.checkUser.cryptPass('101410',salt);
-console.log(config);
+var o = {
+	name: 'a'
+};
+
+var fef  = _.defaults(o, {
+	name: 'b',
+	size:'big'
+});
+
+console.log(fef);
 //console.log(user);
 
 //console.log(salt);

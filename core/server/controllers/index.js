@@ -65,8 +65,7 @@ function getRecord(req, res, options) {
 									req.session.userStatus = 'logined';
 
 									res.send(JSON.stringify({err:false,message:''}));
-									//send mail
-									api.mail.send();
+
 								}
 
 							} else {

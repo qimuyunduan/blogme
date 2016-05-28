@@ -1,6 +1,6 @@
 // # Mail API
 // API for sending Mail
-var _             = require('lodash').runInContext(),
+var _             = require('lodash'),
     Promise       = require('bluebird'),
     config        = require('../config'),
     errors        = require('../errors'),
@@ -21,66 +21,69 @@ var _             = require('lodash').runInContext(),
  */
 
 function sendMail(object) {
+
     if (!(mailer instanceof IdoMail)) {
         mailer = new IdoMail();
     }
 
-    return mailer.send(object.mail[0].message).catch(function (err) {
-        if (mailer.state.usingDirect) {
+	return mailer.send(object).catch(function (err) {
 
+        if (mailer.state.usingDirect) {
+			console.log('using direct...');
         }
 
         return Promise.reject(new errors.EmailError(err.message));
     });
 }
 
+
+function generateContent(options) {
+
+
+	var template = options ? options.template:'welcome';
+	var data = options ? options.data:{siteUrl:'ido.com',ownerEmail:'84607842@qq.com'};
+
+	// read the proper email body template
+	return readFile(path.join(mailTemplatesDir, template + '.html'), 'utf8').then(function (content) {
+		var compiled,
+			htmlContent,
+			textContent;
+
+		// insert user-specific data into the email
+		compiled = _.template(content);
+
+		htmlContent = compiled(data);
+
+		//console.log(htmlContent);
+
+		// generate a plain-text version of the same email
+		textContent = htmlToText.fromString(htmlContent);
+
+
+
+		return {
+			html: htmlContent,
+			text: textContent
+		};
+	});
+}
+
 mail = {
 
-    send: function (object) {
+    send: function (options) {
 
-        function formatResponse(data) {
+		var defaults = {to:'84607842@qq.com',subject:'欢迎来到爱都平台',template:'welcome'};
+		var mail = options ? options.mail:defaults;
 
-            delete object.mail[0].options;
+		generateContent(options).then(function(mailContent){
 
-            delete object.mail[0].message.transport;
+			console.log(mailContent);
+			sendMail(_.assign(mail,mailContent));
 
-            object.mail[0].status = {
-                message: data.message
-            };
+		});
 
-            return object;
-        }
-
-
-		return sendMail(object);
-
-    },
-
-    generateContent: function (options) {
-        var defaults,
-            data;
-
-        data = _.defaults(defaults, options.data);
-
-        // read the proper email body template
-        return readFile(path.join(mailTemplatesDir, options.template + '.html'), 'utf8').then(function (content) {
-            var compiled,
-                htmlContent,
-                textContent;
-
-            // insert user-specific data into the email
-            compiled = _.template(content);
-            htmlContent = compiled(data);
-
-            // generate a plain-text version of the same email
-            textContent = htmlToText.fromString(htmlContent);
-
-            return {
-                html: htmlContent,
-                text: textContent
-            };
-        });
     }
+
 };
 
 module.exports = mail;
