@@ -1240,8 +1240,7 @@ routes = function apiRoutes() {
 		res.end();
 	});
 	router.post('/testMail',function(req,res){
-		api.mail.send();
-		res.end();
+		api.mail.send({},res);
 	});
 
 	// API Router middleware

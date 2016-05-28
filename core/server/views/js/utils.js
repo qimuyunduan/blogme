@@ -627,9 +627,6 @@ function initUpload(id, multiple) {
 		 url: "testMail",
 		 data: {},
 		 async: true,
-		 dataType: 'json',
-		 error: function () {
-			 alert("sorry!链接服务器失败......");
-		 }
+		 dataType: 'json'
 	 });
  }

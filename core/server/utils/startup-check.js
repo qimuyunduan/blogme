@@ -33,7 +33,7 @@ checks = {
             fd = fs.openSync(configFilePath, 'r');
             fs.closeSync(fd);
         } catch (e) {
-            configFilePath = path.join(appRoot, 'config.example.js');
+            configFilePath = path.join(appRoot, 'config.js');
         }
 
         configFile = require(configFilePath);

@@ -9,14 +9,11 @@ var _          = require('lodash'),
 
 function Mailer() {
 
-    var transport = config._config[mode].mail || 'direct',
-        options   = config._config[mode].mail && _.clone(config._config[mode].mail.options) || {};
-
-    this.state = {};
+    var transport = "SMTP";
+        options   = config._config[mode].mail.config;
 
     this.transport = nodemailer.createTransport(transport, options);
 
-    this.state.usingDirect = transport === 'direct';
 }
 
 Mailer.prototype.from = function () {
@@ -44,7 +41,7 @@ Mailer.prototype.getDomain = function () {
 };
 
 
-Mailer.prototype.send = function (message) {
+Mailer.prototype.send = function (message,res) {
 
     var self = this,
         to;
@@ -59,23 +56,24 @@ Mailer.prototype.send = function (message) {
     message = _.extend(message, {
         from: self.from(),
         to: to,
-        generateTextFromHTML: true,
         encoding: 'base64'
     });
 
     return new Promise(function (resolve, reject) {
+
+
+		//console.log(message);
         self.transport.sendMail(message, function (error, response) {
 
 
             if (error) {
 
 				console.log('error occured....');
+				// do other things...
                 return reject(new Error(error));
             }
 
-
-			console.log('mail sended.......');
-
+			res.end();
 
             if (self.transport.transportType !== 'DIRECT') {
                 return resolve(response);

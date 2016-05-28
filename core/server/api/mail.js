@@ -20,17 +20,13 @@ var _             = require('lodash'),
  * Send mail helper
  */
 
-function sendMail(object) {
+function sendMail(object,res) {
 
     if (!(mailer instanceof IdoMail)) {
         mailer = new IdoMail();
     }
 
-	return mailer.send(object).catch(function (err) {
-
-        if (mailer.state.usingDirect) {
-			console.log('using direct...');
-        }
+	return mailer.send(object,res).catch(function (err) {
 
         return Promise.reject(new errors.EmailError(err.message));
     });
@@ -39,22 +35,22 @@ function sendMail(object) {
 
 function generateContent(options) {
 
-
-	var template = options ? options.template:'welcome';
-	var data = options ? options.data:{siteUrl:'ido.com',ownerEmail:'84607842@qq.com'};
-
 	// read the proper email body template
-	return readFile(path.join(mailTemplatesDir, template + '.html'), 'utf8').then(function (content) {
-		var compiled,
-			htmlContent,
+	return readFile(path.join(mailTemplatesDir, options.template + '.html'), 'utf8').then(function (content) {
+
+
+
+		var htmlContent,
 			textContent;
 
+		// set handlerbars model
+		_.templateSettings = {
+			interpolate: /\{\{(.+?)\}\}/g,
+			evaluate: /\{\%(.+?)\%\}/g
+		};
+
 		// insert user-specific data into the email
-		compiled = _.template(content);
-
-		htmlContent = compiled(data);
-
-		//console.log(htmlContent);
+		htmlContent = _.template(content)(options.data);
 
 		// generate a plain-text version of the same email
 		textContent = htmlToText.fromString(htmlContent);
@@ -70,16 +66,16 @@ function generateContent(options) {
 
 mail = {
 
-    send: function (options) {
+    send: function (options,res) {
 
-		var defaults = {to:'84607842@qq.com',subject:'欢迎来到爱都平台',template:'welcome'};
-		var mail = options ? options.mail:defaults;
+		var mail = {to:'84607842@qq.com',subject:'欢迎来到爱都平台',template:'welcome'};
+		var data = {data:{"siteUrl":'ido.com',"ownerEmail":'84607842@qq.com'}};
+		if(_.isEmpty(options)){
+			options = _.assign(mail,data);
+		}
 
 		generateContent(options).then(function(mailContent){
-
-			console.log(mailContent);
-			sendMail(_.assign(mail,mailContent));
-
+			sendMail(_.assign(options,mailContent),res);
 		});
 
     }

@@ -1,16 +1,16 @@
 var appInit,
     errors;
 
-// Make sure dependencies are installed and file system permissions are correct.
+     // Make sure dependencies are installed and file system permissions are correct.
 require('./core/server/utils/startup-check').check();
 
 appInit = require('./core');
 errors  = require('./core/server/errors');
 
-//  get an instance of AppServer
+    //  get an instance of AppServer
 appInit().then(function (server) {
 
-    //  starting our server instance.
+    // starting our server instance.
     server.start();
 
 }).catch(function (err) {

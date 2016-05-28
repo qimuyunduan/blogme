@@ -9,16 +9,17 @@ config = {
     production:    {
         url: 'http://ido-qimuyunduan.rhcloud.com',
         mail: {
-			host: "smtp.126.com",
-			secureConnection: true,
-			// use SSL
-			port: 25,
-			options: {
-                auth: {
-                    user: 'idoadmin@126.com',
-                    pass: '10141010122'
-                }
-            },
+			config: {
+				host: "smtp.126.com",
+				//secureConnection: true,
+				// use SSL
+				port: 25,
+
+				auth: {
+					user: 'idoadmin@126.com',
+					pass: 'sqm10141010122'
+				}
+			},
 			fromAddress:'idoadmin@126.com'
         },
         database: {
@@ -48,19 +49,20 @@ config = {
         // Example mail config
 
 
-        mail: {
-			host: "smtp.126.com",
-			secureConnection: true,
-			// use SSL
-			port: 25,
-            options: {
-                auth: {
-                    user: 'idoadmin@126.com',
-                    pass: '10141010122'
-                }
-            },
+		mail: {
+			config: {
+				host: "smtp.126.com",
+				//secureConnection: true,
+				// use SSL
+				port: 25,
+
+				auth: {
+					user: 'idoadmin@126.com',
+					pass: 'sqm10141010122'
+				}
+			},
 			fromAddress:'idoadmin@126.com'
-        },
+		},
 
         // #### Database
         // App supports MySQL
