@@ -69,7 +69,7 @@ gulp.task('publish', function (callback) {
 });
 gulp.task('browserSync', function() {
     browserSync.init({
-        proxy: "localhost:2368",//2368  网站的端口
+        proxy: "localhost:8080",//8080 网站的端口
         files: "./core/server/views/*.html,./core/server/views/css/*.css",
         browser:"chrome"
 

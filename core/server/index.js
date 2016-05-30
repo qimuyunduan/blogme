@@ -6,33 +6,31 @@ var express     = require('express'),
     Promise     = require('bluebird'),
 	path        = require('path'),
     api         = require('./api'),
-    config      = require('./config'),
     helpers     = require('./helpers'),
     middleware  = require('./middleware'),
     permissions = require('./permissions'),
-
     Server      = require('./app_server');
 
 
 // Sets up the express server instances, runs init on a bunch of stuff, configures views, helpers, routes and more
 // Finally it returns an instance of Server
-function init(options) {
+function init() {
     // Get reference to an express app instance.
     var app = express();
 
-    // It returns a promise that is resolved when the application
-    // Load our config.js file from the local file system.
-
     return Promise.resolve().then(function () {
-    //    // Initialize the settings cache
-    //    return api.init();
+        // Initialize the settings cache
+        //return api.init();
+
     //}).then(function () {
-    //    return permissions.init();
+
+		//TODO:init permission
+        //return permissions.init();
     //}).then(function () {
+
         var Hbs = hbs.create();
         // enabled gzip compression by default
 		app.use(compress());
-
 
 		// set view path
 		app.set('views',path.join(__dirname,'/views'));
@@ -41,9 +39,9 @@ function init(options) {
 		app.engine('html', Hbs.express4({
 			partialsDir: path.join(__dirname,'/views/partials')
 		}));
-        //// Load helpers
-        //helpers.loadCoreHelpers(Hbs);
-		//
+         //Load helpers
+        helpers.loadCoreHelpers(Hbs);
+
         //// Middleware and Routing
         middleware(app);
 

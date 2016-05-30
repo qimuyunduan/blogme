@@ -383,8 +383,6 @@ errors = {
     }
 };
 
-// Ensure our 'this' context for methods and preserve method arity by
-// using Function#bind for expressjs
 _.forEach([
     'logWarn',
     'logInfo',

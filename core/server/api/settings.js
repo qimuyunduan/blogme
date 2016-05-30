@@ -19,13 +19,6 @@ var _            = require('lodash'),
     canEditAllSettings,
     populateDefaultSetting,
     hasPopulatedDefaults = false,
-
-    /**
-     * ## Cache
-     * Holds cached settings
-     * @private
-     * @type {{}}
-     */
     settingsCache = {};
 
 /**
@@ -81,15 +74,6 @@ updateSettingsCache = function (settings) {
 
         return Promise.resolve(settingsCache);
     }
-
-    return dataProvider.Settings.findAll()
-        .then(function (result) {
-            settingsCache = readSettingsResult(result.models);
-
-            updateConfigCache();
-
-            return settingsCache;
-        });
 };
 
 // ## Helpers

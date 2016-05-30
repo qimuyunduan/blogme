@@ -11,6 +11,7 @@ var bodyParser       = require('body-parser'),
 	multerConfig     = require('../api').uploads,
     cacheControl     = require('./cache-control'),
 	uuid             = require('node-uuid'),
+	helmet           = require('helmet'),
     privateBlogging  = require('./private-blogging'),
     serveSharedFile  = require('./serve-shared-file'),
     spamPrevention   = require('./spam-prevention'),
@@ -70,20 +71,18 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/res', express.static(contentPath));
 	App.use('/res/data', express.static(path.join(contentPath, '/data')));
 	App.use('/res/images', express.static(path.join(contentPath, '/images')));
-	//
-    // //First determine whether we're serving admin
-    //App.use(decideIsAdmin);
-	//
-    //// Theme only config
-    //App.use(staticTheme());
-	//
-    //// Check if password protected app
+
+
+
+	App.use(helmet());
+
+    // Check if password protected app
     //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     //App.use(privateBlogging.filterPrivateRoutes);
 
-    //App.use(uncapitalise)
+    App.use(uncapitalise);
 
-	//console.log(config);
+
 
     // Body parsing
     App.use(bodyParser.json({limit: '1mb'}));

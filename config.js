@@ -25,9 +25,9 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-				host:'http://ido-qimuyunduan.rhcloud.com',
-				user:'adminbelIW8b',
-				password:'ules4q5Jn1fl',
+				host:'mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+				user:'adminvtVPXny',
+				password:'F4knVYRayxMx',
 				database:'ido',
 				charset:'utf8'
             },
@@ -84,7 +84,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '3000'
+            port: '8080'
         },
         // #### Paths
         // Specify where your content directory lives

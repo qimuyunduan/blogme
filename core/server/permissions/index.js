@@ -253,43 +253,37 @@ canThis = function (context) {
     return result.beginCheck(context);
 };
 
-init = refresh = function () {
-    // Load all the permissions
-    return Models.Permission.findAll().then(function (perms) {
-        var seenActions = {};
 
-        exported.actionsMap = {};
-
-        // Build a hash map of the actions on objects, i.e
-        /*
-        {
-            'edit': ['post', 'tag', 'user', 'page'],
-            'delete': ['post', 'user'],
-            'create': ['post', 'user', 'page']
-        }
-        */
-        _.each(perms.models, function (perm) {
-            var actionType = perm.get('action_type'),
-                objectType = perm.get('object_type');
-
-            exported.actionsMap[actionType] = exported.actionsMap[actionType] || [];
-            seenActions[actionType] = seenActions[actionType] || {};
-
-            // Check if we've already seen this action -> object combo
-            if (seenActions[actionType][objectType]) {
-                return;
-            }
-
-            exported.actionsMap[actionType].push(objectType);
-            seenActions[actionType][objectType] = true;
-        });
-
-        return exported.actionsMap;
-    });
-};
+//TODO: add permission map
+//init = refresh = function () {
+//    // Load all the permissions
+//    return Models.Permission.findAll().then(function (perms) {
+//        var seenActions = {};
+//
+//        exported.actionsMap = {};
+//
+//        _.each(perms.models, function (perm) {
+//            var actionType = perm.get('action_type'),
+//                objectType = perm.get('object_type');
+//
+//            exported.actionsMap[actionType] = exported.actionsMap[actionType] || [];
+//            seenActions[actionType] = seenActions[actionType] || {};
+//
+//            // Check if we've already seen this action -> object combo
+//            if (seenActions[actionType][objectType]) {
+//                return;
+//            }
+//
+//            exported.actionsMap[actionType].push(objectType);
+//            seenActions[actionType][objectType] = true;
+//        });
+//
+//        return exported.actionsMap;
+//    });
+//};
 
 module.exports = exported = {
-    init: init,
+    //init: init,
     refresh: refresh,
     canThis: canThis,
     parseContext: parseContext,
