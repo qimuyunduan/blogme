@@ -8,6 +8,7 @@ var _         = require('lodash'),
 	handleError = require('./error'),
 	reply     = require('./sendResponse'),
 	models    = require('../models'),
+	redisClient = require('redis').createClient(),
 	controllers;
 
 function responseResult(res, options) {
@@ -63,7 +64,12 @@ function getRecord(req, res, options) {
 									}
 									// set session
 									req.session.userStatus = 'logined';
+									console.log('sessionID is '+req.sessionID);
 
+									redisClient.set("usrID",'ahsfiehfehfhfhfhw');
+									redisClient.get("usrID", function(err, reply) {
+										console.log(reply);
+									});
 									res.send(JSON.stringify({err:false,message:''}));
 
 								}

@@ -180,9 +180,13 @@ routes = function apiRoutes() {
 	router.route("/authorized")
 		.get(function (req, res) {
 
-			if (redisClient.get('userStatus')=='logined') {
+			redisClient.get("idoConnectSessId", function(err, reply) {
+				console.log(reply);
+			});
+
+			if (req.session.userStatus=='logined') {
 				var dateTime = utils.moment.localDateAndTime;
-				console.log(redisClient.get('userStatus'));
+
 				res.render("authorized", {dateTime: dateTime});
 
 			} else {
