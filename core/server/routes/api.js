@@ -1,13 +1,14 @@
 // # API routes
 
-var _          = require('lodash'),
-	express    = require('express'),
-	api        = require('../api'),
-	utils      = require('../utils'),
-	config     = require('../config'),
-	middleware = require('../middleware'),
-	controller = require('../controllers'),
-	fs         = require('fs-extra'),
+var _           = require('lodash'),
+	express     = require('express'),
+	api         = require('../api'),
+	utils       = require('../utils'),
+	config      = require('../config'),
+	middleware  = require('../middleware'),
+	controller  = require('../controllers'),
+	fs          = require('fs-extra'),
+	redisClient = require('redis').createClient(),
 	routes;
 var changeRecord = [];
 
@@ -179,8 +180,9 @@ routes = function apiRoutes() {
 	router.route("/authorized")
 		.get(function (req, res) {
 
-			if (req.session.userStatus=='logined') {
+			if (redisClient.get('userStatus')=='logined') {
 				var dateTime = utils.moment.localDateAndTime;
+				console.log(redisClient.get('userStatus'));
 				res.render("authorized", {dateTime: dateTime});
 
 			} else {

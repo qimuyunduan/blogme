@@ -18,6 +18,7 @@ var bodyParser       = require('body-parser'),
     uncapitalise     = require('./uncapitalise'),
 	cookieParser     = require('cookie-parser'),
 	session          = require('express-session'),
+	sessionStore     = require('connect-redis')(session),
     middleware,
     setupMiddleware;
 
@@ -36,7 +37,7 @@ setupMiddleware  = function setupMiddleware(App) {
 		contentPath = config.paths.contentPath,
         corePath = config.paths.corePath;
 	//若客户端在15分钟内未与服务器交互,session 将过期并重新登录,否则延长session 的时间15分钟
-	var sessionStore  = new session.MemoryStore({reapInterval:1000*60*15}),
+	//var sessionStore  = new session.MemoryStore({reapInterval:1000*60*15}),
 		sessionSecret = uuid.v4()+uuid.v1()+uuid.v4();
 
 
@@ -101,7 +102,11 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use(session({
 		name:'idoConnectSessId',
 		secret: sessionSecret,
-		//store:sessionStore,
+		store:new sessionStore( {
+			host: "127.0.0.1",
+			port: 6379
+			//db: ""
+			}),
 		resave:false,
 		saveUninitialized:false
 		//cookie: {maxAge: 60 * 1000 * 2}
