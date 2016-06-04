@@ -621,7 +621,8 @@ function initUpload(id, multiple) {
 		}
 	});
 }
- function testMail(){
+
+function testMail(){
 	 $.ajax({
 		 type: "post",
 		 url: "testMail",
@@ -629,4 +630,4 @@ function initUpload(id, multiple) {
 		 async: true,
 		 dataType: 'json'
 	 });
- }
+}

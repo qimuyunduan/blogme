@@ -19,6 +19,7 @@ var bodyParser       = require('body-parser'),
 	cookieParser     = require('cookie-parser'),
 	session          = require('express-session'),
 	sessionStore     = require('connect-redis')(session),
+	client           = require('redis').createClient(),
     middleware,
     setupMiddleware;
 
@@ -52,6 +53,33 @@ setupMiddleware  = function setupMiddleware(App) {
             App.use(logger('dev', logging));
         }
     }
+
+	// Body parsing
+	App.use(bodyParser.json({limit: '1mb'}));
+	App.use(bodyParser.urlencoded({extended: true, limit: '1mb'}));
+
+	// ### cookie and session
+
+	App.use(cookieParser());
+
+	App.use(session({
+		//name:'idoConnectSessId',
+		store:new sessionStore( {
+			host: 'localhost',
+			port: 6379,
+			client: client
+			//ttl :  260
+		}),
+		secret: sessionSecret,
+		resave:false,
+		saveUninitialized:false
+		//cookie: {maxAge: 60 * 1000 * 2}
+		//设置 sessionCookie时间,过了这个时间,sessionCookie被浏览器自动清除,刷新页面会重新登录
+		//若不设置这一项 sessionCookie的过期时间为浏览器默认关闭时间
+	}));
+
+	App.use(helmet());
+
 	// process file upload
 	uploadify(App,{
 		path:'/uploads',
@@ -74,9 +102,6 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/res/images', express.static(path.join(contentPath, '/images')));
 
 
-
-	App.use(helmet());
-
     // Check if password protected app
     //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
     //App.use(privateBlogging.filterPrivateRoutes);
@@ -85,35 +110,13 @@ setupMiddleware  = function setupMiddleware(App) {
 
 
 
-    // Body parsing
-    App.use(bodyParser.json({limit: '1mb'}));
-    App.use(bodyParser.urlencoded({extended: true, limit: '1mb'}));
+
 
     // ### Caching
 
     App.use(cacheControl('public'));
 
     App.use(routes.apiBaseUri, cacheControl('private'));
-	// ### cookie and session
-
-
-	App.use(cookieParser());
-
-	App.use(session({
-		name:'idoConnectSessId',
-		secret: sessionSecret,
-		store:new sessionStore( {
-			host: "127.0.0.1",
-			port: 6379
-			//db: ""
-			}),
-		resave:false,
-		saveUninitialized:false
-		//cookie: {maxAge: 60 * 1000 * 2}
-		//设置 sessionCookie时间,过了这个时间,sessionCookie被浏览器自动清除,刷新页面会重新登录
-		//若不设置这一项 sessionCookie的过期时间为浏览器默认关闭时间
-	}));
-
 
 
     // ### Routing

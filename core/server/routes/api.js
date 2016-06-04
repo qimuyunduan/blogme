@@ -157,6 +157,7 @@ routes = function apiRoutes() {
 	///pc  routes
 
 	router.get("/", function (req, res) {
+		req.session.userStatus = "logined";
 		responseHomePage(req, res);
 	});
 	router.get("/index.html", function (req, res) {
@@ -179,14 +180,10 @@ routes = function apiRoutes() {
 
 	router.route("/authorized")
 		.get(function (req, res) {
-
-			redisClient.get("idoConnectSessId", function(err, reply) {
-				console.log(reply);
-			});
-
-			if (req.session.userStatus=='logined') {
+			console.log('sessionID is after '+req.sessionID);
+			if (req.session.userStatus =='logined') {
 				var dateTime = utils.moment.localDateAndTime;
-
+				//console.log(req.session.key['userStatus']);
 				res.render("authorized", {dateTime: dateTime});
 
 			} else {

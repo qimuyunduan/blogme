@@ -1,13 +1,13 @@
 /*global require, module */
 
-var _         = require('lodash'),
-	api       = require('../api'),
-	path      = require('path'),
-	errors    = require('../errors'),
-	utils     = require('../utils'),
+var _ = require('lodash'),
+	api = require('../api'),
+	path = require('path'),
+	errors = require('../errors'),
+	utils = require('../utils'),
 	handleError = require('./error'),
-	reply     = require('./sendResponse'),
-	models    = require('../models'),
+	reply = require('./sendResponse'),
+	models = require('../models'),
 	redisClient = require('redis').createClient(),
 	controllers;
 
@@ -45,40 +45,45 @@ function getRecord(req, res, options) {
 						if (!result.err) {
 
 							if (utils.checkUser.isValidUser(req.body.pwd, result.data[0], result.data[1])) {
-								if(result.data[2]=='冻结'){
-									res.send(JSON.stringify({err:true,message:'该用户已被冻结,请联系管理员...'}));
-								}else{
+								if (result.data[2] == '冻结') {
+									res.send(JSON.stringify({err: true, message: '该用户已被冻结,请联系管理员...'}));
+								} else {
 
 									if (req.body.rememberName == "on") {
-										if (!req.cookies.loginUserName||(req.cookies.loginUserName!=req.body.userName)) {
+										if (!req.cookies.loginUserName || (req.cookies.loginUserName != req.body.userName)) {
 											// set cookie
 											res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
 											console.log(req.cookies);
 										}
 
-									}else {
-										if(req.cookies.loginUserName){
+									} else {
+										if (req.cookies.loginUserName) {
 											//delete cookie
 											res.clearCookie('loginUserName');
 										}
 									}
 									// set session
-									req.session.userStatus = 'logined';
-									console.log('sessionID is '+req.sessionID);
 
-									redisClient.set("usrID",'ahsfiehfehfhfhfhw');
-									redisClient.get("usrID", function(err, reply) {
-										console.log(reply);
-									});
-									res.send(JSON.stringify({err:false,message:''}));
+									req.session.userStatus = "logined";
+									console.log(req.session);
+									console.log("sessionID is "+req.sessionID);
+
+
+
+
+									//redisClient.set("usrID",'ahsfiehfehfhfhfhw');
+									//redisClient.get("usrID", function(err, reply) {
+									//	console.log(reply);
+									//});
+									res.send(JSON.stringify({err: false, message: ''}));
 
 								}
 
 							} else {
-								res.send(JSON.stringify({err:true,message:'用户名或密码错误...'}));
+								res.send(JSON.stringify({err: true, message: '用户名或密码错误...'}));
 							}
 						} else {
-							res.send(JSON.stringify({err:true,message:'sorry,用户不存在...'}));
+							res.send(JSON.stringify({err: true, message: 'sorry,用户不存在...'}));
 						}
 					}
 				}
