@@ -63,13 +63,13 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use(cookieParser());
 
 	App.use(session({
-		//name:'idoConnectSessId',
-		store:new sessionStore( {
-			host: 'localhost',
-			port: 6379,
-			client: client
-			//ttl :  260
-		}),
+		name:'idoConnectSessId',
+		//store:new sessionStore( {
+		//	host: 'localhost',
+		//	port: 6379,
+		//	client: client
+		//	//ttl :  260
+		//}),
 		secret: sessionSecret,
 		resave:false,
 		saveUninitialized:false

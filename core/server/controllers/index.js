@@ -65,8 +65,8 @@ function getRecord(req, res, options) {
 									// set session
 
 									req.session.userStatus = "logined";
-									console.log(req.session);
-									console.log("sessionID is "+req.sessionID);
+									//console.log(req.session);
+									//console.log("sessionID is "+req.sessionID);
 
 
 

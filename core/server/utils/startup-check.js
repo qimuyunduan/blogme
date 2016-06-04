@@ -20,7 +20,7 @@ checks = {
         this.packages();
         this.contentPath();
         this.mail();
-        this.mysql();
+       // this.mysql();
     },
 
     nodeEnv: function checkNodeEnvState() {
