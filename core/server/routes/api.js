@@ -180,6 +180,7 @@ routes = function apiRoutes() {
 
 	router.route("/authorized")
 		.get(function (req, res) {
+			req.session.userStatus = "logined";
 
 			if (req.session.userStatus =='logined') {
 				var dateTime = utils.moment.localDateAndTime;

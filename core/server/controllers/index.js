@@ -63,13 +63,10 @@ function getRecord(req, res, options) {
 										}
 									}
 									// set session
-
-									req.session.userStatus = "logined";
+									console.log("set session...");
+									//req.session.userStatus = "logined";
 									//console.log(req.session);
 									//console.log("sessionID is "+req.sessionID);
-
-
-
 
 									//redisClient.set("usrID",'ahsfiehfehfhfhfhw');
 									//redisClient.get("usrID", function(err, reply) {
