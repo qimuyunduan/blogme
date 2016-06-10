@@ -1,13 +1,13 @@
 /*global require, module */
 
-var _ = require('lodash'),
-	api = require('../api'),
-	path = require('path'),
-	errors = require('../errors'),
-	utils = require('../utils'),
+var _           = require('lodash'),
+	api         = require('../api'),
+	path        = require('path'),
+	errors      = require('../errors'),
+	utils       = require('../utils'),
 	handleError = require('./error'),
-	reply = require('./sendResponse'),
-	models = require('../models'),
+	reply       = require('./sendResponse'),
+	models      = require('../models'),
 	redisClient = require('redis').createClient(),
 	controllers;
 
@@ -53,7 +53,8 @@ function getRecord(req, res, options) {
 										if (!req.cookies.loginUserName || (req.cookies.loginUserName != req.body.userName)) {
 											// set cookie
 											res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30})
-											console.log(req.cookies);
+											//console.log(req.cookies);
+
 										}
 
 									} else {
@@ -62,16 +63,17 @@ function getRecord(req, res, options) {
 											res.clearCookie('loginUserName');
 										}
 									}
-									// set session
-									console.log("set session...");
-									//req.session.userStatus = "logined";
-									//console.log(req.session);
-									//console.log("sessionID is "+req.sessionID);
+									redisClient.hgetall(req.body.userName,function(err,obj){
+											if(!obj){
+												redisClient.HMSET(req.body.userName,{
+													"status":"logined"
+												});
+											}
+									});
 
-									//redisClient.set("usrID",'ahsfiehfehfhfhfhw');
-									//redisClient.get("usrID", function(err, reply) {
-									//	console.log(reply);
-									//});
+
+
+
 									res.send(JSON.stringify({err: false, message: ''}));
 
 								}

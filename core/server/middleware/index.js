@@ -67,8 +67,8 @@ setupMiddleware  = function setupMiddleware(App) {
 		store:new sessionStore( {
 			host: 'localhost',
 			port: 6379,
-			client: client
-			//ttl :  260
+			client: client,
+			ttl : 60
 		}),
 		secret: sessionSecret,
 		resave:false,

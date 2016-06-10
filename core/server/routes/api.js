@@ -180,15 +180,17 @@ routes = function apiRoutes() {
 
 	router.route("/authorized")
 		.get(function (req, res) {
-			req.session.userStatus = "logined";
 
-			if (req.session.userStatus =='logined') {
-				var dateTime = utils.moment.localDateAndTime;
-				res.render("authorized", {dateTime: dateTime});
-
-			} else {
-				res.redirect('/');
-			}
+			var userName = req.cookies.loginUserName;
+			redisClient.hgetall(userName,function(err,obj){
+				if(obj.status == "logined"){
+					var dateTime = utils.moment.localDateAndTime;
+					res.render("authorized", {dateTime: dateTime});
+				}
+				else{
+					res.redirect('/');
+				}
+			});
 
 		})
 		.post(function(req,res){
