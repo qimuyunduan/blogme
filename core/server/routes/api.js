@@ -1248,7 +1248,9 @@ routes = function apiRoutes() {
 		api.mail.send({},res);
 	});
 
-	// API Router middleware
+	// mobile api
+
+
 
 	return router;
 };

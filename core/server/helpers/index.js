@@ -10,7 +10,7 @@ if (!utils.isProduction) {
 }
 
 
-coreHelpers.author  = require('./author');
+
 coreHelpers.body_class  = require('./body_class');
 coreHelpers.content  = require('./content');
 coreHelpers.date  = require('./date');
