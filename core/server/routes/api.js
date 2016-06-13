@@ -181,6 +181,8 @@ routes = function apiRoutes() {
 	router.route("/authorized")
 		.get(function (req, res) {
 
+			//req.session.status = "logined";
+			//console.log(req.session.status);
 			var userName = req.cookies.loginUserName;
 			redisClient.hgetall(userName,function(err,obj){
 				if(obj.status == "logined"){

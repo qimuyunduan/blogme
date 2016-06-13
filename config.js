@@ -37,7 +37,15 @@ config = {
         server: {
             host: 'http://ido-qimuyunduan.rhcloud.com',
             port: '2368'
-        }
+        },
+		redis:{
+
+			host:'127.0.0.1',
+			port:'6379',
+			db:'',
+			pass:'',
+			ttl:''
+		}
     },
 
     // ### Development **(default)**
@@ -78,6 +86,16 @@ config = {
 			},
             debug: false
         },
+
+		redis:{
+
+			host:'127.0.0.1',
+			port:'6379',
+			db:'',
+			pass:'',
+			ttl:''
+		},
+
         // #### Server
         // Can be host & port (default), or socket
         server: {

@@ -63,7 +63,7 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use(cookieParser());
 
 	App.use(session({
-		name:'idoConnectSessId',
+		//name:'idoConnectSessId',
 		store:new sessionStore( {
 			host: 'localhost',
 			port: 6379,
@@ -71,8 +71,8 @@ setupMiddleware  = function setupMiddleware(App) {
 			ttl : 60
 		}),
 		secret: sessionSecret,
-		resave:false,
-		saveUninitialized:false
+		resave:true,
+		saveUninitialized:true
 		//cookie: {maxAge: 60 * 1000 * 2}
 		//设置 sessionCookie时间,过了这个时间,sessionCookie被浏览器自动清除,刷新页面会重新登录
 		//若不设置这一项 sessionCookie的过期时间为浏览器默认关闭时间
