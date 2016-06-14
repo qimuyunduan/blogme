@@ -19,14 +19,6 @@ function init() {
     var app = express();
 
     return Promise.resolve().then(function () {
-        // Initialize the settings cache
-        //return api.init();
-
-    //}).then(function () {
-
-		//TODO:init permission
-        //return permissions.init();
-    //}).then(function () {
 
         var Hbs = hbs.create();
         // enabled gzip compression by default

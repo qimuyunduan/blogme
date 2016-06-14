@@ -12,7 +12,6 @@ var bodyParser       = require('body-parser'),
     cacheControl     = require('./cache-control'),
 	uuid             = require('node-uuid'),
 	helmet           = require('helmet'),
-    privateBlogging  = require('./private-blogging'),
     serveSharedFile  = require('./serve-shared-file'),
     spamPrevention   = require('./spam-prevention'),
     uncapitalise     = require('./uncapitalise'),
@@ -28,8 +27,8 @@ var bodyParser       = require('body-parser'),
 middleware = {
     busboy: busboy,
     cacheControl: cacheControl,
-    spamPrevention: spamPrevention,
-    privateBlogging: privateBlogging
+    spamPrevention: spamPrevention
+
 };
 
 setupMiddleware  = function setupMiddleware(App) {
@@ -100,11 +99,6 @@ setupMiddleware  = function setupMiddleware(App) {
 	App.use('/res', express.static(contentPath));
 	App.use('/res/data', express.static(path.join(contentPath, '/data')));
 	App.use('/res/images', express.static(path.join(contentPath, '/images')));
-
-
-    // Check if password protected app
-    //App.use(privateBlogging.checkIsPrivate); // check if the app is protected
-    //App.use(privateBlogging.filterPrivateRoutes);
 
     App.use(uncapitalise);
 
