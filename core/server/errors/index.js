@@ -1,26 +1,6 @@
 
 var _                          = require('lodash'),
-    chalk                      = require('chalk'),
-    path                       = require('path'),
-    Promise                    = require('bluebird'),
-    hbs                        = require('express-hbs'),
-    NotFoundError              = require('./not-found-error'),
-    BadRequestError            = require('./bad-request-error'),
-    InternalServerError        = require('./internal-server-error'),
-    NoPermissionError          = require('./no-permission-error'),
-    MethodNotAllowedError      = require('./method-not-allowed-error'),
-    RequestEntityTooLargeError = require('./request-too-large-error'),
-    UnauthorizedError          = require('./unauthorized-error'),
-    ValidationError            = require('./validation-error'),
-    UnsupportedMediaTypeError  = require('./unsupported-media-type-error'),
-    EmailError                 = require('./email-error'),
-    DataImportError            = require('./data-import-error'),
-    TooManyRequestsError       = require('./too-many-requests-error'),
-    config,
-    errors,
-
-    userErrorTemplateExists   = false;
-
+    errors;
 
 
 function getConfigModule() {
@@ -129,12 +109,6 @@ errors = {
             } else {
                 err = 'errors.errors.unknownErrorOccurred';
             }
-        }
-
-
-        if (err.indexOf('SQLITE_READONLY') !== -1) {
-            context = 'errors.errors.databaseIsReadOnly';
-            help = 'errors.errors.checkDatabase';
         }
 
         if ((process.env.NODE_ENV === 'development' ||
@@ -404,15 +378,3 @@ _.forEach([
 });
 
 module.exports                            = errors;
-module.exports.NotFoundError              = NotFoundError;
-module.exports.BadRequestError            = BadRequestError;
-module.exports.InternalServerError        = InternalServerError;
-module.exports.NoPermissionError          = NoPermissionError;
-module.exports.UnauthorizedError          = UnauthorizedError;
-module.exports.ValidationError            = ValidationError;
-module.exports.RequestEntityTooLargeError = RequestEntityTooLargeError;
-module.exports.UnsupportedMediaTypeError  = UnsupportedMediaTypeError;
-module.exports.EmailError                 = EmailError;
-module.exports.DataImportError            = DataImportError;
-module.exports.MethodNotAllowedError      = MethodNotAllowedError;
-module.exports.TooManyRequestsError       = TooManyRequestsError;
