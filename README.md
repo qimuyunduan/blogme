@@ -1,5 +1,5 @@
 * ido
-personal nodeproject based on ghost
+personal nodeproject based on express
           使用dwz-jui框架搭建的一个快速开发平台
 =========
 (https://github.com/qimuyunduan/blogme)
