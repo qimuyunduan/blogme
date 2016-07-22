@@ -1,7 +1,7 @@
 {
   "name": "blogme",
   "version": "0.7.8",
-  "description": "blogme is node project based on ghost",
+  "description": "blogme is node project based on express",
   "author": "blogme",
   "license": "MIT",
   "main": "./core/index",
