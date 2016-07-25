@@ -128,6 +128,6 @@ setupMiddleware  = function setupMiddleware(App) {
     App.use(errors.error500);
 };
 
-module.exports = setupMiddleware;
+module.exports.setupMiddleware = setupMiddleware;
 
 module.exports.middleware = middleware;
