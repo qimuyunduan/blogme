@@ -451,34 +451,6 @@ a:hover {text-decoration:underline;}
 .panelBar .pages { float:left; overflow:hidden; height:21px; padding:2px 5px;}
 .panelBar .pages span { float:left; line-height:21px;}
 .panelBar .pages select { float:left; margin:0 3px; font-size:12px;}
-
-/*.pagination { float:right; padding-left:7px; background-position:0 -199px;}*/
-/*.pagination li, .pagination li.hover { padding:0 0 0 5px; background-position:0 -100px;}*/
-/*.pagination a, .pagination li.hover a, .pagination li span { float:left; display:block; padding:0 5px 0 0; text-decoration:none; line-height:23px; background-position:100% -150px;}*/
-/*.pagination li.selected a{color:red; font-weight:bold;}*/
-/*.pagination span, .pagination li.hover span { float:left; display:block; height:23px; line-height:23px; cursor:pointer;}*/
-
-/*.pagination li .first span, .panelBar li .previous span { padding:0 0 0 10px;}*/
-/*.pagination li .next span, .panelBar li .last span { padding:0 10px 0 0;}*/
-/*.pagination li .first span { background-position:0 -244px;}*/
-/*.pagination li .previous span { background-position:0 -294px;}*/
-/*.pagination li .next span { background-position:100% -344px;}*/
-/*.pagination li .last span { background-position:100% -394px;}*/
-/*.pagination li .last { margin-right:5px;}*/
-
-/*.pagination li.disabled { background:none;}*/
-/*.pagination li.disabled span, .grid .pagination li.disabled a { background-position:0 100px; cursor:default;}*/
-/*.pagination li.disabled span span { color:#666;}*/
-/*.pagination li.disabled .first span { background-position:0 -444px;}*/
-/*.pagination li.disabled .previous span { background-position:0 -494px;}*/
-/*.pagination li.disabled .next span { background-position:100% -544px;}*/
-/*.pagination li.disabled .last span { background-position:100% -594px;}*/
-/*.pagination li.disabled .last { margin-right:5px;}*/
-
-/*.pagination li.jumpto { padding:2px 2px 0 7px; background-position:0 -200px;}*/
-/*.pagination li.jumpto .textInput { float:left; width:30px; padding:1px; border-color:#acaeaf;}*/
-/*.pagination li.jumpto .goto { float:left; display:block; overflow:hidden; width:16px; height:19px; border:0; text-indent:-1000px; background-position:0 -650px; cursor:pointer;}*/
-
 .grid { display:block; overflow:hidden; width:100%; border-width:0 1px; position:relative;}
 .grid .gridHeader { display:block; overflow:hidden; width:auto;}
 .grid .gridThead { }

@@ -1,12 +1,12 @@
 * ido
-personal nodeproject based on ghost
+personal nodeproject based on express
           使用dwz-jui框架搭建的一个快速开发平台
 =========
 (https://github.com/qimuyunduan/blogme)
 
 ###代码相关
 * 前台：jquery,dwz
-* 后台：node.js 
+* 后台：express
 * 适配于dwz框架的GridTree版本
 
 
@@ -23,3 +23,5 @@ personal nodeproject based on ghost
 ###后续功能
 * 首页门户
 * 消息通知弹窗 
+
+![](img_url)
