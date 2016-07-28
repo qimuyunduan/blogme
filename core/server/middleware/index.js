@@ -38,8 +38,7 @@ setupMiddleware  = function setupMiddleware(App) {
         corePath = config.paths.corePath;
 	//若客户端在15分钟内未与服务器交互,session 将过期并重新登录,否则延长session 的时间15分钟
 	//var sessionStore  = new session.MemoryStore({reapInterval:1000*60*15}),
-		sessionSecret = uuid.v4()+uuid.v1()+uuid.v4();
-
+	sessionSecret = uuid.v4()+uuid.v1()+uuid.v4();
 
     // (X-Forwarded-Proto header will be checked, if present)
     App.enable('trust proxy');

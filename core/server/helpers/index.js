@@ -15,15 +15,11 @@ coreHelpers.body_class  = require('./body_class');
 coreHelpers.content  = require('./content');
 coreHelpers.date  = require('./date');
 coreHelpers.encode  = require('./encode');
-
 coreHelpers.foreach = require('./foreach');
-coreHelpers.ghost_foot = require('./app_foot');
-coreHelpers.ghost_head = require('./app_head');
 coreHelpers.image = require('./image');
 coreHelpers.is = require('./is');
 coreHelpers.has = require('./has');
 
-coreHelpers.title = require('./title');
 
 
 // Specialist helpers for certain templates
@@ -73,40 +69,17 @@ registerHelpers = function (adminHbs) {
     // Expose hbs instance for admin
     coreHelpers.adminHbs = adminHbs;
 
-    // Register theme helpers
-    registerThemeHelper('asset', coreHelpers.asset);
-    registerThemeHelper('author', coreHelpers.author);
+    // Register helpers
+
     registerThemeHelper('body_class', coreHelpers.body_class);
     registerThemeHelper('content', coreHelpers.content);
     registerThemeHelper('date', coreHelpers.date);
     registerThemeHelper('encode', coreHelpers.encode);
-    registerThemeHelper('excerpt', coreHelpers.excerpt);
     registerThemeHelper('foreach', coreHelpers.foreach);
     registerThemeHelper('has', coreHelpers.has);
     registerThemeHelper('is', coreHelpers.is);
     registerThemeHelper('image', coreHelpers.image);
     registerThemeHelper('input_password', coreHelpers.input_password);
-    registerThemeHelper('meta_description', coreHelpers.meta_description);
-    registerThemeHelper('meta_title', coreHelpers.meta_title);
-    registerThemeHelper('navigation', coreHelpers.navigation);
-    registerThemeHelper('page_url', coreHelpers.page_url);
-    registerThemeHelper('pageUrl', coreHelpers.pageUrl);
-    registerThemeHelper('pagination', coreHelpers.pagination);
-    registerThemeHelper('plural', coreHelpers.plural);
-    registerThemeHelper('post_class', coreHelpers.post_class);
-    registerThemeHelper('tags', coreHelpers.tags);
-    registerThemeHelper('title', coreHelpers.title);
-    registerThemeHelper('url', coreHelpers.url);
-
-    // Async theme helpers
-    registerAsyncThemeHelper('ghost_foot', coreHelpers.ghost_foot);
-    registerAsyncThemeHelper('ghost_head', coreHelpers.ghost_head);
-    registerAsyncThemeHelper('next_post', coreHelpers.next_post);
-    registerAsyncThemeHelper('prev_post', coreHelpers.prev_post);
-    registerAsyncThemeHelper('get', coreHelpers.get);
-
-    // Register admin helpers
-    registerAdminHelper('asset', coreHelpers.asset);
     registerAdminHelper('input_password', coreHelpers.input_password);
 };
 

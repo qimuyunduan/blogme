@@ -35,7 +35,7 @@ function init() {
         helpers.loadCoreHelpers(Hbs);
 
         //// Middleware and Routing
-        middleware(app);
+       middleware.setupMiddleware(app);
 
         return new Server(app);
     //});
