@@ -18,14 +18,14 @@ var      gulp   = require('gulp'),
 
 
 
-gulp.task('publish-js', function () {
-    return gulp.src(['./public/js/classie.js','./public/js/main.js'])
-        .pipe(uglify())
-        .pipe(rev())
-        .pipe(gulp.dest('./public/js'))
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('./public/js'));
-});
+//gulp.task('publish-js', function () {
+//    return gulp.src(['./public/js/classie.js','./public/js/main.js'])
+//        .pipe(uglify())
+//        .pipe(rev())
+//        .pipe(gulp.dest('./public/js'))
+//        .pipe(rev.manifest())
+//        .pipe(gulp.dest('./public/js'));
+//});
 gulp.task('publish-css', function () {
     return gulp.src(['./core/server/views/css/style.css','./core/server/views/css/core.css','./core/server/views/css/login.css'])
         .pipe(concat('core.min.css'))

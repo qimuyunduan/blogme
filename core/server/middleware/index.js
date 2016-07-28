@@ -119,12 +119,7 @@ setupMiddleware  = function setupMiddleware(App) {
     // Set up Frontend routes
     App.use(routes.frontend());
 
-    // ### Error handling
-    // 404 Handler
-    App.use(errors.error404);
 
-    // 500 Handler
-    App.use(errors.error500);
 };
 
 module.exports.setupMiddleware = setupMiddleware;

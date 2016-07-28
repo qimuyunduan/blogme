@@ -231,7 +231,7 @@ errors = {
     renderErrorPage: function (statusCode, err, req, res, next) {
 
         var self = this,
-            defaultErrorTemplatePath = path.resolve(getConfigModule().paths.hbsViews, 'user-error.hbs');
+            defaultErrorTemplatePath = path.resolve(getConfigModule().paths.hbsViews, 'error.hbs');
 
         function parseStack(stack) {
             if (!_.isString(stack)) {
