@@ -8,7 +8,7 @@ var _           = require('lodash'),
 	middleware  = require('../middleware'),
 	controller  = require('../controllers'),
 	fs          = require('fs-extra'),
-	//redisClient = require('redis').createClient(),
+	redisClient = require('redis').createClient(),
 	routes;
 var changeRecord = [];
 
@@ -169,7 +169,6 @@ routes = function apiRoutes() {
 		.post(function (req, res) {
 
 			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [0]), "idoUser", ['user_salt', 'user_pass','user_status'], 'index');
-			console.log(queryOptions);
 			if (!_.isEmpty(queryOptions)) {
 
 				controller.fetch(req, res, queryOptions);
@@ -184,6 +183,7 @@ routes = function apiRoutes() {
 
 			var userName = req.cookies.loginUserName;
 			redisClient.hgetall(userName,function(err,obj){
+
 				if(obj.status == "logined"){
 					var dateTime = utils.moment.localDateAndTime;
 					res.render("authorized", {dateTime: dateTime});

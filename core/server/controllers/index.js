@@ -53,7 +53,7 @@ function getRecord(req, res, options) {
 										if (!req.cookies.loginUserName || (req.cookies.loginUserName != req.body.userName)) {
 											// set cookie
 											res.cookie("loginUserName", req.body.userName, {maxAge: 60 * 1000 * 60 * 24 * 30});
-											//console.log(req.cookies);
+
 
 										}
 
@@ -67,12 +67,7 @@ function getRecord(req, res, options) {
 											if(!obj){
 												redisClient.HMSET(req.body.userName,{
 													"status":"logined"
-												},function(){
-													console.log({
-														status:"logined"
-													});
 												});
-
 											}
 									});
 
