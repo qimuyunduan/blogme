@@ -1,5 +1,6 @@
 
 var _                          = require('lodash'),
+	chalk                      = require('chalk'),
     errors;
 
 

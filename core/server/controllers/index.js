@@ -18,7 +18,6 @@ function responseResult(res, options) {
 			if (collection) {
 
 				var pageData = reply.replyWithPageData(collection.toJSON(), options.fetchFields, options.queryCon);
-				console.log(pageData);
 				res.json(pageData);
 			} else {
 				res.json({err: true});
@@ -68,6 +67,10 @@ function getRecord(req, res, options) {
 											if(!obj){
 												redisClient.HMSET(req.body.userName,{
 													"status":"logined"
+												},function(){
+													console.log({
+														status:"logined"
+													});
 												});
 
 											}
