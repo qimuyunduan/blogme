@@ -15,7 +15,6 @@ personal nodeproject based on express
 * 用户管理
 * 组织架构
 * 菜单管理
-* 缓存管理
 * 文件上传
 * 权限控制(1、用户-菜单权限;2、角色权限管理;3、人员角色授权)
 
@@ -24,4 +23,5 @@ personal nodeproject based on express
 * 首页门户
 * 消息通知弹窗 
 
-![](img_url)
+![](https://github.com/qimuyunduan/blogme/blob/master/content/images/screenshot1.png)
+![](https://github.com/qimuyunduan/blogme/blob/master/content/images/screenshot2.png)
