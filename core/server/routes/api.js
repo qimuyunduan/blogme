@@ -170,7 +170,7 @@ routes = function apiRoutes() {
 		.post(function (req, res) {
 
 			var queryOptions = consOptions(constructFetchParams(req.body, ['user_name'], [0]), "idoUser", ['user_salt', 'user_pass','user_status'], 'index');
-
+			console.log(queryOptions);
 			if (!_.isEmpty(queryOptions)) {
 
 				controller.fetch(req, res, queryOptions);
@@ -182,7 +182,7 @@ routes = function apiRoutes() {
 		.get(function (req, res) {
 
 			req.session.status = "logined";
-			console.log(req.session.status);
+
 			var userName = req.cookies.loginUserName;
 			redisClient.hgetall(userName,function(err,obj){
 				if(obj.status == "logined"){
